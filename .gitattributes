@@ -1,0 +1,17 @@
+# 기본: 텍스트 자동 정규화(저장소에는 LF)
+* text=auto eol=lf
+
+# 셸 스크립트는 반드시 LF
+*.sh    text eol=lf
+gradlew text eol=lf
+
+# Windows 배치는 CRLF
+*.bat   text eol=crlf
+
+# 바이너리(정규화 금지)
+*.jar   binary
+*.zip   binary
+*.png   binary
+*.jpg   binary
+*.pdf   binary
+*.hwp   binary

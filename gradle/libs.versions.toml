@@ -1,0 +1,50 @@
+[versions]
+# EU DSS — XAdES/CAdES/PAdES/JAdES + Trusted List(ETSI 정합) 기반 라이브러리
+dss = "6.1"
+bouncycastle = "1.78.1"
+pdfbox = "3.0.3"
+jackson = "2.17.2"
+santuario = "3.0.4"
+hwplib = "1.1.8"
+picocli = "4.7.6"
+slf4j = "2.0.13"
+logback = "1.5.6"
+junit = "5.11.0"
+assertj = "3.26.3"
+
+[libraries]
+# --- EU DSS ---
+dss-model = { module = "eu.europa.ec.joinup.sd-dss:dss-model", version.ref = "dss" }
+dss-spi = { module = "eu.europa.ec.joinup.sd-dss:dss-spi", version.ref = "dss" }
+dss-document = { module = "eu.europa.ec.joinup.sd-dss:dss-document", version.ref = "dss" }
+dss-xades = { module = "eu.europa.ec.joinup.sd-dss:dss-xades", version.ref = "dss" }
+dss-cades = { module = "eu.europa.ec.joinup.sd-dss:dss-cades", version.ref = "dss" }
+dss-pades = { module = "eu.europa.ec.joinup.sd-dss:dss-pades-pdfbox", version.ref = "dss" }
+dss-jades = { module = "eu.europa.ec.joinup.sd-dss:dss-jades", version.ref = "dss" }
+dss-asic-xades = { module = "eu.europa.ec.joinup.sd-dss:dss-asic-xades", version.ref = "dss" }
+dss-asic-cades = { module = "eu.europa.ec.joinup.sd-dss:dss-asic-cades", version.ref = "dss" }
+dss-service = { module = "eu.europa.ec.joinup.sd-dss:dss-service", version.ref = "dss" }
+dss-validation = { module = "eu.europa.ec.joinup.sd-dss:dss-validation", version.ref = "dss" }
+dss-tsl-validation = { module = "eu.europa.ec.joinup.sd-dss:dss-tsl-validation", version.ref = "dss" }
+dss-utils-apache = { module = "eu.europa.ec.joinup.sd-dss:dss-utils-apache-commons", version.ref = "dss" }
+
+# --- Crypto / PKI ---
+bc-prov = { module = "org.bouncycastle:bcprov-jdk18on", version.ref = "bouncycastle" }
+bc-pkix = { module = "org.bouncycastle:bcpkix-jdk18on", version.ref = "bouncycastle" }
+
+# --- 포맷 ---
+pdfbox = { module = "org.apache.pdfbox:pdfbox", version.ref = "pdfbox" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+santuario = { module = "org.apache.santuario:xmlsec", version.ref = "santuario" }
+hwplib = { module = "kr.dogfoot:hwplib", version.ref = "hwplib" }
+
+# --- CLI ---
+picocli = { module = "info.picocli:picocli", version.ref = "picocli" }
+
+# --- 로깅 ---
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+
+[bundles]
+dss-core = ["dss-model", "dss-spi", "dss-document", "dss-utils-apache"]
+bouncycastle = ["bc-prov", "bc-pkix"]

@@ -1,0 +1,29 @@
+# Gradle
+.gradle/
+build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+bin/
+out/
+
+# Claude Code (로컬 개인 설정)
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs / local
+*.log
+*.local
+local.properties
