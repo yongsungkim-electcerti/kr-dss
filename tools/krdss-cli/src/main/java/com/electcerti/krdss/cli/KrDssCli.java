@@ -13,7 +13,7 @@ import picocli.CommandLine.Option;
         mixinStandardHelpOptions = true,
         version = "krdss 0.1.0",
         description = "KR-DSS 전자서명 생성/검증 CLI",
-        subcommands = {KrDssCli.SignCommand.class, KrDssCli.VerifyCommand.class}
+        subcommands = {KrDssCli.SignCommand.class, KrDssCli.VerifyCommand.class, CertCommand.class}
 )
 public class KrDssCli implements Callable<Integer> {
 
