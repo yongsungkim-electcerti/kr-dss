@@ -8,10 +8,10 @@ dependencies {
     implementation(project(":kr-dss-sdk:kr-dss-crypto"))
     implementation(project(":kr-dss-sdk:kr-dss-report"))
     implementation(project(":kr-tl:kr-tl-client"))
+    implementation(project(":kr-ades:kr-ades-cades"))
 
     // 6종 포맷 어댑터.
     runtimeOnly(project(":kr-ades:kr-ades-xades"))
-    runtimeOnly(project(":kr-ades:kr-ades-cades"))
     runtimeOnly(project(":kr-ades:kr-ades-pades"))
     runtimeOnly(project(":kr-ades:kr-ades-jades"))
     runtimeOnly(project(":kr-ades:kr-ades-hades"))

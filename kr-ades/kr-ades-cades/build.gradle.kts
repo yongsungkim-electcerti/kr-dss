@@ -4,6 +4,7 @@ plugins {
 
 dependencies {
     api(project(":kr-ades:kr-ades-core"))
-    implementation(libs.dss.cades)
-    implementation(libs.dss.asic.cades)
+    api(libs.dss.cades)
+    api(libs.dss.asic.cades)
+    implementation(libs.dss.utils.apache)
 }
