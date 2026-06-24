@@ -1,0 +1,21 @@
+{
+  "outDir": "F:/devwork/kr-dss-clude/output/certs",
+  "keyAlg": "RSA",
+  "keySize": 2048,
+  "root": {
+    "subject": "CN=KISA RootCA,OU=Korea Internet & Security Agency,O=KISA,C=KR",
+    "days": 7300,
+    "keySize": 4096,
+    "out": "kisa-rootca"
+  },
+  "sub": {
+    "subject": "CN=KISA CA,OU=Korea Internet & Security Agency,O=KISA,C=KR",
+    "days": 3650,
+    "out": "kisa-ca"
+  },
+  "ee": {
+    "subject": "CN=KISA Trusted List Signer,OU=Korea Internet & Security Agency,O=KISA,C=KR",
+    "days": 1095,
+    "out": "kisa-tl-signer"
+  }
+}

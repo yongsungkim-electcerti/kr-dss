@@ -42,10 +42,18 @@ include("kr-dss-sdk:kr-dss-crypto")
 include("kr-dss-sdk:kr-dss-core")
 include("kr-dss-sdk:kr-dss-report")
 
+// [원격전자서명] Remote Signature SDK — CSC v2 / EN 419 241 모델
+include("kr-dss-sdk:kr-dss-remote")
+
 // PoC — 전 과정 실증 테스트베드
 include("poc:poc-tsp-sim")
 include("poc:poc-kisa-tl")
 include("poc:poc-relying-party")
+
+// PoC — 원격전자서명 데모 (RSSP → SAM → HSM)
+include("poc:poc-rssp")
+include("poc:poc-sam")
+include("poc:poc-hsm")
 
 // Tools
 include("tools:krdss-cli")
