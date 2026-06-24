@@ -1,0 +1,16 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: poc-rssp
+krdss:
+  rssp:
+    # 하위 구성요소 연동
+    sam-base-url: http://localhost:8091
+    hsm-base-url: http://localhost:8092
+    # OAuth2 서비스 인증(이용사 서비스용 client_credentials)
+    oauth:
+      client-id: krdss-rp-client
+      client-secret: rp-client-secret
+      token-secret: "rssp-oauth-token-secret-change-me"
+      token-ttl-seconds: 600

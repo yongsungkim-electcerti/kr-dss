@@ -3,3 +3,18 @@ server:
 spring:
   application:
     name: poc-relying-party
+krdss:
+  rp:
+    # 원격서명 서비스(RSSP/SSA) 진입점
+    rssp-base-url: http://localhost:8090
+    # 데모 자격증명 식별자(== HSM 키 별칭)
+    credential-id: krdss-remote-signer
+    # OAuth2 서비스 인증(이용사 클라이언트) — RSSP 설정과 일치해야 함
+    oauth:
+      client-id: krdss-rp-client
+      client-secret: rp-client-secret
+    # 서명자 2요소 인증 자격(데모) — SAM 등록값과 일치해야 함
+    signer:
+      id: signer-001
+      pin: "123456"
+      totp-secret: "JBSWY3DPEHPK3PXP"
