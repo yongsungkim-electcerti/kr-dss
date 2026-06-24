@@ -1,0 +1,9 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: poc-hsm
+krdss:
+  hsm:
+    # SAM 만 제시할 수 있는 활성화 토큰(데모용 공유 비밀).
+    activation-token: SAM-INTERNAL-TOKEN

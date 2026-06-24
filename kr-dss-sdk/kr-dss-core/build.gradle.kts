@@ -17,5 +17,8 @@ dependencies {
     runtimeOnly(project(":kr-ades:kr-ades-hades"))
     runtimeOnly(project(":kr-ades:kr-ades-mades"))
 
+    // 원격전자서명 서명객체 패키징(데모 KR-JAdES 컨테이너) 직렬화.
+    implementation(libs.jackson.databind)
+
     implementation(libs.slf4j.api)
 }

@@ -1,0 +1,25 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: poc-sam
+krdss:
+  sam:
+    # SAD 토큰 서명 비밀키(SAM 전용). 운영에서는 HSM/시크릿 매니저로 보호.
+    sad-secret: "sam-sad-signing-secret-change-me"
+    # 발급된 SAD 유효시간(초)
+    sad-ttl-seconds: 300
+    # 데모 서명자 2요소 인증 자격
+    signer:
+      id: signer-001
+      pin: "123456"
+      # Base32 TOTP 비밀(데모). 실제로는 서명자 등록 시 안전하게 생성·전달.
+      totp-secret: "JBSWY3DPEHPK3PXP"
+    # WebAuthn(FIDO2 패스키) 서명자 인증
+    webauthn:
+      rp-id: localhost
+      allowed-origins: "http://localhost:8080"
+      challenge-ttl-seconds: 120
+    # 하위 HSM 연동
+    hsm-base-url: http://localhost:8092
+    hsm-activation-token: SAM-INTERNAL-TOKEN
