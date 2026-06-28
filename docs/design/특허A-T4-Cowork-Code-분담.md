@@ -28,13 +28,13 @@ JDK 21 부재(JDK 11만 존재) · Maven 의존성/JDK21 toolchain 다운로드 
 |---|---|---|---|
 | 특허 본문 확보 | 특허 A/B/C 명세서 `docs/design/특허[ABC]-명세서-*.md` | **Cowork** | ✅ 완료 |
 | 설계 검토 | DER 인코딩 · IMPLICIT 태그 결정 | **Cowork** | ✅ 완료 |
-| 설계서 §4.1 갱신 | IMPLICIT 태그 ASN.1 확정문 (본 문서 §5) | **Cowork**(작성) / **Code**(적용·커밋) | ⬜ |
+| 설계서 §4.1 갱신 | IMPLICIT 태그 ASN.1 확정문 (본 문서 §5) | **Cowork**(작성) / **Code**(적용·커밋) | ✅ `aaf8405` |
 | T4 구현 스펙 | Code-ready 명세 (본 문서 §4) | **Cowork** | ✅ 본 문서 |
-| T4 소스 | `WebAuthnAssertionAttr.java`, `WebAuthnCmsAssembler.java` | **Code** | ⬜ |
-| T4 테스트 | `WebAuthnAssertionAttrTest`, `WebAuthnCmsAssemblerTest` | **Code** | ⬜ |
-| 빌드·테스트 | `./gradlew build` 그린 | **Code** | ⬜ |
-| 커밋 | `feat(cades): T4 … [claude]` | **Code** | ⬜ |
-| HANDOFF 갱신 | T4 완료 기록 | **Cowork**(작성) / **Code**(커밋) | ⬜ |
+| T4 소스 | `WebAuthnAssertionAttr.java`, `WebAuthnCmsAssembler.java` | **Code** | ✅ `aaf8405` |
+| T4 테스트 | `WebAuthnAssertionAttrTest`, `WebAuthnCmsAssemblerTest` | **Code** | ✅ 10건 통과 |
+| 빌드·테스트 | `./gradlew build` 그린 | **Code** | ✅ |
+| 커밋 | `feat(cades): T4 … [claude]` | **Code** | ✅ `aaf8405` |
+| HANDOFF 갱신 | T4 완료 기록 | **Cowork**(작성) / **Code**(커밋) | ✅ |
 
 ---
 

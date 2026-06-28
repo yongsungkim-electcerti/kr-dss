@@ -15,9 +15,9 @@
 특허-A의 핵심 = **(1) 문서·서명시각·서명자 인증서 3요소를 단일 WebAuthn Challenge에 결속**하고,
 **(2) 인증서 정책으로 검증 경로를 동적 분기**한다.
 
-- ✅ **T1·T2·T3 완료, 커밋·빌드 그린.** 결속 challenge 생성 + WebAuthn 어서션 COSE 실검증까지 동작.
-- ⬜ **T4(컨테이너 패키징) → T5(검증 라우터) → T6(E2E 통합) → T7(프론트) → T8(Crypto Agility 데모)** 남음.
-- 다음 시작점: **T4 — Container Binding** (`WebAuthnAssertionAttr` ASN.1 + CMS 패키징).
+- ✅ **T1·T2·T3·T4 완료, 커밋·빌드 그린.** 결속 challenge 생성 + WebAuthn 어서션 COSE 실검증 + 모사 CMS 컨테이너 패키징까지 동작.
+- ⬜ **T5(검증 라우터) → T6(E2E 통합) → T7(프론트) → T8(Crypto Agility 데모)** 남음.
+- 다음 시작점: **T5 — 정책 기반 검증 라우터** (`VerificationRouter` + `CertPolicyResolver` + `HsmVerificationPath` 흡수 + 결과 3분류).
 
 핵심 설계 통찰(반드시 숙지):
 > 현재 PoC의 WebAuthn은 **2FA 게이트**일 뿐 실제 서명은 HSM이 한다. 특허-A는 **WebAuthn 어서션 자체가 전자서명**(Mode 1)이다. 그래서 두 서명 모드를 공존시키고 정책 라우터가 분기한다.
@@ -37,6 +37,7 @@
 | T1 | webauthn4j 0.28.5 의존성, `KrAdesOids`, `HashSuite`(Crypto Agility) | `f3b7597` |
 | T2 | `SignedAttrsBuilder`(3요소→SignedAttrs), `SignatureBindingService`(challenge 파생) | `f3b7597` |
 | T3 | `WebAuthnCredentialStore`, `WebAuthnVerificationPath`(webauthn4j COSE 실검증) | `163d495` |
+| T4 | `container/WebAuthnAssertionAttr`(IMPLICIT 태그), `container/WebAuthnCmsAssembler`(모사 컨테이너, signedAttrs 원본 보존, 어서션=unsignedAttrs) | `aaf8405` |
 
 ### 산출 파일
 ```
@@ -76,7 +77,9 @@ kr-dss-sdk/kr-dss-core/src/test/.../verify/WebAuthnVerificationPathTest.java  # 
 
 ## 3. 다음 작업 (T4~T8) — 시작점·구현 힌트·완료 기준
 
-### T4 — Container Binding (다음 시작점)
+### T4 — Container Binding ✅ 완료 (`aaf8405`)
+> 산출: `container/WebAuthnAssertionAttr.java`(IMPLICIT [0]/[1]), `container/WebAuthnCmsAssembler.java`(모사 `KrWebAuthnSignature`). 테스트 10건. 상세 스펙은 [특허A-T4-Cowork-Code-분담.md](특허A-T4-Cowork-Code-분담.md) §4·§5.
+> 후속(2차): 정식 `CMSSignedData` 승격.
 - 신규: `kr-ades-cades` 에 `container/WebAuthnAssertionAttr.java`(ASN.1), `container/WebAuthnCmsAssembler.java`.
 - ASN.1 (설계서 §4.1):
   ```asn1
@@ -88,7 +91,7 @@ kr-dss-sdk/kr-dss-core/src/test/.../verify/WebAuthnVerificationPathTest.java  # 
 - 완료 기준: 패키징→파싱 라운드트립 단위테스트, unsignedAttrs 위치 검증.
 - 2차(후속): BouncyCastle `CMSSignedData` 정식 조립(`signedAttrs`=SignedAttrs, `signature`=어서션 서명, `unsignedAttrs`=WebAuthnAssertionAttr, `certificates`=서명자 인증서). 비표준 SignerInfo.signature임을 주석 명시.
 
-### T5 — 정책 기반 검증 라우터
+### T5 — 정책 기반 검증 라우터 (다음 시작점)
 - 신규: `kr-dss-core/verify` 에 `VerificationRouter`, `CertPolicyResolver`, `HsmVerificationPath`, `VerificationResult`.
 - `CertPolicyResolver`: 서명자 인증서 `certificatePolicies` OID 추출 → WEBAUTHN/HSM/STANDARD 매핑(설계서 §5.2). 부트스트랩 규칙 포함.
 - `HsmVerificationPath`: 기존 [RemoteSignVerifier.java](../../kr-dss-sdk/kr-dss-core/src/main/java/com/electcerti/krdss/dss/core/remote/RemoteSignVerifier.java) 로직 흡수(하위호환 유지).
