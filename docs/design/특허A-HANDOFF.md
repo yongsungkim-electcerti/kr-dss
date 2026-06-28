@@ -125,7 +125,15 @@ kr-dss-sdk/kr-dss-core/src/test/.../verify/WebAuthnVerificationPathTest.java  # 
 ./gradlew build                              # 전체 빌드+테스트 (커밋 전 필수)
 ./gradlew :kr-ades:kr-ades-cades:test        # T2 결속 테스트
 ./gradlew :kr-dss-sdk:kr-dss-core:test       # T3 검증 테스트
-./gradlew :poc:poc-relying-party:bootRun     # SIC 데모(:8080) — Mode 2(기존) 동작
+./gradlew :poc:poc-relying-party:bootRun     # SIC 데모(:8080) 단일 기동
+```
+
+**PoC 일괄 기동/종료·로그·수동 E2E**: [PoC-실행-검증-가이드.md](PoC-실행-검증-가이드.md)
+```powershell
+pwsh scripts\poc-up.ps1 -Mode mode1   # 특허-A Mode 1(8080 단독) 기동
+pwsh scripts\poc-logs.ps1 -Service relying-party -Grep Mode1   # 검증 로그
+pwsh scripts\poc-down.ps1             # 전체 종료
+python scripts\mode1-e2e.py           # 브라우저 없이 HTTP E2E 확인
 ```
 - JDK 21 toolchain 자동 프로비저닝. Windows는 `gradlew.bat`.
 - PoC 전체 기동 순서(Mode 2): hsm(8092) → sam(8091) → rssp(8090) → relying-party(8080).

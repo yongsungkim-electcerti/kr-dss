@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: poc-relying-party
+logging:
+  level:
+    # 특허-A Mode 1 검증 흐름 로그. 단계별 check 까지 보려면 DEBUG 로 변경.
+    com.electcerti.krdss: INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-5level %logger{0} - %msg%n"
 krdss:
   rp:
     # 원격서명 서비스(RSSP/SSA) 진입점

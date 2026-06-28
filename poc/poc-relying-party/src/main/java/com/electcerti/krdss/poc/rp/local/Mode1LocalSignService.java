@@ -8,6 +8,8 @@ import com.electcerti.krdss.ades.cades.container.WebAuthnCmsAssembler;
 import com.electcerti.krdss.dss.core.verify.VerificationResult;
 import com.electcerti.krdss.dss.core.verify.VerificationRouter;
 import com.electcerti.krdss.dss.core.verify.WebAuthnCredentialStore;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +34,8 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 @Service
 public class Mode1LocalSignService {
+
+    private static final Logger log = LoggerFactory.getLogger(Mode1LocalSignService.class);
 
     private final WebAuthnDemoCa ca;
     private final WebAuthnCredentialStore store = new WebAuthnCredentialStore();
@@ -82,6 +86,9 @@ public class Mode1LocalSignService {
                 : ("EC".equals(publicKey.getAlgorithm()) ? -7 : -257);
         store.put(credentialIdB64, new WebAuthnCredentialStore.StoredCredential(
                 cert, effectiveAlg, aaguid != null ? aaguid : new byte[16], 0L));
+        log.info("[Mode1] 등록 cred={} alg={} → CA 인증서 발급·저장(subject={})",
+                shortId(credentialIdB64), coseAlgName(effectiveAlg),
+                cert.getSubjectX500Principal().getName());
         return new RegisterResult(credentialIdB64, toPem(cert), coseAlgName(effectiveAlg));
     }
 
@@ -97,6 +104,9 @@ public class Mode1LocalSignService {
         String ticket = UUID.randomUUID().toString();
         pending.put(ticket, new Pending(document, signedAttrs.der(), credentialIdB64,
                 System.currentTimeMillis() + challengeTtlMs));
+        log.info("[Mode1] begin cred={} docBytes={} hash={} → 결속 challenge={}…(SignedAttrs {}B)",
+                shortId(credentialIdB64), document.length, hashSuite,
+                challenge.substring(0, Math.min(12, challenge.length())), signedAttrs.der().length);
         return new BeginResult(ticket, challenge, rpId, List.of(credentialIdB64), challengeTtlMs);
     }
 
@@ -119,12 +129,27 @@ public class Mode1LocalSignService {
         byte[] container = assembler.assemble(p.signedAttrsDer(), signature, List.of(cred.certificate()), attr);
 
         VerificationResult report = router.verify(container, p.document(), policy(), store, hashSuite);
+        logReport("finish", shortId(p.credentialIdB64()), report);
         return new FinishResult(Base64.getEncoder().encodeToString(container), report);
     }
 
     /** 검증: 결속 컨테이너(Base64)를 정책 라우터로 검증한다. */
     public VerificationResult verify(byte[] container, byte[] originalDocument) {
-        return router.verify(container, originalDocument, policy(), store, hashSuite);
+        VerificationResult report = router.verify(container, originalDocument, policy(), store, hashSuite);
+        logReport("verify", "container(" + container.length + "B)", report);
+        return report;
+    }
+
+    private void logReport(String phase, String who, VerificationResult report) {
+        log.info("[Mode1] {} {} → {}{} path={}",
+                phase, who, report.indication(),
+                report.subIndication() != null ? "(" + report.subIndication() + ")" : "",
+                report.signaturePath());
+        if (report.checks() != null) {
+            for (VerificationResult.Check c : report.checks()) {
+                log.debug("[Mode1]   {} {} — {}", c.passed() ? "PASS" : "FAIL", c.name(), c.message());
+            }
+        }
     }
 
     public WebAuthnCredentialStore store() {
@@ -147,6 +172,13 @@ public class Mode1LocalSignService {
             }
         }
         throw new IllegalArgumentException("공개키(SPKI) 파싱 실패 — EC/RSA 만 지원");
+    }
+
+    private static String shortId(String credentialIdB64) {
+        if (credentialIdB64 == null) {
+            return "(null)";
+        }
+        return credentialIdB64.length() <= 12 ? credentialIdB64 : credentialIdB64.substring(0, 12) + "…";
     }
 
     private static String coseAlgName(int coseAlg) {
