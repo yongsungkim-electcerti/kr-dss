@@ -18,3 +18,9 @@ krdss:
       id: signer-001
       pin: "123456"
       totp-secret: "JBSWY3DPEHPK3PXP"
+    # 특허-A Mode 1 (WebAuthn 로컬 서명) — SAM/HSM 미경유, RP 내 CA 발급·검증
+    mode1:
+      rp-id: localhost
+      allowed-origins: "http://localhost:8080"
+      user-verification-required: false
+      challenge-ttl-seconds: 120

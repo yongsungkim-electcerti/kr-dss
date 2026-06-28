@@ -15,9 +15,9 @@
 특허-A의 핵심 = **(1) 문서·서명시각·서명자 인증서 3요소를 단일 WebAuthn Challenge에 결속**하고,
 **(2) 인증서 정책으로 검증 경로를 동적 분기**한다.
 
-- ✅ **T1~T5 완료, 커밋·빌드 그린.** 결속 challenge + COSE 실검증 + 모사 CMS 컨테이너 + 정책 기반 검증 라우터(3분류)까지 동작.
-- ⬜ **T6(E2E 통합) → T7(프론트) → T8(Crypto Agility 데모)** 남음.
-- 다음 시작점: **T6 — RP/SAM 흐름 통합(Mode 1 E2E)** (등록 시 CA 인증서 발급·저장 + signBegin 결속 challenge + finish 라우터 검증).
+- ✅ **T1~T6 완료, 커밋·빌드 그린.** 결속 challenge + COSE 실검증 + 모사 CMS 컨테이너 + 정책 라우터 + **Mode 1 E2E 통합(RP `/api/local/*`, 브라우저 경로 포함)**까지 동작.
+- ⬜ **T7(프론트 시각화 보강) → T8(Crypto Agility 데모)** 남음.
+- 다음 시작점: **T7 — 프론트엔드 시각화 보강** (결속 3요소·경로·3분류 시각화. Mode 1 기본 흐름은 index.html에 이미 추가됨).
 
 핵심 설계 통찰(반드시 숙지):
 > 현재 PoC의 WebAuthn은 **2FA 게이트**일 뿐 실제 서명은 HSM이 한다. 특허-A는 **WebAuthn 어서션 자체가 전자서명**(Mode 1)이다. 그래서 두 서명 모드를 공존시키고 정책 라우터가 분기한다.
@@ -38,7 +38,8 @@
 | T2 | `SignedAttrsBuilder`(3요소→SignedAttrs), `SignatureBindingService`(challenge 파생) | `f3b7597` |
 | T3 | `WebAuthnCredentialStore`, `WebAuthnVerificationPath`(webauthn4j COSE 실검증) | `163d495` |
 | T4 | `container/WebAuthnAssertionAttr`(IMPLICIT 태그), `container/WebAuthnCmsAssembler`(모사 컨테이너, signedAttrs 원본 보존, 어서션=unsignedAttrs) | `aaf8405` |
-| T5 | `verify/VerificationRouter`(컨테이너 기반 경로 분기+3분류), `CertPolicyResolver`(정책 OID), `HsmVerificationPath`(RemoteSignVerifier 흡수), `VerificationResult`, `bind/SignedAttrsParser`(결속 검증) | (이 커밋) |
+| T5 | `verify/VerificationRouter`(컨테이너 기반 경로 분기+3분류), `CertPolicyResolver`(정책 OID), `HsmVerificationPath`(RemoteSignVerifier 흡수), `VerificationResult`, `bind/SignedAttrsParser`(결속 검증) | `45130e1` |
+| T6 | `poc-rp/local/{WebAuthnDemoCa,Mode1LocalSignService,Mode1WebAuthnController}`(`/api/local/*`, SAM/HSM 미경유), index.html Mode 1 토글·흐름, E2E 서비스테스트 2건 | (이 커밋) |
 
 ### 산출 파일
 ```
@@ -100,14 +101,16 @@ kr-dss-sdk/kr-dss-core/src/test/.../verify/WebAuthnVerificationPathTest.java  # 
 - `VerificationRouter`: 경로 선택 → 해당 경로 실행 → §5.5 3분류(`VerificationStatus`)로 종합. WebAuthn 경로는 T3 `WebAuthnVerificationPath` + messageDigest/문서 비교 + signingCertificateV2 결속 확인 추가.
 - 완료 기준: WEBAUTHN/HSM/STANDARD 분기 + TOTAL_PASSED/INDETERMINATE/TOTAL_FAILED 케이스 테스트.
 
-### T6 — RP/SAM 흐름 통합 (Mode 1 E2E) (다음 시작점)
+### T6 — RP/SAM 흐름 통합 (Mode 1 E2E) ✅ 완료
+> 산출: `poc-relying-party/.../local/{WebAuthnDemoCa,Mode1LocalSignService,Mode1WebAuthnController}`. 엔드포인트 `/api/local/{register,sign/begin,sign/finish,verify}`. index.html에 "Mode 1" 토글 + create()/get() 흐름 추가(기존 Mode 2 보존). `Mode1LocalSignServiceTest` 2건(TOTAL_PASSED / 문서변조 FAILED) + 라이브 부트 스모크 확인. 등록 시 `WebAuthnDemoCa`가 Credential 공개키로 인증서 발급(certificatePolicies=POLICY_WEBAUTHN)→`WebAuthnCredentialStore` 저장.
+> 후속: 등록/서명을 RSSP/SAM 경유로 옮기려면 별도 설계(현재 Mode 1은 RP 내 완결, SAM/HSM 미경유 — 설계 의도와 일치).
 - 등록(`/api/passkey/register` 계열): 브라우저 `cred.response.getPublicKey()`(SPKI) 수신 → **CA 인증서 발급**(BouncyCastle, `tools/krdss-cli`의 `CertCommand` 로직 재사용) → `WebAuthnCredentialStore`에 저장.
   - `CscModels.PasskeyRegisterRequest`에 `publicKeyB64` 추가, `AuthorizeBeginRequest`에 결속 challenge 전달.
 - 서명 begin([RpWebController.java](../../poc/poc-relying-party/src/main/java/com/electcerti/krdss/poc/rp/RpWebController.java) `signBegin`): `SignedAttrsBuilder`로 SignedAttrs 구성 → `SignatureBindingService`로 challenge 파생 → 브라우저 전달. (난수 challenge 제거; SAM `WebAuthnService.begin`은 외부 결속 challenge 등록형으로 개조 또는 Mode 1은 SAM 미경유)
 - 서명 finish: 어서션 → `VerificationRouter`(또는 곧장 `WebAuthnVerificationPath`)로 검증 → `WebAuthnCmsAssembler`로 패키징.
 - 완료 기준: 브라우저에서 등록→서명→검증 TOTAL_PASSED 데모. `./gradlew :poc:poc-relying-party:bootRun` 후 수동 E2E.
 
-### T7 — 프론트엔드 데모
+### T7 — 프론트엔드 데모 (다음 시작점)
 - [index.html](../../poc/poc-relying-party/src/main/resources/static/index.html): 등록 시 `getPublicKey()` 전송, 검증 결과에 결속/경로/3분류 시각화.
 
 ### T8 — Crypto Agility 데모

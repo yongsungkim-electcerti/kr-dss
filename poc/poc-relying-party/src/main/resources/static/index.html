@@ -65,6 +65,10 @@
   <section id="tab-cert" class="card">
     <h2>인증서 발급 / 조회</h2>
     <div class="desc">원격 QSCD(HSM)에 보관된 서명자 인증서를 발급·조회하고, WebAuthn 패스키를 등록합니다.</div>
+    <label style="display:flex;align-items:center;gap:8px;cursor:pointer;margin:6px 0 12px">
+      <input type="checkbox" id="mode1Toggle" style="width:auto" onchange="onModeToggle()" />
+      <span>특허-A <b>Mode 1</b> — WebAuthn 로컬 서명(어서션 자체가 전자서명, SAM/HSM 미경유)</span>
+    </label>
     <div class="row">
       <button class="act" style="flex:1" onclick="issueCert()">인증서 발급/조회</button>
       <button class="act ghost" style="flex:1" onclick="registerPasskey()">WebAuthn 패스키 등록</button>
@@ -165,6 +169,15 @@ async function issueCert(){
 
 // --- WebAuthn 패스키 등록 ---
 let registeredCredId = null;
+// 특허-A Mode 1 상태
+let mode1 = false;
+let mode1Cred = null;        // {credentialId, coseAlg}
+let mode1Container = null;    // 마지막 결속 컨테이너(Base64 DER)
+function onModeToggle(){
+  mode1 = $('mode1Toggle').checked;
+  $('passkeyState').textContent = mode1 ? '특허-A Mode 1 (미등록)' : '패스키 미등록';
+  $('passkeyState').style.color = 'var(--muted)';
+}
 async function registerPasskey(){
   try{
     if(!window.PublicKeyCredential) throw new Error('이 브라우저/환경은 WebAuthn 미지원');
@@ -177,11 +190,25 @@ async function registerPasskey(){
       authenticatorSelection:{userVerification:'preferred',residentKey:'preferred'},
       timeout:60000, attestation:'none'}});
     const credId = bytesToB64url(cred.rawId);
-    await api('/api/passkey/register',{credentialId:credId});
-    registeredCredId = credId;
-    $('passkeyState').textContent = '패스키 등록됨 ✓';
-    $('passkeyState').style.color = 'var(--green)';
-    if($('certOut')) $('certOut').insertAdjacentHTML('beforeend', `<div class="small ok" style="margin-top:8px">패스키 등록 완료: ${credId.slice(0,16)}…</div>`);
+    if(mode1){
+      // 등록 결과 공개키(SPKI)를 서버로 → CA 인증서 발급·저장
+      const spki = cred.response.getPublicKey();
+      const alg = cred.response.getPublicKeyAlgorithm();
+      const r = await api('/api/local/register',{publicKey:bytesToB64url(spki), credentialId:credId, coseAlg:alg});
+      mode1Cred = {credentialId:credId, coseAlg:alg};
+      $('passkeyState').textContent = 'Mode 1 패스키 등록됨 ✓';
+      $('passkeyState').style.color = 'var(--green)';
+      $('certOut').innerHTML = `<div class="result s">
+        <div class="row"><span class="pill ok">Mode 1 등록</span><span class="pill">${r.coseAlg}</span></div>
+        <div class="small" style="margin:8px 0 4px">CA가 Credential 공개키로 발급한 서명자 인증서</div>
+        <pre>${r.certificatePem}</pre></div>`;
+    } else {
+      await api('/api/passkey/register',{credentialId:credId});
+      registeredCredId = credId;
+      $('passkeyState').textContent = '패스키 등록됨 ✓';
+      $('passkeyState').style.color = 'var(--green)';
+      if($('certOut')) $('certOut').insertAdjacentHTML('beforeend', `<div class="small ok" style="margin-top:8px">패스키 등록 완료: ${credId.slice(0,16)}…</div>`);
+    }
   }catch(e){ alert('패스키 등록 실패: '+e.message); }
 }
 
@@ -189,6 +216,7 @@ async function registerPasskey(){
 async function doSign(){
   const text = $('docText').value.trim();
   if(!text){ alert('원문을 입력하세요'); return; }
+  if(mode1){ return doSignMode1(text); }
   $('signOut').innerHTML = '<div class="small">서명 요청 준비 중…</div>';
   try{
     if(!window.PublicKeyCredential) throw new Error('WebAuthn 미지원 — 하단 TOTP 대체 경로를 사용하세요');
@@ -221,6 +249,44 @@ async function doSignTotp(){
   }catch(e){ $('signOut').innerHTML = `<div class="result e bad">서명 실패: ${e.message}</div>`; }
 }
 
+// --- 전자서명 (특허-A Mode 1: WebAuthn 로컬 서명) ---
+async function doSignMode1(text){
+  $('signOut').innerHTML = '<div class="small">결속 challenge 발급 중…</div>';
+  try{
+    if(!window.PublicKeyCredential) throw new Error('WebAuthn 미지원');
+    if(!mode1Cred) throw new Error('먼저 ① 탭에서 Mode 1 패스키를 등록하세요');
+    // 1) begin: SignedAttrs(문서·시각·인증서) 결속 → challenge
+    const begin = await api('/api/local/sign/begin',{text, credentialId:mode1Cred.credentialId});
+    $('signOut').innerHTML = '<div class="small">WebAuthn 사용자 인증을 진행하세요 (생체/PIN)…</div>';
+    // 2) get: 결속 challenge에 대한 어서션 = 전자서명
+    const assertion = await navigator.credentials.get({publicKey:{
+      challenge:b64urlToBytes(begin.challenge), rpId:begin.rpId,
+      allowCredentials:(begin.allowCredentials||[]).map(id=>({type:'public-key',id:b64urlToBytes(id)})),
+      userVerification:'preferred', timeout:begin.timeoutMs||60000}});
+    // 3) finish: 어서션 → 결속 컨테이너 조립 + 정책 라우터 검증
+    const res = await api('/api/local/sign/finish',{ticket:begin.ticket,
+      webauthnCredId:bytesToB64url(assertion.rawId),
+      clientDataJSON:bytesToB64url(assertion.response.clientDataJSON),
+      authenticatorData:bytesToB64url(assertion.response.authenticatorData),
+      signature:bytesToB64url(assertion.response.signature)});
+    mode1Container = res.signedContainer;
+    $('verDoc').value = res.signedContainer;   // 검증 탭으로 자동 전달
+    $('verOrig').value = text;
+    renderReport($('signOut'), res.report, '서명 완료 — 어서션이 곧 전자서명');
+  }catch(e){ $('signOut').innerHTML = `<div class="result e bad">서명 실패: ${e.message}</div>`; }
+}
+
+// VerificationResult(특허-A 라우터) 렌더 — sign/verify 공용
+function renderReport(el, rep, title){
+  const checks = (rep.checks||[]).map(c=>`<div class="check"><span>${c.name}</span><span class="${c.passed?'ok':'bad'}">${c.passed?'PASS':'FAIL'} · ${c.message}</span></div>`).join('');
+  el.innerHTML = `<div class="result ${rep.indication==='TOTAL_PASSED'?'s':'e'}">
+    ${title?`<div class="row"><span class="pill ok">${title}</span><span class="pill">경로:${rep.signaturePath||'-'}</span></div>`:''}
+    <div class="indication ${rep.indication}" style="margin-top:10px">${rep.indication}${rep.subIndication?' · '+rep.subIndication:''}</div>
+    <div class="small" style="margin-top:8px">서명자: ${rep.signerSubject||'-'}<br>서명시각: ${rep.signingTime||'-'}<br>검증경로: ${rep.signaturePath||'-'}</div>
+    <div style="margin-top:10px">${checks}</div>
+    ${mode1Container?`<details style="margin-top:10px"><summary>결속 컨테이너(Base64 DER)</summary><pre>${mode1Container}</pre></details>`:''}</div>`;
+}
+
 function renderSigned(res, original){
   lastSigned = res.signedDocument;
   $('verDoc').value = res.signedDocument;       // 검증 탭으로 자동 전달
@@ -237,6 +303,13 @@ async function doVerify(){
   const doc = $('verDoc').value.trim();
   if(!doc){ alert('서명객체를 입력하세요'); return; }
   $('verOut').innerHTML = '<div class="small">검증 중…</div>';
+  if(mode1){
+    try{
+      const rep = await api('/api/local/verify',{signedContainer:doc, originalText:$('verOrig').value});
+      renderReport($('verOut'), rep, null);
+    }catch(e){ $('verOut').innerHTML = `<div class="result e bad">검증 실패: ${e.message}</div>`; }
+    return;
+  }
   try{
     const rep = await api('/api/verify',{signedDocument:doc, originalText:$('verOrig').value});
     const checks = (rep.checks||[]).map(c=>`<div class="check"><span>${c.name}</span><span class="${c.passed?'ok':'bad'}">${c.passed?'PASS':'FAIL'} · ${c.message}</span></div>`).join('');
