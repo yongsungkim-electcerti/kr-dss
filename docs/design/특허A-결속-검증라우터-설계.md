@@ -103,10 +103,11 @@ WebAuthnAssertionAttr ::= SEQUENCE {
     authenticatorData  OCTET STRING,
     clientDataJSON     OCTET STRING,   -- 원문 바이트 그대로 보관
     coseAlg            INTEGER,        -- 예: -7(ES256), -257(RS256)
-    credentialId       OCTET STRING OPTIONAL,
-    aaguid             OCTET STRING OPTIONAL
+    credentialId   [0] IMPLICIT OCTET STRING OPTIONAL,
+    aaguid         [1] IMPLICIT OCTET STRING OPTIONAL
 }
 ```
+> 결정(2026-06-28): 동일 UNIVERSAL 타입(OCTET STRING) OPTIONAL 연속의 DER 디코딩 모호성 제거를 위해 IMPLICIT 컨텍스트 태그 적용.
 - 비서명 속성 OID(사설): `1.3.6.1.4.1.<PEN>.1.1` 형태로 예약(임시 `1.3.6.1.4.1.99999.1.1`, 추후 정식 PEN 배정).
 
 ### 4.2 순환참조 방지 (청구항 5)
