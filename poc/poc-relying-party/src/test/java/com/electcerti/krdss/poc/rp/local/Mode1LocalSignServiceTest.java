@@ -26,7 +26,11 @@ class Mode1LocalSignServiceTest {
     private static final String RP_ID = "localhost";
 
     private Mode1LocalSignService newService() {
-        return new Mode1LocalSignService(new WebAuthnDemoCa(), RP_ID, ORIGIN, false, 120);
+        return newService("SHA_256");
+    }
+
+    private Mode1LocalSignService newService(String hashSuite) {
+        return new Mode1LocalSignService(new WebAuthnDemoCa(), RP_ID, ORIGIN, false, 120, hashSuite);
     }
 
     @Test
@@ -59,6 +63,24 @@ class Mode1LocalSignServiceTest {
         // 5) verify — 컨테이너 재검증(원문 일치)
         VerificationResult re = svc.verify(Base64.getDecoder().decode(finish.containerB64()), document);
         assertThat(re.indication()).isEqualTo(VerificationStatus.TOTAL_PASSED);
+    }
+
+    @Test
+    void crypto_agility_sha384_full_flow_total_passed() throws Exception {
+        // 암호 민첩성(특허-A 청구항 4/8): 해시 스위트를 SHA-384 로 교체해도 결속·검증 일관 성립
+        Mode1LocalSignService svc = newService("SHA_384");
+        KeyPair passkey = ecKeyPair();
+        String credIdB64 = b64url("passkey-cred-384".getBytes(StandardCharsets.UTF_8));
+        svc.register(passkey.getPublic().getEncoded(), credIdB64, -7, null);
+
+        byte[] document = "암호 민첩성 데모 문서".getBytes(StandardCharsets.UTF_8);
+        var begin = svc.begin(document, credIdB64);
+        Assertion a = makeAssertion(passkey, begin.challenge());
+        var finish = svc.finish(begin.ticket(), credIdB64, a.clientDataJSON, a.authData, a.signature);
+
+        assertThat(finish.report().indication())
+                .as(finish.report().subIndication())
+                .isEqualTo(VerificationStatus.TOTAL_PASSED);
     }
 
     @Test

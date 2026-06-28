@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.security.KeyFactory;
-import java.security.MessageDigest;
 import java.security.PublicKey;
 import java.security.cert.X509Certificate;
 import java.security.spec.X509EncodedKeySpec;
@@ -44,18 +43,21 @@ public class Mode1LocalSignService {
     private final List<String> allowedOrigins;
     private final boolean userVerificationRequired;
     private final long challengeTtlMs;
+    private final HashSuite hashSuite;
 
     public Mode1LocalSignService(
             WebAuthnDemoCa ca,
             @Value("${krdss.rp.mode1.rp-id:localhost}") String rpId,
             @Value("${krdss.rp.mode1.allowed-origins:http://localhost:8080}") String allowedOrigins,
             @Value("${krdss.rp.mode1.user-verification-required:false}") boolean userVerificationRequired,
-            @Value("${krdss.rp.mode1.challenge-ttl-seconds:120}") long challengeTtlSeconds) {
+            @Value("${krdss.rp.mode1.challenge-ttl-seconds:120}") long challengeTtlSeconds,
+            @Value("${krdss.rp.mode1.hash-suite:SHA_256}") String hashSuite) {
         this.ca = ca;
         this.rpId = rpId;
         this.allowedOrigins = Arrays.stream(allowedOrigins.split(",")).map(String::trim).toList();
         this.userVerificationRequired = userVerificationRequired;
         this.challengeTtlMs = challengeTtlSeconds * 1000;
+        this.hashSuite = HashSuite.valueOf(hashSuite.trim());
     }
 
     private record Pending(byte[] document, byte[] signedAttrsDer, String credentialIdB64, long expiresAt) {
@@ -87,9 +89,9 @@ public class Mode1LocalSignService {
     public BeginResult begin(byte[] document, String credentialIdB64) {
         WebAuthnCredentialStore.StoredCredential cred = store.find(credentialIdB64)
                 .orElseThrow(() -> new IllegalArgumentException("등록되지 않은 자격증명: 먼저 패스키를 등록하세요"));
-        byte[] docDigest = sha256(document);
+        byte[] docDigest = hashSuite.digest(document);
         SignedAttrsBuilder.SignedAttrs signedAttrs = SignedAttrsBuilder.build(
-                docDigest, Instant.now(), cred.certificate(), HashSuite.SHA_256);
+                docDigest, Instant.now(), cred.certificate(), hashSuite);
         String challenge = SignatureBindingService.deriveChallenge(signedAttrs);
 
         String ticket = UUID.randomUUID().toString();
@@ -116,13 +118,13 @@ public class Mode1LocalSignService {
                 authenticatorData, clientDataJSON, cred.coseAlg(), credentialId, cred.aaguid());
         byte[] container = assembler.assemble(p.signedAttrsDer(), signature, List.of(cred.certificate()), attr);
 
-        VerificationResult report = router.verify(container, p.document(), policy(), store);
+        VerificationResult report = router.verify(container, p.document(), policy(), store, hashSuite);
         return new FinishResult(Base64.getEncoder().encodeToString(container), report);
     }
 
     /** 검증: 결속 컨테이너(Base64)를 정책 라우터로 검증한다. */
     public VerificationResult verify(byte[] container, byte[] originalDocument) {
-        return router.verify(container, originalDocument, policy(), store);
+        return router.verify(container, originalDocument, policy(), store, hashSuite);
     }
 
     public WebAuthnCredentialStore store() {
@@ -145,14 +147,6 @@ public class Mode1LocalSignService {
             }
         }
         throw new IllegalArgumentException("공개키(SPKI) 파싱 실패 — EC/RSA 만 지원");
-    }
-
-    private static byte[] sha256(byte[] data) {
-        try {
-            return MessageDigest.getInstance("SHA-256").digest(data);
-        } catch (Exception e) {
-            throw new IllegalStateException("SHA-256 사용 불가", e);
-        }
     }
 
     private static String coseAlgName(int coseAlg) {

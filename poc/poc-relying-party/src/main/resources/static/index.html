@@ -45,6 +45,12 @@
   .INDETERMINATE{background:rgba(245,158,11,.15);color:var(--amber);}
   details{margin-top:12px;} summary{cursor:pointer;color:var(--muted);font-size:13px;}
   footer{text-align:center;color:var(--muted);font-size:12px;margin-top:24px;}
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:6px 0 16px;padding:12px;border:1px dashed var(--line);border-radius:10px;background:var(--bg);}
+  .flow .n{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12px;color:var(--txt);}
+  .flow .arrow{color:var(--muted);font-size:13px;font-weight:700;}
+  .flow .hl{border-color:var(--blue);color:#93c5fd;}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:11px;color:var(--muted);}
+  .legend b{font-weight:700;}
 </style>
 </head>
 <body>
@@ -80,6 +86,16 @@
   <section id="tab-sign" class="card hide">
     <h2>전자서명 생성</h2>
     <div class="desc">원문과 서명 규격을 선택하고 서명을 요청합니다. 요청 시 SAD 생성과 함께 WebAuthn 사용자 인증을 수행합니다.</div>
+
+    <!-- 특허-A Mode 1: 서명 결속(Signature Binding) 흐름 -->
+    <div id="mode1Flow" class="flow hide">
+      <span class="n">문서 H(doc)</span><span class="arrow">＋</span>
+      <span class="n">서명시각</span><span class="arrow">＋</span>
+      <span class="n">서명자 인증서 H(cert)</span>
+      <span class="arrow">→</span><span class="n hl">SignedAttrs</span>
+      <span class="arrow">→</span><span class="n hl">Challenge = BASE64URL(Hash(DER))</span>
+      <span class="arrow">→</span><span class="n">WebAuthn 어서션 = 전자서명</span>
+    </div>
 
     <label>원문 샘플</label>
     <select id="sampleSel" onchange="applySample()">
@@ -177,6 +193,7 @@ function onModeToggle(){
   mode1 = $('mode1Toggle').checked;
   $('passkeyState').textContent = mode1 ? '특허-A Mode 1 (미등록)' : '패스키 미등록';
   $('passkeyState').style.color = 'var(--muted)';
+  const f = $('mode1Flow'); if(f) f.classList.toggle('hide', !mode1);
 }
 async function registerPasskey(){
   try{
@@ -284,6 +301,11 @@ function renderReport(el, rep, title){
     <div class="indication ${rep.indication}" style="margin-top:10px">${rep.indication}${rep.subIndication?' · '+rep.subIndication:''}</div>
     <div class="small" style="margin-top:8px">서명자: ${rep.signerSubject||'-'}<br>서명시각: ${rep.signingTime||'-'}<br>검증경로: ${rep.signaturePath||'-'}</div>
     <div style="margin-top:10px">${checks}</div>
+    <div class="legend">
+      <span><b class="ok">TOTAL_PASSED</b> 서명·결속·문서해시·인증서 모두 성공</span>
+      <span><b class="ind">INDETERMINATE</b> 암호검증 성공·신뢰(등록/TL/시점) 일부 불충분</span>
+      <span><b class="bad">TOTAL_FAILED</b> 서명·결속·해시·경로 중 실패</span>
+    </div>
     ${mode1Container?`<details style="margin-top:10px"><summary>결속 컨테이너(Base64 DER)</summary><pre>${mode1Container}</pre></details>`:''}</div>`;
 }
 

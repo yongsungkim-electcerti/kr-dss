@@ -62,9 +62,19 @@ public class VerificationRouter {
      */
     public VerificationResult verify(byte[] signedObject, byte[] originalDocument,
                                      Policy policy, WebAuthnCredentialStore store) {
+        return verify(signedObject, originalDocument, policy, store, HashSuite.SHA_256);
+    }
+
+    /**
+     * 해시 알고리즘을 명시해 검증한다(암호 민첩성, 특허-A 청구항 4/8).
+     *
+     * @param hashSuite 결속 challenge 재계산·문서 다이제스트 비교에 사용할 해시 알고리즘
+     */
+    public VerificationResult verify(byte[] signedObject, byte[] originalDocument,
+                                     Policy policy, WebAuthnCredentialStore store, HashSuite hashSuite) {
         WebAuthnCmsAssembler.Parsed parsed = tryParseWebAuthn(signedObject);
         if (parsed != null) {
-            return verifyWebAuthn(parsed, originalDocument, policy, store);
+            return verifyWebAuthn(parsed, originalDocument, policy, store, hashSuite);
         }
         // 컨테이너가 WebAuthn 모사 구조가 아니면 HSM/표준 경로로 위임
         return hsmPath.verify(signedObject, originalDocument);
@@ -79,7 +89,7 @@ public class VerificationRouter {
     }
 
     private VerificationResult verifyWebAuthn(WebAuthnCmsAssembler.Parsed parsed, byte[] document,
-                                              Policy policy, WebAuthnCredentialStore store) {
+                                              Policy policy, WebAuthnCredentialStore store, HashSuite hashSuite) {
         List<VerificationResult.Check> checks = new ArrayList<>();
         WebAuthnAssertionAttr assertion = parsed.assertion();
         X509Certificate containerCert = parsed.certificates().isEmpty() ? null : parsed.certificates().get(0);
@@ -120,7 +130,7 @@ public class VerificationRouter {
 
         // 2) WebAuthn 어서션 COSE 실검증(T3) — challenge 재계산/서명/flags/origin
         WebAuthnVerificationPath.Input input = new WebAuthnVerificationPath.Input(
-                parsed.signedAttrsDer(), HashSuite.SHA_256,
+                parsed.signedAttrsDer(), hashSuite,
                 assertion.credentialId(), assertion.authenticatorData(),
                 assertion.clientDataJSON(), parsed.signature(),
                 policy.rpId(), policy.allowedOrigins(), policy.userVerificationRequired());
@@ -138,7 +148,7 @@ public class VerificationRouter {
         // 3-1) 문서 무결성 — messageDigest == H(문서) (원문 제공 시)
         boolean digestOk = true;
         if (document != null && sa.messageDigest() != null) {
-            byte[] h = HashSuite.SHA_256.digest(document);
+            byte[] h = hashSuite.digest(document);
             digestOk = Arrays.equals(h, sa.messageDigest());
             checks.add(new VerificationResult.Check("문서 무결성(messageDigest)", digestOk,
                     digestOk ? "원문 다이제스트 일치" : "원문 다이제스트 불일치(문서 변조)"));
@@ -148,7 +158,7 @@ public class VerificationRouter {
         boolean signerBindingOk = true;
         if (sa.signingCertHash() != null) {
             try {
-                byte[] certHash = HashSuite.SHA_256.digest(effective.certificate().getEncoded());
+                byte[] certHash = hashSuite.digest(effective.certificate().getEncoded());
                 signerBindingOk = Arrays.equals(certHash, sa.signingCertHash());
             } catch (Exception e) {
                 signerBindingOk = false;

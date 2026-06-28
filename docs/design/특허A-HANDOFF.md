@@ -15,9 +15,8 @@
 특허-A의 핵심 = **(1) 문서·서명시각·서명자 인증서 3요소를 단일 WebAuthn Challenge에 결속**하고,
 **(2) 인증서 정책으로 검증 경로를 동적 분기**한다.
 
-- ✅ **T1~T6 완료, 커밋·빌드 그린.** 결속 challenge + COSE 실검증 + 모사 CMS 컨테이너 + 정책 라우터 + **Mode 1 E2E 통합(RP `/api/local/*`, 브라우저 경로 포함)**까지 동작.
-- ⬜ **T7(프론트 시각화 보강) → T8(Crypto Agility 데모)** 남음.
-- 다음 시작점: **T7 — 프론트엔드 시각화 보강** (결속 3요소·경로·3분류 시각화. Mode 1 기본 흐름은 index.html에 이미 추가됨).
+- ✅ **T1~T8 전부 완료, 커밋·빌드 그린.** 결속 challenge + COSE 실검증 + 모사 CMS 컨테이너 + 정책 라우터 + Mode 1 E2E + 결속 시각화 + 암호 민첩성(SHA-256/384)까지 동작.
+- 특허-A PoC(WEB) 1차 구현 완료. 남은 것은 **수동 브라우저 E2E 확인**(§4)과 후속 과제(정식 CMS 승격, 특허-B/C 연계).
 
 핵심 설계 통찰(반드시 숙지):
 > 현재 PoC의 WebAuthn은 **2FA 게이트**일 뿐 실제 서명은 HSM이 한다. 특허-A는 **WebAuthn 어서션 자체가 전자서명**(Mode 1)이다. 그래서 두 서명 모드를 공존시키고 정책 라우터가 분기한다.
@@ -39,7 +38,9 @@
 | T3 | `WebAuthnCredentialStore`, `WebAuthnVerificationPath`(webauthn4j COSE 실검증) | `163d495` |
 | T4 | `container/WebAuthnAssertionAttr`(IMPLICIT 태그), `container/WebAuthnCmsAssembler`(모사 컨테이너, signedAttrs 원본 보존, 어서션=unsignedAttrs) | `aaf8405` |
 | T5 | `verify/VerificationRouter`(컨테이너 기반 경로 분기+3분류), `CertPolicyResolver`(정책 OID), `HsmVerificationPath`(RemoteSignVerifier 흡수), `VerificationResult`, `bind/SignedAttrsParser`(결속 검증) | `45130e1` |
-| T6 | `poc-rp/local/{WebAuthnDemoCa,Mode1LocalSignService,Mode1WebAuthnController}`(`/api/local/*`, SAM/HSM 미경유), index.html Mode 1 토글·흐름, E2E 서비스테스트 2건 | (이 커밋) |
+| T6 | `poc-rp/local/{WebAuthnDemoCa,Mode1LocalSignService,Mode1WebAuthnController}`(`/api/local/*`, SAM/HSM 미경유), index.html Mode 1 토글·흐름, E2E 서비스테스트 2건 | `054eb93` |
+| T7 | index.html 결속 흐름 다이어그램(`#mode1Flow`) + 3분류 범례 + 경로/checks 렌더 | (이 커밋) |
+| T8 | 암호 민첩성: HashSuite를 begin/검증 전구간 파라미터화(`VerificationRouter.verify(...,HashSuite)`, `Mode1LocalSignService` 설정), SHA-384 E2E 테스트 | (이 커밋) |
 
 ### 산출 파일
 ```
@@ -110,11 +111,11 @@ kr-dss-sdk/kr-dss-core/src/test/.../verify/WebAuthnVerificationPathTest.java  # 
 - 서명 finish: 어서션 → `VerificationRouter`(또는 곧장 `WebAuthnVerificationPath`)로 검증 → `WebAuthnCmsAssembler`로 패키징.
 - 완료 기준: 브라우저에서 등록→서명→검증 TOTAL_PASSED 데모. `./gradlew :poc:poc-relying-party:bootRun` 후 수동 E2E.
 
-### T7 — 프론트엔드 데모 (다음 시작점)
-- [index.html](../../poc/poc-relying-party/src/main/resources/static/index.html): 등록 시 `getPublicKey()` 전송, 검증 결과에 결속/경로/3분류 시각화.
+### T7 — 프론트엔드 데모 ✅ 완료
+- index.html: Mode 1 결속 흐름 다이어그램(`#mode1Flow`, 토글 시 표시), 3분류 범례, 경로/checks 렌더(`renderReport`). 등록 시 `getPublicKey()` 전송은 T6에서 적용됨.
 
-### T8 — Crypto Agility 데모
-- HashSuite 설정 교체(SHA-256↔SHA-384) 시 challenge/검증 일관성 시연.
+### T8 — Crypto Agility 데모 ✅ 완료
+- `VerificationRouter.verify(...,HashSuite)` 오버로드 + `Mode1LocalSignService`의 `krdss.rp.mode1.hash-suite` 설정으로 begin/검증 전구간에 동일 스위트 적용. SHA-384 E2E 테스트 통과(SHA-256 기본 유지). SM3는 예약(미구현).
 
 ---
 
