@@ -2,7 +2,7 @@
 
 > **이 문서 하나로 이어서 작업한다.** 특허-A "서명 결속부 + 정책 기반 검증 라우터"의
 > PoC(WEB/AOS, iOS 제외) 구현 진행 현황·결정·다음 작업을 담는다.
-> 최종 갱신: 2026-06-28 · 브랜치: `feat/claude-webauthn`
+> 최종 갱신: 2026-06-29 · 브랜치: `feat/claude-webauthn`
 
 관련 문서:
 - 상세 설계서: [특허A-결속-검증라우터-설계.md](특허A-결속-검증라우터-설계.md)
@@ -16,7 +16,8 @@
 **(2) 인증서 정책으로 검증 경로를 동적 분기**한다.
 
 - ✅ **T1~T8 전부 완료, 커밋·빌드 그린.** 결속 challenge + COSE 실검증 + 모사 CMS 컨테이너 + 정책 라우터 + Mode 1 E2E + 결속 시각화 + 암호 민첩성(SHA-256/384)까지 동작.
-- 특허-A PoC(WEB) 1차 구현 완료. 남은 것은 **수동 브라우저 E2E 확인**(§4)과 후속 과제(정식 CMS 승격, 특허-B/C 연계).
+- ✅ **수동 브라우저 E2E 검증 완료(2026-06-29).** 등록→begin→finish→verify 전 구간 `TOTAL_PASSED`, path=`WEBAUTHN`. 로그 근거는 §4.
+- 특허-A PoC(WEB) 1차 구현 + E2E 검증 완료. 남은 것은 후속 과제(정식 CMS 승격, 특허-B/C 연계).
 
 핵심 설계 통찰(반드시 숙지):
 > 현재 PoC의 WebAuthn은 **2FA 게이트**일 뿐 실제 서명은 HSM이 한다. 특허-A는 **WebAuthn 어서션 자체가 전자서명**(Mode 1)이다. 그래서 두 서명 모드를 공존시키고 정책 라우터가 분기한다.
@@ -138,6 +139,16 @@ python scripts\mode1-e2e.py           # 브라우저 없이 HTTP E2E 확인
 - JDK 21 toolchain 자동 프로비저닝. Windows는 `gradlew.bat`.
 - PoC 전체 기동 순서(Mode 2): hsm(8092) → sam(8091) → rssp(8090) → relying-party(8080).
 
+### E2E 검증 기록 (2026-06-29, Mode 1)
+브라우저 수동 E2E를 8080 단독 기동(`poc-up.ps1 -Mode mode1`)으로 수행, 전 구간 통과. `logs/relying-party.log` 근거:
+```
+[Mode1] 등록 cred=aGeodb8duV9Q… alg=ES256 → CA 인증서 발급·저장(subject=CN=KR-DSS WebAuthn Signer)
+[Mode1] begin docBytes=81 hash=SHA_256 → 결속 challenge=dhYcE1KSv7U6…(SignedAttrs 165B)
+[Mode1] finish → TOTAL_PASSED path=WEBAUTHN
+[Mode1] verify container(879B) → TOTAL_PASSED path=WEBAUTHN
+```
+- 검증된 흐름: 패스키 등록 시 Credential 공개키로 CA 인증서 발급·저장 → SignedAttrs 결속 challenge 파생 → WebAuthn 어서션 서명 → 라우터가 WEBAUTHN 경로로 분기·종합 `TOTAL_PASSED` → 모사 CMS 컨테이너(879B) 재검증도 `TOTAL_PASSED`.
+
 ---
 
 ## 5. 작업 규칙 (AGENTS.md 준수)
@@ -158,5 +169,5 @@ python scripts\mode1-e2e.py           # 브라우저 없이 HTTP E2E 확인
 ## 7. 이어서 시작하는 법 (Cowork/신규 세션)
 1. 이 문서와 [설계서](특허A-결속-검증라우터-설계.md) §2·§5를 먼저 읽는다.
 2. `git checkout feat/claude-webauthn && ./gradlew build` 로 그린 확인.
-3. **T4**부터 §3의 시작점대로 진행 → 각 태스크 단위 커밋.
+3. T1~T8 + E2E 검증까지 완료 상태(§0). 후속 과제(정식 CMS 승격, 특허-B/C 연계)부터 진행 → 각 태스크 단위 커밋.
 4. 막히면 §2 확정 결정과 충돌하는지 확인하고, 충돌 시 사용자에게 합의 요청.
