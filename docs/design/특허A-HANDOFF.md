@@ -17,7 +17,8 @@
 
 - ✅ **T1~T8 전부 완료, 커밋·빌드 그린.** 결속 challenge + COSE 실검증 + 모사 CMS 컨테이너 + 정책 라우터 + Mode 1 E2E + 결속 시각화 + 암호 민첩성(SHA-256/384)까지 동작.
 - ✅ **수동 브라우저 E2E 검증 완료(2026-06-29).** 등록→begin→finish→verify 전 구간 `TOTAL_PASSED`, path=`WEBAUTHN`. 로그 근거는 §4.
-- 특허-A PoC(WEB) 1차 구현 + E2E 검증 완료. 남은 것은 후속 과제(정식 CMS 승격, 특허-B/C 연계).
+- ✅ **정식 CMS 승격 완료(2026-06-29).** 2단계 전략 2차: `container/WebAuthnCmsSignedData`(RFC5652 `SignedData` 저수준 조립/파싱). 결속 바이트 보존·표준 `CMSSignedData` 로드 가능, 라우터가 CMS→모사→HSM 순 자동 분기, Mode 1 기본 포맷 `cms`(모사 fallback `mock`). `./gradlew build` 그린.
+- 특허-A PoC(WEB) 1차 구현 + E2E 검증 + 정식 CMS 승격 완료. 남은 것은 후속 과제(특허-B/C 연계).
 
 핵심 설계 통찰(반드시 숙지):
 > 현재 PoC의 WebAuthn은 **2FA 게이트**일 뿐 실제 서명은 HSM이 한다. 특허-A는 **WebAuthn 어서션 자체가 전자서명**(Mode 1)이다. 그래서 두 서명 모드를 공존시키고 정책 라우터가 분기한다.
@@ -81,9 +82,9 @@ kr-dss-sdk/kr-dss-core/src/test/.../verify/WebAuthnVerificationPathTest.java  # 
 
 ## 3. 다음 작업 (T4~T8) — 시작점·구현 힌트·완료 기준
 
-### T4 — Container Binding ✅ 완료 (`aaf8405`)
+### T4 — Container Binding ✅ 완료 (`aaf8405`) · 정식 CMS 승격 ✅ 완료
 > 산출: `container/WebAuthnAssertionAttr.java`(IMPLICIT [0]/[1]), `container/WebAuthnCmsAssembler.java`(모사 `KrWebAuthnSignature`). 테스트 10건. 상세 스펙은 [특허A-T4-Cowork-Code-분담.md](특허A-T4-Cowork-Code-분담.md) §4·§5.
-> 후속(2차): 정식 `CMSSignedData` 승격.
+> **2차(정식 CMS) 완료:** `container/WebAuthnCmsSignedData.java` — BouncyCastle 저수준 `SignerInfo` 로 RFC5652 `ContentInfo/SignedData` 조립·파싱. signedAttrs=`[0] IMPLICIT`(원본 바이트 보존, challenge 재파생 일치), digestAlgorithm=HashSuite OID, signatureAlgorithm=`WEBAUTHN_ASSERTION_SIG_ALG`(비표준, 라우터 전용), signature=어서션, unsignedAttrs=`WebAuthnAssertionAttr`, certificates=서명자 인증서, encapContentInfo=id-data detached. 표준 `CMSSignedData` 로 로드 가능(detached). 라우터 `tryParseWebAuthn`이 CMS→모사 순으로 동일 `Parsed` 환원해 검증 로직 무변경. `Mode1LocalSignService` 포맷 설정 `krdss.rp.mode1.container-format`(기본 `cms`, fallback `mock`). 테스트: `WebAuthnCmsSignedDataTest`(5건) + 라우터 CMS E2E 2건 + Mode1 모사 호환 1건.
 - 신규: `kr-ades-cades` 에 `container/WebAuthnAssertionAttr.java`(ASN.1), `container/WebAuthnCmsAssembler.java`.
 - ASN.1 (설계서 §4.1):
   ```asn1
@@ -169,5 +170,5 @@ python scripts\mode1-e2e.py           # 브라우저 없이 HTTP E2E 확인
 ## 7. 이어서 시작하는 법 (Cowork/신규 세션)
 1. 이 문서와 [설계서](특허A-결속-검증라우터-설계.md) §2·§5를 먼저 읽는다.
 2. `git checkout feat/claude-webauthn && ./gradlew build` 로 그린 확인.
-3. T1~T8 + E2E 검증까지 완료 상태(§0). 후속 과제(정식 CMS 승격, 특허-B/C 연계)부터 진행 → 각 태스크 단위 커밋.
+3. T1~T8 + E2E 검증 + 정식 CMS 승격까지 완료 상태(§0). 후속 과제(특허-B Registration/Multi-RA, 특허-C KR-TL/HSM Attestation, AOS 클라이언트)부터 진행 → 각 태스크 단위 커밋.
 4. 막히면 §2 확정 결정과 충돌하는지 확인하고, 충돌 시 사용자에게 합의 요청.

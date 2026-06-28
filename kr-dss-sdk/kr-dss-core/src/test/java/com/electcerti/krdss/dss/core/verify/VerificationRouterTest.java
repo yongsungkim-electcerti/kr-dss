@@ -4,6 +4,7 @@ import com.electcerti.krdss.ades.cades.bind.HashSuite;
 import com.electcerti.krdss.ades.cades.bind.SignedAttrsBuilder;
 import com.electcerti.krdss.ades.cades.container.WebAuthnAssertionAttr;
 import com.electcerti.krdss.ades.cades.container.WebAuthnCmsAssembler;
+import com.electcerti.krdss.ades.cades.container.WebAuthnCmsSignedData;
 import com.electcerti.krdss.dss.api.VerificationStatus;
 import org.bouncycastle.asn1.x500.X500Name;
 import org.bouncycastle.cert.jcajce.JcaX509CertificateConverter;
@@ -38,6 +39,7 @@ class VerificationRouterTest {
 
     private final VerificationRouter router = new VerificationRouter();
     private final WebAuthnCmsAssembler assembler = new WebAuthnCmsAssembler();
+    private final WebAuthnCmsSignedData cmsAssembler = new WebAuthnCmsSignedData();
 
     @Test
     void webauthn_registered_valid_document_total_passed() throws Exception {
@@ -79,6 +81,34 @@ class VerificationRouterTest {
     }
 
     @Test
+    void webauthn_formal_cms_container_total_passed() throws Exception {
+        Fixture f = new Fixture("전자계약서 본문");
+        WebAuthnCredentialStore store = new WebAuthnCredentialStore();
+        store.put(b64url(f.credentialId),
+                new WebAuthnCredentialStore.StoredCredential(f.cert, -7, new byte[16], 0L));
+
+        // 정식 RFC5652 CMS 컨테이너로도 결속 바이트가 보존되어 동일하게 검증된다.
+        VerificationResult result = router.verify(f.cmsContainer, f.document, VerificationRouter.Policy.demo(), store);
+
+        assertThat(result.signaturePath()).isEqualTo("WEBAUTHN");
+        assertThat(result.indication()).as(result.subIndication()).isEqualTo(VerificationStatus.TOTAL_PASSED);
+    }
+
+    @Test
+    void webauthn_formal_cms_tampered_document_total_failed() throws Exception {
+        Fixture f = new Fixture("원본 문서");
+        WebAuthnCredentialStore store = new WebAuthnCredentialStore();
+        store.put(b64url(f.credentialId),
+                new WebAuthnCredentialStore.StoredCredential(f.cert, -7, new byte[16], 0L));
+
+        byte[] tampered = "변조된 문서".getBytes(StandardCharsets.UTF_8);
+        VerificationResult result = router.verify(f.cmsContainer, tampered, VerificationRouter.Policy.demo(), store);
+
+        assertThat(result.indication()).isEqualTo(VerificationStatus.TOTAL_FAILED);
+        assertThat(result.subIndication()).isEqualTo("HASH_FAILURE");
+    }
+
+    @Test
     void non_webauthn_container_routes_to_hsm_path() {
         byte[] json = "{\"format\":\"MADES\",\"signatureMode\":\"REMOTE\"}".getBytes(StandardCharsets.UTF_8);
         VerificationResult result = router.verify(json, null, VerificationRouter.Policy.demo(),
@@ -94,6 +124,7 @@ class VerificationRouterTest {
         final byte[] credentialId = "router-cred-id".getBytes(StandardCharsets.UTF_8);
         final byte[] document;
         final byte[] container;
+        final byte[] cmsContainer;
 
         Fixture(String docText) throws Exception {
             kp = ecKeyPair();
@@ -114,6 +145,8 @@ class VerificationRouterTest {
             WebAuthnAssertionAttr attr = WebAuthnAssertionAttr.of(
                     authData, clientDataJSON, -7, credentialId, new byte[16]);
             container = assembler.assemble(attrs.der(), signature, List.of(cert), attr);
+            cmsContainer = cmsAssembler.assemble(
+                    attrs.der(), HashSuite.SHA_256, signature, List.of(cert), attr);
         }
     }
 

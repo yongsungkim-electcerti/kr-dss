@@ -4,6 +4,7 @@ import com.electcerti.krdss.ades.cades.bind.HashSuite;
 import com.electcerti.krdss.ades.cades.bind.SignedAttrsParser;
 import com.electcerti.krdss.ades.cades.container.WebAuthnAssertionAttr;
 import com.electcerti.krdss.ades.cades.container.WebAuthnCmsAssembler;
+import com.electcerti.krdss.ades.cades.container.WebAuthnCmsSignedData;
 import com.electcerti.krdss.dss.api.VerificationStatus;
 
 import java.security.cert.X509Certificate;
@@ -33,6 +34,7 @@ public class VerificationRouter {
 
     private final WebAuthnVerificationPath webAuthnPath = new WebAuthnVerificationPath();
     private final HsmVerificationPath hsmPath = new HsmVerificationPath();
+    private final WebAuthnCmsSignedData cmsSignedData = new WebAuthnCmsSignedData();
     private final WebAuthnCmsAssembler assembler = new WebAuthnCmsAssembler();
 
     /**
@@ -81,6 +83,12 @@ public class VerificationRouter {
     }
 
     private WebAuthnCmsAssembler.Parsed tryParseWebAuthn(byte[] signedObject) {
+        // 2단계 전략: 정식 CMS(2차) 우선 시도 → 모사 컨테이너(1차) 순으로 동일 Parsed 로 환원.
+        try {
+            return cmsSignedData.parse(signedObject);
+        } catch (Exception ignored) {
+            // 정식 CMS 구조가 아니면 모사 컨테이너로 위임
+        }
         try {
             return assembler.parse(signedObject);
         } catch (Exception e) {

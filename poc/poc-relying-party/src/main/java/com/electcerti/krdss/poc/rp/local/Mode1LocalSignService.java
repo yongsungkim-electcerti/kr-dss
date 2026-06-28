@@ -5,6 +5,7 @@ import com.electcerti.krdss.ades.cades.bind.SignatureBindingService;
 import com.electcerti.krdss.ades.cades.bind.SignedAttrsBuilder;
 import com.electcerti.krdss.ades.cades.container.WebAuthnAssertionAttr;
 import com.electcerti.krdss.ades.cades.container.WebAuthnCmsAssembler;
+import com.electcerti.krdss.ades.cades.container.WebAuthnCmsSignedData;
 import com.electcerti.krdss.dss.core.verify.VerificationResult;
 import com.electcerti.krdss.dss.core.verify.VerificationRouter;
 import com.electcerti.krdss.dss.core.verify.WebAuthnCredentialStore;
@@ -40,6 +41,7 @@ public class Mode1LocalSignService {
     private final WebAuthnDemoCa ca;
     private final WebAuthnCredentialStore store = new WebAuthnCredentialStore();
     private final WebAuthnCmsAssembler assembler = new WebAuthnCmsAssembler();
+    private final WebAuthnCmsSignedData cmsAssembler = new WebAuthnCmsSignedData();
     private final VerificationRouter router = new VerificationRouter();
     private final Map<String, Pending> pending = new ConcurrentHashMap<>();
 
@@ -48,6 +50,8 @@ public class Mode1LocalSignService {
     private final boolean userVerificationRequired;
     private final long challengeTtlMs;
     private final HashSuite hashSuite;
+    /** 결속 컨테이너 포맷: {@code cms}(정식 RFC5652 SignedData, 기본) | {@code mock}(모사 DER). */
+    private final String containerFormat;
 
     public Mode1LocalSignService(
             WebAuthnDemoCa ca,
@@ -55,13 +59,15 @@ public class Mode1LocalSignService {
             @Value("${krdss.rp.mode1.allowed-origins:http://localhost:8080}") String allowedOrigins,
             @Value("${krdss.rp.mode1.user-verification-required:false}") boolean userVerificationRequired,
             @Value("${krdss.rp.mode1.challenge-ttl-seconds:120}") long challengeTtlSeconds,
-            @Value("${krdss.rp.mode1.hash-suite:SHA_256}") String hashSuite) {
+            @Value("${krdss.rp.mode1.hash-suite:SHA_256}") String hashSuite,
+            @Value("${krdss.rp.mode1.container-format:cms}") String containerFormat) {
         this.ca = ca;
         this.rpId = rpId;
         this.allowedOrigins = Arrays.stream(allowedOrigins.split(",")).map(String::trim).toList();
         this.userVerificationRequired = userVerificationRequired;
         this.challengeTtlMs = challengeTtlSeconds * 1000;
         this.hashSuite = HashSuite.valueOf(hashSuite.trim());
+        this.containerFormat = containerFormat.trim().toLowerCase();
     }
 
     private record Pending(byte[] document, byte[] signedAttrsDer, String credentialIdB64, long expiresAt) {
@@ -126,10 +132,10 @@ public class Mode1LocalSignService {
         byte[] credentialId = b64urlDecode(webauthnCredIdB64);
         WebAuthnAssertionAttr attr = WebAuthnAssertionAttr.of(
                 authenticatorData, clientDataJSON, cred.coseAlg(), credentialId, cred.aaguid());
-        byte[] container = assembler.assemble(p.signedAttrsDer(), signature, List.of(cred.certificate()), attr);
+        byte[] container = assembleContainer(p.signedAttrsDer(), signature, cred.certificate(), attr);
 
         VerificationResult report = router.verify(container, p.document(), policy(), store, hashSuite);
-        logReport("finish", shortId(p.credentialIdB64()), report);
+        logReport("finish[" + containerFormat + "/" + container.length + "B]", shortId(p.credentialIdB64()), report);
         return new FinishResult(Base64.getEncoder().encodeToString(container), report);
     }
 
@@ -150,6 +156,15 @@ public class Mode1LocalSignService {
                 log.debug("[Mode1]   {} {} — {}", c.passed() ? "PASS" : "FAIL", c.name(), c.message());
             }
         }
+    }
+
+    /** 설정된 포맷으로 결속 컨테이너를 조립한다(정식 CMS 기본, 모사 fallback). */
+    private byte[] assembleContainer(byte[] signedAttrsDer, byte[] signature,
+                                     X509Certificate cert, WebAuthnAssertionAttr attr) {
+        if ("mock".equals(containerFormat)) {
+            return assembler.assemble(signedAttrsDer, signature, List.of(cert), attr);
+        }
+        return cmsAssembler.assemble(signedAttrsDer, hashSuite, signature, List.of(cert), attr);
     }
 
     public WebAuthnCredentialStore store() {

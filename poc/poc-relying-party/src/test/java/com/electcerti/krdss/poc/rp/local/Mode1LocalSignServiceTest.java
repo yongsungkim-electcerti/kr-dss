@@ -26,11 +26,16 @@ class Mode1LocalSignServiceTest {
     private static final String RP_ID = "localhost";
 
     private Mode1LocalSignService newService() {
-        return newService("SHA_256");
+        return newService("SHA_256", "cms");
     }
 
     private Mode1LocalSignService newService(String hashSuite) {
-        return new Mode1LocalSignService(new WebAuthnDemoCa(), RP_ID, ORIGIN, false, 120, hashSuite);
+        return newService(hashSuite, "cms");
+    }
+
+    private Mode1LocalSignService newService(String hashSuite, String containerFormat) {
+        return new Mode1LocalSignService(
+                new WebAuthnDemoCa(), RP_ID, ORIGIN, false, 120, hashSuite, containerFormat);
     }
 
     @Test
@@ -74,6 +79,24 @@ class Mode1LocalSignServiceTest {
         svc.register(passkey.getPublic().getEncoded(), credIdB64, -7, null);
 
         byte[] document = "암호 민첩성 데모 문서".getBytes(StandardCharsets.UTF_8);
+        var begin = svc.begin(document, credIdB64);
+        Assertion a = makeAssertion(passkey, begin.challenge());
+        var finish = svc.finish(begin.ticket(), credIdB64, a.clientDataJSON, a.authData, a.signature);
+
+        assertThat(finish.report().indication())
+                .as(finish.report().subIndication())
+                .isEqualTo(VerificationStatus.TOTAL_PASSED);
+    }
+
+    @Test
+    void mock_container_format_still_total_passed() throws Exception {
+        // 2단계 전략 1차(모사 컨테이너)도 라우터가 계속 검증 가능해야 한다(하위호환).
+        Mode1LocalSignService svc = newService("SHA_256", "mock");
+        KeyPair passkey = ecKeyPair();
+        String credIdB64 = b64url("passkey-cred-mock".getBytes(StandardCharsets.UTF_8));
+        svc.register(passkey.getPublic().getEncoded(), credIdB64, -7, null);
+
+        byte[] document = "모사 컨테이너 데모 문서".getBytes(StandardCharsets.UTF_8);
         var begin = svc.begin(document, credIdB64);
         Assertion a = makeAssertion(passkey, begin.challenge());
         var finish = svc.finish(begin.ticket(), credIdB64, a.clientDataJSON, a.authData, a.signature);
