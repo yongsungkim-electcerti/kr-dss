@@ -20,5 +20,9 @@ dependencies {
     // 원격전자서명 서명객체 패키징(데모 KR-JAdES 컨테이너) 직렬화.
     implementation(libs.jackson.databind)
 
+    // 특허-A: 결속 컨테이너 구성 + WebAuthn 어서션 COSE 실검증.
+    implementation(project(":kr-ades:kr-ades-cades"))
+    implementation(libs.webauthn4j.core)
+
     implementation(libs.slf4j.api)
 }
