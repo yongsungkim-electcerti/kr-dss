@@ -12,6 +12,8 @@ dependencies {
     implementation(project(":kr-dss-sdk:kr-dss-remote"))
     // 특허-A Mode 1: 서명 결속부·결속 컨테이너(kr-ades-cades) + CA 발급용 PKIX.
     implementation(project(":kr-ades:kr-ades-cades"))
+    // 특허-B: 인증서 발급 인프라(Registration Binding / Multi-RA / Lifecycle / HSM).
+    implementation(project(":kr-dss-sdk:kr-dss-pki"))
     implementation(libs.bc.prov)
     implementation(libs.bc.pkix)
     testImplementation("org.springframework.boot:spring-boot-starter-test")
