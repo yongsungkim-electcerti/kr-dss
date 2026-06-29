@@ -7,6 +7,7 @@ jackson = "2.17.2"
 santuario = "3.0.4"
 hwplib = "1.1.8"
 picocli = "4.7.6"
+webauthn4j = "0.28.5.RELEASE"
 slf4j = "2.0.13"
 logback = "1.5.6"
 junit = "5.11.0"
@@ -40,6 +41,9 @@ hwplib = { module = "kr.dogfoot:hwplib", version.ref = "hwplib" }
 
 # --- CLI ---
 picocli = { module = "info.picocli:picocli", version.ref = "picocli" }
+
+# --- WebAuthn / FIDO2 (특허-A: COSE 어서션 서명 실검증) ---
+webauthn4j-core = { module = "com.webauthn4j:webauthn4j-core", version.ref = "webauthn4j" }
 
 # --- 로깅 ---
 slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }

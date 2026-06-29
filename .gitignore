@@ -27,3 +27,4 @@ Thumbs.db
 *.log
 *.local
 local.properties
+/logs/

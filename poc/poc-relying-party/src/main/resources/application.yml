@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: poc-relying-party
+logging:
+  level:
+    # 특허-A Mode 1 검증 흐름 로그. 단계별 check 까지 보려면 DEBUG 로 변경.
+    com.electcerti.krdss: INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-5level %logger{0} - %msg%n"
 krdss:
   rp:
     # 원격서명 서비스(RSSP/SSA) 진입점
@@ -18,3 +24,9 @@ krdss:
       id: signer-001
       pin: "123456"
       totp-secret: "JBSWY3DPEHPK3PXP"
+    # 특허-A Mode 1 (WebAuthn 로컬 서명) — SAM/HSM 미경유, RP 내 CA 발급·검증
+    mode1:
+      rp-id: localhost
+      allowed-origins: "http://localhost:8080"
+      user-verification-required: false
+      challenge-ttl-seconds: 120
