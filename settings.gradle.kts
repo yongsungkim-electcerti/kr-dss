@@ -42,6 +42,9 @@ include("kr-dss-sdk:kr-dss-crypto")
 include("kr-dss-sdk:kr-dss-core")
 include("kr-dss-sdk:kr-dss-report")
 
+// [특허-B] 인증서 발급 인프라 — Registration Binding / Multi-RA
+include("kr-dss-sdk:kr-dss-pki")
+
 // [원격전자서명] Remote Signature SDK — CSC v2 / EN 419 241 모델
 include("kr-dss-sdk:kr-dss-remote")
 
