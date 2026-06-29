@@ -41,7 +41,15 @@ public final class KrPkiOids {
         return RA_ARC + "." + suffix;
     }
 
-    // --- HSM Attestation 등급 정책 (청구항 15) — 후속(B-4) 예약 ---
-    /** HSM 보안 등급 정책 서브트리(예약). */
+    // --- HSM Attestation 등급 정책 OID (청구항 15) ---
+    /** HSM 보안 등급 정책 서브트리. */
     public static final String HSM_GRADE_ARC = PKI_ARC + ".3";
+    /** 고등급 HSM(예: CC EAL4+ / FIPS 140-3 L3, 키 비추출). */
+    public static final String HSM_GRADE_HIGH = HSM_GRADE_ARC + ".1";
+    /** 중등급 HSM. */
+    public static final String HSM_GRADE_MEDIUM = HSM_GRADE_ARC + ".2";
+    /** 저등급 HSM. */
+    public static final String HSM_GRADE_LOW = HSM_GRADE_ARC + ".3";
+    /** 등급 미상(attestation 미검증 또는 미등록 hsmDeviceId). */
+    public static final String HSM_GRADE_UNKNOWN = HSM_GRADE_ARC + ".4";
 }
