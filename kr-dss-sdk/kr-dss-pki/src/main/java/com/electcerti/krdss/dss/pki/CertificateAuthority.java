@@ -9,6 +9,7 @@ import org.bouncycastle.asn1.x509.KeyUsage;
 import org.bouncycastle.asn1.x509.PolicyInformation;
 import org.bouncycastle.cert.X509v3CertificateBuilder;
 import org.bouncycastle.cert.jcajce.JcaX509CertificateConverter;
+import org.bouncycastle.cert.jcajce.JcaX509CertificateHolder;
 import org.bouncycastle.cert.jcajce.JcaX509ExtensionUtils;
 import org.bouncycastle.cert.jcajce.JcaX509v3CertificateBuilder;
 import org.bouncycastle.operator.ContentSigner;
@@ -17,12 +18,16 @@ import org.bouncycastle.operator.jcajce.JcaContentSignerBuilder;
 import java.math.BigInteger;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
+import java.security.KeyStore;
+import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.SecureRandom;
+import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
 import java.security.spec.ECGenParameterSpec;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HexFormat;
 import java.util.List;
@@ -42,6 +47,7 @@ public final class CertificateAuthority {
     private final String rpId;
     private final KeyPair caKeyPair;
     private final X509Certificate caCertificate;
+    private final List<X509Certificate> caChain;
     private final SecureRandom random = new SecureRandom();
 
     /** 기본 CA(rpId = {@code ca.kr-dss.example}). */
@@ -50,6 +56,8 @@ public final class CertificateAuthority {
     }
 
     /**
+     * 자가서명 데모 CA.
+     *
      * @param rpId CA 가 단일 WebAuthn RP 로 동작하는 도메인(청구항 6)
      */
     public CertificateAuthority(String rpId) {
@@ -59,8 +67,53 @@ public final class CertificateAuthority {
             kpg.initialize(new ECGenParameterSpec("secp256r1"));
             this.caKeyPair = kpg.generateKeyPair();
             this.caCertificate = selfSignedCa(caKeyPair, rpId);
+            this.caChain = List.of(caCertificate);
         } catch (Exception e) {
             throw new IllegalStateException("CA 초기화 실패", e);
+        }
+    }
+
+    /** 외부 키스토어(상위 CA 발급)로부터 로드하는 생성자. */
+    private CertificateAuthority(String rpId, KeyPair caKeyPair,
+                                X509Certificate caCertificate, List<X509Certificate> caChain) {
+        this.rpId = rpId;
+        this.caKeyPair = caKeyPair;
+        this.caCertificate = caCertificate;
+        this.caChain = List.copyOf(caChain);
+    }
+
+    /**
+     * PKCS#12 키스토어에서 발급용 CA 키·인증서·체인을 로드한다.
+     *
+     * <p>예: New-KISA RootCA 가 발급한 <b>공동인증CA</b>의 {@code .p12} 를 로드하면, 본 CA 가
+     * 발급하는 최종개체 인증서는 공동인증CA 가 발급기관이 되고 New-KISA RootCA 로 체인된다.</p>
+     *
+     * @param keyStore 로드된 PKCS#12 키스토어
+     * @param alias    CA 키 엔트리 별칭
+     * @param password 키 보호 비밀번호
+     * @param rpId     CA 가 단일 WebAuthn RP 로 동작하는 도메인
+     */
+    public static CertificateAuthority fromKeyStore(KeyStore keyStore, String alias,
+                                                    char[] password, String rpId) {
+        try {
+            PrivateKey privateKey = (PrivateKey) keyStore.getKey(alias, password);
+            if (privateKey == null) {
+                throw new IllegalArgumentException("키스토어에 별칭 키 엔트리 없음: " + alias);
+            }
+            X509Certificate caCert = (X509Certificate) keyStore.getCertificate(alias);
+            Certificate[] raw = keyStore.getCertificateChain(alias);
+            List<X509Certificate> chain = new ArrayList<>();
+            if (raw != null && raw.length > 0) {
+                for (Certificate c : raw) {
+                    chain.add((X509Certificate) c);
+                }
+            } else {
+                chain.add(caCert);
+            }
+            return new CertificateAuthority(
+                    rpId, new KeyPair(caCert.getPublicKey(), privateKey), caCert, chain);
+        } catch (Exception e) {
+            throw new IllegalStateException("CA 키스토어 로드 실패(alias=" + alias + ")", e);
         }
     }
 
@@ -69,9 +122,14 @@ public final class CertificateAuthority {
         return rpId;
     }
 
-    /** CA 인증서(자가서명 루트). */
+    /** 발급 CA 인증서(자가서명 데모 시 루트, 키스토어 로드 시 공동인증CA 등). */
     public X509Certificate caCertificate() {
         return caCertificate;
+    }
+
+    /** CA 인증서 체인 [발급 CA, 상위 CA…]. 자가서명 시 단일 원소. */
+    public List<X509Certificate> caChain() {
+        return caChain;
     }
 
     /**
@@ -86,7 +144,9 @@ public final class CertificateAuthority {
     public X509Certificate issue(PublicKey subjectPublicKey, String subjectCn, byte[] credentialId,
                                  List<String> policyOids, Duration validity) {
         try {
-            X500Name issuer = new X500Name(caCertificate.getSubjectX500Principal().getName());
+            // 발급기관 DN 은 CA 인증서의 subject 를 그대로 사용한다(문자열 왕복 시 RDN 순서가
+            // 뒤집혀 체인이 끊기므로 인코딩된 DN 을 보존).
+            X500Name issuer = new JcaX509CertificateHolder(caCertificate).getSubject();
             X500Name subject = new X500Name("CN=" + subjectCn);
             Instant now = Instant.now();
             BigInteger serial = new BigInteger(64, random);
