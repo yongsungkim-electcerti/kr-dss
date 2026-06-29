@@ -138,6 +138,25 @@ public class PatentBController {
         }
     }
 
+    public record HsmDemoRequest(String deviceGrade, Boolean nonExtractable, Boolean signatureVerified) {
+    }
+
+    /** HSM 데모 발급 — 서버가 HSM 키쌍·CSR 을 모사 생성하여 발급(브라우저 CSR 불필요). */
+    @PostMapping("/hsm/demo-issue")
+    public MultiRaRegistrationService.HsmCertView issueHsmDemo(@RequestBody HsmDemoRequest req) {
+        try {
+            HsmGrade grade = req.deviceGrade() == null ? HsmGrade.HIGH
+                    : HsmGrade.valueOf(req.deviceGrade().trim());
+            return service.issueHsmDemo(grade,
+                    req.nonExtractable() == null || req.nonExtractable(),
+                    req.signatureVerified() == null || req.signatureVerified());
+        } catch (IllegalArgumentException e) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
+        } catch (IllegalStateException e) {
+            throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, e.getMessage());
+        }
+    }
+
     private <T> T run(java.util.function.Supplier<T> action) {
         try {
             return action.get();

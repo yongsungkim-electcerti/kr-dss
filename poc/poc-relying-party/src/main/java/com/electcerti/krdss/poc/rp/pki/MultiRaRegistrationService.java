@@ -8,6 +8,7 @@ import com.electcerti.krdss.dss.pki.CertificateStatus;
 import com.electcerti.krdss.dss.pki.HsmAttestation;
 import com.electcerti.krdss.dss.pki.HsmAttestationVerifier;
 import com.electcerti.krdss.dss.pki.HsmCertificateIssuer;
+import com.electcerti.krdss.dss.pki.HsmGrade;
 import com.electcerti.krdss.dss.pki.HsmIssuedCertificate;
 import com.electcerti.krdss.dss.pki.InMemoryAuthenticatorMetadataRegistry;
 import com.electcerti.krdss.dss.pki.InMemoryHsmDeviceRegistry;
@@ -18,14 +19,21 @@ import com.electcerti.krdss.dss.pki.RegistrationAuthority;
 import com.electcerti.krdss.dss.pki.RegistrationBindingService;
 import com.electcerti.krdss.dss.pki.RegistrationResult;
 import com.electcerti.krdss.poc.rp.local.WebAuthnDemoCa;
+import org.bouncycastle.asn1.x500.X500Name;
+import org.bouncycastle.operator.ContentSigner;
+import org.bouncycastle.operator.jcajce.JcaContentSignerBuilder;
+import org.bouncycastle.pkcs.jcajce.JcaPKCS10CertificationRequestBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
 import java.security.KeyFactory;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
 import java.security.PublicKey;
 import java.security.cert.X509Certificate;
+import java.security.spec.ECGenParameterSpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.ArrayList;
 import java.util.Base64;
@@ -83,7 +91,7 @@ public class MultiRaRegistrationService {
     }
 
     /** 데모 구성: hsmDeviceId 보안 등급 등록. */
-    public void seedHsmDevice(byte[] hsmDeviceId, com.electcerti.krdss.dss.pki.HsmGrade grade) {
+    public void seedHsmDevice(byte[] hsmDeviceId, HsmGrade grade) {
         hsmRegistry.register(hsmDeviceId, grade);
     }
 
@@ -196,6 +204,26 @@ public class MultiRaRegistrationService {
         return new HsmCertView(issued.raId(), issued.grade().name(), issued.nonExtractable(),
                 issued.certificate().getSerialNumber().toString(), issued.keyIdentifierHex(),
                 toPem(issued.certificate()));
+    }
+
+    /**
+     * HSM 데모 발급: HSM 을 모사하여 서버에서 키쌍·CSR 을 생성한 뒤 발급한다(브라우저는 CSR 미생성).
+     */
+    public HsmCertView issueHsmDemo(HsmGrade grade, boolean nonExtractable, boolean signatureVerified) {
+        byte[] deviceId = "DEMO-HSM-01".getBytes(java.nio.charset.StandardCharsets.UTF_8);
+        seedHsmDevice(deviceId, grade);
+        try {
+            KeyPairGenerator kpg = KeyPairGenerator.getInstance("EC");
+            kpg.initialize(new ECGenParameterSpec("secp256r1"));
+            KeyPair hsmKey = kpg.generateKeyPair();
+            var builder = new JcaPKCS10CertificationRequestBuilder(
+                    new X500Name("CN=KR-DSS HSM Signer"), hsmKey.getPublic());
+            ContentSigner signer = new JcaContentSignerBuilder("SHA256withECDSA").build(hsmKey.getPrivate());
+            byte[] csr = builder.build(signer).getEncoded();
+            return issueHsm(csr, deviceId, new byte[]{1}, nonExtractable, "EAL4+", signatureVerified, "RA-BANK");
+        } catch (Exception e) {
+            throw new IllegalStateException("HSM 데모 CSR 생성 실패", e);
+        }
     }
 
     // === helpers ===
