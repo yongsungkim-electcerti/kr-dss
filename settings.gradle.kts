@@ -45,6 +45,9 @@ include("kr-dss-sdk:kr-dss-report")
 // [특허-B] 인증서 발급 인프라 — Registration Binding / Multi-RA
 include("kr-dss-sdk:kr-dss-pki")
 
+// [특허-C] 통합 신뢰목록(KR-TL Layer1+2) / HSM Attestation
+include("kr-dss-sdk:kr-dss-trust")
+
 // [원격전자서명] Remote Signature SDK — CSC v2 / EN 419 241 모델
 include("kr-dss-sdk:kr-dss-remote")
 
