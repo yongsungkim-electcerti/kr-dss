@@ -14,6 +14,8 @@ dependencies {
     implementation(project(":kr-ades:kr-ades-cades"))
     // 특허-B: 인증서 발급 인프라(Registration Binding / Multi-RA / Lifecycle / HSM).
     implementation(project(":kr-dss-sdk:kr-dss-pki"))
+    // 특허-C: 통합 신뢰목록(A/B/C 연계 — 검증 라우터에 신뢰목록 평가 주입).
+    implementation(project(":kr-dss-sdk:kr-dss-trust"))
     implementation(libs.bc.prov)
     implementation(libs.bc.pkix)
     testImplementation("org.springframework.boot:spring-boot-starter-test")

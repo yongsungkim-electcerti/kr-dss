@@ -6,6 +6,7 @@ import com.electcerti.krdss.ades.cades.bind.SignedAttrsBuilder;
 import com.electcerti.krdss.ades.cades.container.WebAuthnAssertionAttr;
 import com.electcerti.krdss.ades.cades.container.WebAuthnCmsAssembler;
 import com.electcerti.krdss.ades.cades.container.WebAuthnCmsSignedData;
+import com.electcerti.krdss.dss.api.TrustListEvaluator;
 import com.electcerti.krdss.dss.core.verify.VerificationResult;
 import com.electcerti.krdss.dss.core.verify.VerificationRouter;
 import com.electcerti.krdss.dss.core.verify.WebAuthnCredentialStore;
@@ -42,7 +43,7 @@ public class Mode1LocalSignService {
     private final WebAuthnCredentialStore store = new WebAuthnCredentialStore();
     private final WebAuthnCmsAssembler assembler = new WebAuthnCmsAssembler();
     private final WebAuthnCmsSignedData cmsAssembler = new WebAuthnCmsSignedData();
-    private final VerificationRouter router = new VerificationRouter();
+    private final VerificationRouter router;
     private final Map<String, Pending> pending = new ConcurrentHashMap<>();
 
     private final String rpId;
@@ -55,6 +56,7 @@ public class Mode1LocalSignService {
 
     public Mode1LocalSignService(
             WebAuthnDemoCa ca,
+            TrustListEvaluator trustEvaluator,
             @Value("${krdss.rp.mode1.rp-id:localhost}") String rpId,
             @Value("${krdss.rp.mode1.allowed-origins:http://localhost:8080}") String allowedOrigins,
             @Value("${krdss.rp.mode1.user-verification-required:false}") boolean userVerificationRequired,
@@ -62,6 +64,8 @@ public class Mode1LocalSignService {
             @Value("${krdss.rp.mode1.hash-suite:SHA_256}") String hashSuite,
             @Value("${krdss.rp.mode1.container-format:cms}") String containerFormat) {
         this.ca = ca;
+        // 특허-C 통합 신뢰목록 평가기를 라우터에 주입(A/B/C). null 이면 신뢰목록 미평가.
+        this.router = new VerificationRouter(trustEvaluator);
         this.rpId = rpId;
         this.allowedOrigins = Arrays.stream(allowedOrigins.split(",")).map(String::trim).toList();
         this.userVerificationRequired = userVerificationRequired;
