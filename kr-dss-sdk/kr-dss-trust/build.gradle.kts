@@ -11,4 +11,8 @@ dependencies {
 
     // 특허-B 장치 등급/레지스트리 인터페이스 — Layer2 서브목록이 이를 구현.
     implementation(project(":kr-dss-sdk:kr-dss-pki"))
+
+    // 특허-C C-2: HSM Attestation Object ASN.1 인코딩·서명·체인 검증.
+    implementation(libs.bc.prov)
+    implementation(libs.bc.pkix)
 }
