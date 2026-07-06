@@ -5,8 +5,11 @@ import com.electcerti.krdss.ades.cades.bind.SignedAttrsParser;
 import com.electcerti.krdss.ades.cades.container.WebAuthnAssertionAttr;
 import com.electcerti.krdss.ades.cades.container.WebAuthnCmsAssembler;
 import com.electcerti.krdss.ades.cades.container.WebAuthnCmsSignedData;
+import com.electcerti.krdss.dss.api.TrustListEvaluator;
 import com.electcerti.krdss.dss.api.VerificationStatus;
 
+import javax.naming.ldap.LdapName;
+import javax.naming.ldap.Rdn;
 import java.security.cert.X509Certificate;
 import java.time.Instant;
 import java.util.ArrayList;
@@ -36,6 +39,23 @@ public class VerificationRouter {
     private final HsmVerificationPath hsmPath = new HsmVerificationPath();
     private final WebAuthnCmsSignedData cmsSignedData = new WebAuthnCmsSignedData();
     private final WebAuthnCmsAssembler assembler = new WebAuthnCmsAssembler();
+
+    /** 특허-C 통합 신뢰목록 평가기(null 이면 신뢰목록 미평가 — 기존 PoC 동작). */
+    private final TrustListEvaluator trustEvaluator;
+
+    /** 신뢰목록 평가 없이 동작(기존 PoC/테스트 호환). */
+    public VerificationRouter() {
+        this(null);
+    }
+
+    /**
+     * 특허-C 통합 신뢰목록 평가기를 주입해 A/B/C 를 묶는다.
+     *
+     * @param trustEvaluator 신뢰목록 평가기(null 허용)
+     */
+    public VerificationRouter(TrustListEvaluator trustEvaluator) {
+        this.trustEvaluator = trustEvaluator;
+    }
 
     /**
      * 검증 정책.
@@ -180,19 +200,43 @@ public class VerificationRouter {
         checks.add(new VerificationResult.Check("인증서 유효기간", certValid,
                 certValid ? "유효기간 내" : "유효기간 외(만료 또는 미발효)"));
 
-        // 3-4) 신뢰목록·폐지·장치신뢰 — 특허-C 범위(hook)
-        checks.add(new VerificationResult.Check("신뢰목록·폐지·장치신뢰(특허-C)", !policy.requireTrustList(),
-                policy.requireTrustList() ? "검증 필요(미구현)" : "PoC 미평가"));
+        // 3-4) 신뢰목록·폐지·장치신뢰 — 특허-C 통합 신뢰목록 연계(A/B/C)
+        VerificationStatus trustStatus = null;
+        String trustSub = null;
+        if (trustEvaluator != null) {
+            String caServiceId = issuerCommonName(effective.certificate());
+            TrustListEvaluator.Evaluation eval = trustEvaluator.evaluate(new TrustListEvaluator.Query(
+                    caServiceId, TrustListEvaluator.DeviceKind.WEBAUTHN, assertion.aaguid()));
+            trustStatus = eval.status();
+            trustSub = switch (trustStatus) {
+                case TOTAL_FAILED -> "TRUST_DEVICE_OR_CA_REVOKED";
+                case INDETERMINATE -> "TRUST_GRADE_OR_UNREGISTERED";
+                case TOTAL_PASSED -> null;
+            };
+            checks.add(new VerificationResult.Check("신뢰목록·폐지·장치신뢰(특허-C)",
+                    trustStatus == VerificationStatus.TOTAL_PASSED, eval.detail()));
+        } else {
+            checks.add(new VerificationResult.Check("신뢰목록·폐지·장치신뢰(특허-C)", !policy.requireTrustList(),
+                    policy.requireTrustList() ? "검증 필요(미구현)" : "PoC 미평가"));
+        }
 
-        // 4) 결과 분류(특허-A §5.5)
+        // 4) 결과 분류(특허-A §5.5 + 특허-C 이중검증 종합)
         if (!digestOk || !signerBindingOk) {
             return new VerificationResult(VerificationStatus.TOTAL_FAILED,
                     !digestOk ? "HASH_FAILURE" : "SIGNER_BINDING_FAILURE",
                     "WEBAUTHN", subject, signingTime, checks);
         }
-        if (registered.isEmpty() || !certValid || policy.requireTrustList()) {
+        // 특허-C 신뢰목록이 무효(장치/CA 폐지 등)면 종합도 무효
+        if (trustStatus == VerificationStatus.TOTAL_FAILED) {
+            return new VerificationResult(VerificationStatus.TOTAL_FAILED, trustSub,
+                    "WEBAUTHN", subject, signingTime, checks);
+        }
+        boolean trustIndeterminate = trustStatus == VerificationStatus.INDETERMINATE;
+        boolean trustListNotEvaluated = trustEvaluator == null && policy.requireTrustList();
+        if (registered.isEmpty() || !certValid || trustListNotEvaluated || trustIndeterminate) {
             String sub = registered.isEmpty() ? "CREDENTIAL_NOT_REGISTERED"
-                    : (!certValid ? "CERTIFICATE_OUT_OF_VALIDITY" : "TRUST_LIST_NOT_EVALUATED");
+                    : (!certValid ? "CERTIFICATE_OUT_OF_VALIDITY"
+                    : (trustIndeterminate ? trustSub : "TRUST_LIST_NOT_EVALUATED"));
             return new VerificationResult(VerificationStatus.INDETERMINATE, sub,
                     "WEBAUTHN", subject, signingTime, checks);
         }
@@ -225,5 +269,20 @@ public class VerificationRouter {
 
     private String b64url(byte[] data) {
         return Base64.getUrlEncoder().withoutPadding().encodeToString(data);
+    }
+
+    /** 발급기관 인증서의 CN(신뢰서비스 Layer1 조회 키)을 추출한다. */
+    private static String issuerCommonName(X509Certificate cert) {
+        String dn = cert.getIssuerX500Principal().getName();
+        try {
+            for (Rdn rdn : new LdapName(dn).getRdns()) {
+                if ("CN".equalsIgnoreCase(rdn.getType())) {
+                    return String.valueOf(rdn.getValue());
+                }
+            }
+        } catch (Exception ignored) {
+            // DN 파싱 실패 시 전체 DN 반환
+        }
+        return dn;
     }
 }

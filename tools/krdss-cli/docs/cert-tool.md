@@ -196,6 +196,36 @@ keytool -list -keystore build/pki/ee.p12 -storetype PKCS12 -storepass 1234
 
 ---
 
+## 4-B. 레시피 — New-KISA RootCA → 공동인증CA → CA 서버 키스토어
+
+특허-B CA 서버(`poc-relying-party`)가 발급에 사용할 **공동인증CA** 키스토어를 만드는 절차.
+New-KISA RootCA(자가서명)가 공동인증CA(SUB)를 발급하고, 이를 `.p12` 로 묶어 CA 서버 리소스에 둔다.
+
+```bash
+# 1) 템플릿(UTF-8)로 ROOT(New-KISA) → SUB(공동인증CA) → EE(샘플) 일괄 발급
+#    한글 CN 은 콘솔 인자 인코딩 문제를 피하려고 JSON 템플릿(UTF-8)으로 지정한다.
+./gradlew :tools:krdss-cli:run --args="cert chain --template build/pki-ca/joint-ca-template.json"
+#   template: root.subject=CN=New-KISA RootCA,O=KISA,C=KR / sub.subject=CN=공동인증CA,O=KISA,C=KR
+
+# 2) 공동인증CA(키+인증서) + New-KISA 루트 체인을 .p12 로 묶어 CA 서버 리소스에 배치
+./gradlew :tools:krdss-cli:run --args="cert p12 \
+  --cert build/pki-ca/joint-ca.crt --key build/pki-ca/joint-ca.key \
+  --chain build/pki-ca/new-kisa-root.crt \
+  --out poc/poc-relying-party/src/main/resources/pki/joint-ca.p12 \
+  --alias joint-ca --password changeit"
+
+# 3) 검증: EE ← 공동인증CA ← New-KISA RootCA
+openssl verify -CAfile build/pki-ca/new-kisa-root.crt -untrusted build/pki-ca/joint-ca.crt build/pki-ca/sample-ee.crt
+```
+
+CA 서버는 `application.yml` 의 `krdss.ca.keystore: classpath:pki/joint-ca.p12` 로 이 키스토어를 로드하여,
+발급하는 최종개체 인증서의 발급기관을 **공동인증CA** 로 설정한다(자가서명 대신).
+
+> ⚠️ `joint-ca.p12` 는 **데모용 테스트 키스토어**(비밀번호 `changeit`)다. 운영 키는 리포지터리에 두지 말고
+> HSM/KMS 등 별도 보관소에서 주입하고 비밀번호를 환경변수로 분리한다.
+
+---
+
 ## 5. 인증서 프로파일 (확장필드)
 
 유형별로 다음 X.509 v3 확장이 자동 설정된다.

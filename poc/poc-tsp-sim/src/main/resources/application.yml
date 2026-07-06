@@ -3,3 +3,19 @@ server:
 spring:
   application:
     name: poc-tsp-sim
+logging:
+  level:
+    com.electcerti.krdss: INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-5level %logger{0} - %msg%n"
+krdss:
+  # 가상 인정사업자 발급 CA — New-KISA RootCA 가 발급한 "공동인증CA" 키스토어(PKCS#12).
+  # 비우면 tsp-sim 자체 자가서명 데모 CA 로 동작. (데모용 키스토어 — 운영 키는 별도 보관·교체)
+  ca:
+    keystore: "classpath:pki/joint-ca.p12"
+    keystore-password: "changeit"
+    key-alias: "joint-ca"
+    rp-id: "tsp.kr-dss.example"
+  # 발급 인증서 AIA 에 삽입되고 OCSP 응답부가 서비스되는 위치. 외부 접근 시 실제 호스트로 교체.
+  ocsp:
+    url: "http://localhost:8082/ocsp"

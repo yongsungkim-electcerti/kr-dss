@@ -13,7 +13,7 @@
   header h1{font-size:30px;font-weight:800;margin:0;letter-spacing:-.5px;}
   header p{color:var(--muted);margin:6px 0 0;}
   .badge{display:inline-block;background:var(--panel2);color:var(--muted);font-size:12px;padding:2px 10px;border-radius:999px;margin-top:8px;}
-  .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px;}
+  .tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px;}
   .tab{padding:12px;border:none;border-radius:10px;background:var(--panel2);color:var(--muted);font-size:15px;font-weight:600;cursor:pointer;transition:.15s;}
   .tab.active{background:var(--blue2);color:#fff;box-shadow:0 4px 14px rgba(37,99,235,.35);}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:16px;}
@@ -65,6 +65,7 @@
     <button class="tab active" data-tab="cert">① 인증서 발급</button>
     <button class="tab" data-tab="sign">② 전자서명</button>
     <button class="tab" data-tab="verify">③ 서명 검증</button>
+    <button class="tab" data-tab="patentb">④ 특허-B 발급</button>
   </div>
 
   <!-- 인증서 발급 -->
@@ -145,6 +146,41 @@
     <div id="verOut"></div>
   </section>
 
+  <!-- 특허-B 발급 인프라 -->
+  <section id="tab-patentb" class="card hide">
+    <h2>특허-B — Registration Binding · Multi-RA · 생명주기 · HSM</h2>
+    <div class="desc">단일 WebAuthn 등록으로 <b>복수 RA 인증서</b>를 발급(동일 SPKI/SKI·RA별 정책 OID)하고,
+      인증서별 <b>생명주기</b>(정지·재개·폐지·갱신)와 <b>HSM 발급</b>(CSR+Attestation)을 시연합니다.</div>
+
+    <div class="flow">
+      <span class="n">WebAuthn 등록 1회</span><span class="arrow">→</span>
+      <span class="n hl">CA (단일 rpId)</span><span class="arrow">→</span>
+      <span class="n">RA-A 인증서</span><span class="arrow">/</span>
+      <span class="n">RA-B 인증서</span>
+      <span class="arrow">·</span><span class="n">동일 SPKI · 동일 SKI · RA별 Policy OID</span>
+    </div>
+
+    <div class="grid">
+      <div><label>인증기 보안 등급 (AAGUID 등급)</label>
+        <select id="pbGrade"><option>HIGH</option><option>MEDIUM</option><option>LOW</option><option>UNKNOWN</option></select></div>
+      <div><label>Attestation 검증</label>
+        <select id="pbAtt"><option value="true">검증됨</option><option value="false">미검증 (→ UNKNOWN 강등)</option></select></div>
+    </div>
+    <button class="act" onclick="pbRegisterMulti()">WebAuthn 등록 → 복수 RA 인증서 발급</button>
+    <div id="pbOut"></div>
+
+    <hr style="border:none;border-top:1px solid var(--line);margin:22px 0 8px">
+    <h2 style="font-size:16px">HSM 원격서명 인증서 발급 <span class="small">(CSR + HSM Attestation, 청구항 10·15)</span></h2>
+    <div class="desc">HSM 을 모사하여 서버가 키쌍·CSR 을 생성하고, Attestation 검증 결과·키 비추출성에 따라 등급 정책을 부여합니다.</div>
+    <div class="grid4">
+      <div><label>HSM 등급</label><select id="pbHsmGrade"><option>HIGH</option><option>MEDIUM</option><option>LOW</option></select></div>
+      <div><label>키 비추출</label><select id="pbNonExt"><option value="true">보장</option><option value="false">미보장 (→ LOW 상한)</option></select></div>
+      <div><label>Attestation 서명</label><select id="pbHsmSig"><option value="true">검증</option><option value="false">미검증 (→ 거부)</option></select></div>
+      <div style="display:flex;align-items:flex-end"><button class="act" style="margin:0" onclick="pbHsmIssue()">HSM 발급</button></div>
+    </div>
+    <div id="pbHsmOut"></div>
+  </section>
+
   <footer>KR-DSS · 국내 전자서명 규격 및 신뢰검증 기술 실증 — 본 화면은 실증용 데모입니다.</footer>
 </div>
 
@@ -156,7 +192,7 @@ let lastSigned = "";
 document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
   document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
   t.classList.add('active');
-  ['cert','sign','verify'].forEach(n => $('tab-'+n).classList.toggle('hide', n !== t.dataset.tab));
+  ['cert','sign','verify','patentb'].forEach(n => $('tab-'+n).classList.toggle('hide', n !== t.dataset.tab));
 });
 function applySample(){ const v=$('sampleSel').value; if(v) $('docText').value=v.replace(/\\n/g,'\n'); }
 
@@ -165,6 +201,12 @@ function b64urlToBytes(s){s=s.replace(/-/g,'+').replace(/_/g,'/');const pad=s.le
 function bytesToB64url(buf){const u=new Uint8Array(buf);let s='';for(const b of u)s+=String.fromCharCode(b);return btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}
 async function api(path, body){
   const r = await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body||{})});
+  const t = await r.text();
+  if(!r.ok){ let m=t; try{m=JSON.parse(t).message||t;}catch(e){} throw new Error(m||('HTTP '+r.status)); }
+  return t?JSON.parse(t):{};
+}
+async function apiGet(path){
+  const r = await fetch(path);
   const t = await r.text();
   if(!r.ok){ let m=t; try{m=JSON.parse(t).message||t;}catch(e){} throw new Error(m||('HTTP '+r.status)); }
   return t?JSON.parse(t):{};
@@ -341,6 +383,106 @@ async function doVerify(){
       <div class="small" style="margin-top:8px">서명자: ${rep.signerSubject||'-'}<br>서명시각: ${rep.signingTime||'-'}<br>인증서 유효: ${rep.certNotBefore||'-'} ~ ${rep.certNotAfter||'-'}</div>
       <div style="margin-top:10px">${checks}</div></div>`;
   }catch(e){ $('verOut').innerHTML = `<div class="result e bad">검증 실패: ${e.message}</div>`; }
+}
+
+// === 특허-B: 단일 등록 → 복수 RA 인증서 + 생명주기 + HSM ===
+function pbStatusClass(s){ return s==='VALID'?'ok':(s==='REVOKED'?'bad':'ind'); }
+
+async function pbRegisterMulti(){
+  $('pbOut').innerHTML = '<div class="small">WebAuthn 등록 중…</div>';
+  try{
+    if(!window.PublicKeyCredential) throw new Error('이 브라우저/환경은 WebAuthn 미지원');
+    const challenge = crypto.getRandomValues(new Uint8Array(32));
+    const userId = crypto.getRandomValues(new Uint8Array(16));
+    const cred = await navigator.credentials.create({publicKey:{
+      challenge, rp:{id:location.hostname,name:'KR-DSS'},
+      user:{id:userId,name:'multi-ra-signer',displayName:'KR-DSS Signer'},
+      pubKeyCredParams:[{type:'public-key',alg:-7},{type:'public-key',alg:-257}],
+      authenticatorSelection:{userVerification:'preferred',residentKey:'preferred'},
+      timeout:60000, attestation:'none'}});
+    const spki = cred.response.getPublicKey();
+    const alg = cred.response.getPublicKeyAlgorithm();
+    const certs = await api('/api/pki/register-multi',{
+      publicKey:bytesToB64url(spki), credentialId:bytesToB64url(cred.rawId), coseAlg:alg,
+      attestationVerified:$('pbAtt').value==='true', aaguidGrade:$('pbGrade').value});
+    pbRenderCerts(certs);
+  }catch(e){ $('pbOut').innerHTML = `<div class="result e bad">실패: ${e.message}</div>`; }
+}
+
+function pbRenderCerts(certs){
+  if(!certs || !certs.length){ $('pbOut').innerHTML = '<div class="small">발급된 인증서 없음</div>'; return; }
+  const kid = certs[0].keyIdentifier;
+  const rows = certs.map(pbCertRow).join('');
+  $('pbOut').innerHTML = `<div class="result s">
+    <div class="row"><span class="pill ok">단일 등록 → ${certs.length} RA 인증서</span>
+      <span class="pill">등급: ${certs[0].grade}</span>
+      <span class="pill">공유 SKI: ${kid.slice(0,20)}…</span></div>
+    <div id="pbCerts">${rows}</div>
+    <button class="act ghost" style="margin-top:12px" onclick="pbByKid('${kid}')">연관 인증서 조회 (by SKI · 청구항 13)</button>
+  </div>`;
+}
+
+function pbCertRow(c){
+  return `<div class="result" data-serial="${c.serial}" style="margin-top:10px">
+    <div class="row"><b>${c.raName}</b><span class="pill">${c.raType}</span>
+      <span class="pill">등급:${c.grade}</span>
+      <span class="pill ${pbStatusClass(c.status)}" data-status>${c.status}</span></div>
+    <div class="small" style="margin:6px 0">정책 OID: ${c.policyOid}<br>serial: ${c.serial}</div>
+    <div class="row">
+      <button class="act ghost" style="flex:1;margin:0" onclick="pbLife('suspend','${c.serial}')">정지</button>
+      <button class="act ghost" style="flex:1;margin:0" onclick="pbLife('resume','${c.serial}')">재개</button>
+      <button class="act ghost" style="flex:1;margin:0" onclick="pbLife('revoke','${c.serial}')">폐지</button>
+      <button class="act ghost" style="flex:1;margin:0" onclick="pbRenew('${c.serial}')">갱신</button>
+    </div>
+    <details style="margin-top:8px"><summary>인증서 PEM</summary><pre>${c.certificatePem}</pre></details>
+  </div>`;
+}
+
+function pbUpdateRow(c){
+  const row = document.querySelector(`#pbCerts [data-serial="${c.serial}"]`);
+  if(!row) return;
+  const pill = row.querySelector('[data-status]');
+  pill.textContent = c.status; pill.className = 'pill '+pbStatusClass(c.status);
+}
+
+async function pbLife(action, serial){
+  try{ pbUpdateRow(await api('/api/pki/lifecycle/'+action,{serial})); }
+  catch(e){ alert('생명주기('+action+') 실패: '+e.message); }
+}
+
+async function pbRenew(serial){
+  const att = confirm('갱신 시 Attestation 재검증을 통과로 처리할까요?\n[확인] 검증됨  /  [취소] 미검증(→ UNKNOWN 강등)');
+  try{
+    const c = await api('/api/pki/lifecycle/renew',{serial, attestationVerified:att});
+    // 기존 인증서는 폐지됨 → 표시 갱신, 새 인증서 행 추가
+    pbUpdateRow({serial, status:'REVOKED'});
+    document.getElementById('pbCerts').insertAdjacentHTML('beforeend', pbCertRow(c));
+  }catch(e){ alert('갱신 실패: '+e.message); }
+}
+
+async function pbByKid(kid){
+  try{
+    const list = await apiGet('/api/pki/by-kid/'+encodeURIComponent(kid));
+    alert('동일 SKI 연관 인증서 '+list.length+'건:\n'+
+      list.map(c=>`· ${c.raName} [${c.status}] serial=${c.serial}`).join('\n'));
+  }catch(e){ alert('조회 실패: '+e.message); }
+}
+
+async function pbHsmIssue(){
+  $('pbHsmOut').innerHTML = '<div class="small">HSM 키쌍·CSR 생성 후 발급 중…</div>';
+  try{
+    const v = await api('/api/pki/hsm/demo-issue',{
+      deviceGrade:$('pbHsmGrade').value,
+      nonExtractable:$('pbNonExt').value==='true',
+      signatureVerified:$('pbHsmSig').value==='true'});
+    $('pbHsmOut').innerHTML = `<div class="result s">
+      <div class="row"><span class="pill ok">HSM 인증서 발급</span>
+        <span class="pill">등급:${v.grade}</span>
+        <span class="pill">비추출:${v.nonExtractable}</span>
+        <span class="pill">RA:${v.raId}</span></div>
+      <div class="small" style="margin:6px 0">serial: ${v.serial} · SKI: ${(v.keyIdentifier||'').slice(0,20)}…</div>
+      <details><summary>인증서 PEM</summary><pre>${v.certificatePem}</pre></details></div>`;
+  }catch(e){ $('pbHsmOut').innerHTML = `<div class="result e bad">발급 실패: ${e.message}</div>`; }
 }
 </script>
 </body>

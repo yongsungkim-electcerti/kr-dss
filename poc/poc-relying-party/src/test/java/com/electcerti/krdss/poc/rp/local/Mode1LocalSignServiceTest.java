@@ -35,7 +35,7 @@ class Mode1LocalSignServiceTest {
 
     private Mode1LocalSignService newService(String hashSuite, String containerFormat) {
         return new Mode1LocalSignService(
-                new WebAuthnDemoCa(), RP_ID, ORIGIN, false, 120, hashSuite, containerFormat);
+                new WebAuthnDemoCa(), null, RP_ID, ORIGIN, false, 120, hashSuite, containerFormat);
     }
 
     @Test

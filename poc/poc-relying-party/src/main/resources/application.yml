@@ -10,6 +10,14 @@ logging:
   pattern:
     console: "%d{HH:mm:ss.SSS} %-5level %logger{0} - %msg%n"
 krdss:
+  # 특허-B CA 서버 — 발급용 CA 키스토어(PKCS#12).
+  # New-KISA RootCA(자가서명) 가 발급한 "공동인증CA" 키/인증서/체인을 담은 .p12.
+  # 비우면 자가서명 데모 CA 로 동작. (데모용 키스토어 — 운영 키는 별도 보관·교체)
+  ca:
+    keystore: "classpath:pki/joint-ca.p12"
+    keystore-password: "changeit"
+    key-alias: "joint-ca"
+    rp-id: "localhost"
   rp:
     # 원격서명 서비스(RSSP/SSA) 진입점
     rssp-base-url: http://localhost:8090
