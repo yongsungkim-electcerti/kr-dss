@@ -2,9 +2,16 @@ package com.electcerti.krdss.dss.pki;
 
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
 import org.bouncycastle.asn1.x500.X500Name;
+import org.bouncycastle.asn1.x509.AccessDescription;
+import org.bouncycastle.asn1.x509.AuthorityInformationAccess;
 import org.bouncycastle.asn1.x509.BasicConstraints;
+import org.bouncycastle.asn1.x509.CRLDistPoint;
 import org.bouncycastle.asn1.x509.CertificatePolicies;
+import org.bouncycastle.asn1.x509.DistributionPoint;
+import org.bouncycastle.asn1.x509.DistributionPointName;
 import org.bouncycastle.asn1.x509.Extension;
+import org.bouncycastle.asn1.x509.GeneralName;
+import org.bouncycastle.asn1.x509.GeneralNames;
 import org.bouncycastle.asn1.x509.KeyUsage;
 import org.bouncycastle.asn1.x509.PolicyInformation;
 import org.bouncycastle.cert.X509v3CertificateBuilder;
@@ -49,6 +56,11 @@ public final class CertificateAuthority {
     private final X509Certificate caCertificate;
     private final List<X509Certificate> caChain;
     private final SecureRandom random = new SecureRandom();
+
+    /** AIA(id-ad-ocsp) URI — 설정 시 발급 인증서에 OCSP 응답부 위치를 삽입(null이면 미삽입). */
+    private String ocspUri;
+    /** CRL DistributionPoint URI — 설정 시 발급 인증서에 CRL 배포 지점을 삽입(null이면 미삽입). */
+    private String crlUri;
 
     /** 기본 CA(rpId = {@code ca.kr-dss.example}). */
     public CertificateAuthority() {
@@ -133,6 +145,28 @@ public final class CertificateAuthority {
     }
 
     /**
+     * 발급 인증서에 삽입할 폐지정보 배포 지점을 설정한다(빌더 스타일, 동일 인스턴스 반환).
+     *
+     * <p>{@code ocspUri}가 설정되면 이후 발급되는 최종개체 인증서에 AIA(id-ad-ocsp) 확장이,
+     * {@code crlUri}가 설정되면 CRL DistributionPoint 확장이 삽입되어, 검증기가 별도 설정 없이
+     * 이 CA(가상 인정사업자)의 OCSP/CRL 응답부를 자동으로 찾도록 한다. {@code null}이면 해당
+     * 확장을 넣지 않아 기존 동작(자가서명 데모·특허-B 발급)과 완전히 호환된다.</p>
+     *
+     * @param ocspUri OCSP 응답부 URI(없으면 null)
+     * @param crlUri  CRL 배포 지점 URI(없으면 null)
+     */
+    public CertificateAuthority withEndpoints(String ocspUri, String crlUri) {
+        this.ocspUri = ocspUri;
+        this.crlUri = crlUri;
+        return this;
+    }
+
+    /** 설정된 OCSP 응답부 URI(없으면 null). */
+    public String ocspUri() {
+        return ocspUri;
+    }
+
+    /**
      * Credential 공개키로 서명자 인증서를 발급한다.
      *
      * @param subjectPublicKey Credential 공개키(= SubjectPublicKeyInfo)
@@ -172,6 +206,22 @@ public final class CertificateAuthority {
             builder.addExtension(Extension.keyUsage, true,
                     new KeyUsage(KeyUsage.digitalSignature | KeyUsage.nonRepudiation));
             builder.addExtension(Extension.basicConstraints, true, new BasicConstraints(false));
+
+            // AIA(id-ad-ocsp) — 검증기가 이 CA의 OCSP 응답부를 자동 탐색(설정 시에만)
+            if (ocspUri != null && !ocspUri.isBlank()) {
+                AccessDescription ocsp = new AccessDescription(AccessDescription.id_ad_ocsp,
+                        new GeneralName(GeneralName.uniformResourceIdentifier, ocspUri));
+                builder.addExtension(Extension.authorityInfoAccess, false,
+                        new AuthorityInformationAccess(ocsp));
+            }
+            // CRL DistributionPoint — CRL 배포 지점(설정 시에만)
+            if (crlUri != null && !crlUri.isBlank()) {
+                DistributionPointName dpName = new DistributionPointName(new GeneralNames(
+                        new GeneralName(GeneralName.uniformResourceIdentifier, crlUri)));
+                DistributionPoint dp = new DistributionPoint(dpName, null, null);
+                builder.addExtension(Extension.cRLDistributionPoints, false,
+                        new CRLDistPoint(new DistributionPoint[] {dp}));
+            }
 
             ContentSigner signer = new JcaContentSignerBuilder("SHA256withECDSA").build(caKeyPair.getPrivate());
             return new JcaX509CertificateConverter().getCertificate(builder.build(signer));
