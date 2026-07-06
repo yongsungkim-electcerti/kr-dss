@@ -78,7 +78,47 @@
 
 ---
 
-## 4. 추진 전략
+## 4. 저장소 · 코드 구조
+
+3대 산출물과 특허 확장(B·C)·원격서명·PoC 테스트베드를 **Gradle 멀티모듈 25개**로 구현한다.
+스택: **Java 21 · Gradle 8.10.2 · EU DSS 6.1 · BouncyCastle 1.78.1 · Spring Boot 3**, base 패키지 `com.electcerti.krdss.*`.
+
+```
+kr-ades/      [과업1] core + 6종 포맷 어댑터(xades·cades·pades·jades·hades·mades)
+kr-tl/        [과업2] model · builder · client
+kr-dss-sdk/   [과업3] api · crypto · core · report
+              [특허-B] kr-dss-pki   — 인증서 발급 인프라 + RFC 6960 OCSP 응답부
+              [특허-C] kr-dss-trust — 통합 신뢰목록 + HSM Attestation
+              [원격]   kr-dss-remote — CSC v2 / EN 419 241
+poc/          가상 인정사업자(CA/RA/OCSP) · KISA-TL · 이용사 · RSSP · SAM · HSM
+tools/        krdss-cli
+```
+
+- **의존 원칙**: 항상 상위(오케스트레이션·PoC) → 하위(api/core). 역방향 의존 금지.
+- **허브**: `kr-dss-core`(검증 라우터로 특허 A/B/C 종합) · A/B/C 연계는 `kr-dss-trust → kr-dss-pki`.
+
+**PoC 포트 맵**
+
+| 서비스 | 포트 | 역할 |
+| --- | --- | --- |
+| poc-relying-party | 8080 | 이용사 서비스(서명·검증 UI) |
+| poc-kisa-tl | 8081 | KISA 신뢰목록 서버 |
+| poc-tsp-sim | 8082 | 가상 인정사업자 **CA/RA/OCSP** |
+| poc-rssp / poc-sam / poc-hsm | 8090 / 8091 / 8092 | 원격서명 체인(RSSP→SAM→HSM) |
+
+```bash
+./gradlew build                            # 전체 빌드 + 테스트
+./gradlew :poc:poc-relying-party:bootRun   # 이용사 PoC (:8080)
+./gradlew :poc:poc-tsp-sim:bootRun         # 가상 인정사업자 CA/RA/OCSP (:8082)
+```
+
+> 📄 **모듈별 책임·주요 클래스·의존 그래프(mermaid)·규약 전체**는
+> **[프로젝트 구조 명세서](docs/design/프로젝트-구조-명세서.md)** 참조.
+> 작업 지침(동시 작업·브랜치·커밋 규칙)은 [AGENTS.md](AGENTS.md).
+
+---
+
+## 5. 추진 전략
 
 ```
 1 분석(Gap→요구사항) → 2 설계(KR-* 표준안) → 3 구현(KR-DSS) → 4 검증(PoC·결과보고)
@@ -89,7 +129,7 @@
 
 ---
 
-## 5. 기대효과
+## 6. 기대효과
 
 | 산출물 | 활용 방향 |
 | --- | --- |
@@ -102,7 +142,7 @@
 
 ---
 
-## 6. 수행사 · 전문성
+## 7. 수행사 · 전문성
 
 주식회사 일렉서티는 2023.07 설립 이후 전 사업이 전자서명·디지털인증 신뢰체계로 일관된다.
 
