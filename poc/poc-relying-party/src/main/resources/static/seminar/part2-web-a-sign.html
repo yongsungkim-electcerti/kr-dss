@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<title>Part 2 · Web A Sign · PoC 시연</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{ --accent:#2F9E92; --accent2:#5B78C7; --purple:#8A7FD7; --dark:#1A1A2E; }
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans KR',sans-serif;background:#4A5160;padding:26px 0;}
+.page{width:1280px;height:720px;margin:0 auto 26px;background:#fff;display:flex;flex-direction:column;box-shadow:0 6px 26px rgba(0,0,0,.32);overflow:hidden;}
+.header{background:var(--dark);height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 56px;flex-shrink:0;}
+.header .title{font-size:18px;font-weight:700;color:#fff;}
+.header .pg{font-size:11px;color:#7FCDC5;letter-spacing:.5px;}
+.breadcrumb{padding:9px 56px;font-size:11px;color:#9090AA;border-bottom:1px solid #EDF2F7;flex-shrink:0;letter-spacing:.3px;}
+.body{flex:1;padding:26px 56px;display:flex;flex-direction:column;gap:16px;overflow:hidden;}
+.footer{padding:11px 56px;border-top:1px solid #EDF2F7;display:flex;justify-content:space-between;flex-shrink:0;}
+.footer span{font-size:10px;color:#A0AEC0;}
+.secbar{font-size:13px;font-weight:700;color:#fff;background:var(--accent);padding:7px 16px;border-radius:3px;display:inline-block;width:fit-content;}
+.lead{font-size:17px;font-weight:500;color:#2D3748;line-height:1.55;}
+.card{border:1px solid #D6E4E2;border-radius:12px;padding:18px 22px;background:#FAFDFC;}
+.h{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:12px;}
+.note{border-radius:7px;padding:12px 16px;font-size:12px;line-height:1.6;background:#F5F7FA;border:1px solid #DCE4F0;color:#4A5568;}
+.mono{font-family:'Courier New',monospace;}
+table{width:100%;border-collapse:collapse;font-size:11.5px;}
+th{background:var(--dark);color:#fff;font-weight:700;padding:8px 11px;text-align:left;}
+td{padding:8px 11px;border-bottom:1px solid #E6ECF3;color:#2D3748;line-height:1.45;vertical-align:top;}
+tr:nth-child(even) td{background:#FAFDFC;}
+.box{border-radius:9px;padding:11px 12px;font-size:11.5px;line-height:1.4;text-align:center;}
+.arrow{color:#9AA8BE;font-size:20px;display:flex;align-items:center;}
+@media print{@page{size:1280px 720px;margin:0;}body{background:#fff;padding:0;}.page{margin:0;box-shadow:none;page-break-after:always;}}
+</style>
+</head>
+<body>
+
+<!-- ============ 1 표지 ============ -->
+<div class="page" style="background:var(--dark);">
+  <div style="flex:1;display:flex;align-items:center;padding:0 72px;gap:56px;">
+    <div style="flex:1.3;">
+      <div style="margin-bottom:24px;"><span style="background:rgba(127,205,197,.16);color:#7FCDC5;font-size:13px;font-weight:700;padding:7px 16px;border-radius:20px;">Part 2 · PoC 시연</span></div>
+      <div style="font-size:78px;font-weight:900;color:#fff;letter-spacing:1px;line-height:1;">Web A Sign</div>
+      <div style="font-size:26px;font-weight:700;color:#7FCDC5;margin-top:16px;">브라우저 표준(WebAuthn) 기반 전자서명</div>
+      <div style="height:2px;background:linear-gradient(90deg,#2F9E92,transparent);margin:26px 0;width:82%;"></div>
+      <div style="font-size:16px;color:#C8D2E0;line-height:1.7;max-width:660px;">
+        설치형 SW 없이 표준 웹 브라우저에서 인증서를 발급받고 전자문서에 서명하며, KISA Root CA까지 인증서 체인을 검증한다.
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:14px;">
+      <div style="background:#22253F;border-left:4px solid #2F9E92;border-radius:10px;padding:16px 18px;"><div style="color:#7FCDC5;font-size:14px;font-weight:900;">무설치</div><div style="color:#C8D2E0;font-size:12.5px;margin-top:5px;">브라우저 표준 API</div></div>
+      <div style="background:#22253F;border-left:4px solid #5B78C7;border-radius:10px;padding:16px 18px;"><div style="color:#9DB4EC;font-size:14px;font-weight:900;">3요소 결속</div><div style="color:#C8D2E0;font-size:12.5px;margin-top:5px;">문서·시각·서명자</div></div>
+      <div style="background:#22253F;border-left:4px solid #8A7FD7;border-radius:10px;padding:16px 18px;"><div style="color:#B0A6EC;font-size:14px;font-weight:900;">체인 검증</div><div style="color:#C8D2E0;font-size:12.5px;margin-top:5px;">Tester→공동인증CA→KISA Root</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 2 배경 ============ -->
+<div class="page">
+  <div class="header"><span class="title">Web A Sign</span><span class="pg">2 / 10</span></div>
+  <div class="breadcrumb">배경 ▶ 금융 설치형 보안 SW 철폐</div>
+  <div class="body">
+    <span class="secbar">배경 — 설치형 보안 SW 철폐</span>
+    <div class="lead">금융당국은 설치형 보안 소프트웨어의 단계적 철폐를 추진 중이다.</div>
+    <div style="display:flex;gap:18px;flex:1;">
+      <div style="flex:1;border:1px solid #E0A0A0;border-radius:12px;padding:18px 20px;background:#FDF5F5;display:flex;flex-direction:column;">
+        <div style="font-size:16px;font-weight:900;color:#B03A3A;margin-bottom:12px;">기존 방식 — 설치형</div>
+        <div style="font-size:13px;color:#742A2A;line-height:2;">• 사용자 단말에 별도 보안 프로그램 설치 요구<br>• 클라이언트 배포·업데이트·호환성 부담<br>• OS·브라우저 변화마다 재대응<br>• 검증 시스템은 단일 경로만 지원</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--accent);border-radius:12px;padding:18px 20px;background:#F1FAF9;display:flex;flex-direction:column;">
+        <div style="font-size:16px;font-weight:900;color:#1F6E66;margin-bottom:12px;">Web A Sign — 무설치</div>
+        <div style="font-size:13px;color:#22534E;line-height:2;">• 브라우저 표준 API(WebAuthn)만으로 서명<br>• 클라이언트 추가 실행코드 없음<br>• OS·브라우저 내장 규격 활용<br>• 단일 검증 시스템에서 다중 유형 처리</div>
+      </div>
+    </div>
+    <div class="note">WebAuthn은 사용자 인증(로그인·본인확인) 규격으로, 전자서명과 직접 결합하는 방법론은 정의되어 있지 않다. Web A Sign이 결합 방법론을 정의한다.</div>
+  </div>
+  <div class="footer"><span>Web A Sign</span><span>WebAuthn 기반 전자서명</span></div>
+</div>
+
+<!-- ============ 3 결속 ============ -->
+<div class="page">
+  <div class="header"><span class="title">Web A Sign</span><span class="pg">3 / 10</span></div>
+  <div class="breadcrumb">Signature Binding ▶ 3요소 결속</div>
+  <div class="body">
+    <span class="secbar" style="background:var(--accent2);">Signature Binding — 3요소 결속</span>
+    <div class="lead">문서·서명시각·서명자 인증서를 단일 WebAuthn Challenge에 결속한다.</div>
+    <div class="card" style="background:#F7F9FD;">
+      <div class="h">결속 흐름</div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div style="flex:1;"><div style="background:#EEF2FB;border:1px solid #C4D0EE;border-radius:8px;padding:11px;color:#2C3E7A;line-height:1.7;font-size:11.5px;text-align:center;">문서 해시 H(문서)<br>서명 시각 signingTime<br>서명자 인증서 해시</div></div>
+        <div class="arrow">→</div>
+        <div style="flex:1;"><div style="background:var(--dark);border-radius:8px;padding:14px 10px;font-size:13px;color:#fff;text-align:center;line-height:1.5;">SignedAttrs<br><span style="font-size:10px;color:#9DB4EC;">CMS 서명대상 속성</span></div></div>
+        <div class="arrow">→</div>
+        <div style="flex:1.3;"><div style="background:#E9F7F5;border:1px solid var(--accent);border-radius:8px;padding:12px;font-size:11px;color:#1F6E66;text-align:center;line-height:1.6;">Challenge<br><span class="mono" style="font-size:10px;">SHA-256(DER(SignedAttrs))</span></div></div>
+        <div class="arrow">→</div>
+        <div style="flex:1;"><div style="background:#EEF2FB;border:1px solid #C4D0EE;border-radius:8px;padding:14px 10px;font-size:12.5px;color:#2C3E7A;text-align:center;line-height:1.5;">WebAuthn Assertion<br><span style="font-size:10px;color:#5B78C7;">= 전자서명값</span></div></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:16px;flex:1;">
+      <div class="card" style="flex:1;"><div style="font-size:13px;font-weight:900;color:var(--accent);">문서 전용성</div><div style="font-size:12px;color:#2D3748;margin-top:8px;line-height:1.6;">Challenge가 H(문서)를 포함하므로 다른 문서에는 동일 Challenge가 생성되지 않는다.</div></div>
+      <div class="card" style="flex:1;"><div style="font-size:13px;font-weight:900;color:var(--accent);">재사용 차단</div><div style="font-size:12px;color:#2D3748;margin-top:8px;line-height:1.6;">signingTime·서명자 인증서가 결속되어 동일 서명의 재사용이 불가하다.</div></div>
+      <div class="card" style="flex:1;"><div style="font-size:13px;font-weight:900;color:var(--accent);">서명자 결속</div><div style="font-size:12px;color:#2D3748;margin-top:8px;line-height:1.6;">서명자 인증서 해시가 포함되어 서명자가 서명에 결속된다.</div></div>
+    </div>
+    <div class="note">SignedAttrs 구조는 ETSI EN 319 122(CAdES) 정합, 컨테이너는 RFC 5652 CMS SignedData.</div>
+  </div>
+  <div class="footer"><span>Web A Sign</span><span>WebAuthn 기반 전자서명</span></div>
+</div>
+
+<!-- ============ 4 구성도 ============ -->
+<div class="page">
+  <div class="header"><span class="title">Web A Sign</span><span class="pg">4 / 10</span></div>
+  <div class="breadcrumb">PoC 시연 구성 ▶ 구성도</div>
+  <div class="body">
+    <span class="secbar" style="background:var(--purple);">PoC 시연 구성도</span>
+    <div class="card" style="flex:1;display:flex;flex-direction:column;justify-content:center;background:#FAFBFD;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="flex:1;"><div class="box" style="background:#EEF2FB;border:1.5px solid #C4D0EE;color:#2C3E7A;line-height:1.4;">Tester<br>Chrome / Edge<br><span style="font-size:10px;">설치형 SW 없음</span></div></div>
+        <div class="arrow">→</div>
+        <div style="flex:1;"><div class="box" style="background:#EAF7F5;border:1.5px solid #9AD5CE;color:#1F6E66;line-height:1.4;">poc-relying-party :8080<br>Web UI · 오케스트레이션</div></div>
+        <div class="arrow">→</div>
+        <div style="flex:1;"><div class="box" style="background:#EAF7F5;border:1.5px solid #9AD5CE;color:#1F6E66;line-height:1.4;">Mode 1 WebAuthn<br>등록 · 서명</div></div>
+        <div class="arrow">→</div>
+        <div style="flex:1;"><div class="box" style="background:#F0EDFB;border:1.5px solid #C9C0EC;color:#5A4C9E;line-height:1.4;">kr-dss-pki<br>Tester 인증서 발급</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin:14px 0;justify-content:center;">
+        <div class="box" style="width:210px;background:#1A1A2E;color:#fff;line-height:1.4;">KISA Root CA<br><span style="font-size:10px;color:#9DB4EC;">Trust Anchor · 자가서명</span></div>
+        <div class="arrow">→</div>
+        <div class="box" style="width:210px;background:#EEF2FB;border:1.5px solid #5B78C7;color:#2C3E7A;line-height:1.4;">사업자 CA · 공동인증CA<br><span style="font-size:10px;">CA 인증서 발급받음</span></div>
+        <div class="arrow">↗</div>
+        <div style="font-size:11px;color:#718096;line-height:1.5;">공동인증CA가 Tester 인증서 발급<br>→ kr-dss-pki 로 체인 제공</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="flex:1;"><div class="box" style="background:#EAF7F5;border:1.5px solid #9AD5CE;color:#1F6E66;line-height:1.4;">문서 + WebAuthn 서명값</div></div>
+        <div class="arrow">→</div>
+        <div style="flex:1;"><div class="box" style="background:#F5F0EB;border:1.5px solid #DCC7AE;color:#7B5E34;line-height:1.4;">kr-ades-cades<br>CMS SignedData</div></div>
+        <div class="arrow">→</div>
+        <div style="flex:1;"><div class="box" style="background:#EAF7F5;border:1.5px solid #9AD5CE;color:#1F6E66;line-height:1.4;">kr-dss-core<br>서명·체인 검증<br><span style="font-size:10px;">신뢰앵커 = KISA Root</span></div></div>
+        <div class="arrow">→</div>
+        <div style="flex:0.8;"><div class="box" style="background:#1F6E66;color:#fff;font-weight:900;padding:14px 10px;">TOTAL_PASSED</div></div>
+      </div>
+    </div>
+    <div class="note">Tester 인증서 발급은 poc-relying-party가 사전 배치된 <span class="mono">joint-ca.p12</span>(New-KISA RootCA→공동인증CA)를 인프로세스 로드해 수행한다. poc-tsp-sim(:8082)은 이 경로에서 호출되지 않는다.</div>
+  </div>
+  <div class="footer"><span>Web A Sign · PoC 시연</span><span>구성도</span></div>
+</div>
+
+<!-- ============ 5 인증서 체인 ============ -->
+<div class="page">
+  <div class="header"><span class="title">Web A Sign</span><span class="pg">5 / 10</span></div>
+  <div class="breadcrumb">인증서 체인 ▶ KISA Root CA → 공동인증CA → Tester</div>
+  <div class="body">
+    <span class="secbar" style="background:var(--purple);">인증서 체인 (joint-ca.p12 기준)</span>
+    <div style="display:flex;gap:22px;flex:1;align-items:center;">
+      <div style="flex:1.2;display:flex;flex-direction:column;align-items:center;">
+        <div style="width:100%;background:#1A1A2E;border-radius:11px;padding:16px 20px;">
+          <div style="color:#fff;font-size:16px;font-weight:900;">① KISA Root CA</div>
+          <div class="mono" style="color:#9DB4EC;font-size:12px;margin-top:6px;line-height:1.5;">Subject: CN=New-KISA RootCA, O=KISA, C=KR<br>Issuer&nbsp;: Self (자가서명 · Trust Anchor)</div>
+        </div>
+        <div style="color:#9AA8BE;font-size:20px;margin:6px 0;">↓</div>
+        <div style="width:100%;background:#EEF2FB;border:2px solid #5B78C7;border-radius:11px;padding:16px 20px;">
+          <div style="color:#2C3E7A;font-size:16px;font-weight:900;">② 사업자 CA · 공동인증CA</div>
+          <div class="mono" style="color:#4A5C8C;font-size:12px;margin-top:6px;line-height:1.5;">Subject: CN=공동인증CA, O=KISA, C=KR<br>Issuer&nbsp;: CN=New-KISA RootCA</div>
+        </div>
+        <div style="color:#9AA8BE;font-size:20px;margin:6px 0;">↓</div>
+        <div style="width:100%;background:#EAF7F5;border:2px solid var(--accent);border-radius:11px;padding:16px 20px;">
+          <div style="color:#1F6E66;font-size:16px;font-weight:900;">③ Tester 인증서</div>
+          <div class="mono" style="color:#22534E;font-size:12px;margin-top:6px;line-height:1.5;">Subject: CN=KR-DSS WebAuthn Signer<br>Issuer&nbsp;: CN=공동인증CA · Policy: POLICY_WEBAUTHN</div>
+        </div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:12px;">
+        <div class="card"><div style="font-size:13px;font-weight:900;color:var(--purple);">서명자</div><div style="font-size:12px;color:#2D3748;margin-top:7px;line-height:1.6;">전자문서 CMS 서명의 서명자 인증서로 Tester 인증서가 포함된다.</div></div>
+        <div class="card" style="background:#F1FAF9;border-color:#9AD5CE;"><div style="font-size:13px;font-weight:900;color:#1F6E66;">검증 경로</div><div style="font-size:12px;color:#2D3748;margin-top:7px;line-height:1.6;">kr-dss-core가 Tester → 공동인증CA → KISA Root CA 경로를 신뢰 앵커까지 검증한다.</div></div>
+        <div class="note" style="font-size:11.5px;">알고리즘: SHA256withECDSA / secp256r1. WebAuthn 자격증명 개인키는 인증기(브라우저/플랫폼)에 보관되고, 서버에는 공개키·인증서가 저장된다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Web A Sign · PoC 시연</span><span>인증서 체인</span></div>
+</div>
+
+<!-- ============ 6 시퀀스 ============ -->
+<div class="page">
+  <div class="header"><span class="title">Web A Sign</span><span class="pg">6 / 10</span></div>
+  <div class="breadcrumb">시연 시퀀스 ▶ 등록 · 발급 · 서명 · 검증</div>
+  <div class="body">
+    <span class="secbar" style="background:var(--purple);">시연 시퀀스</span>
+    <div style="display:flex;gap:14px;flex:1;">
+      <div style="flex:1;border:1px solid #C4D0EE;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="background:#EEF2FB;padding:12px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#2C3E7A;">1</div><div style="font-size:13px;font-weight:700;color:#2C3E7A;">등록</div></div>
+        <div style="padding:14px;font-size:12px;color:#2D3748;line-height:1.7;flex:1;">Tester가 브라우저에서 Passkey 생성 → RP에 WebAuthn 공개키 등록.</div>
+      </div>
+      <div style="flex:1;border:1px solid #C9C0EC;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="background:#F0EDFB;padding:12px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#5A4C9E;">2</div><div style="font-size:13px;font-weight:700;color:#5A4C9E;">발급</div></div>
+        <div style="padding:14px;font-size:12px;color:#2D3748;line-height:1.7;flex:1;">RP가 kr-dss-pki / 공동인증CA로 인증서 발급 → Tester 인증서 + CA 체인 수신 → KISA→공동인증CA→Tester 표시.</div>
+      </div>
+      <div style="flex:1;border:1px solid #9AD5CE;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="background:#EAF7F5;padding:12px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#1F6E66;">3</div><div style="font-size:13px;font-weight:700;color:#1F6E66;">서명</div></div>
+        <div style="padding:14px;font-size:12px;color:#2D3748;line-height:1.7;flex:1;">Tester가 문서 전자서명 → 브라우저 WebAuthn 서명 응답 → RP가 kr-ades-cades로 문서+서명값+인증서 CMS 결합.</div>
+      </div>
+      <div style="flex:1;border:1px solid #9AD5CE;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="background:#EAF7F5;padding:12px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#1F6E66;">4</div><div style="font-size:13px;font-weight:700;color:#1F6E66;">검증</div></div>
+        <div style="padding:14px;font-size:12px;color:#2D3748;line-height:1.7;flex:1;">kr-dss-core가 문서 무결성·서명값·인증서 체인 검증 → 서명 VALID / 체인 TRUSTED / TOTAL_PASSED.</div>
+      </div>
+    </div>
+    <div class="card" style="background:#FAFBFD;">
+      <div class="h">참여자</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:11.5px;text-align:center;">
+        <div style="flex:1;padding:8px;background:#EEF2FB;border-radius:7px;color:#2C3E7A;font-weight:700;">Tester</div><div class="arrow">→</div>
+        <div style="flex:1;padding:8px;background:#EEF2FB;border-radius:7px;color:#2C3E7A;font-weight:700;">Web Browser</div><div class="arrow">→</div>
+        <div style="flex:1;padding:8px;background:#EAF7F5;border-radius:7px;color:#1F6E66;font-weight:700;">poc-relying-party</div><div class="arrow">→</div>
+        <div style="flex:1;padding:8px;background:#F0EDFB;border-radius:7px;color:#5A4C9E;font-weight:700;">kr-dss-pki / 공동인증CA</div><div class="arrow">→</div>
+        <div style="flex:1;padding:8px;background:#F5F0EB;border-radius:7px;color:#7B5E34;font-weight:700;">kr-ades-cades</div><div class="arrow">→</div>
+        <div style="flex:1;padding:8px;background:#EAF7F5;border-radius:7px;color:#1F6E66;font-weight:700;">kr-dss-core</div>
+      </div>
+    </div>
+    <div class="note">엔드포인트: <span class="mono">/api/local/register · /sign/begin · /sign/finish · /verify</span> (Mode1WebAuthnController)</div>
+  </div>
+  <div class="footer"><span>Web A Sign · PoC 시연</span><span>시연 시퀀스</span></div>
+</div>
+
+<!-- ============ 7 검증 라우터 ============ -->
+<div class="page">
+  <div class="header"><span class="title">Web A Sign</span><span class="pg">7 / 10</span></div>
+  <div class="breadcrumb">검증 ▶ 정책 기반 라우터 · 3분류 판정</div>
+  <div class="body">
+    <span class="secbar" style="background:#8A7FD7;">검증 — 정책 기반 라우터</span>
+    <div class="lead">서명자 인증서의 정책 식별자(OID)로 검증 경로를 런타임에 선택한다.</div>
+    <div class="card" style="background:#FAF9FD;">
+      <div style="text-align:center;margin-bottom:8px;"><span style="background:var(--dark);color:#fff;font-size:12px;font-weight:700;padding:8px 20px;border-radius:8px;">서명 검증 요청 → 인증서 정책 OID 판별</span></div>
+      <div style="text-align:center;color:#9090AA;font-size:15px;">▼</div>
+      <div style="display:flex;gap:12px;margin-top:8px;">
+        <div style="flex:1;background:#E9F7F5;border:1px solid var(--accent);border-radius:8px;padding:12px;text-align:center;"><div style="font-size:12.5px;font-weight:900;color:#1F6E66;">WebAuthn 경로</div><div style="font-size:10.5px;color:#4A5568;margin-top:4px;">로컬 서명 · Web A Sign</div></div>
+        <div style="flex:1;background:#EEF2FB;border:1px solid #5B78C7;border-radius:8px;padding:12px;text-align:center;"><div style="font-size:12.5px;font-weight:900;color:#2C3E7A;">HSM 경로</div><div style="font-size:10.5px;color:#4A5568;margin-top:4px;">원격 서명</div></div>
+        <div style="flex:1;background:#F5F5F7;border:1px solid #B0B0C0;border-radius:8px;padding:12px;text-align:center;"><div style="font-size:12.5px;font-weight:900;color:#4A5568;">표준 서명 경로</div><div style="font-size:10.5px;color:#4A5568;margin-top:4px;">CAdES 등</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="h" style="margin-bottom:8px;">판정 3분류</div>
+      <div style="display:flex;gap:10px;">
+        <div style="flex:1;border:1px solid #9AD5CE;background:#F1FAF9;border-radius:8px;padding:11px;text-align:center;"><div style="font-size:12px;font-weight:900;color:#1F6E66;">TOTAL_PASSED</div><div style="font-size:10px;color:#4A5568;margin-top:3px;">유효</div></div>
+        <div style="flex:1;border:1px solid #F6C98A;background:#FFFBF3;border-radius:8px;padding:11px;text-align:center;"><div style="font-size:12px;font-weight:900;color:#B7791F;">INDETERMINATE</div><div style="font-size:10px;color:#4A5568;margin-top:3px;">확인불가</div></div>
+        <div style="flex:1;border:1px solid #E0A0A0;background:#FDF5F5;border-radius:8px;padding:11px;text-align:center;"><div style="font-size:12px;font-weight:900;color:#B03A3A;">TOTAL_FAILED</div><div style="font-size:10px;color:#4A5568;margin-top:3px;">무효</div></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:16px;flex:1;">
+      <div class="card" style="flex:1;"><div style="font-size:12.5px;font-weight:900;color:var(--accent);">암호 민첩성</div><div style="font-size:11.5px;color:#2D3748;margin-top:6px;line-height:1.6;">해시 알고리즘(SHA-256/384/512, SHA-3 등)을 정책으로 교체 가능.</div></div>
+      <div class="card" style="flex:1;"><div style="font-size:12.5px;font-weight:900;color:var(--accent);">컨테이너 독립성</div><div style="font-size:11.5px;color:#2D3748;margin-top:6px;line-height:1.6;">동일 결속 구조를 CMS · JAdES · COSE 등에 적용 가능.</div></div>
+    </div>
+  </div>
+  <div class="footer"><span>Web A Sign</span><span>WebAuthn 기반 전자서명</span></div>
+</div>
+
+<!-- ============ 8 실증 결과 ============ -->
+<div class="page">
+  <div class="header"><span class="title">Web A Sign</span><span class="pg">8 / 10</span></div>
+  <div class="breadcrumb">실증 결과 ▶ TOTAL_PASSED</div>
+  <div class="body">
+    <span class="secbar">실증 결과</span>
+    <div class="card" style="background:#F1FAF9;border-color:#9AD5CE;">
+      <div style="font-size:18px;font-weight:900;color:#1F6E66;">최종 판정 <span class="mono">TOTAL_PASSED</span> · 검증 경로 <span class="mono">path = WEBAUTHN</span></div>
+      <div style="font-size:12.5px;color:#22534E;margin-top:4px;">등록 → 발급 → 서명 → 검증 전 구간 통과.</div>
+    </div>
+    <div style="display:flex;gap:18px;flex:1;">
+      <div class="card" style="flex:1;">
+        <div class="h">시연 화면 표시 항목</div>
+        <div style="font-size:12.5px;color:#2D3748;line-height:2;">
+          • Tester 인증서 Subject / Issuer<br>
+          • 공동인증CA Issuer = KISA Root CA<br>
+          • KISA Root CA self-signed<br>
+          • 문서 해시 · 서명 검증 결과<br>
+          • 전체 체인 VALID / TRUSTED<br>
+          • 최종 TOTAL_PASSED
+        </div>
+      </div>
+      <div class="card" style="flex:1;background:#F7F9FD;">
+        <div class="h">검증 항목</div>
+        <div style="font-size:12.5px;color:#2D3748;line-height:1.9;">
+          • 3요소 결속 Challenge 재계산 일치<br>
+          • 어서션 COSE 공개키 실검증<br>
+          • RFC 5652 CMS 컨테이너 결합<br>
+          • Tester → 공동인증CA → KISA Root 체인 검증<br>
+          • 정책 라우터 3분류 판정
+        </div>
+      </div>
+    </div>
+    <div class="note">이번 시연 제외 범위(향후 확장): KR-TL 운영 · 인증서 폐지/복원 · Multi-RA · HSM Attestation · LT/LTA · 6종 포맷. 현재 PoC 실증 단계.</div>
+  </div>
+  <div class="footer"><span>Web A Sign · PoC 시연</span><span>실증 결과</span></div>
+</div>
+
+<!-- ============ 9 부록 모듈 ============ -->
+<div class="page">
+  <div class="header"><span class="title">Web A Sign</span><span class="pg">9 / 10</span></div>
+  <div class="breadcrumb">부록 ▶ 사용 서브모듈 · 향후 확장</div>
+  <div class="body">
+    <span class="secbar" style="background:#6B7280;">부록 — 사용 모듈</span>
+    <div style="flex:1;">
+      <table>
+        <tr><th style="width:22%;">구분</th><th style="width:34%;">모듈</th><th>역할</th></tr>
+        <tr><td>웹 UI·오케스트레이션</td><td class="mono">poc-relying-party (:8080)</td><td>브라우저 UI, 등록·서명·검증 API</td></tr>
+        <tr><td>WebAuthn 진입점</td><td class="mono">Mode1WebAuthnController</td><td>/api/local/register · /sign/begin · /sign/finish · /verify</td></tr>
+        <tr><td>Mode 1 서비스</td><td class="mono">Mode1LocalSignService</td><td>challenge · 서명 결속 · CMS 생성 및 검증</td></tr>
+        <tr><td>데모 CA 연결</td><td class="mono">WebAuthnDemoCa</td><td>공동인증CA 키스토어 로드 · Tester 인증서 발급 (인프로세스)</td></tr>
+        <tr><td>PKI 코어</td><td class="mono">kr-dss-pki</td><td>사용자 인증서 발급 · Root→공동인증CA→Tester 체인 구성</td></tr>
+        <tr><td>서명 컨테이너</td><td class="mono">kr-ades-cades</td><td>RFC 5652 CMS SignedData</td></tr>
+        <tr><td>검증</td><td class="mono">kr-dss-core</td><td>정책 기반 검증 라우터</td></tr>
+        <tr><td>신뢰 평가</td><td class="mono">kr-dss-trust</td><td>CA 신뢰 평가 연결 (KR-TL 운영 제외)</td></tr>
+        <tr><td style="color:#8A8F98;">보조 (미호출)</td><td class="mono" style="color:#8A8F98;">poc-tsp-sim (:8082)</td><td style="color:#8A8F98;">CA·RA·OCSP 서비스. 시연 경로에서 호출되지 않음(별도 joint-ca.p12 로드)</td></tr>
+      </table>
+    </div>
+    <div class="card" style="background:#F5F6F8;border-color:#D5D9DF;">
+      <div class="h" style="color:#6B7280;">향후 확장 (이번 시연 제외)</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <span style="background:#E8EAED;color:#6B7280;font-size:11px;padding:5px 12px;border-radius:16px;">poc-kisa-tl · KR-TL 운영</span>
+        <span style="background:#E8EAED;color:#6B7280;font-size:11px;padding:5px 12px;border-radius:16px;">인증서 폐지·복원</span>
+        <span style="background:#E8EAED;color:#6B7280;font-size:11px;padding:5px 12px;border-radius:16px;">Multi-RA (특허-B)</span>
+        <span style="background:#E8EAED;color:#6B7280;font-size:11px;padding:5px 12px;border-radius:16px;">HSM Attestation (특허-C)</span>
+        <span style="background:#E8EAED;color:#6B7280;font-size:11px;padding:5px 12px;border-radius:16px;">poc-rssp / sam / hsm · 원격서명</span>
+        <span style="background:#E8EAED;color:#6B7280;font-size:11px;padding:5px 12px;border-radius:16px;">LT / LTA · 6종 포맷</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Web A Sign · PoC 시연</span><span>부록 · 사용 모듈</span></div>
+</div>
+
+<!-- ============ 10 요약 ============ -->
+<div class="page">
+  <div class="header"><span class="title">Web A Sign</span><span class="pg">10 / 10</span></div>
+  <div class="breadcrumb">요약</div>
+  <div class="body">
+    <span class="secbar">요약</span>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px;">
+      <div style="display:flex;align-items:center;gap:18px;background:#F1FAF9;border:1px solid #9AD5CE;border-radius:12px;padding:22px 24px;">
+        <div style="font-size:34px;font-weight:900;color:var(--accent);flex-shrink:0;width:40px;text-align:center;">1</div>
+        <div style="font-size:15px;color:#2D3748;line-height:1.55;">WebAuthn 표준 API만으로 전자서명을 수행·검증한다. 설치형 보안 SW가 불필요하다.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:18px;background:#EEF2FB;border:1px solid #C4D0EE;border-radius:12px;padding:22px 24px;">
+        <div style="font-size:34px;font-weight:900;color:var(--accent2);flex-shrink:0;width:40px;text-align:center;">2</div>
+        <div style="font-size:15px;color:#2D3748;line-height:1.55;">문서·서명시각·서명자 인증서 3요소를 단일 Challenge에 결속하고, Tester → 공동인증CA → KISA Root CA 체인을 검증한다.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:18px;background:#F0EDFB;border:1px solid #C9C0EC;border-radius:12px;padding:22px 24px;">
+        <div style="font-size:34px;font-weight:900;color:#8A7FD7;flex-shrink:0;width:40px;text-align:center;">3</div>
+        <div style="font-size:15px;color:#2D3748;line-height:1.55;">정책 기반 라우터가 다중 서명 유형을 단일 시스템에서 처리한다. PoC E2E 결과는 TOTAL_PASSED.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Web A Sign</span><span>WebAuthn 기반 전자서명</span></div>
+</div>
+
+<script>
+document.addEventListener("keydown",function(e){
+  if(e.key!=="ArrowDown"&&e.key!=="ArrowUp"&&e.key!=="ArrowRight"&&e.key!=="ArrowLeft")return;
+  var pages=[].slice.call(document.querySelectorAll(".page"));
+  var y=window.scrollY, cur=0;
+  pages.forEach(function(p,i){ if(p.offsetTop<=y+10) cur=i; });
+  var fwd=(e.key==="ArrowDown"||e.key==="ArrowRight");
+  var t=fwd?Math.min(cur+1,pages.length-1):Math.max(cur-1,0);
+  pages[t].scrollIntoView({behavior:"smooth"}); e.preventDefault();
+});
+</script>
+</body>
+</html>
