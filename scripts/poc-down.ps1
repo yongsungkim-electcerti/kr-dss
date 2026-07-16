@@ -3,7 +3,8 @@
   KR-DSS PoC 서비스 일괄 종료.
 
 .DESCRIPTION
-  PoC 포트(8080/8090/8091/8092)에서 수신 중인 프로세스를 종료하고, Gradle 데몬도 정지한다.
+  PoC 6개 서비스 포트(8080/8081/8082/8090/8091/8092)에서 수신 중인 프로세스를
+  종료하고, Gradle 데몬도 정지한다.
 
 .EXAMPLE
   pwsh scripts\poc-down.ps1
@@ -12,7 +13,7 @@ param([switch]$KeepGradleDaemon)
 
 $ErrorActionPreference = 'Continue'
 $root = Split-Path -Parent $PSScriptRoot
-$ports = 8080, 8090, 8091, 8092
+$ports = 8080, 8081, 8082, 8090, 8091, 8092
 
 Write-Host "KR-DSS PoC 종료" -ForegroundColor Cyan
 foreach ($port in $ports) {

@@ -13,7 +13,7 @@
   header h1{font-size:30px;font-weight:800;margin:0;letter-spacing:-.5px;}
   header p{color:var(--muted);margin:6px 0 0;}
   .badge{display:inline-block;background:var(--panel2);color:var(--muted);font-size:12px;padding:2px 10px;border-radius:999px;margin-top:8px;}
-  .tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px;}
+  .tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:18px;}
   .tab{padding:12px;border:none;border-radius:10px;background:var(--panel2);color:var(--muted);font-size:15px;font-weight:600;cursor:pointer;transition:.15s;}
   .tab.active{background:var(--blue2);color:#fff;box-shadow:0 4px 14px rgba(37,99,235,.35);}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:16px;}
@@ -51,6 +51,21 @@
   .flow .hl{border-color:var(--blue);color:#93c5fd;}
   .legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:11px;color:var(--muted);}
   .legend b{font-weight:700;}
+  .storage-options{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px;}
+  .storage-options.single{grid-template-columns:1fr;}
+  .storage-option{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--bg);}
+  .storage-option h3{margin:0 0 4px;font-size:16px;color:#bfdbfe;}
+  .storage-option p{margin:0;min-height:42px;color:var(--muted);font-size:12px;}
+  .cert-chain{display:grid;gap:10px;margin-top:12px;}
+  .cert-node{border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:10px;padding:12px;background:var(--panel);}
+  .cert-node.root{border-left-color:var(--green);}
+  .cert-kv{display:grid;grid-template-columns:130px 1fr;gap:4px 10px;margin-top:8px;font-size:12px;}
+  .cert-kv span:nth-child(odd){color:var(--muted);}
+  .presentation-frame{width:100%;height:720px;border:1px solid var(--line);border-radius:12px;background:#fff;}
+  .presentation-links{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;}
+  .presentation-links a{flex:1;min-width:210px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--txt);text-decoration:none;text-align:center;font-size:14px;font-weight:700;}
+  .presentation-links a:hover{border-color:var(--blue);color:#bfdbfe;}
+  @media(max-width:700px){.tabs{grid-template-columns:repeat(2,1fr)}.storage-options{grid-template-columns:1fr}.cert-kv{grid-template-columns:1fr}.cert-kv span:nth-child(even){margin-bottom:5px}.presentation-frame{height:70vh}}
 </style>
 </head>
 <body>
@@ -59,27 +74,41 @@
     <h1>KR-DSS 원격전자서명 데모</h1>
     <p>이용사 서명요소(SIC) · 인증서 발급 · 전자서명 · 서명 검증</p>
     <span class="badge" id="passkeyState">패스키 미등록</span>
+    <span class="badge" id="deviceState">접속 환경 확인 중</span>
   </header>
 
   <div class="tabs">
     <button class="tab active" data-tab="cert">① 인증서 발급</button>
     <button class="tab" data-tab="sign">② 전자서명</button>
     <button class="tab" data-tab="verify">③ 서명 검증</button>
-    <button class="tab" data-tab="patentb">④ 특허-B 발급</button>
+    <button class="tab" data-tab="patentb">④ 인증서 관리</button>
+    <button class="tab" data-tab="presentation">⑤ 설명 자료</button>
   </div>
 
   <!-- 인증서 발급 -->
   <section id="tab-cert" class="card">
     <h2>인증서 발급 / 조회</h2>
-    <div class="desc">원격 QSCD(HSM)에 보관된 서명자 인증서를 발급·조회하고, WebAuthn 패스키를 등록합니다.</div>
+    <div class="desc">서버는 PC(sol-pc)에서 실행되고, 전자서명 패스키는 현재 접속 중인 삼성 태블릿에 생성됩니다. 사업자 CA가 패스키 공개키에 사용자 인증서를 발급합니다.</div>
     <label style="display:flex;align-items:center;gap:8px;cursor:pointer;margin:6px 0 12px">
       <input type="checkbox" id="mode1Toggle" style="width:auto" onchange="onModeToggle()" />
-      <span>특허-A <b>Mode 1</b> — WebAuthn 로컬 서명(어서션 자체가 전자서명, SAM/HSM 미경유)</span>
+      <span><b>WebAuthn 로컬 서명</b> — 브라우저 인증 응답을 전자서명에 결합하는 방식</span>
     </label>
-    <div class="row">
-      <button class="act" style="flex:1" onclick="issueCert()">인증서 발급/조회</button>
-      <button class="act ghost" style="flex:1" onclick="registerPasskey()">WebAuthn 패스키 등록</button>
+    <div class="storage-options single">
+      <div class="storage-option">
+        <h3 id="deviceStorageTitle">현재 기기에 저장</h3>
+        <p id="deviceStorageDesc">현재 기기의 기본 패스키 제공자에 전자서명 개인키를 생성합니다.</p>
+        <button id="deviceStorageButton" class="act" onclick="registerPasskey(detectedDeviceKind)">현재 기기에 패스키 생성 + 인증서 발급</button>
+      </div>
     </div>
+    <label>Credential ID</label>
+    <div class="row">
+      <select id="certCredentialId" style="flex:3" onchange="selectCredential()">
+        <option value="">등록된 인증서가 없습니다</option>
+      </select>
+      <button class="act ghost" style="flex:1;margin-top:0" onclick="lookupCertificate()">인증서 상세 조회</button>
+      <button class="act ghost" style="flex:1;margin-top:0" onclick="loadCertificateList()">목록 새로고침</button>
+    </div>
+    <details><summary>기존 원격서명(HSM) 인증서 조회</summary><button class="act ghost" onclick="issueCert()">HSM 인증서 발급/조회</button></details>
     <div id="certOut"></div>
   </section>
 
@@ -88,7 +117,7 @@
     <h2>전자서명 생성</h2>
     <div class="desc">원문과 서명 규격을 선택하고 서명을 요청합니다. 요청 시 SAD 생성과 함께 WebAuthn 사용자 인증을 수행합니다.</div>
 
-    <!-- 특허-A Mode 1: 서명 결속(Signature Binding) 흐름 -->
+    <!-- WebAuthn 로컬 서명 결속(Signature Binding) 흐름 -->
     <div id="mode1Flow" class="flow hide">
       <span class="n">문서 H(doc)</span><span class="arrow">＋</span>
       <span class="n">서명시각</span><span class="arrow">＋</span>
@@ -146,9 +175,9 @@
     <div id="verOut"></div>
   </section>
 
-  <!-- 특허-B 발급 인프라 -->
+  <!-- 인증서 발급 인프라 -->
   <section id="tab-patentb" class="card hide">
-    <h2>특허-B — Registration Binding · Multi-RA · 생명주기 · HSM</h2>
+    <h2>인증서 관리 — Registration Binding · Multi-RA · 생명주기 · HSM</h2>
     <div class="desc">단일 WebAuthn 등록으로 <b>복수 RA 인증서</b>를 발급(동일 SPKI/SKI·RA별 정책 OID)하고,
       인증서별 <b>생명주기</b>(정지·재개·폐지·갱신)와 <b>HSM 발급</b>(CSR+Attestation)을 시연합니다.</div>
 
@@ -170,7 +199,7 @@
     <div id="pbOut"></div>
 
     <hr style="border:none;border-top:1px solid var(--line);margin:22px 0 8px">
-    <h2 style="font-size:16px">HSM 원격서명 인증서 발급 <span class="small">(CSR + HSM Attestation, 청구항 10·15)</span></h2>
+    <h2 style="font-size:16px">HSM 원격서명 인증서 발급 <span class="small">(CSR + HSM Attestation)</span></h2>
     <div class="desc">HSM 을 모사하여 서버가 키쌍·CSR 을 생성하고, Attestation 검증 결과·키 비추출성에 따라 등급 정책을 부여합니다.</div>
     <div class="grid4">
       <div><label>HSM 등급</label><select id="pbHsmGrade"><option>HIGH</option><option>MEDIUM</option><option>LOW</option></select></div>
@@ -181,24 +210,78 @@
     <div id="pbHsmOut"></div>
   </section>
 
+  <!-- 공동인증사업자 설명 자료 -->
+  <section id="tab-presentation" class="card hide">
+    <h2>공동인증사업자 설명 자료</h2>
+    <div class="desc">PoC와 연계된 암호체계 고도화 및 WebAuthn 전자서명 설명 자료를 화면에서 바로 확인합니다.</div>
+    <div class="presentation-links">
+      <a href="/presentation/part1-kpqc-hsm.html" target="presentationViewer">Part 1 · KpqC-HSM</a>
+      <a href="/presentation/part2-web-a-sign.html" target="presentationViewer">Part 2 · Web A Sign / PoC 시연</a>
+      <a href="/presentation/index.html" target="presentationViewer">자료 목차</a>
+    </div>
+    <iframe class="presentation-frame" name="presentationViewer" src="/presentation/index.html" title="공동인증사업자 설명 자료"></iframe>
+  </section>
+
   <footer>KR-DSS · 국내 전자서명 규격 및 신뢰검증 기술 실증 — 본 화면은 실증용 데모입니다.</footer>
 </div>
 
 <script>
 const $ = id => document.getElementById(id);
 let lastSigned = "";
+let detectedDeviceKind = 'device';
+
+// 이 PoC의 운용 환경(Windows PC 또는 삼성 Android 태블릿)을 화면 안내에 반영한다.
+async function detectDeviceContext(){
+  const ua = navigator.userAgent || '';
+  const uaData = navigator.userAgentData;
+  const platform = uaData?.platform || navigator.platform || '';
+  let formFactors = [];
+  try{
+    if(uaData?.getHighEntropyValues){
+      const high = await uaData.getHighEntropyValues(['formFactors']);
+      formFactors = high.formFactors || [];
+    }
+  }catch(e){}
+
+  const windows = /Windows/i.test(platform) || /Windows NT/i.test(ua);
+  const android = /Android/i.test(platform) || /Android/i.test(ua);
+  const tabletHint = formFactors.some(v => /tablet/i.test(v));
+  // 고급 Android 태블릿 Chrome은 데스크톱 모드에서 Linux UA를 보낼 수 있다.
+  const desktopModeTablet = !windows && /Linux/i.test(platform + ' ' + ua)
+    && navigator.maxTouchPoints > 1 && Math.min(screen.width, screen.height) >= 600;
+
+  let label = '현재 기기';
+  let description = '현재 기기의 기본 패스키 제공자에 전자서명 개인키를 생성합니다.';
+  if(windows){
+    detectedDeviceKind = 'pc';
+    label = '이 PC';
+    description = '이 PC의 Windows Hello 또는 기본 패스키 제공자에 전자서명 개인키를 생성합니다.';
+  }else if(tabletHint || android || desktopModeTablet){
+    detectedDeviceKind = 'tablet';
+    label = '이 태블릿';
+    description = '이 태블릿의 기본 패스키 제공자에 전자서명 개인키를 생성합니다. Samsung Pass가 기본 제공자이면 Samsung Pass에 저장됩니다.';
+  }
+
+  const browser = /Edg\//.test(ua) ? 'Edge' : (/Chrome\//.test(ua) ? 'Chrome' : '브라우저');
+  $('deviceState').textContent = `접속 환경: ${label.replace('이 ','')} · ${browser}`;
+  $('deviceStorageTitle').textContent = `${label}에 저장`;
+  $('deviceStorageDesc').textContent = description;
+  $('deviceStorageButton').textContent = `${label}에 패스키 생성 + 인증서 발급`;
+}
+detectDeviceContext();
 
 // --- tabs ---
 document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
   document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
   t.classList.add('active');
-  ['cert','sign','verify','patentb'].forEach(n => $('tab-'+n).classList.toggle('hide', n !== t.dataset.tab));
+  ['cert','sign','verify','patentb','presentation'].forEach(n => $('tab-'+n).classList.toggle('hide', n !== t.dataset.tab));
 });
 function applySample(){ const v=$('sampleSel').value; if(v) $('docText').value=v.replace(/\\n/g,'\n'); }
 
 // --- base64url helpers ---
 function b64urlToBytes(s){s=s.replace(/-/g,'+').replace(/_/g,'/');const pad=s.length%4?4-s.length%4:0;s+='='.repeat(pad);const bin=atob(s);const u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return u;}
 function bytesToB64url(buf){const u=new Uint8Array(buf);let s='';for(const b of u)s+=String.fromCharCode(b);return btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 async function api(path, body){
   const r = await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body||{})});
   const t = await r.text();
@@ -227,40 +310,126 @@ async function issueCert(){
 
 // --- WebAuthn 패스키 등록 ---
 let registeredCredId = null;
-// 특허-A Mode 1 상태
+// WebAuthn 로컬 서명 상태
 let mode1 = false;
-let mode1Cred = null;        // {credentialId, coseAlg}
+let mode1Cred = null;        // {credentialId, coseAlg, transports}
 let mode1Container = null;    // 마지막 결속 컨테이너(Base64 DER)
+const MODE1_STORAGE_KEY = 'krdss.mode1.credentials';
+const MODE1_LEGACY_STORAGE_KEY = 'krdss.mode1.credential';
+
+function saveMode1Credential(){
+  if(!mode1Cred) return;
+  const credentials = loadSavedCredentials().filter(c=>c.credentialId!==mode1Cred.credentialId);
+  credentials.push(mode1Cred);
+  localStorage.setItem(MODE1_STORAGE_KEY, JSON.stringify(credentials));
+}
+
+function loadSavedCredentials(){
+  try{
+    const current = JSON.parse(localStorage.getItem(MODE1_STORAGE_KEY)||'[]');
+    if(Array.isArray(current)) return current;
+  }catch(e){}
+  return [];
+}
+
+function clearMode1Credentials(){
+  localStorage.removeItem(MODE1_STORAGE_KEY);
+  localStorage.removeItem(MODE1_LEGACY_STORAGE_KEY);
+  mode1Cred = null;
+}
+
+async function restoreMode1Credential(){
+  try{
+    // 기존 단일 Credential 저장 형식을 다중 목록으로 한 번 마이그레이션한다.
+    const legacy = localStorage.getItem(MODE1_LEGACY_STORAGE_KEY);
+    if(legacy && loadSavedCredentials().length===0){
+      const value = JSON.parse(legacy);
+      if(value?.credentialId) localStorage.setItem(MODE1_STORAGE_KEY,JSON.stringify([value]));
+      localStorage.removeItem(MODE1_LEGACY_STORAGE_KEY);
+    }
+    await loadCertificateList(true);
+  }catch(e){
+    clearMode1Credentials();
+    mode1 = false;
+    $('mode1Toggle').checked = false;
+    $('passkeyState').textContent = '서버 등록정보 없음 — 패스키 재등록 필요';
+    $('passkeyState').style.color = 'var(--amber)';
+    $('certOut').innerHTML = `<div class="result e ind">브라우저에 패스키가 남아 있더라도 서버 등록정보를 찾을 수 없습니다. 서비스를 재시작했다면 패스키를 다시 등록하세요.</div>`;
+  }
+}
+
+async function loadCertificateList(autoShow=false){
+  const list = await apiGet('/api/local/certificates');
+  const saved = loadSavedCredentials();
+  const selected = mode1Cred?.credentialId || $('certCredentialId').value;
+  $('certCredentialId').innerHTML = list.length
+    ? list.map(c=>`<option value="${esc(c.credentialId)}">${esc(c.subject)} · ${esc(c.serialNumber)} · ${esc(c.credentialId.slice(0,16))}…</option>`).join('')
+    : '<option value="">등록된 인증서가 없습니다</option>';
+  if(!list.length){
+    mode1Cred=null;
+    $('passkeyState').textContent='패스키 미등록';
+    $('passkeyState').style.color='var(--muted)';
+    return;
+  }
+  const target=list.some(c=>c.credentialId===selected)?selected:list[0].credentialId;
+  $('certCredentialId').value=target;
+  const meta=saved.find(c=>c.credentialId===target)||{};
+  mode1Cred={credentialId:target,coseAlg:list.find(c=>c.credentialId===target)?.coseAlg,
+    transports:meta.transports||[],storage:meta.storage||'pc'};
+  mode1=true;
+  $('mode1Toggle').checked=true;
+  $('passkeyState').textContent=`등록 인증서 ${list.length}개 · 선택됨 ✓`;
+  $('passkeyState').style.color='var(--green)';
+  const f=$('mode1Flow'); if(f) f.classList.remove('hide');
+  if(autoShow) await lookupCertificate();
+}
+
+function selectCredential(){
+  const id=$('certCredentialId').value;
+  if(!id){mode1Cred=null;return;}
+  const meta=loadSavedCredentials().find(c=>c.credentialId===id)||{};
+  mode1Cred={credentialId:id,coseAlg:meta.coseAlg,transports:meta.transports||[],storage:meta.storage||'pc'};
+  $('passkeyState').textContent='서명·조회 인증서 선택됨 ✓';
+  $('passkeyState').style.color='var(--green)';
+}
 function onModeToggle(){
   mode1 = $('mode1Toggle').checked;
-  $('passkeyState').textContent = mode1 ? '특허-A Mode 1 (미등록)' : '패스키 미등록';
+  $('passkeyState').textContent = mode1 ? 'WebAuthn 로컬 서명 (미등록)' : '패스키 미등록';
   $('passkeyState').style.color = 'var(--muted)';
   const f = $('mode1Flow'); if(f) f.classList.toggle('hide', !mode1);
 }
-async function registerPasskey(){
+async function registerPasskey(storage){
   try{
     if(!window.PublicKeyCredential) throw new Error('이 브라우저/환경은 WebAuthn 미지원');
+    mode1 = true;
+    $('mode1Toggle').checked = true;
+    onModeToggle();
     const challenge = crypto.getRandomValues(new Uint8Array(32));
     const userId = crypto.getRandomValues(new Uint8Array(16));
     const cred = await navigator.credentials.create({publicKey:{
       challenge, rp:{id:location.hostname,name:'KR-DSS'},
-      user:{id:userId,name:'signer-001',displayName:'KR-DSS Signer'},
+      user:{id:userId,name:'Tester',displayName:'전자서명 테스트 사용자'},
       pubKeyCredParams:[{type:'public-key',alg:-7},{type:'public-key',alg:-257}],
-      authenticatorSelection:{userVerification:'preferred',residentKey:'preferred'},
+      hints:['client-device'],
+      authenticatorSelection:{
+        authenticatorAttachment:'platform',
+        userVerification:'required',residentKey:'preferred'},
       timeout:60000, attestation:'none'}});
     const credId = bytesToB64url(cred.rawId);
+    const transports = cred.response.getTransports ? cred.response.getTransports() : [];
     if(mode1){
       // 등록 결과 공개키(SPKI)를 서버로 → CA 인증서 발급·저장
       const spki = cred.response.getPublicKey();
       const alg = cred.response.getPublicKeyAlgorithm();
       const r = await api('/api/local/register',{publicKey:bytesToB64url(spki), credentialId:credId, coseAlg:alg});
-      mode1Cred = {credentialId:credId, coseAlg:alg};
-      $('passkeyState').textContent = 'Mode 1 패스키 등록됨 ✓';
+      mode1Cred = {credentialId:credId, coseAlg:alg, transports, storage};
+      saveMode1Credential();
+      await loadCertificateList();
+      $('certCredentialId').value = credId;
+      selectCredential();
+      $('passkeyState').textContent = `${storage==='pc'?'PC':'휴대폰'} 패스키 등록됨 ✓`;
       $('passkeyState').style.color = 'var(--green)';
-      $('certOut').innerHTML = `<div class="result s">
-        <div class="row"><span class="pill ok">Mode 1 등록</span><span class="pill">${r.coseAlg}</span></div>
-        <div class="small" style="margin:8px 0 4px">CA가 Credential 공개키로 발급한 서명자 인증서</div>
-        <pre>${r.certificatePem}</pre></div>`;
+      await lookupCertificate();
     } else {
       await api('/api/passkey/register',{credentialId:credId});
       registeredCredId = credId;
@@ -269,6 +438,37 @@ async function registerPasskey(){
       if($('certOut')) $('certOut').insertAdjacentHTML('beforeend', `<div class="small ok" style="margin-top:8px">패스키 등록 완료: ${credId.slice(0,16)}…</div>`);
     }
   }catch(e){ alert('패스키 등록 실패: '+e.message); }
+}
+
+async function lookupCertificate(){
+  const credentialId = $('certCredentialId').value;
+  if(!credentialId){ alert('조회할 Credential ID를 입력하세요.'); return; }
+  $('certOut').innerHTML = '<div class="small">사용자 인증서와 발급 체인 조회 중…</div>';
+  try{
+    const r = await apiGet('/api/local/certificate/'+encodeURIComponent(credentialId));
+    await renderCertificateLookup(r);
+  }catch(e){ $('certOut').innerHTML = `<div class="result e bad">인증서 조회 실패: ${esc(e.message)}</div>`; }
+}
+
+async function renderCertificateLookup(r){
+    const nodes = (r.chain||[]).map((c,i)=>`<div class="cert-node ${c.role==='Root CA'?'root':''}">
+      <div class="row"><b>${esc(c.role)}</b><span class="pill">체인 #${c.chainIndex}</span><span class="pill">${c.ca?'CA':'End Entity'}</span></div>
+      <div class="cert-kv">
+        <span>Subject</span><span>${esc(c.subject)}</span>
+        <span>Issuer</span><span>${esc(c.issuer)}</span>
+        <span>Serial Number</span><span>${esc(c.serialNumber)}</span>
+        <span>유효기간</span><span>${esc(c.notBefore)} ~ ${esc(c.notAfter)}</span>
+        <span>서명 알고리즘</span><span>${esc(c.signatureAlgorithm)}</span>
+        <span>공개키</span><span>${esc(c.publicKeyAlgorithm)} / ${esc(c.publicKeyFormat)}</span>
+        <span><b>정책 OID</b></span><span>${(c.policyOids||[]).length?(c.policyOids||[]).map(oid=>`<b class="ok">${esc(oid)}</b>`).join('<br>'):'-'}</span>
+        <span>SHA-256 지문</span><span style="word-break:break-all">${esc(c.sha256Fingerprint)}</span>
+      </div>
+      <details><summary>PEM 인증서 보기</summary><pre>${esc(c.certificatePem)}</pre></details>
+    </div>`).join('<div style="text-align:center;color:var(--muted)">↑ 다음 인증서가 상위 인증기관에 의해 발급됨</div>');
+    $('certOut').innerHTML = `<div class="result s">
+      <div class="row"><span class="pill ok">인증서 조회 성공</span><span class="pill">${esc(r.coseAlg)}</span><span class="pill">체인 ${r.chainLength}단계</span></div>
+      <div class="small" style="margin-top:8px">Credential ID: ${esc(r.credentialId)}</div>
+      <div class="cert-chain">${nodes}</div></div>`;
 }
 
 // --- 전자서명 (WebAuthn) ---
@@ -308,7 +508,7 @@ async function doSignTotp(){
   }catch(e){ $('signOut').innerHTML = `<div class="result e bad">서명 실패: ${e.message}</div>`; }
 }
 
-// --- 전자서명 (특허-A Mode 1: WebAuthn 로컬 서명) ---
+// --- 전자서명 (WebAuthn 로컬 서명) ---
 async function doSignMode1(text){
   $('signOut').innerHTML = '<div class="small">결속 challenge 발급 중…</div>';
   try{
@@ -320,8 +520,10 @@ async function doSignMode1(text){
     // 2) get: 결속 challenge에 대한 어서션 = 전자서명
     const assertion = await navigator.credentials.get({publicKey:{
       challenge:b64urlToBytes(begin.challenge), rpId:begin.rpId,
-      allowCredentials:(begin.allowCredentials||[]).map(id=>({type:'public-key',id:b64urlToBytes(id)})),
-      userVerification:'preferred', timeout:begin.timeoutMs||60000}});
+      hints:['client-device'],
+      allowCredentials:(begin.allowCredentials||[]).map(id=>({type:'public-key',id:b64urlToBytes(id),
+        ...(mode1Cred?.transports?.length?{transports:mode1Cred.transports}:{})})),
+      userVerification:'required', timeout:begin.timeoutMs||60000}});
     // 3) finish: 어서션 → 결속 컨테이너 조립 + 정책 라우터 검증
     const res = await api('/api/local/sign/finish',{ticket:begin.ticket,
       webauthnCredId:bytesToB64url(assertion.rawId),
@@ -331,18 +533,33 @@ async function doSignMode1(text){
     mode1Container = res.signedContainer;
     $('verDoc').value = res.signedContainer;   // 검증 탭으로 자동 전달
     $('verOrig').value = text;
-    renderReport($('signOut'), res.report, '서명 완료 — 어서션이 곧 전자서명');
+    renderReport($('signOut'), res.report, '서명 완료 — 어서션이 곧 전자서명', res.signerCertificate);
   }catch(e){ $('signOut').innerHTML = `<div class="result e bad">서명 실패: ${e.message}</div>`; }
 }
 
-// VerificationResult(특허-A 라우터) 렌더 — sign/verify 공용
-function renderReport(el, rep, title){
+// VerificationResult 렌더 — sign/verify 공용
+function renderReport(el, rep, title, cert){
   const checks = (rep.checks||[]).map(c=>`<div class="check"><span>${c.name}</span><span class="${c.passed?'ok':'bad'}">${c.passed?'PASS':'FAIL'} · ${c.message}</span></div>`).join('');
+  const certInfo = cert ? `<div class="cert-node" style="margin-top:12px">
+    <div class="row"><b>사용자 인증서</b><span class="pill">${cert.ca?'CA':'End Entity'}</span></div>
+    <div class="cert-kv">
+      <span>Subject</span><span>${esc(cert.subject)}</span>
+      <span>Issuer</span><span>${esc(cert.issuer)}</span>
+      <span>Serial Number</span><span>${esc(cert.serialNumber)}</span>
+      <span>유효기간</span><span>${esc(cert.notBefore)} ~ ${esc(cert.notAfter)}</span>
+      <span>서명 알고리즘</span><span>${esc(cert.signatureAlgorithm)}</span>
+      <span>공개키</span><span>${esc(cert.publicKeyAlgorithm)} / ${esc(cert.publicKeyFormat)}</span>
+      <span><b>정책 OID</b></span><span>${(cert.policyOids||[]).length?(cert.policyOids||[]).map(oid=>`<b class="ok">${esc(oid)}</b>`).join('<br>'):'-'}</span>
+      <span>SHA-256 지문</span><span style="word-break:break-all">${esc(cert.sha256Fingerprint)}</span>
+    </div>
+    <details><summary>사용자 인증서 PEM 보기</summary><pre>${esc(cert.certificatePem)}</pre></details>
+  </div>` : '';
   el.innerHTML = `<div class="result ${rep.indication==='TOTAL_PASSED'?'s':'e'}">
     ${title?`<div class="row"><span class="pill ok">${title}</span><span class="pill">경로:${rep.signaturePath||'-'}</span></div>`:''}
     <div class="indication ${rep.indication}" style="margin-top:10px">${rep.indication}${rep.subIndication?' · '+rep.subIndication:''}</div>
     <div class="small" style="margin-top:8px">서명자: ${rep.signerSubject||'-'}<br>서명시각: ${rep.signingTime||'-'}<br>검증경로: ${rep.signaturePath||'-'}</div>
     <div style="margin-top:10px">${checks}</div>
+    ${certInfo}
     <div class="legend">
       <span><b class="ok">TOTAL_PASSED</b> 서명·결속·문서해시·인증서 모두 성공</span>
       <span><b class="ind">INDETERMINATE</b> 암호검증 성공·신뢰(등록/TL/시점) 일부 불충분</span>
@@ -369,8 +586,8 @@ async function doVerify(){
   $('verOut').innerHTML = '<div class="small">검증 중…</div>';
   if(mode1){
     try{
-      const rep = await api('/api/local/verify',{signedContainer:doc, originalText:$('verOrig').value});
-      renderReport($('verOut'), rep, null);
+      const res = await api('/api/local/verify',{signedContainer:doc, originalText:$('verOrig').value});
+      renderReport($('verOut'), res.report, null, res.signerCertificate);
     }catch(e){ $('verOut').innerHTML = `<div class="result e bad">검증 실패: ${e.message}</div>`; }
     return;
   }
@@ -385,7 +602,7 @@ async function doVerify(){
   }catch(e){ $('verOut').innerHTML = `<div class="result e bad">검증 실패: ${e.message}</div>`; }
 }
 
-// === 특허-B: 단일 등록 → 복수 RA 인증서 + 생명주기 + HSM ===
+// === 단일 등록 → 복수 RA 인증서 + 생명주기 + HSM ===
 function pbStatusClass(s){ return s==='VALID'?'ok':(s==='REVOKED'?'bad':'ind'); }
 
 async function pbRegisterMulti(){
@@ -418,7 +635,7 @@ function pbRenderCerts(certs){
       <span class="pill">등급: ${certs[0].grade}</span>
       <span class="pill">공유 SKI: ${kid.slice(0,20)}…</span></div>
     <div id="pbCerts">${rows}</div>
-    <button class="act ghost" style="margin-top:12px" onclick="pbByKid('${kid}')">연관 인증서 조회 (by SKI · 청구항 13)</button>
+    <button class="act ghost" style="margin-top:12px" onclick="pbByKid('${kid}')">연관 인증서 조회 (by SKI)</button>
   </div>`;
 }
 
@@ -484,6 +701,9 @@ async function pbHsmIssue(){
       <details><summary>인증서 PEM</summary><pre>${v.certificatePem}</pre></details></div>`;
   }catch(e){ $('pbHsmOut').innerHTML = `<div class="result e bad">발급 실패: ${e.message}</div>`; }
 }
+
+// 새로고침 시 브라우저에 저장한 Credential ID를 서버 등록정보와 대조해 상태를 복원한다.
+restoreMode1Credential();
 </script>
 </body>
 </html>

@@ -90,6 +90,11 @@ public class WebAuthnDemoCa {
         return ca.caCertificate();
     }
 
+    /** 발급 CA부터 Root CA까지의 인증서 체인. */
+    public List<X509Certificate> caChain() {
+        return ca.caChain();
+    }
+
     /**
      * WebAuthn 자격증명 공개키로 서명자 인증서를 발급한다(특허-A Mode 1 검증 경로 정책).
      *

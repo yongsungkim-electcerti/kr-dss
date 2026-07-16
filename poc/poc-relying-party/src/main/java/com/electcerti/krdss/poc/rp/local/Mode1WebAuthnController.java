@@ -2,6 +2,8 @@ package com.electcerti.krdss.poc.rp.local;
 
 import com.electcerti.krdss.dss.core.verify.VerificationResult;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
+import java.util.List;
 
 /**
  * 특허-A Mode 1 (WebAuthn 로컬 서명) 데모 API — {@code /api/local/*}.
@@ -47,6 +50,21 @@ public class Mode1WebAuthnController {
         }
     }
 
+    @GetMapping("/certificate/{credentialId}")
+    public Mode1LocalSignService.CertificateLookupResult certificate(
+            @PathVariable String credentialId) {
+        try {
+            return service.certificate(credentialId);
+        } catch (IllegalArgumentException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        }
+    }
+
+    @GetMapping("/certificates")
+    public List<Mode1LocalSignService.CertificateSummary> certificates() {
+        return service.certificates();
+    }
+
     // === 서명 begin ===
 
     public record BeginRequest(String text, String credentialId) {
@@ -78,13 +96,14 @@ public class Mode1WebAuthnController {
                     Base64.getUrlDecoder().decode(req.clientDataJSON()),
                     Base64.getUrlDecoder().decode(req.authenticatorData()),
                     Base64.getUrlDecoder().decode(req.signature()));
-            return new FinishResponse(r.containerB64(), r.report());
+            return new FinishResponse(r.containerB64(), r.report(), r.signerCertificate());
         } catch (IllegalArgumentException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
         }
     }
 
-    public record FinishResponse(String signedContainer, VerificationResult report) {
+    public record FinishResponse(String signedContainer, VerificationResult report,
+                                 Mode1LocalSignService.CertificateDetail signerCertificate) {
     }
 
     // === 검증 ===
@@ -93,7 +112,7 @@ public class Mode1WebAuthnController {
     }
 
     @PostMapping("/verify")
-    public VerificationResult verify(@RequestBody VerifyRequest req) {
+    public VerifyResponse verify(@RequestBody VerifyRequest req) {
         if (req.signedContainer() == null || req.signedContainer().isBlank()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "signedContainer 가 비어 있습니다");
         }
@@ -101,9 +120,14 @@ public class Mode1WebAuthnController {
             byte[] container = Base64.getDecoder().decode(req.signedContainer());
             byte[] original = (req.originalText() == null || req.originalText().isBlank())
                     ? null : req.originalText().getBytes(StandardCharsets.UTF_8);
-            return service.verify(container, original);
+            return new VerifyResponse(service.verify(container, original),
+                    service.signerCertificate(container));
         } catch (IllegalArgumentException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
         }
+    }
+
+    public record VerifyResponse(VerificationResult report,
+                                 Mode1LocalSignService.CertificateDetail signerCertificate) {
     }
 }

@@ -46,6 +46,11 @@ public class WebAuthnCredentialStore {
         return Optional.ofNullable(store.get(credentialIdB64Url));
     }
 
+    /** 등록된 모든 자격증명의 읽기 전용 스냅샷. */
+    public Map<String, StoredCredential> entries() {
+        return Map.copyOf(store);
+    }
+
     /** 검증 후 관측된 서명 카운터를 갱신한다. */
     public void updateSignCount(String credentialIdB64Url, long newCount) {
         store.computeIfPresent(credentialIdB64Url, (k, v) -> v.withSignCount(newCount));
