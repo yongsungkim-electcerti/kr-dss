@@ -13,5 +13,9 @@ gradlew text eol=lf
 *.zip   binary
 *.png   binary
 *.jpg   binary
-*.pdf   binary
 *.hwp   binary
+
+# 대용량 문서는 Git LFS 로 보관 (docs/project 제안서·발표자료 등)
+# 클론·체크아웃 전에 `git lfs install` 이 필요하다. 미설치 상태에서는
+# 파일 대신 포인터 텍스트가 체크아웃된다.
+*.pdf   filter=lfs diff=lfs merge=lfs -text
