@@ -65,6 +65,9 @@
   .presentation-links{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;}
   .presentation-links a{flex:1;min-width:210px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--txt);text-decoration:none;text-align:center;font-size:14px;font-weight:700;}
   .presentation-links a:hover{border-color:var(--blue);color:#bfdbfe;}
+  /* 착수보고 — iframe 이 아닌 새 탭으로 여는 자료(전체화면 슬라이드 덱) */
+  .presentation-links a.ext{border-color:rgba(34,197,94,.5);color:#86efac;}
+  .presentation-links a.ext:hover{border-color:var(--green);color:#bbf7d0;}
   @media(max-width:700px){.tabs{grid-template-columns:repeat(2,1fr)}.storage-options{grid-template-columns:1fr}.cert-kv{grid-template-columns:1fr}.cert-kv span:nth-child(even){margin-bottom:5px}.presentation-frame{height:70vh}}
 </style>
 </head>
@@ -217,12 +220,14 @@
 
   <!-- 공동인증사업자 설명 자료 -->
   <section id="tab-presentation" class="card hide">
-    <h2>공동인증사업자 설명 자료</h2>
-    <div class="desc">PoC와 연계된 암호체계 고도화 및 WebAuthn 전자서명 설명 자료를 화면에서 바로 확인합니다.</div>
+    <h2>사업 · 설명 자료</h2>
+    <div class="desc">PoC와 연계된 암호체계 고도화 및 WebAuthn 전자서명 설명 자료를 화면에서 바로 확인합니다.
+      착수보고는 전체화면 슬라이드 덱이라 새 탭으로 열립니다.</div>
     <div class="presentation-links">
       <a href="/presentation/part1-kpqc-hsm.html" target="presentationViewer">Part 1 · KpqC-HSM</a>
       <a href="/presentation/part2-web-a-sign.html" target="presentationViewer">Part 2 · Web A Sign / PoC 시연</a>
       <a href="/presentation/index.html" target="presentationViewer">자료 목차</a>
+      <a class="ext" href="/kickoff/" target="_blank" rel="noopener">📄 착수보고 (21장) ↗</a>
     </div>
     <iframe class="presentation-frame" name="presentationViewer" src="/presentation/index.html" title="공동인증사업자 설명 자료"></iframe>
   </section>
@@ -275,12 +280,17 @@ async function detectDeviceContext(){
 }
 detectDeviceContext();
 
-// --- tabs ---
-document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
-  document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
-  t.classList.add('active');
-  ['cert','sign','verify','patentb','presentation'].forEach(n => $('tab-'+n).classList.toggle('hide', n !== t.dataset.tab));
-});
+// --- tabs (착수보고 등 외부 문서에서 /?tab=sign 형태로 딥링크 가능) ---
+const TABS = ['cert','sign','verify','patentb','presentation'];
+function showTab(name, push){
+  if(!TABS.includes(name)) return;
+  document.querySelectorAll('.tab').forEach(x => x.classList.toggle('active', x.dataset.tab === name));
+  TABS.forEach(n => $('tab-'+n).classList.toggle('hide', n !== name));
+  if(push) history.replaceState(null, '', '?tab=' + name);
+}
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => showTab(t.dataset.tab, true));
+// 진입 시 ?tab= 또는 #tab 을 반영
+showTab(new URLSearchParams(location.search).get('tab') || location.hash.slice(1) || 'cert', false);
 function applySample(){ const v=$('sampleSel').value; if(v) $('docText').value=v.replace(/\\n/g,'\n'); }
 
 // --- base64url helpers ---
