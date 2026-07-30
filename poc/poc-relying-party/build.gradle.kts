@@ -20,3 +20,11 @@ dependencies {
     implementation(libs.bc.pkix)
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
+
+// 사업자 설명회 HTML 자료를 PoC 화면의 /presentation 경로에서 바로 제공한다.
+tasks.processResources {
+    from(rootProject.file("docs/사업자설명회")) {
+        include("*.html")
+        into("static/presentation")
+    }
+}

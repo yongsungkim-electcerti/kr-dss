@@ -12,18 +12,25 @@ import com.electcerti.krdss.dss.core.verify.VerificationRouter;
 import com.electcerti.krdss.dss.core.verify.WebAuthnCredentialStore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.bouncycastle.asn1.ASN1OctetString;
+import org.bouncycastle.asn1.ASN1Primitive;
+import org.bouncycastle.asn1.x509.CertificatePolicies;
+import org.bouncycastle.asn1.x509.Extension;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.security.KeyFactory;
+import java.security.MessageDigest;
 import java.security.PublicKey;
 import java.security.cert.X509Certificate;
 import java.security.spec.X509EncodedKeySpec;
 import java.time.Instant;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.HexFormat;
 import java.util.List;
 import java.util.Map;
+import java.util.Comparator;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -80,11 +87,28 @@ public class Mode1LocalSignService {
     public record RegisterResult(String credentialId, String certificatePem, String coseAlg) {
     }
 
+    public record CertificateDetail(
+            int chainIndex, String role, String subject, String issuer, String serialNumber,
+            String notBefore, String notAfter, String signatureAlgorithm,
+            String publicKeyAlgorithm, String publicKeyFormat, String sha256Fingerprint,
+            boolean ca, List<String> policyOids, String certificatePem) {
+    }
+
+    public record CertificateLookupResult(
+            String credentialId, String coseAlg, int chainLength, List<CertificateDetail> chain) {
+    }
+
+    public record CertificateSummary(
+            String credentialId, String subject, String issuer, String serialNumber,
+            String notAfter, String coseAlg) {
+    }
+
     public record BeginResult(String ticket, String challenge, String rpId,
                               List<String> allowCredentials, long timeoutMs) {
     }
 
-    public record FinishResult(String containerB64, VerificationResult report) {
+    public record FinishResult(String containerB64, VerificationResult report,
+                               CertificateDetail signerCertificate) {
     }
 
     /** 등록: Credential 공개키로 CA 인증서를 발급하고 레지스트리에 저장한다. */
@@ -100,6 +124,40 @@ public class Mode1LocalSignService {
                 shortId(credentialIdB64), coseAlgName(effectiveAlg),
                 cert.getSubjectX500Principal().getName());
         return new RegisterResult(credentialIdB64, toPem(cert), coseAlgName(effectiveAlg));
+    }
+
+    /** PC 화면에서 Credential ID로 사용자 인증서와 전체 발급 체인을 조회한다. */
+    public CertificateLookupResult certificate(String credentialIdB64) {
+        WebAuthnCredentialStore.StoredCredential credential = store.find(credentialIdB64)
+                .orElseThrow(() -> new IllegalArgumentException("등록되지 않은 자격증명"));
+        List<X509Certificate> certificates = new java.util.ArrayList<>();
+        certificates.add(credential.certificate());
+        certificates.addAll(ca.caChain());
+        List<CertificateDetail> chain = new java.util.ArrayList<>();
+        for (int i = 0; i < certificates.size(); i++) {
+            X509Certificate cert = certificates.get(i);
+            String role = i == 0 ? "사용자(Tester)" :
+                    (i == certificates.size() - 1 ? "Root CA" : "사업자 CA");
+            chain.add(toDetail(i, role, cert));
+        }
+        return new CertificateLookupResult(
+                credentialIdB64, coseAlgName(credential.coseAlg()), chain.size(), List.copyOf(chain));
+    }
+
+    /** PC에 등록된 인증서 선택 목록을 제공한다. */
+    public List<CertificateSummary> certificates() {
+        return store.entries().entrySet().stream()
+                .map(entry -> {
+                    X509Certificate cert = entry.getValue().certificate();
+                    return new CertificateSummary(
+                            entry.getKey(), cert.getSubjectX500Principal().getName(),
+                            cert.getIssuerX500Principal().getName(),
+                            cert.getSerialNumber().toString(16).toUpperCase(),
+                            cert.getNotAfter().toInstant().toString(),
+                            coseAlgName(entry.getValue().coseAlg()));
+                })
+                .sorted(Comparator.comparing(CertificateSummary::notAfter).reversed())
+                .toList();
     }
 
     /** 서명 begin: 3요소 결속 SignedAttrs 구성 후 결속 challenge 를 발급한다. */
@@ -140,7 +198,8 @@ public class Mode1LocalSignService {
 
         VerificationResult report = router.verify(container, p.document(), policy(), store, hashSuite);
         logReport("finish[" + containerFormat + "/" + container.length + "B]", shortId(p.credentialIdB64()), report);
-        return new FinishResult(Base64.getEncoder().encodeToString(container), report);
+        return new FinishResult(Base64.getEncoder().encodeToString(container), report,
+                toDetail(0, "사용자(Tester)", cred.certificate()));
     }
 
     /** 검증: 결속 컨테이너(Base64)를 정책 라우터로 검증한다. */
@@ -148,6 +207,16 @@ public class Mode1LocalSignService {
         VerificationResult report = router.verify(container, originalDocument, policy(), store, hashSuite);
         logReport("verify", "container(" + container.length + "B)", report);
         return report;
+    }
+
+    /** 서명 컨테이너에 포함된 사용자 인증서 상세정보. */
+    public CertificateDetail signerCertificate(byte[] container) {
+        WebAuthnCmsAssembler.Parsed parsed = "mock".equals(containerFormat)
+                ? assembler.parse(container) : cmsAssembler.parse(container);
+        if (parsed.certificates() == null || parsed.certificates().isEmpty()) {
+            throw new IllegalArgumentException("서명 컨테이너에 사용자 인증서가 없습니다");
+        }
+        return toDetail(0, "사용자(Tester)", parsed.certificates().get(0));
     }
 
     private void logReport(String phase, String who, VerificationResult report) {
@@ -222,6 +291,44 @@ public class Mode1LocalSignService {
             return sb.append("-----END CERTIFICATE-----\n").toString();
         } catch (Exception e) {
             return "(인증서 인코딩 실패)";
+        }
+    }
+
+    private static CertificateDetail toDetail(int index, String role, X509Certificate cert) {
+        try {
+            String fingerprint = HexFormat.ofDelimiter(":").withUpperCase()
+                    .formatHex(MessageDigest.getInstance("SHA-256").digest(cert.getEncoded()));
+            return new CertificateDetail(
+                    index, role,
+                    cert.getSubjectX500Principal().getName(),
+                    cert.getIssuerX500Principal().getName(),
+                    cert.getSerialNumber().toString(16).toUpperCase(),
+                    cert.getNotBefore().toInstant().toString(),
+                    cert.getNotAfter().toInstant().toString(),
+                    cert.getSigAlgName(), cert.getPublicKey().getAlgorithm(),
+                    cert.getPublicKey().getFormat(), fingerprint,
+                    cert.getBasicConstraints() >= 0, policyOids(cert), toPem(cert));
+        } catch (Exception e) {
+            throw new IllegalStateException("인증서 상세정보 생성 실패", e);
+        }
+    }
+
+    private static List<String> policyOids(X509Certificate cert) {
+        try {
+            byte[] extension = cert.getExtensionValue(Extension.certificatePolicies.getId());
+            if (extension == null) {
+                return List.of();
+            }
+            byte[] value = ASN1OctetString.getInstance(extension).getOctets();
+            CertificatePolicies policies = CertificatePolicies.getInstance(
+                    ASN1Primitive.fromByteArray(value));
+            return Arrays.stream(policies.getPolicyInformation())
+                    .map(policy -> policy.getPolicyIdentifier().getId())
+                    .toList();
+        } catch (Exception e) {
+            log.warn("인증서 정책 OID 파싱 실패(subject={}): {}",
+                    cert.getSubjectX500Principal().getName(), e.getMessage());
+            return List.of();
         }
     }
 }

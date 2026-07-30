@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<title>공동인증사업자 세미나 자료</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans KR',sans-serif;background:#1A1A2E;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px;}
+.wrap{max-width:920px;width:100%;}
+.eyebrow{color:#7BA7D4;font-size:13px;font-weight:700;letter-spacing:1px;}
+h1{font-size:38px;font-weight:900;margin:12px 0 8px;line-height:1.2;}
+.sub{color:#C8D2E0;font-size:15px;line-height:1.7;max-width:680px;}
+.meta{color:#8890AA;font-size:13px;margin-top:14px;}
+.cards{display:flex;gap:20px;margin-top:38px;flex-wrap:wrap;}
+.card{flex:1;min-width:320px;background:#22253F;border-radius:14px;padding:28px;text-decoration:none;color:#fff;border:1px solid #33374F;transition:.15s;display:block;}
+.card:hover{transform:translateY(-3px);border-color:#5B9BD5;}
+.card.c2:hover{border-color:#2F9E92;}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;}
+.c1 .tag{background:rgba(91,155,213,.18);color:#7BA7D4;}
+.c2 .tag{background:rgba(47,158,146,.18);color:#7FCDC5;}
+.card h2{font-size:26px;font-weight:900;margin:16px 0 6px;}
+.card .cap{font-size:14px;font-weight:700;}
+.c1 .cap{color:#7BA7D4;} .c2 .cap{color:#7FCDC5;}
+.card p{color:#C8D2E0;font-size:12.5px;line-height:1.65;margin-top:12px;}
+.card .go{margin-top:18px;font-size:12px;font-weight:700;}
+.c1 .go{color:#5B9BD5;} .c2 .go{color:#2F9E92;}
+.foot{color:#6A7290;font-size:12px;margin-top:34px;line-height:1.7;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">공동인증사업자 세미나</div>
+  <h1>암호체계 고도화 세미나 자료</h1>
+
+  <div class="cards">
+    <a class="card c1" href="part1-kpqc-hsm.html">
+      <span class="tag">Part 1 · 9페이지</span>
+      <h2>KpqC-HSM</h2>
+      <div class="cap">양자내성암호와 FIPS 140-3의 단일 장비 통합</div>
+      <p>양자내성 서명(ML-DSA)·키교환(ML-KEM)·FIPS 140-3 Level 3를 단일 장비(PCIe + HW-TEE)로 통합하는 전환 방안.</p>
+      <div class="go">자료 열기 →</div>
+    </a>
+    <a class="card c2" href="part2-web-a-sign.html">
+      <span class="tag">Part 2 · PoC 시연 · 10페이지</span>
+      <h2>Web A Sign</h2>
+      <div class="cap">브라우저 표준(WebAuthn) 기반 전자서명</div>
+      <p>설치형 SW 없이 웹 브라우저에서 인증서를 발급받고 전자문서에 서명하며, Tester → 공동인증CA → KISA Root CA 체인을 검증한다. 구성도·인증서 체인·시연 시퀀스·사용 모듈 포함. PoC 결과 TOTAL_PASSED.</p>
+      <div class="go">자료 열기 →</div>
+    </a>
+  </div>
+
+</div>
+</body>
+</html>

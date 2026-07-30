@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<title>Part 1 · KpqC-HSM</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{ --accent:#5B9BD5; --accent2:#68D391; --dark:#1A1A2E; }
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans KR',sans-serif;background:#4A5160;padding:26px 0;}
+.page{width:1280px;height:720px;margin:0 auto 26px;background:#fff;display:flex;flex-direction:column;box-shadow:0 6px 26px rgba(0,0,0,.32);overflow:hidden;}
+.header{background:var(--dark);height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 56px;flex-shrink:0;}
+.header .title{font-size:18px;font-weight:700;color:#fff;}
+.header .pg{font-size:11px;color:#7BA7D4;letter-spacing:.5px;}
+.breadcrumb{padding:9px 56px;font-size:11px;color:#9090AA;border-bottom:1px solid #EDF2F7;flex-shrink:0;letter-spacing:.3px;}
+.body{flex:1;padding:26px 56px;display:flex;flex-direction:column;gap:16px;overflow:hidden;}
+.footer{padding:11px 56px;border-top:1px solid #EDF2F7;display:flex;justify-content:space-between;flex-shrink:0;}
+.footer span{font-size:10px;color:#A0AEC0;}
+.secbar{font-size:13px;font-weight:700;color:#fff;background:var(--accent);padding:7px 16px;border-radius:3px;display:inline-block;width:fit-content;}
+.lead{font-size:17px;font-weight:500;color:#2D3748;line-height:1.55;}
+.card{border:1px solid #DCE4F0;border-radius:12px;padding:18px 22px;background:#FAFBFD;}
+.h{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:12px;}
+.note{border-radius:7px;padding:12px 16px;font-size:12px;line-height:1.6;background:#F5F7FA;border:1px solid #DCE4F0;color:#4A5568;}
+table{width:100%;border-collapse:collapse;font-size:12px;}
+th{background:var(--dark);color:#fff;font-weight:700;padding:9px 12px;text-align:left;}
+td{padding:9px 12px;border-bottom:1px solid #E6ECF3;color:#2D3748;line-height:1.5;vertical-align:top;}
+tr:nth-child(even) td{background:#FAFBFD;}
+.pill{display:inline-block;background:#EDF3FB;color:#2C5282;font-size:11px;font-weight:700;padding:3px 11px;border-radius:20px;}
+@media print{@page{size:1280px 720px;margin:0;}body{background:#fff;padding:0;}.page{margin:0;box-shadow:none;page-break-after:always;}}
+</style>
+</head>
+<body>
+
+<!-- ============ 1 표지 ============ -->
+<div class="page" style="background:var(--dark);">
+  <div style="flex:1;display:flex;align-items:center;padding:0 72px;gap:56px;">
+    <div style="flex:1.3;">
+      <div style="margin-bottom:24px;"><span style="background:rgba(123,167,212,.18);color:#7BA7D4;font-size:13px;font-weight:700;padding:7px 16px;border-radius:20px;">Part 1</span></div>
+      <div style="font-size:88px;font-weight:900;color:#fff;letter-spacing:1px;line-height:1;">KpqC-HSM</div>
+      <div style="font-size:26px;font-weight:700;color:#7BA7D4;margin-top:18px;">양자내성암호와 FIPS 140-3의 단일 장비 통합</div>
+      <div style="height:2px;background:linear-gradient(90deg,#5B9BD5,transparent);margin:28px 0;width:80%;"></div>
+      <div style="font-size:16px;color:#C8D2E0;line-height:1.7;max-width:640px;">
+        양자내성 서명(ML-DSA)·양자내성 키교환(ML-KEM)·FIPS 140-3 Level 3를 단일 장비(KpqCHSM)로 통합하는 전환 방안.
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:16px;">
+      <div style="background:#22253F;border-left:4px solid #5B9BD5;border-radius:10px;padding:20px 22px;"><div style="color:#7BA7D4;font-size:15px;font-weight:900;">PCIe</div><div style="color:#C8D2E0;font-size:14px;margin-top:7px;">FIPS 140-3 Level 3</div></div>
+      <div style="background:#22253F;border-left:4px solid #68D391;border-radius:10px;padding:20px 22px;"><div style="color:#68D391;font-size:15px;font-weight:900;">HW-TEE</div><div style="color:#C8D2E0;font-size:14px;margin-top:7px;">양자내성(PQC) 알고리즘</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 2 배경 ============ -->
+<div class="page">
+  <div class="header"><span class="title">KpqC-HSM</span><span class="pg">2 / 9</span></div>
+  <div class="breadcrumb">배경 ▶ 규정과 정책</div>
+  <div class="body">
+    <span class="secbar">배경 — 규정과 정책</span>
+    <div style="display:flex;gap:18px;flex:1;">
+      <div class="card" style="flex:1;border-color:#BBD4EE;">
+        <div class="h" style="color:#2C5282;">규정 — 「전자서명인증업무 평가기준 해설서」</div>
+        <div style="font-size:13px;color:#2D3748;line-height:2;">
+          <b>6.5</b> 생성 시 FIPS 140-2/140-3 Level 3 이상 HSM. 140-2 사용 시 '140-3 도입 계획서' 제출 의무<br>
+          <b>6.9</b> 가입자 키 보관 시 암호화 후 FIPS 140-3 보안모듈<br>
+          <b>7.1</b> 생성정보 저장 시 FIPS 140-3 또는 동등 장치 내 보관
+        </div>
+        <div class="note" style="margin-top:14px;">FIPS 140-2 전면 Historical: 2026.9.21 · 140-3 검증 소요 평균 542일</div>
+      </div>
+      <div class="card" style="flex:1;border-color:#B6E5C8;background:#F6FCF9;">
+        <div class="h" style="color:#276749;">정책 — 범국가 양자내성암호(PQC) 전환전략</div>
+        <div style="font-size:13px;color:#2D3748;line-height:1.7;">국정원·과기정통부, 2023.7. 2035년까지 국가 암호체계 양자내성암호 전환.</div>
+        <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px;">
+          <div style="display:flex;gap:10px;align-items:center;"><span class="pill" style="background:#E4F5EB;color:#276749;">~2024</span><span style="font-size:12.5px;color:#2D3748;">정책방향 수립(6대 분야)</span></div>
+          <div style="display:flex;gap:10px;align-items:center;"><span class="pill" style="background:#E4F5EB;color:#276749;">~2030</span><span style="font-size:12.5px;color:#2D3748;">범국가 전환 추진단·이행기반</span></div>
+          <div style="display:flex;gap:10px;align-items:center;"><span class="pill" style="background:#E4F5EB;color:#276749;">~2035</span><span style="font-size:12.5px;color:#2D3748;">전환 완료</span></div>
+        </div>
+        <div class="note" style="margin-top:14px;background:#F0FAF4;border-color:#9BDBB4;color:#276749;">시범전환 5대 분야: 통신·금융·교통·국방·우주. 전자서명 포함.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>KpqC-HSM</span><span>양자내성암호 + FIPS 140-3 통합 전환</span></div>
+</div>
+
+<!-- ============ 3 도입 방식 ============ -->
+<div class="page">
+  <div class="header"><span class="title">KpqC-HSM</span><span class="pg">3 / 9</span></div>
+  <div class="breadcrumb">도입 방식 ▶ 분리 도입 · 통합 도입 · 외산 종속</div>
+  <div class="body">
+    <span class="secbar">도입 방식 비교</span>
+    <div class="lead">전자서명은 HSM 내부에서 생성된다. 서명 알고리즘 변경은 HSM 교체를 수반한다.</div>
+    <div style="display:flex;gap:18px;flex:1;">
+      <div style="flex:1;border:1px solid #E0A0A0;border-radius:12px;padding:18px 20px;background:#FDF5F5;display:flex;flex-direction:column;">
+        <div style="font-size:16px;font-weight:900;color:#B03A3A;margin-bottom:12px;">분리 도입</div>
+        <div style="background:#fff;border:1px solid #F0C4B6;border-radius:8px;padding:12px;font-size:12.5px;color:#2D3748;margin-bottom:8px;">1차 — HSM 교체 · FIPS 140-3 (2026)</div>
+        <div style="text-align:center;color:#B03A3A;font-size:13px;margin:2px 0;">↓</div>
+        <div style="background:#fff;border:1px solid #F0C4B6;border-radius:8px;padding:12px;font-size:12.5px;color:#2D3748;">2차 — HSM 교체 · PQC 포함 (2027)</div>
+        <div style="margin-top:auto;padding-top:14px;"><div style="background:#E0A0A0;color:#fff;border-radius:7px;padding:11px;font-size:13px;font-weight:700;text-align:center;">장비·검증·도입 2회</div></div>
+      </div>
+      <div style="flex:1;border:1px solid var(--accent2);border-radius:12px;padding:18px 20px;background:#F4FCF7;display:flex;flex-direction:column;">
+        <div style="font-size:16px;font-weight:900;color:#276749;margin-bottom:12px;">통합 도입</div>
+        <div style="background:#fff;border:1px solid #B6E5C8;border-radius:8px;padding:12px;font-size:12.5px;color:#2D3748;margin-bottom:8px;">KpqCHSM 도입 · PCIe로 140-3 확보</div>
+        <div style="text-align:center;color:#276749;font-size:13px;margin:2px 0;">↓ 펌웨어 업그레이드</div>
+        <div style="background:#fff;border:1px solid #B6E5C8;border-radius:8px;padding:12px;font-size:12.5px;color:#2D3748;">양자내성 활성화 · HW-TEE (장비 교체 없음)</div>
+        <div style="margin-top:auto;padding-top:14px;"><div style="background:var(--accent2);color:#fff;border-radius:7px;padding:11px;font-size:13px;font-weight:700;text-align:center;">장비·검증·도입 1회</div></div>
+      </div>
+      <div style="flex:1;border:1px solid #E6C589;border-radius:12px;padding:18px 20px;background:#FFFBF3;display:flex;flex-direction:column;">
+        <div style="font-size:16px;font-weight:900;color:#B7791F;margin-bottom:12px;">외산 HSM 종속</div>
+        <div style="font-size:12.5px;color:#2D3748;line-height:1.9;">140-3 HSM은 Thales·Entrust·Utimaco 등 외산 위주. 대부분 ML-* 알고리즘 탑재.</div>
+        <div style="margin-top:auto;padding-top:14px;"><div style="background:#E6C589;color:#7B5B1F;border-radius:7px;padding:11px;font-size:13px;font-weight:700;text-align:center;line-height:1.4;">국산 KpqC 미탑재 시 ML-* 한정</div></div>
+      </div>
+    </div>
+    <div class="note">평가기준 6.5·7.1 — 키는 HSM 밖에서 평문으로 존재할 수 없음. 140-3 전환과 PQC 전환 모두 HSM 교체로 귀결.</div>
+  </div>
+  <div class="footer"><span>KpqC-HSM</span><span>양자내성암호 + FIPS 140-3 통합 전환</span></div>
+</div>
+
+<!-- ============ 4 구성 ============ -->
+<div class="page">
+  <div class="header"><span class="title">KpqC-HSM</span><span class="pg">4 / 9</span></div>
+  <div class="breadcrumb">구성 ▶ 통합 대상과 2단계 구성</div>
+  <div class="body">
+    <span class="secbar">KpqCHSM 구성</span>
+    <div class="card">
+      <div class="h">단일 장비 통합 대상</div>
+      <div style="display:flex;gap:12px;">
+        <div style="flex:1;background:#F3F8FE;border:1px solid #BBD4EE;border-radius:9px;padding:14px;text-align:center;"><div style="font-size:14px;font-weight:900;color:#2C5282;">양자내성 서명</div><div style="font-size:11px;color:#4A5568;margin-top:5px;">ML-DSA 등</div></div>
+        <div style="flex:1;background:#F3F8FE;border:1px solid #BBD4EE;border-radius:9px;padding:14px;text-align:center;"><div style="font-size:14px;font-weight:900;color:#2C5282;">양자내성 키교환</div><div style="font-size:11px;color:#4A5568;margin-top:5px;">ML-KEM 등</div></div>
+        <div style="flex:1;background:#F4FCF7;border:1px solid #B6E5C8;border-radius:9px;padding:14px;text-align:center;"><div style="font-size:14px;font-weight:900;color:#276749;">FIPS 140-3 Level 3</div><div style="font-size:11px;color:#4A5568;margin-top:5px;">생성장치 규정</div></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:18px;flex:1;">
+      <div style="flex:1;border:1px solid var(--accent);border-radius:12px;padding:18px 20px;background:#F3F8FE;display:flex;flex-direction:column;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;"><div style="width:30px;height:30px;border-radius:8px;background:var(--accent);color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;">1</div><div style="font-size:16px;font-weight:900;color:#2C5282;">PCIe → FIPS 140-3</div></div>
+        <div style="font-size:12.5px;color:#2C5282;font-weight:700;margin-bottom:10px;">2026</div>
+        <div style="font-size:13px;color:#2D3748;line-height:1.9;">• PCIe로 140-3 Level 3 인증<br>• PQC 표준화 일정과 독립<br>• 즉시 도입 가능</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--accent2);border-radius:12px;padding:18px 20px;background:#F4FCF7;display:flex;flex-direction:column;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;"><div style="width:30px;height:30px;border-radius:8px;background:var(--accent2);color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;">2</div><div style="font-size:16px;font-weight:900;color:#276749;">HW-TEE → 양자내성</div></div>
+        <div style="font-size:12.5px;color:#276749;font-weight:700;margin-bottom:10px;">2027 상반기</div>
+        <div style="font-size:13px;color:#2D3748;line-height:1.9;">• TEE 기반 KpqC 알고리즘 탑재<br>• 펌웨어/필드 업그레이드 (장비 교체 없음)<br>• 양자내성 서명·키교환 포함</div>
+      </div>
+    </div>
+    <div class="note">국내 KpqC: 2025.1 알고리즘 선정, 표준화 2029 목표. PCIe 단계는 PQC 표준화 일정과 독립적으로 진행.</div>
+  </div>
+  <div class="footer"><span>KpqC-HSM</span><span>양자내성암호 + FIPS 140-3 통합 전환</span></div>
+</div>
+
+<!-- ============ 5 아키텍처 ============ -->
+<div class="page">
+  <div class="header"><span class="title">KpqC-HSM</span><span class="pg">5 / 9</span></div>
+  <div class="breadcrumb">아키텍처 ▶ PCIe + HW-TEE, 요소별 역할</div>
+  <div class="body">
+    <span class="secbar">아키텍처</span>
+    <div style="display:flex;gap:20px;flex:1;">
+      <div class="card" style="flex:1;background:#F7F9FC;">
+        <div class="h">구성도</div>
+        <div style="text-align:center;margin-bottom:10px;"><span style="display:inline-block;background:var(--dark);color:#fff;font-size:13px;font-weight:700;padding:9px 24px;border-radius:8px;">CA 서버 — PKCS#11</span></div>
+        <div style="text-align:center;color:#9090AA;font-size:16px;margin:4px 0;">▼ &nbsp; PKCS#11 분기 &nbsp; ▼</div>
+        <div style="display:flex;gap:14px;">
+          <div style="flex:1;background:#EAF2FB;border:1px solid #BBD4EE;border-radius:9px;padding:14px;">
+            <div style="font-size:13px;font-weight:900;color:#2C5282;text-align:center;">HSM-PCIe</div>
+            <div style="font-size:11px;color:#4A5568;text-align:center;margin:6px 0;">PKCS#11 PCI 버스</div>
+            <div style="background:#fff;border:1px solid #BBD4EE;border-radius:6px;padding:10px;font-size:11px;color:#2D3748;text-align:center;line-height:1.6;">ML-KEM / ML-DSA<br>RSA / ECC · Keys</div>
+            <div style="margin-top:9px;text-align:center;"><span style="background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:14px;">FIPS 140-3 Level 3</span></div>
+          </div>
+          <div style="flex:1;background:#EDFAF2;border:1px solid #B6E5C8;border-radius:9px;padding:14px;">
+            <div style="font-size:13px;font-weight:900;color:#276749;text-align:center;">HW-TEE</div>
+            <div style="font-size:11px;color:#4A5568;text-align:center;margin:6px 0;">PKCS#11 TEE API</div>
+            <div style="background:#fff;border:1px solid #B6E5C8;border-radius:6px;padding:10px;font-size:11px;color:#2D3748;text-align:center;line-height:1.6;">KpqC Library · Keys</div>
+            <div style="margin-top:9px;text-align:center;"><span style="background:var(--accent2);color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:14px;">K-PQC</span></div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:12px;font-size:11px;color:#718096;">플랫폼 = KTNF(국산)</div>
+      </div>
+      <div style="flex:1.05;display:flex;flex-direction:column;">
+        <div class="h">요소별 역할</div>
+        <table>
+          <tr><th style="width:26%;">요소</th><th>역할</th><th style="width:22%;">비고</th></tr>
+          <tr><td><b>HSM</b><br>(암호 연산)</td><td>RootCA 개인키 보관, 서명·검증, ML-KEM/ML-DSA 처리. FIPS 140-3 Level 3 필수</td><td>Thales·Entrust·Utimaco</td></tr>
+          <tr><td><b>CA 서버</b><br>(애플리케이션)</td><td>CA SW 구동, PKCS#11 명령 전달, 인증서 정책 처리</td><td>국내 조달 가능</td></tr>
+          <tr><td><b>KTNF 보드/서버</b></td><td>PCIe HSM 장착 플랫폼, HW-TEE 환경 제공</td><td>국산 플랫폼</td></tr>
+        </table>
+        <div class="note" style="margin-top:auto;">세부 사양(예: ML-KEM-768/1024, ML-DSA-65/87)은 예시이며, 확정 사양은 제조사·KISA 협의로 정한다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>KpqC-HSM</span><span>양자내성암호 + FIPS 140-3 통합 전환</span></div>
+</div>
+
+<!-- ============ 6 검증 근거 (Fortanix) ============ -->
+<div class="page">
+  <div class="header"><span class="title">KpqC-HSM</span><span class="pg">6 / 9</span></div>
+  <div class="breadcrumb">검증 근거 ▶ Fortanix 사례 (TEE + 물리 HSM = Level 3)</div>
+  <div class="body">
+    <span class="secbar">검증 근거 — Fortanix 사례</span>
+    <div class="lead">동일 SGX 기술의 두 제품이 인증 등급이 갈렸다. Level 3를 만든 것은 SGX가 아니라 물리 어플라이언스다. (공개 CMVP 인증서 sp4139)</div>
+    <div style="display:flex;gap:18px;">
+      <div style="flex:1;border:1px solid #CBD5E0;border-radius:12px;padding:16px 18px;background:#F7F9FC;">
+        <div style="font-size:14px;font-weight:900;color:#4A5568;">SGX 소프트웨어</div>
+        <div style="font-size:12px;color:#2D3748;margin-top:6px;">런타임 암호화(Runtime Encryption®) 소프트웨어 형태</div>
+        <div style="margin-top:10px;"><span style="background:#E2E8F0;color:#4A5568;font-size:13px;font-weight:900;padding:5px 12px;border-radius:16px;">FIPS 140-2 Level 1</span></div>
+      </div>
+      <div style="flex:1;border:2px solid var(--accent);border-radius:12px;padding:16px 18px;background:#F3F8FE;">
+        <div style="font-size:14px;font-weight:900;color:#2C5282;">물리 어플라이언스 FX2200</div>
+        <div style="font-size:12px;color:#2D3748;margin-top:6px;">동일 SGX + 물리 인클로저(multi-chip standalone)</div>
+        <div style="margin-top:10px;"><span style="background:var(--accent);color:#fff;font-size:13px;font-weight:900;padding:5px 12px;border-radius:16px;">FIPS 140-2 Level 3</span></div>
+      </div>
+    </div>
+    <div class="card" style="flex:1;">
+      <div class="h">역할 분리 (sp4139)</div>
+      <div style="display:flex;gap:12px;">
+        <div style="flex:1;background:#F3F8FE;border:1px solid #BBD4EE;border-radius:8px;padding:12px;"><div style="font-size:12px;font-weight:900;color:#2C5282;">물리 인클로저</div><div style="font-size:11px;color:#4A5568;margin-top:5px;line-height:1.55;">물리보안 · 탬퍼 응답·제로화 회로 · 탬퍼 증거 라벨</div></div>
+        <div style="flex:1;background:#F4FCF7;border:1px solid #B6E5C8;border-radius:8px;padding:12px;"><div style="font-size:12px;font-weight:900;color:#276749;">Intel SGX</div><div style="font-size:11px;color:#4A5568;margin-top:5px;line-height:1.55;">런타임 실행 격리 (물리보안 수단 아님)</div></div>
+        <div style="flex:1;background:#F5F7FA;border:1px solid #CBD5E0;border-radius:8px;padding:12px;"><div style="font-size:12px;font-weight:900;color:#4A5568;">PKCS#11</div><div style="font-size:11px;color:#4A5568;margin-top:5px;line-height:1.55;">표준 인터페이스 · 상위 시스템 연동</div></div>
+      </div>
+      <div style="font-size:11.5px;color:#718096;margin-top:12px;line-height:1.5;">승인 알고리즘은 전부 고전 암호(AES·ECDSA·RSA·SHS·HMAC 등)이며 PQC는 없다 → KpqC는 검증된 기반 위 시험 계층으로 운용.</div>
+    </div>
+    <div class="note">KpqCHSM은 FX2200+SGX 구조를 <b>FIPS 140-3 인증 PCIe HSM + SGX</b>로 재현하고, 그 위에 <b>국산 KpqC 계층</b>을 얹는다.</div>
+  </div>
+  <div class="footer"><span>KpqC-HSM</span><span>양자내성암호 + FIPS 140-3 통합 전환</span></div>
+</div>
+
+<!-- ============ 7 개발 구성 ============ -->
+<div class="page">
+  <div class="header"><span class="title">KpqC-HSM</span><span class="pg">7 / 9</span></div>
+  <div class="breadcrumb">개발 구성 ▶ 계층별 담당과 실증 생태계</div>
+  <div class="body">
+    <span class="secbar">개발 구성</span>
+    <div style="flex:1;">
+      <table>
+        <tr><th style="width:20%;">계층</th><th style="width:26%;">담당</th><th>내용</th><th style="width:15%;">상태</th></tr>
+        <tr><td>물리 암호경계<br>(PCIe HSM)</td><td>HSM 제조사<br>Thales · Entrust · Utimaco</td><td>FIPS 140-3 Level 3 인증 카드. 무결성·키보호·자가시험·승인 알고리즘</td><td>검증 완료<br>(상속)</td></tr>
+        <tr><td>국산 HW 플랫폼</td><td>KTNF</td><td>Xeon Scalable·SGX 서버(K2641A) + 탬퍼 대응 인클로저·제로화 회로</td><td>확보 가능</td></tr>
+        <tr><td>TEE 실행격리</td><td>Intel SGX</td><td>엔클레이브 격리·봉인·원격증명</td><td>검증된 구조</td></tr>
+        <tr><td>양자내성 알고리즘</td><td>데이터아머 (신준범 박사)<br>국산 KpqC 라이브러리</td><td>ML-KEM / ML-DSA 등. 상수시간·메모리 은닉(부채널 저항) 구현</td><td>신규 개발</td></tr>
+        <tr><td>통합·표준 IF</td><td>CA 서버 · PKCS#11</td><td>CA SW·PKCS#11 통합. 전자서명 인정평가 체계와 호환</td><td>국내 조달</td></tr>
+        <tr><td>실증·검증 총괄</td><td>실증 기반 구축</td><td>통합·부채널 시험·Level 3 대응 설계·KCMVP 편입 로드맵</td><td>실증 과제</td></tr>
+      </table>
+    </div>
+    <div style="display:flex;gap:16px;">
+      <div class="card" style="flex:1;background:#F7F9FC;">
+        <div class="h">실증 생태계 연계</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span class="pill">KISA RootCA 개발환경</span>
+          <span class="pill">전자서명 인증사업자 개발환경</span>
+          <span class="pill">KISA 연구환경</span>
+          <span class="pill">KCMVP 시험기관</span>
+          <span class="pill">학계</span>
+        </div>
+      </div>
+      <div class="card" style="flex:1;border-color:#BBD4EE;background:#F3F8FE;">
+        <div class="h" style="color:#2C5282;">핵심 연구 협력 — 신준범 박사 (데이터아머 대표)</div>
+        <div style="font-size:12px;color:#2D3748;line-height:1.65;">전산학 박사 · 27년. 격자기반 암호(PQC) 보안성 연구, 완전동형암호(HEaaN) 개발·사업화. <b>2025년부터 HW-TEE 기반 KpqC 암호모듈을 공동 연구·개발.</b></div>
+      </div>
+    </div>
+    <div class="note">신규 개발 대상은 KpqC 라이브러리 계층(부채널 대응 포함)에 한정된다. 나머지 계층은 검증된 구조를 상속한다.</div>
+  </div>
+  <div class="footer"><span>KpqC-HSM</span><span>양자내성암호 + FIPS 140-3 통합 전환</span></div>
+</div>
+
+<!-- ============ 8 일정 ============ -->
+<div class="page">
+  <div class="header"><span class="title">KpqC-HSM</span><span class="pg">8 / 9</span></div>
+  <div class="breadcrumb">전환 일정 ▶ 시점과 추진 절차</div>
+  <div class="body">
+    <span class="secbar">전환 일정과 추진 절차</span>
+    <div class="card">
+      <div class="h">시점</div>
+      <div style="display:flex;align-items:stretch;">
+        <div style="flex:1;border-right:2px dashed #CBD5E0;padding:0 14px;"><div style="font-size:12.5px;font-weight:900;color:#4A5568;text-align:center;">2026</div><div style="background:#EAF2FB;border-radius:7px;padding:10px;margin-top:7px;font-size:11px;color:#2C5282;text-align:center;line-height:1.5;">FIPS 140-3<br>발주·적용</div></div>
+        <div style="flex:1.2;padding:0 14px;"><div style="font-size:12.5px;font-weight:900;color:#276749;text-align:center;">2027 상반기</div><div style="background:#EDFAF2;border:1px solid var(--accent2);border-radius:7px;padding:10px;margin-top:7px;font-size:11px;color:#276749;text-align:center;line-height:1.5;">KpqCHSM 통합<br>140-3 + 양자내성 완료</div></div>
+        <div style="flex:1;border-left:2px dashed #CBD5E0;padding:0 14px;"><div style="font-size:12.5px;font-weight:900;color:#4A5568;text-align:center;">2028~</div><div style="background:#F5F7FA;border-radius:7px;padding:10px;margin-top:7px;font-size:11px;color:#4A5568;text-align:center;line-height:1.5;">범국가 PQC<br>전환 지속(~2035)</div></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:18px;flex:1;">
+      <div class="card" style="flex:1;">
+        <div class="h">통합 도입 효과</div>
+        <div style="font-size:13.5px;color:#2D3748;line-height:2.1;">
+          • 장비·검증·도입 2회 → 1회<br>
+          • 운영중단 구간 2회 → 1회<br>
+          • 국산 KpqC 탑재 가능<br>
+          • 규정(140-3)·정책(PQC) 동시 충족
+        </div>
+      </div>
+      <div class="card" style="flex:1;background:#F3F8FE;border-color:#BBD4EE;">
+        <div class="h" style="color:#2C5282;">추진 절차</div>
+        <div style="font-size:13.5px;color:#2D3748;line-height:2;">① 사업자 현황·의향 취합<br>② 기술현황·근거 정리<br>③ 인정심사위 검토<br>④ 통합 도입</div>
+        <div class="note" style="margin-top:12px;font-size:11px;">FIPS 140-3 마감 유예는 인정심사위 검토 대상이다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>KpqC-HSM</span><span>양자내성암호 + FIPS 140-3 통합 전환</span></div>
+</div>
+
+<!-- ============ 9 요약 ============ -->
+<div class="page">
+  <div class="header"><span class="title">KpqC-HSM</span><span class="pg">9 / 9</span></div>
+  <div class="breadcrumb">요약</div>
+  <div class="body">
+    <span class="secbar">요약</span>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px;">
+      <div style="display:flex;align-items:center;gap:18px;background:#F3F8FE;border:1px solid #BBD4EE;border-radius:12px;padding:22px 24px;">
+        <div style="font-size:34px;font-weight:900;color:var(--accent);flex-shrink:0;width:40px;text-align:center;">1</div>
+        <div style="font-size:15px;color:#2D3748;line-height:1.55;">KpqCHSM은 양자내성 서명(ML-DSA)·키교환(ML-KEM)·FIPS 140-3 Level 3를 단일 장비(PCIe + HW-TEE)로 통합한다.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:18px;background:#F4FCF7;border:1px solid #B6E5C8;border-radius:12px;padding:22px 24px;">
+        <div style="font-size:34px;font-weight:900;color:var(--accent2);flex-shrink:0;width:40px;text-align:center;">2</div>
+        <div style="font-size:15px;color:#2D3748;line-height:1.55;">분리 도입 시 장비·검증·도입 2회, 통합 도입 시 1회. FIPS 140-3는 PCIe로 2026년 확보, 양자내성은 HW-TEE 펌웨어 업그레이드로 2027 상반기 완료.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:18px;background:#FFFBF3;border:1px solid #F6C98A;border-radius:12px;padding:22px 24px;">
+        <div style="font-size:34px;font-weight:900;color:#DD8B3B;flex-shrink:0;width:40px;text-align:center;">3</div>
+        <div style="font-size:15px;color:#2D3748;line-height:1.55;">외산 140-3 HSM은 ML-* 중심이며, 통합 구성으로 국산 KpqC 탑재가 가능하다. 범국가 PQC 전환(2035)과 정합.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>KpqC-HSM</span><span>양자내성암호 + FIPS 140-3 통합 전환</span></div>
+</div>
+
+<script>
+document.addEventListener("keydown",function(e){
+  if(e.key!=="ArrowDown"&&e.key!=="ArrowUp"&&e.key!=="ArrowRight"&&e.key!=="ArrowLeft")return;
+  var pages=[].slice.call(document.querySelectorAll(".page"));
+  var y=window.scrollY, cur=0;
+  pages.forEach(function(p,i){ if(p.offsetTop<=y+10) cur=i; });
+  var fwd=(e.key==="ArrowDown"||e.key==="ArrowRight");
+  var t=fwd?Math.min(cur+1,pages.length-1):Math.max(cur-1,0);
+  pages[t].scrollIntoView({behavior:"smooth"}); e.preventDefault();
+});
+</script>
+</body>
+</html>

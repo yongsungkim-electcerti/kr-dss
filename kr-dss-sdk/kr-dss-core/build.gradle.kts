@@ -9,6 +9,9 @@ dependencies {
     implementation(project(":kr-dss-sdk:kr-dss-report"))
     implementation(project(":kr-tl:kr-tl-client"))
     implementation(project(":kr-ades:kr-ades-cades"))
+    // KrDssServiceImpl 이 EU DSS CAdES API 를 직접 사용하므로 직접 의존성이 필요하다.
+    // kr-ades-cades 의 implementation 의존성은 소비 모듈에 노출되지 않는다.
+    implementation(libs.dss.cades)
 
     // 6종 포맷 어댑터.
     runtimeOnly(project(":kr-ades:kr-ades-xades"))

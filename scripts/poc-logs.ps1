@@ -10,9 +10,11 @@
   pwsh scripts\poc-logs.ps1 -Service relying-party
   pwsh scripts\poc-logs.ps1 -Service relying-party -Grep Mode1
   pwsh scripts\poc-logs.ps1 -Service sam
+  pwsh scripts\poc-logs.ps1 -Service kisa-tl
+  pwsh scripts\poc-logs.ps1 -Service tsp-sim
 #>
 param(
-    [ValidateSet('relying-party', 'rssp', 'sam', 'hsm')][string]$Service = 'relying-party',
+    [ValidateSet('relying-party', 'kisa-tl', 'tsp-sim', 'rssp', 'sam', 'hsm')][string]$Service = 'relying-party',
     [string]$Grep = '',
     [int]$Tail = 40
 )
