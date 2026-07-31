@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KR-TL Control Center</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #08111f;
+            --panel: rgba(15, 29, 48, .82);
+            --line: rgba(148, 177, 211, .15);
+            --text: #f1f6fc;
+            --muted: #91a3b8;
+            --mint: #41e0b5;
+            --blue: #6da8ff;
+            --amber: #ffbf69;
+            --red: #ff758f;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Inter, Pretendard, "Noto Sans KR", system-ui, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 90% 0, rgba(48, 109, 190, .23), transparent 35%),
+                radial-gradient(circle at 0 100%, rgba(31, 173, 135, .12), transparent 32%),
+                var(--bg);
+        }
+        button, input, select, textarea { font: inherit; }
+        .shell { display: grid; grid-template-columns: 238px minmax(0, 1fr); min-height: 100vh; }
+        aside {
+            padding: 30px 22px;
+            border-right: 1px solid var(--line);
+            background: rgba(5, 13, 25, .62);
+        }
+        .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 42px; }
+        .mark {
+            display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px;
+            font-weight: 900; color: #06131e; background: linear-gradient(135deg, var(--mint), #83b9ff);
+            box-shadow: 0 0 30px rgba(65, 224, 181, .25);
+        }
+        .brand strong { display: block; font-size: 15px; letter-spacing: .08em; }
+        .brand small, .eyebrow, .muted { color: var(--muted); }
+        nav { display: grid; gap: 8px; }
+        nav a {
+            position: relative; display: flex; align-items: center; gap: 10px;
+            color: var(--muted); text-decoration: none; padding: 12px 14px; border-radius: 10px;
+            cursor: pointer; transition: color .2s ease, background .2s ease;
+        }
+        nav a:hover { color: var(--text); background: rgba(109, 168, 255, .12); }
+        nav a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+        nav a.active {
+            color: var(--text); font-weight: 700;
+            background: linear-gradient(90deg, rgba(65, 224, 181, .16), rgba(109, 168, 255, .10));
+        }
+        nav a.active::before {
+            content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px;
+            border-radius: 3px; background: var(--mint); box-shadow: 0 0 10px rgba(65, 224, 181, .6);
+        }
+        nav a .count {
+            margin-left: auto; padding: 2px 7px; border-radius: 99px; font-size: 11px; font-weight: 700;
+            color: var(--muted); background: rgba(148, 177, 211, .12);
+        }
+        nav a.active .count { color: #06131e; background: var(--mint); }
+        .aside-foot { position: fixed; bottom: 28px; font-size: 12px; color: var(--muted); line-height: 1.7; }
+        main { padding: 34px clamp(24px, 4vw, 64px) 54px; overflow: hidden; }
+        header { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 26px; }
+        h1 { margin: 3px 0 0; font-size: clamp(24px, 2.6vw, 34px); letter-spacing: -.04em; }
+        .subtitle { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+        .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+        .actions { display: flex; gap: 14px; align-items: center; }
+        .live { color: var(--mint); font-size: 13px; white-space: nowrap; }
+        .live::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 12px var(--mint); }
+        .next-publish {
+            display: grid; gap: 3px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 10px;
+            background: rgba(109, 168, 255, .07); text-align: right; white-space: nowrap;
+        }
+        .next-publish span { color: var(--muted); font-size: 11px; letter-spacing: .04em; }
+        .next-publish strong { font: 700 13px ui-monospace, SFMono-Regular, monospace; color: var(--text); }
+        .next-publish small { color: var(--mint); font-size: 11px; }
+        .primary {
+            border: 0; border-radius: 10px; padding: 11px 16px; cursor: pointer; font-weight: 800; white-space: nowrap;
+            color: #07121d; background: linear-gradient(135deg, var(--mint), #8de8d1);
+        }
+        .primary:disabled { opacity: .55; cursor: wait; }
+        .ghost {
+            border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; cursor: pointer; font-weight: 700;
+            color: var(--text); background: rgba(109, 168, 255, .08); white-space: nowrap;
+        }
+        .ghost:hover { background: rgba(109, 168, 255, .16); }
+        .ghost.small { padding: 6px 10px; font-size: 12px; font-weight: 600; }
+        /* --- 뷰 전환 --- */
+        .view { display: none; }
+        .view.active { display: block; animation: rise .24s ease both; }
+        @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+        .grid { display: grid; gap: 16px; }
+        .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .card {
+            border: 1px solid var(--line); border-radius: 16px; padding: 20px;
+            background: var(--panel); backdrop-filter: blur(16px); box-shadow: 0 18px 60px rgba(0, 0, 0, .16);
+        }
+        .stat strong { display: block; font-size: 30px; margin-top: 12px; }
+        .stat span { color: var(--muted); font-size: 13px; }
+        .accent { color: var(--mint); }
+        .warn { color: var(--amber); }
+        .danger { color: var(--red); }
+        .content { grid-template-columns: minmax(0, 1.65fr) minmax(290px, .85fr); margin-top: 16px; }
+        .split { grid-template-columns: minmax(0, 1.55fr) minmax(300px, .9fr); }
+        .stack { display: grid; gap: 16px; align-content: start; }
+        .card-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; }
+        h2 { font-size: 16px; margin: 0; }
+        h3 { font-size: 13px; margin: 0 0 10px; color: var(--muted); font-weight: 600; letter-spacing: .04em; }
+        table { width: 100%; border-collapse: collapse; }
+        th { color: var(--muted); font-size: 11px; text-align: left; font-weight: 600; padding: 0 10px 12px; }
+        td { border-top: 1px solid var(--line); padding: 15px 10px; font-size: 13px; }
+        tbody tr { cursor: pointer; transition: background .15s ease; }
+        tbody tr:hover { background: rgba(109, 168, 255, .07); }
+        tbody tr.selected { background: rgba(65, 224, 181, .10); }
+        .badge { display: inline-flex; padding: 5px 8px; border-radius: 99px; font-size: 11px; background: rgba(65, 224, 181, .11); color: var(--mint); }
+        .badge.review { color: var(--amber); background: rgba(255, 191, 105, .11); }
+        .badge.pause { color: var(--red); background: rgba(255, 117, 143, .11); }
+        .badge.info { color: var(--blue); background: rgba(109, 168, 255, .12); }
+        .bar { width: 70px; height: 5px; border-radius: 5px; background: rgba(255,255,255,.08); overflow: hidden; }
+        .bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--blue), var(--mint)); }
+        .bar.wide { width: 100%; height: 7px; }
+        .publication { background: linear-gradient(145deg, rgba(23, 53, 83, .95), rgba(13, 31, 51, .8)); }
+        .version { font: 700 27px ui-monospace, SFMono-Regular, monospace; margin: 14px 0 18px; }
+        dl { display: grid; grid-template-columns: 1fr auto; gap: 11px; margin: 0; font-size: 12px; }
+        dt { color: var(--muted); } dd { margin: 0; text-align: right; }
+        dd.mono { font-family: ui-monospace, SFMono-Regular, monospace; }
+        .activity { display: grid; grid-template-columns: 9px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+        .activity:first-of-type { border-top: 0; }
+        .dot { width: 8px; height: 8px; margin-top: 5px; border-radius: 50%; background: var(--blue); }
+        .dot.warning { background: var(--amber); } .dot.success { background: var(--mint); } .dot.error { background: var(--red); }
+        .activity strong { font-size: 13px; } .activity p { margin: 4px 0; color: var(--muted); font-size: 12px; }
+        .activity time { color: #687c92; font-size: 11px; }
+        .activity .meta { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 6px; color: #687c92; font-size: 11px; }
+        /* --- 폼 · 툴바 --- */
+        .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 18px; }
+        .toolbar .spacer { flex: 1; }
+        input[type=search], input[type=text], input[type=date], input[type=datetime-local], select, textarea {
+            color: var(--text); background: rgba(9, 20, 34, .75); border: 1px solid var(--line);
+            border-radius: 10px; padding: 10px 12px; font-size: 13px;
+        }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: rgba(109, 168, 255, .6); }
+        input[type=search] { min-width: 220px; }
+        textarea { resize: vertical; min-height: 78px; width: 100%; }
+        .form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+        .field { display: grid; gap: 6px; }
+        .field label { font-size: 12px; color: var(--muted); }
+        .field.full { grid-column: 1 / -1; }
+        .checks { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--muted); }
+        .checks label { display: flex; align-items: center; gap: 7px; cursor: pointer; }
+        .form-foot { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; }
+        /* --- 배포 파이프라인 --- */
+        .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+        .step { padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(9, 20, 34, .5); }
+        .step .n {
+            display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%;
+            font-size: 12px; font-weight: 800; color: var(--muted); background: rgba(148, 177, 211, .12);
+        }
+        .step strong { display: block; margin: 10px 0 4px; font-size: 13px; }
+        .step small { color: var(--muted); font-size: 11px; }
+        .step.done { border-color: rgba(65, 224, 181, .4); background: rgba(65, 224, 181, .07); }
+        .step.done .n { color: #06131e; background: var(--mint); }
+        .step.current { border-color: rgba(109, 168, 255, .5); background: rgba(109, 168, 255, .09); }
+        .step.current .n { color: #06131e; background: var(--blue); }
+        /* --- 분포 · 기타 --- */
+        .distribution { display: grid; gap: 14px; }
+        .distribution .row { display: grid; gap: 6px; font-size: 12px; }
+        .distribution .row > div { display: flex; justify-content: space-between; color: var(--muted); }
+        .pager { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; color: var(--muted); font-size: 12px; }
+        .pager .pages { display: flex; gap: 6px; }
+        .empty { padding: 26px 10px; text-align: center; color: var(--muted); font-size: 13px; }
+        .toast { position: fixed; right: 28px; bottom: 28px; padding: 13px 17px; border-radius: 10px; color: #06131e; background: var(--mint); font-weight: 800; transform: translateY(100px); opacity: 0; transition: .25s; }
+        .toast.show { transform: none; opacity: 1; }
+        .demo-flag { display: none; margin-bottom: 16px; padding: 10px 14px; border: 1px dashed rgba(255, 191, 105, .45); border-radius: 10px; color: var(--amber); font-size: 12px; background: rgba(255, 191, 105, .06); }
+        .demo-flag.show { display: block; }
+        @media (max-width: 1100px) {
+            .steps { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 900px) {
+            .shell { grid-template-columns: 1fr; } aside { display: none; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .content, .split { grid-template-columns: 1fr; }
+            .form { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 560px) {
+            main { padding: 24px 16px; } header { align-items: flex-start; flex-direction: column; }
+            .stats { grid-template-columns: 1fr; } .table-wrap { overflow-x: auto; } table { min-width: 660px; }
+        }
+    </style>
+</head>
+<body>
+<div class="shell">
+    <aside>
+        <div class="brand"><div class="mark">K</div><div><strong>KR-TL</strong><small>Control Center</small></div></div>
+        <nav id="nav">
+            <a class="active" href="#overview">운영 현황</a>
+            <a href="#providers">신뢰사업자<span class="count" id="navProviders">—</span></a>
+            <a href="#publication">목록 생성·배포<span class="count" id="navVersion">—</span></a>
+            <a href="#activity">감사 이벤트<span class="count" id="navEvents">—</span></a>
+        </nav>
+        <div class="aside-foot">KISA Trust Infrastructure<br>PoC Environment · 2026</div>
+    </aside>
+    <main>
+        <header>
+            <div>
+                <div class="eyebrow" id="viewEyebrow">National Trust Infrastructure</div>
+                <h1 id="viewTitle">신뢰목록 운영 현황</h1>
+                <p class="subtitle" id="viewSubtitle">KR-TL 발행 기관이 관리하는 인정사업자·신뢰서비스의 실시간 상태입니다.</p>
+            </div>
+            <div class="actions">
+                <span class="live">시스템 정상</span>
+                <div class="next-publish">
+                    <span>다음 KR-TL 배포 예정</span>
+                    <strong id="nextPublish">—</strong>
+                    <small id="nextPublishIn">—</small>
+                </div>
+                <button id="publish" class="primary" data-views="overview publication">새 버전 배포</button>
+                <button id="addProvider" class="primary" data-views="providers">사업자 등록</button>
+                <button id="exportLog" class="primary" data-views="activity">감사 로그 내보내기</button>
+            </div>
+        </header>
+
+        <div id="demoFlag" class="demo-flag">
+            관리 API에 연결되지 않아 <strong>화면 구성 확인용 샘플 데이터</strong>로 표시하고 있습니다.
+        </div>
+
+        <!-- ================= 1. 운영 현황 ================= -->
+        <section id="overview" class="view active">
+            <div class="grid stats">
+                <article class="card stat"><span>인정사업자</span><strong id="providersCount">—</strong><small class="accent">전체 동기화 완료</small></article>
+                <article class="card stat"><span>신뢰 서비스</span><strong id="servicesCount">—</strong><small>CA · TSA · OCSP · RSSP</small></article>
+                <article class="card stat"><span>정상 서비스</span><strong id="grantedCount">—</strong><small class="accent">GRANTED</small></article>
+                <article class="card stat"><span>검토 필요</span><strong id="reviewCount">—</strong><small class="warn">담당자 확인 대기</small></article>
+            </div>
+            <div class="grid content">
+                <article class="card">
+                    <div class="card-head">
+                        <h2>사업자 동기화 상태</h2>
+                        <a class="muted" href="#providers" style="font-size:12px; text-decoration:none;">전체 보기 →</a>
+                    </div>
+                    <div class="table-wrap"><table>
+                        <thead><tr><th>사업자</th><th>서비스</th><th>상태</th><th>최근 동기화</th><th>무결성</th></tr></thead>
+                        <tbody id="overviewProviderRows"></tbody>
+                    </table></div>
+                </article>
+                <div class="stack">
+                    <article class="card publication">
+                        <div class="eyebrow">Current Publication</div>
+                        <div id="version" class="version">KR-TL-—</div>
+                        <dl>
+                            <dt>전자서명</dt><dd id="signature">—</dd>
+                            <dt>해시 알고리즘</dt><dd id="digest">—</dd>
+                            <dt>최종 배포</dt><dd id="published">—</dd>
+                            <dt>다음 갱신</dt><dd id="nextUpdate">—</dd>
+                        </dl>
+                    </article>
+                    <article class="card">
+                        <div class="card-head"><h2>서비스 유형 분포</h2><span class="muted">TSP Type</span></div>
+                        <div class="distribution" id="distribution"></div>
+                    </article>
+                    <article class="card">
+                        <div class="card-head">
+                            <h2>운영 이벤트</h2>
+                            <a class="muted" href="#activity" style="font-size:12px; text-decoration:none;">감사 이벤트 →</a>
+                        </div>
+                        <div id="overviewActivityRows"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 2. 신뢰사업자 ================= -->
+        <section id="providers" class="view">
+            <div class="grid split">
+                <article class="card">
+                    <div class="toolbar">
+                        <input type="search" id="providerSearch" placeholder="사업자명 · 식별자 검색" aria-label="사업자 검색">
+                        <select id="providerStatus" aria-label="상태 필터">
+                            <option value="">상태 전체</option>
+                            <option>정상</option>
+                            <option>검토 필요</option>
+                            <option>일시 중지</option>
+                        </select>
+                        <select id="providerService" aria-label="서비스 유형 필터">
+                            <option value="">서비스 유형 전체</option>
+                            <option>CA</option>
+                            <option>TSA</option>
+                            <option>OCSP</option>
+                            <option>RSSP</option>
+                        </select>
+                        <span class="spacer"></span>
+                        <button class="ghost mock" type="button">일괄 동기화</button>
+                    </div>
+                    <div class="table-wrap"><table>
+                        <thead><tr><th>사업자</th><th>식별자</th><th>서비스</th><th>상태</th><th>최근 동기화</th><th>무결성</th><th></th></tr></thead>
+                        <tbody id="providerRows"></tbody>
+                    </table></div>
+                    <div class="pager">
+                        <span id="providerCountLabel">—</span>
+                        <div class="pages">
+                            <button class="ghost small mock" type="button">이전</button>
+                            <button class="ghost small mock" type="button">1</button>
+                            <button class="ghost small mock" type="button">다음</button>
+                        </div>
+                    </div>
+                </article>
+                <div class="stack">
+                    <article class="card">
+                        <div class="card-head"><h2>사업자 상세</h2><span class="badge info" id="detailStatus">선택 없음</span></div>
+                        <div id="providerDetail" class="empty">좌측 목록에서 사업자를 선택하세요.</div>
+                    </article>
+                    <article class="card">
+                        <div class="card-head"><h2>등록 신청 대기</h2><span class="muted">2건</span></div>
+                        <div class="activity"><i class="dot warning"></i><div><strong>가상 원격서명 사업자 B</strong><p>RSSP 신규 등록 · 서류 검토 단계</p><time>2026-07-30 접수</time></div></div>
+                        <div class="activity"><i class="dot"></i><div><strong>가상 인정사업자 C</strong><p>TSA 서비스 추가 · 기술 적합성 확인</p><time>2026-07-28 접수</time></div></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 3. 목록 생성·배포 ================= -->
+        <section id="publication" class="view">
+            <article class="card" style="margin-bottom:16px;">
+                <div class="card-head"><h2>배포 파이프라인</h2><span class="muted">최근 실행 · 2시간 전</span></div>
+                <div class="steps">
+                    <div class="step done"><div class="n">1</div><strong>신뢰정보 수집</strong><small>12개 사업자 응답 · 오류 0건</small></div>
+                    <div class="step done"><div class="n">2</div><strong>규격 검증</strong><small>KR-TL 스키마 · 인증서 체인 검증</small></div>
+                    <div class="step current"><div class="n">3</div><strong>전자서명</strong><small>XAdES-B-LT · SHA-256</small></div>
+                    <div class="step"><div class="n">4</div><strong>배포</strong><small>배포 채널 반영 · 무결성 고지</small></div>
+                </div>
+            </article>
+            <div class="grid split">
+                <article class="card">
+                    <div class="card-head"><h2>신규 버전 생성</h2><span class="muted">Draft</span></div>
+                    <form id="publishForm" class="form" onsubmit="return false;">
+                        <div class="field">
+                            <label for="seqNo">버전(Sequence Number)</label>
+                            <input type="text" id="seqNo" value="자동 채번" readonly>
+                        </div>
+                        <div class="field">
+                            <label for="nextUpdateInput">다음 갱신 예정일시</label>
+                            <input type="datetime-local" id="nextUpdateInput">
+                        </div>
+                        <div class="field">
+                            <label for="sigAlg">서명 알고리즘</label>
+                            <select id="sigAlg">
+                                <option>XAdES-B-LT · SHA-256 · RSASSA-PSS</option>
+                                <option>XAdES-B-LT · SHA-256 · ECDSA P-256</option>
+                                <option>CAdES-B-LT · SHA-384 · ECDSA P-384</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="signer">서명 키(HSM 슬롯)</label>
+                            <select id="signer">
+                                <option>KISA TL Signer #1 (HSM slot 0)</option>
+                                <option>KISA TL Signer #2 (백업 키)</option>
+                            </select>
+                        </div>
+                        <div class="field full">
+                            <label>배포 채널</label>
+                            <div class="checks">
+                                <label><input type="checkbox" checked> HTTPS 공개 URL</label>
+                                <label><input type="checkbox" checked> KR-DSS SDK 캐시</label>
+                                <label><input type="checkbox"> EU LOTL 상호연동</label>
+                                <label><input type="checkbox"> 백업 미러</label>
+                            </div>
+                        </div>
+                        <div class="field full">
+                            <label for="reason">변경 사유 · 릴리스 노트</label>
+                            <textarea id="reason" placeholder="예) 금융결제원 TSA 인증서 갱신 반영, 원격서명 사업자 상태 변경"></textarea>
+                        </div>
+                        <div class="form-foot" style="grid-column:1/-1;">
+                            <button class="ghost mock" type="button">초안 저장</button>
+                            <button class="ghost mock" type="button">사전 검증 실행</button>
+                            <button class="primary" type="button" id="publishFromForm">서명 후 배포</button>
+                        </div>
+                    </form>
+                </article>
+                <div class="stack">
+                    <article class="card publication">
+                        <div class="eyebrow">Current Publication</div>
+                        <div id="version2" class="version">KR-TL-—</div>
+                        <dl>
+                            <dt>전자서명</dt><dd id="signature2">—</dd>
+                            <dt>해시 알고리즘</dt><dd id="digest2">—</dd>
+                            <dt>최종 배포</dt><dd id="published2">—</dd>
+                            <dt>다음 갱신</dt><dd id="nextUpdate2">—</dd>
+                            <dt>배포 URL</dt><dd class="mono">/kr-tl/current.xml</dd>
+                        </dl>
+                    </article>
+                    <article class="card">
+                        <div class="card-head"><h2>무결성 정보</h2><span class="badge">검증 완료</span></div>
+                        <dl>
+                            <dt>SHA-256</dt><dd class="mono">9f2c…41ab</dd>
+                            <dt>서명 시각</dt><dd id="signedAt">—</dd>
+                            <dt>서명 인증서</dt><dd>KISA TL Signer</dd>
+                            <dt>포함 서비스</dt><dd>28건</dd>
+                        </dl>
+                    </article>
+                </div>
+            </div>
+            <article class="card" style="margin-top:16px;">
+                <div class="card-head"><h2>배포 이력</h2><span class="muted">최근 6개 버전</span></div>
+                <div class="table-wrap"><table>
+                    <thead><tr><th>버전</th><th>생성 일시</th><th>서명자</th><th>포함 서비스</th><th>상태</th><th></th></tr></thead>
+                    <tbody id="historyRows"></tbody>
+                </table></div>
+            </article>
+        </section>
+
+        <!-- ================= 4. 감사 이벤트 ================= -->
+        <section id="activity" class="view">
+            <div class="grid split">
+                <article class="card">
+                    <div class="toolbar">
+                        <input type="search" id="eventSearch" placeholder="이벤트 · 대상 · 수행자 검색" aria-label="이벤트 검색">
+                        <select id="eventLevel" aria-label="레벨 필터">
+                            <option value="">레벨 전체</option>
+                            <option value="success">성공</option>
+                            <option value="info">정보</option>
+                            <option value="warning">경고</option>
+                            <option value="error">오류</option>
+                        </select>
+                        <input type="date" id="eventFrom" aria-label="시작일">
+                        <input type="date" id="eventTo" aria-label="종료일">
+                    </div>
+                    <div id="eventRows"></div>
+                </article>
+                <div class="stack">
+                    <article class="card">
+                        <div class="card-head"><h2>이벤트 요약</h2><span class="muted">최근 7일</span></div>
+                        <div class="distribution" id="eventSummary"></div>
+                    </article>
+                    <article class="card">
+                        <div class="card-head"><h2>감사 로그 무결성</h2><span class="badge">서명 유효</span></div>
+                        <dl>
+                            <dt>로그 체인</dt><dd class="mono">해시 연결 · 무결</dd>
+                            <dt>최근 검증</dt><dd>12분 전</dd>
+                            <dt>보관 기간</dt><dd>5년</dd>
+                            <dt>레코드 수</dt><dd id="eventTotal">—</dd>
+                        </dl>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+<div id="toast" class="toast">새 KR-TL 버전을 배포했습니다.</div>
+<script>
+    const $ = id => document.getElementById(id);
+    const date = value => new Intl.DateTimeFormat("ko-KR", {month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit"}).format(new Date(value));
+    const fullDate = value => new Intl.DateTimeFormat("ko-KR", {year:"numeric", month:"2-digit", day:"2-digit", weekday:"short", hour:"2-digit", minute:"2-digit"}).format(new Date(value));
+    function remaining(value) {
+        const minutes = Math.round((new Date(value) - Date.now()) / 60000);
+        if (minutes <= 0) return "배포 시점 도달";
+        if (minutes < 60) return `약 ${minutes}분 후`;
+        const hours = Math.floor(minutes / 60);
+        return hours < 24 ? `약 ${hours}시간 ${minutes % 60}분 후` : `약 ${Math.floor(hours / 24)}일 ${hours % 24}시간 후`;
+    }
+    const badgeClass = status => status === "정상" ? "" : status === "검토 필요" ? "review" : "pause";
+    const toast = message => {
+        $("toast").textContent = message;
+        $("toast").classList.add("show");
+        setTimeout(() => $("toast").classList.remove("show"), 2400);
+    };
+
+    /* ---------- 화면(뷰) 정의 ---------- */
+    const VIEWS = {
+        overview: {
+            eyebrow: "National Trust Infrastructure",
+            title: "신뢰목록 운영 현황",
+            subtitle: "KR-TL 발행 기관이 관리하는 인정사업자·신뢰서비스의 실시간 상태입니다."
+        },
+        providers: {
+            eyebrow: "Trust Service Providers",
+            title: "신뢰사업자 관리",
+            subtitle: "인정사업자 등록·서비스 구성·동기화 상태를 조회하고 관리합니다."
+        },
+        publication: {
+            eyebrow: "Publication Pipeline",
+            title: "신뢰목록 생성·배포",
+            subtitle: "KR-TL 신규 버전을 생성하고 전자서명 후 배포 채널에 반영합니다."
+        },
+        activity: {
+            eyebrow: "Audit Trail",
+            title: "감사 이벤트",
+            subtitle: "운영 행위와 시스템 이벤트를 시간순으로 기록·보관합니다."
+        }
+    };
+    const navLinks = [...document.querySelectorAll("#nav a")];
+    function showView(id) {
+        const view = VIEWS[id] ? id : "overview";
+        document.querySelectorAll(".view").forEach(section => section.classList.toggle("active", section.id === view));
+        navLinks.forEach(link => link.classList.toggle("active", link.hash === `#${view}`));
+        $("viewEyebrow").textContent = VIEWS[view].eyebrow;
+        $("viewTitle").textContent = VIEWS[view].title;
+        $("viewSubtitle").textContent = VIEWS[view].subtitle;
+        document.querySelectorAll(".actions button[data-views]").forEach(button => {
+            button.style.display = button.dataset.views.split(" ").includes(view) ? "" : "none";
+        });
+        window.scrollTo({top: 0, behavior: "instant" in window ? "auto" : "auto"});
+    }
+    window.addEventListener("hashchange", () => showView(location.hash.slice(1)));
+
+    /* ---------- 샘플 데이터(관리 API 미연결 시) ---------- */
+    const now = Date.now();
+    const DEMO = {
+        summary: {providers: 12, services: 28, granted: 25, suspended: 1, reviewRequired: 2},
+        distribution: {certificateAuthorities: 18, timestampAuthorities: 5, ocspServices: 3, remoteSigningServices: 2},
+        providers: [
+            {name: "한국전자인증", services: "CA · OCSP", status: "정상", syncedAt: "2026-07-31 09:18", integrity: 100},
+            {name: "코스콤 인증센터", services: "CA · TSA", status: "정상", syncedAt: "2026-07-31 09:12", integrity: 100},
+            {name: "금융결제원", services: "CA · OCSP · TSA", status: "검토 필요", syncedAt: "2026-07-31 08:54", integrity: 86},
+            {name: "한국정보인증", services: "CA · OCSP", status: "정상", syncedAt: "2026-07-31 08:41", integrity: 100},
+            {name: "가상 원격서명 사업자", services: "RSSP · HSM", status: "일시 중지", syncedAt: "2026-07-30 17:20", integrity: 72}
+        ],
+        activities: [
+            {title: "KR-TL #42 배포 완료", detail: "전자서명 검증 후 배포 채널 반영", occurredAt: "2시간 전", level: "success"},
+            {title: "금융결제원 TSA 인증서 검토", detail: "만료 예정 인증서 1건 발견", occurredAt: "47분 전", level: "warning"},
+            {title: "사업자 신뢰정보 동기화", detail: "12개 사업자 응답 · 오류 없음", occurredAt: "12분 전", level: "info"}
+        ],
+        publication: {
+            version: "KR-TL-42",
+            publishedAt: new Date(now - 2 * 3600e3).toISOString(),
+            nextUpdate: new Date(now + 22 * 3600e3).toISOString(),
+            digestAlgorithm: "SHA-256",
+            signatureStatus: "서명 유효"
+        }
+    };
+    const PROVIDER_META = {
+        "한국전자인증": {id: "KR-TSP-0001", registered: "2026-03-02", certificate: "CN=KEC Root CA, O=한국전자인증, C=KR"},
+        "코스콤 인증센터": {id: "KR-TSP-0002", registered: "2026-03-11", certificate: "CN=KOSCOM CA, O=코스콤, C=KR"},
+        "금융결제원": {id: "KR-TSP-0003", registered: "2026-03-18", certificate: "CN=KFTC CA, O=금융결제원, C=KR"},
+        "한국정보인증": {id: "KR-TSP-0004", registered: "2026-04-06", certificate: "CN=KICA CA, O=한국정보인증, C=KR"},
+        "가상 원격서명 사업자": {id: "KR-TSP-0009", registered: "2026-06-24", certificate: "CN=Virtual RSSP, O=PoC, C=KR"}
+    };
+    const HISTORY = [
+        {version: "KR-TL-42", createdAt: "2026-07-31 07:18", signer: "KISA TL Signer #1", services: 28, status: "배포 완료"},
+        {version: "KR-TL-41", createdAt: "2026-07-30 07:15", signer: "KISA TL Signer #1", services: 28, status: "배포 완료"},
+        {version: "KR-TL-40", createdAt: "2026-07-29 07:12", signer: "KISA TL Signer #1", services: 27, status: "배포 완료"},
+        {version: "KR-TL-39", createdAt: "2026-07-28 07:10", signer: "KISA TL Signer #2", services: 27, status: "배포 완료"},
+        {version: "KR-TL-38", createdAt: "2026-07-27 07:08", signer: "KISA TL Signer #1", services: 27, status: "폐기(재배포)"},
+        {version: "KR-TL-37", createdAt: "2026-07-26 07:05", signer: "KISA TL Signer #1", services: 26, status: "배포 완료"}
+    ];
+    const EVENTS = [
+        {title: "사업자 신뢰정보 동기화", detail: "12개 사업자 응답 · 오류 없음", occurredAt: "2026-07-31 09:18", level: "info", actor: "system/scheduler", target: "전체 사업자", ip: "10.20.0.11"},
+        {title: "금융결제원 TSA 인증서 검토 지정", detail: "만료 예정 인증서 1건 발견 · 담당자 확인 요청", occurredAt: "2026-07-31 08:54", level: "warning", actor: "admin.kim", target: "KR-TSP-0003", ip: "10.20.4.32"},
+        {title: "KR-TL #42 배포 완료", detail: "전자서명 검증 후 배포 채널 반영", occurredAt: "2026-07-31 07:18", level: "success", actor: "admin.lee", target: "KR-TL-42", ip: "10.20.4.18"},
+        {title: "KR-TL #42 전자서명", detail: "XAdES-B-LT · SHA-256 · HSM slot 0", occurredAt: "2026-07-31 07:16", level: "info", actor: "admin.lee", target: "KR-TL-42", ip: "10.20.4.18"},
+        {title: "원격서명 사업자 일시 중지", detail: "HSM 점검으로 서비스 상태 SUSPENDED 전환", occurredAt: "2026-07-30 17:20", level: "warning", actor: "admin.kim", target: "KR-TSP-0009", ip: "10.20.4.32"},
+        {title: "배포 채널 동기화 실패", detail: "백업 미러 응답 지연 · 자동 재시도로 복구", occurredAt: "2026-07-30 07:22", level: "error", actor: "system/publisher", target: "backup-mirror", ip: "10.20.0.11"},
+        {title: "관리자 로그인", detail: "2단계 인증 성공", occurredAt: "2026-07-30 07:01", level: "info", actor: "admin.lee", target: "console", ip: "10.20.4.18"},
+        {title: "신규 사업자 등록 신청 접수", detail: "가상 원격서명 사업자 B · RSSP", occurredAt: "2026-07-30 10:44", level: "info", actor: "admin.park", target: "KR-TSP-0010", ip: "10.20.4.51"}
+    ];
+
+    /* ---------- 렌더링 ---------- */
+    let state = {providers: [], selected: null};
+
+    function render(data) {
+        state.providers = data.providers;
+        $("providersCount").textContent = data.summary.providers;
+        $("servicesCount").textContent = data.summary.services;
+        $("grantedCount").textContent = data.summary.granted;
+        $("reviewCount").textContent = data.summary.reviewRequired;
+        $("navProviders").textContent = data.summary.providers;
+        $("navEvents").textContent = EVENTS.length;
+
+        $("overviewProviderRows").innerHTML = data.providers.map(p =>
+            `<tr><td><strong>${p.name}</strong></td><td>${p.services}</td><td><span class="badge ${badgeClass(p.status)}">${p.status}</span></td><td>${p.syncedAt}</td><td><div class="bar" title="${p.integrity}%"><i style="width:${p.integrity}%"></i></div></td></tr>`
+        ).join("");
+        $("overviewActivityRows").innerHTML = data.activities.map(a =>
+            `<div class="activity"><i class="dot ${a.level}"></i><div><strong>${a.title}</strong><p>${a.detail}</p><time>${a.occurredAt}</time></div></div>`
+        ).join("");
+
+        const d = data.distribution || DEMO.distribution;
+        const types = [
+            ["인증기관(CA)", d.certificateAuthorities],
+            ["시점확인(TSA)", d.timestampAuthorities],
+            ["인증서 상태(OCSP)", d.ocspServices],
+            ["원격서명(RSSP)", d.remoteSigningServices]
+        ];
+        const max = Math.max(...types.map(t => t[1]), 1);
+        $("distribution").innerHTML = types.map(([label, value]) =>
+            `<div class="row"><div><span>${label}</span><span>${value}건</span></div><div class="bar wide"><i style="width:${Math.round(value / max * 100)}%"></i></div></div>`
+        ).join("");
+
+        renderProviderTable();
+        renderPublication(data.publication);
+    }
+
+    function renderProviderTable() {
+        const keyword = $("providerSearch").value.trim().toLowerCase();
+        const status = $("providerStatus").value;
+        const service = $("providerService").value;
+        const rows = state.providers.filter(p => {
+            const meta = PROVIDER_META[p.name] || {};
+            const matchKeyword = !keyword || `${p.name} ${meta.id || ""}`.toLowerCase().includes(keyword);
+            return matchKeyword && (!status || p.status === status) && (!service || p.services.includes(service));
+        });
+        $("providerRows").innerHTML = rows.length ? rows.map(p => {
+            const meta = PROVIDER_META[p.name] || {};
+            return `<tr data-name="${p.name}"><td><strong>${p.name}</strong></td><td class="muted">${meta.id || "—"}</td><td>${p.services}</td>` +
+                `<td><span class="badge ${badgeClass(p.status)}">${p.status}</span></td><td>${p.syncedAt}</td>` +
+                `<td><div class="bar" title="${p.integrity}%"><i style="width:${p.integrity}%"></i></div></td>` +
+                `<td><button class="ghost small mock" type="button">동기화</button></td></tr>`;
+        }).join("") : `<tr><td colspan="7" class="empty">조건에 맞는 사업자가 없습니다.</td></tr>`;
+        $("providerCountLabel").textContent = `${rows.length} / ${state.providers.length}개 사업자`;
+        if (state.selected) {
+            const row = $("providerRows").querySelector(`tr[data-name="${state.selected}"]`);
+            if (row) row.classList.add("selected");
+        }
+    }
+
+    function selectProvider(name) {
+        const provider = state.providers.find(p => p.name === name);
+        if (!provider) return;
+        state.selected = name;
+        const meta = PROVIDER_META[name] || {};
+        $("detailStatus").textContent = provider.status;
+        $("detailStatus").className = `badge ${badgeClass(provider.status) || "info"}`;
+        $("providerDetail").className = "";
+        $("providerDetail").innerHTML =
+            `<h3>${provider.name}</h3><dl>` +
+            `<dt>사업자 식별자</dt><dd class="mono">${meta.id || "—"}</dd>` +
+            `<dt>등록일</dt><dd>${meta.registered || "—"}</dd>` +
+            `<dt>제공 서비스</dt><dd>${provider.services}</dd>` +
+            `<dt>최근 동기화</dt><dd>${provider.syncedAt}</dd>` +
+            `<dt>무결성 점수</dt><dd>${provider.integrity}%</dd>` +
+            `</dl><h3 style="margin-top:18px;">서명 인증서</h3>` +
+            `<p class="muted" style="font:12px/1.7 ui-monospace, SFMono-Regular, monospace; margin:0; word-break:break-all;">${meta.certificate || "—"}</p>` +
+            `<div class="form-foot"><button class="ghost small mock" type="button">서비스 편집</button><button class="ghost small mock" type="button">상태 변경</button></div>`;
+        renderProviderTable();
+    }
+
+    function renderPublication(p) {
+        ["", "2"].forEach(suffix => {
+            const version = $("version" + suffix), signature = $("signature" + suffix);
+            if (!version) return;
+            version.textContent = p.version;
+            signature.textContent = p.signatureStatus;
+            $("digest" + suffix).textContent = p.digestAlgorithm;
+            $("published" + suffix).textContent = date(p.publishedAt);
+            $("nextUpdate" + suffix).textContent = date(p.nextUpdate);
+        });
+        $("signedAt").textContent = date(p.publishedAt);
+        $("navVersion").textContent = p.version.replace("KR-TL-", "#");
+        $("nextPublish").textContent = fullDate(p.nextUpdate);
+        $("nextPublishIn").textContent = remaining(p.nextUpdate);
+        $("publish").title = `다음 정기 배포 예정: ${fullDate(p.nextUpdate)}`;
+        const input = $("nextUpdateInput");
+        if (input && !input.value) input.value = new Date(p.nextUpdate).toISOString().slice(0, 16);
+    }
+
+    function renderHistory() {
+        $("historyRows").innerHTML = HISTORY.map(h =>
+            `<tr><td class="mono"><strong>${h.version}</strong></td><td>${h.createdAt}</td><td>${h.signer}</td><td>${h.services}건</td>` +
+            `<td><span class="badge ${h.status === "배포 완료" ? "" : "review"}">${h.status}</span></td>` +
+            `<td><button class="ghost small mock" type="button">XML 내려받기</button></td></tr>`
+        ).join("");
+    }
+
+    function renderEvents() {
+        const keyword = $("eventSearch").value.trim().toLowerCase();
+        const level = $("eventLevel").value;
+        const from = $("eventFrom").value, to = $("eventTo").value;
+        const rows = EVENTS.filter(e => {
+            const day = e.occurredAt.slice(0, 10);
+            const matchKeyword = !keyword || `${e.title} ${e.detail} ${e.actor} ${e.target}`.toLowerCase().includes(keyword);
+            return matchKeyword && (!level || e.level === level) && (!from || day >= from) && (!to || day <= to);
+        });
+        $("eventRows").innerHTML = rows.length ? rows.map(e =>
+            `<div class="activity"><i class="dot ${e.level}"></i><div><strong>${e.title}</strong><p>${e.detail}</p>` +
+            `<div class="meta"><span>수행자 ${e.actor}</span><span>대상 ${e.target}</span><span>IP ${e.ip}</span></div>` +
+            `<time>${e.occurredAt}</time></div></div>`
+        ).join("") : `<div class="empty">조건에 맞는 이벤트가 없습니다.</div>`;
+        $("eventTotal").textContent = `${EVENTS.length}건`;
+
+        const levels = [["성공", "success"], ["정보", "info"], ["경고", "warning"], ["오류", "error"]];
+        const counts = levels.map(([label, key]) => [label, EVENTS.filter(e => e.level === key).length]);
+        const max = Math.max(...counts.map(c => c[1]), 1);
+        $("eventSummary").innerHTML = counts.map(([label, value]) =>
+            `<div class="row"><div><span>${label}</span><span>${value}건</span></div><div class="bar wide"><i style="width:${Math.round(value / max * 100)}%"></i></div></div>`
+        ).join("");
+    }
+
+    /* ---------- 데이터 로드 ---------- */
+    async function load() {
+        try {
+            const response = await fetch("/api/admin/dashboard");
+            if (!response.ok) throw new Error("bad response");
+            render(await response.json());
+        } catch (error) {
+            $("demoFlag").classList.add("show");
+            render(DEMO);
+        }
+    }
+
+    async function publishNewVersion(button) {
+        button.disabled = true;
+        try {
+            const response = await fetch("/api/admin/publish", {method: "POST"});
+            if (!response.ok) throw new Error();
+            renderPublication(await response.json());
+            toast("새 KR-TL 버전을 배포했습니다.");
+        } catch (error) {
+            toast("PoC 화면 구성 예시입니다. (배포 API 미연결)");
+        } finally {
+            button.disabled = false;
+        }
+    }
+
+    /* ---------- 이벤트 바인딩 ---------- */
+    $("publish").addEventListener("click", event => publishNewVersion(event.currentTarget));
+    $("publishFromForm").addEventListener("click", event => publishNewVersion(event.currentTarget));
+    $("addProvider").addEventListener("click", () => toast("사업자 등록 화면은 구성 예시입니다."));
+    $("exportLog").addEventListener("click", () => toast("감사 로그 내보내기는 구성 예시입니다."));
+    document.addEventListener("click", event => {
+        const mock = event.target.closest("button.mock");
+        if (mock) toast(`"${mock.textContent.trim()}" 은(는) 화면 구성 예시입니다.`);
+        const row = event.target.closest("#providerRows tr[data-name]");
+        if (row && !mock) selectProvider(row.dataset.name);
+    });
+    ["providerSearch", "providerStatus", "providerService"].forEach(id =>
+        $(id).addEventListener("input", renderProviderTable));
+    ["eventSearch", "eventLevel", "eventFrom", "eventTo"].forEach(id =>
+        $(id).addEventListener("input", renderEvents));
+
+    showView(location.hash.slice(1));
+    renderHistory();
+    renderEvents();
+    load();
+</script>
+</body>
+</html>
