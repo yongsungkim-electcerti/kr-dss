@@ -31,6 +31,17 @@ public class Mode1WebAuthnController {
         this.service = service;
     }
 
+    // === WebAuthn 공통 파라미터 ===
+
+    /**
+     * 등록·서명이 함께 쓰는 rpId 를 서버 설정에서 내려준다.
+     * 브라우저는 이 값만 사용하고 {@code location.hostname} 을 쓰지 않는다.
+     */
+    @GetMapping("/webauthn-config")
+    public Mode1LocalSignService.WebAuthnConfig webAuthnConfig() {
+        return service.webAuthnConfig();
+    }
+
     // === 등록 ===
 
     public record RegisterRequest(String publicKey, String credentialId, Integer coseAlg, String aaguid) {

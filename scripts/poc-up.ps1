@@ -9,12 +9,19 @@
   -Mode full  : PoC 6개 전체 — kisa-tl(8081), tsp-sim(8082),
                 hsm(8092)→sam(8091)→rssp(8090)→relying-party(8080)
   -Mode mode1 : 특허-A Mode 1(WebAuthn 로컬 서명)만 — relying-party(8080) 단독(SAM/HSM 불필요)
+  -Demo       : 태블릿·QR 시연 프로파일 — relying-party 를 HTTPS(https://sol-pc:8080) 로 기동.
+                사전에 `pwsh scripts\gen-demo-tls.ps1` 로 인증서를 생성해야 한다.
 
 .EXAMPLE
   pwsh scripts\poc-up.ps1 -Mode mode1
-  pwsh scripts\poc-up.ps1            # 기본 full
+  pwsh scripts\poc-up.ps1 -Mode mode1 -Demo   # 태블릿 시연(HTTPS)
+  pwsh scripts\poc-up.ps1                     # 기본 full
 #>
-param([ValidateSet('full', 'mode1')][string]$Mode = 'full')
+param(
+    [ValidateSet('full', 'mode1')][string]$Mode = 'full',
+    [switch]$Demo,
+    [string]$DemoHostname = 'sol-pc'
+)
 
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
@@ -22,7 +29,7 @@ $gradlew = Join-Path $root 'gradlew.bat'
 $logs = Join-Path $root 'logs'
 New-Item -ItemType Directory -Force -Path $logs | Out-Null
 
-function Start-Svc([string]$name, [string]$task, [int]$port) {
+function Start-Svc([string]$name, [string]$task, [int]$port, [string[]]$extraArgs = @()) {
     if (Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue) {
         Write-Host "• $name : 포트 $port 이미 사용 중 — 건너뜀" -ForegroundColor Yellow
         return
@@ -31,7 +38,7 @@ function Start-Svc([string]$name, [string]$task, [int]$port) {
     $err = Join-Path $logs "$name.err.log"
     Write-Host "• $name 기동 (port $port) → logs\$name.log"
     $process = Start-Process -FilePath $gradlew `
-        -ArgumentList $task, '--console=plain' `
+        -ArgumentList (@($task, '--console=plain') + $extraArgs) `
         -WorkingDirectory $root `
         -RedirectStandardOutput $out -RedirectStandardError $err `
         -WindowStyle Hidden -PassThru
@@ -58,10 +65,23 @@ if ($Mode -eq 'full') {
     Start-Svc 'sam'  ':poc:poc-sam:bootRun'  8091
     Start-Svc 'rssp' ':poc:poc-rssp:bootRun' 8090
 }
-Start-Svc 'relying-party' ':poc:poc-relying-party:bootRun' 8080
+$rpArgs = @()
+if ($Demo) {
+    $keystore = Join-Path $root 'certs\demo-tls.p12'
+    if (-not (Test-Path $keystore)) {
+        throw "데모 TLS 키스토어가 없습니다: $keystore`n먼저 실행: pwsh scripts\gen-demo-tls.ps1 -Hostname $DemoHostname"
+    }
+    $rpArgs = @('--args=--spring.profiles.active=demo')
+}
+Start-Svc 'relying-party' ':poc:poc-relying-party:bootRun' 8080 $rpArgs
 
+$baseUrl = if ($Demo) { "https://${DemoHostname}:8080" } else { 'http://localhost:8080' }
 Write-Host ""
-Write-Host "열기: http://localhost:8080" -ForegroundColor Cyan
+Write-Host "열기: $baseUrl" -ForegroundColor Cyan
+if ($Demo) {
+    Write-Host "  ⚠ IP 주소로 접속하면 WebAuthn 이 동작하지 않는다 (rpId 에 IP 사용 불가)." -ForegroundColor Yellow
+    Write-Host "  ⚠ 태블릿에 certs\krdss-demo-root-ca.crt 가 설치되어 있어야 한다." -ForegroundColor Yellow
+}
 if ($Mode -eq 'full') {
     Write-Host "서비스: KISA-TL(:8081), TSP-SIM(:8082), RSSP(:8090), SAM(:8091), HSM(:8092)" -ForegroundColor DarkGray
 }

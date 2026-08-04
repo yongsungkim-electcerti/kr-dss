@@ -1,0 +1,30 @@
+# 태블릿·QR 시연 프로파일 — HTTPS + 호스트명(sol-pc) 기준 WebAuthn
+#
+# 실행:
+#   pwsh scripts\gen-demo-tls.ps1              # 데모 Root CA + 서버 인증서 생성(최초 1회)
+#   ./gradlew :poc:poc-relying-party:bootRun --args='--spring.profiles.active=demo'
+#   브라우저: https://sol-pc:8080
+#
+# ⚠ WebAuthn 은 보안 컨텍스트(HTTPS)에서만 동작하고, rpId 로 IP 주소를 쓸 수 없다.
+#   따라서 태블릿에서도 반드시 호스트명(sol-pc)으로 접속해야 하며,
+#   certs/krdss-demo-root-ca.crt 를 PC·태블릿 양쪽 신뢰 저장소에 설치해야 한다.
+#   상세 절차: docs/design/PoC-실행-검증-가이드.md
+server:
+  port: 8080
+  ssl:
+    enabled: true
+    # 저장소 루트 기준 상대 경로(bootRun 의 workingDir 을 루트로 고정해 둠).
+    # 실행 위치가 다르면 KRDSS_DEMO_KEYSTORE 로 절대 경로를 지정한다.
+    key-store: "${KRDSS_DEMO_KEYSTORE:file:./certs/demo-tls.p12}"
+    key-store-type: PKCS12
+    key-store-password: "changeit"
+    key-alias: "sol-pc"
+
+krdss:
+  rp:
+    mode1:
+      # 접속 호스트와 동일해야 한다. 변경 시 gen-demo-tls.ps1 의 -Hostname 도 함께 변경.
+      rp-id: sol-pc
+      allowed-origins: "https://sol-pc:8080"
+      user-verification-required: false
+      challenge-ttl-seconds: 120

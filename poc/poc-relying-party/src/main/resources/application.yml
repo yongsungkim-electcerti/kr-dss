@@ -33,8 +33,15 @@ krdss:
       pin: "123456"
       totp-secret: "JBSWY3DPEHPK3PXP"
     # 특허-A Mode 1 (WebAuthn 로컬 서명) — SAM/HSM 미경유, RP 내 CA 발급·검증
+    #
+    # ⚠ rp-id / allowed-origins 는 "브라우저가 실제로 접속하는 주소"와 한 세트다.
+    #    rp-id 는 접속 호스트와 같거나 그 상위 도메인이어야 하고(WebAuthn 규칙),
+    #    allowed-origins 는 scheme·host·port 가 모두 일치해야 한다.
+    #    기본값은 로컬 개발용(http://localhost:8080).
+    #    태블릿·QR 시연은 HTTPS 가 필요하므로 demo 프로파일을 사용한다:
+    #      ./gradlew :poc:poc-relying-party:bootRun --args='--spring.profiles.active=demo'
     mode1:
-      rp-id: sol-pc
-      allowed-origins: "https://sol-pc:8080"
+      rp-id: localhost
+      allowed-origins: "http://localhost:8080"
       user-verification-required: false
       challenge-ttl-seconds: 120

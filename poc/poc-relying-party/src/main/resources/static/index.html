@@ -80,6 +80,9 @@
     <span class="badge" id="deviceState">접속 환경 확인 중</span>
   </header>
 
+  <!-- 접속 주소 ↔ 서버 rpId 불일치 등 WebAuthn 사전 조건 경고 -->
+  <div id="envWarn" class="hide" style="margin-bottom:14px"></div>
+
   <div class="tabs">
     <button class="tab active" data-tab="cert">① 인증서 발급</button>
     <button class="tab" data-tab="sign">② 전자서명</button>
@@ -332,6 +335,41 @@ let mode1Container = null;    // 마지막 결속 컨테이너(Base64 DER)
 const MODE1_STORAGE_KEY = 'krdss.mode1.credentials';
 const MODE1_LEGACY_STORAGE_KEY = 'krdss.mode1.credential';
 
+// --- WebAuthn 공통 파라미터 (rpId 단일 출처) ---
+// 등록·서명 모두 서버가 내려주는 rpId 만 사용한다. 등록에서 location.hostname 을 쓰면
+// 접속 주소와 krdss.rp.mode1.rp-id 가 어긋났을 때 "등록은 되고 서명만 실패"한다.
+let webauthnConfig = null;
+
+// rpId 가 현재 호스트와 같거나 그 등록가능 도메인 접미사인지(WebAuthn 규칙).
+function rpIdMatchesHost(rpId, host){
+  return !!rpId && (host === rpId || host.endsWith('.' + rpId));
+}
+
+// WebAuthn 사전 조건 점검 — 막는 사유가 있으면 메시지, 없으면 null.
+function webauthnBlocker(){
+  if(!window.PublicKeyCredential) return '이 브라우저/환경은 WebAuthn 을 지원하지 않습니다.';
+  if(!window.isSecureContext)
+    return `보안 컨텍스트가 아닙니다 (현재 ${location.protocol}//${location.host}). `
+         + 'WebAuthn 은 HTTPS 또는 localhost 에서만 동작합니다.';
+  if(!webauthnConfig) return '서버 WebAuthn 설정(/api/local/webauthn-config)을 불러오지 못했습니다.';
+  if(!rpIdMatchesHost(webauthnConfig.rpId, location.hostname))
+    return `접속 주소(${location.hostname})와 서버 rpId(${webauthnConfig.rpId}) 가 일치하지 않습니다. `
+         + `https://${webauthnConfig.rpId}:${location.port||443} 로 접속하거나, `
+         + `krdss.rp.mode1.rp-id 를 ${location.hostname} 으로 맞추고 패스키를 다시 등록하세요.`;
+  return null;
+}
+
+// 서버 rpId 를 읽어 오고, 사용할 수 없는 상태면 상단 배너로 알린다.
+async function loadWebAuthnConfig(){
+  try{ webauthnConfig = await apiGet('/api/local/webauthn-config'); }
+  catch(e){ webauthnConfig = null; }
+  const msg = webauthnBlocker(), el = $('envWarn');
+  if(!el) return;
+  el.classList.toggle('hide', !msg);
+  if(msg) el.innerHTML = `<div class="result e bad"><b>WebAuthn 사용 불가</b>
+    <div class="small" style="margin-top:6px">${esc(msg)}</div></div>`;
+}
+
 function saveMode1Credential(){
   if(!mode1Cred) return;
   const credentials = loadSavedCredentials().filter(c=>c.credentialId!==mode1Cred.credentialId);
@@ -418,7 +456,8 @@ function onModeToggle(){
 }
 async function registerPasskey(storage){
   try{
-    if(!window.PublicKeyCredential) throw new Error('이 브라우저/환경은 WebAuthn 미지원');
+    const blocked = webauthnBlocker();
+    if(blocked) throw new Error(blocked);
     const qrMode = storage === 'qr';
     if(qrMode){
       alert(detectedDeviceKind === 'tablet'
@@ -431,7 +470,8 @@ async function registerPasskey(storage){
     const challenge = crypto.getRandomValues(new Uint8Array(32));
     const userId = crypto.getRandomValues(new Uint8Array(16));
     const cred = await navigator.credentials.create({publicKey:{
-      challenge, rp:{id:location.hostname,name:'KR-DSS'},
+      // rpId 는 서버 설정 단일 출처 — 서명(get)이 쓰는 값과 반드시 같아야 한다.
+      challenge, rp:{id:webauthnConfig.rpId,name:'KR-DSS'},
       user:{id:userId,name:'Tester',displayName:'전자서명 테스트 사용자'},
       pubKeyCredParams:[{type:'public-key',alg:-7},{type:'public-key',alg:-257}],
       hints:qrMode?['hybrid']:['client-device'],
@@ -536,7 +576,8 @@ async function doSignTotp(){
 async function doSignMode1(text){
   $('signOut').innerHTML = '<div class="small">결속 challenge 발급 중…</div>';
   try{
-    if(!window.PublicKeyCredential) throw new Error('WebAuthn 미지원');
+    const blocked = webauthnBlocker();
+    if(blocked) throw new Error(blocked);
     if(!mode1Cred) throw new Error('먼저 ① 탭에서 Mode 1 패스키를 등록하세요');
     // 1) begin: SignedAttrs(문서·시각·인증서) 결속 → challenge
     const begin = await api('/api/local/sign/begin',{text, credentialId:mode1Cred.credentialId});
@@ -632,11 +673,13 @@ function pbStatusClass(s){ return s==='VALID'?'ok':(s==='REVOKED'?'bad':'ind'); 
 async function pbRegisterMulti(){
   $('pbOut').innerHTML = '<div class="small">WebAuthn 등록 중…</div>';
   try{
-    if(!window.PublicKeyCredential) throw new Error('이 브라우저/환경은 WebAuthn 미지원');
+    const blocked = webauthnBlocker();
+    if(blocked) throw new Error(blocked);
     const challenge = crypto.getRandomValues(new Uint8Array(32));
     const userId = crypto.getRandomValues(new Uint8Array(16));
     const cred = await navigator.credentials.create({publicKey:{
-      challenge, rp:{id:location.hostname,name:'KR-DSS'},
+      // 특허-B: CA 단일 rpId — RA 화면에서도 서버 설정 rpId 를 그대로 쓴다.
+      challenge, rp:{id:webauthnConfig.rpId,name:'KR-DSS'},
       user:{id:userId,name:'multi-ra-signer',displayName:'KR-DSS Signer'},
       pubKeyCredParams:[{type:'public-key',alg:-7},{type:'public-key',alg:-257}],
       authenticatorSelection:{userVerification:'preferred',residentKey:'preferred'},
@@ -727,7 +770,8 @@ async function pbHsmIssue(){
 }
 
 // 새로고침 시 브라우저에 저장한 Credential ID를 서버 등록정보와 대조해 상태를 복원한다.
-restoreMode1Credential();
+// rpId 를 먼저 확보한 뒤 저장된 자격증명을 복원한다(등록·서명 모두 이 값을 쓴다).
+loadWebAuthnConfig().then(restoreMode1Credential);
 </script>
 </body>
 </html>

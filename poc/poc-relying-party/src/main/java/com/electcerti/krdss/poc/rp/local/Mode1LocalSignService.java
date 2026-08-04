@@ -107,6 +107,23 @@ public class Mode1LocalSignService {
                               List<String> allowCredentials, long timeoutMs) {
     }
 
+    /**
+     * 브라우저가 등록·서명에서 공통으로 사용할 WebAuthn 파라미터.
+     *
+     * <p>등록({@code create()})과 서명({@code get()})의 rpId 출처를 서버 설정 하나로 통일하기 위한
+     * 값이다. 과거에는 등록만 브라우저의 {@code location.hostname} 을 사용해, 접속 주소와
+     * {@code krdss.rp.mode1.rp-id} 가 어긋나면 등록은 성공하지만 서명에서
+     * "not a registrable domain suffix" 오류가 발생했다.</p>
+     */
+    public record WebAuthnConfig(String rpId, List<String> allowedOrigins,
+                                 boolean userVerificationRequired) {
+    }
+
+    /** 등록·서명 공통 WebAuthn 파라미터를 노출한다. */
+    public WebAuthnConfig webAuthnConfig() {
+        return new WebAuthnConfig(rpId, allowedOrigins, userVerificationRequired);
+    }
+
     public record FinishResult(String containerB64, VerificationResult report,
                                CertificateDetail signerCertificate) {
     }

@@ -28,3 +28,6 @@ Thumbs.db
 *.local
 local.properties
 /logs/
+
+# 데모 TLS 인증서·개인키 (scripts/gen-demo-tls.ps1 로 로컬 생성)
+/certs/
