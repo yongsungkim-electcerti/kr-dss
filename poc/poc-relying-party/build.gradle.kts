@@ -21,6 +21,12 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
+// demo 프로파일의 TLS 키스토어 경로(./certs/demo-tls.p12)를 저장소 루트 기준으로 해석시킨다.
+// JavaExec 기본 workingDir 은 모듈 디렉터리라, 그대로 두면 poc/poc-relying-party/certs 를 찾는다.
+tasks.named<org.springframework.boot.gradle.tasks.run.BootRun>("bootRun") {
+    workingDir = rootProject.projectDir
+}
+
 // 사업자 설명회 HTML 자료를 PoC 화면의 /presentation 경로에서 바로 제공한다.
 tasks.processResources {
     from(rootProject.file("docs/사업자설명회")) {

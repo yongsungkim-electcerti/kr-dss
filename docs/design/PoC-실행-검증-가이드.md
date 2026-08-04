@@ -1,7 +1,7 @@
 # PoC 실행 · 수동 검증 가이드
 
 > KR-DSS PoC 서비스 일괄 기동/종료와, 검증 수행 중 로그 확인 방법. 특허-A Mode 1(WebAuthn
-> 로컬 서명) 수동 브라우저 E2E 절차 포함. 최종 갱신: 2026-06-28
+> 로컬 서명) 수동 브라우저 E2E 절차 포함. 최종 갱신: 2026-07-31
 
 ---
 
@@ -104,19 +104,60 @@ logging:
 
 ---
 
-## 4. 트러블슈팅
+## 4. 태블릿·QR 시연 (HTTPS / demo 프로파일)
+
+WebAuthn 은 **보안 컨텍스트(HTTPS 또는 localhost)** 에서만 동작하고, **rpId 로 IP 주소를 쓸 수 없다.**
+따라서 태블릿에서 시연하려면 PC 를 **호스트명 기준 HTTPS** 로 서비스해야 한다.
+
+```powershell
+# 1) 데모 Root CA + 서버 인증서 생성 (최초 1회)
+pwsh scripts\gen-demo-tls.ps1 -Hostname sol-pc
+
+# 2) PC 신뢰 저장소에 Root CA 설치 (관리자 PowerShell)
+Import-Certificate -FilePath .\certs\krdss-demo-root-ca.crt -CertStoreLocation Cert:\LocalMachine\Root
+
+# 3) 태블릿에 certs\krdss-demo-root-ca.crt 전송 → "CA 인증서" 로 설치
+#    (Android: 설정 → 보안 → 암호화 및 자격증명 → CA 인증서 설치)
+
+# 4) demo 프로파일로 기동
+pwsh scripts\poc-up.ps1 -Mode mode1 -Demo
+
+# 5) PC·태블릿 모두 https://sol-pc:8080 으로 접속
+```
+
+**반드시 지킬 것**
+
+| 항목 | 규칙 |
+|---|---|
+| 접속 주소 | 항상 `https://sol-pc:8080`. **IP 주소로 접속하면 WebAuthn 이 동작하지 않는다** |
+| 태블릿의 이름 해석 | 태블릿이 `sol-pc` 를 못 찾으면 공유기 DNS 에 호스트명을 등록하거나 hosts 항목을 추가 |
+| rpId ↔ origin ↔ 접속 주소 | `krdss.rp.mode1.rp-id`(=`sol-pc`) · `allowed-origins`(=`https://sol-pc:8080`) · 실제 접속 주소 **3개가 한 세트**. 하나만 바꾸면 서명이 실패한다 |
+| 프로파일 전환 시 | rpId 가 바뀌면 기존 패스키는 사용할 수 없다 → **패스키 재등록 필요** |
+
+기본(프로파일 없음)은 `http://localhost:8080` · `rp-id=localhost` 로 동작하므로,
+로컬 개발은 종전대로 `pwsh scripts\poc-up.ps1 -Mode mode1` 만 하면 된다.
+
+> rpId 는 서버 설정 **단일 출처**다. 화면은 `/api/local/webauthn-config` 로 rpId 를 받아
+> 등록(`create()`)·서명(`get()`) 모두에 같은 값을 쓰고, 접속 주소와 어긋나면 상단에 경고 배너를 띄운다.
+
+---
+
+## 5. 트러블슈팅
 
 | 증상 | 조치 |
 |---|---|
 | `포트 8080 이미 사용 중` | 기존 인스턴스 종료: `pwsh scripts\poc-down.ps1` |
 | `up` 안 뜨고 대기 만료 | `logs\<service>.log`/`<service>.err.log` 확인(포트 충돌·컴파일 오류 등) |
-| 패스키 등록 실패(브라우저) | HTTPS 아닌 `localhost` 는 WebAuthn 허용됨. 다른 호스트면 https 필요 |
+| **`The relying party ID is not a registrable domain suffix of, nor equal to the current domain`** | 접속 주소와 `krdss.rp.mode1.rp-id` 불일치. `localhost` 로 접속했다면 프로파일 없이 기동하고, `sol-pc` 로 시연하려면 위 4장(`-Demo`)을 따른다. **rpId 를 바꾼 뒤에는 패스키 재등록 필요** |
+| 서명 finish 에서 origin 검증 실패 | `krdss.rp.mode1.allowed-origins` 의 scheme·host·port 가 실제 접속 주소와 완전히 같아야 한다 |
+| 패스키 등록 실패(브라우저) | HTTPS 아닌 `localhost` 는 WebAuthn 허용됨. 다른 호스트면 https 필요(4장) |
+| 태블릿에서 인증서 경고 | `krdss-demo-root-ca.crt` 가 태블릿에 CA 인증서로 설치되어 있는지 확인 |
 | 검증 INDETERMINATE(CREDENTIAL_NOT_REGISTERED) | 같은 세션에서 ① 등록 후 ②/③ 진행(레지스트리는 인메모리) |
 | 해시 알고리즘 변경 시연 | `application.yml` `krdss.rp.mode1.hash-suite: SHA_384` 후 재기동 |
 
 ---
 
-## 5. 참고
+## 6. 참고
 - 구현 현황: [특허A-HANDOFF.md](특허A-HANDOFF.md)
 - 설계: [특허A-결속-검증라우터-설계.md](특허A-결속-검증라우터-설계.md)
 - Mode 2(원격서명) 아키텍처: [docs/remote-signature.md](../remote-signature.md)
