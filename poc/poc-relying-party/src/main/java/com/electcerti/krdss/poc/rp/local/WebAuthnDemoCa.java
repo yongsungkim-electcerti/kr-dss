@@ -42,7 +42,7 @@ public class WebAuthnDemoCa {
     @Autowired
     public WebAuthnDemoCa(
             @Value("${krdss.ca.keystore:}") String keystore,
-            @Value("${krdss.ca.keystore-password:changeit}") String password,
+            @Value("${krdss.ca.keystore-password:111111}") String password,
             @Value("${krdss.ca.key-alias:joint-ca}") String alias,
             @Value("${krdss.ca.rp-id:localhost}") String rpId) {
         if (keystore == null || keystore.isBlank()) {

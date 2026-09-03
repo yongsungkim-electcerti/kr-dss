@@ -32,7 +32,7 @@ public class TspPkiConfig {
     @Bean
     LoadedCa loadedCa(
             @Value("${krdss.ca.keystore:classpath:pki/joint-ca.p12}") String keystore,
-            @Value("${krdss.ca.keystore-password:changeit}") String password,
+            @Value("${krdss.ca.keystore-password:111111}") String password,
             @Value("${krdss.ca.key-alias:joint-ca}") String alias,
             @Value("${krdss.ca.rp-id:tsp.kr-dss.example}") String rpId,
             @Value("${krdss.ocsp.url:http://localhost:8082/ocsp}") String ocspUrl) {

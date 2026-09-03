@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: poc-relying-party
+  servlet:
+    multipart:
+      # /local-sign.html 이 PDF·인증서·트러스트스토어·KR-TL 을 한 번에 올린다.
+      # 기본값(1MB)이면 일반적인 PDF 조차 413 으로 막힌다.
+      max-file-size: 25MB
+      max-request-size: 60MB
 logging:
   level:
     # 특허-A Mode 1 검증 흐름 로그. 단계별 check 까지 보려면 DEBUG 로 변경.
@@ -15,7 +21,7 @@ krdss:
   # 비우면 자가서명 데모 CA 로 동작. (데모용 키스토어 — 운영 키는 별도 보관·교체)
   ca:
     keystore: "classpath:pki/joint-ca.p12"
-    keystore-password: "changeit"
+    keystore-password: "111111"
     key-alias: "joint-ca"
     rp-id: "sol-pc"
   rp:

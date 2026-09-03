@@ -17,7 +17,7 @@ server:
     # 실행 위치가 다르면 KRDSS_DEMO_KEYSTORE 로 절대 경로를 지정한다.
     key-store: "${KRDSS_DEMO_KEYSTORE:file:./certs/demo-tls.p12}"
     key-store-type: PKCS12
-    key-store-password: "changeit"
+    key-store-password: "111111"
     key-alias: "sol-pc"
 
 krdss:
