@@ -16,6 +16,19 @@ dependencies {
     implementation(project(":kr-dss-sdk:kr-dss-pki"))
     // 특허-C: 통합 신뢰목록(A/B/C 연계 — 검증 라우터에 신뢰목록 평가 주입).
     implementation(project(":kr-dss-sdk:kr-dss-trust"))
+    // Whale PoC(PDF Baseline): /local-sign.html 의 PAdES-BASELINE-B 서명·검증.
+    //   kr-ades-pades 는 프로파일 어댑터(지원 조합 판정)를, dss-pades-pdfbox 는 실제 PDF 서명 구현을,
+    //   dss-validation 은 서명 검증기·리포트를 제공한다. 어댑터의 implementation 의존성은
+    //   소비 모듈로 전이되지 않으므로 DSS 를 직접 선언한다.
+    implementation(project(":kr-ades:kr-ades-pades"))
+    implementation(project(":kr-tl:kr-tl-model"))
+    // KR-TL 생성·전자서명(JWS) 및 배포본 서명 검증.
+    implementation(project(":kr-tl:kr-tl-builder"))
+    implementation(libs.dss.pades)
+    // KR-TL XML(TS 119 612) 에 XAdES enveloped 서명을 붙이고 같은 DSS 경로로 검증한다.
+    implementation(project(":kr-ades:kr-ades-xades"))
+    implementation(libs.dss.xades)
+    implementation(libs.dss.validation)
     implementation(libs.bc.prov)
     implementation(libs.bc.pkix)
     testImplementation("org.springframework.boot:spring-boot-starter-test")

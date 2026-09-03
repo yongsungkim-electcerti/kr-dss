@@ -31,3 +31,16 @@ local.properties
 
 # 데모 TLS 인증서·개인키 (scripts/gen-demo-tls.ps1 로 로컬 생성)
 /certs/
+
+# Whale PoC 빌드 산출물 (scripts/whale-startup.ps1 / ./gradlew whalePackage 로 생성)
+# output/certs 는 데모 인증서라 추적 대상으로 유지한다.
+/output/libs/
+/output/poc/
+
+# 인증체인 재생성(scripts/gen-certs.ps1) 시 만들어지는 이전 자료 백업.
+# 원본은 git 이력에 남아 있으므로 백업 디렉터리는 추적하지 않는다.
+/output/certs.bak-*/
+
+# 배포본(release/) — 실행 jar 약 84MB 를 포함하는 빌드 산출물이라 추적하지 않는다.
+# 재생성: ./gradlew whalePackage 후 output/ 을 release/<날짜>-whale-poc/ 로 복사.
+/release/

@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   태블릿·QR 시연용 HTTPS 인증서를 생성한다 (데모 Root CA → 서버 인증서).
 
@@ -21,7 +21,7 @@
 [CmdletBinding()]
 param(
     [string]$Hostname = 'sol-pc',
-    [string]$StorePassword = 'changeit',
+    [string]$StorePassword = '111111',
     [switch]$Force
 )
 

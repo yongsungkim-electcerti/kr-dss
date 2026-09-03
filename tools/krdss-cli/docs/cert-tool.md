@@ -183,13 +183,13 @@ krdss cert
 ### 예시
 
 ```bash
-# 사용자 인증서 + (중간CA+루트) 체인을 비밀번호 1234 키스토어로
+# 사용자 인증서 + (중간CA+루트) 체인을 비밀번호 111111 키스토어로
 ./gradlew :tools:krdss-cli:run --args="cert p12 \
   --cert build/pki/ee.crt --key build/pki/ee.key --chain build/pki/ca-chain.pem \
-  --out build/pki/ee.p12 --alias user --password 1234"
+  --out build/pki/ee.p12 --alias user --password 111111"
 
 # 검증
-keytool -list -keystore build/pki/ee.p12 -storetype PKCS12 -storepass 1234
+keytool -list -keystore build/pki/ee.p12 -storetype PKCS12 -storepass 111111
 ```
 
 저장 키스토어에는 `[leaf, 중간CA…, 루트CA]` 순서로 인증서 체인이 함께 들어간다.
@@ -212,7 +212,7 @@ New-KISA RootCA(자가서명)가 공동인증CA(SUB)를 발급하고, 이를 `.p
   --cert build/pki-ca/joint-ca.crt --key build/pki-ca/joint-ca.key \
   --chain build/pki-ca/new-kisa-root.crt \
   --out poc/poc-relying-party/src/main/resources/pki/joint-ca.p12 \
-  --alias joint-ca --password changeit"
+  --alias joint-ca --password 111111"
 
 # 3) 검증: EE ← 공동인증CA ← New-KISA RootCA
 openssl verify -CAfile build/pki-ca/new-kisa-root.crt -untrusted build/pki-ca/joint-ca.crt build/pki-ca/sample-ee.crt
@@ -221,7 +221,7 @@ openssl verify -CAfile build/pki-ca/new-kisa-root.crt -untrusted build/pki-ca/jo
 CA 서버는 `application.yml` 의 `krdss.ca.keystore: classpath:pki/joint-ca.p12` 로 이 키스토어를 로드하여,
 발급하는 최종개체 인증서의 발급기관을 **공동인증CA** 로 설정한다(자가서명 대신).
 
-> ⚠️ `joint-ca.p12` 는 **데모용 테스트 키스토어**(비밀번호 `changeit`)다. 운영 키는 리포지터리에 두지 말고
+> ⚠️ `joint-ca.p12` 는 **데모용 테스트 키스토어**(비밀번호 `111111`)다. 운영 키는 리포지터리에 두지 말고
 > HSM/KMS 등 별도 보관소에서 주입하고 비밀번호를 환경변수로 분리한다.
 
 ---

@@ -13,7 +13,7 @@ krdss:
   # 비우면 tsp-sim 자체 자가서명 데모 CA 로 동작. (데모용 키스토어 — 운영 키는 별도 보관·교체)
   ca:
     keystore: "classpath:pki/joint-ca.p12"
-    keystore-password: "changeit"
+    keystore-password: "111111"
     key-alias: "joint-ca"
     rp-id: "tsp.kr-dss.example"
   # 발급 인증서 AIA 에 삽입되고 OCSP 응답부가 서비스되는 위치. 외부 접근 시 실제 호스트로 교체.
