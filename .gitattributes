@@ -14,6 +14,9 @@ gradlew text eol=lf
 *.png   binary
 *.jpg   binary
 *.hwp   binary
+# 키스토어 — 줄바꿈 정규화가 닿으면 파일이 깨진다(현재는 NUL 바이트 덕에 자동 판별되지만 명시한다)
+*.p12   binary
+*.pfx   binary
 
 # 대용량 문서는 Git LFS 로 보관 (docs/project 제안서·발표자료 등)
 # 클론·체크아웃 전에 `git lfs install` 이 필요하다. 미설치 상태에서는
