@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<title>13 역할 분담 — 웨일 / KISA 초안</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width:1280px; height:720px; font-family:'Noto Sans KR',sans-serif;
+       background:#FFFFFF; overflow:hidden; -webkit-font-smoothing:antialiased; }
+.slide { width:1280px; height:720px; display:flex; flex-direction:column; }
+
+.header { background:#1A1A2E; height:58px; flex-shrink:0; display:flex;
+          align-items:center; justify-content:space-between; padding:0 48px; }
+.header .t { font-size:21px; font-weight:700; color:#FFFFFF; letter-spacing:-0.01em; }
+.header .b { font-size:12px; color:#7BA7D4; letter-spacing:0.04em; }
+
+.gov { flex-shrink:0; height:64px; background:#F6F8FC; border-bottom:1px solid #EDF2F7;
+       padding:0 48px 0 44px; border-left:4px solid #5B9BD5;
+       display:flex; align-items:center; }
+.gov p { font-size:15.5px; font-weight:700; color:#1A1A2E; line-height:1.5; }
+
+.body { flex:1; padding:20px 48px 14px; overflow:hidden; display:flex;
+        flex-direction:column; gap:13px; min-height:0; }
+.body.mid { justify-content:center; }
+
+.ask { flex-shrink:0; margin:0 48px 9px; background:#FFFFFF;
+       border:1px solid #DCE4F0; border-left:3px solid #A0AEC0;
+       padding:9px 15px; display:flex; gap:13px; align-items:flex-start; }
+.ask .lb { font-size:10px; font-weight:700; color:#718096; letter-spacing:0.08em;
+           white-space:nowrap; padding-top:1px; }
+.ask .tx { font-size:12px; color:#4A5568; line-height:1.55; }
+
+.footer { height:30px; flex-shrink:0; border-top:1px solid #EDF2F7;
+          padding:0 48px; display:flex; align-items:center; justify-content:space-between; }
+.footer span { font-size:10.5px; color:#A0AEC0; }
+
+/* components */
+.row { display:flex; gap:16px; }
+.row > * { min-width:0; }
+.row.fill { flex:1; min-height:0; }
+.col { flex:1; display:flex; flex-direction:column; gap:9px; min-height:0; }
+.cap { font-size:11.5px; font-weight:700; color:#5B9BD5; letter-spacing:0.05em; flex-shrink:0; }
+.cap.mute { color:#A0AEC0; }
+.cap.warn { color:#B7791F; }
+.sub { font-size:11px; color:#718096; line-height:1.6; }
+
+table { width:100%; border-collapse:collapse; }
+th { background:#1A1A2E; color:#BDD5EA; font-size:12px; font-weight:700;
+     text-align:left; padding:8px 13px; letter-spacing:0.02em; }
+td { font-size:12.5px; color:#2D3748; padding:8px 13px;
+     border-bottom:1px solid #EDF2F7; line-height:1.5; vertical-align:middle; }
+tr:last-child td { border-bottom:none; }
+.t-lite th { background:#EDF2F7; color:#4A5568; }
+.t-cmp th { font-size:11px; padding:6px 11px; }
+.t-cmp td { font-size:11.5px; padding:6px 11px; }
+td.k { font-weight:700; color:#1A1A2E; white-space:nowrap; }
+td.m { color:#718096; }
+.tw { flex:1; min-height:0; display:flex; }
+.tw table { height:100%; }
+
+.tag { display:inline-block; font-size:9px; font-weight:700; padding:2px 6px;
+       letter-spacing:0.04em; vertical-align:1px; }
+.tag.spec { background:#EBF4FF; color:#1A4A7A; }
+.tag.inst { background:#F0F0F5; color:#5A5A70; }
+.tag.warn { background:#FFFDE7; color:#7B341E; }
+
+.card { border:1px solid #DCE4F0; display:flex; flex-direction:column; }
+.card > .h { background:#1A1A2E; color:#7BA7D4; font-size:11px; font-weight:700;
+             padding:7px 14px; letter-spacing:0.05em; flex-shrink:0; }
+.card > .c { padding:12px 14px; font-size:12.5px; color:#2D3748; line-height:1.65; flex:1; }
+.card.on { border-color:#5B9BD5; }
+.card.on > .h { background:#5B9BD5; color:#FFFFFF; }
+.card.mute > .h { background:#EDF2F7; color:#718096; }
+.card.fillc { flex:1; min-height:0; }
+
+.note { background:#F6F8FC; border:1px solid #E2E8F0; padding:10px 14px;
+        font-size:12px; color:#4A5568; line-height:1.6; }
+.fix { background:#FFFFFF; border:1px solid #DCE4F0; border-left:3px solid #1A1A2E;
+       padding:12px 15px; font-size:13.5px; font-weight:700; color:#1A1A2E; line-height:1.5;
+       letter-spacing:-0.005em; }
+.fix.acc { border-left-color:#5B9BD5; }
+.fix.warn { border-left-color:#B7791F; color:#7B341E; }
+
+ol.steps { list-style:none; counter-reset:s; }
+ol.steps li { counter-increment:s; position:relative; padding:7px 0 7px 30px;
+              font-size:12.5px; color:#2D3748; line-height:1.5;
+              border-bottom:1px solid #F1F5F9; }
+ol.steps li:last-child { border-bottom:none; }
+ol.steps li::before { content:counter(s); position:absolute; left:0; top:7px;
+              width:20px; height:20px; border-radius:50%; background:#EDF2F7;
+              color:#4A5568; font-size:10.5px; font-weight:700; text-align:center;
+              line-height:20px; }
+
+ul.plain { list-style:none; }
+ul.plain li { position:relative; padding:6px 0 6px 15px; font-size:12.5px;
+              color:#2D3748; line-height:1.55; }
+ul.plain li::before { content:''; position:absolute; left:0; top:13px; width:5px;
+              height:5px; background:#5B9BD5; }
+
+/* 캡처 자리표시 */
+.shot { position:relative; border:1px dashed #C3CFE0; background:#FAFBFD;
+        flex:1; min-height:0; display:flex; align-items:center; justify-content:center; }
+.shot .ph { font-size:11.5px; color:#A0AEC0; line-height:1.9; text-align:center; padding:14px; }
+.shot .ph b { display:block; color:#718096; font-size:12px; margin:7px 0 3px;
+              font-family:ui-monospace,Menlo,Consolas,monospace; }
+.shot img { position:absolute; top:0; left:0; width:100%; height:100%;
+            object-fit:contain; background:#FFFFFF; }
+
+/* 흐름 바 */
+.flow { display:flex; align-items:stretch; gap:0; flex-shrink:0; }
+.flow .st { flex:1; border:1px solid #DCE4F0; padding:9px 10px; position:relative;
+            display:flex; flex-direction:column; justify-content:center; }
+.flow .st + .st { margin-left:8px; }
+.flow .st::after { content:'\203A'; position:absolute; right:-8px; top:50%;
+                   transform:translate(50%,-50%); color:#CBD5E0; font-size:16px; z-index:2; }
+.flow .st:last-child::after { display:none; }
+.flow .n { font-size:9.5px; font-weight:700; color:#A0AEC0; }
+.flow .x { font-size:11.5px; font-weight:700; color:#2D3748; margin-top:3px; line-height:1.4; }
+.flow .z { font-size:9px; color:#A0AEC0; margin-top:6px; letter-spacing:0.04em; }
+.flow .st.on { border-color:#5B9BD5; background:#EBF4FF; }
+.flow .st.on .n { color:#5B9BD5; }
+.flow .st.on .x { color:#1A4A7A; }
+.flow .st.on .z { color:#5B9BD5; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header">
+    <span class="t">역할 분담 — 웨일 / KISA <span style="font-weight:400;color:#7BA7D4;font-size:15px;">초안</span></span>
+    <span class="b">협업 › 역할 분담</span>
+  </div>
+  <div class="gov"><p>웨일은 브라우저에서 보이고 저장되는 부분을 맡고, KISA는 목록과 기준정보를 맡는다.</p></div>
+  <div class="body">
+    <div class="tw">
+    <table>
+      <thead><tr>
+        <th style="width:50%;background:#5B9BD5;color:#FFFFFF;">웨일</th>
+        <th>KISA</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>내장 PDF 뷰어의 서명 탐지·검증 트리거</td><td class="m">KR-TL 발행·서명·배포</td></tr>
+        <tr><td>검증 결과 표시와 상세 근거 화면</td><td class="m">목록 서명용 신뢰앵커 제공</td></tr>
+        <tr><td>설정 화면 — 배포 주소·갱신 주기·동기화 이력</td><td class="m">배포 주소 운영과 가용성</td></tr>
+        <tr><td>목록 동기화 실행과 캐시 저장·만료 관리</td><td class="m">인정사업자 기준정보 관리</td></tr>
+        <tr><td>보고서 저장·출력</td><td class="m">실증 정책과 예외 기준</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="fix acc">웨일 : 상태 표시, 상태 결과, 보안 설정</div>
+  </div>
+  <div class="footer">
+    <span>KR-TL 국내 전자서명 신뢰목록 개요</span>
+    <span>㈜일렉서티 &nbsp;&nbsp; 13 / 13</span>
+  </div>
+</div>
+</body>
+</html>

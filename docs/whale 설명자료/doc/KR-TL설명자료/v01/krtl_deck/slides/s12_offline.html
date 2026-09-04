@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<title>12 오프라인·장애 시 동작</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width:1280px; height:720px; font-family:'Noto Sans KR',sans-serif;
+       background:#FFFFFF; overflow:hidden; -webkit-font-smoothing:antialiased; }
+.slide { width:1280px; height:720px; display:flex; flex-direction:column; }
+
+/* Z1 HEADER */
+.header { background:#1A1A2E; height:58px; flex-shrink:0; display:flex;
+          align-items:center; justify-content:space-between; padding:0 48px; }
+.header .t { font-size:21px; font-weight:700; color:#FFFFFF; letter-spacing:-0.01em; }
+.header .b { font-size:12px; color:#7BA7D4; letter-spacing:0.04em; }
+
+/* Z2 GOVERNING */
+.gov { flex-shrink:0; background:#F6F8FC; border-bottom:1px solid #EDF2F7;
+       padding:15px 48px 15px 44px; border-left:4px solid #5B9BD5; }
+.gov p { font-size:16px; font-weight:700; color:#1A1A2E; line-height:1.55; }
+
+/* Z3 BODY */
+.body { flex:1; padding:24px 48px 16px; overflow:hidden; display:flex;
+        flex-direction:column; gap:16px; min-height:0; }
+
+/* Z4 ASK */
+.ask { flex-shrink:0; margin:0 48px 10px; background:#FFFFFF;
+       border:1px solid #DCE4F0; border-left:3px solid #A0AEC0;
+       padding:10px 15px; display:flex; gap:13px; align-items:flex-start; }
+.ask .lb { font-size:10px; font-weight:700; color:#718096; letter-spacing:0.08em;
+           white-space:nowrap; padding-top:1px; }
+.ask .tx { font-size:12.5px; color:#4A5568; line-height:1.55; }
+
+/* Z5 FOOTER */
+.footer { height:30px; flex-shrink:0; border-top:1px solid #EDF2F7;
+          padding:0 48px; display:flex; align-items:center; justify-content:space-between; }
+.footer span { font-size:10.5px; color:#A0AEC0; }
+
+/* ---- components ---- */
+.row { display:flex; gap:18px; }
+.row > * { min-width:0; }
+.col { flex:1; display:flex; flex-direction:column; gap:9px; min-height:0; }
+.cap { font-size:11.5px; font-weight:700; color:#5B9BD5; letter-spacing:0.06em; }
+.cap.mute { color:#A0AEC0; }
+.sub { font-size:11.5px; color:#718096; line-height:1.6; }
+
+table { width:100%; border-collapse:collapse; }
+th { background:#1A1A2E; color:#BDD5EA; font-size:12.5px; font-weight:700;
+     text-align:left; padding:10px 14px; letter-spacing:0.02em; }
+td { font-size:13px; color:#2D3748; padding:10px 14px;
+     border-bottom:1px solid #EDF2F7; line-height:1.5; vertical-align:middle; }
+tr:last-child td { border-bottom:none; }
+
+/* 표가 본문 영역을 채우게 하는 래퍼 */
+.tw { flex:1; min-height:0; display:flex; }
+.tw table { height:100%; }
+.row.fill { flex:1; min-height:0; }
+.row.fill .fix { flex:1; display:flex; align-items:center; }
+.body.mid { justify-content:center; }
+.t-lite th { background:#EDF2F7; color:#4A5568; }
+td.k { font-weight:700; color:#1A1A2E; white-space:nowrap; }
+td.m { color:#718096; }
+.tag { display:inline-block; font-size:9px; font-weight:700; padding:2px 6px;
+       border-radius:2px; letter-spacing:0.04em; }
+.tag.spec { background:#EBF4FF; color:#1A4A7A; }
+.tag.inst { background:#F0F0F5; color:#5A5A70; }
+
+.card { border:1px solid #DCE4F0; }
+.card { display:flex; flex-direction:column; }
+.card > .h { background:#1A1A2E; color:#7BA7D4; font-size:11px; font-weight:700;
+             padding:8px 15px; letter-spacing:0.06em; flex-shrink:0; }
+.card > .c { padding:14px 15px; font-size:13px; color:#2D3748; line-height:1.7; flex:1; }
+.card.on { border-color:#5B9BD5; }
+.card.on > .h { background:#5B9BD5; color:#FFFFFF; }
+.card.fillc { flex:1; min-height:0; }
+
+.note { background:#F6F8FC; border:1px solid #E2E8F0; padding:12px 15px;
+        font-size:12.5px; color:#4A5568; line-height:1.65; }
+.fix { background:#FFFFFF; border:1px solid #DCE4F0;
+       border-left:3px solid #1A1A2E; padding:12px 15px; font-size:13px;
+       font-weight:700; color:#1A1A2E; line-height:1.55; }
+
+ol.steps { list-style:none; counter-reset:s; }
+ol.steps li { counter-increment:s; position:relative; padding:9px 0 9px 32px;
+              font-size:13px; color:#2D3748; line-height:1.5;
+              border-bottom:1px solid #F1F5F9; }
+ol.steps li:last-child { border-bottom:none; }
+ol.steps li::before { content:counter(s); position:absolute; left:0; top:9px;
+              width:21px; height:21px; border-radius:50%; background:#EDF2F7;
+              color:#4A5568; font-size:11px; font-weight:700; text-align:center;
+              line-height:21px; }
+
+ul.plain { list-style:none; }
+ul.plain li { position:relative; padding:7px 0 7px 15px; font-size:13px;
+              color:#2D3748; line-height:1.6; }
+ul.plain li::before { content:''; position:absolute; left:0; top:15px; width:5px;
+              height:5px; background:#5B9BD5; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header">
+    <span class="t">오프라인·장애 시 동작</span>
+    <span class="b">연동 › 예외 처리</span>
+  </div>
+  <div class="gov"><p>네트워크가 없어도 문서 열람은 멈추지 않되, 만료된 캐시로 정상 판정을 내리지 않는다. 이 두 문장이 오프라인 정책의 뼈대다.</p></div>
+  <div class="body mid">
+    
+<style>
+.br { display:flex; align-items:center; gap:14px; }
+.br .k { border:1px solid #DCE4F0; padding:10px 14px; font-size:11.5px; font-weight:700;
+         color:#1A1A2E; white-space:nowrap; }
+.br .arm { flex:1; display:flex; flex-direction:column; gap:9px; }
+.br .ln { display:flex; align-items:center; gap:10px; }
+.br .tagx { font-size:10px; font-weight:700; padding:3px 9px; white-space:nowrap; }
+.br .ok { background:#EBF4FF; color:#1A4A7A; }
+.br .no { background:#F0F0F5; color:#5A5A70; }
+.br .bx { flex:1; border:1px solid #DCE4F0; padding:8px 12px; font-size:11.5px; color:#2D3748; }
+.br .bx b { color:#1A1A2E; }
+.br .ar { color:#CBD5E0; font-size:15px; }
+</style>
+<div class="br">
+  <div class="k">동기화 시도</div>
+  <div class="ar">›</div>
+  <div class="arm">
+    <div class="ln"><span class="tagx ok">성공</span><div class="bx">목록 갱신 &nbsp;›&nbsp; <b>온라인 검증</b></div></div>
+    <div class="ln"><span class="tagx no">실패 · 유효 캐시 있음</span><div class="bx">제한 검증 &nbsp;›&nbsp; <b>"확인 불가 / 재검증 필요" 표시</b></div></div>
+    <div class="ln"><span class="tagx no">실패 · 캐시 없음</span><div class="bx">신뢰 판정 보류 &nbsp;›&nbsp; <b>PDF 열람은 유지</b></div></div>
+  </div>
+</div>
+
+    <div class="cap">고정 원칙 &nbsp;<span class="tag inst" style="background:#F0F0F5;">조정 대상 아님</span></div>
+    <div class="row">
+      <div class="col"><div class="fix">어떤 경우에도 PDF 열람 자체는 차단하지 않는다.</div></div>
+      <div class="col"><div class="fix">캐시는 서명·발행시각·유효기간을 재검증한 뒤 사용하고, 만료·손상 캐시는 폐기한다.</div></div>
+      <div class="col"><div class="fix">제한 검증 결과에는 캐시 기준시각과 재검증 필요 여부를 함께 기록한다.</div></div>
+    </div>
+  </div>
+
+  <div class="ask">
+    <span class="lb">열어 둘 질문</span>
+    <span class="tx">온라인 복귀 시 재검증을 자동으로 실행할지, 사용자가 요청할 때만 실행할지 판단이 필요합니다. 자동은 편하지만 사용자가 보고 있던 결과가 예고 없이 바뀝니다.</span>
+  </div>
+  <div class="footer">
+    <span>KR-TL 국내 전자서명 신뢰목록 개요</span>
+    <span>㈜일렉서티 &nbsp;&nbsp; 12 / 15</span>
+  </div>
+</div>
+</body>
+</html>

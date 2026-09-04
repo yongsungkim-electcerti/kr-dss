@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<title>10 검증 흐름에서 KR-TL이 개입하는 지점</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width:1280px; height:720px; font-family:'Noto Sans KR',sans-serif;
+       background:#FFFFFF; overflow:hidden; -webkit-font-smoothing:antialiased; }
+.slide { width:1280px; height:720px; display:flex; flex-direction:column; }
+
+/* Z1 HEADER */
+.header { background:#1A1A2E; height:58px; flex-shrink:0; display:flex;
+          align-items:center; justify-content:space-between; padding:0 48px; }
+.header .t { font-size:21px; font-weight:700; color:#FFFFFF; letter-spacing:-0.01em; }
+.header .b { font-size:12px; color:#7BA7D4; letter-spacing:0.04em; }
+
+/* Z2 GOVERNING */
+.gov { flex-shrink:0; background:#F6F8FC; border-bottom:1px solid #EDF2F7;
+       padding:15px 48px 15px 44px; border-left:4px solid #5B9BD5; }
+.gov p { font-size:16px; font-weight:700; color:#1A1A2E; line-height:1.55; }
+
+/* Z3 BODY */
+.body { flex:1; padding:24px 48px 16px; overflow:hidden; display:flex;
+        flex-direction:column; gap:16px; min-height:0; }
+
+/* Z4 ASK */
+.ask { flex-shrink:0; margin:0 48px 10px; background:#FFFFFF;
+       border:1px solid #DCE4F0; border-left:3px solid #A0AEC0;
+       padding:10px 15px; display:flex; gap:13px; align-items:flex-start; }
+.ask .lb { font-size:10px; font-weight:700; color:#718096; letter-spacing:0.08em;
+           white-space:nowrap; padding-top:1px; }
+.ask .tx { font-size:12.5px; color:#4A5568; line-height:1.55; }
+
+/* Z5 FOOTER */
+.footer { height:30px; flex-shrink:0; border-top:1px solid #EDF2F7;
+          padding:0 48px; display:flex; align-items:center; justify-content:space-between; }
+.footer span { font-size:10.5px; color:#A0AEC0; }
+
+/* ---- components ---- */
+.row { display:flex; gap:18px; }
+.row > * { min-width:0; }
+.col { flex:1; display:flex; flex-direction:column; gap:9px; min-height:0; }
+.cap { font-size:11.5px; font-weight:700; color:#5B9BD5; letter-spacing:0.06em; }
+.cap.mute { color:#A0AEC0; }
+.sub { font-size:11.5px; color:#718096; line-height:1.6; }
+
+table { width:100%; border-collapse:collapse; }
+th { background:#1A1A2E; color:#BDD5EA; font-size:12.5px; font-weight:700;
+     text-align:left; padding:10px 14px; letter-spacing:0.02em; }
+td { font-size:13px; color:#2D3748; padding:10px 14px;
+     border-bottom:1px solid #EDF2F7; line-height:1.5; vertical-align:middle; }
+tr:last-child td { border-bottom:none; }
+
+/* 표가 본문 영역을 채우게 하는 래퍼 */
+.tw { flex:1; min-height:0; display:flex; }
+.tw table { height:100%; }
+.row.fill { flex:1; min-height:0; }
+.row.fill .fix { flex:1; display:flex; align-items:center; }
+.body.mid { justify-content:center; }
+.t-lite th { background:#EDF2F7; color:#4A5568; }
+td.k { font-weight:700; color:#1A1A2E; white-space:nowrap; }
+td.m { color:#718096; }
+.tag { display:inline-block; font-size:9px; font-weight:700; padding:2px 6px;
+       border-radius:2px; letter-spacing:0.04em; }
+.tag.spec { background:#EBF4FF; color:#1A4A7A; }
+.tag.inst { background:#F0F0F5; color:#5A5A70; }
+
+.card { border:1px solid #DCE4F0; }
+.card { display:flex; flex-direction:column; }
+.card > .h { background:#1A1A2E; color:#7BA7D4; font-size:11px; font-weight:700;
+             padding:8px 15px; letter-spacing:0.06em; flex-shrink:0; }
+.card > .c { padding:14px 15px; font-size:13px; color:#2D3748; line-height:1.7; flex:1; }
+.card.on { border-color:#5B9BD5; }
+.card.on > .h { background:#5B9BD5; color:#FFFFFF; }
+.card.fillc { flex:1; min-height:0; }
+
+.note { background:#F6F8FC; border:1px solid #E2E8F0; padding:12px 15px;
+        font-size:12.5px; color:#4A5568; line-height:1.65; }
+.fix { background:#FFFFFF; border:1px solid #DCE4F0;
+       border-left:3px solid #1A1A2E; padding:12px 15px; font-size:13px;
+       font-weight:700; color:#1A1A2E; line-height:1.55; }
+
+ol.steps { list-style:none; counter-reset:s; }
+ol.steps li { counter-increment:s; position:relative; padding:9px 0 9px 32px;
+              font-size:13px; color:#2D3748; line-height:1.5;
+              border-bottom:1px solid #F1F5F9; }
+ol.steps li:last-child { border-bottom:none; }
+ol.steps li::before { content:counter(s); position:absolute; left:0; top:9px;
+              width:21px; height:21px; border-radius:50%; background:#EDF2F7;
+              color:#4A5568; font-size:11px; font-weight:700; text-align:center;
+              line-height:21px; }
+
+ul.plain { list-style:none; }
+ul.plain li { position:relative; padding:7px 0 7px 15px; font-size:13px;
+              color:#2D3748; line-height:1.6; }
+ul.plain li::before { content:''; position:absolute; left:0; top:15px; width:5px;
+              height:5px; background:#5B9BD5; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header">
+    <span class="t">검증 흐름에서 KR-TL이 개입하는 지점</span>
+    <span class="b">연동 › 검증 흐름</span>
+  </div>
+  <div class="gov"><p>KR-TL 조회는 검증의 전부가 아니라 네 번째 단계다. 앞 단계가 실패하면 조회까지 가지 않고, 조회 결과는 뒤 단계 결과를 대체하지 않는다.</p></div>
+  <div class="body mid">
+    
+<style>
+.flow { display:flex; align-items:stretch; gap:0; margin:2px 0; }
+.flow .st { flex:1; border:1px solid #DCE4F0; padding:12px 11px; position:relative;
+            display:flex; flex-direction:column; justify-content:center; }
+.flow .st + .st { margin-left:9px; }
+.flow .st::after { content:'›'; position:absolute; right:-9px; top:50%;
+                   transform:translate(50%,-50%); color:#CBD5E0; font-size:17px; z-index:2; }
+.flow .st:last-child::after { display:none; }
+.flow .n { font-size:10px; font-weight:700; color:#A0AEC0; }
+.flow .x { font-size:11.5px; font-weight:700; color:#2D3748; margin-top:4px; line-height:1.45; }
+.flow .z { font-size:9.5px; color:#A0AEC0; margin-top:9px; letter-spacing:0.04em; }
+.flow .st.on { border-color:#5B9BD5; border-width:2px; background:#EBF4FF; }
+.flow .st.on .n { color:#5B9BD5; }
+.flow .st.on .x { color:#1A4A7A; }
+.flow .st.on .z { color:#5B9BD5; font-weight:700; }
+</style>
+<div class="flow">
+  <div class="st"><div class="n">①</div><div class="x">서명 존재 확인</div><div class="z">로컬</div></div>
+  <div class="st"><div class="n">②</div><div class="x">서명 구조 · ByteRange<br>문서 무결성</div><div class="z">로컬</div></div>
+  <div class="st"><div class="n">③</div><div class="x">서명값 검증<br>인증서 경로 구성</div><div class="z">로컬</div></div>
+  <div class="st on"><div class="n">④</div><div class="x">KR-TL 대조<br>등록 여부 · 상태 · 기준시각</div><div class="z">목록 참조</div></div>
+  <div class="st"><div class="n">⑤</div><div class="x">인증서 상태 확인<br>CRL / OCSP</div><div class="z">외부 통신</div></div>
+  <div class="st"><div class="n">⑥</div><div class="x">결과 산출</div><div class="z">&nbsp;</div></div>
+</div>
+
+    <div class="row">
+      <div class="col">
+        <div class="card on">
+          <div class="h">④에서 하는 일</div>
+          <div class="c">서명자 인증서의 발급자·서비스 식별정보를 적용 중인 KR-TL과 대조한다. 결과는
+            <b>등록됨 / 미등록 / 서비스 철회 / 목록 만료 / 목록 접근 불가 / 목록 서명 오류</b>로 구분한다.</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="h" style="background:#EDF2F7;color:#718096;">④에서 하지 않는 일</div>
+          <div class="c" style="color:#718096;">문서 변조 판정, 서명값 유효성 판정, 폐지 여부 판정.
+            이 셋은 각각 <b style="color:#4A5568;">② ③ ⑤</b>의 결과다.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ask">
+    <span class="lb">열어 둘 질문</span>
+    <span class="tx">④와 ⑤는 외부 참조가 필요하고 ①~③은 로컬에서 끝납니다. 로컬 결과를 먼저 표시하고 나머지를 나중에 채우는 방식이 웨일 렌더링 구조에서 자연스러운지 판단이 필요합니다.</span>
+  </div>
+  <div class="footer">
+    <span>KR-TL 국내 전자서명 신뢰목록 개요</span>
+    <span>㈜일렉서티 &nbsp;&nbsp; 10 / 15</span>
+  </div>
+</div>
+</body>
+</html>

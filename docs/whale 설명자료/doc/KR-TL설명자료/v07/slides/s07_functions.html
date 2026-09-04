@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<title>07 제공 기능 5가지</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width:1280px; height:720px; font-family:'Noto Sans KR',sans-serif;
+       background:#FFFFFF; overflow:hidden; -webkit-font-smoothing:antialiased; }
+.slide { width:1280px; height:720px; display:flex; flex-direction:column; }
+
+.header { background:#1A1A2E; height:58px; flex-shrink:0; display:flex;
+          align-items:center; justify-content:space-between; padding:0 48px; }
+.header .t { font-size:21px; font-weight:700; color:#FFFFFF; letter-spacing:-0.01em; }
+.header .b { font-size:12px; color:#7BA7D4; letter-spacing:0.04em; }
+
+.gov { flex-shrink:0; height:64px; background:#F6F8FC; border-bottom:1px solid #EDF2F7;
+       padding:0 48px 0 44px; border-left:4px solid #5B9BD5;
+       display:flex; align-items:center; }
+.gov p { font-size:15.5px; font-weight:700; color:#1A1A2E; line-height:1.5; }
+
+.body { flex:1; padding:20px 48px 14px; overflow:hidden; display:flex;
+        flex-direction:column; gap:13px; min-height:0; }
+.body.mid { justify-content:center; }
+
+.ask { flex-shrink:0; margin:0 48px 9px; background:#FFFFFF;
+       border:1px solid #DCE4F0; border-left:3px solid #A0AEC0;
+       padding:9px 15px; display:flex; gap:13px; align-items:flex-start; }
+.ask .lb { font-size:10px; font-weight:700; color:#718096; letter-spacing:0.08em;
+           white-space:nowrap; padding-top:1px; }
+.ask .tx { font-size:12px; color:#4A5568; line-height:1.55; }
+
+.footer { height:30px; flex-shrink:0; border-top:1px solid #EDF2F7;
+          padding:0 48px; display:flex; align-items:center; justify-content:space-between; }
+.footer span { font-size:10.5px; color:#A0AEC0; }
+
+/* components */
+.row { display:flex; gap:16px; }
+.row > * { min-width:0; }
+.row.fill { flex:1; min-height:0; }
+.col { flex:1; display:flex; flex-direction:column; gap:9px; min-height:0; }
+.cap { font-size:11.5px; font-weight:700; color:#5B9BD5; letter-spacing:0.05em; flex-shrink:0; }
+.cap.mute { color:#A0AEC0; }
+.cap.warn { color:#B7791F; }
+.sub { font-size:11px; color:#718096; line-height:1.6; }
+
+table { width:100%; border-collapse:collapse; }
+th { background:#1A1A2E; color:#BDD5EA; font-size:12px; font-weight:700;
+     text-align:left; padding:8px 13px; letter-spacing:0.02em; }
+td { font-size:12.5px; color:#2D3748; padding:8px 13px;
+     border-bottom:1px solid #EDF2F7; line-height:1.5; vertical-align:middle; }
+tr:last-child td { border-bottom:none; }
+.t-lite th { background:#EDF2F7; color:#4A5568; }
+.t-cmp th { font-size:11px; padding:6px 11px; }
+.t-cmp td { font-size:11.5px; padding:6px 11px; }
+td.k { font-weight:700; color:#1A1A2E; white-space:nowrap; }
+td.m { color:#718096; }
+.tw { flex:1; min-height:0; display:flex; }
+.tw table { height:100%; }
+
+.tag { display:inline-block; font-size:9px; font-weight:700; padding:2px 6px;
+       letter-spacing:0.04em; vertical-align:1px; }
+.tag.spec { background:#EBF4FF; color:#1A4A7A; }
+.tag.inst { background:#F0F0F5; color:#5A5A70; }
+.tag.warn { background:#FFFDE7; color:#7B341E; }
+
+.card { border:1px solid #DCE4F0; display:flex; flex-direction:column; }
+.card > .h { background:#1A1A2E; color:#7BA7D4; font-size:11px; font-weight:700;
+             padding:7px 14px; letter-spacing:0.05em; flex-shrink:0; }
+.card > .c { padding:12px 14px; font-size:12.5px; color:#2D3748; line-height:1.65; flex:1; }
+.card.on { border-color:#5B9BD5; }
+.card.on > .h { background:#5B9BD5; color:#FFFFFF; }
+.card.mute > .h { background:#EDF2F7; color:#718096; }
+.card.fillc { flex:1; min-height:0; }
+
+.note { background:#F6F8FC; border:1px solid #E2E8F0; padding:10px 14px;
+        font-size:12px; color:#4A5568; line-height:1.6; }
+.fix { background:#FFFFFF; border:1px solid #DCE4F0; border-left:3px solid #1A1A2E;
+       padding:12px 15px; font-size:13.5px; font-weight:700; color:#1A1A2E; line-height:1.5;
+       letter-spacing:-0.005em; }
+.fix.acc { border-left-color:#5B9BD5; }
+.fix.warn { border-left-color:#B7791F; color:#7B341E; }
+
+ol.steps { list-style:none; counter-reset:s; }
+ol.steps li { counter-increment:s; position:relative; padding:7px 0 7px 30px;
+              font-size:12.5px; color:#2D3748; line-height:1.5;
+              border-bottom:1px solid #F1F5F9; }
+ol.steps li:last-child { border-bottom:none; }
+ol.steps li::before { content:counter(s); position:absolute; left:0; top:7px;
+              width:20px; height:20px; border-radius:50%; background:#EDF2F7;
+              color:#4A5568; font-size:10.5px; font-weight:700; text-align:center;
+              line-height:20px; }
+
+ul.plain { list-style:none; }
+ul.plain li { position:relative; padding:6px 0 6px 15px; font-size:12.5px;
+              color:#2D3748; line-height:1.55; }
+ul.plain li::before { content:''; position:absolute; left:0; top:13px; width:5px;
+              height:5px; background:#5B9BD5; }
+
+/* 캡처 자리표시 */
+.shot { position:relative; border:1px dashed #C3CFE0; background:#FAFBFD;
+        flex:1; min-height:0; display:flex; align-items:center; justify-content:center; }
+.shot .ph { font-size:11.5px; color:#A0AEC0; line-height:1.9; text-align:center; padding:14px; }
+.shot .ph b { display:block; color:#718096; font-size:12px; margin:7px 0 3px;
+              font-family:ui-monospace,Menlo,Consolas,monospace; }
+.shot img { position:absolute; top:0; left:0; width:100%; height:100%;
+            object-fit:contain; background:#FFFFFF; }
+
+/* 흐름 바 */
+.flow { display:flex; align-items:stretch; gap:0; flex-shrink:0; }
+.flow .st { flex:1; border:1px solid #DCE4F0; padding:9px 10px; position:relative;
+            display:flex; flex-direction:column; justify-content:center; }
+.flow .st + .st { margin-left:8px; }
+.flow .st::after { content:'\203A'; position:absolute; right:-8px; top:50%;
+                   transform:translate(50%,-50%); color:#CBD5E0; font-size:16px; z-index:2; }
+.flow .st:last-child::after { display:none; }
+.flow .n { font-size:9.5px; font-weight:700; color:#A0AEC0; }
+.flow .x { font-size:11.5px; font-weight:700; color:#2D3748; margin-top:3px; line-height:1.4; }
+.flow .z { font-size:9px; color:#A0AEC0; margin-top:6px; letter-spacing:0.04em; }
+.flow .st.on { border-color:#5B9BD5; background:#EBF4FF; }
+.flow .st.on .n { color:#5B9BD5; }
+.flow .st.on .x { color:#1A4A7A; }
+.flow .st.on .z { color:#5B9BD5; font-weight:700; }
+
+/* XML 발췌 */
+.xml { font-family:ui-monospace,Menlo,Consolas,monospace; font-size:10px; line-height:1.5;
+       color:#4A5568; background:#FAFBFD; border:1px solid #E2E8F0; padding:12px 14px;
+       flex:1; min-height:0; overflow:hidden; white-space:pre; }
+.xml b { color:#1A4A7A; font-weight:700; background:#EBF4FF; }
+.xml u { color:#A0AEC0; text-decoration:none; }
+
+/* 타임라인 */
+.tl { position:relative; height:172px; margin:2px 6px 0; flex-shrink:0; }
+.tl .axis { position:absolute; top:74px; left:0; right:0; height:2px; background:#DCE4F0; }
+.tl .pt { position:absolute; top:67px; width:10px; height:10px; border-radius:50%;
+          background:#FFFFFF; border:2px solid #A0AEC0; transform:translateX(-50%); }
+.tl .pt.on { border-color:#5B9BD5; background:#5B9BD5; width:14px; height:14px; top:65px; }
+.tl .dt { position:absolute; top:34px; font-size:11px; font-weight:700; color:#4A5568;
+          transform:translateX(-50%); white-space:nowrap; }
+.tl .lb { position:absolute; top:94px; font-size:11px; color:#718096;
+          transform:translateX(-50%); white-space:nowrap; }
+.tl .lb.on { color:#1A4A7A; font-weight:700; }
+.tl .mk { position:absolute; top:120px; font-size:10px; font-weight:700; color:#5B9BD5;
+          transform:translateX(-50%); white-space:nowrap; border:1px solid #5B9BD5;
+          padding:2px 9px; background:#EBF4FF; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header">
+    <span class="t">제공 기능 5가지</span>
+    <span class="b">기능 › 전체</span>
+  </div>
+  <div class="gov"><p>KR-TL이 하는 일은 앵커 제공, 시점 판정, 유형 구분, 목록 진위 보장, 배포와 동기화 다섯 가지다.</p></div>
+  <div class="body">
+<style>
+.f5 { display:flex; gap:13px; flex:1; min-height:0; }
+.f5 .fc { flex:1; border:1px solid #DCE4F0; display:flex; flex-direction:column; }
+.f5 .fc .id { background:#EDF2F7; color:#4A5568; font-size:12.5px; font-weight:700;
+              padding:6px 12px; letter-spacing:0.04em; }
+.f5 .fc .nm { padding:11px 12px 0; font-size:14px; font-weight:700; color:#1A1A2E; line-height:1.35; }
+.f5 .fc .ds { padding:8px 12px 11px; font-size:12px; color:#2D3748; line-height:1.6; flex:1; }
+.f5 .fc .no { border-top:1px solid #EDF2F7; padding:9px 12px; font-size:11px;
+              color:#718096; line-height:1.5; background:#FAFAFC; }
+.f5 .fc .no b { display:block; font-size:9.5px; color:#A0AEC0; letter-spacing:0.08em; margin-bottom:3px; }
+.f5 .fc.br { border-color:#5B9BD5; box-shadow:inset 0 0 0 1px #5B9BD5; }
+.f5 .fc.br .id { background:#5B9BD5; color:#FFFFFF; }
+</style>
+
+    <div class="f5">
+      <div class="fc"><div class="id">F1</div><div class="nm">신뢰앵커<br>제공</div>
+        <div class="ds">인증서 경로 구성의 종착점이 될 서비스 인증서를 목록으로 내려준다</div>
+        <div class="no"><b>없으면</b>이용기관이 앵커를 직접 수집·하드코딩</div></div>
+      <div class="fc"><div class="id">F2</div><div class="nm">시점 기준<br>상태 판정</div>
+        <div class="ds">서명 시점에 그 서비스가 어떤 상태였는지를 소급해 판정한다</div>
+        <div class="no"><b>없으면</b>과거 서명이 사업자 지위 변경만으로 무효화</div></div>
+      <div class="fc"><div class="id">F3</div><div class="nm">서비스<br>유형 구분</div>
+        <div class="ds">서명용·타임스탬프·검증 서비스를 구분해 용도 밖 사용을 걸러낸다</div>
+        <div class="no"><b>없으면</b>타임스탬프용 인증서로 문서 서명해도 통과</div></div>
+      <div class="fc br"><div class="id">F4</div><div class="nm">목록의<br>진위 보장</div>
+        <div class="ds">목록에 서명·발행시각·유효기간을 부여해 위조와 노후화를 막는다</div>
+        <div class="no"><b>없으면</b>신뢰 판단의 근거 자체가 공격 대상</div></div>
+      <div class="fc br"><div class="id">F5</div><div class="nm">배포<br>·동기화</div>
+        <div class="ds">정해진 주소에서 주기적으로 목록을 받아 최신 상태를 유지한다</div>
+        <div class="no"><b>없으면</b>상태 변경이 검증 시점에 반영되지 않음</div></div>
+    </div>
+    <div class="fix acc">앞의 셋은 검증 엔진이 쓰고, <span style="color:#1A4A7A;">뒤의 둘은 브라우저에 기능이 생긴다.</span></div>
+  </div>
+  <div class="footer">
+    <span>KR-TL 국내 전자서명 신뢰목록 개요</span>
+    <span>㈜일렉서티 &nbsp;&nbsp; 07 / 13</span>
+  </div>
+</div>
+</body>
+</html>

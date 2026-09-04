@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<title>09 기능 상세 ② 목록의 진위 보장과 동기화</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { width:1280px; height:720px; font-family:'Noto Sans KR',sans-serif;
+       background:#FFFFFF; overflow:hidden; -webkit-font-smoothing:antialiased; }
+.slide { width:1280px; height:720px; display:flex; flex-direction:column; }
+
+/* Z1 HEADER */
+.header { background:#1A1A2E; height:58px; flex-shrink:0; display:flex;
+          align-items:center; justify-content:space-between; padding:0 48px; }
+.header .t { font-size:21px; font-weight:700; color:#FFFFFF; letter-spacing:-0.01em; }
+.header .b { font-size:12px; color:#7BA7D4; letter-spacing:0.04em; }
+
+/* Z2 GOVERNING */
+.gov { flex-shrink:0; background:#F6F8FC; border-bottom:1px solid #EDF2F7;
+       padding:15px 48px 15px 44px; border-left:4px solid #5B9BD5; }
+.gov p { font-size:16px; font-weight:700; color:#1A1A2E; line-height:1.55; }
+
+/* Z3 BODY */
+.body { flex:1; padding:24px 48px 16px; overflow:hidden; display:flex;
+        flex-direction:column; gap:16px; min-height:0; }
+
+/* Z4 ASK */
+.ask { flex-shrink:0; margin:0 48px 10px; background:#FFFFFF;
+       border:1px solid #DCE4F0; border-left:3px solid #A0AEC0;
+       padding:10px 15px; display:flex; gap:13px; align-items:flex-start; }
+.ask .lb { font-size:10px; font-weight:700; color:#718096; letter-spacing:0.08em;
+           white-space:nowrap; padding-top:1px; }
+.ask .tx { font-size:12.5px; color:#4A5568; line-height:1.55; }
+
+/* Z5 FOOTER */
+.footer { height:30px; flex-shrink:0; border-top:1px solid #EDF2F7;
+          padding:0 48px; display:flex; align-items:center; justify-content:space-between; }
+.footer span { font-size:10.5px; color:#A0AEC0; }
+
+/* ---- components ---- */
+.row { display:flex; gap:18px; }
+.row > * { min-width:0; }
+.col { flex:1; display:flex; flex-direction:column; gap:9px; min-height:0; }
+.cap { font-size:11.5px; font-weight:700; color:#5B9BD5; letter-spacing:0.06em; }
+.cap.mute { color:#A0AEC0; }
+.sub { font-size:11.5px; color:#718096; line-height:1.6; }
+
+table { width:100%; border-collapse:collapse; }
+th { background:#1A1A2E; color:#BDD5EA; font-size:12.5px; font-weight:700;
+     text-align:left; padding:10px 14px; letter-spacing:0.02em; }
+td { font-size:13px; color:#2D3748; padding:10px 14px;
+     border-bottom:1px solid #EDF2F7; line-height:1.5; vertical-align:middle; }
+tr:last-child td { border-bottom:none; }
+
+/* 표가 본문 영역을 채우게 하는 래퍼 */
+.tw { flex:1; min-height:0; display:flex; }
+.tw table { height:100%; }
+.row.fill { flex:1; min-height:0; }
+.row.fill .fix { flex:1; display:flex; align-items:center; }
+.body.mid { justify-content:center; }
+.t-lite th { background:#EDF2F7; color:#4A5568; }
+td.k { font-weight:700; color:#1A1A2E; white-space:nowrap; }
+td.m { color:#718096; }
+.tag { display:inline-block; font-size:9px; font-weight:700; padding:2px 6px;
+       border-radius:2px; letter-spacing:0.04em; }
+.tag.spec { background:#EBF4FF; color:#1A4A7A; }
+.tag.inst { background:#F0F0F5; color:#5A5A70; }
+
+.card { border:1px solid #DCE4F0; }
+.card { display:flex; flex-direction:column; }
+.card > .h { background:#1A1A2E; color:#7BA7D4; font-size:11px; font-weight:700;
+             padding:8px 15px; letter-spacing:0.06em; flex-shrink:0; }
+.card > .c { padding:14px 15px; font-size:13px; color:#2D3748; line-height:1.7; flex:1; }
+.card.on { border-color:#5B9BD5; }
+.card.on > .h { background:#5B9BD5; color:#FFFFFF; }
+.card.fillc { flex:1; min-height:0; }
+
+.note { background:#F6F8FC; border:1px solid #E2E8F0; padding:12px 15px;
+        font-size:12.5px; color:#4A5568; line-height:1.65; }
+.fix { background:#FFFFFF; border:1px solid #DCE4F0;
+       border-left:3px solid #1A1A2E; padding:12px 15px; font-size:13px;
+       font-weight:700; color:#1A1A2E; line-height:1.55; }
+
+ol.steps { list-style:none; counter-reset:s; }
+ol.steps li { counter-increment:s; position:relative; padding:9px 0 9px 32px;
+              font-size:13px; color:#2D3748; line-height:1.5;
+              border-bottom:1px solid #F1F5F9; }
+ol.steps li:last-child { border-bottom:none; }
+ol.steps li::before { content:counter(s); position:absolute; left:0; top:9px;
+              width:21px; height:21px; border-radius:50%; background:#EDF2F7;
+              color:#4A5568; font-size:11px; font-weight:700; text-align:center;
+              line-height:21px; }
+
+ul.plain { list-style:none; }
+ul.plain li { position:relative; padding:7px 0 7px 15px; font-size:13px;
+              color:#2D3748; line-height:1.6; }
+ul.plain li::before { content:''; position:absolute; left:0; top:15px; width:5px;
+              height:5px; background:#5B9BD5; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header">
+    <span class="t">기능 상세 ② 목록의 진위 보장과 동기화</span>
+    <span class="b">기능 › F4·F5 상세</span>
+  </div>
+  <div class="gov"><p>목록을 받아오는 순간부터 목록은 공격 대상이 된다. 브라우저는 목록을 쓰기 전에 네 가지를 검사하고, 통과한 목록만 기존 목록을 대체한다.</p></div>
+  <div class="body">
+    <div class="row" style="flex:1;min-height:0;">
+      <div class="col" style="flex:0.9;">
+        <div class="cap">목록 수용 전 검사 &nbsp;<span class="tag spec">규격</span></div>
+        <ol class="steps">
+          <li>출처 확인 — 배포 주소가 합의된 주소인가</li>
+          <li>목록 서명 검증 — 고정된 신뢰앵커로 검증되는가</li>
+          <li>발행시각 확인 — 이전 목록보다 새 것인가 <span style="color:#A0AEC0;">(롤백 방지)</span></li>
+          <li>유효기간 확인 — 만료되지 않았는가</li>
+        </ol>
+        <div style="flex:1;min-height:0;"></div>
+        <div class="fix">하나라도 실패하면 적용하지 않고, 기존 정상 목록을 유지한다.</div>
+        <div class="fix" style="border-left-color:#B7791F;color:#7B341E;">신뢰앵커 변경 기능은 브라우저에 두지 않는다. 이 항목만 선택지가 아니다.</div>
+      </div>
+      <div class="col" style="flex:1.1;">
+        <div class="cap">판단할 것 — 세 가지 &nbsp;<span class="tag inst" style="background:#FFFDE7;color:#7B341E;">웨일 판단</span></div>
+        <div class="tw"><table class="t-lite">
+          <thead><tr><th style="width:96px;">항목</th><th style="width:38%;">선택지</th><th>대가</th></tr></thead>
+          <tbody>
+            <tr><td class="k" rowspan="2">갱신 주기</td><td>짧게 (예: 6시간)</td><td class="m">반영이 빠르나 트래픽·배터리 부담</td></tr>
+            <tr><td>길게 (24시간~7일)</td><td class="m">부담이 작으나 철회 반영이 늦어짐</td></tr>
+            <tr><td class="k" rowspan="2">갱신 주체</td><td>브라우저 본체</td><td class="m">구현이 단순하나 릴리스와 결합</td></tr>
+            <tr><td>별도 컴포넌트 업데이트</td><td class="m">독립적이나 관리 항목이 하나 늘어남</td></tr>
+            <tr><td class="k" rowspan="2">캐시 저장</td><td>OS 보안 저장소</td><td class="m">보호 수준 높으나 플랫폼별 구현이 갈림</td></tr>
+            <tr><td>프로파일 내 암호화 저장</td><td class="m">구현이 균일하나 보호 수준 판단 필요</td></tr>
+          </tbody>
+        </table></div>
+        <div class="sub">현재 검토안은 기본 24시간 주기 + OS 보안 저장소이나, 웨일 플랫폼 정책에 맞춰 조정한다.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>KR-TL 국내 전자서명 신뢰목록 개요</span>
+    <span>㈜일렉서티 &nbsp;&nbsp; 09 / 15</span>
+  </div>
+</div>
+</body>
+</html>
