@@ -44,3 +44,7 @@ local.properties
 # 배포본(release/) — 실행 jar 약 84MB 를 포함하는 빌드 산출물이라 추적하지 않는다.
 # 재생성: ./gradlew whalePackage 후 output/ 을 release/<날짜>-whale-poc/ 로 복사.
 /release/
+
+# 문서 작성 중간 산출물 (최종본은 EIF_차세대_상호운용성/02_최종문서/)
+/_workspace/
+/EIF_차세대_상호운용성/작업자료/
