@@ -1,0 +1,22 @@
+{
+  "scope": "초안 문서·시험 명세의 정합성 검사; 구현 시험 아님",
+  "technicalCases": 32,
+  "manualCases": 6,
+  "reasonCodes": 23,
+  "requirementCoverage": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12"
+  ],
+  "errors": [],
+  "executionStatus": "NOT_RUN"
+}

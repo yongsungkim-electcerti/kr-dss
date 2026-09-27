@@ -1,0 +1,74 @@
+[
+  {
+    "doc": 1,
+    "id": "1RQfGhqPi48hudhf8PuMjbrflH2xCdzmWS5oEAaMQJR8",
+    "missingParagraphs": 0,
+    "tables": [
+      [
+        4,
+        4
+      ],
+      [
+        13,
+        3
+      ]
+    ],
+    "headings": 9
+  },
+  {
+    "doc": 2,
+    "id": "1sgot2mWpkSL5GXLsVvLeSFyWmW-cztIlFh1sR51gnig",
+    "missingParagraphs": 0,
+    "tables": [
+      [
+        9,
+        4
+      ],
+      [
+        6,
+        4
+      ]
+    ],
+    "headings": 9
+  },
+  {
+    "doc": 3,
+    "id": "1kjd4g3nXT9Qn3zRO6v07WFUC_22lFhDiJyLU4aJeWYw",
+    "missingParagraphs": 0,
+    "tables": [
+      [
+        13,
+        3
+      ],
+      [
+        24,
+        5
+      ]
+    ],
+    "headings": 9
+  },
+  {
+    "doc": 4,
+    "id": "1YWwZCeO351BthBa8MXkW7bQbhQrvnIGEAzCVg1e5KPk",
+    "missingParagraphs": 0,
+    "tables": [
+      [
+        10,
+        4
+      ]
+    ],
+    "headings": 9
+  },
+  {
+    "doc": 5,
+    "id": "1hVx42KYrrWsBphsS9lXQqF31T9MBSc0-jSJchBd8fcM",
+    "missingParagraphs": 0,
+    "tables": [
+      [
+        7,
+        4
+      ]
+    ],
+    "headings": 40
+  }
+]
