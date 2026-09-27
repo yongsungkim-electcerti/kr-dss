@@ -1,0 +1,170 @@
+[
+  {
+    "file": "04_일본_VC_DIW\\별지_3.pdf",
+    "pypdf_pages": 17,
+    "fitz_pages": 17,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "04_일본_VC_DIW\\개최_개요안.pdf",
+    "pypdf_pages": 5,
+    "fitz_pages": 5,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "01_EU_TLv6\\ETSI_TS119612_v2.4.1.pdf",
+    "pypdf_pages": 81,
+    "fitz_pages": 81,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "04_일본_VC_DIW\\JP_Annex4_TechnicalWG.pdf",
+    "pypdf_pages": 11,
+    "fitz_pages": 11,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "06_NIST_디지털신원\\NIST_SP800_63_4.pdf",
+    "pypdf_pages": 96,
+    "fitz_pages": 96,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "06_NIST_디지털신원\\NIST_SP800_63A_4.pdf",
+    "pypdf_pages": 114,
+    "fitz_pages": 114,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "06_NIST_디지털신원\\NIST_SP800_63B_4.pdf",
+    "pypdf_pages": 129,
+    "fitz_pages": 129,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "06_NIST_디지털신원\\NIST_SP800_63C_4.pdf",
+    "pypdf_pages": 150,
+    "fitz_pages": 150,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "09_UNCITRAL_국경간인정\\UNCITRAL_MLIT_Text_ExplanatoryNote.pdf",
+    "pypdf_pages": 86,
+    "fitz_pages": 86,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "12_PQC_EDPS_개인정보보호\\EDPS_TechDispatch_DigitalIdentityWallets.pdf",
+    "pypdf_pages": 42,
+    "fitz_pages": 42,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "12_PQC_EDPS_개인정보보호\\FIPS203_MLKEM.pdf",
+    "pypdf_pages": 56,
+    "fitz_pages": 56,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "12_PQC_EDPS_개인정보보호\\FIPS204_MLDSA.pdf",
+    "pypdf_pages": 65,
+    "fitz_pages": 65,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "12_PQC_EDPS_개인정보보호\\FIPS205_SLHDSA.pdf",
+    "pypdf_pages": 61,
+    "fitz_pages": 61,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "07_영국_신뢰프레임워크\\UK_DVSTF_certification_scheme_requirements_for_conformity_assessment_bodies_v1.15.pdf",
+    "pypdf_pages": 76,
+    "fitz_pages": 76,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "08_뉴질랜드_호주\\Digital_Identity_Services_Trust_Framework_Rules_2024_PDF_450_KB.pdf",
+    "pypdf_pages": 42,
+    "fitz_pages": 42,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "08_뉴질랜드_호주\\Digital_Identity_Services_Trust_Framework_Amendment_Rules_2026-1_PDF_845_KB.pdf",
+    "pypdf_pages": 43,
+    "fitz_pages": 43,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "10_GLEIF_vLEI\\verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Primary_Document.pdf",
+    "pypdf_pages": 13,
+    "fitz_pages": 13,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "10_GLEIF_vLEI\\Authorization_vLEI_Credential_Framework.pdf",
+    "pypdf_pages": 8,
+    "fitz_pages": 8,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "10_GLEIF_vLEI\\Legal_Entity_Official_Organizational_Role_vLEI_Credential_Framework.pdf",
+    "pypdf_pages": 18,
+    "fitz_pages": 18,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "10_GLEIF_vLEI\\verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Trust_Assurance_Framework.pdf",
+    "pypdf_pages": 37,
+    "fitz_pages": 37,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "10_GLEIF_vLEI\\verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Technical_Requirements_Part_2_vLEI.pdf",
+    "pypdf_pages": 6,
+    "fitz_pages": 6,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "01_EU_TLv6\\ETSI_TS119615_v1.4.1.pdf",
+    "pypdf_pages": 56,
+    "fitz_pages": 56,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "11_OECD_UN_DPI\\OECD_DigitalGovernmentOutlook2026.pdf",
+    "pypdf_pages": 184,
+    "fitz_pages": 184,
+    "page_count_match": true,
+    "sha256_match": true
+  },
+  {
+    "file": "02_EUDI_Wallet\\ARF_Main_Annexes_Release.pdf",
+    "pypdf_pages": 552,
+    "fitz_pages": 552,
+    "page_count_match": true,
+    "sha256_match": true
+  }
+]

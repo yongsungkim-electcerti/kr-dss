@@ -1,0 +1,168 @@
+{
+  "codeSetId": "TV-CODESET",
+  "version": "0.1",
+  "status": "DRAFT",
+  "codes": [
+    {
+      "code": "TV_OK",
+      "meaning": "필수 검사 모두 통과",
+      "checkEffect": "해당 없음",
+      "singleCauseTechnical": "VALID",
+      "singleCauseBusiness": "업무정책 적용"
+    },
+    {
+      "code": "TV_SIGNATURE_INVALID",
+      "meaning": "서명값·서명된 내용 불일치",
+      "checkEffect": "integrity=FAIL",
+      "singleCauseTechnical": "INVALID",
+      "singleCauseBusiness": "REJECT"
+    },
+    {
+      "code": "TV_ALGORITHM_DISALLOWED",
+      "meaning": "프로파일이 금지한 알고리즘",
+      "checkEffect": "integrity=FAIL",
+      "singleCauseTechnical": "INVALID",
+      "singleCauseBusiness": "REJECT"
+    },
+    {
+      "code": "TV_PROFILE_UNSUPPORTED",
+      "meaning": "형식 또는 하위 프로파일 미지원",
+      "checkEffect": "integrity=INDETERMINATE",
+      "singleCauseTechnical": "INDETERMINATE",
+      "singleCauseBusiness": "DEFER"
+    },
+    {
+      "code": "TV_CHAIN_UNTRUSTED",
+      "meaning": "정상 확보한 신뢰정보로 경로 불신 확인",
+      "checkEffect": "trust=FAIL",
+      "singleCauseTechnical": "INVALID",
+      "singleCauseBusiness": "REJECT"
+    },
+    {
+      "code": "TV_TRUST_UNAVAILABLE",
+      "meaning": "신뢰정보 미확보·무효 서명·연결 장애",
+      "checkEffect": "trust=INDETERMINATE",
+      "singleCauseTechnical": "INDETERMINATE",
+      "singleCauseBusiness": "DEFER"
+    },
+    {
+      "code": "TV_TRUST_STALE",
+      "meaning": "신뢰정보의 허용 최신성 초과",
+      "checkEffect": "trust=INDETERMINATE",
+      "singleCauseTechnical": "INDETERMINATE",
+      "singleCauseBusiness": "DEFER"
+    },
+    {
+      "code": "TV_AUTHORITY_MISMATCH",
+      "meaning": "업무·속성·시점에 대한 권한 부재 확인",
+      "checkEffect": "authority=FAIL",
+      "singleCauseTechnical": "INVALID",
+      "singleCauseBusiness": "REJECT"
+    },
+    {
+      "code": "TV_AUTHORITY_UNKNOWN",
+      "meaning": "권한 증거가 부족함",
+      "checkEffect": "authority=INDETERMINATE",
+      "singleCauseTechnical": "INDETERMINATE",
+      "singleCauseBusiness": "DEFER"
+    },
+    {
+      "code": "TV_REVOKED",
+      "meaning": "해당 판단 시점의 폐기 확인",
+      "checkEffect": "status=FAIL",
+      "singleCauseTechnical": "INVALID",
+      "singleCauseBusiness": "REJECT"
+    },
+    {
+      "code": "TV_STATUS_UNAVAILABLE",
+      "meaning": "상태 증거 미확보·검증 불가",
+      "checkEffect": "status=INDETERMINATE",
+      "singleCauseTechnical": "INDETERMINATE",
+      "singleCauseBusiness": "DEFER"
+    },
+    {
+      "code": "TV_STATUS_STALE",
+      "meaning": "상태 증거의 허용 최신성 초과",
+      "checkEffect": "status=INDETERMINATE",
+      "singleCauseTechnical": "INDETERMINATE",
+      "singleCauseBusiness": "DEFER"
+    },
+    {
+      "code": "TV_TIME_INVALID",
+      "meaning": "유효기간 밖 또는 허용 오차 초과 확인",
+      "checkEffect": "freshness=FAIL",
+      "singleCauseTechnical": "INVALID",
+      "singleCauseBusiness": "REJECT"
+    },
+    {
+      "code": "TV_TIME_UNPROVEN",
+      "meaning": "검증에 필요한 시점 근거 부족",
+      "checkEffect": "freshness=INDETERMINATE",
+      "singleCauseTechnical": "INDETERMINATE",
+      "singleCauseBusiness": "DEFER"
+    },
+    {
+      "code": "TV_HOLDER_MISMATCH",
+      "meaning": "보유자·수신자 결합 실패",
+      "checkEffect": "holderBinding=FAIL",
+      "singleCauseTechnical": "INVALID",
+      "singleCauseBusiness": "REJECT"
+    },
+    {
+      "code": "TV_REPLAY",
+      "meaning": "nonce·제시 증명의 재사용 확인",
+      "checkEffect": "holderBinding=FAIL",
+      "singleCauseTechnical": "INVALID",
+      "singleCauseBusiness": "REJECT"
+    },
+    {
+      "code": "BUS_POLICY_REJECT",
+      "meaning": "유효 증거이나 업무 수용 조건 미충족",
+      "checkEffect": "검사 변경 없음",
+      "singleCauseTechnical": "VALID",
+      "singleCauseBusiness": "REJECT"
+    },
+    {
+      "code": "BUS_REVIEW_REQUIRED",
+      "meaning": "유효 증거의 업무상 추가 심사 필요",
+      "checkEffect": "검사 변경 없음",
+      "singleCauseTechnical": "VALID",
+      "singleCauseBusiness": "REVIEW"
+    },
+    {
+      "code": "BUS_EVIDENCE_PENDING",
+      "meaning": "필수 증거 부족으로 처리 보류",
+      "checkEffect": "검사 변경 없음",
+      "singleCauseTechnical": "INDETERMINATE",
+      "singleCauseBusiness": "DEFER"
+    },
+    {
+      "code": "REQ_MALFORMED",
+      "meaning": "요청 구문·필수 필드 오류",
+      "checkEffect": "검사 미실행",
+      "singleCauseTechnical": "없음",
+      "singleCauseBusiness": "없음"
+    },
+    {
+      "code": "REQ_UNAUTHORIZED",
+      "meaning": "호출자·서비스·증거 접근권한 부족",
+      "checkEffect": "검사 미실행",
+      "singleCauseTechnical": "없음",
+      "singleCauseBusiness": "없음"
+    },
+    {
+      "code": "SYS_INTERNAL",
+      "meaning": "예상하지 못한 엔진 실행 오류",
+      "checkEffect": "완료 결과 없음",
+      "singleCauseTechnical": "없음",
+      "singleCauseBusiness": "없음"
+    },
+    {
+      "code": "SYS_POLICY_UNAVAILABLE",
+      "meaning": "승인 정책·버전을 확보하지 못함",
+      "checkEffect": "검사 미실행",
+      "singleCauseTechnical": "없음",
+      "singleCauseBusiness": "없음"
+    }
+  ]
+}

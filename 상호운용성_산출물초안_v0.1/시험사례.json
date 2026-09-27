@@ -1,0 +1,907 @@
+{
+  "version": "0.1",
+  "status": "DRAFT_NOT_EXECUTED",
+  "tests": [
+    {
+      "id": "T01",
+      "title": "서명문서 정상",
+      "profile": "P-SIG",
+      "fixture": "FX-SIG",
+      "mutation": "변경 없음",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "NOT_APPLICABLE"
+      },
+      "technicalResult": "VALID",
+      "businessDecision": "ACCEPT",
+      "reasonCodes": [
+        "TV_OK"
+      ],
+      "requirements": [
+        "R03",
+        "R04",
+        "R07"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T02",
+      "title": "공공 속성 정상",
+      "profile": "P-ATTR",
+      "fixture": "FX-ATTR",
+      "mutation": "변경 없음",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "VALID",
+      "businessDecision": "ACCEPT",
+      "reasonCodes": [
+        "TV_OK"
+      ],
+      "requirements": [
+        "R02",
+        "R03",
+        "R06"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T03",
+      "title": "민간 재직 정상",
+      "profile": "P-EMP",
+      "fixture": "FX-EMP",
+      "mutation": "변경 없음",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "VALID",
+      "businessDecision": "ACCEPT",
+      "reasonCodes": [
+        "TV_OK"
+      ],
+      "requirements": [
+        "R02",
+        "R03",
+        "R07"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T04",
+      "title": "서명된 내용 변조",
+      "profile": "P-SIG",
+      "fixture": "FX-SIG",
+      "mutation": "서명 후 원문 1바이트 변경",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "FAIL",
+        "trust": "NOT_EVALUATED",
+        "authority": "NOT_EVALUATED",
+        "status": "NOT_EVALUATED",
+        "freshness": "NOT_EVALUATED",
+        "holderBinding": "NOT_APPLICABLE"
+      },
+      "technicalResult": "INVALID",
+      "businessDecision": "REJECT",
+      "reasonCodes": [
+        "TV_SIGNATURE_INVALID"
+      ],
+      "requirements": [
+        "R04"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T05",
+      "title": "신뢰되지 않는 경로",
+      "profile": "P-SIG",
+      "fixture": "FX-SIG",
+      "mutation": "서명은 정상이나 승인 앵커와 연결 안 되는 경로",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "FAIL",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "NOT_APPLICABLE"
+      },
+      "technicalResult": "INVALID",
+      "businessDecision": "REJECT",
+      "reasonCodes": [
+        "TV_CHAIN_UNTRUSTED"
+      ],
+      "requirements": [
+        "R04"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T06",
+      "title": "신뢰목록 조회 장애",
+      "profile": "P-SIG",
+      "fixture": "FX-SIG",
+      "mutation": "목록 요청 타임아웃, 사용 가능한 캐시 없음",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "INDETERMINATE",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "NOT_APPLICABLE"
+      },
+      "technicalResult": "INDETERMINATE",
+      "businessDecision": "DEFER",
+      "reasonCodes": [
+        "TV_TRUST_UNAVAILABLE",
+        "BUS_EVIDENCE_PENDING"
+      ],
+      "requirements": [
+        "R04",
+        "R09"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T07",
+      "title": "오래된 신뢰목록",
+      "profile": "P-SIG",
+      "fixture": "FX-SIG",
+      "mutation": "서명은 정상이나 캐시 나이 301초; 시험 한도 300초",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "INDETERMINATE",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "NOT_APPLICABLE"
+      },
+      "technicalResult": "INDETERMINATE",
+      "businessDecision": "DEFER",
+      "reasonCodes": [
+        "TV_TRUST_STALE",
+        "BUS_EVIDENCE_PENDING"
+      ],
+      "requirements": [
+        "R04",
+        "R09"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T08",
+      "title": "발급권한 범위 위반",
+      "profile": "P-ATTR",
+      "fixture": "FX-ATTR",
+      "mutation": "지역 속성 권한이 없는 기관의 정상 서명",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "FAIL",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "INVALID",
+      "businessDecision": "REJECT",
+      "reasonCodes": [
+        "TV_AUTHORITY_MISMATCH"
+      ],
+      "requirements": [
+        "R02"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T09",
+      "title": "발급권한 미확인",
+      "profile": "P-EMP",
+      "fixture": "FX-EMP",
+      "mutation": "서명은 정상이나 권한 자료 없음",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "INDETERMINATE",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "INDETERMINATE",
+      "businessDecision": "DEFER",
+      "reasonCodes": [
+        "TV_AUTHORITY_UNKNOWN",
+        "BUS_EVIDENCE_PENDING"
+      ],
+      "requirements": [
+        "R02"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T10",
+      "title": "자격증명 폐기",
+      "profile": "P-EMP",
+      "fixture": "FX-EMP",
+      "mutation": "판단 시점 이전 폐기가 정상 상태 증거로 확인됨",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "FAIL",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "INVALID",
+      "businessDecision": "REJECT",
+      "reasonCodes": [
+        "TV_REVOKED"
+      ],
+      "requirements": [
+        "R05"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T11",
+      "title": "상태조회 불가",
+      "profile": "P-ATTR",
+      "fixture": "FX-ATTR",
+      "mutation": "상태 요청 타임아웃, 사용 가능한 캐시 없음",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "INDETERMINATE",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "INDETERMINATE",
+      "businessDecision": "DEFER",
+      "reasonCodes": [
+        "TV_STATUS_UNAVAILABLE",
+        "BUS_EVIDENCE_PENDING"
+      ],
+      "requirements": [
+        "R05",
+        "R09"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T12",
+      "title": "상태 증거 최신성 초과",
+      "profile": "P-ATTR",
+      "fixture": "FX-ATTR",
+      "mutation": "상태 증거 나이 121초; 시험 한도 120초",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "INDETERMINATE",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "INDETERMINATE",
+      "businessDecision": "DEFER",
+      "reasonCodes": [
+        "TV_STATUS_STALE",
+        "BUS_EVIDENCE_PENDING"
+      ],
+      "requirements": [
+        "R05"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T13",
+      "title": "유효기간 만료",
+      "profile": "P-SIG",
+      "fixture": "FX-SIG",
+      "mutation": "프로파일의 유효기간 끝보다 31초 지남; 시험 오차 30초",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "FAIL",
+        "holderBinding": "NOT_APPLICABLE"
+      },
+      "technicalResult": "INVALID",
+      "businessDecision": "REJECT",
+      "reasonCodes": [
+        "TV_TIME_INVALID"
+      ],
+      "requirements": [
+        "R05"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T14",
+      "title": "필요 시점 증거 없음",
+      "profile": "P-EMP",
+      "fixture": "FX-EMP",
+      "mutation": "필수 발급·유효 시각을 확정할 증거 부족",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "INDETERMINATE",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "INDETERMINATE",
+      "businessDecision": "DEFER",
+      "reasonCodes": [
+        "TV_TIME_UNPROVEN",
+        "BUS_EVIDENCE_PENDING"
+      ],
+      "requirements": [
+        "R05"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T15",
+      "title": "보유자 키 불일치",
+      "profile": "P-ATTR",
+      "fixture": "FX-ATTR",
+      "mutation": "제시 증명의 키가 증명서 결합 키와 다름",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "FAIL"
+      },
+      "technicalResult": "INVALID",
+      "businessDecision": "REJECT",
+      "reasonCodes": [
+        "TV_HOLDER_MISMATCH"
+      ],
+      "requirements": [
+        "R06"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T16",
+      "title": "수신자 불일치",
+      "profile": "P-EMP",
+      "fixture": "FX-EMP",
+      "mutation": "제시 증명의 audience가 현재 수신기관과 다름",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "FAIL"
+      },
+      "technicalResult": "INVALID",
+      "businessDecision": "REJECT",
+      "reasonCodes": [
+        "TV_HOLDER_MISMATCH"
+      ],
+      "requirements": [
+        "R06"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T17",
+      "title": "새 거래에서 nonce 재사용",
+      "profile": "P-ATTR",
+      "fixture": "FX-ATTR",
+      "mutation": "성공 거래의 제시 증명을 새 requestId에 재사용",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "FAIL"
+      },
+      "technicalResult": "INVALID",
+      "businessDecision": "REJECT",
+      "reasonCodes": [
+        "TV_REPLAY"
+      ],
+      "requirements": [
+        "R06"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T18",
+      "title": "형식 미지원",
+      "profile": "P-ATTR",
+      "fixture": "FX-ATTR",
+      "mutation": "알려지지 않은 증거 형식으로 변경",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "INDETERMINATE",
+        "trust": "NOT_EVALUATED",
+        "authority": "NOT_EVALUATED",
+        "status": "NOT_EVALUATED",
+        "freshness": "NOT_EVALUATED",
+        "holderBinding": "NOT_EVALUATED"
+      },
+      "technicalResult": "INDETERMINATE",
+      "businessDecision": "DEFER",
+      "reasonCodes": [
+        "TV_PROFILE_UNSUPPORTED",
+        "BUS_EVIDENCE_PENDING"
+      ],
+      "requirements": [
+        "R03",
+        "R07"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T19",
+      "title": "금지 알고리즘",
+      "profile": "P-SIG",
+      "fixture": "FX-SIG",
+      "mutation": "수학적으로 검증되지만 시험 정책에서 금지한 알고리즘",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "FAIL",
+        "trust": "NOT_EVALUATED",
+        "authority": "NOT_EVALUATED",
+        "status": "NOT_EVALUATED",
+        "freshness": "NOT_EVALUATED",
+        "holderBinding": "NOT_APPLICABLE"
+      },
+      "technicalResult": "INVALID",
+      "businessDecision": "REJECT",
+      "reasonCodes": [
+        "TV_ALGORITHM_DISALLOWED"
+      ],
+      "requirements": [
+        "R03",
+        "R04"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T20",
+      "title": "기술 유효·업무 거절",
+      "profile": "P-SIG",
+      "fixture": "FX-SIG",
+      "mutation": "문서 기술 조건 정상; 업무 제출 기한 초과",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "NOT_APPLICABLE"
+      },
+      "technicalResult": "VALID",
+      "businessDecision": "REJECT",
+      "reasonCodes": [
+        "TV_OK",
+        "BUS_POLICY_REJECT"
+      ],
+      "requirements": [
+        "R01",
+        "R07"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T21",
+      "title": "기술 유효·추가 심사",
+      "profile": "P-EMP",
+      "fixture": "FX-EMP",
+      "mutation": "기술 조건 정상; 재직 사실 이의에 따라 업무 심사 필요",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "VALID",
+      "businessDecision": "REVIEW",
+      "reasonCodes": [
+        "TV_OK",
+        "BUS_REVIEW_REQUIRED"
+      ],
+      "requirements": [
+        "R07",
+        "R12"
+      ],
+      "additionalAssertion": "",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T22",
+      "title": "확정 실패와 미확인 병존",
+      "profile": "P-EMP",
+      "fixture": "FX-EMP",
+      "mutation": "무결성 실패와 상태 서버 장애를 독립 증거로 구성",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "FAIL",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "INDETERMINATE",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "INVALID",
+      "businessDecision": "REJECT",
+      "reasonCodes": [
+        "TV_SIGNATURE_INVALID",
+        "TV_STATUS_UNAVAILABLE"
+      ],
+      "requirements": [
+        "R05",
+        "R07"
+      ],
+      "additionalAssertion": "집계 단위시험으로 수행; 통합 엔진이 무결성 실패 후 후속 검사를 생략하면 별도 skip 기대 결과를 기록",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T23",
+      "title": "장애 중 유효 캐시 사용",
+      "profile": "P-ATTR",
+      "fixture": "FX-ATTR",
+      "mutation": "조회 장애; 출처·서명·공급자 유효기간 정상, 상태 나이 119초",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "VALID",
+      "businessDecision": "ACCEPT",
+      "reasonCodes": [
+        "TV_OK"
+      ],
+      "requirements": [
+        "R05",
+        "R09"
+      ],
+      "additionalAssertion": "보고서에 캐시 사용 및 취득·유효 시각 기록",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T24",
+      "title": "검증된 목록 키 교체",
+      "profile": "P-SIG",
+      "fixture": "FX-SIG",
+      "mutation": "승인된 전환 증거로 연결되는 새 목록 서명키 사용",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "NOT_APPLICABLE"
+      },
+      "technicalResult": "VALID",
+      "businessDecision": "ACCEPT",
+      "reasonCodes": [
+        "TV_OK"
+      ],
+      "requirements": [
+        "R04",
+        "R09",
+        "R10"
+      ],
+      "additionalAssertion": "구·신 앵커와 전환 근거 식별자를 기록",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T25",
+      "title": "목록 서명 위조",
+      "profile": "P-SIG",
+      "fixture": "FX-SIG",
+      "mutation": "다운로드한 목록의 서명 무효, 유효 캐시 없음",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "INDETERMINATE",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "NOT_APPLICABLE"
+      },
+      "technicalResult": "INDETERMINATE",
+      "businessDecision": "DEFER",
+      "reasonCodes": [
+        "TV_TRUST_UNAVAILABLE",
+        "BUS_EVIDENCE_PENDING"
+      ],
+      "requirements": [
+        "R04"
+      ],
+      "additionalAssertion": "무효 목록을 근거로 증명서 폐기·신뢰를 단정하지 않음",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T26",
+      "title": "시계 오차 허용 경계",
+      "profile": "P-EMP",
+      "fixture": "FX-EMP",
+      "mutation": "유효기간 끝 경과가 정확히 시험 오차 30초",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "VALID",
+      "businessDecision": "ACCEPT",
+      "reasonCodes": [
+        "TV_OK"
+      ],
+      "requirements": [
+        "R05"
+      ],
+      "additionalAssertion": "초안 시험 정책은 경계 포함; 실제 운영 허용값과 분리",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T27",
+      "title": "필수 serviceId 누락",
+      "profile": "ALL",
+      "fixture": "FX-REQUEST",
+      "mutation": "필수 serviceId 누락",
+      "processingStatus": "REJECTED",
+      "checks": null,
+      "technicalResult": null,
+      "businessDecision": null,
+      "reasonCodes": [
+        "REQ_MALFORMED"
+      ],
+      "httpStatus": 400,
+      "requirements": [
+        "R09"
+      ],
+      "additionalAssertion": "technicalResult·businessDecision·checks 필드 부재; null 값을 가진 완료 보고서로 반환하지 않음",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T28",
+      "title": "타 기관 증거에 무권한 접근",
+      "profile": "ALL",
+      "fixture": "FX-REQUEST",
+      "mutation": "타 기관 증거에 무권한 접근",
+      "processingStatus": "REJECTED",
+      "checks": null,
+      "technicalResult": null,
+      "businessDecision": null,
+      "reasonCodes": [
+        "REQ_UNAUTHORIZED"
+      ],
+      "httpStatus": 403,
+      "requirements": [
+        "R08"
+      ],
+      "additionalAssertion": "technicalResult·businessDecision·checks 필드 부재; null 값을 가진 완료 보고서로 반환하지 않음",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T29",
+      "title": "승인 정책 미확보",
+      "profile": "ALL",
+      "fixture": "FX-REQUEST",
+      "mutation": "승인 정책 미확보",
+      "processingStatus": "ERROR",
+      "checks": null,
+      "technicalResult": null,
+      "businessDecision": null,
+      "reasonCodes": [
+        "SYS_POLICY_UNAVAILABLE"
+      ],
+      "httpStatus": 503,
+      "requirements": [
+        "R03"
+      ],
+      "additionalAssertion": "technicalResult·businessDecision·checks 필드 부재; null 값을 가진 완료 보고서로 반환하지 않음",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T30",
+      "title": "엔진 예외 주입",
+      "profile": "ALL",
+      "fixture": "FX-REQUEST",
+      "mutation": "엔진 예외 주입",
+      "processingStatus": "ERROR",
+      "checks": null,
+      "technicalResult": null,
+      "businessDecision": null,
+      "reasonCodes": [
+        "SYS_INTERNAL"
+      ],
+      "httpStatus": 500,
+      "requirements": [
+        "R09"
+      ],
+      "additionalAssertion": "technicalResult·businessDecision·checks 필드 부재; null 값을 가진 완료 보고서로 반환하지 않음",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T31",
+      "title": "같은 요청 재시도",
+      "profile": "P-ATTR",
+      "fixture": "FX-ATTR",
+      "mutation": "동일 requestId·동일 바이트·동일 컨텍스트 재요청",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "VALID",
+      "businessDecision": "ACCEPT",
+      "reasonCodes": [
+        "TV_OK"
+      ],
+      "requirements": [
+        "R06",
+        "R09",
+        "R10"
+      ],
+      "additionalAssertion": "최초 reportId·evaluatedAt·결과 재사용; 새 검증 실행과 nonce 재사용 공격으로 오인하지 않음",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "T32",
+      "title": "상태 캐시 허용 경계",
+      "profile": "P-ATTR",
+      "fixture": "FX-ATTR",
+      "mutation": "공급자 유효기간 충족; 상태 나이 정확히 120초",
+      "processingStatus": "COMPLETED",
+      "checks": {
+        "integrity": "PASS",
+        "trust": "PASS",
+        "authority": "PASS",
+        "status": "PASS",
+        "freshness": "PASS",
+        "holderBinding": "PASS"
+      },
+      "technicalResult": "VALID",
+      "businessDecision": "ACCEPT",
+      "reasonCodes": [
+        "TV_OK"
+      ],
+      "requirements": [
+        "R05",
+        "R09"
+      ],
+      "additionalAssertion": "정상 유효기간을 초과하지 않은 경계값임을 fixture에 명시",
+      "executionStatus": "NOT_RUN"
+    }
+  ],
+  "manualTests": [
+    {
+      "id": "J01",
+      "requirements": [
+        "R01",
+        "R08"
+      ],
+      "title": "서비스 목적·처리 근거·제공/위탁 분류",
+      "expectedEvidence": "기관별 법무·개인정보 책임자의 검토 기록과 DT01~DT05 명세가 있고 빈 필수 항목이 없음",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "J02",
+      "requirements": [
+        "R08"
+      ],
+      "title": "최소수집·로그 노출·보존·파기",
+      "expectedEvidence": "SVC-02가 불필요한 전체 주소를 요구하지 않으며 로그에 원문·토큰·비밀키가 없고 보존·파기 절차의 실행 증거가 있음",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "J03",
+      "requirements": [
+        "R09",
+        "R12"
+      ],
+      "title": "사고·대체 경로·이의 처리",
+      "expectedEvidence": "상태 서버 장애와 오발급 정정을 모의하여 담당·연락·보류 안내·대체 제출·재판정 이력이 남음",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "J04",
+      "requirements": [
+        "R03",
+        "R10"
+      ],
+      "title": "버전 변경과 과거 보고서 보존",
+      "expectedEvidence": "미지원 코드 버전을 수용하지 않고, 정책 변경 뒤 새 보고서를 만들며 과거 보고서는 변하지 않음",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "J05",
+      "requirements": [
+        "R03",
+        "R08",
+        "R09"
+      ],
+      "title": "악성 입력·외부 접근·격리",
+      "expectedEvidence": "외부 엔티티·내부망 URL·과대 입력을 제한하고 기관 간 자료가 노출되지 않음; 프로세스가 중단되지 않음",
+      "executionStatus": "NOT_RUN"
+    },
+    {
+      "id": "J06",
+      "requirements": [
+        "R10",
+        "R11"
+      ],
+      "title": "독립 구현 간 비교·부하·복구",
+      "expectedEvidence": "서로 다른 구현 조합의 결과를 비교하고 차이를 해소하며 O06의 합의 성능·복구 기준을 충족",
+      "executionStatus": "NOT_RUN"
+    }
+  ]
+}
