@@ -1,0 +1,149 @@
+OpenID4VP and OpenID4VCI conformance tests are complete and open for self-certification - OpenID Foundation
+Skip to content
+OpenID Foundation
+>
+Certification
+>
+OpenID4VP and OpenID4VCI conformance tests are complete and open for self-certification
+OpenID4VP and OpenID4VCI conformance tests are complete and open for self-certification
+Published August 7, 2026
+The OpenID Foundation calls on implementers to self-certify now and be among the first to go on record.
+The OpenID Foundation is pleased to announce that the conformance test suites for both the
+OpenID for Verifiable Presentations (OpenID4VP)
+and
+OpenID for Verifiable Credential Issuance (OpenID4VCI)
+protocols used with the
+High Assurance Interoperability Profile (HAIP)
+are now complete and open for
+self-certification
+.
+Wallet providers, issuers, verifiers, government agencies, and vendors can now run the test suites free of charge, and those that wish to go on the record and self-certify conformance can do so for a
+modest fee
+to the OpenID Foundation.
+OpenID4VP and OpenID4VCI are two of the world's most widely adopted specifications for digital identity wallets and verifiable credentials. OpenID4VP defines how credentials are presented and verified securely and to a consistent standard. OpenID4VCI defines how those credentials are issued into wallets in the first place. The two specifications are already at work in digital identity programs across more than 30 jurisdictions worldwide.
+The significance of this development becomes clear when you consider the basics of how digital wallets work. A digital identity wallet is only as secure, interoperable, and easy to deploy as the quality of the implementations supporting it. The OpenID Foundation's open-source tests make it free to build and validate those implementations, and self-certification now makes it possible to declare conformance publicly.
+Deployment is already underway. Governments and platforms across the world have selected OpenID4VP and OpenID4VCI as the foundation for their digital identity programs. Among them are all European Member states as part of EIDAS 2.0, the UK, Switzerland, India, and California. Dozens more jurisdictions are poised to follow, including the Western Balkans and Brazil. As these programs move from selection to implementation, implementers need a clear, proven way to demonstrate that their implementations follow the specifications correctly.
+The test suites include positive and negative tests that comprehensively address the OpenID4VP 1.0 and OpenID4VCI 1.0 specifications in the context of the High Assurance Interoperability Profile 1.0.
+Proven in the real world
+Both test suites reflect the collective effort of implementers from across the world who put them through their paces in real conditions across multiple rounds of real-world interoperability testing.
+In
+May 2025
+, the OpenID Foundation convened a landmark interoperability event bringing together more than a dozen wallet providers and verifiers from around the globe.
+Out of 224 possible pairings, 153 tests were conducted, with over 90% passing successfully. This was clear evidence that the OpenID4VP specification works in the real world, across platforms, devices, and credential formats.
+In
+July 2025
+, the OpenID Foundation conducted its third OpenID4VCI interoperability event, bringing together seven issuers and five wallet providers for pairwise testing across Europe, New Zealand, North America, and beyond.
+Of the 47 pairs tested, 87% passed successfully, with no material concerns identified with the specification or the test suite.
+In
+November 2025
+, the OpenID Foundation conducted an event focused on the HAIP 1.0 to mature the specification and test suites for this key profile of OpenID4VP and OpenID4VCI.
+OpenID4VP 1.0+ HAIP 1.0 received a 98% passing rate and OpenID4VCI 1.0+HAIP 1.0 a 73% and an 82% passing rate on two different configurations. This was part of the final gate to take HAIP 1.0 to final in December 2025.
+The open source conformance tests were central to both processes.
+Implementers used them to validate their implementations before testing against peers, and fed their findings back to the
+Digital Credentials Protocols Working Group
+(DCP WG).
+That feedback has been incorporated. The DCP WG has reviewed the results of both events and confirmed both suites are ready to be rolled out.
+A public declaration of readiness
+Self-certification gives implementers a way to demonstrate, publicly and formally, that their implementations conform to the OpenID4VP and OpenID4VCI protocols when combined with the HAIP 1.0 specifications. It is structured around the roles that matter in each ecosystem.
+Under OpenID4VP, implementers can certify against two distinct roles - as a wallet or a verifier. Under OpenID4VCI, self-certification can be declared against two distinct roles - as an issuer or as a wallet provider. Each role has its own test profile, allowing implementers to certify the specific part of the ecosystem they operate in.
+Additionalyl, wallets can certify for the W3C Browser API appendix of OpenID4VP.
+For issuers - whether it is a government agency issuing digital identity credentials or a platform issuing professional qualifications - self-certification provides verifiable, public evidence that their implementation meets the same high bar for security and interoperability as deployments worldwide. For vendors and wallet providers, it is an opportunity to differentiate and to be recognized as a trusted, compliant partner in an ecosystem where the bar for compliance is rising.
+The tests are free to run on the OpenID Foundation's servers or on an implementer's own infrastructure.
+Once the tests have been passed and a
+modest fee
+paid, the results can be submitted to the OpenID Foundation for publishing on the Foundation's website, granting the right to use the ‘OpenID Certified’ logo.
+Over time, implementations certified to shared global standards also help to future-proof cross-border use cases and interoperability.
+The case for self-certifying now
+The program builds on the certification model that underpins
+OpenID Connect
+and the
+FAPI
+security profile, which are already embedded in the infrastructure of Open Banking and digital identity programs across dozens of countries.
+In Brazil, certification against OpenID Foundation specifications began as a voluntary program before becoming a mandatory condition of participation in the country's open banking ecosystem.
+The OpenID Foundation is in active dialogue with the EU Digital Identity Wallet ecosystem and other jurisdictions about conformance requirements and programs to support their ecosystems and the local implementers of OpenID4VP, OpenID4VCI and HAIP.
+Some implementers will self-certify because their ecosystem governance or regulatory framework will eventually require it. Others will self-certify now to get ahead of that requirement, to be publicly recognized, and to signal to partners and customers that their implementation is already there. Those who act now will be the first names publicly recognized on the OpenID Foundation website, and the ones their ecosystem partners will look to as the benchmark for what good looks like.
+Gail Hodges, Executive Director of the OpenID Foundation, said:
+"We are moving towards a world in which people are able to prove who they are digitally without revealing more than they need to. Until now, there has been no independent way for governments, regulators or ecosystem partners to verify that different implementations of OpenID for Verifiable Presentations and OpenID for Verifiable Credential Issuance would actually work together or meet the security requirements built into these specifications.
+"This is also a firm foundation from which individual jurisdictions can build and tailor their own conformance requirements to meet their specific needs. We are calling on every implementer of OpenID4VP, OpenID4VCI and HAIP to self-certify now and be among the first publicly recognized for meeting this global standard."
+Call to Action & Early Recognition
+Implementers can find out how to certify their implementations at
+https://openid.net/certification/how-to-certify-your-implementation/
+, and can contact certification@oidf.org for help. Instructions are available for both
+OpenID4VP
+and
+OpenID4VCI
+.
+As an incentive for early movers, OIDF plans to recognize the implementers that complete self-certification on one or more specifications within 14 days after self-certification becomes available.
+Ecosystem leaders can reach out to director@oidf.org for information on conformance programs and best practices, including the benefits of a strategic relationship with OIDF, ecosystem pricing, and third-party licensing options (e.g. via approved Test Service Providers).
+Implementers who took part in the testing program share their perspectives:
+Lee Campbell, Android Auth, Identity and Payments Lead, Google
+, said: “The success of the digital identity ecosystem depends on globally interoperable standards that are widely adopted and implemented correctly.
+Over the last few years, we have actively contributed to the OpenID4VP, OpenID4VCI, and HAIP specifications, and we are excited to see the OpenID Foundation publish the final editions. We want to support all our app and wallet developers to implement these standards correctly on our platform. With the release of these conformance tests, we now have a proven mechanism to ensure security, interoperability, and consistency across the Android ecosystem.”
+Takahiko Kawasaki, Co-Founder of Authlete
+, said: “As a long-time implementer of and contributor to OpenID standards, Authlete has provided testing infrastructure to support the development of multiple OpenID Foundation conformance test suites, including the HAIP test suite for OpenID4VCI.
+We believe open standards deliver their full value only when they are implemented correctly and work securely and interoperably in practice. Robust conformance testing gives implementers, regulators and relying parties confidence that different systems will work together as intended. We are proud that our contribution helps strengthen trust across the verifiable credentials ecosystem.”
+Olivier Meunier, Founder, Tessaliq
+, said: "Running the OpenID4VP 1.0 + HAIP 1.0 verifier conformance suite gave us a single objective answer to whether our implementations followed the spec, instead of having to compare them against other implementations.
+That kind of independent reference is what makes the EU verifier ecosystem viable in practice."
+Tamas Horvath, Managing Partner, TrustID Solutions
+, said: "The OpenID self-assessment tests provide a valuable foundation for any wallet or relying party self-evaluation or enrollment process.
+Trust in the EUDI ecosystem can only be built through standardized implementations and consistent, high-quality assurance. That is the future we believe in and are working toward."
+Stefan Charsley, CTO, MyMahi
+, said: "The OpenID4VC conformance tests are a vital tool for ensuring implementations align in both success and failure scenarios, helping to iron out the hard-to-find edge cases, and promoting interoperability no matter where in the world you are from."
+Helge Michael, CEO, Lissi GmbH
+, said: "The OpenID4VC test suite greatly facilitates the practical implementation of use cases with digital identity wallets and ensures global interoperability."
+Lukas Han, Head of Research, Hopae S.A.
+, said: "The OpenID4VC test suite fills a critical gap in the ecosystem. As implementers, we've long needed a way to validate conformance against the spec rather than against each other's interpretations of it. This is what makes interoperability real instead of aspirational."
+Jan Vereecken, Chief Product Officer, Meeco
+, said: "OpenID4VC HAIP is shaping up to be one of the most consequential profiles for high-assurance verifiable digital credentials, not just in Europe but globally.
+The OpenID Foundation's conformance suite, covering both OpenID4VCI and OpenID4VP across issuer, wallet, and verifier, gives it real teeth. The breadth of coverage, spanning required and optional features, success scenarios and failure scenarios alike, is exactly what the ecosystem needs. At Meeco, we see conformance testing as an essential part of the work, not a checkbox to tick. It is how we give partners and collaborators confidence that our platform is interoperable in practice, not just on paper."
+Oriol Canadés, Founder, Fikua
+, said: "As we build toward the EU Digital Identity Wallet, conformance to OpenID4VP, OpenID4VCI and HAIP is no longer optional; it is the foundation regulators and relying parties will depend on.
+The OpenID Foundation test suite lets Fikua validate that our issuer, wallet and verifier all speak the same language as the rest of Europe."
+Wayne Chang, Founder and CEO, SpruceID
+, said: "SpruceID is proud to support the OpenID Foundation's standardization efforts, enabling interoperability across issuers, holders, and verifiers.
+This work directly supports our mission to give users control over their data across the web, ensuring that there are many ways for users to obtain useful verifiable digital credentials and meaningful ways to use them securely, such as applying for state benefits or opening a bank account. Conformance to standards ensures that systems are built in ways that increase user choice, prevent fraud, and protect privacy."
+Niels Klomp, CTO, Sphereon
+, said: "Sphereon has been developing open-source libraries for the OpenID specification for credential issuance and verification since early drafts.
+We know from experience that interoperability is hard and although conformance is not to be confused with interoperability, it is the absolute prerequisite for any self-respecting solution."
+Henry Hang, CTO, Turing Space
+, said: "Conformance testing is essential to building real-world interoperability, and we are proud to contribute to strengthening the ecosystem, making the world more trustworthy."
+About
+The OpenID Foundation (OIDF)
+The OpenID Foundation (OIDF) is a global open standards body committed to building trusted identity ecosystems. Our mission is to lead the global community in identity standards that are secure, interoperable, and privacy respecting. Founded in 2007, we are a community of technical experts. The Foundation's OpenID Connect standard is now used by billions of people across millions of applications. More recently, the FAPI security profile - built on OAuth 2.0 - has become the standard of choice for interoperable Open Banking and Open Data implementations, while OpenID for Verifiable Credentials specifications are underpinning a new generation of digital wallets. Today, the OpenID Foundation's standards are the connective tissue that enable people to assert their identity and access their data at scale, the scale of the internet, enabling "networks of networks" to interoperate globally. Individuals, companies, governments and non-profits are encouraged to join or participate. Find out more at
+openid.net
+.
+Tagged
+Certification
+conformance testing
+Ecosystem Conformance
+Self-Certification
+Manage Cookie Consent
+To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions.
+Functional
+Functional
+Always active
+The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.
+Preferences
+Preferences
+The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user.
+Statistics
+Statistics
+The technical storage or access that is used exclusively for statistical purposes.
+The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.
+Marketing
+Marketing
+The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.
+Manage options
+Manage services
+Manage {vendor_count} vendors
+Read more about these purposes
+Accept
+Deny
+View preferences
+Save preferences
+View preferences
+{title}
+{title}
+{title}
+Manage consent

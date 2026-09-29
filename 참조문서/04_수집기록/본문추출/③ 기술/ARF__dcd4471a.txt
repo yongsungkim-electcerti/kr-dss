@@ -1,0 +1,60 @@
+European Digital Identity
+Skip to content
+★ Regulation (EU) No 910/2014
+Architecture and Reference Framework for the EU Digital Identity Wallet
+The single source of truth: main narrative, normative high-level
+         requirements, technical specifications and open discussion topics.
+Read the Main Document
+Browse the Annexes
+Download PDF
+Latest release
+v3.0.0
+· 21 July 2026
+Changelog
+All releases
+Explore the documentation
+Main Document
+Start here — the architecture, roles and trust model of the ecosystem.
+Open →
+Annexes & HLRs
+Definitions, high-level requirements, rulebooks and design guides.
+Open →
+Discussion Topics
+Open questions: privacy, zero-knowledge proof, wallet-to-wallet and more.
+Open →
+Technical Specifications
+TS1–TS12, the normative specifications for interoperability.
+Open →
+About the ARF
+¶
+The
+European Digital Identity Regulation
+(
+Regulation (EU) No 910/2014
+,
+consolidated) requires every Member State to offer a Wallet that lets people
+identify, authenticate, and share attributes securely, fully under the user's
+control. The Architecture and Reference Framework (ARF) is the common technical
+baseline behind it, built on that legal text and its Commission Implementing
+Regulations.
+About the EUDI Wallet and the ARF →
+Key resources
+Official EUDI Wallet site
+The European Commission's EUDI Wallet space.
+Open →
+FAQ
+Frequently asked questions about the EUDI Wallet.
+Open →
+EU Digital Identity Regulation
+Regulation (EU) No 910/2014 (consolidated).
+Open →
+European Commission
+EUDI Wallet policy and toolbox.
+Open →
+Reference Implementation
+Build, test and explore working components.
+Open →
+Functional Conformance
+The conformance assessment framework.
+Open →
+Back to top

@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scriptlets &mdash; GITB TDL Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.css" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d4340937"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Types" href="../types/index.html" />
+    <link rel="prev" title="Test cases" href="../testcase/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GITB TDL Documentation
+              <img src="../_static/logo_itb.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                GITB TDL version 1.30.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helloWorld/index.html">Hello world</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testsuite/index.html">Test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testcase/index.html">Test cases</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Scriptlets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#elements">Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#metadata">Metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#imports">Imports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#params">Params</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#steps">Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output">Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#returning-early-from-a-scriptlet">Returning early from a scriptlet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamic-presentation-in-scriptlets">Dynamic presentation in scriptlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamic-steps-in-scriptlets">Dynamic steps in scriptlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scriptlet-variable-scope">Scriptlet variable scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scriptlets-embedded-in-test-cases">Scriptlets embedded in test cases</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../types/index.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../expressions/index.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constructs/index.html">Test steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handlers/index.html">Test step handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Example test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Release history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GITB TDL Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Scriptlets</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="scriptlets">
+<span id="index-0"></span><span id="id1"></span><h1>Scriptlets<a class="headerlink" href="#scriptlets" title="Link to this heading"></a></h1>
+<section id="overview">
+<span id="scriptlets-overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Scriptlets are reusable blocks of test steps that can be called during a test case’s execution. They are similar to
+function blocks in programming languages considering that:</p>
+<ul class="simple">
+<li><p>They can receive <strong>inputs</strong> and may produce <strong>outputs</strong>.</p></li>
+<li><p>They can define their own <strong>imports</strong>.</p></li>
+<li><p>They define a <strong>new scope</strong> but can also read data from <strong>parent scopes</strong>.</p></li>
+</ul>
+<p>Extracting reusable sections of test steps is a common need in test suites where certain set of tasks are frequently
+encountered. Consider for example a test suite that contains numerous test cases that at some point need to validate
+certain received data against the same common validation artefacts. Rather than repeating the same set of steps and
+artefact imports across all test cases, these validation steps can be defined in a scriptlet that is called wherever
+necessary. Scriptlets are defined as separate XML documents within a test suite, but can also be defined
+<a class="reference internal" href="#scriptlets-embedded"><span class="std std-ref">embedded within specific test cases</span></a>.</p>
+<p>The following example is a complete scriptlet that is used to validate a provided XML document against an XML Schema
+and a Schematron file. As output the scriptlet returns the name of the file’s root element:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;scriptlet</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;validateDocument&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;imports&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;schemaToUse&quot;</span><span class="nt">&gt;</span>resources/aSchemaFile.xsd<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;schematronToUse&quot;</span><span class="nt">&gt;</span>resources/aSchematronFile.sch<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/imports&gt;</span>
+<span class="w">    </span><span class="nt">&lt;params&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;contentToValidate&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/params&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XmlValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate XML structure&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>$contentToValidate<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xsd&quot;</span><span class="nt">&gt;</span>$schemaToUse<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XmlValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate business rules&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>$contentToValidate<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;schematron&quot;</span><span class="nt">&gt;</span>$schematronToUse<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;rootName&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$contentToValidate&quot;</span><span class="nt">&gt;</span>name(/*)<span class="nt">&lt;/assign&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="w">    </span><span class="nt">&lt;output</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;rootName&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/scriptlet&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Returning early:</strong> To stop a scriptlet’s remaining steps before its <code class="docutils literal notranslate"><span class="pre">steps</span></code> block completes naturally, use an
+<a class="reference internal" href="../constructs/index.html#tdl-step-exit"><span class="std std-ref">exit</span></a> step with <code class="docutils literal notranslate"><span class="pre">scope=&quot;SCRIPTLET&quot;</span></code>. The scriptlet’s <code class="docutils literal notranslate"><span class="pre">output</span></code> expressions are still evaluated
+before returning to the caller. See <a class="reference internal" href="../constructs/index.html#tdl-step-exit-scope"><span class="std std-ref">Stopping execution without ending the test session</span></a> for details and an example.</p>
+</div>
+<p>Scriptlets are used in test cases or other scriptlets by means of the <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call step</span></a>. Considering the
+previous example, an example call from a test case would be as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!--</span>
+<span class="cm">    Assume the scriptlet is defined in the same test suite in file &quot;scriptlets/validateDocument.xml&quot;.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;call</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;call1&quot;</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;scriptlets/validateDocument.xml&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
+<span class="cm">        The variable &quot;anXmlFile&quot; contains the XML content to validate.</span>
+<span class="cm">    --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;contentToValidate&quot;</span><span class="nt">&gt;</span>$anXmlFile<span class="nt">&lt;/input&gt;</span>
+<span class="nt">&lt;/call&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Log the XML file&#39;s root element name.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;log&gt;</span>$call1{rootName}<span class="nt">&lt;/log&gt;</span>
+</pre></div>
+</div>
+<p>The following table provides an overview of the attributes and child elements that a <code class="docutils literal notranslate"><span class="pre">scriptlet</span></code> may have. A more detailed discussion per case
+follows in the subsequent sections.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;id</p></th>
+<td><p>Yes</p></td>
+<td><p>A unique identifier for the scriptlet.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>metadata</p></th>
+<td><p>No</p></td>
+<td><p>A block containing the metadata used to describe the scriptlet.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>namespaces</p></th>
+<td><p>No</p></td>
+<td><p>An optional set of namespaces to define the expression languages used in the scriptlet.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>imports</p></th>
+<td><p>No</p></td>
+<td><p>An optional set of imports used to load additional resources.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>params</p></th>
+<td><p>No</p></td>
+<td><p>An optional set of parameters that the scriptlet expects as input when called.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>variables</p></th>
+<td><p>No</p></td>
+<td><p>An optional set of variables that are used locally within the scriptlet.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>steps</p></th>
+<td><p>Yes</p></td>
+<td><p>The sequence of steps that this scriptlet foresees.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>output</p></th>
+<td><p>No</p></td>
+<td><p>An optional set of output values that the scriptlet will return to its caller.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="elements">
+<span id="scriptlets-elements"></span><h2>Elements<a class="headerlink" href="#elements" title="Link to this heading"></a></h2>
+<p>The following sections discuss the purpose and use of each element contained within the <code class="docutils literal notranslate"><span class="pre">scriptlet</span></code> definition.</p>
+<section id="metadata">
+<span id="scriptlets-elements-metadata"></span><span id="index-1"></span><h3>Metadata<a class="headerlink" href="#metadata" title="Link to this heading"></a></h3>
+<p>The structure and content of the <code class="docutils literal notranslate"><span class="pre">metadata</span></code> element is identical to the one defined for the <a class="reference internal" href="../testsuite/index.html#test-suite-metadata"><span class="std std-ref">test suite</span></a>
+and its <a class="reference internal" href="../testcase/index.html#test-case-metadata"><span class="std std-ref">test cases</span></a>. In the case of scriptlets however, no such metadata is displayed to users
+meaning that any information provided here is purely for test developers. In contrast to test suites and test cases,
+the <code class="docutils literal notranslate"><span class="pre">metadata</span></code> block for scriptlets is optional and can be fully skipped.</p>
+<p>For further information on this element check the <a class="reference internal" href="../testcase/index.html#test-case-metadata"><span class="std std-ref">test case metadata documentation</span></a>.</p>
+</section>
+<section id="namespaces">
+<span id="scriptlets-elements-namespaces"></span><span id="index-2"></span><h3>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">namespaces</span></code> element is identical in structure and purpose to the one defined for <a class="reference internal" href="../testcase/index.html#test-case-namespaces"><span class="std std-ref">test cases</span></a>.
+It is used to declare one or more namespace mappings (prefix to value), allowing the declared prefixes to be used in the scriptlet’s
+XPath expressions.</p>
+<p>If the scriptlet is called by a test case or another scriptlet that already defines namespaces, these definitions are inherited. In case
+the current scriptlet defines a namespace prefix that has already been defined, then the scriptlet’s own definition overrides the inherited
+one.</p>
+<p>For further information on this element check the <a class="reference internal" href="../testcase/index.html#test-case-namespaces"><span class="std std-ref">test case namespaces documentation</span></a>.</p>
+</section>
+<section id="imports">
+<span id="scriptlets-elements-imports"></span><span id="index-3"></span><h3>Imports<a class="headerlink" href="#imports" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">imports</span></code> element allows the use of arbitrary resources from the same or another test suite. The purpose and structure
+of this element is identical to the one defined for <a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">test cases</span></a>. One notable difference in the case
+of scriptlets however, is that imports lacking an explicit <code class="docutils literal notranslate"><span class="pre">from</span></code> attribute are loaded from the test suite containing the
+scriptlet, which is not necessarily the same as the test suite containing the currently executing test case.</p>
+<p>For further information on this element check the <a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">test case imports documentation</span></a>.</p>
+</section>
+<section id="params">
+<span id="scriptlets-elements-params"></span><span id="index-8"></span><span id="index-7"></span><span id="index-6"></span><span id="index-5"></span><span id="index-4"></span><h3>Params<a class="headerlink" href="#params" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">params</span></code> element is used to define the inputs that a scriptlet expects. Each such input is defined as a <code class="docutils literal notranslate"><span class="pre">var</span></code>
+element with the following structure:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;defaultEmpty</p></th>
+<td><p>No</p></td>
+<td><p>Whether the parameter should be set with an empty value if no corresponding input is provided when the scriptlet is called.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;name</p></th>
+<td><p>Yes</p></td>
+<td><p>The name of the parameter. It is with this name that the parameter can be referenced within the scriptlet.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;optional</p></th>
+<td><p>No</p></td>
+<td><p>A boolean value defining whether the parameter is optional (true) or not (false - the default if missing).</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;type</p></th>
+<td><p>Yes</p></td>
+<td><p>The type of the parameter. One of the GITB data types can be used (see <a class="reference internal" href="../types/index.html#test-case-types"><span class="std std-ref">Types</span></a>).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>value</p></th>
+<td><p>No</p></td>
+<td><p>One or more values for the parameter acting as the parameter’s default value. More than one values are applicable in case of a <code class="docutils literal notranslate"><span class="pre">map</span></code> or <code class="docutils literal notranslate"><span class="pre">list</span></code> type.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Whenever a scriptlet is called using a <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a> step, each of its declared parameters must be matched by provided inputs.
+The exception are parameters that are:</p>
+<ul class="simple">
+<li><p>Set with a specific default value. The parameter’s value will be the provided default value.</p></li>
+<li><p>Defined as <code class="docutils literal notranslate"><span class="pre">defaultEmpty</span></code>. The parameter will be defined as a variable and will be set with an empty value. This is particularly interesting
+for optional <code class="docutils literal notranslate"><span class="pre">list</span></code> or <code class="docutils literal notranslate"><span class="pre">map</span></code> parameters.</p></li>
+<li><p>Defined as <code class="docutils literal notranslate"><span class="pre">optional</span></code>.</p></li>
+</ul>
+<p>Parameters for which defaults are specified may also be provided via inputs of a <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a> step, in which case the input overrides the default value.
+Parameters are available in the scope of the scriptlet and can be used in the same way as other variables. For scriptlets that are not
+<a class="reference internal" href="#scriptlets-embedded"><span class="std std-ref">embedded within test cases</span></a>, using parameters provides state from the test session’s context to the scriptlet.</p>
+<p>The following snippet illustrates a scriptlet that defines a series of parameters using the available option (see the inline comments for explanations on each case):</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;scriptlet</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;myScriptlet&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;params&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Required parameter that must be provided when calling the scriptlet. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;requiredParam&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Optional parameter that if not provided when calling the scriptlet will be missing. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;optionalParam&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="na">optional=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Optional parameter with a default value. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;optionalParamWithDefault&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;&lt;value&gt;</span>Default<span class="nt">&lt;/value&gt;&lt;/var&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Optional map parameter with two default entries. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;optionalMapParamWithDefault&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;map&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;value</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;key1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>Value1<span class="nt">&lt;/value&gt;</span>
+<span class="w">            </span><span class="nt">&lt;value</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;key2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>Value2<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/var&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Optional list parameter with two default entries. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;optionalListParamWithDefault&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;list[string]&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;value&gt;</span>Value1<span class="nt">&lt;/value&gt;</span>
+<span class="w">            </span><span class="nt">&lt;value&gt;</span>Value2<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/var&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Optional map parameter that will be empty if not provided. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;optionalEmptyMapParam&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;map&quot;</span><span class="w"> </span><span class="na">defaultEmpty=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/params&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/scriptlet&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When a parameter is provided with a default value or is defined as <code class="docutils literal notranslate"><span class="pre">defaultEmpty</span></code>, it is forcibly considered as optional.</p>
+</div>
+</section>
+<section id="variables">
+<span id="scriptlets-elements-variables"></span><span id="index-9"></span><h3>Variables<a class="headerlink" href="#variables" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">variables</span></code> element can be defined to create one or more variables that will be used during the scriptlet’s execution.
+The purpose and structure of this element is identical to the one defined for <a class="reference internal" href="../testcase/index.html#test-case-variables"><span class="std std-ref">test cases</span></a>.
+One notable point is that a scriptlet’s variables, as well as all other data in its scope, is isolated from the test
+case or scriptlet that is calling it, unless this is a scriptlet <a class="reference internal" href="#scriptlets-embedded"><span class="std std-ref">embedded within a test case</span></a>.</p>
+<p>For further information on this element check the <a class="reference internal" href="../testcase/index.html#test-case-variables"><span class="std std-ref">test case variables documentation</span></a>.</p>
+</section>
+<section id="steps">
+<span id="scriptlets-elements-steps"></span><span id="index-10"></span><h3>Steps<a class="headerlink" href="#steps" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">steps</span></code> element is where the scriptlet’s testing logic is implemented. It consists of a sequence of test steps, each realised by means
+of a GITB TDL step construct. The purpose and structure of this element is identical to the one defined for <a class="reference internal" href="../testcase/index.html#test-case-steps"><span class="std std-ref">test cases</span></a>,
+with the only notable difference being how <strong>actors</strong> are considered in <a class="reference internal" href="../constructs/index.html#tdl-messaging-steps"><span class="std std-ref">messaging steps</span></a>.</p>
+<p>A test case’s <a class="reference internal" href="../testcase/index.html#test-case-actors"><span class="std std-ref">actors</span></a> represent the parties involved in the test. Each actor is assigned an <code class="docutils literal notranslate"><span class="pre">id</span></code>
+which is then referenced in <a class="reference internal" href="../constructs/index.html#tdl-messaging-steps"><span class="std std-ref">messaging steps</span></a> to determine the flow of communications. A scriptlet
+does not include such an actor definition block given that it is not the scriptlet’s role to determine which actors
+are simulated and which is the system under test (SUT). If a scriptlet includes <a class="reference internal" href="../constructs/index.html#tdl-messaging-steps"><span class="std std-ref">messaging steps</span></a>
+the test developer needs to ensure that the actor IDs that are referenced will match those defined by its calling test cases.</p>
+<p>For further information on the scriptlet’s <code class="docutils literal notranslate"><span class="pre">steps</span></code> element and the different constructs it can include check the <a class="reference internal" href="../testcase/index.html#test-case-steps"><span class="std std-ref">test case steps documentation</span></a>.</p>
+</section>
+<section id="output">
+<span id="scriptlets-elements-output"></span><span id="index-15"></span><span id="index-14"></span><span id="index-13"></span><span id="index-12"></span><span id="index-11"></span><h3>Output<a class="headerlink" href="#output" title="Link to this heading"></a></h3>
+<p>A scriptlet’s results are returned by the <code class="docutils literal notranslate"><span class="pre">output</span></code> elements that it defines. These outputs are the only means a scriptlet
+has to communicate information back to its caller, be it a test case or another scriptlet, but can be omitted in case
+no results are expected. The structure of each <code class="docutils literal notranslate"><span class="pre">output</span></code> element is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;asTemplate</p></th>
+<td><p>No</p></td>
+<td><p>Whether or not the result will be considered as a template for placeholder replacement (see <a class="reference internal" href="../expressions/index.html#test-case-expressions-template-files"><span class="std std-ref">Expressions and templates</span></a>). By default this is “false”.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;name</p></th>
+<td><p>Yes</p></td>
+<td><p>A name with which the output can be referenced.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;lang</p></th>
+<td><p>No</p></td>
+<td><p>The expression language prefix to use to evaluate the contained expression (see <a class="reference internal" href="../testcase/index.html#test-case-namespaces"><span class="std std-ref">Namespaces</span></a> and <a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">Expressions</span></a>).</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;source</p></th>
+<td><p>No</p></td>
+<td><p>A variable reference to identify a source <code class="docutils literal notranslate"><span class="pre">object</span></code> variable upon which the contained expression should be evaluated.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The content of the <code class="docutils literal notranslate"><span class="pre">output</span></code> element is an <a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">expression</span></a> that is used once the scriptlet’s processing
+is complete to calculate the output’s value. In the special case where a result needs to be calculated from an XPath expression
+on an XML document, the <code class="docutils literal notranslate"><span class="pre">source</span></code> attribute can be used to define the document to consider. The value returned by an <code class="docutils literal notranslate"><span class="pre">output</span></code>
+element is calculated as follows:</p>
+<ol class="arabic simple">
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">output</span></code> element is non-empty, its content is used as an expression to calculate the return value.</p></li>
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">output</span></code> element is empty the <code class="docutils literal notranslate"><span class="pre">name</span></code> of the <code class="docutils literal notranslate"><span class="pre">output</span></code> element must match the name of a variable present
+in the scriptlet’s scope. If matched, the value of the variable is returned.</p></li>
+</ol>
+<p>Taking the sample scriptlet presented previously, we want to return from the scriptlet a single output named “rootName”
+which is set with the validated document’s root element name. A first way to achieve this is to reference a variable
+from the scriptlet’s scope that contains the calculated value.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;scriptlet</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;validateDocument&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span>...
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Calculate the document&#39;s root name and assign it to a variable named &quot;rootName&quot;.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;rootName&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$contentToValidate&quot;</span><span class="nt">&gt;</span>name(/*)<span class="nt">&lt;/assign&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
+<span class="cm">        Reference the &quot;rootName&quot; variable from the scriptlet&#39;s scope.</span>
+<span class="cm">    --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;output</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;rootName&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/scriptlet&gt;</span>
+</pre></div>
+</div>
+<p>Using this approach we treat the <code class="docutils literal notranslate"><span class="pre">output</span></code> element simply as a definition for which we need to ensure that, once complete,
+the scriptlet’s scope will include a similarly named variable. Note how the <code class="docutils literal notranslate"><span class="pre">output</span></code> element is itself empty given that
+it should not evaluate any expression to return its value. An alternative approach would be to use this expression to
+define the value as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;scriptlet</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;validateDocument&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span>...
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;documentRootName&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$contentToValidate&quot;</span><span class="nt">&gt;</span>name(/*)<span class="nt">&lt;/assign&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
+<span class="cm">        Reference the &quot;documentRootName&quot; variable from the scriptlet&#39;s scope.</span>
+<span class="cm">    --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;output</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;rootName&quot;</span><span class="nt">&gt;</span>$documentRootName<span class="nt">&lt;/output&gt;</span>
+<span class="nt">&lt;/scriptlet&gt;</span>
+</pre></div>
+</div>
+<p>This uses a simple <a class="reference internal" href="../expressions/index.html#test-case-referring-to-variables"><span class="std std-ref">variable expression</span></a> and is largely equivalent. We could of course
+provide a more elaborate <a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">expression</span></a> here to e.g. enclose the value in square brackets:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;output</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;rootName&quot;</span><span class="nt">&gt;</span>&#39;[&#39;<span class="w"> </span>||<span class="w"> </span>$documentRootName<span class="w"> </span>||<span class="w"> </span>&#39;]&#39;<span class="nt">&lt;/output&gt;</span>
+</pre></div>
+</div>
+<p>Finally, when using the <code class="docutils literal notranslate"><span class="pre">output</span></code> element’s expression to calculate its return value we could in our example skip the previous
+<a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a> step altogether as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;scriptlet</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;validateDocument&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span>...
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
+<span class="cm">        Calculate the value to return in the output element itself.</span>
+<span class="cm">    --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;output</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;rootName&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$contentToValidate&quot;</span><span class="nt">&gt;</span>name(/*)<span class="nt">&lt;/output&gt;</span>
+<span class="nt">&lt;/scriptlet&gt;</span>
+</pre></div>
+</div>
+<p>Keep in mind that you may return any number of <code class="docutils literal notranslate"><span class="pre">output</span></code> elements you want. As an example, we could adapt our scriptlet
+to return also information on the result of the individual checks it made, in case the caller wants to take specific actions
+per case.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;scriptlet</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;validateDocument&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;xsdCheck&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XmlValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate XML structure&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span>...
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;schCheck&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XmlValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate business rules&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span>...
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
+<span class="cm">        Return the name of the document&#39;s root element and the individual validation steps&#39; results.</span>
+<span class="cm">    --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;output</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;rootName&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$contentToValidate&quot;</span><span class="nt">&gt;</span>name(/*)<span class="nt">&lt;/output&gt;</span>
+<span class="w">    </span><span class="nt">&lt;output</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;isValidForSchema&quot;</span><span class="nt">&gt;</span>$xsdCheck<span class="nt">&lt;/output&gt;</span>
+<span class="w">    </span><span class="nt">&lt;output</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;isValidForSchematron&quot;</span><span class="nt">&gt;</span>$schCheck<span class="nt">&lt;/output&gt;</span>
+<span class="nt">&lt;/scriptlet&gt;</span>
+</pre></div>
+</div>
+<p>In this example note how the <a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a> steps are set with a specific <code class="docutils literal notranslate"><span class="pre">id</span></code>. Once each validation is
+completed the overall results are recorded as <code class="docutils literal notranslate"><span class="pre">boolean</span></code> variables which are then used to return the scriptlet’s outputs
+(see the <a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a> step documentation for further details on this).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Selecting outputs:</strong> When a scriptlet returns multiple outputs its caller may choose to select only a subset of these to use. For details
+on this and how returned outputs can be used check the <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a> step’s documentation.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">SCRIPTLET</span></code> scope is particularly useful as an early-return mechanism. Reusing the <a class="reference internal" href="#scriptlets-overview"><span class="std std-ref">Overview</span></a>
+example that validates a document and returns its root element name, the scriptlet could instead return early if the
+document is empty, without needing to nest the remaining steps inside an <code class="docutils literal notranslate"><span class="pre">if</span></code>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;steps&gt;</span>
+<span class="w">    </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;isEmpty&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$contentToValidate&quot;</span><span class="nt">&gt;</span>not(/*)<span class="nt">&lt;/assign&gt;</span>
+<span class="w">    </span><span class="nt">&lt;if&gt;</span>
+<span class="w">        </span><span class="nt">&lt;cond&gt;</span>$isEmpty<span class="nt">&lt;/cond&gt;</span>
+<span class="w">        </span><span class="nt">&lt;then&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!--</span>
+<span class="cm">                Return early with a fixed root name. The scriptlet&#39;s &quot;output&quot; is still evaluated</span>
+<span class="cm">                (using the &quot;rootName&quot; variable assigned here) before execution continues after the</span>
+<span class="cm">                &quot;call&quot; step in the calling test case.</span>
+<span class="cm">            --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;rootName&quot;</span><span class="nt">&gt;</span>&#39;(empty)&#39;<span class="nt">&lt;/assign&gt;</span>
+<span class="hll"><span class="w">            </span><span class="nt">&lt;exit</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Nothing to validate&quot;</span><span class="w"> </span><span class="na">scope=</span><span class="s">&quot;SCRIPTLET&quot;</span><span class="w"> </span><span class="na">success=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+</span><span class="w">        </span><span class="nt">&lt;/then&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/if&gt;</span>
+<span class="w">    </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XmlValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate XML structure&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>$contentToValidate<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xsd&quot;</span><span class="nt">&gt;</span>$schemaToUse<span class="nt">&lt;/input&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">    </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;rootName&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$contentToValidate&quot;</span><span class="nt">&gt;</span>name(/*)<span class="nt">&lt;/assign&gt;</span>
+<span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;output</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;rootName&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="returning-early-from-a-scriptlet">
+<span id="scriptlets-returning-early"></span><span id="index-18"></span><span id="index-17"></span><span id="index-16"></span><h2>Returning early from a scriptlet<a class="headerlink" href="#returning-early-from-a-scriptlet" title="Link to this heading"></a></h2>
+<p>During the execution of a scriptlet you may determine that you need to return to the caller at an arbitrary point. For
+example, you may be using a scriptlet to extract values from an XML file but want to skip this if the XML document is
+empty. It could be possible to do this by means of <a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if</span></a> steps with conditional branches, but this
+may lead to cumbersome TDL, if not be altogether impossible.</p>
+<p>As a programming language equivalent, consider this as the need to introduce a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement at an arbitrary point
+in a function, rather that trying to achieve this through if/else conditionals.</p>
+<p>In the GITB TDL this is possible by means of the <a class="reference internal" href="../constructs/index.html#tdl-step-exit"><span class="std std-ref">exit</span></a> step, a step that is typically used when you
+want to stop the complete test session. The <code class="docutils literal notranslate"><span class="pre">exit</span></code> step supports an optional <code class="docutils literal notranslate"><span class="pre">scope</span></code> attribute that allows
+further <a class="reference internal" href="../constructs/index.html#tdl-step-exit-scope"><span class="std std-ref">flow control options</span></a>. Specifically, when setting the <code class="docutils literal notranslate"><span class="pre">scope</span></code> to <code class="docutils literal notranslate"><span class="pre">SCRIPTLET</span></code>,
+the <code class="docutils literal notranslate"><span class="pre">exit</span></code> step will immediately return control to the scriptlet’s caller. If the scriptlet has one or more <code class="docutils literal notranslate"><span class="pre">output</span></code>
+elements, these will also be evaluated before returning.</p>
+<p>The following example, shows a scriptlet that validates an XML document and returns its root name. In case the document
+is empty, validation is skipped and a “(empty)” text is returned instead.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;scriptlet</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;validateDocument&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;imports&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;schemaToUse&quot;</span><span class="nt">&gt;</span>resources/aSchemaFile.xsd<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/imports&gt;</span>
+<span class="w">    </span><span class="nt">&lt;params&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;contentToValidate&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/params&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;isEmpty&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$contentToValidate&quot;</span><span class="nt">&gt;</span>not(/*)<span class="nt">&lt;/assign&gt;</span>
+<span class="w">        </span><span class="nt">&lt;if&gt;</span>
+<span class="w">            </span><span class="nt">&lt;cond&gt;</span>$isEmpty<span class="nt">&lt;/cond&gt;</span>
+<span class="w">            </span><span class="nt">&lt;then&gt;</span>
+<span class="w">                </span><span class="cm">&lt;!--</span>
+<span class="cm">                    Return early with a fixed root name. The scriptlet&#39;s &quot;output&quot; is still evaluated</span>
+<span class="cm">                    (using the &quot;rootName&quot; variable assigned here) before execution continues after the</span>
+<span class="cm">                    &quot;call&quot; step in the calling test case.</span>
+<span class="cm">                --&gt;</span>
+<span class="w">                </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;rootName&quot;</span><span class="nt">&gt;</span>&#39;(empty)&#39;<span class="nt">&lt;/assign&gt;</span>
+<span class="hll"><span class="w">                </span><span class="nt">&lt;exit</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Nothing to validate&quot;</span><span class="w"> </span><span class="na">scope=</span><span class="s">&quot;SCRIPTLET&quot;</span><span class="w"> </span><span class="na">success=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+</span><span class="w">            </span><span class="nt">&lt;/then&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/if&gt;</span>
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XmlValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate XML structure&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>$contentToValidate<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xsd&quot;</span><span class="nt">&gt;</span>$schemaToUse<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;rootName&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$contentToValidate&quot;</span><span class="nt">&gt;</span>name(/*)<span class="nt">&lt;/assign&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="w">    </span><span class="nt">&lt;output</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;rootName&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/scriptlet&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="dynamic-presentation-in-scriptlets">
+<span id="scriptlets-dynamic-references"></span><h2>Dynamic presentation in scriptlets<a class="headerlink" href="#dynamic-presentation-in-scriptlets" title="Link to this heading"></a></h2>
+<p>Certain information relative to presenting <a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">test steps</span></a> are expected to have fixed values that are known before the a test session is
+executed. Such information includes step descriptions, titles and actor references (e.g. used in <a class="reference internal" href="../constructs/index.html#tdl-messaging-steps"><span class="std std-ref">messaging steps</span></a>)
+which remain unchanged during a test session to allow a consistent execution diagram to be presented to the user.</p>
+<p>This rule is relaxed in the case of scriptlets given that they can be used in various contexts. They can be used by multiple different
+test cases, potentially spanning several test suites, or even used from within other scriptlets (essentially anywhere you can have a
+<a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call step</span></a>). To enable this flexibility, the rule for otherwise constant values in scriptlets is that these can be
+set via <a class="reference internal" href="../expressions/index.html#test-case-referring-to-variables"><span class="std std-ref">variable references</span></a> as long as their value can be determined when a test case’s definition
+is initially loaded.</p>
+<p>The cases where otherwise fixed values can be set via variable reference are:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">desc</span></code> attribute of all steps.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">title</span></code> attribute of all steps with child steps (<a class="reference internal" href="../constructs/index.html#tdl-step-group"><span class="std std-ref">group</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-flow"><span class="std std-ref">flow</span></a>,
+<a class="reference internal" href="../constructs/index.html#tdl-step-foreach"><span class="std std-ref">foreach</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-repuntil"><span class="std std-ref">repuntil</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-while"><span class="std std-ref">while</span></a>).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">inputTitle</span></code> of user interaction steps (<a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a>).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">from</span></code> and <code class="docutils literal notranslate"><span class="pre">to</span></code> actor references in messaging steps (<a class="reference internal" href="../constructs/index.html#tdl-step-btxn"><span class="std std-ref">btxn</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a>).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">reply</span></code> attribute of messaging steps (<a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-listen"><span class="std std-ref">listen</span></a>).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">hidden</span></code> attribute of all steps (see also how this can be used to <a class="reference internal" href="#scriptlets-dynamic-steps"><span class="std std-ref">dynamically adapt the content of scriptlets</span></a>).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">actor</span></code> attribute of steps where this is supported (to adapt steps’ <a class="reference internal" href="../constructs/index.html#tdl-steps-common-step-actor"><span class="std std-ref">related actor</span></a>).</p></li>
+</ul>
+<p>Values set in this way need to be provided as <strong>inputs</strong> to the scriptlet and resolve to constants before the test begins. In practical terms this
+means that you will need to:</p>
+<ol class="arabic simple">
+<li><p>Define in the scriptlet’s <a class="reference internal" href="#scriptlets-elements-params"><span class="std std-ref">params section</span></a> the relevant input(s).</p></li>
+<li><p>Reference the parameters within the scriptlet where you want to use them.</p></li>
+<li><p>Pass as fixed values or <a class="reference internal" href="../expressions/index.html#test-case-configuration"><span class="std std-ref">configuration value references</span></a> the values for the parameters when you
+<a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call the scriptlet</span></a>.</p></li>
+</ol>
+<p>As an example of this consider the following scriptlet:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;scriptlet</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;receiveData&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;params&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;descriptionToUse&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;from&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;to&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;hidden&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;boolean&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;value&gt;</span>false<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/var&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/params&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span>...
+<span class="w">        </span><span class="nt">&lt;receive</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;receiveStep&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;$descriptionToUse&quot;</span><span class="w"> </span><span class="na">hidden=</span><span class="s">&quot;$hidden&quot;</span><span class="w"> </span><span class="na">from=</span><span class="s">&quot;$from&quot;</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;$to&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;$DOMAIN{messagingService}&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;countryCode&quot;</span><span class="nt">&gt;</span>$ORGANISATION{countryCode}<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/receive&gt;</span>
+<span class="w">        </span>...
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/scriptlet&gt;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">desc</span></code>, <code class="docutils literal notranslate"><span class="pre">hidden</span></code>, <code class="docutils literal notranslate"><span class="pre">from</span></code> and <code class="docutils literal notranslate"><span class="pre">to</span></code> in this case are set dynamically based on the values passed as parameters. In a test case that
+will make use of this scriptlet we then add a <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a> step as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!--</span>
+<span class="cm">    All parameters provided to the scriptlet are constant values when loading the test case.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;call</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;scriptlets/receiveData.xml&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Value based on an expression. --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;descriptionToUse&quot;</span><span class="nt">&gt;</span>&#39;Message<span class="w"> </span>sent<span class="w"> </span>to<span class="w"> </span>&#39;<span class="w"> </span>||<span class="w"> </span>$ORGANISATION{countryCode}<span class="nt">&lt;/input&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Value based on configuration. --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;hidden&quot;</span><span class="nt">&gt;</span>$DOMAIN{hideExchanges}<span class="nt">&lt;/input&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Constant values. --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;from&quot;</span><span class="nt">&gt;</span>&#39;Actor1&#39;<span class="nt">&lt;/input&gt;</span>
+<span class="w">    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;to&quot;</span><span class="nt">&gt;</span>&#39;Actor2&#39;<span class="nt">&lt;/input&gt;</span>
+<span class="nt">&lt;/call&gt;</span>
+</pre></div>
+</div>
+<p>Notice here how the parameters defined in the scriptlet are supplied with constant values. This allows the test engine to calculate a
+specific test execution graph when the test case is loaded but provides the flexibility for the scriptlet to be used in various
+scenarios.</p>
+</section>
+<section id="dynamic-steps-in-scriptlets">
+<span id="scriptlets-dynamic-steps"></span><span id="index-20"></span><span id="index-19"></span><h2>Dynamic steps in scriptlets<a class="headerlink" href="#dynamic-steps-in-scriptlets" title="Link to this heading"></a></h2>
+<p>Similar to <a class="reference internal" href="#scriptlets-dynamic-references"><span class="std std-ref">dynamically changing labels and actors</span></a>, a scriptlet can also have its contained
+steps be dynamically defined. This is achieved via specific <code class="docutils literal notranslate"><span class="pre">boolean</span></code> flags, covered in this section, that in the case of
+scriptlets can be set as <a class="reference internal" href="../expressions/index.html#test-case-referring-to-variables"><span class="std std-ref">variable references</span></a> as long as their values can be determined
+at test case load time and remain constant during execution. Such flags, defining the visual representation of a test case, need
+to remain fixed given that a test case’s presentation cannot change during test execution.</p>
+<p>Dynamically changing a scriptlet’s contained steps can be achieved via the following flags:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">hidden</span></code> attribute <a class="reference internal" href="../constructs/index.html#tdl-steps-common-hidesteps"><span class="std std-ref">supported by all test steps</span></a>. This allows you to hide steps while
+ensuring they <strong>will still be executed</strong>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">static</span></code> attribute of <a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if steps</span></a>. This allows you to conditionally include steps, ensuring that non-included
+steps are <strong>not executed</strong>.</p></li>
+</ul>
+<p>In the case of the <code class="docutils literal notranslate"><span class="pre">hidden</span></code> attribute, setting this to “true” will result in a step being executed but not displayed.
+Setting this to a <a class="reference internal" href="../expressions/index.html#test-case-referring-to-variables"><span class="std std-ref">variable reference</span></a> is allowed only within scriptlets
+in which case the variable needs to match one of the scriptlet’s <a class="reference internal" href="#scriptlets-elements-params"><span class="std std-ref">parameters</span></a>. The variable reference
+is evaluated when the test case is loaded, with the resulting value being determined either from the
+scriptlet’s inputs (provided via its <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call step</span></a>) or the default value defined for the parameter.</p>
+<p>The <a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if step’s</span></a> <code class="docutils literal notranslate"><span class="pre">static</span></code> attribute goes further, allowing you to fully skip sets of steps. In this
+case, when <code class="docutils literal notranslate"><span class="pre">static</span></code> is set to “true” the test engine will expect to find the step’s condition (its <code class="docutils literal notranslate"><span class="pre">cond</span></code> element) set
+with a <a class="reference internal" href="../expressions/index.html#test-case-referring-to-variables"><span class="std std-ref">variable reference</span></a>. It is this variable reference that is then evaluated at load
+time to determine whether to include the steps in the <code class="docutils literal notranslate"><span class="pre">then</span></code> block (if “true”), or the <code class="docutils literal notranslate"><span class="pre">else</span></code> block (if “false” and if defined).
+One important additional point here is that a statically evaluated <a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if step</span></a> <strong>does not display a boundary box and title</strong>,
+but rather directly displays the steps of the selected branch. This means that you can use a static <code class="docutils literal notranslate"><span class="pre">if</span></code> as other languages use
+“include” and “import” constructs.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A similar result to an <a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if step</span></a> defined as <code class="docutils literal notranslate"><span class="pre">static</span></code> can be achieved by using a hidden <code class="docutils literal notranslate"><span class="pre">if</span></code> step with an
+explicitly visible <code class="docutils literal notranslate"><span class="pre">then</span></code> block. Check the <a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if step’s documentation</span></a> for more details.</p>
+</div>
+<p>The cases described above are presented in the sample scriptlet below to highlight their use.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;scriptlet</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;receiveData&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;params&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Parameter that must be specified as an input. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;hideMessage&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;boolean&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Parameter that may be optionally specified as an input. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;validateAsExpression&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;boolean&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;value&gt;</span>true<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/var&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/params&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span>...
+<span class="w">        </span><span class="cm">&lt;!-- If &#39;hideMessage&#39; is set to true, this message exchange will take place but will not be displayed. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;receive</span><span class="w"> </span><span class="na">hidden=</span><span class="s">&quot;$hideMessage&quot;</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;receiveStep&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Receive message&quot;</span><span class="w"> </span><span class="na">from=</span><span class="s">&quot;Actor1&quot;</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;Actor2&quot;</span><span class="w"> </span><span class="na">txnId=</span><span class="s">&quot;t1&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;countryCode&quot;</span><span class="nt">&gt;</span>$ORGANISATION{countryCode}<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/receive&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Static &#39;if&#39; to determine the steps used to process the received message.</span>
+<span class="cm">            No &#39;if&#39; boundary will be displayed and the steps of the rejected branch will be excluded.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;if</span><span class="w"> </span><span class="na">static=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;cond&gt;</span>$validateAsExpression<span class="nt">&lt;/cond&gt;</span>
+<span class="w">            </span><span class="nt">&lt;then&gt;</span>
+<span class="w">                </span><span class="nt">&lt;log&gt;</span>&quot;Validating<span class="w"> </span>input<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>TDL<span class="w"> </span>expression&quot;<span class="nt">&lt;/log&gt;</span>
+<span class="w">                </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;ExpressionValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate value&quot;</span><span class="nt">&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;expression&quot;</span><span class="nt">&gt;</span>$value<span class="w"> </span>=<span class="w"> </span>$expectedValue<span class="nt">&lt;/input&gt;</span>
+<span class="w">                </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/then&gt;</span>
+<span class="w">            </span><span class="nt">&lt;else&gt;</span>
+<span class="w">                </span><span class="nt">&lt;log&gt;</span>&quot;Validating<span class="w"> </span>input<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>regular<span class="w"> </span>expression&quot;<span class="nt">&lt;/log&gt;</span>
+<span class="w">                </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;RegExpValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate value&quot;</span><span class="nt">&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;input&quot;</span><span class="nt">&gt;</span>$value<span class="nt">&lt;/input&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;expression&quot;</span><span class="nt">&gt;</span>&#39;^REF\-\d+$&#39;<span class="nt">&lt;/input&gt;</span>
+<span class="w">                </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/else&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/if&gt;</span>
+<span class="w">        </span>...
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/scriptlet&gt;</span>
+</pre></div>
+</div>
+<p>As you see the scriptlet expects two parameters, <code class="docutils literal notranslate"><span class="pre">hideMessage</span></code> and <code class="docutils literal notranslate"><span class="pre">validateAsExpression</span></code>, that determine the display
+and content of the scriptlet. They are used respectively in the <a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive step’s</span></a> <code class="docutils literal notranslate"><span class="pre">hidden</span></code> attribute,
+and the condition of the <a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if step</span></a> that is marked as <code class="docutils literal notranslate"><span class="pre">static</span></code>.</p>
+<p>When calling this scriptlet we need to ensure that both these variables can be evaluated at load time. The <code class="docutils literal notranslate"><span class="pre">validateAsExpression</span></code>
+parameter already has a default value, so a <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call step</span></a> needs to only override it if needed. The following
+example illustrates this (note how <code class="docutils literal notranslate"><span class="pre">false()</span></code> is used as opposed to “false” given that this is an <a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">expression</span></a>).</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;call</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;scriptlets/receiveData.xml&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;hideMessage&quot;</span><span class="nt">&gt;</span>false()<span class="nt">&lt;/input&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
+<span class="cm">        No need to specify &#39;validateAsExpression&#39; as true given</span>
+<span class="cm">        that this is already the default.</span>
+
+<span class="cm">        &lt;input name=&quot;validateAsExpression&quot;&gt;true()&lt;/input&gt;</span>
+<span class="cm">    --&gt;</span>
+<span class="nt">&lt;/call&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="scriptlet-variable-scope">
+<span id="scriptlets-scope"></span><h2>Scriptlet variable scope<a class="headerlink" href="#scriptlet-variable-scope" title="Link to this heading"></a></h2>
+<p>Scriptlets define their own scope which acts as a child scope of their parent (either a test case or another scriptlet). Any variables
+created when a scriptlet is called are added to its own scope and do not propagate to the parent one, thus ensuring that no unintended
+changes are made to the state of its caller. This covers:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#scriptlets-elements-params"><span class="std std-ref">Input parameters</span></a> passed to the scriptlet from its parent via the <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call step</span></a>.</p></li>
+<li><p><a class="reference internal" href="#scriptlets-elements-imports"><span class="std std-ref">Imports</span></a> defined by the scriptlet.</p></li>
+<li><p><a class="reference internal" href="#scriptlets-elements-variables"><span class="std std-ref">Variables</span></a> defined explicitly by the scriptlet.</p></li>
+<li><p>Variables created implicitly by the scriptlet through the <a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign step</span></a>.</p></li>
+</ul>
+<p>While new variables are always created in the scriptlet’s own scope, it is possible to read variables from a parent
+scope as long as these are looked up using a <a class="reference internal" href="../expressions/index.html#test-case-referring-to-variables"><span class="std std-ref">variable reference</span></a>. When referring to a variable
+that does not exist in the scriptlet’s own scope it is the responsibility of the test developer to ensure that these will be available
+when the scriptlet is called. Although such references are not prevented, the better practice is to pass information from the caller to
+the scriptlet as <a class="reference internal" href="#scriptlets-elements-params"><span class="std std-ref">input parameters</span></a> to ensure that the scriptlet is always portable and not impose
+requirements to its caller for its correct functioning that are not obvious.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Variables referenced by a scriptlet that are expected to be available in its parent scope are reported as part of a test suite’s validation.</p>
+</div>
+<p>The following example, and its included comments, highlights how scriptlet scopes work:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;scriptlet</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;validateDocument&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;imports&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            This import defines a &#39;schemaToUse&#39; variable in the scriptlet&#39;s own scope.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;schemaToUse&quot;</span><span class="nt">&gt;</span>resources/aSchemaFile.xsd<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/imports&gt;</span>
+<span class="w">    </span><span class="nt">&lt;params&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            This parameter defines a &#39;contentToValidate&#39; variable in the scriptlet&#39;s own scope that</span>
+<span class="cm">            is passed from the parent in a call step.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;contentToValidate&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/params&gt;</span>
+<span class="w">    </span><span class="nt">&lt;variables&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            This explicit variable declaration defines a &#39;stopOnXsdErrors&#39; variable in the</span>
+<span class="cm">            scriptlet&#39;s own scope.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;stopOnXsdErrors&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;boolean&quot;</span><span class="nt">&gt;&lt;value&gt;</span>true<span class="nt">&lt;/value&gt;&lt;/var&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/variables&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            The assign step implicitly creates the &#39;showValidationArtefacts&#39; variable in its own</span>
+<span class="cm">            scope even if such a variable exists also in the parent scope.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;showValidationArtefacts&quot;</span><span class="nt">&gt;</span>true()<span class="nt">&lt;/assign&gt;</span>
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XmlValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate XML structure&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!--</span>
+<span class="cm">                Reference the &#39;contentToValidate&#39; parameter.</span>
+<span class="cm">            --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>$contentToValidate<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!--</span>
+<span class="cm">                Reference the &#39;schemaToUse&#39; import.</span>
+<span class="cm">            --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xsd&quot;</span><span class="nt">&gt;</span>$schemaToUse<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!--</span>
+<span class="cm">                Reference the &#39;showValidationArtefacts&#39; variable defined via the earlier assign step.</span>
+<span class="cm">            --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;showValidationArtefacts&quot;</span><span class="nt">&gt;</span>$showValidationArtefacts<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!--</span>
+<span class="cm">                Given that no variable named &#39;sortBySeverity&#39; exists in the scriptlet&#39;s scope this</span>
+<span class="cm">                will be looked up from the parent and must be found. This means that the parent will</span>
+<span class="cm">                need to already define this before calling the scriptlet. A better approach would</span>
+<span class="cm">                have been to pass this flag as an additional input parameter.</span>
+<span class="cm">            --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sortBySeverity&quot;</span><span class="nt">&gt;</span>$sortBySeverity<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/scriptlet&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="scriptlets-embedded-in-test-cases">
+<span id="scriptlets-embedded"></span><h2>Scriptlets embedded in test cases<a class="headerlink" href="#scriptlets-embedded-in-test-cases" title="Link to this heading"></a></h2>
+<p>Scriptlets are typically defined as separate XML documents within a test suite that can be used across its test cases or
+externally from other test suites. It is also possible however, to define scriptlets within a specific test case in its
+<a class="reference internal" href="../testcase/index.html#test-case-scriptlets"><span class="std std-ref">scriptlets</span></a> element. Such embedded scriptlets are processed in the same way but have certain
+key differences:</p>
+<ul class="simple">
+<li><p><strong>Private access:</strong> Embedded scriptlets are only usable from the test case that contains them and from its other embedded
+scriptlets.</p></li>
+<li><p><strong>Identification:</strong> Embedded scriptlets rely on their <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute to be identified and referenced in <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a>
+steps. As such, this must be unique within the scope of their containing test case.</p></li>
+</ul>
+<p>For more details on defining embedded scriptlets check the documentation of the test case’s <a class="reference internal" href="../testcase/index.html#test-case-scriptlets"><span class="std std-ref">scriptlets</span></a>
+element. For information on how a scriptlet, embedded or not, is called check the documentation of the <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a>
+step.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../testcase/index.html" class="btn btn-neutral float-left" title="Test cases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../types/index.html" class="btn btn-neutral float-right" title="Types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, European Commission, DIGIT.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

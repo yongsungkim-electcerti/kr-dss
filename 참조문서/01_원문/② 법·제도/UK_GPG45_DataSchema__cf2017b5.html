@@ -1,0 +1,1997 @@
+
+
+<!DOCTYPE html>
+<html class="govuk-template" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title lang="en">Data taxonomy, data model and data dictionary for GPG 45 - GOV.UK</title>
+
+    <script src="/assets/frontend/govuk_publishing_components/vendor/lux/lux-measurer-d66192b1b665d415e1874e49a48138b7ae339548aa6cdb8687c7f9933e72b969.js" async="async"></script>
+    <script src="/assets/frontend/govuk_publishing_components/rum-custom-data-b9e1806d1da2fa8ef1855d01aa71ba5eb0afc010dd2c4de3672cc7c7a39b0c8c.js" type="module"></script>
+    <script src="/assets/frontend/govuk_publishing_components/rum-loader-a65b10e18ceeba3bd8a2eac507c7f2c513cdc82f35097df903fdea87f1dc2e33.js" async="async" data-lux-reporter-script="/assets/frontend/govuk_publishing_components/vendor/lux/lux-reporter-24dca204ac4a486a1476264633ed99609a35e5e41ebaf4d8f812e04c7b9c09cf.js"></script>
+
+    <meta name="govuk:components_gem_version" content="70.2.0">
+    <script src="/assets/frontend/govuk_publishing_components/load-analytics-ad855bc6d5d323fbe2be3d683cb5dd15cf884cbe864bfb965bce0d9ec4847a36.js" type="module"></script>
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="FwflhXzxNV800gaAnGwDeoK5ymcitfeDAJvQyvuk3yJvbZLUaGmZjxqXzjf-lwCx9i13adxxqSJcpPmFypVCzQ" />
+
+    <link rel="stylesheet" href="/assets/frontend/application-93db540bb07168899a0447daba141f908add6c10a0c6c7092753d70856bd4a0a.css" media="all" />
+    <link rel="icon" sizes="48x48" href="/assets/frontend/favicon-24f9fbe064118d58937932e73edafd1d50cb60f7bd84f52308382a309bc2d655.ico">
+    <link rel="icon" sizes="any" href="/assets/frontend/favicon-d962d21b5bb443f546c097ea21b567cde639adef7370da45be5e349ba8d62d33.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/assets/frontend/govuk-icon-mask-cdf4265165f8d7f9eec54aa2c1dfbb3d8b6d297c5d7919f0313e0836a5804bb6.svg" color="#1d70b8">
+    <link rel="apple-touch-icon" href="/assets/frontend/govuk-icon-180-d45a306f0549414cfa5085f16e4a3816a77558b139e5bc226f23162d1d0decb0.png">
+
+    <meta name="theme-color" content="#1d70b8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:image" content="https://www.gov.uk/assets/frontend/govuk-opengraph-image-4196a4d6333cf92aaf720047f56cfd91b3532d7635fc21ebcf0d5897df6b5f77.png">
+
+      
+<script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "FAQPage",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45"
+  },
+  "name": "Data taxonomy, data model and data dictionary for GPG 45",
+  "datePublished": "2026-03-03T09:00:04+00:00",
+  "dateModified": "2026-04-13T16:29:59+01:00",
+  "text": null,
+  "publisher": {
+    "@type": "Organization",
+    "name": "GOV.UK",
+    "url": "https://www.gov.uk",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gov.uk/assets/frontend/govuk_publishing_components/govuk-logo-b8553f688131fad665e52a8c2df7633f9cd1c0fffb9f69703cc68c728e7b3b74.png"
+    }
+  },
+  "image": [
+    "https://www.gov.uk/assets/frontend/govuk_publishing_components/govuk-schema-placeholder-1x1-2672c0fb7a5d5f947d880522c509ebe7f2be090885883cc94418f6860e812e15.png",
+    "https://www.gov.uk/assets/frontend/govuk_publishing_components/govuk-schema-placeholder-4x3-194fde4197f00e669f6f52c182df2ed707bfb2024c9ef39f7a2ed20da62b90eb.png",
+    "https://www.gov.uk/assets/frontend/govuk_publishing_components/govuk-schema-placeholder-16x9-30e6c0e035636ee6b9dc72ae254bcd4a925182805afe7c5b7170cf2394894b28.png"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Office for Digital Identities and Attributes",
+    "url": "https://www.gov.uk/government/organisations/office-for-digital-identities-and-attributes"
+  },
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Introduction",
+      "url": "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45#introduction",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "url": "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45#introduction",
+        "text": "\u003cp\u003eThis specification describes the data taxonomy, data model and data dictionary for the \u003ca href=\"https://www.gov.uk/government/publications/how-to-check-someones-identity-1-0\"\u003e‘How to check someone’s identity’\u003c/a\u003e guidance, also known as Good Practice Guide (GPG) 45, a supporting document for the \u003ca href=\"https://www.gov.uk/government/collections/uk-digital-identity-and-attributes-trust-framework\"\u003eUK digital verification services trust framework\u003c/a\u003e (‘the DVS trust framework’, also referred to in this document where a single string of text is needed as ‘uk_dvstf’).\u003c/p\u003e\u003cp\u003eThe data taxonomy provides a description of the hierarchy and classification of data for GPG 45.\u003c/p\u003e\u003cp\u003eThe data model provides a description of the data element name, any relevant sub elements or the data type.\u003c/p\u003e\u003cp\u003eThe data dictionary is a collection of names, definitions, and lists (enumerations) relating to GPG 45 and the DVS trust framework.\u003c/p\u003e"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Data taxonomy",
+      "url": "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45#data-taxonomy",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "url": "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45#data-taxonomy",
+        "text": "\u003cp\u003eThis section describes the data taxonomy for GPG 45.\u003c/p\u003e\u003cp\u003eThis taxonomy provides a standardised terminology for describing GPG 45 data, setting out the types of data and elements it covers and defining the names of the data elements.\u003c/p\u003e\u003cp\u003eThe GPG 45 taxonomy includes titles and descriptions for the following areas:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003eIdentity claims\u003c/li\u003e\n  \u003cli\u003eAssurance processes\u003c/li\u003e\n  \u003cli\u003eIdentity checking processes\u003c/li\u003e\n  \u003cli\u003eIdentity evidence\u003c/li\u003e\n\u003c/ul\u003e\u003ch3 id=\"identity-claims\"\u003eIdentity claims\u003c/h3\u003e\u003cp\u003eA claimed identity is a combination of information (often a name, date of birth and address) that represents some of the key attributes of whoever a person is claiming to be.\u003c/p\u003e\u003cp\u003eDescription:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003eGiven name(s): Individual’s given name(s)\u003c/li\u003e\n  \u003cli\u003eFamily name(s): Individual’s family / surname name(s)\u003c/li\u003e\n  \u003cli\u003eAddress: Individual’s address\u003c/li\u003e\n  \u003cli\u003eDate of birth: Individual’s birth date\u003c/li\u003e\n  \u003cli\u003eNationalities: One or more countries of citizenship\u003c/li\u003e\n  \u003cli\u003eBiometric information: Measurements of a biological or behavioural attribute, like an iris or fingerprint\u003c/li\u003e\n\u003c/ul\u003e\u003ch3 id=\"assurance-processes\"\u003eAssurance processes\u003c/h3\u003e\u003cp\u003eAssurance processes describe the assurance framework, policies and rules that govern the identity checking process described in GPG 45.\u003c/p\u003e\u003cp\u003eDescription:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003eTrust framework: The assurance framework relevant to the claim. For the UK, this is the DVS trust framework and any applicable supplementary codes\u003c/li\u003e\n  \u003cli\u003eAssurance policy: Indicates the policy and/or procedure used to prove the user’s claim to the identity. For the DVS trust framework this is always GPG 45\u003c/li\u003e\n  \u003cli\u003eAssurance level: In GPG 45 terms this indicates level of confidence\u003c/li\u003e\n  \u003cli\u003eAssurance procedure: This describes confidence levels in more detail, for the DVS trust framework this is always a GPG 45 profile\u003c/li\u003e\n\u003c/ul\u003e\u003ch3 id=\"identity-checking-processes\"\u003eIdentity checking processes\u003c/h3\u003e\u003cp\u003eThese processes are represented in the data model within the verification outcomes, alongside evidence details.\u003c/p\u003e\u003cp\u003eDescription:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003eIdentity evidence: the evidence provided in order to prove the existence of the identity\u003c/li\u003e\n  \u003cli\u003eValidation method: a description of the checking process used to validate that evidence is authentic\u003c/li\u003e\n  \u003cli\u003eVerification method: a description of the checking process used to verify that the user is the legitimate owner of the identity\u003c/li\u003e\n\u003c/ul\u003e"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "GPG 45 Data model",
+      "url": "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45#gpg-45-data-model",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "url": "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45#gpg-45-data-model",
+        "text": "\u003cp\u003eThe data model provides a description of the data element name, the relevant sub-elements and the data type.\u003c/p\u003e\u003ch3 id=\"verified-claims\"\u003eVerified claims\u003c/h3\u003e\u003cp\u003eThis is made up from two pieces of data, the identity the person is claiming to be (‘claims’), and the information about the checks that have been done to prove the identity exists and belongs to them (‘verification’)\u003c/p\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003everified_claims:\u003c/p\u003e\n\n  \u003cp\u003e     claims: object (\u003ca href=\"#claims\"\u003eclaims\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     verification: object (\u003ca href=\"#verification\"\u003everification\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"claims\"\u003eClaims\u003c/h3\u003e\u003cp\u003eThis is the identity information that represents the person making the claim. This can include:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003etheir given name\u003c/li\u003e\n  \u003cli\u003etheir family name\u003c/li\u003e\n  \u003cli\u003ewhether the names have been transliteration from their original language\u003c/li\u003e\n  \u003cli\u003etheir date of birth\u003c/li\u003e\n  \u003cli\u003etheir nationalities\u003c/li\u003e\n  \u003cli\u003etheir biometric information\u003c/li\u003e\n  \u003cli\u003etheir address\u003c/li\u003e\n  \u003cli\u003etheir age\u003c/li\u003e\n  \u003cli\u003ewhether they are over a specific age\u003c/li\u003e\n  \u003cli\u003ewhether they are under a specific age\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003eThese are represented like this:\u003c/p\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003eclaims:\u003c/p\u003e\n\n  \u003cp\u003e     given_name: string\u003c/p\u003e\n\n  \u003cp\u003e     family_name: string\u003c/p\u003e\n\n  \u003cp\u003e     transliteration_status: object (\u003ca href=\"#transliteration-status\"\u003etransliteration_status\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     biometric_information: array (\u003ca href=\"#biometric-information\"\u003ebiometric_information\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     birthdate: \u003ca href=\"#date\"\u003edate\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     nationalities: array (\u003ca href=\"#predefined-lists\"\u003enationality\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     address: object (\u003ca href=\"#address\"\u003eaddress\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     age: number\u003c/p\u003e\n\n  \u003cp\u003e     is_under: number\u003c/p\u003e\n\n  \u003cp\u003e     is_over: number\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"transliteration-status\"\u003eTransliteration status\u003c/h3\u003e\u003cp\u003eTransliteration is the process of converting text from one writing system or language into another by focusing on how words sound. It tries to the reflect the pronunciation of the original word using similar sounds in the target language so that speakers of either language can recognise the word.\nIt is not the same as translation which focuses and converting the meaning of a word, for example 東京 translates to ‘eastern capital’ but is more commonly known in English in its transliterated form, Tokyo.\u003c/p\u003e\u003cp\u003eThe transliteration status conveys information about the:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003eoriginal language the text was written in\u003c/li\u003e\n  \u003cli\u003elanguage the text has been transliterated to\u003c/li\u003e\n  \u003cli\u003ethe way the transliteration was done\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003etransliteration_status:\u003c/p\u003e\n\n  \u003cp\u003e     original_language: \u003ca href=\"#language\"\u003elanguage\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     transliterated_language: \u003ca href=\"#language\"\u003elanguage\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     transliteration_type: \u003ca href=\"#predefined-lists\"\u003etransliteration_type\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"biometric-information\"\u003eBiometric information\u003c/h3\u003e\u003cp\u003eThe biometric information represents one or more biometric characteristics about the person making the claim. The biometric information can contain any type of biometric modality and be encoded using several different methods and standards. Biometric data can include the:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ebiometric characteristic (‘modality’) that is being exchanged\u003c/li\u003e\n  \u003cli\u003ethe biometric data (‘attachments’)\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003ebiometric_information:\u003c/p\u003e\n\n  \u003cp\u003e     biometric_modality: \u003ca href=\"#predefined-lists\"\u003ebiometric_modality\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     attachments: array (\u003ca href=\"#attachment\"\u003eattachment\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"address\"\u003eAddress\u003c/h3\u003e\u003cp\u003eThis contains a physical address, it can include the:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003estreet address\u003c/li\u003e\n  \u003cli\u003etown or city (‘locality’)\u003c/li\u003e\n  \u003cli\u003epost code\u003c/li\u003e\n  \u003cli\u003ecountry\u003c/li\u003e\n  \u003cli\u003ewhether the address has been transliteration from the original language\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003eaddress:\u003c/p\u003e\n\n  \u003cp\u003e     street_address: string\u003c/p\u003e\n\n  \u003cp\u003e     locality: string\u003c/p\u003e\n\n  \u003cp\u003e     postal_code: string\u003c/p\u003e\n\n  \u003cp\u003e     country: string\u003c/p\u003e\n\n  \u003cp\u003e     transliteration_status: object (\u003ca href=\"#transliteration-status\"\u003etransliteration_status\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"verification\"\u003eVerification\u003c/h3\u003e\u003cp\u003eThis is the information about how the claims have been proven and linked to the person it includes:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ea way to identify the assurance framework (‘trust framework’) relevant to the claim, for the DVS trust framework this is always ‘uk_dvstf’\u003c/li\u003e\n  \u003cli\u003einformation about the certified service’s entry in the DVS register\u003c/li\u003e\n  \u003cli\u003ethe evidence that was used to prove the claim\u003c/li\u003e\n  \u003cli\u003ethe assurance level achieved in the claim being true, for the DVS trust framework this is always a GPG 45 level of confidence\u003c/li\u003e\n  \u003cli\u003ethe processes that were performed in order to prove the claim\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003everification:\u003c/p\u003e\n\n  \u003cp\u003e     trust_framework: ‘uk_dvstf’\u003c/p\u003e\n\n  \u003cp\u003e     dvs_registration: object (\u003ca href=\"#dvs-registration\"\u003edvs_registration\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     evidence: array (\u003ca href=\"#evidence\"\u003eevidence\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     assurance_level: \u003ca href=\"#predefined-lists\"\u003eassurance_level\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     assurance_process: object (\u003ca href=\"#assurance-process\"\u003eassurance_process\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"dvs-registration\"\u003eDVS registration\u003c/h3\u003e\u003cp\u003eThe DVS registration information identifies which certified service was used to prove the claim. It contains:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ethe name of the certified service\u003c/li\u003e\n  \u003cli\u003ean identifier that uniquely identifies the service in the DVS register\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003edvs_registration:\u003c/p\u003e\n\n  \u003cp\u003e     registered_name: string\u003c/p\u003e\n\n  \u003cp\u003e     registration_id: string\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"evidence\"\u003eEvidence\u003c/h3\u003e\u003cp\u003eThis describes the evidence that was used by the service to prove the claim to the identity by the person. This includes the:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003edetails of the documents, electronic records or vouches that were used for the verification\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003eevidence:\u003c/p\u003e\n\n  \u003cp\u003e     document: object (\u003ca href=\"#document\"\u003edocument\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     electronic_record: object (\u003ca href=\"#electronic-record\"\u003eelectronic_record\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     vouch: object (\u003ca href=\"#vouch\"\u003evouch\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"document\"\u003eDocument\u003c/h3\u003e\u003cp\u003eThis describes how a document was used by the service to prove the claim. This can include:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003edetails about the document\u003c/li\u003e\n  \u003cli\u003ea copy of the document (‘attachments’)\u003c/li\u003e\n  \u003cli\u003edetails about the checks that were done to validate the document\u003c/li\u003e\n  \u003cli\u003edetails about the checks that were done to verify the person matches the identity in the document\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003edocument:\u003c/p\u003e\n\n  \u003cp\u003e     type: ‘document’\u003c/p\u003e\n\n  \u003cp\u003e     document_details: object (\u003ca href=\"#document-details\"\u003edocument_details\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     attachments: array (\u003ca href=\"#attachment\"\u003eattachment\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     check_details: object (\u003ca href=\"#check-details\"\u003echeck_details\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"document-details\"\u003eDocument details\u003c/h3\u003e\u003cp\u003eThis describes the document that was used by the service to prove the claim. This can include:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ethe type of document\u003c/li\u003e\n  \u003cli\u003ea document reference or identification number that uniquely identifies a document that was issued\u003c/li\u003e\n  \u003cli\u003ea reference or identification number that uniquely identifies the person that is independent of a specific issued document\u003c/li\u003e\n  \u003cli\u003ea serial number that identifies the document irrespective of any personalisation information (this is usually only present on physical materials and not part of the personalisation of the document)\u003c/li\u003e\n  \u003cli\u003ethe date of issue\u003c/li\u003e\n  \u003cli\u003ethe date of expiry\u003c/li\u003e\n  \u003cli\u003edetails about the issuer of the document\u003c/li\u003e\n  \u003cli\u003ewhether the information about the document has been transliteration from the original language\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003edocument_details:\u003c/p\u003e\n\n  \u003cp\u003e     type: \u003ca href=\"#predefined-lists\"\u003edocument_type\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     document_number: string\u003c/p\u003e\n\n  \u003cp\u003e     serial_number: string\u003c/p\u003e\n\n  \u003cp\u003e     personal_number: string\u003c/p\u003e\n\n  \u003cp\u003e     date_of_issuance: \u003ca href=\"#date\"\u003edate\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     date_of_expiry: \u003ca href=\"#date\"\u003edate\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     issuer: \u003ca href=\"#authority\"\u003eauthority\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     transliteration_status: object (\u003ca href=\"#transliteration-status\"\u003etransliteration_status\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"electronic-record\"\u003eElectronic record\u003c/h3\u003e\u003cp\u003eThis describes an electronic record that was used by the service to prove the claim. This can include:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003edetails about the electronic record\u003c/li\u003e\n  \u003cli\u003ea copy of the electronic record (‘attachments’)\u003c/li\u003e\n  \u003cli\u003edetails about the checks that were done for the electronic record\u003c/li\u003e\n  \u003cli\u003edetails about the checks that were done to verify the person matches the identity in the electronic record\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003eelectronic_record:\u003c/p\u003e\n\n  \u003cp\u003e     type: ‘electronic_record’\u003c/p\u003e\n\n  \u003cp\u003e     record: object (\u003ca href=\"#record\"\u003erecord\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     attachments: array (\u003ca href=\"#attachment\"\u003eattachment\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     check_details: object (\u003ca href=\"#check-details\"\u003echeck_details\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"record\"\u003eRecord\u003c/h3\u003e\u003cp\u003eThis describes a record that was used by the service to prove the claim. This can include:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ethe type of record\u003c/li\u003e\n  \u003cli\u003ea reference number that uniquely identifies the record\u003c/li\u003e\n  \u003cli\u003ethe time the record was created\u003c/li\u003e\n  \u003cli\u003ethe date the record will expire\u003c/li\u003e\n  \u003cli\u003edetails about the source of the record\u003c/li\u003e\n  \u003cli\u003ewhether the information about the record has been transliteration from the original language\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003erecord:\u003c/p\u003e\n\n  \u003cp\u003e     type: \u003ca href=\"#predefined-lists\"\u003erecord_type\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     reference_number: string\u003c/p\u003e\n\n  \u003cp\u003e     created_at: \u003ca href=\"#timestamp\"\u003etimestamp\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     date_of_expiry: \u003ca href=\"#timestamp\"\u003etimestamp\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     source: object (\u003ca href=\"#authority\"\u003eauthority\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     transliteration_status: object (\u003ca href=\"#transliteration-status\"\u003etransliteration_status\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"vouch\"\u003eVouch\u003c/h3\u003e\u003cp\u003eThis contains the information about a vouch that was used by the service to prove the claim. This can include:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003edetails about the vouch (‘attestation’) itself\u003c/li\u003e\n  \u003cli\u003eelectronic version or copy of the vouch (‘attachments’)\u003c/li\u003e\n  \u003cli\u003edetails about the checks that were done to validate the vouch\u003c/li\u003e\n  \u003cli\u003edetails about the checks that were done to verify the person matches the identity in the vouch\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003evouch:\u003c/p\u003e\n\n  \u003cp\u003e     type: ‘vouch’\u003c/p\u003e\n\n  \u003cp\u003e     attestation: object (\u003ca href=\"#attestation\"\u003eattestation\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     attachments: array (\u003ca href=\"#attachment\"\u003eattachment\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     check_details: object (\u003ca href=\"#check-details\"\u003echeck_details\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"attestation\"\u003eAttestation\u003c/h3\u003e\u003cp\u003eThis contains the information about a vouch that was used by the service to prove the claim. This can include:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ea reference number that uniquely identifies the vouch\u003c/li\u003e\n  \u003cli\u003ethe date the vouch was issued\u003c/li\u003e\n  \u003cli\u003ethe date the evidence will expire\u003c/li\u003e\n  \u003cli\u003edetails about the person that is providing the vouch\u003c/li\u003e\n  \u003cli\u003ewhether the information about the attestation has been transliteration from the original language\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003eattestation:\u003c/p\u003e\n\n  \u003cp\u003e     type: ‘vouch’\u003c/p\u003e\n\n  \u003cp\u003e     reference_number: string\u003c/p\u003e\n\n  \u003cp\u003e     date_of_issuance: \u003ca href=\"#date\"\u003edate\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     date_of_expiry: \u003ca href=\"#date\"\u003edate\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     voucher: object (\u003ca href=\"#voucher\"\u003evoucher\u003c/a\u003e)\u003c/p\u003e\n\n  \u003cp\u003e     transliteration_status: object (\u003ca href=\"#transliteration-status\"\u003etransliteration_status\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"authority\"\u003eAuthority\u003c/h3\u003e\u003cp\u003eThis identifies an authority that is able to issue or create evidence. This can include the:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ename of the authority\u003c/li\u003e\n  \u003cli\u003eaddress of the authority\u003c/li\u003e\n  \u003cli\u003eidentifying code of the country or supranational organisation where the authority is based\u003c/li\u003e\n  \u003cli\u003eregion(s)/state(s)/province(s)/municipality(ies) within the country where authority has jurisdiction to issue or create evidence\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003eauthority:\u003c/p\u003e\n\n  \u003cp\u003e     name: string\u003c/p\u003e\n\n  \u003cp\u003e     address: \u003ca href=\"#address\"\u003eaddress\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     country_code: \u003ca href=\"#country-code\"\u003ecountry_code\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     jurisdiction: string\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"voucher\"\u003eVoucher\u003c/h3\u003e\u003cp\u003eThis identifies the person that vouched for the person’s claim to the identity. This can include the:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ename of the person providing the vouch\u003c/li\u003e\n  \u003cli\u003edate of birth of the person providing the vouch\u003c/li\u003e\n  \u003cli\u003eaddress of the person providing the vouch\u003c/li\u003e\n  \u003cli\u003eidentifying code of the country or supranational organisation where the voucher is based\u003c/li\u003e\n  \u003cli\u003eoccupation of the person providing the vouch\u003c/li\u003e\n  \u003cli\u003ename of the organisation that the voucher is representing\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003evoucher:\u003c/p\u003e\n\n  \u003cp\u003e     name: string\u003c/p\u003e\n\n  \u003cp\u003e     birthdate: \u003ca href=\"#date\"\u003edate\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     address: \u003ca href=\"#address\"\u003eaddress\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     country_code: \u003ca href=\"#country-code\"\u003ecountry_code\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     occupation: string\u003c/p\u003e\n\n  \u003cp\u003e     organisation: object (\u003ca href=\"#authority\"\u003eauthority\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"check-details\"\u003eCheck details\u003c/h3\u003e\u003cp\u003eThis contains the information about the checks that were performed. This can include:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ean identifier that describes what processes were followed to perform the check (‘check method’), this can either be the process that was followed to validate the evidence, or verify the person’s claim to the identity\u003c/li\u003e\n  \u003cli\u003ea unique reference number representing the check that was performed\u003c/li\u003e\n  \u003cli\u003ethe time when the check was performed\u003c/li\u003e\n  \u003cli\u003ethe name of the organisation that performed the check if the service did not perform the check itself\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003eThe check_id is a method to link the check performed with the evidence with the requirements of the trust framework, if this is present there should be a matching entry in \u003ca href=\"#evidence-references\"\u003eevidence_ref\u003c/a\u003e that demonstrates how it fits into the overall proofing and verification process required by the trust framework.\u003c/p\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003echeck_details:\u003c/p\u003e\n\n  \u003cp\u003e     check_method: \u003ca href=\"#predefined-lists\"\u003echeck_method\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     check_id: string\u003c/p\u003e\n\n  \u003cp\u003e     time: \u003ca href=\"#timestamp\"\u003etimestamp\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     organisation: string\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"attachment\"\u003eAttachment\u003c/h3\u003e\u003cp\u003eThis provides the ability to exchange image or other binary data that may be needed, including scans of documents, photographs, video recordings, certificates, as well as other electronic data such as digital or verifiable credentials. This includes:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ea description of the attachment\u003c/li\u003e\n  \u003cli\u003ethe type of data that has been encoded in the attachment\u003c/li\u003e\n  \u003cli\u003ethe format of the encoding\u003c/li\u003e\n  \u003cli\u003ethe encoded attachment data\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003eattachment:\u003c/p\u003e\n\n  \u003cp\u003e     desc: string\u003c/p\u003e\n\n  \u003cp\u003e     content_type: \u003ca href=\"#encoding\"\u003eencoding\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     content_format: \u003ca href=\"#predefined-lists\"\u003eencoding_format\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     content: data\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"assurance-process\"\u003eAssurance process\u003c/h3\u003e\u003cp\u003eThis contains detailed information about:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ethe standard or policy that was followed in order to verify the claim (‘policy’), for the DVS trust framework this is always GPG 45\u003c/li\u003e\n  \u003cli\u003ethe specific procedure from the policy was followed (‘procedure’), for the DVS trust framework this is always a GPG 45 profile\u003c/li\u003e\n  \u003cli\u003ehow the details on which assurance processes were followed and how they meet the DVS trust framework\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003eassurance_process:\u003c/p\u003e\n\n  \u003cp\u003e     policy: ‘gpg45’\u003c/p\u003e\n\n  \u003cp\u003e     procedure: \u003ca href=\"#predefined-lists\"\u003eprocedure\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     assurance_details: array (\u003ca href=\"#assurance-details\"\u003eassurance_details\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"assurance-details\"\u003eAssurance details\u003c/h3\u003e\u003cp\u003eThis contains information about the checks and processes that were performed to support the claim to the identity by the person. This includes:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ethe type of check performed, for example validation, verification, counter fraud\u003c/li\u003e\n  \u003cli\u003ehow the assurance process is classified in the trust framework, for the DVS trust framework this is always a score given by one of the steps in the proofing and verification process\u003c/li\u003e\n  \u003cli\u003ethe evidence used to get the assurance in the claims and the person\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003eassurance_details:\u003c/p\u003e\n\n  \u003cp\u003e     assurance_type: \u003ca href=\"#predefined-lists\"\u003eassurance_type\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     assurance_classification: \u003ca href=\"#predefined-lists\"\u003eassurance_classification\u003c/a\u003e\u003c/p\u003e\n\n  \u003cp\u003e     evidence_ref: array (\u003ca href=\"#evidence-references\"\u003eevidence_references\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"evidence-references\"\u003eEvidence references\u003c/h3\u003e\u003cp\u003eThis contains:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003ea unique reference number representing the check that was performed with the evidence\u003c/li\u003e\n  \u003cli\u003eother data about the checks or evidence that is required by the assurance process in order to demonstrate compliance with the trust_framework\u003c/li\u003e\n\u003c/ul\u003e\u003cp\u003eThe check_id is a method to link the checks performed with the evidence to the assurance processes, if check_id is present there must be a matching check_id in a \u003ca href=\"#check-details\"\u003echeck_details\u003c/a\u003e object\u003c/p\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003eevidence_ref:\u003c/p\u003e\n\n  \u003cp\u003e     check_id: string\u003c/p\u003e\n\n  \u003cp\u003e     evidence_ref: object (\u003ca href=\"#evidence-metadata\"\u003eevidence_metadata\u003c/a\u003e)\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"evidence-metadata\"\u003eEvidence metadata\u003c/h3\u003e\u003cp\u003eThis contains:\u003c/p\u003e\u003cul\u003e\n  \u003cli\u003einformation on how the process used in \u003ca href=\"#check-details\"\u003echeck_details\u003c/a\u003e demonstrates compliance with the assurance_type. This is additional information that may be needed in order to fully explain how the evidence was used in the assurance process.\u003c/li\u003e\n\u003c/ul\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003eevidence_metadata:\u003c/p\u003e\n\n  \u003cp\u003e     evidence_classification: \u003ca href=\"#predefined-lists\"\u003eevidence_classification\u003c/a\u003e\u003c/p\u003e\n\u003c/div\u003e"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "GPG 45 data dictionary",
+      "url": "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45#gpg-45-data-dictionary",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "url": "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45#gpg-45-data-dictionary",
+        "text": "\u003cp\u003eTo make sure there is consistency in how the data about identity proofing and verification is exchanged some of the elements must have a set format and use shared terms. The following section defines both allowed values and formats for a number of the elements in the GPG 45 data model.\u003c/p\u003e\u003ch3 id=\"data-definitions\"\u003eData definitions\u003c/h3\u003e\u003cp\u003eSome elements of this data model must have defined structure so that they are constructed and understood by all participants in the DVS trust framework.\u003c/p\u003e\u003ch4 id=\"country-code\"\u003eCountry code\u003c/h4\u003e\u003cp\u003eCountry codes should be 3-letter codes following ISO 3166-1 or ICAO Doc 9303. Other 2-letter and single codes may be used in some circumstances for compatibility reasons, for example Germany often uses ‘D’ as its issuer country code.\u003c/p\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003ecountry_code: string\u003c/p\u003e\n\u003c/div\u003e\u003ch4 id=\"date\"\u003eDate\u003c/h4\u003e\u003cp\u003eDates must always be in ISO 8601 ‘YYYY-MM-DD’ format\u003c/p\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003edate: string\u003c/p\u003e\n\u003c/div\u003e\u003ch4 id=\"encoding\"\u003eEncoding\u003c/h4\u003e\u003cp\u003eThis describes the type of encoding used for the corresponding data. This should use media types as defined by \u003ca rel=\"external\" href=\"https://www.iana.org/assignments/media-types/media-types.xhtml\"\u003eIANA\u003c/a\u003e, or interchange formats defined by ISO/IEC 19794-5, ISO/IEC 39794-5, ANSI/NIST-ITL, or ISO/IEC 18013\u003c/p\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003eencoding: string\u003c/p\u003e\n\u003c/div\u003e\u003ch4 id=\"language\"\u003eLanguage\u003c/h4\u003e\u003cp\u003eLanguage codes must follow ISO 639-1 or RFC 5646\u003c/p\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003elanguage: string\u003c/p\u003e\n\u003c/div\u003e\u003ch4 id=\"nationality\"\u003eNationality\u003c/h4\u003e\u003cp\u003eNationality should use 3-letter codes following ISO 3166-1 or ICAO Doc 9303. Other 2-letter and single codes may be used in some circumstances for compatibility reasons.\u003c/p\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003enationality: string\u003c/p\u003e\n\u003c/div\u003e\u003ch4 id=\"timestamp\"\u003eTimestamp\u003c/h4\u003e\u003cp\u003eTime stamps must always be in ISO 8601 ‘YYYY-MM-DDThh:mm(:ss)TZD’ format\u003c/p\u003e\u003cdiv class=\"example\"\u003e\n  \u003cp\u003edate: string\u003c/p\u003e\n\u003c/div\u003e\u003ch3 id=\"predefined-values\"\u003ePredefined values\u003c/h3\u003e\u003cp\u003eThe table below defines the meaning of the terms used in this data model.\u003c/p\u003e\u003ctable\u003e\n  \u003cthead\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"col\"\u003ePredefined value\u003c/th\u003e\n      \u003cth scope=\"col\"\u003eDefinition\u003c/th\u003e\n    \u003c/tr\u003e\n  \u003c/thead\u003e\n  \u003ctbody\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eactivity_history\u003c/td\u003e\n      \u003ctd\u003eActivity history check according to GPG 45\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eadoption_certificate\u003c/td\u003e\n      \u003ctd\u003eA document relating to the adoption of a person\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eadoption_register\u003c/td\u003e\n      \u003ctd\u003eA record relating to the adoption of a person\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eauth\u003c/td\u003e\n      \u003ctd\u003eVerifying the user is the owner of the claims by use of an electronic authentication process that is linked to the owner of the claims\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ebank_account\u003c/td\u003e\n      \u003ctd\u003eA financial account maintained by a bank\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ebank_statement\u003c/td\u003e\n      \u003ctd\u003eA summary of bank transactions over a given period\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ebase64\u003c/td\u003e\n      \u003ctd\u003eThis is a standard binary-to-text encoding system that uses printable characters to represent a sequence of bytes\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ebirth_certificate\u003c/td\u003e\n      \u003ctd\u003eA document relating to the birth of a person\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ebirth_register\u003c/td\u003e\n      \u003ctd\u003eA record relating to the birth of a person\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ebuilding_society_account\u003c/td\u003e\n      \u003ctd\u003eA financial account maintained by a building society\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ebus_pass\u003c/td\u003e\n      \u003ctd\u003eAn older or disabled person’s bus pass\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ebvp\u003c/td\u003e\n      \u003ctd\u003eBiometric verification by an automated system with the user physically present to the system and the verifier, the use of a biometric modality (such as face) to match the user with a known template of the owner of the claims\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ebvr\u003c/td\u003e\n      \u003ctd\u003eBiometric verification by an automated system where the user and capture device is remote to the verifier, the use of a biometric modality (such as face) to match the user with a known template of the owner of the claims\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ebyte_data\u003c/td\u003e\n      \u003ctd\u003eData that is made up of bytes as defined by ISO/IEC 2382-1\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ecivil_partnership_register\u003c/td\u003e\n      \u003ctd\u003eA record relating to the civil partnership of a person\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ecounter_fraud\u003c/td\u003e\n      \u003ctd\u003eCounter fraud check was performed\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ecredit_account\u003c/td\u003e\n      \u003ctd\u003eA specific type of financial account maintained by a bank or other financial institution where it offers the customer credit\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ecredit_union_account\u003c/td\u003e\n      \u003ctd\u003eA financial account maintained by a credit union\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ecurrent_account\u003c/td\u003e\n      \u003ctd\u003eA specific type of financial account maintained by a bank or other financial institution used for day to day money exchange\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003edata\u003c/td\u003e\n      \u003ctd\u003eFound an existing electronic record that matches the claims made by the user\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003edriving_permit\u003c/td\u003e\n      \u003ctd\u003eA permit / licence required to operate a motor vehicle on public roads\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eeducation_certificate\u003c/td\u003e\n      \u003ctd\u003eCertificate of completing education / course\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eeducation_record\u003c/td\u003e\n      \u003ctd\u003eA record from an educational institution\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003efirearm_certificate\u003c/td\u003e\n      \u003ctd\u003eA certificate required in order to own a firearm\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003efreedom_pass\u003c/td\u003e\n      \u003ctd\u003eA pass that provides free public transport for older or disabled people in London and local buses in England\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ehome_office_travel_document\u003c/td\u003e\n      \u003ctd\u003eAn international travel document issued by the Home Office to someone who not a British Citizen and is unable to obtain a national passport from their country\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eicao\u003c/td\u003e\n      \u003ctd\u003eTransliteration has been done following ICAO Doc 9303 standard\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eid_card\u003c/td\u003e\n      \u003ctd\u003eAn identity card issued by a recognised country\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003ekbv\u003c/td\u003e\n      \u003ctd\u003eVerifying the user is the owner of the claims by knowledge based challenges/questions that only the owner of the claims should know how to answer.\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eloan_account\u003c/td\u003e\n      \u003ctd\u003eA specific type of financial account maintained by a bank or other financial institution relating to sums borrowed by the customer\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eloan_statement\u003c/td\u003e\n      \u003ctd\u003eA summary of loan transactions over a given period\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003emanual\u003c/td\u003e\n      \u003ctd\u003eTransliteration has been done manually and is not likely to follow a defined standard\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003emarriage_register\u003c/td\u003e\n      \u003ctd\u003eA record relating to the marriage of a person\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003emilitary_id\u003c/td\u003e\n      \u003ctd\u003eActive service personnel ID card\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003emilitary_record\u003c/td\u003e\n      \u003ctd\u003eRecords about service personnel held by an organisation responsible for the armed forces\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003emortgage_account\u003c/td\u003e\n      \u003ctd\u003eA loan used to purchase or maintain a property\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003emortgage_statement\u003c/td\u003e\n      \u003ctd\u003eA summary of mortgage transactions over a given period\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003epass_card\u003c/td\u003e\n      \u003ctd\u003eProof of age card issued under the rules of PASS\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003epassport\u003c/td\u003e\n      \u003ctd\u003eAn ICAO compliant passport issued by a recognised country\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003epassport_card\u003c/td\u003e\n      \u003ctd\u003eAn ICAO compliant passport card issued by a recognised country\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003epilot_permit\u003c/td\u003e\n      \u003ctd\u003eA permit / licence required to operate an aircraft\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003epopulation_register\u003c/td\u003e\n      \u003ctd\u003eA record relating to a person being resident or a citizen in a given jurisdiction\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eprison_record\u003c/td\u003e\n      \u003ctd\u003eRecords about an inmate held by an organisation responsible for managing prisons\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eproof_of_age_id\u003c/td\u003e\n      \u003ctd\u003eID predominately used as a proof of age\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003epurchase_agreement\u003c/td\u003e\n      \u003ctd\u003eContract between a buyer and a seller that defines the terms and conditions of a purchase\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003epvp\u003c/td\u003e\n      \u003ctd\u003ePhysical verification in person by a qualified/authorised person, the comparison of a physical characteristic (such as face) of the user with a known image/template of the owner of the claims\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003epvr\u003c/td\u003e\n      \u003ctd\u003ePhysical verification by a qualified/authorised person when the user is remote, the comparison of a physical characteristic (such as face) from an image or video of the user with a known image/template of the owner of the claims.\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003erental_agreement\u003c/td\u003e\n      \u003ctd\u003eContractual agreement relating to renting a property\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003esocial_security_record\u003c/td\u003e\n      \u003ctd\u003eRecords held by an organisation responsible for managing social security registration or payments\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003esocial_security_statement\u003c/td\u003e\n      \u003ctd\u003eA summary social security awards or transactions over a given period\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003estudent_loan_account\u003c/td\u003e\n      \u003ctd\u003eA record of a student loan\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003etax_record\u003c/td\u003e\n      \u003ctd\u003eRecords about a person held by an organisation responsible for managing tax registration or payments\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003etax_statement\u003c/td\u003e\n      \u003ctd\u003eA summary of tax liabilities and transactions over a given period\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003etoken\u003c/td\u003e\n      \u003ctd\u003eVerifying the user is the owner of the claims by use of an electronic authentication token such as hardware token or smartcard that is linked and issued to the owner of the claims\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eunknown_transliteration\u003c/td\u003e\n      \u003ctd\u003eTransliteration status or method is not known\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eutility_account\u003c/td\u003e\n      \u003ctd\u003eA record relating to a utility\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eutility_statement\u003c/td\u003e\n      \u003ctd\u003eA summary of utility usage over a given period\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003evalidation\u003c/td\u003e\n      \u003ctd\u003eValidating the authenticity of evidence according to GPG 45\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003evcrypt\u003c/td\u003e\n      \u003ctd\u003eValidation the cryptographic security features of the evidence are intact and correct\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003evdig\u003c/td\u003e\n      \u003ctd\u003eValidation that digital/electronic evidence is genuine by the inspection of its properties and content\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003everification\u003c/td\u003e\n      \u003ctd\u003eVerifying the person is the owner of the identity in accordance with GPG 45\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003eveterans_card\u003c/td\u003e\n      \u003ctd\u003eArmed Forces Veteran Card\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003evisa\u003c/td\u003e\n      \u003ctd\u003eA type of legal document issued by a country to a foreign citizen that allows them to enter, stay, work or travel within the country\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003evoter_id\u003c/td\u003e\n      \u003ctd\u003ePhotographic identity card used for voting at polling stations\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003evoter_register\u003c/td\u003e\n      \u003ctd\u003eA record relating to a person’s right to vote\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003evpip\u003c/td\u003e\n      \u003ctd\u003eValidation that physical evidence is genuine through inspection of its physical properties in person\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003evpiruv\u003c/td\u003e\n      \u003ctd\u003eValidation that physical evidence is genuine through inspection of its physical properties in person including its optical characteristics under non-visible light\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003ctd\u003evri\u003c/td\u003e\n      \u003ctd\u003eValidation that physical evidence is genuine through the inspection of an image taken remotely under visible light\u003c/td\u003e\n    \u003c/tr\u003e\n  \u003c/tbody\u003e\n\u003c/table\u003e\u003ch3 id=\"predefined-lists\"\u003ePredefined lists\u003c/h3\u003e\u003cp\u003eSome elements in this data model are only allowed to have certain predefined values, these restrictions are:\u003c/p\u003e\u003ctable\u003e\n  \u003cthead\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"col\"\u003eElement\u003c/th\u003e\n      \u003cth scope=\"col\"\u003eType\u003c/th\u003e\n      \u003cth scope=\"col\"\u003ePredefined values\u003c/th\u003e\n      \u003cth scope=\"col\"\u003eNotes\u003c/th\u003e\n    \u003c/tr\u003e\n  \u003c/thead\u003e\n  \u003ctbody\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"row\"\u003eassurance_classification\u003c/th\u003e\n      \u003ctd\u003estring\u003c/td\u003e\n      \u003ctd\u003escore_1, score_2, score_3, score_4\u003c/td\u003e\n      \u003ctd\u003eScores taken from GPG 45\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"row\"\u003eassurance_level\u003c/th\u003e\n      \u003ctd\u003estring\u003c/td\u003e\n      \u003ctd\u003elow, medium, high, very_high\u003c/td\u003e\n      \u003ctd\u003eConfidence levels from GPG 45\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"row\"\u003eassurance_type\u003c/th\u003e\n      \u003ctd\u003estring\u003c/td\u003e\n      \u003ctd\u003evalidation, verification, counter_fraud, activity_history\u003c/td\u003e\n      \u003ctd\u003e \u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"row\"\u003ebiometric_modality\u003c/th\u003e\n      \u003ctd\u003estring\u003c/td\u003e\n      \u003ctd\u003eface, fingerprint, voice, iris\u003c/td\u003e\n      \u003ctd\u003e \u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"row\"\u003echeck_method\u003c/th\u003e\n      \u003ctd\u003estring\u003c/td\u003e\n      \u003ctd\u003eauth, token, kbv, pvp, pvr, bvp, bvr, vpip, vpiruv, vri, vdig, vcrypt, data\u003c/td\u003e\n      \u003ctd\u003e \u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"row\"\u003edocument_type\u003c/th\u003e\n      \u003ctd\u003estring\u003c/td\u003e\n      \u003ctd\u003epassport, id_card, passport_card, driving_permit, military_id, veterans_card, proof_of_age_id, home_office_travel_document, bus_pass,education_certificate, rental_agreement, purchase_agreement, pass_card, freedom_pass, voter_id, bank_statement, utility_statement, mortgage_statement, loan_statement, tax_statement, social_security_statement, pilot_permit, birth_certificate, adoption_certificate, marriage_certificate, civil_partnership_certificate, firearm_certificate\u003c/td\u003e\n      \u003ctd\u003e \u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"row\"\u003eencoding_format\u003c/th\u003e\n      \u003ctd\u003estring\u003c/td\u003e\n      \u003ctd\u003ebase64, byte_data\u003c/td\u003e\n      \u003ctd\u003e \u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"row\"\u003eevidence_classification\u003c/th\u003e\n      \u003ctd\u003estring\u003c/td\u003e\n      \u003ctd\u003elow_kbv, medium_kbv, high_kbv, id_fraud, mortality_check\u003c/td\u003e\n      \u003ctd\u003e \u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"row\"\u003eprocedure\u003c/th\u003e\n      \u003ctd\u003estring\u003c/td\u003e\n      \u003ctd\u003eL1A, L1B, L1C, L2A, L2B, L3A, M1A, M1B, M1C, M1D, M2A, M2B, M2C, M3A, H1A, H1B, H1C, H2A, H2B, H2C, H2D, H2E, H3A, V1A, V1B, V1C, V1D, V2A, V2B, V2C, V2D, V3A\u003c/td\u003e\n      \u003ctd\u003eIdentity profiles from GPG 45\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"row\"\u003erecord_type\u003c/th\u003e\n      \u003ctd\u003estring\u003c/td\u003e\n      \u003ctd\u003esocial_security_record, bank_account, building_society_account, credit_union_account, current_account, student_loan_account, credit_account, mortgage_account, loan_account, birth_register, population_register, voter_register, adoption_register, marriage_register, civil_partnership_register, education_record, utility_account, military_record, tax_record, prison_record, death_register, fraud_register\u003c/td\u003e\n      \u003ctd\u003e \u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003cth scope=\"row\"\u003etransliteration_type\u003c/th\u003e\n      \u003ctd\u003estring\u003c/td\u003e\n      \u003ctd\u003emanual, icao, unknown_transliteration\u003c/td\u003e\n      \u003ctd\u003e \u003c/td\u003e\n    \u003c/tr\u003e\n  \u003c/tbody\u003e\n\u003c/table\u003e"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="canonical" href="https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45">
+
+<meta property="og:site_name" content="GOV.UK">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45">
+<meta property="og:title" content="Data taxonomy, data model and data dictionary for GPG 45">
+<meta property="og:description" content="">
+
+  <meta name="twitter:card" content="summary">
+
+
+  <link rel="stylesheet" href="/assets/frontend/views/_html-publication-d183ff6655d34a5cea8d3f6f863d5b6c74654d40325c0a970e8e96ca046b4d07.css" />
+  <link rel="stylesheet" href="/assets/frontend/views/_csv_preview-ddf66f9f13d0fb5e8672480d53d092910344fca34f35e21fc2220e1500143904.css" />
+
+  <meta name="csp-nonce" content="sH1f+zmH9kan/1Szl1CZSQ==" />
+
+<link title="Search" rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml">
+
+  
+  <meta name="govuk:format" content="html_publication">
+  <meta name="govuk:publishing-app" content="whitehall">
+  <meta name="govuk:rendering-app" content="frontend">
+  <meta name="govuk:schema-name" content="html_publication">
+  <meta name="govuk:content-id" content="81215a38-f1c7-4db2-b159-c21c2a14a55d">
+  <meta name="govuk:ga4-base-path" content="/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45">
+  <meta name="govuk:first-published-at" content="2026-03-03T09:00:04+00:00">
+  <meta name="govuk:updated-at" content="2026-09-17T13:29:44+01:00">
+  <meta name="govuk:public-updated-at" content="2026-04-13T16:29:59+01:00">
+  <meta name="govuk:primary-publishing-organisation" content="Office for Digital Identities and Attributes">
+  <meta name="govuk:organisations" content="&lt;OT1429&gt;&lt;D1381&gt;&lt;D1481&gt;">
+
+
+
+
+
+
+
+
+  </head>
+  <body class="gem-c-layout-for-public govuk-template__body">
+    <script nonce="sH1f+zmH9kan/1Szl1CZSQ==">
+//<![CDATA[
+      document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
+
+//]]>
+</script>      
+<div id="global-cookie-message" data-module="cookie-banner" data-nosnippet="" aria-label="Cookies on GOV.UK" class="gem-c-cookie-banner govuk-clearfix govuk-cookie-banner js-banner-wrapper" role="region" hidden="hidden">
+  <div class="govuk-cookie-banner__message govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on GOV.UK</h2>
+        <div tabindex="-1" class="govuk-cookie-banner__content gem-c-cookie-banner__confirmation">
+          <div class="gem-c-cookie-banner__content"><p class='govuk-body'>We use some essential cookies to make this website work.</p><p class='govuk-body'>We’d like to set additional cookies to understand how you use GOV.UK, remember your settings and improve government services.</p><p class='govuk-body'>We also use cookies set by other sites to help us deliver content from their services.</p></div>
+          <p class="gem-c-cookie-banner__confirmation-message--accepted govuk-body" hidden
+            data-ga4-cookie-banner 
+            data-module="ga4-link-tracker"
+            data-ga4-set-indexes
+            data-ga4-link='{"event_name":"navigation","type":"cookie banner","section":"You have accepted additional cookies"}'
+          >You have accepted additional cookies. <span class="gem-c-cookie-banner__confirmation-message">You can <a class="govuk-link" href="/help/cookies">change your cookie settings</a> at any time.</span></p>
+          <p class="gem-c-cookie-banner__confirmation-message--rejected govuk-body" hidden>You have rejected additional cookies. <span class="gem-c-cookie-banner__confirmation-message">You can <a class="govuk-link" href="/help/cookies">change your cookie settings</a> at any time.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="js-confirmation-buttons govuk-button-group">
+      
+
+  <button class="gem-c-button govuk-button" type="submit" data-accept-cookies="true" data-cookie-types="all">Accept additional cookies</button>
+
+
+      
+
+  <button class="gem-c-button govuk-button" type="submit" data-reject-cookies="true">Reject additional cookies</button>
+
+
+      <a class="govuk-link" href="/help/cookies">View cookies</a>
+    </div>
+    <div hidden class="js-hide-button govuk-button-group">
+      <button
+        class="gem-c-cookie-banner__hide-button govuk-button"
+        data-hide-cookie-banner="true"
+        data-module="ga4-event-tracker"
+         data-ga4-event='{"event_name":"select_content","type":"cookie banner","action":"closed","section":"You have accepted additional cookies"}' >
+          Hide cookie message
+        </button>
+    </div>
+  </div>
+</div>
+      <a data-module="govuk-skip-link" class="gem-c-skip-link govuk-skip-link govuk-!-display-none-print" href="#content">Skip to main content</a>
+
+      <header>
+            <div data-module="ga4-event-tracker ga4-link-tracker" data-ga4-expandable="" class="gem-c-layout-super-navigation-header">
+<div class="gem-c-layout-super-navigation-header__nav-wrapper">
+  <div class="gem-c-layout-super-navigation-header__container govuk-width-container">
+    <nav
+      aria-labelledby="super-navigation-menu-heading"
+      class="gem-c-layout-super-navigation-header__content"
+      data-module="super-navigation-mega-menu">
+      <div class="gem-c-layout-super-navigation-header__header-logo">
+        <a class="govuk-header__homepage-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","external":"false","text":"GOV.UK","section":"Logo","index_link":1,"index_section":0,"index_section_count":2,"index_total":1}' id="logo" aria-label="Go to the GOV.UK homepage" href="/">
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  focusable="false"
+  role="img"
+  viewBox="0 0 324 60"
+  height="30"
+  width="162"
+  fill="currentcolor"
+  class="govuk-header__logotype"
+  aria-label="GOV.UK">
+  <title>GOV.UK</title>
+  <g>
+    <circle cx="20" cy="17.6" r="3.7"></circle>
+    <circle cx="10.2" cy="23.5" r="3.7"></circle>
+    <circle cx="3.7" cy="33.2" r="3.7"></circle>
+    <circle cx="31.7" cy="30.6" r="3.7"></circle>
+    <circle cx="43.3" cy="17.6" r="3.7"></circle>
+    <circle cx="53.2" cy="23.5" r="3.7"></circle>
+    <circle cx="59.7" cy="33.2" r="3.7"></circle>
+    <circle cx="31.7" cy="30.6" r="3.7"></circle>
+    <path d="M33.1,9.8c.2-.1.3-.3.5-.5l4.6,2.4v-6.8l-4.6,1.5c-.1-.2-.3-.3-.5-.5l1.9-5.9h-6.7l1.9,5.9c-.2.1-.3.3-.5.5l-4.6-1.5v6.8l4.6-2.4c.1.2.3.3.5.5l-2.6,8c-.9,2.8,1.2,5.7,4.1,5.7h0c3,0,5.1-2.9,4.1-5.7l-2.6-8ZM37,37.9s-3.4,3.8-4.1,6.1c2.2,0,4.2-.5,6.4-2.8l-.7,8.5c-2-2.8-4.4-4.1-5.7-3.8.1,3.1.5,6.7,5.8,7.2,3.7.3,6.7-1.5,7-3.8.4-2.6-2-4.3-3.7-1.6-1.4-4.5,2.4-6.1,4.9-3.2-1.9-4.5-1.8-7.7,2.4-10.9,3,4,2.6,7.3-1.2,11.1,2.4-1.3,6.2,0,4,4.6-1.2-2.8-3.7-2.2-4.2.2-.3,1.7.7,3.7,3,4.2,1.9.3,4.7-.9,7-5.9-1.3,0-2.4.7-3.9,1.7l2.4-8c.6,2.3,1.4,3.7,2.2,4.5.6-1.6.5-2.8,0-5.3l5,1.8c-2.6,3.6-5.2,8.7-7.3,17.5-7.4-1.1-15.7-1.7-24.5-1.7h0c-8.8,0-17.1.6-24.5,1.7-2.1-8.9-4.7-13.9-7.3-17.5l5-1.8c-.5,2.5-.6,3.7,0,5.3.8-.8,1.6-2.3,2.2-4.5l2.4,8c-1.5-1-2.6-1.7-3.9-1.7,2.3,5,5.2,6.2,7,5.9,2.3-.4,3.3-2.4,3-4.2-.5-2.4-3-3.1-4.2-.2-2.2-4.6,1.6-6,4-4.6-3.7-3.7-4.2-7.1-1.2-11.1,4.2,3.2,4.3,6.4,2.4,10.9,2.5-2.8,6.3-1.3,4.9,3.2-1.8-2.7-4.1-1-3.7,1.6.3,2.3,3.3,4.1,7,3.8,5.4-.5,5.7-4.2,5.8-7.2-1.3-.2-3.7,1-5.7,3.8l-.7-8.5c2.2,2.3,4.2,2.7,6.4,2.8-.7-2.3-4.1-6.1-4.1-6.1h10.6,0Z"></path>
+  </g>
+  <circle class="govuk-logo-dot" cx="226" cy="36" r="7.3"></circle>
+  <path d="M93.94 41.25c.4 1.81 1.2 3.21 2.21 4.62 1 1.4 2.21 2.41 3.61 3.21s3.21 1.2 5.22 1.2 3.61-.4 4.82-1c1.4-.6 2.41-1.4 3.21-2.41.8-1 1.4-2.01 1.61-3.01s.4-2.01.4-3.01v.14h-10.86v-7.02h20.07v24.08h-8.03v-5.56c-.6.8-1.38 1.61-2.19 2.41-.8.8-1.81 1.2-2.81 1.81-1 .4-2.21.8-3.41 1.2s-2.41.4-3.81.4a18.56 18.56 0 0 1-14.65-6.63c-1.6-2.01-3.01-4.41-3.81-7.02s-1.4-5.62-1.4-8.83.4-6.02 1.4-8.83a20.45 20.45 0 0 1 19.46-13.65c3.21 0 4.01.2 5.82.8 1.81.4 3.61 1.2 5.02 2.01 1.61.8 2.81 2.01 4.01 3.21s2.21 2.61 2.81 4.21l-7.63 4.41c-.4-1-1-1.81-1.61-2.61-.6-.8-1.4-1.4-2.21-2.01-.8-.6-1.81-1-2.81-1.4-1-.4-2.21-.4-3.61-.4-2.01 0-3.81.4-5.22 1.2-1.4.8-2.61 1.81-3.61 3.21s-1.61 2.81-2.21 4.62c-.4 1.81-.6 3.71-.6 5.42s.8 5.22.8 5.22Zm57.8-27.9c3.21 0 6.22.6 8.63 1.81 2.41 1.2 4.82 2.81 6.62 4.82S170.2 24.39 171 27s1.4 5.62 1.4 8.83-.4 6.02-1.4 8.83-2.41 5.02-4.01 7.02-4.01 3.61-6.62 4.82-5.42 1.81-8.63 1.81-6.22-.6-8.63-1.81-4.82-2.81-6.42-4.82-3.21-4.41-4.01-7.02-1.4-5.62-1.4-8.83.4-6.02 1.4-8.83 2.41-5.02 4.01-7.02 4.01-3.61 6.42-4.82 5.42-1.81 8.63-1.81Zm0 36.73c1.81 0 3.61-.4 5.02-1s2.61-1.81 3.61-3.01 1.81-2.81 2.21-4.41c.4-1.81.8-3.61.8-5.62 0-2.21-.2-4.21-.8-6.02s-1.2-3.21-2.21-4.62c-1-1.2-2.21-2.21-3.61-3.01s-3.21-1-5.02-1-3.61.4-5.02 1c-1.4.8-2.61 1.81-3.61 3.01s-1.81 2.81-2.21 4.62c-.4 1.81-.8 3.61-.8 5.62 0 2.41.2 4.21.8 6.02.4 1.81 1.2 3.21 2.21 4.41s2.21 2.21 3.61 3.01c1.4.8 3.21 1 5.02 1Zm36.32 7.96-12.24-44.15h9.83l8.43 32.77h.4l8.23-32.77h9.83L200.3 58.04h-12.24Zm74.14-7.96c2.18 0 3.51-.6 3.51-.6 1.2-.6 2.01-1 2.81-1.81s1.4-1.81 1.81-2.81a13 13 0 0 0 .8-4.01V13.9h8.63v28.15c0 2.41-.4 4.62-1.4 6.62-.8 2.01-2.21 3.61-3.61 5.02s-3.41 2.41-5.62 3.21-4.62 1.2-7.02 1.2-5.02-.4-7.02-1.2c-2.21-.8-4.01-1.81-5.62-3.21s-2.81-3.01-3.61-5.02-1.4-4.21-1.4-6.62V13.9h8.63v26.95c0 1.61.2 3.01.8 4.01.4 1.2 1.2 2.21 2.01 2.81.8.8 1.81 1.4 2.81 1.81 0 0 1.34.6 3.51.6Zm34.22-36.18v18.92l15.65-18.92h10.82l-15.03 17.32 16.03 26.83h-10.21l-11.44-20.21-5.62 6.22v13.99h-8.83V13.9"></path>
+</svg>
+
+</a></div>      <h2 id="super-navigation-menu-heading" class="govuk-visually-hidden">
+        Navigation menu
+      </h2>
+
+
+      <div class="gem-c-layout-super-navigation-header__navigation-item">
+        <a class="gem-c-layout-super-navigation-header__navigation-item-link" href="/browse"><span class="gem-c-layout-super-navigation-header__navigation-item-link-inner">            Menu
+</span></a>
+        <button aria-controls="super-navigation-menu" aria-expanded="false" aria-label="Show navigation menu" class="gem-c-layout-super-navigation-header__navigation-top-toggle-button" data-text-for-hide="Hide navigation menu" data-text-for-show="Show navigation menu" data-toggle-desktop-group="top" data-toggle-mobile-group="top" data-ga4-event='{"event_name":"select_content","type":"header menu bar","text":"Menu","index_section":1,"index_section_count":2,"section":"Menu"}' hidden="hidden" id="super-navigation-menu-toggle" type="button">
+          <span class="gem-c-layout-super-navigation-header__navigation-top-toggle-button-inner">Menu</span>
+</button>      </div>
+      <div id="super-navigation-menu" hidden="hidden" class="gem-c-layout-super-navigation-header__navigation-dropdown-menu">
+        <div class="govuk-grid-row gem-c-layout-super-navigation-header__navigation-items">
+
+
+            <div class="govuk-grid-column-two-thirds-from-desktop gem-c-layout-super-navigation-header__column--services-and-information">
+              <h3 class="govuk-heading-m gem-c-layout-super-navigation-header__column-header">
+                Services and information
+              </h3>
+              <ul class="gem-c-layout-super-navigation-header__navigation-second-items gem-c-layout-super-navigation-header__navigation-second-items--services-and-information">
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":1,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/benefits">Benefits</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":2,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/births-deaths-marriages">Births, death, marriages and care</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":3,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/business">Business and self-employed</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":4,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/childcare-parenting">Childcare and parenting</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":5,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/citizenship">Citizenship and living in the UK</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":6,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/justice">Crime, justice and the law</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":7,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/disabilities">Disabled people</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":8,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/driving">Driving and transport</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":9,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/education">Education and learning</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":10,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/employing-people">Employing people</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":11,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/environment-countryside">Environment and countryside</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":12,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/housing-local-services">Housing and local services</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":13,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/tax">Money and tax</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":14,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/abroad">Passports, travel and living abroad</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":15,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/visas-immigration">Visas and immigration</a>
+                      
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":1,"index_link":16,"index_section_count":3,"index_total":16,"section":"Services and information"}' href="/browse/working">Working, jobs and pensions</a>
+                      
+                    </li>
+              </ul>
+            </div>
+
+            <div class="govuk-grid-column-one-third-from-desktop gem-c-layout-super-navigation-header__column--government-activity">
+              <h3 class="govuk-heading-m gem-c-layout-super-navigation-header__column-header">
+                Government activity
+              </h3>
+              <ul class="gem-c-layout-super-navigation-header__navigation-second-items gem-c-layout-super-navigation-header__navigation-second-items--government-activity">
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link gem-c-layout-super-navigation-header__navigation-second-item-link--with-description" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":2,"index_link":1,"index_section_count":3,"index_total":6,"section":"Government activity"}' href="/government/organisations">Departments</a>
+                      <p class="gem-c-layout-super-navigation-header__navigation-second-item-description">Departments, agencies and public bodies</p>
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link gem-c-layout-super-navigation-header__navigation-second-item-link--with-description" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":2,"index_link":2,"index_section_count":3,"index_total":6,"section":"Government activity"}' href="/search/news-and-communications">News</a>
+                      <p class="gem-c-layout-super-navigation-header__navigation-second-item-description">News stories, speeches, letters and notices</p>
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link gem-c-layout-super-navigation-header__navigation-second-item-link--with-description" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":2,"index_link":3,"index_section_count":3,"index_total":6,"section":"Government activity"}' href="/search/guidance-and-regulation">Guidance and regulation</a>
+                      <p class="gem-c-layout-super-navigation-header__navigation-second-item-description">Detailed guidance, regulations and rules</p>
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link gem-c-layout-super-navigation-header__navigation-second-item-link--with-description" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":2,"index_link":4,"index_section_count":3,"index_total":6,"section":"Government activity"}' href="/search/research-and-statistics">Research and statistics</a>
+                      <p class="gem-c-layout-super-navigation-header__navigation-second-item-description">Reports, analysis and official statistics</p>
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link gem-c-layout-super-navigation-header__navigation-second-item-link--with-description" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":2,"index_link":5,"index_section_count":3,"index_total":6,"section":"Government activity"}' href="/search/policy-papers-and-consultations">Policy papers and consultations</a>
+                      <p class="gem-c-layout-super-navigation-header__navigation-second-item-description">Consultations and strategy</p>
+                    </li>
+                    <li class="gem-c-layout-super-navigation-header__dropdown-list-item">
+                      <a class="govuk-link gem-c-layout-super-navigation-header__navigation-second-item-link gem-c-layout-super-navigation-header__navigation-second-item-link--with-description" data-ga4-link='{"event_name":"navigation","type":"header menu bar","index_section":2,"index_link":6,"index_section_count":3,"index_total":6,"section":"Government activity"}' href="/search/transparency-and-freedom-of-information-releases">Transparency</a>
+                      <p class="gem-c-layout-super-navigation-header__navigation-second-item-description">Data, Freedom of Information releases and corporate reports</p>
+                    </li>
+              </ul>
+            </div>
+        </div>
+</div>      <div class="gem-c-layout-super-navigation-header__search-item">
+        <button id="super-search-menu-toggle" class="gem-c-layout-super-navigation-header__search-toggle-button" aria-controls="super-search-menu" aria-expanded="true" aria-label="Hide search menu" data-text-for-hide="Hide search menu" data-text-for-show="Show search menu" data-toggle-mobile-group="top" data-toggle-desktop-group="top" data-ga4-event='{"event_name":"select_content","type":"header menu bar","text":"Search","index_section":2,"index_section_count":2,"section":"Search"}' hidden="hidden" type="button">
+          <span class="govuk-visually-hidden">
+            Search GOV.UK
+          </span>
+          
+<svg
+  class="gem-c-layout-super-navigation-header__search-toggle-button-link-icon"
+  width="27"
+  height="27"
+  viewBox="0 0 27 27"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  focusable="false">
+  <circle
+    cx="12.0161"
+    cy="11.0161"
+    r="8.51613"
+    stroke="currentColor"
+    stroke-width="3" />
+  <line
+    x1="17.8668"
+    y1="17.3587"
+    x2="26.4475"
+    y2="25.9393"
+    stroke="currentColor"
+    stroke-width="3" />
+</svg>
+
+          <span
+            aria-hidden="true"
+            class="gem-c-layout-super-navigation-header__navigation-top-toggle-close-icon">
+            &times;
+          </span>
+</button>
+        <a class="gem-c-layout-super-navigation-header__search-item-link" href="/search">
+          <span class="govuk-visually-hidden">
+            Search GOV.UK
+          </span>
+          
+<svg
+  class="gem-c-layout-super-navigation-header__search-item-link-icon"
+  width="27"
+  height="27"
+  viewBox="0 0 27 27"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  focusable="false">
+  <circle
+    cx="12.0161"
+    cy="11.0161"
+    r="8.51613"
+    stroke="currentColor"
+    stroke-width="3" />
+  <line
+    x1="17.8668"
+    y1="17.3587"
+    x2="26.4475"
+    y2="25.9393"
+    stroke="currentColor"
+    stroke-width="3" />
+</svg>
+
+</a>      </div>
+      <div id="super-search-menu" hidden="hidden" class="gem-c-layout-super-navigation-header__navigation-dropdown-menu">
+        <div class="gem-c-layout-super-navigation-header__search-container gem-c-layout-super-navigation-header__search-items">
+          <h3 class="govuk-visually-hidden">
+            Search
+          </h3>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <form class="gem-c-layout-super-navigation-header__search-form" id="search" data-module="ga4-search-tracker" data-ga4-search-type="header menu bar" data-ga4-search-url="/search/all" data-ga4-search-section="Search GOV.UK" data-ga4-search-index-section="3" data-ga4-search-index-section-count="3" action="/search/all" method="get" role="search" aria-label="Site-wide">
+                <div class="gem-c-search-with-autocomplete gem-c-search-with-autocomplete--large govuk-!-margin-bottom-0" data-module="gem-search-with-autocomplete" data-source-url="https://www.gov.uk/api/search/autocomplete.json" data-source-key="suggestions">
+  <div data-module="gem-toggle-input-class-on-focus" class="gem-c-search govuk-!-display-none-print gem-c-search--large gem-c-search--on-white gem-c-search--separate-label govuk-!-margin-bottom-0">
+    <label for="search-main-0cd5222b" class="govuk-label govuk-label--m gem-c-layout-super-navigation-header__search-label--large-navbar">Search GOV.UK</label>
+  <div class="gem-c-search__item-wrapper">
+    <div class="js-search-input-wrapper">
+      <input enterkeyhint="search" class="gem-c-search__item gem-c-search__input js-class-toggle" id="search-main-0cd5222b" name="keywords" title="Search" type="search" value="" autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="gem-c-search__item gem-c-search__submit-wrapper">
+      <button class="gem-c-search__submit" type="submit" enterkeyhint="search">
+        Search
+        
+<svg
+  class="gem-c-search__icon"
+  width="27"
+  height="27"
+  viewBox="0 0 27 27"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  focusable="false">
+  <circle
+    cx="12.0161"
+    cy="11.0161"
+    r="8.51613"
+    stroke="currentColor"
+    stroke-width="3" />
+  <line
+    x1="17.8668"
+    y1="17.3587"
+    x2="26.4475"
+    y2="25.9393"
+    stroke="currentColor"
+    stroke-width="3" />
+</svg>
+
+</button>    </div>
+  </div>
+</div>
+</div>
+</form>            </div>
+          </div>
+        </div>
+</div>    </nav>
+  </div>
+</div>
+</div>
+
+        
+
+</header>
+      
+  
+
+  <div class="govuk-width-container">
+
+      
+<div class="gem-c-contextual-breadcrumbs">
+    
+<script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "name": "Home",
+        "@id": "https://www.gov.uk/"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "name": "Government",
+        "@id": "https://www.gov.uk/government/all"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "name": "Cyber security",
+        "@id": "https://www.gov.uk/government/cyber-security"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "name": "Digital identity",
+        "@id": "https://www.gov.uk/government/digital-identity"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "name": "UK digital verification services trust framework data schema (1.0)",
+        "@id": "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0"
+      }
+    }
+  ]
+}
+</script>
+
+<nav data-module="ga4-link-tracker" aria-label="Breadcrumb" class="gem-c-breadcrumbs govuk-breadcrumbs govuk-!-display-none-print govuk-breadcrumbs--collapse-on-mobile">
+  <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a data-ga4-link='{"event_name":"navigation","type":"breadcrumb","index_link":"1","index_total":"5"}' class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a data-ga4-link='{"event_name":"navigation","type":"breadcrumb","index_link":"2","index_total":"5"}' class="govuk-breadcrumbs__link" href="/government/all">Government</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a data-ga4-link='{"event_name":"navigation","type":"breadcrumb","index_link":"3","index_total":"5"}' class="govuk-breadcrumbs__link" href="/government/cyber-security">Cyber security</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a data-ga4-link='{"event_name":"navigation","type":"breadcrumb","index_link":"4","index_total":"5"}' class="govuk-breadcrumbs__link" href="/government/digital-identity">Digital identity</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a data-ga4-link='{"event_name":"navigation","type":"breadcrumb","index_link":"5","index_total":"5"}' class="govuk-breadcrumbs__link" href="/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0">UK digital verification services trust framework data schema (1.0)</a>
+        </li>
+  </ol>
+</nav>
+</div>
+
+    
+
+    <main id="content" class="govuk-main-wrapper  " >
+      <span id="Top"></span>
+      
+  <div class="publication-external">
+    <ul class="organisation-logos">
+        <li class="organisation-logos__logo">
+          
+<div class="gem-c-organisation-logo brand--department-for-culture-media-sport">
+    <a class="gem-c-organisation-logo__container gem-c-organisation-logo__link gem-c-organisation-logo__crest gem-c-organisation-logo__crest--single-identity brand__border-color" href="/government/organisations/office-for-digital-identities-and-attributes">
+      <span class="gem-c-organisation-logo__name">Office for Digital<br/>Identities &amp; Attributes</span>
+</a></div>
+        </li>
+        <li class="organisation-logos__logo">
+          
+<div class="gem-c-organisation-logo brand--department-for-science-innovation-technology">
+    <a class="gem-c-organisation-logo__container gem-c-organisation-logo__link gem-c-organisation-logo__crest gem-c-organisation-logo__crest--single-identity brand__border-color" href="/government/organisations/department-for-science-innovation-and-technology">
+      <span class="gem-c-organisation-logo__name">Department for<br/>Science, Innovation<br/>&amp; Technology</span>
+</a></div>
+        </li>
+        <li class="organisation-logos__logo">
+          
+<div class="gem-c-organisation-logo brand--department-for-culture-media-sport">
+    <a class="gem-c-organisation-logo__container gem-c-organisation-logo__link gem-c-organisation-logo__crest gem-c-organisation-logo__crest--single-identity brand__border-color" href="/government/organisations/department-for-digital-culture-media-and-sport">
+      <span class="gem-c-organisation-logo__name">Department for<br/>Digital, Culture,<br/>Media &amp; Sport</span>
+</a></div>
+        </li>
+    </ul>
+  </div>
+
+  <header class="gem-c-inverse-header gem-c-inverse-header--html-publication-header govuk-!-padding-top-6 govuk-!-padding-bottom-6" dir="ltr">
+    
+  
+<div class="gem-c-heading  gem-c-heading--inverse govuk-!-margin-bottom-0">
+      <span class="govuk-caption-xl gem-c-heading__context" >
+    Guidance
+  </span>
+
+
+  <h1 class="gem-c-heading__text govuk-heading-xl">
+    Data taxonomy, data model and data dictionary for GPG 45
+</h1></div>
+
+    <p class="gem-c-inverse-header__subtext">Updated 13 April 2026</p>
+</header>
+
+
+
+
+<div id="contents">
+  <div class="govuk-grid-row gem-print-columns-none">
+    <div class="govuk-grid-column-one-quarter-from-desktop sticky-column">
+          <nav data-module="ga4-link-tracker" aria-label="Contents" class="gem-c-contents-list govuk-!-margin-bottom-4">
+    <h2 class="gem-c-contents-list__title">
+      Contents
+</h2>
+    <ol class="gem-c-contents-list__list">
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--numbered" >
+          <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+          <a class="gem-c-contents-list__link govuk-link gem-print-force-link-styles govuk-link--no-underline" data-ga4-link='{"event_name":"select_content","section":"Contents","type":"contents list","index_total":4,"index_link":1}' href="#introduction">Introduction</a>
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--numbered" >
+          <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+          <a class="gem-c-contents-list__link govuk-link gem-print-force-link-styles govuk-link--no-underline" data-ga4-link='{"event_name":"select_content","section":"Contents","type":"contents list","index_total":4,"index_link":2}' href="#data-taxonomy">Data taxonomy</a>
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--numbered" >
+          <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+          <a class="gem-c-contents-list__link govuk-link gem-print-force-link-styles govuk-link--no-underline" data-ga4-link='{"event_name":"select_content","section":"Contents","type":"contents list","index_total":4,"index_link":3}' href="#gpg-45-data-model">GPG 45 Data model</a>
+        </li>
+        <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--numbered" >
+          <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+          <a class="gem-c-contents-list__link govuk-link gem-print-force-link-styles govuk-link--no-underline" data-ga4-link='{"event_name":"select_content","section":"Contents","type":"contents list","index_total":4,"index_link":4}' href="#gpg-45-data-dictionary">GPG 45 data dictionary</a>
+        </li>
+    </ol>
+</nav>
+      <div class="gem-c-print-link govuk-!-display-none-print govuk-!-margin-bottom-6">
+  
+
+  <button class="gem-c-button__outline gem-c-button__outline--print govuk-!-margin-bottom-0" type="button" rel="alternate" data-module="print-link">Print this page</button>
+
+
+</div>
+    </div>
+
+    <div class="print-metadata">
+      <p>
+  <img class="print-metadata__licence" src="/assets/frontend/open-government-licence-min-93b6a51b518ff99714a1aa2a7d2162735c155ec3cb073c75fb88b2a332fa83d3.png" />
+</p>
+<p>
+  © Crown copyright 2026
+</p>
+<p>
+  This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.
+</p>
+<p>
+  Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
+</p>
+<p>
+  This publication is available at https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45
+</p>
+
+    </div>
+
+    <div class="govuk-grid-column-three-quarters-from-desktop contents-container">
+      <div class="gem-c-govspeak-html-publication">
+  <div data-module="govspeak" class="gem-c-govspeak gem-c-govspeak--direction-ltr govuk-!-margin-bottom-0">
+    
+    
+        <div class="govspeak"><h2 id="introduction">Introduction</h2>
+
+<p>This specification describes the data taxonomy, data model and data dictionary for the <a href="https://www.gov.uk/government/publications/how-to-check-someones-identity-1-0">‘How to check someone’s identity’</a> guidance, also known as Good Practice Guide (GPG) 45, a supporting document for the <a href="https://www.gov.uk/government/collections/uk-digital-identity-and-attributes-trust-framework">UK digital verification services trust framework</a> (‘the DVS trust framework’, also referred to in this document where a single string of text is needed as ‘uk_dvstf’).</p>
+
+<p>The data taxonomy provides a description of the hierarchy and classification of data for GPG 45.</p>
+
+<p>The data model provides a description of the data element name, any relevant sub elements or the data type.</p>
+
+<p>The data dictionary is a collection of names, definitions, and lists (enumerations) relating to GPG 45 and the DVS trust framework.</p>
+
+<h2 id="data-taxonomy">Data taxonomy</h2>
+
+<p>This section describes the data taxonomy for GPG 45.</p>
+
+<p>This taxonomy provides a standardised terminology for describing GPG 45 data, setting out the types of data and elements it covers and defining the names of the data elements.</p>
+
+<p>The GPG 45 taxonomy includes titles and descriptions for the following areas:</p>
+
+<ul>
+  <li>Identity claims</li>
+  <li>Assurance processes</li>
+  <li>Identity checking processes</li>
+  <li>Identity evidence</li>
+</ul>
+
+<h3 id="identity-claims">Identity claims</h3>
+
+<p>A claimed identity is a combination of information (often a name, date of birth and address) that represents some of the key attributes of whoever a person is claiming to be.</p>
+
+<p>Description:</p>
+
+<ul>
+  <li>Given name(s): Individual’s given name(s)</li>
+  <li>Family name(s): Individual’s family / surname name(s)</li>
+  <li>Address: Individual’s address</li>
+  <li>Date of birth: Individual’s birth date</li>
+  <li>Nationalities: One or more countries of citizenship</li>
+  <li>Biometric information: Measurements of a biological or behavioural attribute, like an iris or fingerprint</li>
+</ul>
+
+<h3 id="assurance-processes">Assurance processes</h3>
+
+<p>Assurance processes describe the assurance framework, policies and rules that govern the identity checking process described in GPG 45.</p>
+
+<p>Description:</p>
+
+<ul>
+  <li>Trust framework: The assurance framework relevant to the claim. For the UK, this is the DVS trust framework and any applicable supplementary codes</li>
+  <li>Assurance policy: Indicates the policy and/or procedure used to prove the user’s claim to the identity. For the DVS trust framework this is always GPG 45</li>
+  <li>Assurance level: In GPG 45 terms this indicates level of confidence</li>
+  <li>Assurance procedure: This describes confidence levels in more detail, for the DVS trust framework this is always a GPG 45 profile</li>
+</ul>
+
+<h3 id="identity-checking-processes">Identity checking processes</h3>
+
+<p>These processes are represented in the data model within the verification outcomes, alongside evidence details.</p>
+
+<p>Description:</p>
+
+<ul>
+  <li>Identity evidence: the evidence provided in order to prove the existence of the identity</li>
+  <li>Validation method: a description of the checking process used to validate that evidence is authentic</li>
+  <li>Verification method: a description of the checking process used to verify that the user is the legitimate owner of the identity</li>
+</ul>
+
+<h2 id="gpg-45-data-model">GPG 45 Data model</h2>
+
+<p>The data model provides a description of the data element name, the relevant sub-elements and the data type.</p>
+
+<h3 id="verified-claims">Verified claims</h3>
+
+<p>This is made up from two pieces of data, the identity the person is claiming to be (‘claims’), and the information about the checks that have been done to prove the identity exists and belongs to them (‘verification’)</p>
+
+<div class="example">
+  <p>verified_claims:</p>
+
+  <p>     claims: object (<a href="#claims">claims</a>)</p>
+
+  <p>     verification: object (<a href="#verification">verification</a>)</p>
+</div>
+
+<h3 id="claims">Claims</h3>
+
+<p>This is the identity information that represents the person making the claim. This can include:</p>
+
+<ul>
+  <li>their given name</li>
+  <li>their family name</li>
+  <li>whether the names have been transliteration from their original language</li>
+  <li>their date of birth</li>
+  <li>their nationalities</li>
+  <li>their biometric information</li>
+  <li>their address</li>
+  <li>their age</li>
+  <li>whether they are over a specific age</li>
+  <li>whether they are under a specific age</li>
+</ul>
+
+<p>These are represented like this:</p>
+
+<div class="example">
+  <p>claims:</p>
+
+  <p>     given_name: string</p>
+
+  <p>     family_name: string</p>
+
+  <p>     transliteration_status: object (<a href="#transliteration-status">transliteration_status</a>)</p>
+
+  <p>     biometric_information: array (<a href="#biometric-information">biometric_information</a>)</p>
+
+  <p>     birthdate: <a href="#date">date</a></p>
+
+  <p>     nationalities: array (<a href="#predefined-lists">nationality</a>)</p>
+
+  <p>     address: object (<a href="#address">address</a>)</p>
+
+  <p>     age: number</p>
+
+  <p>     is_under: number</p>
+
+  <p>     is_over: number</p>
+</div>
+
+<h3 id="transliteration-status">Transliteration status</h3>
+
+<p>Transliteration is the process of converting text from one writing system or language into another by focusing on how words sound. It tries to the reflect the pronunciation of the original word using similar sounds in the target language so that speakers of either language can recognise the word.
+It is not the same as translation which focuses and converting the meaning of a word, for example 東京 translates to ‘eastern capital’ but is more commonly known in English in its transliterated form, Tokyo.</p>
+
+<p>The transliteration status conveys information about the:</p>
+
+<ul>
+  <li>original language the text was written in</li>
+  <li>language the text has been transliterated to</li>
+  <li>the way the transliteration was done</li>
+</ul>
+
+<div class="example">
+  <p>transliteration_status:</p>
+
+  <p>     original_language: <a href="#language">language</a></p>
+
+  <p>     transliterated_language: <a href="#language">language</a></p>
+
+  <p>     transliteration_type: <a href="#predefined-lists">transliteration_type</a></p>
+</div>
+
+<h3 id="biometric-information">Biometric information</h3>
+
+<p>The biometric information represents one or more biometric characteristics about the person making the claim. The biometric information can contain any type of biometric modality and be encoded using several different methods and standards. Biometric data can include the:</p>
+
+<ul>
+  <li>biometric characteristic (‘modality’) that is being exchanged</li>
+  <li>the biometric data (‘attachments’)</li>
+</ul>
+
+<div class="example">
+  <p>biometric_information:</p>
+
+  <p>     biometric_modality: <a href="#predefined-lists">biometric_modality</a></p>
+
+  <p>     attachments: array (<a href="#attachment">attachment</a>)</p>
+</div>
+
+<h3 id="address">Address</h3>
+
+<p>This contains a physical address, it can include the:</p>
+
+<ul>
+  <li>street address</li>
+  <li>town or city (‘locality’)</li>
+  <li>post code</li>
+  <li>country</li>
+  <li>whether the address has been transliteration from the original language</li>
+</ul>
+
+<div class="example">
+  <p>address:</p>
+
+  <p>     street_address: string</p>
+
+  <p>     locality: string</p>
+
+  <p>     postal_code: string</p>
+
+  <p>     country: string</p>
+
+  <p>     transliteration_status: object (<a href="#transliteration-status">transliteration_status</a>)</p>
+</div>
+
+<h3 id="verification">Verification</h3>
+
+<p>This is the information about how the claims have been proven and linked to the person it includes:</p>
+
+<ul>
+  <li>a way to identify the assurance framework (‘trust framework’) relevant to the claim, for the DVS trust framework this is always ‘uk_dvstf’</li>
+  <li>information about the certified service’s entry in the DVS register</li>
+  <li>the evidence that was used to prove the claim</li>
+  <li>the assurance level achieved in the claim being true, for the DVS trust framework this is always a GPG 45 level of confidence</li>
+  <li>the processes that were performed in order to prove the claim</li>
+</ul>
+
+<div class="example">
+  <p>verification:</p>
+
+  <p>     trust_framework: ‘uk_dvstf’</p>
+
+  <p>     dvs_registration: object (<a href="#dvs-registration">dvs_registration</a>)</p>
+
+  <p>     evidence: array (<a href="#evidence">evidence</a>)</p>
+
+  <p>     assurance_level: <a href="#predefined-lists">assurance_level</a></p>
+
+  <p>     assurance_process: object (<a href="#assurance-process">assurance_process</a>)</p>
+</div>
+
+<h3 id="dvs-registration">DVS registration</h3>
+
+<p>The DVS registration information identifies which certified service was used to prove the claim. It contains:</p>
+
+<ul>
+  <li>the name of the certified service</li>
+  <li>an identifier that uniquely identifies the service in the DVS register</li>
+</ul>
+
+<div class="example">
+  <p>dvs_registration:</p>
+
+  <p>     registered_name: string</p>
+
+  <p>     registration_id: string</p>
+</div>
+
+<h3 id="evidence">Evidence</h3>
+
+<p>This describes the evidence that was used by the service to prove the claim to the identity by the person. This includes the:</p>
+
+<ul>
+  <li>details of the documents, electronic records or vouches that were used for the verification</li>
+</ul>
+
+<div class="example">
+  <p>evidence:</p>
+
+  <p>     document: object (<a href="#document">document</a>)</p>
+
+  <p>     electronic_record: object (<a href="#electronic-record">electronic_record</a>)</p>
+
+  <p>     vouch: object (<a href="#vouch">vouch</a>)</p>
+</div>
+
+<h3 id="document">Document</h3>
+
+<p>This describes how a document was used by the service to prove the claim. This can include:</p>
+
+<ul>
+  <li>details about the document</li>
+  <li>a copy of the document (‘attachments’)</li>
+  <li>details about the checks that were done to validate the document</li>
+  <li>details about the checks that were done to verify the person matches the identity in the document</li>
+</ul>
+
+<div class="example">
+  <p>document:</p>
+
+  <p>     type: ‘document’</p>
+
+  <p>     document_details: object (<a href="#document-details">document_details</a>)</p>
+
+  <p>     attachments: array (<a href="#attachment">attachment</a>)</p>
+
+  <p>     check_details: object (<a href="#check-details">check_details</a>)</p>
+</div>
+
+<h3 id="document-details">Document details</h3>
+
+<p>This describes the document that was used by the service to prove the claim. This can include:</p>
+
+<ul>
+  <li>the type of document</li>
+  <li>a document reference or identification number that uniquely identifies a document that was issued</li>
+  <li>a reference or identification number that uniquely identifies the person that is independent of a specific issued document</li>
+  <li>a serial number that identifies the document irrespective of any personalisation information (this is usually only present on physical materials and not part of the personalisation of the document)</li>
+  <li>the date of issue</li>
+  <li>the date of expiry</li>
+  <li>details about the issuer of the document</li>
+  <li>whether the information about the document has been transliteration from the original language</li>
+</ul>
+
+<div class="example">
+  <p>document_details:</p>
+
+  <p>     type: <a href="#predefined-lists">document_type</a></p>
+
+  <p>     document_number: string</p>
+
+  <p>     serial_number: string</p>
+
+  <p>     personal_number: string</p>
+
+  <p>     date_of_issuance: <a href="#date">date</a></p>
+
+  <p>     date_of_expiry: <a href="#date">date</a></p>
+
+  <p>     issuer: <a href="#authority">authority</a></p>
+
+  <p>     transliteration_status: object (<a href="#transliteration-status">transliteration_status</a>)</p>
+</div>
+
+<h3 id="electronic-record">Electronic record</h3>
+
+<p>This describes an electronic record that was used by the service to prove the claim. This can include:</p>
+
+<ul>
+  <li>details about the electronic record</li>
+  <li>a copy of the electronic record (‘attachments’)</li>
+  <li>details about the checks that were done for the electronic record</li>
+  <li>details about the checks that were done to verify the person matches the identity in the electronic record</li>
+</ul>
+
+<div class="example">
+  <p>electronic_record:</p>
+
+  <p>     type: ‘electronic_record’</p>
+
+  <p>     record: object (<a href="#record">record</a>)</p>
+
+  <p>     attachments: array (<a href="#attachment">attachment</a>)</p>
+
+  <p>     check_details: object (<a href="#check-details">check_details</a>)</p>
+</div>
+
+<h3 id="record">Record</h3>
+
+<p>This describes a record that was used by the service to prove the claim. This can include:</p>
+
+<ul>
+  <li>the type of record</li>
+  <li>a reference number that uniquely identifies the record</li>
+  <li>the time the record was created</li>
+  <li>the date the record will expire</li>
+  <li>details about the source of the record</li>
+  <li>whether the information about the record has been transliteration from the original language</li>
+</ul>
+
+<div class="example">
+  <p>record:</p>
+
+  <p>     type: <a href="#predefined-lists">record_type</a></p>
+
+  <p>     reference_number: string</p>
+
+  <p>     created_at: <a href="#timestamp">timestamp</a></p>
+
+  <p>     date_of_expiry: <a href="#timestamp">timestamp</a></p>
+
+  <p>     source: object (<a href="#authority">authority</a>)</p>
+
+  <p>     transliteration_status: object (<a href="#transliteration-status">transliteration_status</a>)</p>
+</div>
+
+<h3 id="vouch">Vouch</h3>
+
+<p>This contains the information about a vouch that was used by the service to prove the claim. This can include:</p>
+
+<ul>
+  <li>details about the vouch (‘attestation’) itself</li>
+  <li>electronic version or copy of the vouch (‘attachments’)</li>
+  <li>details about the checks that were done to validate the vouch</li>
+  <li>details about the checks that were done to verify the person matches the identity in the vouch</li>
+</ul>
+
+<div class="example">
+  <p>vouch:</p>
+
+  <p>     type: ‘vouch’</p>
+
+  <p>     attestation: object (<a href="#attestation">attestation</a>)</p>
+
+  <p>     attachments: array (<a href="#attachment">attachment</a>)</p>
+
+  <p>     check_details: object (<a href="#check-details">check_details</a>)</p>
+</div>
+
+<h3 id="attestation">Attestation</h3>
+
+<p>This contains the information about a vouch that was used by the service to prove the claim. This can include:</p>
+
+<ul>
+  <li>a reference number that uniquely identifies the vouch</li>
+  <li>the date the vouch was issued</li>
+  <li>the date the evidence will expire</li>
+  <li>details about the person that is providing the vouch</li>
+  <li>whether the information about the attestation has been transliteration from the original language</li>
+</ul>
+
+<div class="example">
+  <p>attestation:</p>
+
+  <p>     type: ‘vouch’</p>
+
+  <p>     reference_number: string</p>
+
+  <p>     date_of_issuance: <a href="#date">date</a></p>
+
+  <p>     date_of_expiry: <a href="#date">date</a></p>
+
+  <p>     voucher: object (<a href="#voucher">voucher</a>)</p>
+
+  <p>     transliteration_status: object (<a href="#transliteration-status">transliteration_status</a>)</p>
+</div>
+
+<h3 id="authority">Authority</h3>
+
+<p>This identifies an authority that is able to issue or create evidence. This can include the:</p>
+
+<ul>
+  <li>name of the authority</li>
+  <li>address of the authority</li>
+  <li>identifying code of the country or supranational organisation where the authority is based</li>
+  <li>region(s)/state(s)/province(s)/municipality(ies) within the country where authority has jurisdiction to issue or create evidence</li>
+</ul>
+
+<div class="example">
+  <p>authority:</p>
+
+  <p>     name: string</p>
+
+  <p>     address: <a href="#address">address</a></p>
+
+  <p>     country_code: <a href="#country-code">country_code</a></p>
+
+  <p>     jurisdiction: string</p>
+</div>
+
+<h3 id="voucher">Voucher</h3>
+
+<p>This identifies the person that vouched for the person’s claim to the identity. This can include the:</p>
+
+<ul>
+  <li>name of the person providing the vouch</li>
+  <li>date of birth of the person providing the vouch</li>
+  <li>address of the person providing the vouch</li>
+  <li>identifying code of the country or supranational organisation where the voucher is based</li>
+  <li>occupation of the person providing the vouch</li>
+  <li>name of the organisation that the voucher is representing</li>
+</ul>
+
+<div class="example">
+  <p>voucher:</p>
+
+  <p>     name: string</p>
+
+  <p>     birthdate: <a href="#date">date</a></p>
+
+  <p>     address: <a href="#address">address</a></p>
+
+  <p>     country_code: <a href="#country-code">country_code</a></p>
+
+  <p>     occupation: string</p>
+
+  <p>     organisation: object (<a href="#authority">authority</a>)</p>
+</div>
+
+<h3 id="check-details">Check details</h3>
+
+<p>This contains the information about the checks that were performed. This can include:</p>
+
+<ul>
+  <li>an identifier that describes what processes were followed to perform the check (‘check method’), this can either be the process that was followed to validate the evidence, or verify the person’s claim to the identity</li>
+  <li>a unique reference number representing the check that was performed</li>
+  <li>the time when the check was performed</li>
+  <li>the name of the organisation that performed the check if the service did not perform the check itself</li>
+</ul>
+
+<p>The check_id is a method to link the check performed with the evidence with the requirements of the trust framework, if this is present there should be a matching entry in <a href="#evidence-references">evidence_ref</a> that demonstrates how it fits into the overall proofing and verification process required by the trust framework.</p>
+
+<div class="example">
+  <p>check_details:</p>
+
+  <p>     check_method: <a href="#predefined-lists">check_method</a></p>
+
+  <p>     check_id: string</p>
+
+  <p>     time: <a href="#timestamp">timestamp</a></p>
+
+  <p>     organisation: string</p>
+</div>
+
+<h3 id="attachment">Attachment</h3>
+
+<p>This provides the ability to exchange image or other binary data that may be needed, including scans of documents, photographs, video recordings, certificates, as well as other electronic data such as digital or verifiable credentials. This includes:</p>
+
+<ul>
+  <li>a description of the attachment</li>
+  <li>the type of data that has been encoded in the attachment</li>
+  <li>the format of the encoding</li>
+  <li>the encoded attachment data</li>
+</ul>
+
+<div class="example">
+  <p>attachment:</p>
+
+  <p>     desc: string</p>
+
+  <p>     content_type: <a href="#encoding">encoding</a></p>
+
+  <p>     content_format: <a href="#predefined-lists">encoding_format</a></p>
+
+  <p>     content: data</p>
+</div>
+
+<h3 id="assurance-process">Assurance process</h3>
+
+<p>This contains detailed information about:</p>
+
+<ul>
+  <li>the standard or policy that was followed in order to verify the claim (‘policy’), for the DVS trust framework this is always GPG 45</li>
+  <li>the specific procedure from the policy was followed (‘procedure’), for the DVS trust framework this is always a GPG 45 profile</li>
+  <li>how the details on which assurance processes were followed and how they meet the DVS trust framework</li>
+</ul>
+
+<div class="example">
+  <p>assurance_process:</p>
+
+  <p>     policy: ‘gpg45’</p>
+
+  <p>     procedure: <a href="#predefined-lists">procedure</a></p>
+
+  <p>     assurance_details: array (<a href="#assurance-details">assurance_details</a>)</p>
+</div>
+
+<h3 id="assurance-details">Assurance details</h3>
+
+<p>This contains information about the checks and processes that were performed to support the claim to the identity by the person. This includes:</p>
+
+<ul>
+  <li>the type of check performed, for example validation, verification, counter fraud</li>
+  <li>how the assurance process is classified in the trust framework, for the DVS trust framework this is always a score given by one of the steps in the proofing and verification process</li>
+  <li>the evidence used to get the assurance in the claims and the person</li>
+</ul>
+
+<div class="example">
+  <p>assurance_details:</p>
+
+  <p>     assurance_type: <a href="#predefined-lists">assurance_type</a></p>
+
+  <p>     assurance_classification: <a href="#predefined-lists">assurance_classification</a></p>
+
+  <p>     evidence_ref: array (<a href="#evidence-references">evidence_references</a>)</p>
+</div>
+
+<h3 id="evidence-references">Evidence references</h3>
+
+<p>This contains:</p>
+
+<ul>
+  <li>a unique reference number representing the check that was performed with the evidence</li>
+  <li>other data about the checks or evidence that is required by the assurance process in order to demonstrate compliance with the trust_framework</li>
+</ul>
+
+<p>The check_id is a method to link the checks performed with the evidence to the assurance processes, if check_id is present there must be a matching check_id in a <a href="#check-details">check_details</a> object</p>
+
+<div class="example">
+  <p>evidence_ref:</p>
+
+  <p>     check_id: string</p>
+
+  <p>     evidence_ref: object (<a href="#evidence-metadata">evidence_metadata</a>)</p>
+</div>
+
+<h3 id="evidence-metadata">Evidence metadata</h3>
+
+<p>This contains:</p>
+
+<ul>
+  <li>information on how the process used in <a href="#check-details">check_details</a> demonstrates compliance with the assurance_type. This is additional information that may be needed in order to fully explain how the evidence was used in the assurance process.</li>
+</ul>
+
+<div class="example">
+  <p>evidence_metadata:</p>
+
+  <p>     evidence_classification: <a href="#predefined-lists">evidence_classification</a></p>
+</div>
+
+<h2 id="gpg-45-data-dictionary">GPG 45 data dictionary</h2>
+
+<p>To make sure there is consistency in how the data about identity proofing and verification is exchanged some of the elements must have a set format and use shared terms. The following section defines both allowed values and formats for a number of the elements in the GPG 45 data model.</p>
+
+<h3 id="data-definitions">Data definitions</h3>
+
+<p>Some elements of this data model must have defined structure so that they are constructed and understood by all participants in the DVS trust framework.</p>
+
+<h4 id="country-code">Country code</h4>
+
+<p>Country codes should be 3-letter codes following ISO 3166-1 or ICAO Doc 9303. Other 2-letter and single codes may be used in some circumstances for compatibility reasons, for example Germany often uses ‘D’ as its issuer country code.</p>
+
+<div class="example">
+  <p>country_code: string</p>
+</div>
+
+<h4 id="date">Date</h4>
+
+<p>Dates must always be in ISO 8601 ‘YYYY-MM-DD’ format</p>
+
+<div class="example">
+  <p>date: string</p>
+</div>
+
+<h4 id="encoding">Encoding</h4>
+
+<p>This describes the type of encoding used for the corresponding data. This should use media types as defined by <a rel="external" href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA</a>, or interchange formats defined by ISO/IEC 19794-5, ISO/IEC 39794-5, ANSI/NIST-ITL, or ISO/IEC 18013</p>
+
+<div class="example">
+  <p>encoding: string</p>
+</div>
+
+<h4 id="language">Language</h4>
+
+<p>Language codes must follow ISO 639-1 or RFC 5646</p>
+
+<div class="example">
+  <p>language: string</p>
+</div>
+
+<h4 id="nationality">Nationality</h4>
+
+<p>Nationality should use 3-letter codes following ISO 3166-1 or ICAO Doc 9303. Other 2-letter and single codes may be used in some circumstances for compatibility reasons.</p>
+
+<div class="example">
+  <p>nationality: string</p>
+</div>
+
+<h4 id="timestamp">Timestamp</h4>
+
+<p>Time stamps must always be in ISO 8601 ‘YYYY-MM-DDThh:mm(:ss)TZD’ format</p>
+
+<div class="example">
+  <p>date: string</p>
+</div>
+
+<h3 id="predefined-values">Predefined values</h3>
+
+<p>The table below defines the meaning of the terms used in this data model.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Predefined value</th>
+      <th scope="col">Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>activity_history</td>
+      <td>Activity history check according to GPG 45</td>
+    </tr>
+    <tr>
+      <td>adoption_certificate</td>
+      <td>A document relating to the adoption of a person</td>
+    </tr>
+    <tr>
+      <td>adoption_register</td>
+      <td>A record relating to the adoption of a person</td>
+    </tr>
+    <tr>
+      <td>auth</td>
+      <td>Verifying the user is the owner of the claims by use of an electronic authentication process that is linked to the owner of the claims</td>
+    </tr>
+    <tr>
+      <td>bank_account</td>
+      <td>A financial account maintained by a bank</td>
+    </tr>
+    <tr>
+      <td>bank_statement</td>
+      <td>A summary of bank transactions over a given period</td>
+    </tr>
+    <tr>
+      <td>base64</td>
+      <td>This is a standard binary-to-text encoding system that uses printable characters to represent a sequence of bytes</td>
+    </tr>
+    <tr>
+      <td>birth_certificate</td>
+      <td>A document relating to the birth of a person</td>
+    </tr>
+    <tr>
+      <td>birth_register</td>
+      <td>A record relating to the birth of a person</td>
+    </tr>
+    <tr>
+      <td>building_society_account</td>
+      <td>A financial account maintained by a building society</td>
+    </tr>
+    <tr>
+      <td>bus_pass</td>
+      <td>An older or disabled person’s bus pass</td>
+    </tr>
+    <tr>
+      <td>bvp</td>
+      <td>Biometric verification by an automated system with the user physically present to the system and the verifier, the use of a biometric modality (such as face) to match the user with a known template of the owner of the claims</td>
+    </tr>
+    <tr>
+      <td>bvr</td>
+      <td>Biometric verification by an automated system where the user and capture device is remote to the verifier, the use of a biometric modality (such as face) to match the user with a known template of the owner of the claims</td>
+    </tr>
+    <tr>
+      <td>byte_data</td>
+      <td>Data that is made up of bytes as defined by ISO/IEC 2382-1</td>
+    </tr>
+    <tr>
+      <td>civil_partnership_register</td>
+      <td>A record relating to the civil partnership of a person</td>
+    </tr>
+    <tr>
+      <td>counter_fraud</td>
+      <td>Counter fraud check was performed</td>
+    </tr>
+    <tr>
+      <td>credit_account</td>
+      <td>A specific type of financial account maintained by a bank or other financial institution where it offers the customer credit</td>
+    </tr>
+    <tr>
+      <td>credit_union_account</td>
+      <td>A financial account maintained by a credit union</td>
+    </tr>
+    <tr>
+      <td>current_account</td>
+      <td>A specific type of financial account maintained by a bank or other financial institution used for day to day money exchange</td>
+    </tr>
+    <tr>
+      <td>data</td>
+      <td>Found an existing electronic record that matches the claims made by the user</td>
+    </tr>
+    <tr>
+      <td>driving_permit</td>
+      <td>A permit / licence required to operate a motor vehicle on public roads</td>
+    </tr>
+    <tr>
+      <td>education_certificate</td>
+      <td>Certificate of completing education / course</td>
+    </tr>
+    <tr>
+      <td>education_record</td>
+      <td>A record from an educational institution</td>
+    </tr>
+    <tr>
+      <td>firearm_certificate</td>
+      <td>A certificate required in order to own a firearm</td>
+    </tr>
+    <tr>
+      <td>freedom_pass</td>
+      <td>A pass that provides free public transport for older or disabled people in London and local buses in England</td>
+    </tr>
+    <tr>
+      <td>home_office_travel_document</td>
+      <td>An international travel document issued by the Home Office to someone who not a British Citizen and is unable to obtain a national passport from their country</td>
+    </tr>
+    <tr>
+      <td>icao</td>
+      <td>Transliteration has been done following ICAO Doc 9303 standard</td>
+    </tr>
+    <tr>
+      <td>id_card</td>
+      <td>An identity card issued by a recognised country</td>
+    </tr>
+    <tr>
+      <td>kbv</td>
+      <td>Verifying the user is the owner of the claims by knowledge based challenges/questions that only the owner of the claims should know how to answer.</td>
+    </tr>
+    <tr>
+      <td>loan_account</td>
+      <td>A specific type of financial account maintained by a bank or other financial institution relating to sums borrowed by the customer</td>
+    </tr>
+    <tr>
+      <td>loan_statement</td>
+      <td>A summary of loan transactions over a given period</td>
+    </tr>
+    <tr>
+      <td>manual</td>
+      <td>Transliteration has been done manually and is not likely to follow a defined standard</td>
+    </tr>
+    <tr>
+      <td>marriage_register</td>
+      <td>A record relating to the marriage of a person</td>
+    </tr>
+    <tr>
+      <td>military_id</td>
+      <td>Active service personnel ID card</td>
+    </tr>
+    <tr>
+      <td>military_record</td>
+      <td>Records about service personnel held by an organisation responsible for the armed forces</td>
+    </tr>
+    <tr>
+      <td>mortgage_account</td>
+      <td>A loan used to purchase or maintain a property</td>
+    </tr>
+    <tr>
+      <td>mortgage_statement</td>
+      <td>A summary of mortgage transactions over a given period</td>
+    </tr>
+    <tr>
+      <td>pass_card</td>
+      <td>Proof of age card issued under the rules of PASS</td>
+    </tr>
+    <tr>
+      <td>passport</td>
+      <td>An ICAO compliant passport issued by a recognised country</td>
+    </tr>
+    <tr>
+      <td>passport_card</td>
+      <td>An ICAO compliant passport card issued by a recognised country</td>
+    </tr>
+    <tr>
+      <td>pilot_permit</td>
+      <td>A permit / licence required to operate an aircraft</td>
+    </tr>
+    <tr>
+      <td>population_register</td>
+      <td>A record relating to a person being resident or a citizen in a given jurisdiction</td>
+    </tr>
+    <tr>
+      <td>prison_record</td>
+      <td>Records about an inmate held by an organisation responsible for managing prisons</td>
+    </tr>
+    <tr>
+      <td>proof_of_age_id</td>
+      <td>ID predominately used as a proof of age</td>
+    </tr>
+    <tr>
+      <td>purchase_agreement</td>
+      <td>Contract between a buyer and a seller that defines the terms and conditions of a purchase</td>
+    </tr>
+    <tr>
+      <td>pvp</td>
+      <td>Physical verification in person by a qualified/authorised person, the comparison of a physical characteristic (such as face) of the user with a known image/template of the owner of the claims</td>
+    </tr>
+    <tr>
+      <td>pvr</td>
+      <td>Physical verification by a qualified/authorised person when the user is remote, the comparison of a physical characteristic (such as face) from an image or video of the user with a known image/template of the owner of the claims.</td>
+    </tr>
+    <tr>
+      <td>rental_agreement</td>
+      <td>Contractual agreement relating to renting a property</td>
+    </tr>
+    <tr>
+      <td>social_security_record</td>
+      <td>Records held by an organisation responsible for managing social security registration or payments</td>
+    </tr>
+    <tr>
+      <td>social_security_statement</td>
+      <td>A summary social security awards or transactions over a given period</td>
+    </tr>
+    <tr>
+      <td>student_loan_account</td>
+      <td>A record of a student loan</td>
+    </tr>
+    <tr>
+      <td>tax_record</td>
+      <td>Records about a person held by an organisation responsible for managing tax registration or payments</td>
+    </tr>
+    <tr>
+      <td>tax_statement</td>
+      <td>A summary of tax liabilities and transactions over a given period</td>
+    </tr>
+    <tr>
+      <td>token</td>
+      <td>Verifying the user is the owner of the claims by use of an electronic authentication token such as hardware token or smartcard that is linked and issued to the owner of the claims</td>
+    </tr>
+    <tr>
+      <td>unknown_transliteration</td>
+      <td>Transliteration status or method is not known</td>
+    </tr>
+    <tr>
+      <td>utility_account</td>
+      <td>A record relating to a utility</td>
+    </tr>
+    <tr>
+      <td>utility_statement</td>
+      <td>A summary of utility usage over a given period</td>
+    </tr>
+    <tr>
+      <td>validation</td>
+      <td>Validating the authenticity of evidence according to GPG 45</td>
+    </tr>
+    <tr>
+      <td>vcrypt</td>
+      <td>Validation the cryptographic security features of the evidence are intact and correct</td>
+    </tr>
+    <tr>
+      <td>vdig</td>
+      <td>Validation that digital/electronic evidence is genuine by the inspection of its properties and content</td>
+    </tr>
+    <tr>
+      <td>verification</td>
+      <td>Verifying the person is the owner of the identity in accordance with GPG 45</td>
+    </tr>
+    <tr>
+      <td>veterans_card</td>
+      <td>Armed Forces Veteran Card</td>
+    </tr>
+    <tr>
+      <td>visa</td>
+      <td>A type of legal document issued by a country to a foreign citizen that allows them to enter, stay, work or travel within the country</td>
+    </tr>
+    <tr>
+      <td>voter_id</td>
+      <td>Photographic identity card used for voting at polling stations</td>
+    </tr>
+    <tr>
+      <td>voter_register</td>
+      <td>A record relating to a person’s right to vote</td>
+    </tr>
+    <tr>
+      <td>vpip</td>
+      <td>Validation that physical evidence is genuine through inspection of its physical properties in person</td>
+    </tr>
+    <tr>
+      <td>vpiruv</td>
+      <td>Validation that physical evidence is genuine through inspection of its physical properties in person including its optical characteristics under non-visible light</td>
+    </tr>
+    <tr>
+      <td>vri</td>
+      <td>Validation that physical evidence is genuine through the inspection of an image taken remotely under visible light</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="predefined-lists">Predefined lists</h3>
+
+<p>Some elements in this data model are only allowed to have certain predefined values, these restrictions are:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Element</th>
+      <th scope="col">Type</th>
+      <th scope="col">Predefined values</th>
+      <th scope="col">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">assurance_classification</th>
+      <td>string</td>
+      <td>score_1, score_2, score_3, score_4</td>
+      <td>Scores taken from GPG 45</td>
+    </tr>
+    <tr>
+      <th scope="row">assurance_level</th>
+      <td>string</td>
+      <td>low, medium, high, very_high</td>
+      <td>Confidence levels from GPG 45</td>
+    </tr>
+    <tr>
+      <th scope="row">assurance_type</th>
+      <td>string</td>
+      <td>validation, verification, counter_fraud, activity_history</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <th scope="row">biometric_modality</th>
+      <td>string</td>
+      <td>face, fingerprint, voice, iris</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <th scope="row">check_method</th>
+      <td>string</td>
+      <td>auth, token, kbv, pvp, pvr, bvp, bvr, vpip, vpiruv, vri, vdig, vcrypt, data</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <th scope="row">document_type</th>
+      <td>string</td>
+      <td>passport, id_card, passport_card, driving_permit, military_id, veterans_card, proof_of_age_id, home_office_travel_document, bus_pass,education_certificate, rental_agreement, purchase_agreement, pass_card, freedom_pass, voter_id, bank_statement, utility_statement, mortgage_statement, loan_statement, tax_statement, social_security_statement, pilot_permit, birth_certificate, adoption_certificate, marriage_certificate, civil_partnership_certificate, firearm_certificate</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <th scope="row">encoding_format</th>
+      <td>string</td>
+      <td>base64, byte_data</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <th scope="row">evidence_classification</th>
+      <td>string</td>
+      <td>low_kbv, medium_kbv, high_kbv, id_fraud, mortality_check</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <th scope="row">procedure</th>
+      <td>string</td>
+      <td>L1A, L1B, L1C, L2A, L2B, L3A, M1A, M1B, M1C, M1D, M2A, M2B, M2C, M3A, H1A, H1B, H1C, H2A, H2B, H2C, H2D, H2E, H3A, V1A, V1B, V1C, V1D, V2A, V2B, V2C, V2D, V3A</td>
+      <td>Identity profiles from GPG 45</td>
+    </tr>
+    <tr>
+      <th scope="row">record_type</th>
+      <td>string</td>
+      <td>social_security_record, bank_account, building_society_account, credit_union_account, current_account, student_loan_account, credit_account, mortgage_account, loan_account, birth_register, population_register, voter_register, adoption_register, marriage_register, civil_partnership_register, education_record, utility_account, military_record, tax_record, prison_record, death_register, fraud_register</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <th scope="row">transliteration_type</th>
+      <td>string</td>
+      <td>manual, icao, unknown_transliteration</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+</div></div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row back-to-top-wrapper">
+    
+<a class="govuk-link gem-c-back-to-top-link govuk-!-display-none-print" href="#contents">
+    <svg class="gem-c-back-to-top-link__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z" />
+    </svg>
+    Back to top
+</a>
+  </div>
+</div>
+
+    </main>
+  </div>
+  
+
+
+      <div class="govuk-width-container">
+          
+<div data-module="feedback ga4-event-tracker" class="gem-c-feedback govuk-!-display-none-print">
+  
+<div class="gem-c-feedback__prompt gem-c-feedback__js-show js-prompt" tabindex="-1">
+  <div class="gem-c-feedback__prompt-content">
+    <div class="gem-c-feedback__prompt-questions js-prompt-questions" hidden>
+      <div class="gem-c-feedback__prompt-question-answer">
+        <h2 class="gem-c-feedback__prompt-question">Is this page useful?</h2>
+        <ul class="gem-c-feedback__option-list">
+          <li class="gem-c-feedback__option-list-item govuk-visually-hidden" hidden>
+            <a class="gem-c-feedback__prompt-link" role="button" hidden="hidden" href="/contact/govuk">
+              Maybe
+</a>          </li>
+          <li class="gem-c-feedback__option-list-item">
+            <button class="govuk-button gem-c-feedback__prompt-link js-page-is-useful" data-ga4-event='{"event_name":"form_submit","type":"feedback","text":"Yes","section":"Is this page useful?","tool_name":"Is this page useful?"}'>
+              Yes <span class="govuk-visually-hidden">this page is useful</span>
+</button>          </li>
+          <li class="gem-c-feedback__option-list-item">
+
+            <button class="govuk-button gem-c-feedback__prompt-link js-toggle-form js-page-is-not-useful" aria-controls="page-is-not-useful" data-ga4-event='{"event_name":"form_submit","type":"feedback","text":"No","section":"Is this page useful?","tool_name":"Is this page useful?"}'>
+              No <span class="govuk-visually-hidden">this page is not useful</span>
+</button>          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gem-c-feedback__prompt-questions gem-c-feedback__prompt-success js-prompt-success" role="alert" hidden>
+      Thank you for your feedback
+    </div>
+
+    <div class="gem-c-feedback__prompt-questions gem-c-feedback__prompt-questions--something-is-wrong js-prompt-questions" hidden>
+      <button class="govuk-button gem-c-feedback__prompt-link js-toggle-form js-something-is-wrong" aria-controls="something-is-wrong" data-ga4-event='{"event_name":"form_submit","type":"feedback","text":"Report a problem with this page","section":"Is this page useful?","tool_name":"Is this page useful?"}'>
+        Report a problem with this page
+</button>    </div>
+  </div>
+</div>
+
+  <form action="/contact/govuk/problem_reports"
+  id="something-is-wrong"
+  class="gem-c-feedback__form js-feedback-form"
+  method="post"
+  hidden>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="gem-c-feedback__error-summary gem-c-feedback__js-show js-errors" tabindex="-1" hidden></div>
+
+      <input type="hidden" name="url" value="https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45">
+
+      <h2 class="gem-c-feedback__form-heading">Help us improve GOV.UK</h2>
+      <p id="feedback_explanation" class="gem-c-feedback__form-paragraph">Do not include personal or financial information like your National Insurance number or credit card details.</p>
+
+      <div class="govuk-visually-hidden" aria-hidden="true">
+        <label for="giraffe">This field is for robots only. Please leave blank</label>
+        <input id="giraffe" name="giraffe" type="text" pattern=".{0}" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="gem-c-textarea govuk-form-group govuk-!-margin-bottom-6">
+    
+  <label for="textarea-cda65478" class="gem-c-label govuk-label">What were you doing?</label>
+
+
+
+
+
+  <textarea name="what_doing" class="govuk-textarea" id="textarea-cda65478" rows="3" spellcheck="true" aria-describedby="feedback_explanation">
+</textarea>
+     
+</div>
+
+      <div class="gem-c-textarea govuk-form-group govuk-!-margin-bottom-6">
+    
+  <label for="textarea-e36be3ca" class="gem-c-label govuk-label">What went wrong?</label>
+
+
+
+
+
+  <textarea name="what_wrong" class="govuk-textarea" id="textarea-e36be3ca" rows="3" spellcheck="true">
+</textarea>
+     
+</div>
+
+
+      <div class="gem-c-feedback__button-wrapper">
+        
+
+  <button class="gem-c-button govuk-button govuk-!-margin-bottom-6" type="submit" data-ga4-event='{"event_name":"form_submit","type":"feedback","text":"Send","section":"Help us improve GOV.UK","tool_name":"Help us improve GOV.UK"}'>Send</button>
+
+
+
+        
+
+  <button class="gem-c-button govuk-button gem-c-button--secondary-quiet govuk-!-margin-bottom-0 js-close-form" type="submit" aria-controls="something-is-wrong">Cancel</button>
+
+
+      </div>
+    </div>
+  </div>
+</form>
+
+
+ <script nonce="sH1f+zmH9kan/1Szl1CZSQ==">
+//<![CDATA[
+  document.addEventListener("DOMContentLoaded", function () {
+    var input = document.querySelector("#giraffe"),
+      form = document.querySelector("#something-is-wrong")
+
+    form.addEventListener("submit", spamCapture);
+
+    function spamCapture(e) {
+      if (input.value.length !== 0) return;
+      e.preventDefault();
+    }
+  });
+
+//]]>
+</script>
+  <div id="page-is-not-useful" class="gem-c-feedback__form gem-c-feedback__form--email gem-c-feedback__js-show js-feedback-form">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds" id="survey-wrapper">
+      <div class="gem-c-feedback__error-summary js-errors" tabindex="-1" hidden></div>
+
+      <h2 class="gem-c-feedback__form-heading">Help us improve GOV.UK</h2>
+      <p id="survey_explanation" class="gem-c-feedback__form-paragraph">
+        To help us improve GOV.UK, we’d like to know more about your visit today.
+        <a href="https://www.smartsurvey.co.uk/s/gov-uk-banner/?c=no-js" class="govuk-link" target="_blank" rel="noopener noreferrer external">Please fill in this survey (opens in a new tab<noscript> and requires JavaScript</noscript>)</a>.
+      </p>
+
+      <div class="gem-c-feedback__close">
+        
+
+  <button class="gem-c-button govuk-button gem-c-button--secondary-quiet govuk-!-margin-bottom-6 js-close-form" type="submit" aria-controls="page-is-not-useful">Cancel</button>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+      </div>
+
+        <footer data-module="ga4-link-tracker" class="gem-c-layout-footer govuk-footer">
+  <div class="govuk-width-container">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 64 60"
+      height="30"
+      width="32"
+      fill="currentcolor"
+      class="govuk-footer__crown">
+      <g>
+        <circle cx="20" cy="17.6" r="3.7"></circle>
+        <circle cx="10.2" cy="23.5" r="3.7"></circle>
+        <circle cx="3.7" cy="33.2" r="3.7"></circle>
+        <circle cx="31.7" cy="30.6" r="3.7"></circle>
+        <circle cx="43.3" cy="17.6" r="3.7"></circle>
+        <circle cx="53.2" cy="23.5" r="3.7"></circle>
+        <circle cx="59.7" cy="33.2" r="3.7"></circle>
+        <circle cx="31.7" cy="30.6" r="3.7"></circle>
+        <path d="M33.1,9.8c.2-.1.3-.3.5-.5l4.6,2.4v-6.8l-4.6,1.5c-.1-.2-.3-.3-.5-.5l1.9-5.9h-6.7l1.9,5.9c-.2.1-.3.3-.5.5l-4.6-1.5v6.8l4.6-2.4c.1.2.3.3.5.5l-2.6,8c-.9,2.8,1.2,5.7,4.1,5.7h0c3,0,5.1-2.9,4.1-5.7l-2.6-8ZM37,37.9s-3.4,3.8-4.1,6.1c2.2,0,4.2-.5,6.4-2.8l-.7,8.5c-2-2.8-4.4-4.1-5.7-3.8.1,3.1.5,6.7,5.8,7.2,3.7.3,6.7-1.5,7-3.8.4-2.6-2-4.3-3.7-1.6-1.4-4.5,2.4-6.1,4.9-3.2-1.9-4.5-1.8-7.7,2.4-10.9,3,4,2.6,7.3-1.2,11.1,2.4-1.3,6.2,0,4,4.6-1.2-2.8-3.7-2.2-4.2.2-.3,1.7.7,3.7,3,4.2,1.9.3,4.7-.9,7-5.9-1.3,0-2.4.7-3.9,1.7l2.4-8c.6,2.3,1.4,3.7,2.2,4.5.6-1.6.5-2.8,0-5.3l5,1.8c-2.6,3.6-5.2,8.7-7.3,17.5-7.4-1.1-15.7-1.7-24.5-1.7h0c-8.8,0-17.1.6-24.5,1.7-2.1-8.9-4.7-13.9-7.3-17.5l5-1.8c-.5,2.5-.6,3.7,0,5.3.8-.8,1.6-2.3,2.2-4.5l2.4,8c-1.5-1-2.6-1.7-3.9-1.7,2.3,5,5.2,6.2,7,5.9,2.3-.4,3.3-2.4,3-4.2-.5-2.4-3-3.1-4.2-.2-2.2-4.6,1.6-6,4-4.6-3.7-3.7-4.2-7.1-1.2-11.1,4.2,3.2,4.3,6.4,2.4,10.9,2.5-2.8,6.3-1.3,4.9,3.2-1.8-2.7-4.1-1-3.7,1.6.3,2.3,3.3,4.1,7,3.8,5.4-.5,5.7-4.2,5.8-7.2-1.3-.2-3.7,1-5.7,3.8l-.7-8.5c2.2,2.3,4.2,2.7,6.4,2.8-.7-2.3-4.1-6.1-4.1-6.1h10.6,0Z"></path>
+      </g>
+    </svg>
+      <div class="govuk-footer__navigation">
+            <div class="govuk-grid-column-two-thirds govuk-!-display-none-print">
+              <h2 class="govuk-footer__heading govuk-heading-m">Services and information</h2>
+                <ul class="govuk-footer__list govuk-footer__list--columns-2">
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"1","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/benefits">Benefits</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"2","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/births-deaths-marriages">Births, death, marriages and care</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"3","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/business">Business and self-employed</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"4","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/childcare-parenting">Childcare and parenting</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"5","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/citizenship">Citizenship and living in the UK</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"6","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/justice">Crime, justice and the law</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"7","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/disabilities">Disabled people</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"8","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/driving">Driving and transport</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"9","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/education">Education and learning</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"10","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/employing-people">Employing people</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"11","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/environment-countryside">Environment and countryside</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"12","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/housing-local-services">Housing and local services</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"13","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/tax">Money and tax</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"14","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/abroad">Passports, travel and living abroad</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"15","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/visas-immigration">Visas and immigration</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"16","index_section":"1","index_section_count":"5","index_total":"16","section":"Services and information"}' href="/browse/working">Working, jobs and pensions</a>
+                      </li>
+                </ul>
+            </div>
+            <div class="govuk-grid-column-one-third govuk-!-display-none-print">
+              <h2 class="govuk-footer__heading govuk-heading-m">Government activity</h2>
+                <ul class="govuk-footer__list govuk-footer__list--columns-1">
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"1","index_section":"2","index_section_count":"5","index_total":"8","section":"Government activity"}' href="/government/organisations">Departments</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"2","index_section":"2","index_section_count":"5","index_total":"8","section":"Government activity"}' href="/search/news-and-communications">News</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"3","index_section":"2","index_section_count":"5","index_total":"8","section":"Government activity"}' href="/search/guidance-and-regulation">Guidance and regulation</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"4","index_section":"2","index_section_count":"5","index_total":"8","section":"Government activity"}' href="/search/research-and-statistics">Research and statistics</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"5","index_section":"2","index_section_count":"5","index_total":"8","section":"Government activity"}' href="/search/policy-papers-and-consultations">Policy papers and consultations</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"6","index_section":"2","index_section_count":"5","index_total":"8","section":"Government activity"}' href="/search/transparency-and-freedom-of-information-releases">Transparency</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"7","index_section":"2","index_section_count":"5","index_total":"8","section":"Government activity"}' href="/government/how-government-works">How government works</a>
+                      </li>
+                      <li class="govuk-footer__list-item">
+                        <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"8","index_section":"2","index_section_count":"5","index_total":"8","section":"Government activity"}' href="/government/get-involved">Get involved</a>
+                      </li>
+                </ul>
+            </div>
+      </div>
+
+      <hr class="govuk-footer__section-break govuk-!-display-none-print">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <h2 class="govuk-visually-hidden">Support links</h2>
+          <ul class="govuk-footer__inline-list govuk-!-display-none-print">
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"1","index_section":"3","index_section_count":"5","index_total":"8","section":"Support links"}' href="/help">Help</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"2","index_section":"3","index_section_count":"5","index_total":"8","section":"Support links"}' href="/help/privacy-notice">Privacy</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"3","index_section":"3","index_section_count":"5","index_total":"8","section":"Support links"}' href="/help/cookies">Cookies</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"4","index_section":"3","index_section_count":"5","index_total":"8","section":"Support links"}' href="/help/accessibility-statement">Accessibility statement</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"5","index_section":"3","index_section_count":"5","index_total":"8","section":"Support links"}' href="/contact">Contact</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"6","index_section":"3","index_section_count":"5","index_total":"8","section":"Support links"}' href="/help/terms-conditions">Terms and conditions</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" lang="cy" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"7","index_section":"3","index_section_count":"5","index_total":"8","section":"Support links"}' href="/cymraeg">Rhestr o Wasanaethau Cymraeg</a>
+              </li>
+              <li class="govuk-footer__inline-list-item">
+                <a class="govuk-footer__link" data-ga4-link='{"event_name":"navigation","type":"footer","index_link":"8","index_section":"3","index_section_count":"5","index_total":"8","section":"Support links"}' href="/government/organisations/government-digital-service">Government Digital Service</a>
+              </li>
+          </ul>
+          <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 483.2 195.7" height="17" width="41">
+            <path
+              fill="currentColor"
+              d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" />
+          </svg>
+          <span
+            class="govuk-footer__licence-description"
+            data-ga4-link='{"event_name":"navigation","section":"Licence","index_section":"4","index_link":"1","index_section_count":"5","text":"Open Government Licence v3.0","index_total":"1","type":"footer"}'>
+            All content is available under the <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+          </span>
+      </div>
+      <div
+        class="govuk-footer__meta-item"
+        data-ga4-link='{"event_name":"navigation","section":"Copyright","index_section":"5","index_link":"1","index_section_count":"5","text":"© Crown copyright","index_total":"1","type":"footer"}'>
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script src="/assets/frontend/application-bc490c8b54eeb0a825ef6a5f1f83bc9a465e14e426443d91a0f7a5b373fff51f.js" type="module"></script>
+</body></html>

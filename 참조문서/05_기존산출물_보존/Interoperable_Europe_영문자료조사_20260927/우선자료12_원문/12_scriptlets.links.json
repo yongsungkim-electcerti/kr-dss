@@ -1,0 +1,418 @@
+[
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/index.html"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#overview"
+  },
+  {
+    "title": "embedded within specific test cases",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-embedded"
+  },
+  {
+    "title": "exit",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-exit"
+  },
+  {
+    "title": "Stopping execution without ending the test session",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-exit-scope"
+  },
+  {
+    "title": "call step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#elements"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#metadata"
+  },
+  {
+    "title": "test suite",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-metadata"
+  },
+  {
+    "title": "test cases",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-metadata"
+  },
+  {
+    "title": "test case metadata documentation",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-metadata"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#namespaces"
+  },
+  {
+    "title": "test cases",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-namespaces"
+  },
+  {
+    "title": "test case namespaces documentation",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-namespaces"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#imports"
+  },
+  {
+    "title": "test cases",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-imports"
+  },
+  {
+    "title": "test case imports documentation",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-imports"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#params"
+  },
+  {
+    "title": "Types",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/types/index.html#test-case-types"
+  },
+  {
+    "title": "call",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "call",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "embedded within test cases",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-embedded"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#variables"
+  },
+  {
+    "title": "test cases",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-variables"
+  },
+  {
+    "title": "embedded within a test case",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-embedded"
+  },
+  {
+    "title": "test case variables documentation",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-variables"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#steps"
+  },
+  {
+    "title": "test cases",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-steps"
+  },
+  {
+    "title": "messaging steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-messaging-steps"
+  },
+  {
+    "title": "actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-actors"
+  },
+  {
+    "title": "messaging steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-messaging-steps"
+  },
+  {
+    "title": "messaging steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-messaging-steps"
+  },
+  {
+    "title": "test case steps documentation",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-steps"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#output"
+  },
+  {
+    "title": "Expressions and templates",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions-template-files"
+  },
+  {
+    "title": "Namespaces",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-namespaces"
+  },
+  {
+    "title": "Expressions",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions"
+  },
+  {
+    "title": "expression",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions"
+  },
+  {
+    "title": "variable expression",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-referring-to-variables"
+  },
+  {
+    "title": "expression",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions"
+  },
+  {
+    "title": "assign",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-assign"
+  },
+  {
+    "title": "verify",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-verify"
+  },
+  {
+    "title": "verify",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-verify"
+  },
+  {
+    "title": "call",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "Overview",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-overview"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#returning-early-from-a-scriptlet"
+  },
+  {
+    "title": "if",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if"
+  },
+  {
+    "title": "exit",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-exit"
+  },
+  {
+    "title": "flow control options",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-exit-scope"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#dynamic-presentation-in-scriptlets"
+  },
+  {
+    "title": "test steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps"
+  },
+  {
+    "title": "messaging steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-messaging-steps"
+  },
+  {
+    "title": "call step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "variable references",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-referring-to-variables"
+  },
+  {
+    "title": "group",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-group"
+  },
+  {
+    "title": "if",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if"
+  },
+  {
+    "title": "flow",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-flow"
+  },
+  {
+    "title": "foreach",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-foreach"
+  },
+  {
+    "title": "repuntil",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-repuntil"
+  },
+  {
+    "title": "while",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-while"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "btxn",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-btxn"
+  },
+  {
+    "title": "send",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-send"
+  },
+  {
+    "title": "receive",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-receive"
+  },
+  {
+    "title": "send",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-send"
+  },
+  {
+    "title": "receive",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-receive"
+  },
+  {
+    "title": "listen",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-listen"
+  },
+  {
+    "title": "dynamically adapt the content of scriptlets",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-dynamic-steps"
+  },
+  {
+    "title": "related actor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-step-actor"
+  },
+  {
+    "title": "params section",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-elements-params"
+  },
+  {
+    "title": "configuration value references",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-configuration"
+  },
+  {
+    "title": "call the scriptlet",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "call",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#dynamic-steps-in-scriptlets"
+  },
+  {
+    "title": "dynamically changing labels and actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-dynamic-references"
+  },
+  {
+    "title": "variable references",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-referring-to-variables"
+  },
+  {
+    "title": "supported by all test steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-hidesteps"
+  },
+  {
+    "title": "if steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if"
+  },
+  {
+    "title": "variable reference",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-referring-to-variables"
+  },
+  {
+    "title": "parameters",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-elements-params"
+  },
+  {
+    "title": "call step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "if step’s",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if"
+  },
+  {
+    "title": "variable reference",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-referring-to-variables"
+  },
+  {
+    "title": "if step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if"
+  },
+  {
+    "title": "if step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if"
+  },
+  {
+    "title": "if step’s documentation",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if"
+  },
+  {
+    "title": "receive step’s",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-receive"
+  },
+  {
+    "title": "if step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if"
+  },
+  {
+    "title": "call step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "expression",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlet-variable-scope"
+  },
+  {
+    "title": "Input parameters",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-elements-params"
+  },
+  {
+    "title": "call step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "Imports",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-elements-imports"
+  },
+  {
+    "title": "Variables",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-elements-variables"
+  },
+  {
+    "title": "assign step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-assign"
+  },
+  {
+    "title": "variable reference",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-referring-to-variables"
+  },
+  {
+    "title": "input parameters",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-elements-params"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-embedded-in-test-cases"
+  },
+  {
+    "title": "scriptlets",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-scriptlets"
+  },
+  {
+    "title": "call",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "scriptlets",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-scriptlets"
+  },
+  {
+    "title": "call",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  }
+]

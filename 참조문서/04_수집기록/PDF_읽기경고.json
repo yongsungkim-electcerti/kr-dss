@@ -1,0 +1,58 @@
+[
+  {
+    "file": "01_원문/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework_웹다운로드_20260927__da300ab9.pdf",
+    "warning_excerpt": "premature end of data in flate filter"
+  },
+  {
+    "file": "01_원문/⑦ 정책·산업자료/WB_2026_ID4D_Digital_Wallets_Policy_Note__add051e0.pdf",
+    "warning_excerpt": "Actualtext with no position. Text may be lost or mispositioned.\n... repeated 4 times..."
+  },
+  {
+    "file": "01_원문/④ 표준/ETSI_TS119612_v2.4.1__83285a10.pdf",
+    "warning_excerpt": "freetype could not find any cmaps\n... repeated 3 times..."
+  },
+  {
+    "file": "01_원문/④ 표준/ETSI_TS119615_v1.4.1__7e348c29.pdf",
+    "warning_excerpt": "freetype could not find any cmaps\n... repeated 2 times..."
+  },
+  {
+    "file": "01_원문/② 법·제도/UNCITRAL_MLIT_Text_ExplanatoryNote__c0f18008.pdf",
+    "warning_excerpt": "premature end of data in flate filter\n... repeated 46 times..."
+  },
+  {
+    "file": "01_원문/③ 기술/Legal_Entity_Official_Organizational_Role_vLEI_Credential_Framework__00d2a83d.pdf",
+    "warning_excerpt": "Bad or missing last pointer in outline tree, repairing"
+  },
+  {
+    "file": "01_원문/⑦ 정책·산업자료/OECD_DigitalGovernmentOutlook2026__b1156327.pdf",
+    "warning_excerpt": "invalid marked content and clip nesting\nformat error: object out of range (31334 0 R); xref size 761\ncannot load object (31334 0 R) into cache\nformat error: object out of range (31331 0 R); xref size 761\ncannot load object (31331 0 R) into cache\nformat error: object out of range (31328 0 R); xref size 761\ncannot load object (31328 0 R) into cache\nformat error: object out of range (31325 0 R); xref size 761\ncannot load object (31325 0 R) into cach"
+  },
+  {
+    "file": "01_원문/① 학술연구/블록체인 신뢰 프레임워크(K-BTF) 중장기계획 수립 연구__916454fe.pdf",
+    "warning_excerpt": "closepath with no current point\n... repeated 2 times..."
+  },
+  {
+    "file": "01_원문/① 학술연구/Trusted Web 구축을 위한 기술 및 보안연구__0a8ae6e5.pdf",
+    "warning_excerpt": "format error: incorrect number of xref entries in trailer, repairing\ntrying to repair broken xref\nrepairing PDF document"
+  },
+  {
+    "file": "01_원문/① 학술연구/분산ID(DID) 직접 해석방안 연구__49752fdb.pdf",
+    "warning_excerpt": "format error: incorrect number of xref entries in trailer, repairing\ntrying to repair broken xref\nrepairing PDF document\nclosepath with no current point"
+  },
+  {
+    "file": "01_원문/⑥ 해외사례/2024 DIW Advisory Board Report (PDF _ 8,301 kb)__cb354c8c.pdf",
+    "warning_excerpt": "Bad or missing last pointer in outline tree, repairing"
+  },
+  {
+    "file": "01_원문/⑤ 서비스/행정안전부 — 전자지갑 구축 보도자료 (2019-01-22)__784c789a.pdf",
+    "warning_excerpt": "closepath with no current point\n... repeated 2 times..."
+  },
+  {
+    "file": "01_원문/⑥ 해외사례/DIACC PCTF Digital Wallet (2023)__57fe64c6.pdf",
+    "warning_excerpt": "Bad or missing last pointer in outline tree, repairing"
+  },
+  {
+    "file": "01_원문/⑦ 정책·산업자료/행정안전부 — 2026 디지털서비스 개방 참여기업 공모 공고문__172a1463.pdf",
+    "warning_excerpt": "format error: incorrect number of xref entries in trailer, repairing\ntrying to repair broken xref\nrepairing PDF document"
+  }
+]

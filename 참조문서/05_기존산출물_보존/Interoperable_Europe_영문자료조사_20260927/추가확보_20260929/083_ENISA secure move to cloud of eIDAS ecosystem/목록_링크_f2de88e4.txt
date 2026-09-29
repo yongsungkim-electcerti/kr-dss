@@ -1,0 +1,108 @@
+Trust Services & Digital Wallets: Moving to the Cloud and Remote Identity Proofing | ENISA
+Trust Services & Digital Wallets: Moving to the Cloud and Remote Identity Proofing
+Back to News
+News Item
+Jun 12,2023
+In order to address the cybersecurity questions of remote identity proofing, the European Union Agency for Cybersecurity (ENISA) organised a workshop to support the area of Trust Services and Digital Wallets and published a report on moving trust services to the cloud.
+Report on Trust Services: Secure Move to the Cloud of the eIDAS ecosystem
+For the purpose of the report, ENISA conducted a survey with more than 120 stakeholders from over 29 countries in the EU and globally. The survey allowed to get an insight of practical experiences of Trust Service Providers, Conformity Assessment Bodies, Supervisory Bodies and Cloud Service Providers regarding the transition of trust services to the cloud.
+Moving trust services to the cloud must be understood as an ongoing process that has to be followed step by step. While some services – such as the validation of signatures, registered delivery, time stamp or signature preservation – are moved rather quickly, other services – such as the issuance of certificates and remote control over the signing device – require in-depth analysis and preparation. The transition of data to the cloud has to be secure at all times and, in the best case, must remain in the data centre of the trust services provider.
+This report has given a detailed overview of the issues to be addressed for such a transition, including the related challenges, impediments and opportunities.
+Workshop on Remote Video Identification: Attacks and Foresight
+The workshop was the occasion for ENISA to publish its report exploring the secure move to the cloud of the eIDAS ecosystem. In cooperation with the European Competent Authorities for Trust Services (ECATS) expert group, ENISA organised a workshop on 10 May 2023 in Amsterdam, Netherlands. The purpose of the workshop was to explore and discuss the latest national implementations, existing and emerging attacks, and the security measures envisaged for the protection of remote identity proofing across the EU.
+Over 100 participants attended the workshop and included representatives from Supervisory Bodies, Identity and trust service providers, conformity assessment bodies, standardisation bodies and research community.
+The workshop addressed the following main challenges:
+lack of EU legislation harmonisation;
+how to keep up with technological advancements connected to AI;
+the testing and performance measuring landscape;
+how to continuously follow the supply chain of products and services.
+Access the workshop’s summary and presentations here
+Meeting of the European Competent Authorities for Trust Services (ECATS) Expert Group
+The Dutch Supervisory Authority hosted the 21
+st
+meeting of the ECATS on 11 and 12 May, back-to-back with the meeting of
+FESA
+(Forum of European Supervisory Authorities).
+The group discussed latest developments in eIDAS2, the connection between the upcoming implementation of the NIS 2 and eIDAS2, as well as updates on standardisation and certification in relation to trust services.
+The
+ECATS EG
+is the informal group focusing to facilitates voluntary and informal collaboration between competent authority experts from EU Member States, European Economic Area (EEA) and European Free Trade Association (EFTA) States, EU Candidate countries and other relevant stakeholders to ensure smooth and secure functioning of trust services.
+Save the date for the next Trust Services and eID Forum
+The Trust Services Forum will be renamed Trust Services and eID Forum and its 9
+th
+edition will take place on 11 -12 October 2023 in Vienna, Austria back-to-back with the 15
+th
+Certificate Authority (CA) Day.
+Further Information
+Trust Services-Secure move to the cloud of the eIDAS ecosystem - ENISA report 2023
+ENISA topic on Trust Service
+ENISA topic on Incident Reporting
+Remote ID Proofing — ENISA (europa.eu)
+Security Framework for Qualified Trust Service Providers – ENISA report 2021
+The electronic identification and trust services for electronic transactions in the internal market Directive (
+eIDAS regulation
+)
+Contact
+For press questions and interviews, please contact
+press (at) enisa.europa.eu
+Share this page
+Image
+Contact
+For press questions and interviews, please contact: press@enisa.europa.eu.
+Access to the press office
+Related topics
+Digital Identity and Data Protection
+Content written for:
+Private Sector
+Related content
+Publications
+Events
+News
+Remote ID Proofing - Good practices
+12 March, 2024
+Through this report, ENISA aims to enhance stakeholder awareness, facilitate risk analysis in evolving threat landscapes, and bolster trustworthiness in remote identity proofing methods.
+Engineering Personal Data Protection in EU Data Spaces
+26 January, 2024
+Common European data spaces (EU data spaces) are a novel concept introduced in the European strategy for data and elaborated further within the Data Governance Act (DGA).
+Digital Identity Standards
+03 July, 2023
+This report gives an overview of the most important standards and standardisation organisations in this area.
+Trust Services-Secure move to the cloud of the eIDAS ecosystem
+12 June, 2023
+This report includes a detailed analysis on the different technical requirements that must be addressed considering the relevant standards.
+BROWSE ALL PUBLICATIONS
+Trust Services and eID Forum - CA Day 2026
+2026
+Sep 15
+Engineering Data Protection in the wake of PQC
+2025
+Dec 8
+Annual Privacy Forum (APF) 2025
+2025
+Oct 22
+Trust Services and eID Forum - CA Day 2025
+2025
+Sep 24
+BROWSE ALL EVENTS
+ENISA advances the certification of EU Digital Wallets
+News Item
+03 April, 2026
+ENISA launches a public consultation on the draft candidate EU Digital Wallet certification scheme, subsequent to the scheme’s development with the dedicated Ad Hoc Working Group.
+Securing Personal Data in the Wake of AI
+News Item
+01 June, 2023
+This year’s Annual Privacy Forum focused on pressing personal data protection challenges raised by the ever faster-paced developments witnessed today in digital technologies and legislative initiatives.
+Trust Service Forum 2022: Deepdive into Digital Identity Wallets and Web Certificates
+News Item
+09 November, 2022
+The European Union Agency for Cybersecurity (ENISA) gathered experts from trust services providers, standardisation bodies and national authorities around the discussion tables of the Trust Services Forum organised on 27 and 28 October in Berlin.
+The Annual Privacy Forum (APF) celebrates its first 10 years, as the links between privacy protection & cybersecurity continue to grow
+News Item
+24 June, 2022
+Artificial Intelligence (AI), data sharing and privacy-by-design were the top data protection and cybersecurity topics at the APF 2022 in Warsaw.
+BROWSE ALL NEWS
+Subscribe
+Stay updated with ENISA!
+Sign up for email alerts on publications, events, vacancies,
+              and more.
+Sign up now

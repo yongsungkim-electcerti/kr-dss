@@ -1,0 +1,61 @@
+OpenID for Verifiable Credential Issuance 1.0 Final Specification Approved - OpenID Foundation
+Skip to content
+OpenID Foundation
+>
+Blogs
+>
+OpenID for Verifiable Credential Issuance 1.0 Final Specification Approved
+OpenID for Verifiable Credential Issuance 1.0 Final Specification Approved
+Published September 16, 2025
+The OpenID Foundation membership has approved the following as an OpenID Final Specification:
+OpenID for Verifiable Credential Issuance 1.0:
+https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-final.html
+A Final Specification provides intellectual property protections to implementers of the specification and is not subject to further revision. This Final Specification is the product of the
+OpenID DCP Working Group
+.
+The voting results were:
+Approve – 102 votes
+Object -- 1 vote
+Abstain – 12 votes
+Total votes: 115 (out of 442 members = 26% > 20% quorum requirement)
+Marie Jordan – OpenID Foundation Secretary
+About the OpenID Foundation
+The OpenID Foundation (OIDF) is a global open standards body committed to helping people assert their identity wherever they choose. Founded in 2007, we are a community of technical experts leading the creation of open identity standards that are secure, interoperable, and privacy preserving. The Foundation’s OpenID Connect standard is now used by billions of people across millions of applications. In the last five years, the Financial Grade API has become the standard of choice for Open Banking and Open Data implementations, allowing people to access and share data across entities. Today, the OpenID Foundation’s standards are the connective tissue to enable people to assert their identity and access their data at scale, the scale of the internet, enabling “networks of networks” to interoperate globally. Individuals, companies, governments and non-profits are encouraged to join or participate. Find out more at
+openid.net
+.
+Tagged
+DCP
+Digital Credentials Protocols
+Final Specification
+Specification
+Verifiable Credentials Issuance
+Vote
+Manage Cookie Consent
+To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions.
+Functional
+Functional
+Always active
+The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.
+Preferences
+Preferences
+The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user.
+Statistics
+Statistics
+The technical storage or access that is used exclusively for statistical purposes.
+The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.
+Marketing
+Marketing
+The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.
+Manage options
+Manage services
+Manage {vendor_count} vendors
+Read more about these purposes
+Accept
+Deny
+View preferences
+Save preferences
+View preferences
+{title}
+{title}
+{title}
+Manage consent

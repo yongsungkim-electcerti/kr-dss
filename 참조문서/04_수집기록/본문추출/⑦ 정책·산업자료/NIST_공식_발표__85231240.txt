@@ -1,0 +1,79 @@
+Post-Quantum Cryptography FIPS Approved | CSRC
+You are viewing this page in an unauthorized frame window.
+This is a potential security issue, you are being redirected to
+https://csrc.nist.gov
+.
+Official websites use .gov
+A
+.gov
+website belongs to an official government
+                            organization in the United States.
+Secure .gov websites use HTTPS
+A
+lock
+(
+Lock
+Locked padlock icon
+) or
+https://
+means you’ve safely connected to
+                            the .gov website. Share sensitive information only on official,
+                            secure websites.
+Information Technology Laboratory
+Computer Security Resource Center
+Updates
+2024
+Announcing Approval of Three Federal Information Processing Standards (FIPS) for Post-Quantum Cryptography
+August 13, 2024
+Share to Facebook
+Share to X
+Share to LinkedIn
+Share ia Email
+The Secretary of Commerce has approved three
+Federal Information Processing Standards (FIPS
+) for post-quantum cryptography:
+FIPS 203,
+Module-Lattice-Based Key-Encapsulation Mechanism Standard
+FIPS
+204,
+Module-Lattice-Based Digital Signature Standard
+FIPS
+205,
+Stateless Hash-Based Digital Signature Standard
+These standards specify key establishment and digital signature schemes that are designed to resist future attacks by quantum computers, which threaten the security of current standards. The three algorithms specified in these standards are each derived from different submissions to the NIST Post-Quantum Cryptography Standardization Project.
+* * * *
+FIPS 203
+specifies a cryptographic scheme called the Module-Lattice-Based Key-Encapsulation Mechanism Standard, which is derived from the CRYSTALS-KYBER submission. A key encapsulation mechanism (KEM) is a particular type of key establishment scheme that can be used to establish a shared secret key between two parties communicating over a public channel. Current NIST-approved key establishment schemes are specified in NIST Special Publication (SP) 800-56A,
+Recommendation for Pair-Wise Key-Establishment Schemes Using Discrete Logarithm-Based Cryptography
+, and SP 800-56B,
+Recommendation for Pair-Wise Key-Establishment Schemes Using Integer Factorization Cryptography
+.
+FIPS 204
+and
+205
+each specify digital signature schemes, which are used to detect unauthorized modifications to data and to authenticate the identity of the signatory. FIPS 204 specifies the Module-Lattice-Based Digital Signature Standard, which is derived from CRYSTALS-Dilithium submission. FIPS 205 specifies the Stateless Hash-Based Digital Signature Standard, which is derived from the SPHINCS+ submission. Current NIST-approved digital signature schemes are specified in FIPS 186-5,
+Digital Signature Standard
+, and SP 800-208,
+Recommendation for Stateful Hash-Based Signature Schemes
+. NIST is also developing a FIPS that specifies a digital signature algorithm derived from FALCON as an additional alternative to these standards.
+READ MORE
+.....
+Federal Register Notice
+Document Number:
+2024-17956
+Parent Project
+See:
+Digital Signatures
+See:
+Post-Quantum Cryptography
+Related Topics
+Security and Privacy:
+digital signatures
+,
+key management
+,
+post-quantum cryptography
+Created
+August 06, 2024
+, Updated
+August 13, 2024

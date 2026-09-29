@@ -1,0 +1,90 @@
+EIRA Library of Interoperability Specifications (ELIS) | Interoperable Europe Portal
+Skip to main content
+ELIS
+Subscribe to this solution
+Share Solution reuse
+Common Assessment Method for Standards and Specifications (CAMSS)
+20 members
+Topics:
+Tools
+Standardisation
+EIRA Library of Interoperability Specifications (ELIS) 7.0.0
+Latest release
+Published on: 17/07/2026
+The
+ELIS
+v7.0.0 release consis
+ts
+of the following release components:
+ELIS v7.0.0.ttl
+; the
+EIRA Library of Interoperability Specifications
+in TTL format.
+ELIS v7.0.0.xlsx
+; the
+EIRA Library of Interoperability Specifications
+in Microsoft Excel format.
+ELIS T-box v7.0.0.ttl
+; the constituent entities of the
+ELIS
+.
+EIRA© v7.0.0 SKOS
+; The
+EIRA
+© as controlled vocabulary in SKOS format.
+ELIS Overview v7.0.0
+; Document for the introduction to the
+ELIS
+catalogue.
+CAMSS Info Package v9.0.0
+; Set of informative documents about
+CAMSS
+.
+ELIS v7.0.0 Release Notes
+; The release notes of this ELIS release.
+ELIS Factsheets v7.0.0
+; an overview of the ELIS population process.
+EUPL License v1.2
+; the license under which ELIS will be released.
+ELIS v7.0.0 Release
+; an archive containing each of the above-mentioned files.
+Last update: 30/04/2026
+ELIS v7.0.0.ttl
+European Union Public Licence, Version 1.2 (EUPL)
+Distribution
+Last update: 30/04/2026
+ELIS v7.0.0.xlsx
+European Union Public Licence, Version 1.2 (EUPL)
+Distribution
+Last update: 30/04/2026
+ELIS T-box v7.0.0.ttl
+European Union Public Licence, Version 1.2 (EUPL)
+Distribution
+Last update: 30/04/2026
+EIRA© v7.0.0 SKOS
+European Union Public Licence, Version 1.2 (EUPL)
+Distribution
+Last update: 30/04/2026
+ELIS Overview v7.0.0
+European Union Public Licence, Version 1.2 (EUPL)
+Distribution
+Last update: 30/04/2026
+CAMSS Info Package v9.0.0
+European Union Public Licence, Version 1.2 (EUPL)
+Distribution
+Last update: 30/04/2026
+ELIS v7.0.0 Release Notes
+European Union Public Licence, Version 1.2 (EUPL)
+Distribution
+Last update: 30/04/2026
+ELIS Factsheets v7.0.0
+European Union Public Licence, Version 1.2 (EUPL)
+Distribution
+Last update: 30/04/2026
+EUPL License v1.2
+European Union Public Licence, Version 1.2 (EUPL)
+Distribution
+Last update: 30/04/2026
+ELIS v7.0.0 Release
+European Union Public Licence, Version 1.2 (EUPL)
+Distribution

@@ -1,0 +1,74 @@
+First implementers certify to OpenID4VP and OpenID4VCI with HAIP
+Skip to content
+OpenID Foundation
+>
+Blogs
+>
+First implementers certify to OpenID4VP and OpenID4VCI with HAIP
+First implementers certify to OpenID4VP and OpenID4VCI with HAIP
+Published September 24, 2026
+The OpenID Foundation is pleased to announce the first fourteen organizations to self-certify their implementations of OpenID for Verifiable Presentations (OpenID4VP) and OpenID for Verifiable Credential Issuance (OpenID4VCI) with the High Assurance Interoperability Profile (HAIP).
+As the first to self-certify, these organizations are in a strong position. Their implementations have passed the OpenID Foundation’s conformance tests, and the results are available on public record for partners, customers and regulators to see.
+The Foundation congratulates them on being the first to pass the tests and go on record, and urges others to follow.
+The conformance tests for OpenID4VP and OpenID4VCI with HAIP were
+completed and self-certification opened in August
+– signaling a major milestone for digital identity.
+Before these tests existed
+Implementers could only test against each other. If two systems failed to connect, it was hard to tell which was at fault. The conformance tests check implementations against the specification itself. They test what an implementation should reject, not just what it should do, as that is often where security and interoperability problems sit.
+Now, governments, regulators, relying parties and customers can check which organizations’ implementations have been certified without running their own assessments. For certified organizations, it signals to partners that they are ready. For ecosystems, it is a shared baseline for local conformance programs.
+The first certified implementations
+The first certified implementations are listed below, and can also be found
+here for OpenID4VP
+and
+here for OpenID4VCI
+.
+Gail Hodges, Executive Director of the OpenID Foundation, said: “Governments and platforms in Europe, the UK, Switzerland, India, California and elsewhere have selected OpenID4VP and OpenID4VCI for their digital identity programs. As those programs move into deployment, governments, wallet providers and relying parties all need to know: can I trust this implementation? Is it built to the correct standard? Am I going to burn resources debugging with my counterparty? Self-certification helps answer those questions. The first organizations to certify have given their partners that assurance.”
+Joseph Heenan, Standards Specialist and Technical Director at the OpenID Foundation, said: “Congratulations to the first organizations to self-certify. They have done the work and put their results on public record. That is what governments and relying parties need to see. Certified implementations are how ecosystems realize the security, interoperability and privacy benefits inherent in the protocols, allowing them to scale quickly. We encourage every implementer of OpenID4VP and OpenID4VCI with HAIP to follow their lead.”
+Join them
+The tests are free to run on the OpenID Foundation's servers or on an implementer's own infrastructure. Once they have passed, implementers can submit their results for publication for a modest fee and use the OpenID Certified logo.
+Implementers can find out how to certify their implementations
+here
+, or contact
+certification@oidf.org
+for help.
+About the OpenID Foundation
+The OpenID Foundation (OIDF) is a global open standards body committed to building trusted identity ecosystems. Our mission is to lead the global community in identity standards that are secure, interoperable, and privacy respecting. Founded in 2007, we are a community of technical experts. The Foundation's OpenID Connect standard is now used by billions of people across millions of applications. More recently, the FAPI security profile - built on OAuth 2.0 - has become the standard of choice for interoperable Open Banking and Open Data implementations, while OpenID for Verifiable Credentials specifications are underpinning a new generation of digital wallets. Today, the OpenID Foundation's standards are the connective tissue that enable people to assert their identity and access their data at scale, the scale of the internet, enabling "networks of networks" to interoperate globally. Individuals, companies, governments and non-profits are encouraged to join or participate.
+Find out more at
+openid.net
+.
+Tagged
+conformance suite
+conformance testing
+Digital Identity Wallets
+OpenID4VCI
+openid4vp
+Self-Certification
+Manage Cookie Consent
+To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions.
+Functional
+Functional
+Always active
+The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.
+Preferences
+Preferences
+The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user.
+Statistics
+Statistics
+The technical storage or access that is used exclusively for statistical purposes.
+The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.
+Marketing
+Marketing
+The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.
+Manage options
+Manage services
+Manage {vendor_count} vendors
+Read more about these purposes
+Accept
+Deny
+View preferences
+Save preferences
+View preferences
+{title}
+{title}
+{title}
+Manage consent

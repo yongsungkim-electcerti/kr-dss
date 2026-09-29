@@ -1,0 +1,82 @@
+EIRA | Interoperable Europe Portal
+Skip to main content
+EIRA
+Subscribe to this solution
+Share Solution reuse
+Interoperability Architecture Solutions
+101 members
+Topics:
+Collaboration
+Digital government
+Tools
+ICT
+Reusable Software Components
+Standardisation
+EIRA 7.0.0
+Latest release
+Published on: 07/08/2026
+Last update: 24/08/2026
+The European Interoperability Reference Architecture (
+EIRA©
+) is an architecture content metamodel defining the most salient architectural building blocks (ABBs) needed to build interoperable e-Government systems. The EIRA© provides a
+common terminology
+that can be used by people working for public administrations in various architecture and system development tasks. The EIRA© was created in the context of
+Action 2016.32
+of the
+ISA² Programme
+and is being maintained under the
+Digital Europe Programme (DEP)
+. The EIRA uses (and extends) the
+ArchiMate
+language as a modelling notation and uses service orientation as an architectural style.
+Release details
+This release consists of the following release components:
+EIRA Online documentation
+: a Portal page containing an introduction to the EIRA, including its key concepts, used ArchiMate notation, tool support and views.
+EIRA v7.0.0 ArchiMate
+: the 'Archi' version of the model.
+EIRA v7.0.0 Open Exchange XML
+: the Open Group ArchiMate Exchange File Format, containing the model.
+EIRA v7.0.0 SKOS
+: the EIRA as controlled vocabulary in SKOS format.
+EIRA v7.0.0 Web Version:
+a compressed folder containing the web-version of the EIRA model.
+EIRA v7.0.0 release notes
+: the release notes of this release.
+EIRA v7.0.0 Release ZIP
+: an archive containing each of the above mentioned files.
+ISA Product License v1.4
+: the license under which the EIRA is released.
+EIRA value proposition
+Last update: 06/08/2026
+EIRA v7.0.0 .archimate
+ISA Product License v1.4
+Distribution
+Last update: 06/08/2026
+EIRA v7.0.0 Open Exchange XML
+ISA Product License v1.4
+Distribution
+Last update: 06/08/2026
+EIRA v7.0.0 SKOS
+ISA Product License v1.4
+Distribution
+Last update: 06/08/2026
+EIRA v7.0.0 release notes
+ISA Product License v1.4
+Distribution
+Last update: 06/08/2026
+EIRA v7.0.0 Web Version
+ISA Product License v1.4
+Distribution
+Last update: 05/08/2026
+EIRA Online documentation
+ISA Product License v1.4
+Distribution
+Last update: 06/08/2026
+EIRA v7.0.0 Release ZIP
+ISA Product License v1.4
+Distribution
+Last update: 24/08/2026
+EIRA© value proposition
+ISA Product License v1.4
+Distribution

@@ -1,0 +1,38 @@
+ISO 5009: Official Organizational Roles Code List - Code Lists - LEI Data – GLEIF
+LEI Data
+Code Lists
+ISO 5009: Official Organizational Roles Code List
+Tweet
+I herewith confirm that I read, understood and accepted the
+privacy policy
+. I hereby confirm that data which I typed and clicked might be sent to social network owners and saved and electronically processed by them.
+The
+Global Legal Entity Identifier Foundation (GLEIF)
+publishes the ‘Official Organizational Roles (OOR) Code List’. The current version, released in June 2023, contains over 2000 official organizational roles for almost 250 legal forms in 89 jurisdictions. The list gives an overview of such roles in their native language, such as Chief Executive Officer, Managing Director, 董事长, Vorsitzender, Bestuurder, Fondateur, председник скупштине, Socio, رئيس مجلس الادارة or Accionista. Only official roles as they appear in local legislation are included in the list. No ‘internal functional roles' (e.g. ‘Chief Risk Officer’) are included. The OOR Code List assigns a unique code to each official role. Thus, the OOR codes in the list are directly related to the relevant
+Entity Legal Form (ELF) code
+. The OOR code is an alpha-numeric code of six characters from the basic Latin character set.
+OOR codes are associated with a standard set of reference data defined by the ISO 5009 standard (see below for more detail). Integrating OOR codes into the standardized set of reference data on a legal entity available within the Global LEI Index further enhances the information included in each Legal Entity Identifier (LEI) record. GLEIF plans to leverage OOR codes in the verifiable LEI (vLEI) role credentials to specify the official roles of persons representing their organizations.
+The official organizational roles contained in the OOR Code List have been identified based on research carried out by GLEIF. The listing of additional official organizational roles will continue and relies on user feedback to focus this research. GLEIF will publish updated versions of the OOR Code List periodically.  Users of OOR codes are invited to email to
+info@gleif.org
+to request additions or changes to the list of OOR codes.
+ISO standard 5009 ‘Financial Services – Official organizational roles’
+The OOR Code List is based on the ISO standard 5009
+‘ Financial Services – Official organizational roles’
+, developed by the International Organization for Standardization. The standard was published in 2022. As stated by ISO, it “specifies an unambiguous scheme to list official organizational roles by jurisdiction in a standard way”.
+The ISO standard further states that “it is not the purpose to compare or align official organizational roles across different countries or jurisdictions, so as not to limit the usage or relevance of this standard.  To understand the powers associated with each official organizational role, users of the standard should consult applicable regulation or legislation, documents of the legal entity in which the official organizational role exists and procedures specific to each organizational entity”.
+ISO points out that “understanding the official roles of persons acting on behalf of organizations is an important consideration in fulfilling both commercial business and regulatory interactions and obligations.  This especially is true for engagements and interactions in the digital world, and in financial services in particular,  as we move towards creating and sustaining a global digital economy”.
+GLEIF’s role in the maintenance of the OOR Code List
+ISO has established a Maintenance Agency relevant to the ISO 5009 standard, which consists of members the ISO Technical Committee 68 Financial Services. The Swiss Association for Standardization (SNV) is the appointed Maintenance Agency Secretariat. SNV has assigned “the accomplishment of the secretariat of the Maintenance Agency” and the undertaking of related tasks to GLEIF. Among other things, GLEIF is responsible for identifying existing official organizational roles and assigning a unique OOR code to each official organizational role in accordance with the ISO 5009 standard. More information on Maintenance Agencies for ISO standards can be found
+here
+.
+Use of language
+All official organizational roles are available in the local language(s) with transliteration in the Latin alphabet. Countries with multiple official languages have their official organizational roles reported in all of their official languages. The same role in different languages within a country has the same OOR code.
+An official organizational role only has a meaning according to local legislation, therefore providing an English translation for all official organizational roles in all countries is not meaningful.
+Relevant files for Download
+Download as PDF for ease of reading and quick reference:
+Official Organizational Roles Code List (version 1.0)
+Download as Excel for use with popular spreadsheet applications:
+Official Organizational Roles Code List (version 1.0)
+Download as CSV for automated processing and analysis with more technical programming tools:
+Official Organizational Roles Code List (version 1.0)
+Relevant files for Download

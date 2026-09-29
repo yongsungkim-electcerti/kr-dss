@@ -1,0 +1,178 @@
+[
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/index.html"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#introduction"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#what-is-the-gitb-tdl"
+  },
+  {
+    "title": "GITB project",
+    "url": "http://www.cen.eu/work/areas/ict/ebusiness/pages/ws-gitb.aspx"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#where-is-it-used"
+  },
+  {
+    "title": "published taxonomy",
+    "url": "https://www.itb.ec.europa.eu/skos/gitb_tdl_skos.rdf"
+  },
+  {
+    "title": "GITB Test Registry and Repository (TRR)",
+    "url": "https://joinup.ec.europa.eu/collection/gitb-trr"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#how-is-it-maintained"
+  },
+  {
+    "title": "Interoperability Test Bed Team",
+    "url": "https://joinup.ec.europa.eu/solution/interoperability-test-bed/about"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#core-concepts"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#test-case"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#test-suite"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#test-session"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#test-session-context"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#actor"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#messaging-handlers"
+  },
+  {
+    "title": "GITB messaging service API",
+    "url": "https://www.itb.ec.europa.eu/specs/latest/gitb_ms.wsdl"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#validation-handlers"
+  },
+  {
+    "title": "GITB validation service API",
+    "url": "https://www.itb.ec.europa.eu/specs/latest/gitb_vs.wsdl"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#processing-handlers"
+  },
+  {
+    "title": "GITB processing service API",
+    "url": "https://www.itb.ec.europa.eu/specs/latest/gitb_ps.wsdl"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#the-lifecycle-of-a-test-session"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#id2"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#step-1-create"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#step-2-configure"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#step-3-initiate"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#step-4-run-preliminary"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#step-5-run-test-steps"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#step-6-finalise"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#step-7-consult"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#specification-links"
+  },
+  {
+    "title": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_core.xsd",
+    "url": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_core.xsd"
+  },
+  {
+    "title": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tdl.xsd",
+    "url": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tdl.xsd"
+  },
+  {
+    "title": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tpl.xsd",
+    "url": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tpl.xsd"
+  },
+  {
+    "title": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tr.xsd",
+    "url": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tr.xsd"
+  },
+  {
+    "title": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_ms.wsdl",
+    "url": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_ms.wsdl"
+  },
+  {
+    "title": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_ms.xsd",
+    "url": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_ms.xsd"
+  },
+  {
+    "title": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_vs.wsdl",
+    "url": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_vs.wsdl"
+  },
+  {
+    "title": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_vs.xsd",
+    "url": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_vs.xsd"
+  },
+  {
+    "title": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_ps.wsdl",
+    "url": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_ps.wsdl"
+  },
+  {
+    "title": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_ps.xsd",
+    "url": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_ps.xsd"
+  },
+  {
+    "title": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_tbs.wsdl",
+    "url": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_tbs.wsdl"
+  },
+  {
+    "title": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tbs.xsd",
+    "url": "https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tbs.xsd"
+  },
+  {
+    "title": "CEN_WS_GITB3_CWA_Final.pdf",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/_downloads/0dc573d06adafa1a273edd793577016d/CEN_WS_GITB3_CWA_Final.pdf"
+  }
+]

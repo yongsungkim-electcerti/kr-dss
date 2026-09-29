@@ -1,0 +1,91 @@
+eSignature List of Trusted Lists
+Skip to main content
+assistive.skiplink.to.breadcrumbs
+assistive.skiplink.to.header.menu
+assistive.skiplink.to.action.menu
+assistive.skiplink.to.quick.search
+Required:
+page refresh
+5
+Digital
+Edit space details
+Blog
+Page tree
+Browse pages
+Configure
+Space tools
+A
+t
+tachments (1)
+Page History
+Page Information
+Resolved comments
+View in Hierarchy
+View Source
+Export to Word
+Page Labels
+Attachment Labels
+Hide Inline Comments
+Full Width
+Normal Width
+Log in
+Advanced Menu
+Go to start of metadata
+Created by
+Warren Vercruysse
+, last updated by
+Panagiota KOLOVOU
+on
+May 14, 2026
+1 minute read
+eSignature
+eSignature
+About eSignature
+What is eSignature
+eSignature - Get started
+eSignature - Businesses
+eSignature
+HUB
+Overview
+Services
+Documentation
+eIDAS Dashboard
+Trusted List Browser
+Notification Tool
+Validation Tests
+Support & Community
+eSignature User Communities
+FAQ
+⚠️ Important Notice – Trusted List v6 (TLv6) Migration
+In line with the updated ETSI TS 119 612 v2.4.1 specifications, the new Trusted List v6 (TLv6) format is enforced as of 29 of April.
+All stakeholders and system integrators are strongly advised to ensure that their systems are compatible with TLv6.
+Failure to upgrade may impact the ability to access or validate Trusted Lists correctly.
+➡️ For more information, please click
+here.
+Purpose
+As stated in Article 22(4) of the eIDAS Regulation (910/2014) and in Article 4(3,4) of the Commission Implementing Decision 2015/1505/EU, the European Commission makes available the information notified by the Member States. This information is available in an XML document called the List Of Trusted Lists (LOTL).
+More information on the e-Signature legal framework can be found on this portal's
+What is the legislation
+, including details on the information notified by the Member States and referred here above (cfr. Annex II of Commission Implementing Decision 2015/1505/EU)
+Users
+The DIGITAL eSignature List Of Trusted Lists service is intended for the anyone interested in the EU Trust Scheme as defined in the eIDAS Regulation (910/2014), and in particular e-signature implementers interested in handling qualified e-signatures.
+Benefits
+The DIGITAL eSignature List Of Trusted Lists provides a reliable cornerstone to securely access all EU trusted lists.
+Documentation
+LOTL service offering description (pdf)
+Last updated 26 July 2017
+Overview
+Content Tools
+Powered by a free
+Atlassian Confluence Open Source Project License
+granted to EC DIGIT.
+Evaluate Confluence today
+.
+Powered by
+Atlassian Confluence
+9.2.23
+Printed by Atlassian Confluence 9.2.23
+Report a bug
+Atlassian News
+Atlassian
+{"serverDuration": 128, "requestCorrelationId": "e3711deafced95d3"}

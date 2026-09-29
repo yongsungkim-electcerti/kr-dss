@@ -1,0 +1,3188 @@
+[
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "EIF_Next_Generation_Blueprint_Draft_0.2 (2025)",
+    "date_version": "2025-11-15 / Draft 0.2",
+    "status": "PDF 원문",
+    "description": "차세대 유럽 상호운용 프레임워크의 발전방향과 연합·신뢰·거버넌스·공통 서비스 및 상호운용 관련 권고사항",
+    "file": "01_원문/⑦ 정책·산업자료/EIF_Next_Generation_Blueprint_Draft_0_2_20251115__deae2cd7.pdf",
+    "pages": 85,
+    "sha256": "deae2cd72960559aad3b4f6c262471f3ff760885b94e29cda6ae699f533a3231",
+    "bytes": 1455026,
+    "source_urls": [
+      "https://www.varam.gov.lv/lv/media/48782/download?attachment"
+    ],
+    "sheet_rows": [
+      87
+    ],
+    "original_locations": [
+      "EIF_차세대_상호운용성\\01_원문\\EIF_Next_Generation_Blueprint_Draft_0_2_20251115.pdf",
+      "디지털신뢰_국제동향_20260926\\원문\\00_기본문헌\\EIF_Next_Generation_Blueprint_Draft_0_2_20251115.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/EIF_Next_Generation_Blueprint_Draft_0_2_20251115__deae2cd7.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "European Interoperability Framework",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/01_EIF__0bce73e7.html",
+    "pages": null,
+    "sha256": "0bce73e71457585ab5cef74329ae21a9594dd2afba1aa88650fbd013888d6961",
+    "bytes": 63073,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/iopeu-monitoring/european-interoperability-framework-eif"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\01_EIF.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/01_EIF__0bce73e7.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "EIF 2017 brochure",
+    "date_version": "2017",
+    "status": "PDF 원문",
+    "description": "유럽 공공서비스의 상호운용 원칙과 Legal·Organizational·Semantic·Technical 상호운용 계층 및 거버넌스 체계",
+    "file": "01_원문/⑦ 정책·산업자료/01A_EIF_2017_Brochure__64e99921.pdf",
+    "pages": 48,
+    "sha256": "64e99921919e1e754f8a4bde0f2c15b1d7b86897803500945434eba20a07ac68",
+    "bytes": 890435,
+    "source_urls": [
+      "https://ec.europa.eu/isa2/sites/default/files/eif_brochure_final.pdf",
+      "https://interoperable-europe.ec.europa.eu/collection/iopeu-monitoring/european-interoperability-framework"
+    ],
+    "sheet_rows": [
+      86
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\01A_EIF_2017_Brochure.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/01A_EIF_2017_Brochure__64e99921.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "Guidelines for Interoperability Assessments",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/② 법·제도/02_Assessment_Guidelines__7fff32cd.html",
+    "pages": null,
+    "sha256": "7fff32cd75939b78b0e7d621f70219f610041cc0b864fa26d2c879d8412721eb",
+    "bytes": 73012,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/assessments/assessment-guidelines"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\02_Assessment_Guidelines.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/02_Assessment_Guidelines__7fff32cd.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "Guidelines for Interoperability Assessments December 2024",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/② 법·제도/02A_Assessment_Guidelines_202412__cc37b203.pdf",
+    "pages": 50,
+    "sha256": "cc37b2035aae486bdaa976067d852543a436553482ea50c18cff52400b1f3c73",
+    "bytes": 9695600,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/sites/default/files/news/2024-12/Guidelines%20for%20Interoperability%20Assessments%20December%202024_v5.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\02A_Assessment_Guidelines_202412.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/02A_Assessment_Guidelines_202412__cc37b203.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Assessment Toolbox",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/③ 기술/03_Assessment_Toolbox__42ac75ae.html",
+    "pages": null,
+    "sha256": "42ac75ae79ddcfdd0751ca02a4f3b8253aefdf93c20a1d9d32c84a07574fbb34",
+    "bytes": 105548,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/assessments/assessment-toolbox"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\03_Assessment_Toolbox.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/03_Assessment_Toolbox__42ac75ae.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "Interoperability Assessment Vocabulary 1.0.0",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/④ 표준/04_IOPA_1.0.0__84c2598d.html",
+    "pages": null,
+    "sha256": "84c2598d91f620ce4135bc7440a000f12331a4a392d58593425cdbc2cd311c7e",
+    "bytes": 199002,
+    "source_urls": [
+      "https://semiceu.github.io/IOPA/releases/1.0.0/"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\04_IOPA_1.0.0.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/04_IOPA_1.0.0__84c2598d.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "Assessment Reports Repository",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/05_Assessment_Repository__5030e145.html",
+    "pages": null,
+    "sha256": "5030e1457d62cd932758c69d55d6dd71fc3942850d64d4d6f8620cbdffc6bccd",
+    "bytes": 97333,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/assessments/report/repository"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\05_Assessment_Repository.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/05_Assessment_Repository__5030e145.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "eIDAS Implementing Acts Batch 6",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/05A_eIDAS_Assessment_Batch6__ec0af4b9.html",
+    "pages": null,
+    "sha256": "ec0af4b9a5293a3d24f355a0ba3d387cd221f8b712d0f5d3b37ab913af743f43",
+    "bytes": 50210,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/assessments/report/2175"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\05A_eIDAS_Assessment_Batch6.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/05A_eIDAS_Assessment_Batch6__ec0af4b9.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "Electronic identification and trust services including e-signatures — RP 2026",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/06_Trust_Services_RP2026__a65748ee.html",
+    "pages": null,
+    "sha256": "a65748eef7ef4c2573379946909efc11a590f3bb13c5b89423f27efeb0ceeefc",
+    "bytes": 110045,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/rolling-plan-ict-standardisation/electronic-identification-and-trust-services-including-e-signatures-rp-2026"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\06_Trust_Services_RP2026.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/06_Trust_Services_RP2026__a65748ee.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "SEMIC Specifications",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/④ 표준/07_SEMIC_Specifications__68a7938b.html",
+    "pages": null,
+    "sha256": "68a7938b43b89b6842eb61467eac33c0282fe6d067d3bc8bc698e5ed9427f31e",
+    "bytes": 132774,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/specifications"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\07_SEMIC_Specifications.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/07_SEMIC_Specifications__68a7938b.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "Core Criterion and Core Evidence Vocabulary",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/④ 표준/08_CCCEV_2.2.0__685d2810.html",
+    "pages": null,
+    "sha256": "685d28106e65a2ebc3fc7abafdcdaac7936f90f1dbea84177c817fbef370d4a5",
+    "bytes": 245616,
+    "source_urls": [
+      "https://semiceu.github.io/CCCEV/releases/2.2.0/"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\08_CCCEV_2.2.0.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/08_CCCEV_2.2.0__685d2810.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "EIRA",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/09_EIRA__e4dc0ba6.html",
+    "pages": null,
+    "sha256": "e4dc0ba6ce5b31ea3228d518538ce1c38d723753cb85f9a090981046d137e134",
+    "bytes": 73457,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/interoperability-architecture-solutions/solution/eira/welcome"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\09_EIRA.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/09_EIRA__e4dc0ba6.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "09_EIRA 7.0.0 release",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/09_EIRA_Release700__b3205ee4.html",
+    "pages": null,
+    "sha256": "b3205ee4297c1eb262762a191dee483bc3ded4a232c0fd5532c1484943863e71",
+    "bytes": 75353,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/interoperability-architecture-solutions/solution/eira/release/700"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\09_EIRA_Release700.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/09_EIRA_Release700__b3205ee4.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "EIRA©'s value proposition",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/09_EIRA_Value_Proposition__cc157249.pdf",
+    "pages": 8,
+    "sha256": "cc157249ca5c3e0670408adeb9209acbe071499526ab672c3dbd33220d6aa007",
+    "bytes": 1084514,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/sites/default/files/distribution/access_url/2025-04/e1169774-8ab1-4735-8fc9-953edcdaa2ee/EIRA©_Value%20proposition.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\09_EIRA_Value_Proposition.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/09_EIRA_Value_Proposition__cc157249.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "ELIS",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/④ 표준/10_ELIS__73e751aa.html",
+    "pages": null,
+    "sha256": "73e751aa2258c2ff4096ff4e65aebd105fde962b264f2ce0ba1e194f95dc4d4a",
+    "bytes": 76733,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/elis/welcome"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\10_ELIS.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/10_ELIS__73e751aa.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "10_ELIS 7.0.0 release",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/④ 표준/10_ELIS_Release700__7e1e6556.html",
+    "pages": null,
+    "sha256": "7e1e655642cddb7d9107533f87504837607d78e14ad8793fd3622e946d0151f8",
+    "bytes": 81643,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/elis/release/700"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\10_ELIS_Release700.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/10_ELIS_Release700__7e1e6556.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Interoperability Test Bed FAQ",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/③ 기술/11_ITB_FAQ__7d008cbb.html",
+    "pages": null,
+    "sha256": "7d008cbb4566743bb75574c9a4e7e7f3dea06a5e02ba11d52a9098be5a620146",
+    "bytes": 187926,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/interoperability-test-bed-repository/solution/interoperability-test-bed/faq"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\11_ITB_FAQ.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/11_ITB_FAQ__7d008cbb.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Example test suites",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/③ 기술/12_example_test_suites__187e8c8f.html",
+    "pages": null,
+    "sha256": "187e8c8f8fec0d1b6c6ba76eba54ff84a347d15838dea84e1825596360ba8b3a",
+    "bytes": 85629,
+    "source_urls": [
+      "https://www.itb.ec.europa.eu/docs/tdl/latest/examples/index.html"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\12_example_test_suites.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/12_example_test_suites__187e8c8f.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Expressions",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/③ 기술/12_expressions__9ca15915.html",
+    "pages": null,
+    "sha256": "9ca1591548fffc35aa216015b3ac73dfdcd52f59ddcaa1ef42a5b7bcb42637fa",
+    "bytes": 130039,
+    "source_urls": [
+      "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\12_expressions.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/12_expressions__9ca15915.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "GITB Test Description Language",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/③ 기술/12_GITB_TDL__57c83192.html",
+    "pages": null,
+    "sha256": "57c83192fd2342aa80576ae69d022f383d3f1a10bb95b0ed548cfa9041e124df",
+    "bytes": 10529,
+    "source_urls": [
+      "https://www.itb.ec.europa.eu/docs/tdl/latest/"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\12_GITB_TDL.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/12_GITB_TDL__57c83192.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Hello world",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/③ 기술/12_hello_world__60086481.html",
+    "pages": null,
+    "sha256": "60086481a3cbc788c10f64cc6914362e882812a7c8fa062b994e53d59e33bc0f",
+    "bytes": 31290,
+    "source_urls": [
+      "https://www.itb.ec.europa.eu/docs/tdl/latest/helloWorld/index.html"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\12_hello_world.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/12_hello_world__60086481.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Introduction",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/③ 기술/12_introduction__2af3a50c.html",
+    "pages": null,
+    "sha256": "2af3a50c7cc09ffea9ee9d9917d5d75fbffb6935065e0c92f5fc224055a86163",
+    "bytes": 32078,
+    "source_urls": [
+      "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\12_introduction.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/12_introduction__2af3a50c.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Release history",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/③ 기술/12_release_history__17bc2d62.html",
+    "pages": null,
+    "sha256": "17bc2d62709cfc87232b9c467034d15331b5755928496e89a06592b5bc11fd66",
+    "bytes": 124822,
+    "source_urls": [
+      "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\12_release_history.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/12_release_history__17bc2d62.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Scriptlets",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/③ 기술/12_scriptlets__9d4458fd.html",
+    "pages": null,
+    "sha256": "9d4458fdc4d70118690e31c4e86efdad224ed7a1aad5fa640378c33b50cbd8d4",
+    "bytes": 93384,
+    "source_urls": [
+      "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\12_scriptlets.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/12_scriptlets__9d4458fd.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Test cases",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/③ 기술/12_test_cases__187b12a6.html",
+    "pages": null,
+    "sha256": "187b12a6a967189435ef0a7d4e3050318fd46e98e4eb108fe7eb94d9e2bf2332",
+    "bytes": 145005,
+    "source_urls": [
+      "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\12_test_cases.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/12_test_cases__187b12a6.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Test step handlers",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/③ 기술/12_test_step_handlers__f241eb4b.html",
+    "pages": null,
+    "sha256": "f241eb4b766f534c1c671bde92397f290176a48ac0d06994c3e3f836e8c91c89",
+    "bytes": 899194,
+    "source_urls": [
+      "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\12_test_step_handlers.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/12_test_step_handlers__f241eb4b.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Test steps",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/③ 기술/12_test_steps__7bf7a21a.html",
+    "pages": null,
+    "sha256": "7bf7a21acf49469e068915eebdfb3558a0af7b05a6bf25e904f48e8bb3e0a71e",
+    "bytes": 538642,
+    "source_urls": [
+      "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\12_test_steps.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/12_test_steps__7bf7a21a.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Test suites",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/③ 기술/12_test_suites__9ff21f2f.html",
+    "pages": null,
+    "sha256": "9ff21f2f8ce8932f493affc9a30e013fce614d010b393add3c28e97c43ee53d5",
+    "bytes": 95959,
+    "source_urls": [
+      "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\12_test_suites.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/12_test_suites__9ff21f2f.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Types",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/③ 기술/12_types__1283baa4.html",
+    "pages": null,
+    "sha256": "1283baa47cb1458c5018054acbb34fb65e507c72fcbd71a9ca3f2758fc55b1fb",
+    "bytes": 18979,
+    "source_urls": [
+      "https://www.itb.ec.europa.eu/docs/tdl/latest/types/index.html"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\12_types.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/12_types__1283baa4.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "EU_2026_Rolling_Plan_ICT_Standardisation",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/EU_2026_Rolling_Plan_ICT_Standardisation__a14d246d.pdf",
+    "pages": 169,
+    "sha256": "a14d246d387f00569c70acaa698f40fc753a1e582ffe60ab74133fa57871b3f0",
+    "bytes": 6300100,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/sites/default/files/custom-page/attachment/2026-03/cnect_rollingplan_ict_2026_spr_pr1.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\00_기본문헌\\EU_2026_Rolling_Plan_ICT_Standardisation.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/EU_2026_Rolling_Plan_ICT_Standardisation__a14d246d.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "G20_2023_DPI_Framework",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/G20_2023_DPI_Framework__dac0e144.pdf",
+    "pages": 19,
+    "sha256": "dac0e144385f69bd88158f934560510871fcaaaddb4d05ea6b29df1609888a68",
+    "bytes": 1988452,
+    "source_urls": [
+      "https://g7g20-documents.org/fileadmin/G7G20_documents/2023/G20/India/Sherpa-Track/Digital Economy Ministers/1 Ministers' Language/G20_Digital Economy Ministers Meeting_Outcome_Document_and_Chair_Summary_19082023.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\00_기본문헌\\G20_2023_DPI_Framework.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/G20_2023_DPI_Framework__dac0e144.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "JP_2026_VC_DIW_Governance_Report",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/JP_2026_VC_DIW_Governance_Report__ca52fea8.pdf",
+    "pages": 22,
+    "sha256": "ca52fea82fc46fd37f745f80d5c791b04060cd95c1c25d63c4b1c62dbf15d346",
+    "bytes": 1347515,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/57957c69-60d3-4f0e-8a06-69f6f2ae58ea/a30cd98e/20260409_meeting_vc-diw-governance_outline_01.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\00_기본문헌\\JP_2026_VC_DIW_Governance_Report.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/JP_2026_VC_DIW_Governance_Report__ca52fea8.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "OECD_2024_Digital_Public_Infrastructure",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/OECD_2024_Digital_Public_Infrastructure__7ad5d825.pdf",
+    "pages": 29,
+    "sha256": "7ad5d825258da02d1854363b7db8172846b335afe6987cc59af3903f662b2f99",
+    "bytes": 3775702,
+    "source_urls": [
+      "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/12/digital-public-infrastructure-for-digital-governments_11fe17d9/ff525dc8-en.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\00_기본문헌\\OECD_2024_Digital_Public_Infrastructure.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/OECD_2024_Digital_Public_Infrastructure__7ad5d825.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "UN_2024_DPI_Safeguards_Framework",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework__ea8833cc.pdf",
+    "pages": 48,
+    "sha256": "ea8833cc832ec21edce131b8c48528ff3417ac9855767292a0b294ff5dc41842",
+    "bytes": 4056526,
+    "source_urls": [],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\00_기본문헌\\UN_2024_DPI_Safeguards_Framework.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework__ea8833cc.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "UN_2024_DPI_Safeguards_Framework_웹다운로드_20260927",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework_웹다운로드_20260927__da300ab9.pdf",
+    "pages": 48,
+    "sha256": "da300ab958967871fb24f00febd2ca6ca681df084119fe54cefddee61d754653",
+    "bytes": 7958459,
+    "source_urls": [
+      "https://2791960348-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FM4qpfWbmGu30B3njFAAV%2Fuploads%2FIh5nBbjjhfqzXOyQ7CLG%2FThe%20Universal%20Digital%20Public%20Infrastructure%20(DPI"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\00_기본문헌\\UN_2024_DPI_Safeguards_Framework_웹다운로드_20260927.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework_웹다운로드_20260927__da300ab9.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "WorldBank_2026_Digital_Wallet",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "디지털 지갑의 개념, 생태계, 정책·기술 쟁점과 국가 사례를 종합적으로 정리한 보고서",
+    "file": "01_원문/⑦ 정책·산업자료/WB_2026_ID4D_Digital_Wallets_Policy_Note__add051e0.pdf",
+    "pages": 70,
+    "sha256": "add051e0b78ce217dd9cfc69d1c09d17a7c33f0e3de581ac9aa7bd942f2f4741",
+    "bytes": 4782262,
+    "source_urls": [
+      "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099051126133542746"
+    ],
+    "sheet_rows": [
+      80
+    ],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\00_기본문헌\\WB_2026_ID4D_Digital_Wallets_Policy_Note.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/WB_2026_ID4D_Digital_Wallets_Policy_Note__add051e0.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "ETSI_TS119612_v2.4.1",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "전자서명·신뢰서비스 제공자 정보를 담는 Trusted List의 형식과 관리 방식을 규정",
+    "file": "01_원문/④ 표준/ETSI_TS119612_v2.4.1__83285a10.pdf",
+    "pages": 81,
+    "sha256": "83285a1069e369d225cf16a0051a46b1f9d8961b6ad5d66bb7650351309a5196",
+    "bytes": 596996,
+    "source_urls": [
+      "https://www.etsi.org/deliver/etsi_ts/119600_119699/119612/02.04.01_60/ts_119612v020401p.pdf"
+    ],
+    "sheet_rows": [
+      55
+    ],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\01_EU_TLv6\\ETSI_TS119612_v2.4.1.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/ETSI_TS119612_v2.4.1__83285a10.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "ETSI_TS119615_v1.4.1",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/④ 표준/ETSI_TS119615_v1.4.1__7e348c29.pdf",
+    "pages": 56,
+    "sha256": "7e348c297b273fce37e6243ba9e53490cb554c1d8bd9cb63b85259ba427ce3fa",
+    "bytes": 456844,
+    "source_urls": [
+      "https://www.etsi.org/deliver/etsi_ts/119600_119699/119615/01.04.01_60/ts_119615v010401p.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\01_EU_TLv6\\ETSI_TS119615_v1.4.1.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/ETSI_TS119615_v1.4.1__7e348c29.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "ETSI_TS119615_versions",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/④ 표준/ETSI_TS119615_versions__57e74925.html",
+    "pages": null,
+    "sha256": "57e749254c94970b23528b1bdefbf1de73ece8e13f74147dee5f2a61c7f77476",
+    "bytes": 743,
+    "source_urls": [
+      "https://www.etsi.org/deliver/etsi_ts/119600_119699/119615/"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\01_EU_TLv6\\ETSI_TS119615_versions.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/ETSI_TS119615_versions__57e74925.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "EU LOTL 운영 안내",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/③ 기술/EU_LOTL_운영_안내__b3e30b16.html",
+    "pages": null,
+    "sha256": "b3e30b164c586990bfc112b6602cf432c88649f8c8b74d780db7a1ac8eb56822",
+    "bytes": 143724,
+    "source_urls": [
+      "https://ec.europa.eu/digital-building-blocks/sites/spaces/DIGITAL/pages/467109149/eSignature+List+of+Trusted+Lists"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\01_EU_TLv6\\EU_LOTL_운영_안내.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/EU_LOTL_운영_안내__b3e30b16.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "ARF",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/③ 기술/ARF__dcd4471a.html",
+    "pages": null,
+    "sha256": "dcd4471ab4045df344ca771d25862d2cc55b657000a58eee58875afda27c0b87",
+    "bytes": 61938,
+    "source_urls": [
+      "https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\02_EUDI_Wallet\\ARF.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/ARF__dcd4471a.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "ARF_Main_Annexes_Release",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "EUDI Wallet의 참여주체, 기능, 아키텍처, 신뢰모델과 발급·제시 구조를 정의",
+    "file": "01_원문/③ 기술/ARF_Main_Annexes_Release__4a1ed04d.pdf",
+    "pages": 552,
+    "sha256": "4a1ed04da5f36582bff0df002fa33d93f4521a13d32181efac922dae9e658f2a",
+    "bytes": 4025040,
+    "source_urls": [
+      "https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases/latest/download/architecture-and-reference-framework-main-and-annexes.pdf",
+      "https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework"
+    ],
+    "sheet_rows": [
+      38
+    ],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\02_EUDI_Wallet\\ARF_Main_Annexes_Release.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/ARF_Main_Annexes_Release__4a1ed04d.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "ARF_MainDocument",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/③ 기술/ARF_MainDocument__c4cee77d.html",
+    "pages": null,
+    "sha256": "c4cee77d56303f1c14894aa952d23027d56269bfd479f6a8c392f030e0a017f4",
+    "bytes": 20545,
+    "source_urls": [
+      "https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/latest/architecture-and-reference-framework-main/"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\02_EUDI_Wallet\\ARF_MainDocument.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/ARF_MainDocument__c4cee77d.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "EUDI Regulation 안내",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/② 법·제도/EUDI_Regulation_안내__91a0a1d0.html",
+    "pages": null,
+    "sha256": "91a0a1d08a5e367ca9217b2c9652740ad7aa00422df728426aaece1e60c67382",
+    "bytes": 63402,
+    "source_urls": [
+      "https://digital-strategy.ec.europa.eu/en/policies/eudi-regulation"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\02_EUDI_Wallet\\EUDI_Regulation_안내.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/EUDI_Regulation_안내__91a0a1d0.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Toolbox",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/③ 기술/Toolbox__d20eac2b.html",
+    "pages": null,
+    "sha256": "d20eac2b58efa909579f70981da6d23dc0760ea5320f3ea56d21b15bb2d61ab0",
+    "bytes": 65933,
+    "source_urls": [
+      "https://digital-strategy.ec.europa.eu/en/policies/eudi-wallet-toolbox"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\02_EUDI_Wallet\\Toolbox.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/Toolbox__d20eac2b.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "HAIP_1.0",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "고보증 VC 상호운용을 위한 프로파일과 요구사항을 제시",
+    "file": "01_원문/④ 표준/HAIP_1.0__3996e047.html",
+    "pages": null,
+    "sha256": "3996e0479d06b72d6d68668b8ae3cd39fddfc29ae9220c0c3fead7dc060ec4fb",
+    "bytes": 150031,
+    "source_urls": [
+      "https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-1_0.html"
+    ],
+    "sheet_rows": [
+      45
+    ],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\03_OpenID_적합성시험\\HAIP_1.0.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/HAIP_1.0__3996e047.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "OpenID4VCI_1.0",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "검증가능한 자격증명을 Wallet에 발급하기 위한 프로토콜과 메시지 흐름을 정의",
+    "file": "01_원문/④ 표준/OpenID4VCI_1.0__f123c317.html",
+    "pages": null,
+    "sha256": "f123c3178cacd27688b15b762098a045e9eb35eccfe2f5f18a357c3815e06ba7",
+    "bytes": 504445,
+    "source_urls": [
+      "https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html"
+    ],
+    "sheet_rows": [
+      44
+    ],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\03_OpenID_적합성시험\\OpenID4VCI_1.0.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/OpenID4VCI_1.0__f123c317.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "OpenID4VP_1.0",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "Wallet이 검증자에게 자격증명을 제시하는 프로토콜과 메시지 흐름을 정의",
+    "file": "01_원문/④ 표준/OpenID4VP_1.0__e4f0abc6.html",
+    "pages": null,
+    "sha256": "e4f0abc689afd0a4f6c41b83954d7f970c5263a26143ad861216aea9918993bb",
+    "bytes": 515401,
+    "source_urls": [
+      "https://openid.net/specs/openid-4-verifiable-presentations-1_0.html"
+    ],
+    "sheet_rows": [
+      43
+    ],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\03_OpenID_적합성시험\\OpenID4VP_1.0.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/OpenID4VP_1.0__e4f0abc6.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "VCI 최종 승인",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/VCI_최종_승인__4992767b.html",
+    "pages": null,
+    "sha256": "4992767b9bfa846905de622bc918cb9be24f56cae238efcbdeae8d8b5ef14929",
+    "bytes": 138747,
+    "source_urls": [
+      "https://openid.net/openid-for-verifiable-credential-issuance-1-final-specification-approved/"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\03_OpenID_적합성시험\\VCI_최종_승인.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/VCI_최종_승인__4992767b.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "VP 최종 승인",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/VP_최종_승인__8d922c67.html",
+    "pages": null,
+    "sha256": "8d922c674eae1dac94671e18ebfec10192a06969596936f52e02531ad35d7b41",
+    "bytes": 137326,
+    "source_urls": [
+      "https://openid.net/openid-for-verifiable-presentations-1-0-final-specification-approved/"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\03_OpenID_적합성시험\\VP_최종_승인.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/VP_최종_승인__8d922c67.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "공식 발표",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/공식_발표__03beba74.html",
+    "pages": null,
+    "sha256": "03beba749de720c83c64d38603b946f72e5beaa8c8eb364ae911e8c1e2a336a9",
+    "bytes": 140662,
+    "source_urls": [
+      "https://openid.net/first-implementers-certify-to-openid4vp-and-openid4vci-with-haip/"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\03_OpenID_적합성시험\\공식_발표.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/공식_발표__03beba74.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "시험체계",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "보도자료(블로그) / OpenID4VP·OpenID4VCI 적합성 시험의 공개·자체인증 정보",
+    "file": "01_원문/⑦ 정책·산업자료/시험체계__959d9c39.html",
+    "pages": null,
+    "sha256": "959d9c39ab69600dacdc37996907172589a1977984ee3f3d9f4592ca8d0d718d",
+    "bytes": 157065,
+    "source_urls": [
+      "https://openid.net/openid4vp-and-openid4vci-conformance-tests-are-complete-and-open-for-self-certification/"
+    ],
+    "sheet_rows": [
+      85
+    ],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\03_OpenID_적합성시험\\시험체계.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/시험체계__959d9c39.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "2026년도 회의",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/2026년도_회의__5645f871.html",
+    "pages": null,
+    "sha256": "5645f871ac5babc4fbce45b7d9eec05ceec6b056d9291ff0c30523d22def9b6d",
+    "bytes": 51129,
+    "source_urls": [
+      "https://www.digital.go.jp/councils/vc-diw-governance/c164f224-cd22-4d66-9d50-1c1b42daca65"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\04_일본_VC_DIW\\2026년도_회의.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/2026년도_회의__5645f871.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "JP_Annex4_TechnicalWG",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/JP_Annex4_TechnicalWG__81fea349.pdf",
+    "pages": 11,
+    "sha256": "81fea34921c94e44391bf51e6d8711236db1de981fd5fb37e207c029f09eb04a",
+    "bytes": 720259,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/57957c69-60d3-4f0e-8a06-69f6f2ae58ea/c4fb6769/20260409_meeting_vc-diw-governance_outline_05.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\04_일본_VC_DIW\\JP_Annex4_TechnicalWG.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/JP_Annex4_TechnicalWG__81fea349.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "개최 개요안",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/개최_개요안__e9c1c7d4.pdf",
+    "pages": 5,
+    "sha256": "e9c1c7d487aed4b70c8102db1ca66b769c135b73bbfac1845046e312a57a5e63",
+    "bytes": 627122,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/c164f224-cd22-4d66-9d50-1c1b42daca65/2b3aef39/20260911_meeting_vc-diw-governance_outline_02.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\04_일본_VC_DIW\\개최_개요안.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/개최_개요안__e9c1c7d4.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "별지 3",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/별지_3__39345e78.pdf",
+    "pages": 17,
+    "sha256": "39345e78442cf123ccbafea2d5006d7b45de1195ddcb472719e58ac06ee86100",
+    "bytes": 1291348,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/57957c69-60d3-4f0e-8a06-69f6f2ae58ea/2a54005e/20260409_meeting_vc-diw-governance_outline_04.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\04_일본_VC_DIW\\별지_3.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/별지_3__39345e78.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "RFC9901",
+    "date_version": "원문 표기 확인 필요",
+    "status": "텍스트 원문",
+    "description": "",
+    "file": "01_원문/④ 표준/RFC9901__fd4cb791.txt",
+    "pages": null,
+    "sha256": "fd4cb79184162fa7ef95f4f63abab8ee6d03c9a04c19b8f83758946464b284eb",
+    "bytes": 177316,
+    "source_urls": [
+      "https://www.rfc-editor.org/rfc/rfc9901.txt"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\05_W3C_IETF\\RFC9901.txt"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/RFC9901__fd4cb791.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "RFC 9901",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "선택적 공개를 지원하는 JSON Web Token 형식을 RFC로 규정",
+    "file": "01_원문/④ 표준/RFC_9901__cabbdc40.html",
+    "pages": null,
+    "sha256": "cabbdc4048c1d6dd06ebb2a64e287b55d252c5c2e1b1b9fe680441df7a35eafd",
+    "bytes": 409473,
+    "source_urls": [
+      "https://www.rfc-editor.org/rfc/rfc9901.html"
+    ],
+    "sheet_rows": [
+      47
+    ],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\05_W3C_IETF\\RFC_9901.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/RFC_9901__cabbdc40.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "SD-JWT VC 현황",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/④ 표준/SD-JWT_VC_현황__db6882f2.html",
+    "pages": null,
+    "sha256": "db6882f2e74804c1dbfbc2d27ec5d3c2815da057975e7cc86d7fdfc5f4159f04",
+    "bytes": 217789,
+    "source_urls": [
+      "https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\05_W3C_IETF\\SD-JWT_VC_현황.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/SD-JWT_VC_현황__db6882f2.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "SD_JWT_VC_draft19",
+    "date_version": "원문 표기 확인 필요",
+    "status": "텍스트 원문",
+    "description": "SD-JWT 기반 검증가능한 디지털 자격증명의 형식을 정의하는 Internet-Draft",
+    "file": "01_원문/④ 표준/SD_JWT_VC_draft19__394c4640.txt",
+    "pages": null,
+    "sha256": "394c4640c581c301adaf24d1d356238e2c290b5c9e8b130141ca0e28732144fb",
+    "bytes": 154916,
+    "source_urls": [
+      "https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-19.txt",
+      "https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/"
+    ],
+    "sheet_rows": [
+      48
+    ],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\05_W3C_IETF\\SD_JWT_VC_draft19.txt"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/SD_JWT_VC_draft19__394c4640.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "W3C VC 2.0",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "검증가능한 자격증명과 검증가능한 제시의 데이터 모델을 규격화",
+    "file": "01_원문/④ 표준/W3C_VC_2.0__a9196a3d.html",
+    "pages": null,
+    "sha256": "a9196a3d0b6601356c4e127bad24f8c7f2c17f6ed22e41b35755a910104156f8",
+    "bytes": 1023165,
+    "source_urls": [
+      "https://www.w3.org/TR/vc-data-model/"
+    ],
+    "sheet_rows": [
+      42
+    ],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\05_W3C_IETF\\W3C_VC_2.0.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/W3C_VC_2.0__a9196a3d.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "상태목록",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/④ 표준/상태목록__3cdf3358.html",
+    "pages": null,
+    "sha256": "3cdf3358a09f3b02f2a97e5dac13cf2b63115c2db1260bf7b7c236d8702924ec",
+    "bytes": 185694,
+    "source_urls": [
+      "https://www.w3.org/TR/vc-bitstring-status-list/"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\05_W3C_IETF\\상태목록.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/상태목록__3cdf3358.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "NIST_SP800_63_4",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "디지털 신원의 신원확인, 인증, 연합을 위한 지침 체계를 제시",
+    "file": "01_원문/② 법·제도/NIST_SP800_63_4__2f5b107d.pdf",
+    "pages": 96,
+    "sha256": "2f5b107de218a0fc3fe7f7e91b2ece5babb001eda5745b7c568a3cc876002f2d",
+    "bytes": 858054,
+    "source_urls": [
+      "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-4.pdf",
+      "https://www.nist.gov/identity-access-management/projects/nist-special-publication-800-63-digital-identity-guidelines"
+    ],
+    "sheet_rows": [
+      24
+    ],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\06_NIST_디지털신원\\NIST_SP800_63_4.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/NIST_SP800_63_4__2f5b107d.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "NIST_SP800_63A_4",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/② 법·제도/NIST_SP800_63A_4__f8365418.pdf",
+    "pages": 114,
+    "sha256": "f83654182f0b012f17f6901e6d03e12ef2ba422b341aee875e837094f23e9ad3",
+    "bytes": 1071442,
+    "source_urls": [
+      "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63A-4.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\06_NIST_디지털신원\\NIST_SP800_63A_4.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/NIST_SP800_63A_4__f8365418.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "NIST_SP800_63B_4",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "인증자, 인증 절차와 수명주기 관리 요구사항을 규정",
+    "file": "01_원문/② 법·제도/NIST_SP800_63B_4__d9ab8957.pdf",
+    "pages": 129,
+    "sha256": "d9ab89576b5ae2cfb3ba37781110788dea27a85a5079496dbfc1a79834670afd",
+    "bytes": 993734,
+    "source_urls": [
+      "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63B-4.pdf",
+      "https://doi.org/10.6028/NIST.SP.800-63B-4"
+    ],
+    "sheet_rows": [
+      25
+    ],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\06_NIST_디지털신원\\NIST_SP800_63B_4.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/NIST_SP800_63B_4__d9ab8957.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "NIST_SP800_63C_4",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/② 법·제도/NIST_SP800_63C_4__dce90171.pdf",
+    "pages": 150,
+    "sha256": "dce901711d044dcdd672fe28c2b012558786db0532e634bd65fa9506f88b3cdb",
+    "bytes": 1542269,
+    "source_urls": [
+      "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63C-4.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\06_NIST_디지털신원\\NIST_SP800_63C_4.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/NIST_SP800_63C_4__dce90171.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "NIST 최종 문서",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/② 법·제도/NIST_최종_문서__850aeb7e.html",
+    "pages": null,
+    "sha256": "850aeb7edfdb382951c48a5f9047c200307e642718eef0eb4e9f0d0519017336",
+    "bytes": 46140,
+    "source_urls": [
+      "https://csrc.nist.gov/pubs/sp/800/63/4/final"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\06_NIST_디지털신원\\NIST_최종_문서.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/NIST_최종_문서__850aeb7e.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "the 1.0 UK DVS trust framework",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/② 법·제도/the_1.0_UK_DVS_trust_framework__3eba0940.html",
+    "pages": null,
+    "sha256": "3eba09402eac5698c1bd3c454db3b292a4bbcc950f1d97c6287462fd9375b57d",
+    "bytes": 72655,
+    "source_urls": [
+      "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-1-0"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\07_영국_신뢰프레임워크\\the_1.0_UK_DVS_trust_framework.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/the_1.0_UK_DVS_trust_framework__3eba0940.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "UK DVSTF certification scheme requirements for conformity assessment bodies v1.15",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/② 법·제도/UK_DVSTF_certification_scheme_requirements_for_conformity_assessment_bodies_v1.15__8120c97a.pdf",
+    "pages": 76,
+    "sha256": "8120c97a0cd29fd5ebd5efa8bb33857b43bc44fbb53f5bdca752dd83e1e3c1bb",
+    "bytes": 1413928,
+    "source_urls": [
+      "https://assets.publishing.service.gov.uk/media/6aabd59644ec1aa417346bfe/UK_DVSTF_Certification_Scheme_Requirements_for_Conformity_Assessment_Bodies_v1.15.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\07_영국_신뢰프레임워크\\UK_DVSTF_certification_scheme_requirements_for_conformity_assessment_bodies_v1.15.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/UK_DVSTF_certification_scheme_requirements_for_conformity_assessment_bodies_v1.15__8120c97a.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "UK_GPG45_DataSchema",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/② 법·제도/UK_GPG45_DataSchema__cf2017b5.html",
+    "pages": null,
+    "sha256": "cf2017b5d4ef97ccc32e513a90ebfe9a86c07ffac4533049f3ae42e7f738ae93",
+    "bytes": 156576,
+    "source_urls": [
+      "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\07_영국_신뢰프레임워크\\UK_GPG45_DataSchema.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/UK_GPG45_DataSchema__cf2017b5.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "UK_TrustFramework_1.0_FullText",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "",
+    "file": "01_원문/② 법·제도/UK_TrustFramework_1.0_FullText__1b14fe6b.html",
+    "pages": null,
+    "sha256": "1b14fe6b19344dc62365f34d7a9c568ee1ab7ff85af7daf448f696b64169b7e0",
+    "bytes": 633779,
+    "source_urls": [
+      "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-1-0/uk-digital-verification-services-trust-framework-1-0-pre-release"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\07_영국_신뢰프레임워크\\UK_TrustFramework_1.0_FullText.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/UK_TrustFramework_1.0_FullText__1b14fe6b.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "데이터 스키마",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/② 법·제도/데이터_스키마__8ab49bf1.html",
+    "pages": null,
+    "sha256": "8ab49bf1c27c93b776edb3ae5bbb18145014aa922db5899074c513fd1adffaa5",
+    "bytes": 75799,
+    "source_urls": [
+      "https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\07_영국_신뢰프레임워크\\데이터_스키마.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/데이터_스키마__8ab49bf1.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "인증제도와 버전",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/② 법·제도/인증제도와_버전__6835fb6e.html",
+    "pages": null,
+    "sha256": "6835fb6ea28b6c3dd84efa49394615b1501a067eab92a8e39e8617e656a14461",
+    "bytes": 108641,
+    "source_urls": [
+      "https://www.gov.uk/guidance/certification-scheme-for-the-uk-digital-identity-and-attributes-trust-framework"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\07_영국_신뢰프레임워크\\인증제도와_버전.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/인증제도와_버전__6835fb6e.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "Digital Identity Services Trust Framework Amendment Rules 2026-1 (PDF, 845 KB)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/Digital_Identity_Services_Trust_Framework_Amendment_Rules_2026-1_PDF_845_KB__768e48d3.pdf",
+    "pages": 43,
+    "sha256": "768e48d3f89a84c2a82a3093cac1846231bde725b0d6f3cab53ff157304830f2",
+    "bytes": 865193,
+    "source_urls": [
+      "https://www.publicservice.govt.nz/assets/GDDA/Trust-Framework/Digital-Identity-Services-Trust-Framework-Amendment-Rules-2026-1.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\08_뉴질랜드_호주\\Digital_Identity_Services_Trust_Framework_Amendment_Rules_2026-1_PDF_845_KB.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/Digital_Identity_Services_Trust_Framework_Amendment_Rules_2026-1_PDF_845_KB__768e48d3.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "Digital Identity Services Trust Framework Rules 2024 (PDF, 450 KB)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/Digital_Identity_Services_Trust_Framework_Rules_2024_PDF_450_KB__c56b4bee.pdf",
+    "pages": 42,
+    "sha256": "c56b4bee1b85b3b5f9e964b3f98d1f229055eee9972674b58e2a299c6903c072",
+    "bytes": 461005,
+    "source_urls": [
+      "https://www.publicservice.govt.nz/assets/GDDA/Trust-Framework/DISTF-Rules-2024-Consolidated-version-29-June-2026.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\08_뉴질랜드_호주\\Digital_Identity_Services_Trust_Framework_Rules_2024_PDF_450_KB.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/Digital_Identity_Services_Trust_Framework_Rules_2024_PDF_450_KB__c56b4bee.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "뉴질랜드 규칙",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑥ 해외사례/뉴질랜드_규칙__2fa9b8d9.html",
+    "pages": null,
+    "sha256": "2fa9b8d93873f995fa87dbbf8a751a6980a3f478194ad50879551c3ef3f4dab0",
+    "bytes": 120611,
+    "source_urls": [
+      "https://www.publicservice.govt.nz/about-the-commission/government-digital-delivery-agency/trust-framework-for-digital-identity/about-digital-identity-services/trust-framework-legislation/trust-framework-rules"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\08_뉴질랜드_호주\\뉴질랜드_규칙.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/뉴질랜드_규칙__2fa9b8d9.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "UNCITRAL_MLIT_Text_ExplanatoryNote",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/② 법·제도/UNCITRAL_MLIT_Text_ExplanatoryNote__c0f18008.pdf",
+    "pages": 86,
+    "sha256": "c0f18008fa07874b6ee61e2c5eb101279d4b4938b35ef6d199d4279a51c0c3b8",
+    "bytes": 655342,
+    "source_urls": [
+      "https://uncitral.un.org/sites/uncitral.un.org/files/media-documents/uncitral/en/mlit_en.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\09_UNCITRAL_국경간인정\\UNCITRAL_MLIT_Text_ExplanatoryNote.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/UNCITRAL_MLIT_Text_ExplanatoryNote__c0f18008.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "UNCITRAL 공식 소개",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/② 법·제도/UNCITRAL_공식_소개__322541a4.html",
+    "pages": null,
+    "sha256": "322541a44acce87755d92c993525c6feb8aeb594743d1a39c8995d361caf4dfd",
+    "bytes": 61328,
+    "source_urls": [
+      "https://uncitral.un.org/en/mlit"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\09_UNCITRAL_국경간인정\\UNCITRAL_공식_소개.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/UNCITRAL_공식_소개__322541a4.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Authorization vLEI Credential Framework",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/③ 기술/Authorization_vLEI_Credential_Framework__4372fd4a.pdf",
+    "pages": 8,
+    "sha256": "4372fd4a84cc90bfa2a3d82fec8958025d389e222f5f02ff44bf3b42404fe690",
+    "bytes": 2521809,
+    "source_urls": [
+      "https://www.gleif.org/organizational-identity/become-a-vlei-issuer-qvi/vlei-ecosystem-governance-framework/2026-03-25_vlei-egf-v4.0-authorization-vlei-credential-framework_v1.4_final.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\10_GLEIF_vLEI\\Authorization_vLEI_Credential_Framework.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/Authorization_vLEI_Credential_Framework__4372fd4a.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "GLEIF 공식 프레임워크",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/③ 기술/GLEIF_공식_프레임워크__1ecfab6f.html",
+    "pages": null,
+    "sha256": "1ecfab6f0e8035ec8cc1cd96c4544ebc86da637f0d60db7b6c73d42b943cf8f8",
+    "bytes": 207017,
+    "source_urls": [
+      "https://www.gleif.org/en/organizational-identity/become-a-vlei-issuer-qvi/vlei-ecosystem-governance-framework"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\10_GLEIF_vLEI\\GLEIF_공식_프레임워크.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/GLEIF_공식_프레임워크__1ecfab6f.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "ISO 5009: Official Organizational Roles Code List",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/④ 표준/ISO_5009_Official_Organizational_Roles_Code_List__9ccc94b2.html",
+    "pages": null,
+    "sha256": "9ccc94b22853db07dd918b90ffbe0c3aa8e8888f86975649da187da0dde8e28b",
+    "bytes": 212212,
+    "source_urls": [
+      "https://www.gleif.org/en/lei-data/code-lists/iso-5009-official-organizational-roles-code-list"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\10_GLEIF_vLEI\\ISO_5009_Official_Organizational_Roles_Code_List.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/ISO_5009_Official_Organizational_Roles_Code_List__9ccc94b2.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "ISO 5009: Official Organizational Roles Code List",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/④ 표준/ISO_5009_Official_Organizational_Roles_Code_List_ed2175e1__acb57104.html",
+    "pages": null,
+    "sha256": "acb57104db4fbf6d2f420414422b64a9c9f86814835908c521ec5ffb42822e4e",
+    "bytes": 212211,
+    "source_urls": [
+      "https://www.gleif.org/en/lei-data/code-lists/iso-5009-official-organizational-roles-code-list"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\10_GLEIF_vLEI\\ISO_5009_Official_Organizational_Roles_Code_List_ed2175e1.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/ISO_5009_Official_Organizational_Roles_Code_List_ed2175e1__acb57104.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "Legal Entity Official Organizational Role vLEI Credential Framework",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/③ 기술/Legal_Entity_Official_Organizational_Role_vLEI_Credential_Framework__00d2a83d.pdf",
+    "pages": 18,
+    "sha256": "00d2a83d38319421e0646e910ad4372e142a17793fd288e16ef310536025c940",
+    "bytes": 413696,
+    "source_urls": [
+      "https://www.gleif.org/organizational-identity/become-a-vlei-issuer-qvi/vlei-ecosystem-governance-framework/2026-03-25_vlei-egf-v4.0-legal-entity-official-organizational-role-vlei-credential-framework_v1.5.final.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\10_GLEIF_vLEI\\Legal_Entity_Official_Organizational_Role_vLEI_Credential_Framework.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/Legal_Entity_Official_Organizational_Role_vLEI_Credential_Framework__00d2a83d.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "verifiable LEI (vLEI) Ecosystem Governance Framework Primary Document",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Primary_Document__c339898b.pdf",
+    "pages": 13,
+    "sha256": "c339898b59949db9ca8fe808d4b67fe6ec20b2b2aaea8061511a055f19838bcb",
+    "bytes": 397826,
+    "source_urls": [
+      "https://www.gleif.org/organizational-identity/become-a-vlei-issuer-qvi/vlei-ecosystem-governance-framework/2026-03-25_vlei-egf-v4.0-primary-document_v1.2_final.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\10_GLEIF_vLEI\\verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Primary_Document.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Primary_Document__c339898b.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "verifiable LEI (vLEI) Ecosystem Governance Framework Technical Requirements Part 2: vLEI Credentials",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Technical_Requirements_Part_2_vLEI__4815f9e2.pdf",
+    "pages": 6,
+    "sha256": "4815f9e22e783d47eecaafbae8e7d30c6b91df897ff8216c3b02a24eac639dd0",
+    "bytes": 350803,
+    "source_urls": [
+      "https://www.gleif.org/organizational-identity/become-a-vlei-issuer-qvi/vlei-ecosystem-governance-framework/2026-03-25_vlei-egf-v4.0-technical-requirements-part-2-vlei-credentials_v1.2_final.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\10_GLEIF_vLEI\\verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Technical_Requirements_Part_2_vLEI.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Technical_Requirements_Part_2_vLEI__4815f9e2.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "verifiable LEI (vLEI) Ecosystem Governance Framework Trust Assurance Framework",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Trust_Assurance_Framework__e77f5950.pdf",
+    "pages": 37,
+    "sha256": "e77f5950544f84193317071f3b6808fc966a2796417a0f1acdbc62fe5084e209",
+    "bytes": 837834,
+    "source_urls": [
+      "https://www.gleif.org/organizational-identity/become-a-vlei-issuer-qvi/vlei-ecosystem-governance-framework/2026-03-25_vlei-egf-v4.0-trust-assurance-framework_v1.6_final.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\10_GLEIF_vLEI\\verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Trust_Assurance_Framework.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Trust_Assurance_Framework__e77f5950.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "OECD_DigitalGovernmentOutlook2026",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/OECD_DigitalGovernmentOutlook2026__b1156327.pdf",
+    "pages": 184,
+    "sha256": "b1156327d702bc32bd14a0dd212a613619dfa399f9404460729f5ca1047b2d15",
+    "bytes": 6431002,
+    "source_urls": [
+      "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/digital-government-outlook_4585678e/0496b2bc-en.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\11_OECD_UN_DPI\\OECD_DigitalGovernmentOutlook2026.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/OECD_DigitalGovernmentOutlook2026__b1156327.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "UN 실행·평가 자료",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/UN_실행_평가_자료__28dc8506.html",
+    "pages": null,
+    "sha256": "28dc85069a054959df9582746bc48f0934818c05376b9f53b499365c71ce5878",
+    "bytes": 82999,
+    "source_urls": [
+      "https://www.dpi-safeguards.org/framework"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\11_OECD_UN_DPI\\UN_실행_평가_자료.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/UN_실행_평가_자료__28dc8506.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "EDPS_TechDispatch_DigitalIdentityWallets",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/EDPS_TechDispatch_DigitalIdentityWallets__bdf0087f.pdf",
+    "pages": 42,
+    "sha256": "bdf0087f0b52822cafc06b3519a1c3dd3cdcd489490b8b780fca60fd9ae0df74",
+    "bytes": 1111218,
+    "source_urls": [
+      "https://www.edps.europa.eu/system/files/2025-12/25-12-16_techdispatch-digital-identity-wallet_en.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\12_PQC_EDPS_개인정보보호\\EDPS_TechDispatch_DigitalIdentityWallets.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/EDPS_TechDispatch_DigitalIdentityWallets__bdf0087f.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "FIPS203_MLKEM",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/④ 표준/FIPS203_MLKEM__fe1f12f3.pdf",
+    "pages": 56,
+    "sha256": "fe1f12f32a7e44ec9fdebbf400cda843a40b506dee676725234dc6f7923b6cac",
+    "bytes": 1252341,
+    "source_urls": [
+      "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\12_PQC_EDPS_개인정보보호\\FIPS203_MLKEM.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/FIPS203_MLKEM__fe1f12f3.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "FIPS204_MLDSA",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/④ 표준/FIPS204_MLDSA__57239b9f.pdf",
+    "pages": 65,
+    "sha256": "57239b9f84c03227eda3ca0991204dc7764c79af9ce2e6824eda774918d46b6b",
+    "bytes": 3291746,
+    "source_urls": [
+      "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.204.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\12_PQC_EDPS_개인정보보호\\FIPS204_MLDSA.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/FIPS204_MLDSA__57239b9f.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "FIPS205_SLHDSA",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "",
+    "file": "01_원문/④ 표준/FIPS205_SLHDSA__8ef34228.pdf",
+    "pages": 61,
+    "sha256": "8ef34228276f3386d23cb0da8c14592b8cfb0db3358016bba64df7a004f8d13d",
+    "bytes": 1055752,
+    "source_urls": [
+      "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.205.pdf"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\12_PQC_EDPS_개인정보보호\\FIPS205_SLHDSA.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/FIPS205_SLHDSA__8ef34228.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "NIST 공식 발표",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "",
+    "file": "01_원문/⑦ 정책·산업자료/NIST_공식_발표__85231240.html",
+    "pages": null,
+    "sha256": "852312405752a8db012cfcb4fd46a5ba4c4a489a44afe4b16b642a26457e8282",
+    "bytes": 37660,
+    "source_urls": [
+      "https://csrc.nist.gov/News/2024/postquantum-cryptography-fips-approved"
+    ],
+    "sheet_rows": [],
+    "original_locations": [
+      "디지털신뢰_국제동향_20260926\\원문\\12_PQC_EDPS_개인정보보호\\NIST_공식_발표.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/NIST_공식_발표__85231240.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "arXiv_SoK_Trusting_SSI (2024)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "SSI의 신뢰 가정, 위협과 보안 쟁점을 종합",
+    "file": "01_원문/① 학술연구/arXiv_SoK_Trusting_SSI (2024)__25386132.pdf",
+    "pages": 17,
+    "sha256": "25386132d7310c71ee606c116948f260c22ad67e8669703ad386a8ebabb7aba3",
+    "bytes": 1026692,
+    "source_urls": [
+      "https://arxiv.org/pdf/2404.06729"
+    ],
+    "sheet_rows": [
+      6
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\006_arXiv_SoK_Trusting_SSI (2024)\\논문_전문_4ff0d6fb.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/arXiv_SoK_Trusting_SSI (2024)__25386132.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "arXiv_SoK_Trusting_SSI (2024)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "SSI의 신뢰 가정, 위협과 보안 쟁점을 종합",
+    "file": "01_원문/① 학술연구/arXiv_SoK_Trusting_SSI (2024)__ff7b58a9.html",
+    "pages": null,
+    "sha256": "ff7b58a930648dbfba0aa373d6b07dd760df859e94260e4d915a06dabc62d580",
+    "bytes": 41617,
+    "source_urls": [
+      "https://arxiv.org/abs/2404.06729"
+    ],
+    "sheet_rows": [
+      6
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\006_arXiv_SoK_Trusting_SSI (2024)\\목록_링크_3364ac38.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/arXiv_SoK_Trusting_SSI (2024)__ff7b58a9.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "arXiv_Towards_Trustful_Digital_World (2021)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "SSI와 VC를 활용한 신뢰 가능한 디지털 환경의 구성요소를 제안",
+    "file": "01_원문/① 학술연구/arXiv_Towards_Trustful_Digital_World (2021)__5a0c5d46.pdf",
+    "pages": 15,
+    "sha256": "5a0c5d4649072afcbf75db8b133b557220225fe15da3af0d783e5ea501999dd4",
+    "bytes": 476176,
+    "source_urls": [
+      "https://arxiv.org/pdf/2105.15131"
+    ],
+    "sheet_rows": [
+      7
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\007_arXiv_Towards_Trustful_Digital_World (2021)\\논문_전문_79fd1449.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/arXiv_Towards_Trustful_Digital_World (2021)__5a0c5d46.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "arXiv_Towards_Trustful_Digital_World (2021)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "SSI와 VC를 활용한 신뢰 가능한 디지털 환경의 구성요소를 제안",
+    "file": "01_원문/① 학술연구/arXiv_Towards_Trustful_Digital_World (2021)__193e7baa.html",
+    "pages": null,
+    "sha256": "193e7baa04fb8b7363e363cadf5edd787f9a50c5355b9274b82fa60fcc4c3d17",
+    "bytes": 42472,
+    "source_urls": [
+      "https://arxiv.org/abs/2105.15131"
+    ],
+    "sheet_rows": [
+      7
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\007_arXiv_Towards_Trustful_Digital_World (2021)\\목록_링크_5bf30d91.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/arXiv_Towards_Trustful_Digital_World (2021)__193e7baa.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "한국IT정책경영학회_분산신원 기반의 자기주권신원모델모바일 운전면허증에 관한 연구(2023)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "서지·초록 페이지(논문 전문 미확보)",
+    "description": "분산신원·자기주권신원 모델을 모바일 운전면허증에 적용하는 방안을 연구",
+    "file": "01_원문/① 학술연구/한국IT정책경영학회_분산신원 기반의 자기주권신원모델모바일 운전면허증에 관한 연구(2023)__695ba052.html",
+    "pages": null,
+    "sha256": "695ba0526ce84299c9640a742a1fcdd967e8f5fd8258024a0e27658c234c07cd",
+    "bytes": 537661,
+    "source_urls": [
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10747509"
+    ],
+    "sheet_rows": [
+      8
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\008_한국IT정책경영학회_분산신원 기반의 자기주권신원모델모바일 운전면허증에 관한 연구(2023)\\목록_링크_b2d763b7.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/한국IT정책경영학회_분산신원 기반의 자기주권신원모델모바일 운전면허증에 관한 연구(2023)__695ba052.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "서지·초록 페이지(논문 전문 미확보)",
+    "description": "",
+    "file": "01_원문/① 학술연구/한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)__0ffc4923.html",
+    "pages": null,
+    "sha256": "0ffc492373a39553854cd2b5ddc8a6328f2ad6f01afb5b6147142513c98e001e",
+    "bytes": 102832,
+    "source_urls": [
+      "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002890824"
+    ],
+    "sheet_rows": [
+      9
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\009_한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)\\목록_링크_ae9b908a.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)__0ffc4923.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "한국신용카드학회_전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구(2019)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "서지·초록 페이지(논문 전문 미확보)",
+    "description": "전자문서지갑·전자증명서와 비대면 주택담보대출 절차의 연계를 검토",
+    "file": "01_원문/① 학술연구/한국신용카드학회_전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구(2019)__d1b72cd3.html",
+    "pages": null,
+    "sha256": "d1b72cd316ab7d9ae16f3710afb9fe27e46f91a0a5425e720eabb5a9e9eadc5b",
+    "bytes": 66929,
+    "source_urls": [
+      "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002548388"
+    ],
+    "sheet_rows": [
+      10
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\010_한국신용카드학회_전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구(2019)\\목록_링크_4404237a.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/한국신용카드학회_전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구(2019)__d1b72cd3.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "블록체인 신뢰 프레임워크(K-BTF) 중장기계획 수립 연구",
+    "date_version": "2023-12 (표지)",
+    "status": "PDF 원문",
+    "description": "K-BTF의 범위, 추진체계, 신뢰 프레임워크와 중장기 방향을 검토",
+    "file": "01_원문/① 학술연구/블록체인 신뢰 프레임워크(K-BTF) 중장기계획 수립 연구__916454fe.pdf",
+    "pages": 187,
+    "sha256": "916454fe6ed8f74dd6038f5a0b00135a87365ee1247fec9ca6722279f02cde0b",
+    "bytes": 3542411,
+    "source_urls": [
+      "https://www.kisa.kr/post/fileDownload?menuSeq=201&postSeq=12075&attachSeq=1&lang_type=KO"
+    ],
+    "sheet_rows": [
+      11
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\011_KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서\\KISA_최종보고서_897202c2.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/블록체인 신뢰 프레임워크(K-BTF) 중장기계획 수립 연구__916454fe.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "K-BTF의 범위, 추진체계, 신뢰 프레임워크와 중장기 방향을 검토",
+    "file": "01_원문/① 학술연구/KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서__5b2e8b82.html",
+    "pages": null,
+    "sha256": "5b2e8b8253830f443a27665b96c76babc13843935a780be437cfda97b2be885c",
+    "bytes": 44492,
+    "source_urls": [
+      "https://www.kisa.kr/201/form?lang_type=KO&page=&postSeq=12075"
+    ],
+    "sheet_rows": [
+      11
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\011_KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서\\목록_링크_249eb210.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서__5b2e8b82.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "Trusted Web 구축을 위한 기술 및 보안연구",
+    "date_version": "2023-12 (표지)",
+    "status": "PDF 원문",
+    "description": "Trusted Web의 기술·보안·서비스 설계와 추진방향을 연구",
+    "file": "01_원문/① 학술연구/Trusted Web 구축을 위한 기술 및 보안연구__0a8ae6e5.pdf",
+    "pages": 166,
+    "sha256": "0a8ae6e5db28f6569baec9c4535ec9cac734e432db452fc3b21912ccde87bc74",
+    "bytes": 3374399,
+    "source_urls": [
+      "https://www.kisa.kr/post/fileDownload?menuSeq=201&postSeq=12078&attachSeq=1&lang_type=KO"
+    ],
+    "sheet_rows": [
+      12
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\012_KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서\\KISA_최종보고서_583e3e3a.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/Trusted Web 구축을 위한 기술 및 보안연구__0a8ae6e5.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "Trusted Web의 기술·보안·서비스 설계와 추진방향을 연구",
+    "file": "01_원문/① 학술연구/KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서__8e0f8642.html",
+    "pages": null,
+    "sha256": "8e0f86426531c298e2525aa05798517fd8c4c6be09ccef3c31ab87744b61ae13",
+    "bytes": 42620,
+    "source_urls": [
+      "https://www.kisa.kr/201/form?postSeq=12078"
+    ],
+    "sheet_rows": [
+      12
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\012_KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서\\목록_링크_6b1ed037.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서__8e0f8642.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "분산ID(DID) 직접 해석방안 연구",
+    "date_version": "2024-11 (표지)",
+    "status": "PDF 원문",
+    "description": "DID 문서의 직접 해석, DID Method 및 문서 구조를 검토",
+    "file": "01_원문/① 학술연구/분산ID(DID) 직접 해석방안 연구__49752fdb.pdf",
+    "pages": 166,
+    "sha256": "49752fdb0eba65866315914c326ffbe50083e8db9f3d99cf9c9b5bbe9b28d9d9",
+    "bytes": 3062856,
+    "source_urls": [
+      "https://www.kisa.kr/post/fileDownload?menuSeq=201&postSeq=12082&attachSeq=1&lang_type=KO"
+    ],
+    "sheet_rows": [
+      13
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\013_KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서\\KISA_최종보고서_43149076.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/분산ID(DID) 직접 해석방안 연구__49752fdb.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "DID 문서의 직접 해석, DID Method 및 문서 구조를 검토",
+    "file": "01_원문/① 학술연구/KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서__777d3ae9.html",
+    "pages": null,
+    "sha256": "777d3ae91109a8ddd6cc7b79a9266e35813ab25b48192db04b1b7c9a174f0654",
+    "bytes": 56307,
+    "source_urls": [
+      "https://www.kisa.kr/201/form?page=1&postSeq=12082"
+    ],
+    "sheet_rows": [
+      13
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\013_KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서\\목록_링크_0c8b0987.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서__777d3ae9.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "모바일 신분증 등 모방 앱의 문제점과 대처 방안 (2024)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "서지·초록 페이지(논문 전문 미확보)",
+    "description": "유료 / 모바일 신분증 모방 앱의 위험과 대응 방안을 검토",
+    "file": "01_원문/① 학술연구/모바일 신분증 등 모방 앱의 문제점과 대처 방안 (2024)__4d164ef5.html",
+    "pages": null,
+    "sha256": "4d164ef5f1027977f8759f551ecb66a4666aa58d956e0f5821f715ba8d90d961",
+    "bytes": 538275,
+    "source_urls": [
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11926337"
+    ],
+    "sheet_rows": [
+      18
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\018_모바일 신분증 등 모방 앱의 문제점과 대처 방안 (2024)\\목록_링크_1aa25552.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/모바일 신분증 등 모방 앱의 문제점과 대처 방안 (2024)__4d164ef5.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "모바일 기기에서 공개 API를 통한 신원 증명 서비스의 문제점 분석(2021)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "서지·초록 페이지(논문 전문 미확보)",
+    "description": "유료 / 모바일 기기와 공개 API를 이용한 신원 증명 서비스의 문제를 분석",
+    "file": "01_원문/① 학술연구/모바일 기기에서 공개 API를 통한 신원 증명 서비스의 문제점 분석(2021)__f51069d8.html",
+    "pages": null,
+    "sha256": "f51069d8e2c31945749ee0314bd081a8b743f6ecb8b906e1ec1da2c0e89d5b58",
+    "bytes": 533583,
+    "source_urls": [
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10547672"
+    ],
+    "sheet_rows": [
+      19
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\019_모바일 기기에서 공개 API를 통한 신원 증명 서비스의 문제점 분석(2021)\\목록_링크_020e81b4.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/모바일 기기에서 공개 API를 통한 신원 증명 서비스의 문제점 분석(2021)__f51069d8.txt"
+  },
+  {
+    "category": "① 학술연구",
+    "title": "DID 기술에 기반 한 분산 신원 인증 시스템 (2023)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "서지·초록 페이지(논문 전문 미확보)",
+    "description": "유료 / DID 기반 분산 신원 인증 시스템의 구성과 동작을 설명",
+    "file": "01_원문/① 학술연구/DID 기술에 기반 한 분산 신원 인증 시스템 (2023)__d6399f20.html",
+    "pages": null,
+    "sha256": "d6399f2018fe1f74d64e86a34be1eba31b8e8623ee5af5ca92b38dcaaa7812aa",
+    "bytes": 534323,
+    "source_urls": [
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12221102"
+    ],
+    "sheet_rows": [
+      20
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\020_DID 기술에 기반 한 분산 신원 인증 시스템 (2023)\\목록_링크_579e8a38.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/① 학술연구/DID 기술에 기반 한 분산 신원 인증 시스템 (2023)__d6399f20.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "EU_202401183_Regulation (EU) 2024_1183",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "eIDAS를 개정하여 유럽 디지털 신원 프레임워크와 EUDI Wallet의 법적 기반을 규정",
+    "file": "01_원문/② 법·제도/EU_202401183_Regulation (EU) 2024_1183__a3b95f56.html",
+    "pages": null,
+    "sha256": "a3b95f563f90f290e317a791db45afc609227bae1dfc28412a303b75f295b9b0",
+    "bytes": 837540,
+    "source_urls": [
+      "https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng"
+    ],
+    "sheet_rows": [
+      21
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\021_EU_202401183_Regulation (EU) 2024_1183\\목록_링크_32701d1f.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/EU_202401183_Regulation (EU) 2024_1183__a3b95f56.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "EU_2024903_Regulation_Interoperable Europe Act",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "EU 공공부문의 국경 간 상호운용을 위한 거버넌스 체계, 상호운용성 평가 및 공통 솔루션·지원체계의 법적 기반",
+    "file": "01_원문/② 법·제도/EU_2024903_Regulation_Interoperable Europe Act__f9d17d04.html",
+    "pages": null,
+    "sha256": "f9d17d04a0ceb81927af8103bb4ef91f64b22448454bdb9ef0395461ede6faa2",
+    "bytes": 501818,
+    "source_urls": [
+      "https://eur-lex.europa.eu/eli/reg/2024/903/oj/eng"
+    ],
+    "sheet_rows": [
+      22
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\022_EU_2024903_Regulation_Interoperable Europe Act\\목록_링크_de528ba3.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/EU_2024903_Regulation_Interoperable Europe Act__f9d17d04.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "EU_202412_EUDI Wallet Implementing Regulations",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "Wallet의 integrity와 core functionalities를 직접 규정하고, 현재 2026년 개정본에는 Wallet Trust Mark 및 certified wallet 목록과 연결되는 내용 포함",
+    "file": "01_원문/② 법·제도/EU_202412_EUDI Wallet Implementing Regulations__a4e6df0f.html",
+    "pages": null,
+    "sha256": "a4e6df0f3ecbb80acfd24169e33aa2990b32544d5cd4f7c6e447c6196358a93b",
+    "bytes": 355779,
+    "source_urls": [
+      "https://eur-lex.europa.eu/eli/reg_impl/2024/2979/oj/eng"
+    ],
+    "sheet_rows": [
+      23
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\023_EU_202412_EUDI Wallet Implementing Regulations\\목록_링크_d5a684ec.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/EU_202412_EUDI Wallet Implementing Regulations__a4e6df0f.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "UK DVS Trust Framework collection",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "영국 디지털 검증 서비스 신뢰 프레임워크와 인증 관련 문서를 모아 제공",
+    "file": "01_원문/② 법·제도/UK DVS Trust Framework collection__e51d0d8f.html",
+    "pages": null,
+    "sha256": "e51d0d8f7b303d935e95b6d3d82c3317b98658684533807fbf188aadcd4f56b9",
+    "bytes": 73703,
+    "source_urls": [
+      "https://www.gov.uk/government/collections/uk-digital-verification-services-trust-framework"
+    ],
+    "sheet_rows": [
+      26
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\026_UK DVS Trust Framework collection\\목록_링크_4c918156.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/UK DVS Trust Framework collection__e51d0d8f.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "Using GOV.UK Wallet in digital identity sector",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "영국 디지털 신원 분야에서 GOV.UK Wallet을 사용하는 조건과 안내를 설명",
+    "file": "01_원문/② 법·제도/Using GOV.UK Wallet in digital identity sector__7fab2876.html",
+    "pages": null,
+    "sha256": "7fab28766a61bec4faab9840b87e78dcf7454127f2923cd05572df7486e1f340",
+    "bytes": 75086,
+    "source_urls": [
+      "https://www.gov.uk/guidance/using-govuk-wallet-in-the-digital-identity-sector"
+    ],
+    "sheet_rows": [
+      27
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\027_Using GOV.UK Wallet in digital identity sector\\목록_링크_8c181327.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/Using GOV.UK Wallet in digital identity sector__7fab2876.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "UK Digital Identity and Attributes Trust Framework beta 0.3 (2023)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "영국 디지털 신원·속성 신뢰 프레임워크의 초기 버전으로, 속성·동의 관련 원칙을 담음",
+    "file": "01_원문/② 법·제도/UK Digital Identity and Attributes Trust Framework beta 0.3 (2023)__6335fea4.html",
+    "pages": null,
+    "sha256": "6335fea4eb4a4311ab218ebec92333ff81e8c4f0d707ec60c7e427e87dff3046",
+    "bytes": 473658,
+    "source_urls": [
+      "https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-beta-version/uk-digital-identity-and-attributes-trust-framework-beta-version"
+    ],
+    "sheet_rows": [
+      28
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\028_UK Digital Identity and Attributes Trust Framework beta 0.3 (2023)\\목록_링크_ed286e81.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/UK Digital Identity and Attributes Trust Framework beta 0.3 (2023)__6335fea4.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "Japan Digital Agency Trust",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "일본의 디지털 신뢰 정책과 VC·디지털 신원 지갑 관련 자료",
+    "file": "01_원문/② 법·제도/Japan Digital Agency Trust__86ae1495.html",
+    "pages": null,
+    "sha256": "86ae14951b9e61d59285b051b378ef76160125e432eba24a582a28dd13a640ea",
+    "bytes": 59030,
+    "source_urls": [
+      "https://www.digital.go.jp/en/policies/trust"
+    ],
+    "sheet_rows": [
+      30,
+      68,
+      69
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\030_Japan Digital Agency Trust\\목록_링크_0f3f5352.html",
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\068_Japan_DIW_Advisory_Board_Report (2025)\\목록_링크_0f3f5352.html",
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\069_Japan_EU_Japan_Digital_Identity_Pilot (2026)\\목록_링크_0f3f5352.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/Japan Digital Agency Trust__86ae1495.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "2024 DIW Advisory Board Report (PDF / 8,301 kb)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/⑥ 해외사례/2024 DIW Advisory Board Report (PDF _ 8,301 kb)__cb354c8c.pdf",
+    "pages": 71,
+    "sha256": "cb354c8c5e71d0bc66537ceb4dcd4210139aeffcaf48ad79810bb20d7308f824",
+    "bytes": 8499523,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/a238993a-8e6a-455c-b3d3-bbebf6ef273e/b6f958f8/20250430_policies_trust_r6-diwab-outline_01.pdf"
+    ],
+    "sheet_rows": [
+      30,
+      68,
+      69
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\030_Japan Digital Agency Trust\\첨부_2024 DIW Advisory Board Report (PDF _ 8,301 kb)_c820a409.pdf",
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\068_Japan_DIW_Advisory_Board_Report (2025)\\첨부_2024 DIW Advisory Board Report (PDF _ 8,301 kb)_c820a409.pdf",
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\069_Japan_EU_Japan_Digital_Identity_Pilot (2026)\\첨부_2024 DIW Advisory Board Report (PDF _ 8,301 kb)_c820a409.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/2024 DIW Advisory Board Report (PDF _ 8,301 kb)__cb354c8c.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "Digital Identity Mapping Exercise (PDF / 1,751 kb)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/⑥ 해외사례/Digital Identity Mapping Exercise (PDF _ 1,751 kb)__9a91e916.pdf",
+    "pages": 30,
+    "sha256": "9a91e91649daef9c6739f30deaa07df83991b361969091384deb31013490d9c4",
+    "bytes": 1793486,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/information/field_ref_resources/53ed2e40-a8be-4249-869d-e94f4f9a28fa/370028b2/20241016_news-g7_result_04.pdf"
+    ],
+    "sheet_rows": [
+      30,
+      68,
+      69
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\030_Japan Digital Agency Trust\\첨부_Digital Identity Mapping Exercise (PDF _ 1,751 kb)_0bedc677.pdf",
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\068_Japan_DIW_Advisory_Board_Report (2025)\\첨부_Digital Identity Mapping Exercise (PDF _ 1,751 kb)_0bedc677.pdf",
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\069_Japan_EU_Japan_Digital_Identity_Pilot (2026)\\첨부_Digital Identity Mapping Exercise (PDF _ 1,751 kb)_0bedc677.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/Digital Identity Mapping Exercise (PDF _ 1,751 kb)__9a91e916.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "日本–EU教育クレデンシャル相互運用実証 — 実証スコープ定義書",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/⑥ 해외사례/日本–EU教育クレデンシャル相互運用実証 — 実証スコープ定義書__6d275e6e.pdf",
+    "pages": 17,
+    "sha256": "6d275e6e9d3a9ebe3e992d952f467994d9fac318c5c1ebcac55ebf8eed4b27c5",
+    "bytes": 1030213,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/a238993a-8e6a-455c-b3d3-bbebf6ef273e/b59aa26d/20260918_policies_trust_report_02.pdf"
+    ],
+    "sheet_rows": [
+      30,
+      68,
+      69
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\030_Japan Digital Agency Trust\\첨부_FY 2025 Demonstrative Research on Interoperability of Educat_72f36976.pdf",
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\068_Japan_DIW_Advisory_Board_Report (2025)\\첨부_FY 2025 Demonstrative Research on Interoperability of Educat_72f36976.pdf",
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\069_Japan_EU_Japan_Digital_Identity_Pilot (2026)\\첨부_FY 2025 Demonstrative Research on Interoperability of Educat_72f36976.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/FY 2025 Demonstrative Research on Interoperability of Educat__6d275e6e.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "Report of Pilot Project on Digital Identity (PDF / 254 kb)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/⑥ 해외사례/Report of Pilot Project on Digital Identity (PDF _ 254 kb)__5024ffa3.pdf",
+    "pages": 8,
+    "sha256": "5024ffa314668d6282b5ad06f3bcf0d0f982112d3f5d38076bbedcd0abe6b3f6",
+    "bytes": 260053,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/a238993a-8e6a-455c-b3d3-bbebf6ef273e/8f6850a1/20260716_policies_trust_report_01.pdf"
+    ],
+    "sheet_rows": [
+      30,
+      68,
+      69
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\030_Japan Digital Agency Trust\\첨부_Report of Pilot Project on Digital Identity (PDF _ 254 kb)_cb2d6a72.pdf",
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\068_Japan_DIW_Advisory_Board_Report (2025)\\첨부_Report of Pilot Project on Digital Identity (PDF _ 254 kb)_cb2d6a72.pdf",
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\069_Japan_EU_Japan_Digital_Identity_Pilot (2026)\\첨부_Report of Pilot Project on Digital Identity (PDF _ 254 kb)_cb2d6a72.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/Report of Pilot Project on Digital Identity (PDF _ 254 kb)__5024ffa3.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "日本–EU教育クレデンシャル相互運用実証 — 実証結果報告書",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/⑥ 해외사례/日本–EU教育クレデンシャル相互運用実証 — 実証結果報告書__4ab6415c.pdf",
+    "pages": 29,
+    "sha256": "4ab6415ca03144018299eb0201901ca6890285b8b31d8f2bcbb44f1f3b0d2917",
+    "bytes": 1793397,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/a238993a-8e6a-455c-b3d3-bbebf6ef273e/a59fcf10/20260918_policies_trust_report_01.pdf"
+    ],
+    "sheet_rows": [
+      30,
+      68,
+      69
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\030_Japan Digital Agency Trust\\첨부_Research Paper on Interoperability of Educational Credential_2dbf5276.pdf",
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\068_Japan_DIW_Advisory_Board_Report (2025)\\첨부_Research Paper on Interoperability of Educational Credential_2dbf5276.pdf",
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\069_Japan_EU_Japan_Digital_Identity_Pilot (2026)\\첨부_Research Paper on Interoperability of Educational Credential_2dbf5276.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/Research Paper on Interoperability of Educational Credential__4ab6415c.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "Japan Digital qualification certificates",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "일본의 디지털 자격증명·정부 인증서 관련 정책과 서비스 안내자료",
+    "file": "01_원문/② 법·제도/Japan Digital qualification certificates__da63a697.html",
+    "pages": null,
+    "sha256": "da63a697df0df53b21c18d2f620b505c036153af070d05c3dd06214a02fc9e4b",
+    "bytes": 68665,
+    "source_urls": [
+      "https://www.digital.go.jp/policies/government-certification"
+    ],
+    "sheet_rows": [
+      31
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\031_Japan Digital qualification certificates\\목록_링크_0af945f9.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/Japan Digital qualification certificates__da63a697.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "デジタル資格者証の活用方法（PDF／1,455KB）",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/② 법·제도/デジタル資格者証の活用方法（PDF／1,455KB）__5491f444.pdf",
+    "pages": 2,
+    "sha256": "5491f444f215c6e6d4286cb3a242380abad369bb61f25d69836bd956053d07bd",
+    "bytes": 1527585,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/f5541d61-9839-408d-babb-bd40c8dead71/ea4bf596/20240920_policies_government-certification_outline_01.pdf"
+    ],
+    "sheet_rows": [
+      31
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\031_Japan Digital qualification certificates\\첨부_デジタル資格者証の活用方法（PDF／1,455KB）_7ff50f50.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/デジタル資格者証の活用方法（PDF／1,455KB）__5491f444.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "国家資格オンライン化サービス紹介（PDF／1,687KB）",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/② 법·제도/国家資格オンライン化サービス紹介（PDF／1,687KB）__0031d6f7.pdf",
+    "pages": 14,
+    "sha256": "0031d6f78e34d8b22ac6f39a578db0929cd8ca9763ea0547716f725a7a55b038",
+    "bytes": 1726779,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/f5541d61-9839-408d-babb-bd40c8dead71/685ad572/20240802_policies_government-certification_outline_01.pdf"
+    ],
+    "sheet_rows": [
+      31
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\031_Japan Digital qualification certificates\\첨부_国家資格オンライン化サービス紹介（PDF／1,687KB）_1cb1e904.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/国家資格オンライン化サービス紹介（PDF／1,687KB）__0031d6f7.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "国家資格等のオンライン・デジタル化令和8年度以降の対応スケジュール（PDF／722KB）",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/② 법·제도/国家資格等のオンライン・デジタル化令和8年度以降の対応スケジュール（PDF／722KB）__374f169c.pdf",
+    "pages": 1,
+    "sha256": "374f169c4e8c36e6aa7ca8c39e4525f1178740ddf0326dd8b6cf416fb0990495",
+    "bytes": 738808,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/f5541d61-9839-408d-babb-bd40c8dead71/b6e38bf5/20260601_policies_government-certification_outline_01.pdf"
+    ],
+    "sheet_rows": [
+      31
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\031_Japan Digital qualification certificates\\첨부_国家資格等のオンライン・デジタル化令和8年度以降の対応スケジュール（PDF／722KB）_38a2cf68.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/国家資格等のオンライン・デジタル化令和8年度以降の対応スケジュール（PDF／722KB）__374f169c.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "国家資格等オンライン・デジタル化の開始について（PDF／2,745KB）",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/② 법·제도/国家資格等オンライン・デジタル化の開始について（PDF／2,745KB）__efd5c21f.pdf",
+    "pages": 15,
+    "sha256": "efd5c21fb6a2dbb42eb8fce9e51d1ed202a20a41306ee031701c7f9e2f0bd1ac",
+    "bytes": 2810388,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/f5541d61-9839-408d-babb-bd40c8dead71/3b97abd4/20260601_policies_online_govrnment_certifications_01.pdf"
+    ],
+    "sheet_rows": [
+      31
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\031_Japan Digital qualification certificates\\첨부_国家資格等オンライン・デジタル化の開始について（PDF／2,745KB）_75b1b3e6.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/国家資格等オンライン・デジタル化の開始について（PDF／2,745KB）__efd5c21f.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "모바일 신분증 공식 안내",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "국내 모바일 신분증의 발급, 이용 및 검증 관련 공식 안내",
+    "file": "01_원문/② 법·제도/모바일 신분증 공식 안내__1a3a2131.html",
+    "pages": null,
+    "sha256": "1a3a2131953121f4e7133a2c41007a4d87ab0debf08d15237d0049cb25081bdc",
+    "bytes": 160936,
+    "source_urls": [
+      "https://www.mois.go.kr/frt/sub/a06/b04/mobileId/screen.do"
+    ],
+    "sheet_rows": [
+      33
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\033_모바일 신분증 공식 안내\\목록_링크_a2855855.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/모바일 신분증 공식 안내__1a3a2131.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "전자증명서 발급업무 처리지침",
+    "date_version": "원문 표기 확인 필요",
+    "status": "법령 조회 화면(본문 확보 별도 확인)",
+    "description": "전자증명서의 발급·유통·진본확인 업무 기준을 규정",
+    "file": "01_원문/② 법·제도/전자증명서 발급업무 처리지침__78ffebdd.html",
+    "pages": null,
+    "sha256": "78ffebddad441c6378841b11976c36d142ebeeee5067870ad22b8f9865c3bf5b",
+    "bytes": 78240,
+    "source_urls": [
+      "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000213310"
+    ],
+    "sheet_rows": [
+      34
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\034_전자증명서 발급업무 처리지침\\목록_링크_76e0ca23.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/전자증명서 발급업무 처리지침__78ffebdd.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "전자서명법",
+    "date_version": "원문 표기 확인 필요",
+    "status": "법령 조회 화면(본문 확보 별도 확인)",
+    "description": "전자서명과 전자서명인증사업자 제도의 법적 기반을 규정",
+    "file": "01_원문/② 법·제도/전자서명법__90eabade.html",
+    "pages": null,
+    "sha256": "90eabade3a4bc1c0fa9b10566a893c09433c6c1cf0c850b91dfd4b73dc0cbf90",
+    "bytes": 144971,
+    "source_urls": [
+      "https://law.go.kr/lsInfoP.do?ancYnChk=0&lsId=009413"
+    ],
+    "sheet_rows": [
+      35
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\035_전자서명법\\목록_링크_7d40270f.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/전자서명법__90eabade.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "전자문서 및 전자거래 기본법",
+    "date_version": "원문 표기 확인 필요",
+    "status": "법령 조회 화면(본문 확보 별도 확인)",
+    "description": "전자문서와 전자거래의 효력 및 제도적 기반을 규정",
+    "file": "01_원문/② 법·제도/전자문서 및 전자거래 기본법__bccb7b0a.html",
+    "pages": null,
+    "sha256": "bccb7b0aa63d40ecdb1c496bef64baa5f6b5f1f3f0c701354cc6df295c42f8bd",
+    "bytes": 145404,
+    "source_urls": [
+      "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=236053"
+    ],
+    "sheet_rows": [
+      36
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\036_전자문서 및 전자거래 기본법\\목록_링크_744c974b.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/전자문서 및 전자거래 기본법__bccb7b0a.txt"
+  },
+  {
+    "category": "② 법·제도",
+    "title": "모바일 신분증 법적 인정 관련 조문",
+    "date_version": "원문 표기 확인 필요",
+    "status": "법령 조회 화면(본문 확보 별도 확인)",
+    "description": "모바일 신분증의 법적 인정과 관련된 조문",
+    "file": "01_원문/② 법·제도/모바일 신분증 법적 인정 관련 조문__32f27d44.html",
+    "pages": null,
+    "sha256": "32f27d4432cd098a1ffe7390ad1c5293c1e9aa536633eaa41650cfb4b8ace82a",
+    "bytes": 73929,
+    "source_urls": [
+      "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0011&lsiSeq=287265&urlMode=lsScJoRltInfoR"
+    ],
+    "sheet_rows": [
+      37
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\037_모바일 신분증 법적 인정 관련 조문\\목록_링크_d38225e3.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/② 법·제도/모바일 신분증 법적 인정 관련 조문__32f27d44.txt"
+  },
+  {
+    "category": "③ 기술",
+    "title": "GOV.UK Wallet technical documentation",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "발급자·보유자·검증자 관점에서 GOV.UK Wallet의 기술 문서를 제공",
+    "file": "01_원문/③ 기술/GOV.UK Wallet technical documentation__6c64b8d7.html",
+    "pages": null,
+    "sha256": "6c64b8d7bfd336916747ef3d367e870ff8788b30fd32b15f6669ca3194ee4e69",
+    "bytes": 27732,
+    "source_urls": [
+      "https://docs.wallet.service.gov.uk/"
+    ],
+    "sheet_rows": [
+      39
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\039_GOV.UK Wallet technical documentation\\목록_링크_bb89dd2b.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/③ 기술/GOV.UK Wallet technical documentation__6c64b8d7.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "OpenID SIOPv2 (2023)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "자기발행 OpenID Provider를 통한 신원 제시 방식을 정의",
+    "file": "01_원문/④ 표준/OpenID SIOPv2 (2023)__713794fd.html",
+    "pages": null,
+    "sha256": "713794fd9488d3e779c11d0dce39570e5f5ef581b1ecdbaab7f5ceee4541a8ca",
+    "bytes": 192797,
+    "source_urls": [
+      "https://openid.net/specs/openid-connect-self-issued-v2-1_0.html"
+    ],
+    "sheet_rows": [
+      46
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\046_OpenID SIOPv2 (2023)\\목록_링크_0b89fcdb.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/OpenID SIOPv2 (2023)__713794fd.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "OpenID Federation 1.0 (2026)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "OpenID 생태계의 신뢰체인과 메타데이터 배포 방식을 정의",
+    "file": "01_원문/④ 표준/OpenID Federation 1.0 (2026)__4a71afdf.html",
+    "pages": null,
+    "sha256": "4a71afdfbed5755d6704d6a089f450f10aa9914204b283eae5fadee2897d1911",
+    "bytes": 782171,
+    "source_urls": [
+      "https://openid.net/specs/openid-federation-1_0.html"
+    ],
+    "sheet_rows": [
+      54
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\054_OpenID Federation 1.0 (2026)\\목록_링크_c8f71af3.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/OpenID Federation 1.0 (2026)__4a71afdf.txt"
+  },
+  {
+    "category": "④ 표준",
+    "title": "TTAK_블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터 (2022)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "선원자격증명 서비스에서 사용할 VC 데이터 형식을 단체표준으로 제시",
+    "file": "01_원문/④ 표준/TTAK_블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터 (2022)__0031b85f.html",
+    "pages": null,
+    "sha256": "0031b85fc65917b5eed26397f1ff034627414e07e515978c61a9d2854d498a43",
+    "bytes": 28642,
+    "source_urls": [
+      "https://committee.tta.or.kr/data/standard_view.jsp?by=asc&commit_code=PG1006&firstDepthCode=TC010&order=t.standard_no&pk_num=TTAK.KO-10.1415&secondDepthCode=PG1006"
+    ],
+    "sheet_rows": [
+      57
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\057_TTAK_블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터 (2022)\\목록_링크_955528cb.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/④ 표준/TTAK_블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터 (2022)__0031b85f.txt"
+  },
+  {
+    "category": "⑤ 서비스",
+    "title": "GOV.UK Wallet",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "영국 정부 Wallet 서비스의 기능과 이용 범위를 소개",
+    "file": "01_원문/⑤ 서비스/GOV.UK Wallet__d0a2d96f.html",
+    "pages": null,
+    "sha256": "d0a2d96f72ed296bbf90e8e5d098248657e7a5da6597f0378ef0ef4c49731605",
+    "bytes": 60257,
+    "source_urls": [
+      "https://www.gov.uk/wallet"
+    ],
+    "sheet_rows": [
+      58
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\058_GOV.UK Wallet\\목록_링크_c05d21cd.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑤ 서비스/GOV.UK Wallet__d0a2d96f.txt"
+  },
+  {
+    "category": "⑤ 서비스",
+    "title": "행안부_전자증명서·전자문서지갑 구축 청사진 (2019)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "전자증명서 발급·제출과 전자문서지갑 구축 방향 안내자료",
+    "file": "01_원문/⑤ 서비스/행안부_전자증명서·전자문서지갑 구축 청사진 (2019)__b23bdd68.html",
+    "pages": null,
+    "sha256": "b23bdd68c9beecd851439786dcd8fded75693b3afd1f0263a008ca3c71259875",
+    "bytes": 173778,
+    "source_urls": [
+      "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=68400"
+    ],
+    "sheet_rows": [
+      59
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\059_행안부_전자증명서·전자문서지갑 구축 청사진 (2019)\\목록_링크_4eabdcdc.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑤ 서비스/행안부_전자증명서·전자문서지갑 구축 청사진 (2019)__b23bdd68.txt"
+  },
+  {
+    "category": "⑤ 서비스",
+    "title": "행정안전부 — 전자지갑 구축 보도자료 (2019-01-22)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/⑤ 서비스/행정안전부 — 전자지갑 구축 보도자료 (2019-01-22)__784c789a.pdf",
+    "pages": 3,
+    "sha256": "784c789a42dab151c08eb916b69ff1a7ee4f70b147c5fe6541127608c60b8791",
+    "bytes": 314705,
+    "source_urls": [
+      "https://www.mois.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_00083190bTNObGa&fileSn=1"
+    ],
+    "sheet_rows": [
+      59
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\059_행안부_전자증명서·전자문서지갑 구축 청사진 (2019)\\첨부_190122 (행정정보공유과) 연말부터 등초본 등 각종증명서 담는 전자지갑 만든다(외부).pdf________e0b8d930.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑤ 서비스/190122 (행정정보공유과) 연말부터 등초본 등 각종증명서 담는 전자지갑 만든다(외부).pdf_________784c789a.txt"
+  },
+  {
+    "category": "⑤ 서비스",
+    "title": "Q-Net 인정 신분증·모바일 국가기술자격증 (2024)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "국가기술자격증 확인에 인정되는 모바일 신분증과 자격증 이용 방식 안내자료",
+    "file": "01_원문/⑤ 서비스/Q-Net 인정 신분증·모바일 국가기술자격증 (2024)__b8fcf5bd.html",
+    "pages": null,
+    "sha256": "b8fcf5bdf3b30a412c23e6a0c4248b15556072174e525362d63e72f3ae49c5b7",
+    "bytes": 60630,
+    "source_urls": [
+      "https://mo.q-net.or.kr/rcv002.do?gSite=Q&id=rcv002_identi&rcvPFlag=Y"
+    ],
+    "sheet_rows": [
+      60
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\060_Q-Net 인정 신분증·모바일 국가기술자격증 (2024)\\목록_링크_10089b21.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑤ 서비스/Q-Net 인정 신분증·모바일 국가기술자격증 (2024)__b8fcf5bd.txt"
+  },
+  {
+    "category": "⑤ 서비스",
+    "title": "네이버 자격증 모바일 국가자격증 연계",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "네이버 자격증에서 모바일 국가자격증을 연계하는 서비스",
+    "file": "01_원문/⑤ 서비스/네이버 자격증 모바일 국가자격증 연계__e4774106.html",
+    "pages": null,
+    "sha256": "e477410603f2099c05b920dc3c598492a40b6c054bddd75f32cc72a5aa475b77",
+    "bytes": 88730,
+    "source_urls": [
+      "https://www.navercorp.com/media/pressReleasesDetail?seq=30420"
+    ],
+    "sheet_rows": [
+      64
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\064_네이버 자격증 모바일 국가자격증 연계\\목록_링크_ac968555.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑤ 서비스/네이버 자격증 모바일 국가자격증 연계__e4774106.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "OECD_G20_Digital_Identity_Practices(2021)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "G20 국가의 디지털 신원 정책과 운영사례를 수집·비교",
+    "file": "01_원문/⑥ 해외사례/OECD_G20_Digital_Identity_Practices(2021)__5cdb2162.pdf",
+    "pages": 82,
+    "sha256": "5cdb21624e4e9aae1a9442d5ae78b18d577961b17d713c4a1b38afdc9a59f249",
+    "bytes": 1613995,
+    "source_urls": [
+      "https://www.oecd.org/content/dam/oecd/en/publications/reports/2021/08/g20-collection-of-digital-identity-practices_51e4a5b9/75223806-en.pdf"
+    ],
+    "sheet_rows": [
+      67
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\067_OECD_G20_Digital_Identity_Practices(2021)\\목록_링크_d7482a48.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/OECD_G20_Digital_Identity_Practices(2021)__5cdb2162.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "EUDI Wallet/LSP",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "EUDI Wallet과 대규모 실증사업(LSP)의 추진현황",
+    "file": "01_원문/⑥ 해외사례/EUDI Wallet_LSP__aec6fcdb.html",
+    "pages": null,
+    "sha256": "aec6fcdba1e30049943672c3068df858c6d9a3091ebac260ec18e24a035677cc",
+    "bytes": 150811,
+    "source_urls": [
+      "https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/694487808/What+are+the+Large+Scale+Pilot+Projects"
+    ],
+    "sheet_rows": [
+      71
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\071_EUDI Wallet_LSP\\목록_링크_141088f1.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/EUDI Wallet_LSP__aec6fcdb.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "Poland mObywatel-EUDI Wallet Case Study(2026)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "폴란드 mObywatel의 EUDI Wallet 전환 과정과 법·조직·의미·기술적 상호운용, 인증·온보딩 및 기존 시스템 연계 과제",
+    "file": "01_원문/⑥ 해외사례/Poland mObywatel-EUDI Wallet Case Study(2026)__c7d616d5.html",
+    "pages": null,
+    "sha256": "c7d616d5d533baf0a1e03d0063d7a1c32ec14bfdbc38eb58a1def099fb7e38b8",
+    "bytes": 101461,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/collection/guidelines-sharing-interoperability-solutions/document/case-study-adapting-polands-mobywatel-ecosystem-european-digital-identity-wallet"
+    ],
+    "sheet_rows": [
+      72
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\072_Poland mObywatel-EUDI Wallet Case Study(2026)\\목록_링크_370a42d0.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/Poland mObywatel-EUDI Wallet Case Study(2026)__c7d616d5.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "Case Study — Adapting Poland’s mObywatel ecosystem to the European Digital Identity Wallet",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/⑥ 해외사례/Case Study — Adapting Poland’s mObywatel ecosystem to the European Digital Identity Wallet__66504eab.pdf",
+    "pages": 14,
+    "sha256": "66504eab491a3770560ec6d2e277d7c48cd0859e4a9405cdddf988fd76a2c6ad",
+    "bytes": 445812,
+    "source_urls": [
+      "https://interoperable-europe.ec.europa.eu/sites/default/files/file-visibility/resource/2026-08/case-study-eudi-wallet_0.pdf"
+    ],
+    "sheet_rows": [
+      72
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\072_Poland mObywatel-EUDI Wallet Case Study(2026)\\첨부_Case Study - EUDI Wallet_7c66754e.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/Case Study - EUDI Wallet__66504eab.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "NZ Digital Identity Services Trust Framework Rules 2024 v2",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "뉴질랜드의 디지털 신원서비스 신뢰 프레임워크 운영규칙으로, 공인 서비스 제공자 요건과 자격증명 관리·폐지 및 상호운용 요구사항 규정",
+    "file": "01_원문/⑥ 해외사례/NZ Digital Identity Services Trust Framework Rules 2024 v2__2afcae07.html",
+    "pages": null,
+    "sha256": "2afcae07f4acee88b919efddc3a80f22185abc9adfb82a5782e7b6af83614933",
+    "bytes": 77544,
+    "source_urls": [
+      "https://standards.digital.govt.nz/nz/dia-distfr/2/en/"
+    ],
+    "sheet_rows": [
+      73
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\073_NZ Digital Identity Services Trust Framework Rules 2024 v2\\목록_링크_02e60931.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/NZ Digital Identity Services Trust Framework Rules 2024 v2__2afcae07.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "Digital Identity Services Trust Framework Rules 2024",
+    "date_version": "원문 표기 확인 필요",
+    "status": "안내 페이지(PDF 미확보)",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/⑥ 해외사례/Digital Identity Services Trust Framework Rules 2024__66b031e9.html",
+    "pages": null,
+    "sha256": "66b031e97f32f44c17f2759d801ecc033bc55c237e17b4ce75704952f7ae2910",
+    "bytes": 37906,
+    "source_urls": [
+      "https://www.dia.govt.nz/diawebsite.nsf/Files/Trust-Framework/$file/DISTF-Rules-2024.pdf"
+    ],
+    "sheet_rows": [
+      73
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\073_NZ Digital Identity Services Trust Framework Rules 2024 v2\\첨부_Digital Identity Services Trust Framework Rules 2024_8fe55b3c.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/Digital Identity Services Trust Framework Rules 2024__66b031e9.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "Japan My Number smartphone/card substitute",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "마이넘버카드의 스마트폰 탑재와 모바일 신원증명 이용 방식을 소개하는 사이트",
+    "file": "01_원문/⑥ 해외사례/Japan My Number smartphone_card substitute__a0c0267d.html",
+    "pages": null,
+    "sha256": "a0c0267d9c52fab44c8319b6581669216035facc558f9bc8d997490fc63be591",
+    "bytes": 72843,
+    "source_urls": [
+      "https://www.digital.go.jp/en/policies/mynumber/mynumbercard-mdoc"
+    ],
+    "sheet_rows": [
+      74
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\074_Japan My Number smartphone_card substitute\\목록_링크_f124e116.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/Japan My Number smartphone_card substitute__a0c0267d.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "Smartphone installation in function, My Number Card (PDF / 1",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/⑥ 해외사례/Smartphone installation in function, My Number Card (PDF _ 1__2c8e9832.pdf",
+    "pages": 9,
+    "sha256": "2c8e983257a16e1756fc2d70ab9faf85da57e3405356ed6057fef0de5eca1c27",
+    "bytes": 1320860,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/d39b7f7d-b191-4cc0-b565-2e464cebdd40/3e4ec115/20250624_policies_mynumbercard-mdoc_outline_02.pdf"
+    ],
+    "sheet_rows": [
+      74
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\074_Japan My Number smartphone_card substitute\\첨부_Smartphone installation in function, My Number Card (PDF _ 1_127d0584.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/Smartphone installation in function, My Number Card (PDF _ 1__2c8e9832.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "Use Cases of Electromagnetic Records as an Alternative to Ca",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/⑥ 해외사례/Use Cases of Electromagnetic Records as an Alternative to Ca__23e5faa0.pdf",
+    "pages": 6,
+    "sha256": "23e5faa09fbf502a3c953d28f592da053bd5e377850f4f1476a6e48b8ceca91d",
+    "bytes": 11928772,
+    "source_urls": [
+      "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/d39b7f7d-b191-4cc0-b565-2e464cebdd40/8fddb2d7/20250624_policies_mynumbercard-mdoc_outline_03.pdf"
+    ],
+    "sheet_rows": [
+      74
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\074_Japan My Number smartphone_card substitute\\첨부_Use Cases of Electromagnetic Records as an Alternative to Ca_59d3f65c.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/Use Cases of Electromagnetic Records as an Alternative to Ca__23e5faa0.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "DIACC PCTF Digital Wallet (2023)",
+    "date_version": "Final Recommendation V1.0 / ©2023",
+    "status": "PDF 원문",
+    "description": "캐나다 DIACC의 Pan-Canadian Trust Framework 중 디지털 지갑 구성요소로, Wallet Provider의 역할과 자격증명 저장·관리·제시 및 신뢰요건 정의",
+    "file": "01_원문/⑥ 해외사례/DIACC PCTF Digital Wallet (2023)__57fe64c6.pdf",
+    "pages": 46,
+    "sha256": "57fe64c662a8b59384f250f49bc56f30d270269410676f795799ba608be1ec23",
+    "bytes": 901835,
+    "source_urls": [
+      "https://diacc.ca/wp-content/uploads/2024/10/PCTF-Digital-Wallet_Final-Rec-V1.0_Compressed_ENG.pdf"
+    ],
+    "sheet_rows": [
+      76
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\076_DIACC PCTF Digital Wallet (2023)\\목록_링크_2afdbd6c.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/DIACC PCTF Digital Wallet (2023)__57fe64c6.txt"
+  },
+  {
+    "category": "⑥ 해외사례",
+    "title": "DIACC PCTF Trust Registries (2023)",
+    "date_version": "Final Recommendation V1.0 / ©2023",
+    "status": "PDF 원문",
+    "description": "캐나다 DIACC의 Pan-Canadian Trust Framework 중 Trust Registry 구성요소로, 생태계 참여자 등록·검증·상태관리 및 신뢰정보 제공 구조 정의",
+    "file": "01_원문/⑥ 해외사례/DIACC PCTF Trust Registries (2023)__a6fc22cd.pdf",
+    "pages": 12,
+    "sha256": "a6fc22cddf5f690005c40e0872c55596d2544176e14d537f95abd0aa7f918bd2",
+    "bytes": 467416,
+    "source_urls": [
+      "https://diacc.ca/wp-content/uploads/2023/11/PCTF-Trust-Registries-Component-Overview-Final-Recommendation-V1.0.pdf"
+    ],
+    "sheet_rows": [
+      77
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\077_DIACC PCTF Trust Registries (2023)\\목록_링크_0c954a35.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑥ 해외사례/DIACC PCTF Trust Registries (2023)__a6fc22cd.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "ENISA_Digital_Identity_Standard(2023)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 페이지(안내·본문 범위 확인)",
+    "description": "디지털 신원 관련 표준의 범위와 적용 동향을 정리한 자료",
+    "file": "01_원문/⑦ 정책·산업자료/ENISA_Digital_Identity_Standard(2023)__1ef29ce7.html",
+    "pages": null,
+    "sha256": "1ef29ce7fe60b17e6232e781e0937ecf35432746e4eb7b1521e2bb9998bc19b9",
+    "bytes": 52838,
+    "source_urls": [
+      "https://www.enisa.europa.eu/publications/digital-identity-standards"
+    ],
+    "sheet_rows": [
+      82
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\082_ENISA_Digital_Identity_Standard(2023)\\목록_링크_45728d9b.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/ENISA_Digital_Identity_Standard(2023)__1ef29ce7.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "ENISA — Digital Identity Standards (2023-07)",
+    "date_version": "2023-07",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/⑦ 정책·산업자료/ENISA — Digital Identity Standards (2023-07)__c5c61ce1.pdf",
+    "pages": 78,
+    "sha256": "c5c61ce1fb05333549dd018fe2b9ec959c055fd2525d231371fa5284480053b3",
+    "bytes": 2371616,
+    "source_urls": [
+      "https://www.enisa.europa.eu/sites/default/files/publications/Digital_Identity_Standards.pdf"
+    ],
+    "sheet_rows": [
+      82
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\082_ENISA_Digital_Identity_Standard(2023)\\첨부_원문_ac652969.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/원문__c5c61ce1.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "ENISA secure move to cloud of eIDAS ecosystem",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "eIDAS 생태계의 클라우드 이전과 원격 신원확인·신뢰서비스 이슈를 다룸",
+    "file": "01_원문/⑦ 정책·산업자료/ENISA secure move to cloud of eIDAS ecosystem__b3723f29.html",
+    "pages": null,
+    "sha256": "b3723f29d9ec82a0aa04174602931de9421fcaccfc8c0cfd4dc4bafc45f1d9ff",
+    "bytes": 57172,
+    "source_urls": [
+      "https://www.enisa.europa.eu/news/trust-services-digital-wallets-moving-to-the-cloud-and-remote-identity-proofing"
+    ],
+    "sheet_rows": [
+      83
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\083_ENISA secure move to cloud of eIDAS ecosystem\\목록_링크_f2de88e4.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/ENISA secure move to cloud of eIDAS ecosystem__b3723f29.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "OpenID EUDIW resource hub (2025)",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "보도자료(블로그) / EUDI Wallet 관련 OpenID 자원과 상호운용 정보를 안내",
+    "file": "01_원문/⑦ 정책·산업자료/OpenID EUDIW resource hub (2025)__189987be.html",
+    "pages": null,
+    "sha256": "189987bef2885621d0aebea181fa8f4100575d832c6c487376cf7fb4f0ad9dfd",
+    "bytes": 142467,
+    "source_urls": [
+      "https://openid.net/openid-foundation-launches-eudiw-resource-hub/"
+    ],
+    "sheet_rows": [
+      84
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\084_OpenID EUDIW resource hub (2025)\\목록_링크_db97002f.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/OpenID EUDIW resource hub (2025)__189987be.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "행안부_2026 디지털서비스 개방 참여기업 공모",
+    "date_version": "원문 표기 확인 필요",
+    "status": "웹 본문",
+    "description": "공공 디지털서비스 개방 참여기업 모집을 안내",
+    "file": "01_원문/⑦ 정책·산업자료/행안부_2026 디지털서비스 개방 참여기업 공모__b817cfa3.html",
+    "pages": null,
+    "sha256": "b817cfa3e45c594a3c9b7dc22dadcf58132ca3700ca3d7f9c057be3788661df7",
+    "bytes": 164022,
+    "source_urls": [
+      "https://mois.go.kr/frt/bbs/type013/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000006&nttId=126769"
+    ],
+    "sheet_rows": [
+      88
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\088_행안부_2026 디지털서비스 개방 참여기업 공모\\목록_링크_adc2c4d8.html"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/행안부_2026 디지털서비스 개방 참여기업 공모__b817cfa3.txt"
+  },
+  {
+    "category": "⑦ 정책·산업자료",
+    "title": "행정안전부 — 2026 디지털서비스 개방 참여기업 공모 공고문",
+    "date_version": "원문 표기 확인 필요",
+    "status": "PDF 원문",
+    "description": "연결 페이지의 첨부자료. 구체적인 제목·범위는 파일과 요약을 참조.",
+    "file": "01_원문/⑦ 정책·산업자료/행정안전부 — 2026 디지털서비스 개방 참여기업 공모 공고문__172a1463.pdf",
+    "pages": 34,
+    "sha256": "172a1463a6e6073d6a959e0f36a1377d7dc69d7cf91cf98c8f84b9cfb6ef01e9",
+    "bytes": 795137,
+    "source_urls": [
+      "https://mois.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_00145975Zd4W6Gx&fileSn=1"
+    ],
+    "sheet_rows": [
+      88
+    ],
+    "original_locations": [
+      "Interoperable_Europe_영문자료조사_20260927\\추가확보_20260929\\088_행안부_2026 디지털서비스 개방 참여기업 공모\\첨부_디지털서비스 개방 참여기업 공모 공고문.pdf________ [________776.5 KB________]_72378c8f.pdf"
+    ],
+    "extracted_text": "04_수집기록/본문추출/⑦ 정책·산업자료/디지털서비스 개방 참여기업 공모 공고문.pdf________ [________776.5 KB________]__172a1463.txt"
+  }
+]

@@ -1,0 +1,1256 @@
+전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구
+본문 바로가기
+KCI 등재
+전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구
+Non-Face Mortgage Loan Using the Electronic Document Wallet and the Electronic Certificate
+신용카드리뷰
+약어 : 
+				
+				
+					신용카드리뷰
+2019
+					
+					
+						vol.13,
+					
+					
+					
+						no.4,
+					
+					
+					
+						
+						
+							pp.71 - 104
+DOI : 10.35348/ccr.2019.13.4.005
+발행기관 :
+사단법인 한국신용카드학회
+연구분야 :
+				
+				경제학
+Copyright ©
+				
+				
+					 사단법인 한국신용카드학회
+최동준
+1
+, 
+					
+					김상봉
+2
+1
+한성대학교 스마트융합컨설팅학과 박사과정
+2
+한성대학교
+인용한 논문 수 :
+3
+364
+회 열람
+현재 페이지 인쇄
+PDF 다운로드
+인용보기
+공유
+Facebook
+Twitter
+초록
+이 연구는 최근(2019.10.29) 정부가 발표한 ‘디지털 정부혁신 추진계획’에 소개된 전자증명서가가져올 금융서비스 시장의 서류제출 방식의 변화에 대하여 다루었다. 정부는 스마트폰에 설치할수 있는 ‘전자문서지갑’에서 관공서 방문 없이 각종 전자증명서를 실시간으로 발급받고 필요로 하는 기관에 온라인으로 유통할 수 있는 ‘전자증명서 발급·유통시스템 구축사업’을 추진하고 있다.
+행정안전부는 전자증명서 방식의 도입으로 향후 5년간 약 5조 원의 정량적 효과가 발생할 것으로기대했다.
+전자증명서 기반 민원행정은 현행 ‘인터넷민원발급’, ‘행정정보공동이용’ 대비 스마트폰으로 모든 업무를 처리할 수 있어 종이문서 발생과 유통이 없다. 또한, 전자증명서 방식은 메타정보(XML)로 제공하여 디지털 데이터를 업무에 활용할 수 있어 매우 효율적이다. 조사결과에 따르면국민의 92.8%가 민원서류 열람·교부를 목적으로 행정서비스를 이용하고, 해당 민원서류의 37.1% 가 금융회사에 제출되고 있다. 이에, 금융회사 업무 중 ‘전자증명서’ 도입이 필요하다고 판단되는‘비대면 주택담보대출’ 업무를 중심으로 ‘전자증명서’ 적용절차에 대하여 연구하고 전자증명서 관련 API를 이용한 ‘스마트뱅킹 App’, ‘전자증명서 수취 서버’의 기능개발 범위를 제시하였다.
+이와 함께 전자적으로 발급되지 않은 증명서의 전자적 처리방법, 신청서와 증명서가 분리되어제출되는 구조적 문제, 금융회사 내부 이용을 위한 포맷 변환, 인터넷 차단된 네트워크에서의 전자증명서 무결성 검증, 민원인과 수취 기관 N:1 구조 해소를 위한 취합구조, 전자증명서 생태계조성을 위한 로드맵 공개 필요성 등에 대하여 설명했다. 마지막으로 이 사업의 성공적 추진을 위해 전자증명서 발급신청의 편의를 위한 ‘증명서 그룹’ 신청 도입 그리고 타법에 명시된 전자증명서 명칭과 혼란을 고려하여 ‘전자민원증명서’, ‘전자발급증명서’ 등 명칭변경에 대하여 제언했다.
+This study reviews the changes in the filing method of the financial services market brought by the electronic certificate introduced in the Korean government's 'Digital Government Innovation Promotion Plan' recently announced (October 29, 2019).
+The Korean government is carrying out the 'Issuance of Electronic Certificate Issuance and Distribution System' project to create an electronic document wallet that can be installed on a smartphone. By using the electronic document wallet, citizens can obtain and distribute various electronic certificates online in real-time without visiting government offices or banks. The Ministry of the Interior and Safety expected the quantitative effect of approximately KRW 5 trillion over the next five years due to the introduction of the electronic certificate method.
+A civil administration based on electronic certificates can handle all tasks with smartphones without paper document generation and distribution compared to current 'Issuance of Internet-based Certificates' and 'Public Information Sharing.'. In addition, the electronic certificate method is very efficient because it can manage the certificate information as meta information (XML) and use it for work.
+According to the statistics, 92.8% of the citizens use civil services to view and issue Civil Certificates, and 37.1% of the Civil Certificates are submitted to financial institutes. In this context, this study focuses on the 'non-face-to-face mortgage loan' business, which is most likely to benefit by the introduction of 'Electronic Certificate' among financial services, and presented the functional development scope of 'Smart Banking Mobile Application' and 'Electronic Certificate Receiving Server' using the Electronic Certificate APIs. In addition, this study explains electronic processing of paper-based certificates, alternatives to structural problems in which applications and certificates are submitted separately, format conversion for internal use by financial institutions, verification of the integrity of Electronic Certificates in Internet-blocked networks, the collection structure to solve the N:1 structure between citizen and government agencies (or citizens and government agency) and the necessity of releasing the roadmap for the creation of the Electronic Certificate eco-system. Lastly, the study suggests the introduction of a 'Certificate Group Application' function for the convenience of users and proposes renaming the ‘Electronic Certificate’ to the 'Electronic Civil Certificate' in consideration of the overlap with the name of the Electronic Certificate specified in other laws.
+키워드
+디지털 정부혁신, 전자문서지갑, 전자증명서, 비대면 주택담보대출, 민원서류 혁신
+Digital government innovation, Electronic certificate wallet, Electronic certificate, Non-Face-To-Face mortgage loan, Civil certificate innovation
+참고문헌(34)
+1.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									관계부처 합동
+								
+								
+								
+									/ 2019
+								
+								
+								
+								
+									
+									
+										/ 디지털 정부혁신 추진계획
+2.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									관계부처 합동
+								
+								
+								
+									/ 2019
+								
+								
+								
+								
+									
+									
+										/ 주민등록증·초본도, 신분증도 모두 스마트폰 속으로, 디지털 정부가온다
+									
+								
+								
+								
+								
+									/
+3.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									금융감독원
+								
+								
+								
+									/ 2019
+								
+								
+								
+								
+									
+									
+										/ 금융회사 대환대출 전자상환위임장 사용 가능여부
+4.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									금융위원회
+								
+								
+								
+									/ 2016
+								
+								
+								
+								
+									
+									
+										/ (주)케이뱅크 은행(제1호 인터넷전문은행)은행업 인가
+5.
+								
+								
+									
+									
+									
+									[보고서]
+									
+									
+									
+								
+								
+								
+									금융위원회
+								
+								
+								
+									/ 2018
+								
+								
+								
+								
+									
+									
+										/ 금융분야 데이터 활용 및 정보보호 종합방안
+6.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									김은영
+								
+								
+								
+									/ 2018
+								
+								
+								
+								
+									
+									
+										/ 지금 핀테크는 ‘스크래핑’ 바람, 서류 없이 은행 대출받고 보험금 청구
+									
+								
+								
+								
+								
+									/ 사이언스타임즈, 2018.04.13
+7.
+								
+								
+									
+									
+									
+									[보고서]
+									
+									
+									
+								
+								
+								
+									김현경
+								
+								
+								
+									/ 2011
+								
+								
+								
+								
+									
+									
+										/ 전자문서를 둘러싼 법적쟁점과 과제
+8.
+								
+								
+									[학술지]
+									
+									
+									
+									
+									
+									
+								
+								
+								
+									김혜경
+								
+								
+								
+									/ 2012
+/ 전자문서의 문서성과 형법상 범죄성립
+/ 경찰학연구
+								
+								
+								
+									/ 12
+								
+								
+								
+									(3)
+								
+								
+								
+									: 77 ~ 3
+9.
+								
+								
+									
+									
+									[단행본]
+									
+									
+									
+									
+								
+								
+								
+									박상기
+								
+								
+								
+									/ 2011
+								
+								
+								
+								
+									
+									
+										/ 형법각론
+									
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+									: 521
+10.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									박윤호
+								
+								
+								
+									/ 2018
+								
+								
+								
+								
+									
+									
+										/ KB저축은행, 모바일 이노베이션 프로젝트... 국내 최초 서비스 대거 탑재
+									
+								
+								
+								
+								
+									/
+11.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									박윤호
+								
+								
+								
+									/ 2018
+								
+								
+								
+								
+									
+									
+										/ 저축은행발 디지털뱅킹 생태계 구축...저축은행중앙회 ‘SB톡톡 플러스’ 론칭
+									
+								
+								
+								
+								
+									/ 전자신문, 2019.9.9
+								
+								
+								
+								
+								
+								
+								
+									:
+12.
+								
+								
+									[학술지]
+									
+									
+									
+									
+									
+									
+								
+								
+								
+									박준하
+								
+								
+								
+									/ 2014
+/ 금융기관 문서의 안전한 유통과 보관 방안에 관한 연구― 공인전자주소 및 공인전자문서센터 제도를 중심으로 ―
+/ 서울법학
+								
+								
+								
+									/ 21
+								
+								
+								
+									(3)
+								
+								
+								
+									: 347 ~ 3
+13.
+								
+								
+									
+									
+									
+									
+									
+									[인터넷자료]
+									
+								
+								
+								
+									법제처 국가법령정보센터
+								
+								
+								
+								
+								
+								
+									
+									
+										/ 「전자정부법」, 「전자서명법」,「전자문서및전자거래기본법」,「부동산등기특별조치법」,「상법시행령」
+14.
+								
+								
+									[학술지]
+									
+									
+									
+									
+									
+									
+								
+								
+								
+									송병호
+								
+								
+								
+									/ 2004
+/ 정부 전자문서유통의 발전방향에 관한 연구
+/ 정보관리학회지
+								
+								
+								
+									/ 21
+								
+								
+								
+									(3)
+								
+								
+								
+									: 185 ~ 3
+15.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									송지영
+								
+								
+								
+									/ 2019
+								
+								
+								
+								
+									
+									
+										/ 블록체인 기반 자기주권형 모바일 전자증명 서비스
+16.
+								
+								
+									
+									
+									
+									[보고서]
+									
+									
+									
+								
+								
+								
+									정보통신산업진흥원
+								
+								
+								
+									/ 2011
+								
+								
+								
+								
+									
+									
+										/ 전자문서 보안관리 가이드라인 연구 보고서
+17.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									정보통신산업진흥원
+								
+								
+								
+									/ 2012
+								
+								
+								
+								
+									
+									
+										/ 조직 내 문서정보관리 고도화 지침(v1.0)
+									
+								
+								
+								
+								
+									/
+18.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									전자증명서워킹그룹
+								
+								
+								
+									/ 2016
+								
+								
+								
+								
+									
+									
+										/ 제1차 회의 회의록, 2016.5.10, 1
+									
+								
+								
+								
+								
+									/  
+								
+								
+								
+								
+								
+								
+								
+									:
+19.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									정철근
+								
+								
+								
+									/ 2005
+								
+								
+								
+								
+									
+									
+										/ 위·변조 위험 인터넷 민원서류 발급 국세청·관세청도 전면중단
+									
+								
+								
+								
+								
+									/ 중앙일보 종합 2면(정치), 2005.9.29
+20.
+								
+								
+									[학술지]
+									
+									
+									
+									
+									
+									
+								
+								
+								
+									최동준
+								
+								
+								
+									/ 2019
+/ 국토교통부 부동산거래 전자계약시스템(IRTS)에서 작성된 전자계약서의 무결성 검증 연구
+/ 부동산경영
+								
+								
+								
+								
+								
+									(19)
+								
+								
+								
+									: 297 ~ 19
+21.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									한국인터넷진훙원
+								
+								
+								
+									/ 2016
+								
+								
+								
+								
+									
+									
+										/ 증명문서의 전자적 발급 지침-1.요구사항
+									
+								
+								
+								
+								
+									/
+22.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									한국인터넷진흥원
+								
+								
+								
+									/ 2017
+								
+								
+								
+								
+									
+									
+										/ 클라우드 기반 전자증명서 유통 서비스 구축
+23.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									한국정보화진흥원
+								
+								
+								
+									/ 2019
+								
+								
+								
+								
+									
+									
+										/ 2019년 전자증명서 발급·유통 시스템 구축사업
+24.
+								
+								
+									
+									
+									[단행본]
+									
+									
+									
+									
+								
+								
+								
+									한국정보화진흥원
+								
+								
+								
+									/ 2018
+								
+								
+								
+								
+									
+									
+										/ 2018 국가정보화백서
+25.
+								
+								
+									
+									
+									[단행본]
+									
+									
+									
+									
+								
+								
+								
+									행정정보공유추진위원회
+								
+								
+								
+									/ 2007
+								
+								
+								
+								
+									
+									
+										/ 2017 행정정보 공동이용 백서
+26.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									행정안전부
+								
+								
+								
+									/ 2008
+								
+								
+								
+								
+									
+									
+										/ 전자정부서비스 보안수준 실태조사 결과 및 개선대책
+27.
+								
+								
+									
+									
+									[단행본]
+									
+									
+									
+									
+								
+								
+								
+									행정안전부
+								
+								
+								
+									/ 2011
+								
+								
+								
+								
+									
+									
+										/ 2011 국가정보화백서
+28.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									행정안전부
+								
+								
+								
+									/ 2017
+								
+								
+								
+								
+									
+									
+										/ 되돌아보는 대한민국 전자정부 이야기 23선
+29.
+								
+								
+									
+									
+									
+									[보고서]
+									
+									
+									
+								
+								
+								
+									행정안전부
+								
+								
+								
+									/ 2017
+								
+								
+								
+								
+									
+									
+										/ 2017 전자정부서비스 이용실태조사 결과보고서
+30.
+								
+								
+									
+									
+									[단행본]
+									
+									
+									
+									
+								
+								
+								
+									행정정보공유추진위원회
+								
+								
+								
+									/ 2017
+								
+								
+								
+								
+									
+									
+										/ 2017 행정정보 공동이용 백서
+31.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									행정안전부
+								
+								
+								
+									/ 2019
+								
+								
+								
+								
+									
+									
+										/ 22개 주요 공공 웹사이트 플러그인 제거한다
+32.
+								
+								
+									
+									
+									
+									[보고서]
+									
+									
+									
+								
+								
+								
+									행정안전부
+								
+								
+								
+									/ 2019
+								
+								
+								
+								
+									
+									
+										/ 전자증명서 발급·유통시스템 구축
+33.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									행정안전부
+								
+								
+								
+									/ 2019
+								
+								
+								
+								
+									
+									
+										/ 전자문서지갑, 생활에 편리함을 더하다
+									
+								
+								
+								
+								
+									/
+34.
+								
+								
+									
+									
+									
+									
+									
+									
+									[기타]
+								
+								
+								
+									ASEC
+								
+								
+								
+									/ 2018
+								
+								
+								
+								
+									
+									
+										/ PDF 파일에 첨부되어 유포 중인 악성코드((*.pub, *.iqy)
+									
+								
+								
+								
+								
+									/ 안랩(AhnLAB) 2018.8.17
+학술지 저작권 정책
+* 저작자 및 출처를 표시하면 저작물을 비영리적으로 사용할 수 있으나, 변경 및 2차 저작물을 만들 수 없습니다.
+TOP
+초록
+키워드
+참고문헌
+toggle menu
+타입을 선택하세요
+BibTex
+RIS
+APA
+Harvard
+MLA
+Vancouver
+Chicago
+전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구
+@article{ART002548388},
+author={
+							
+							
+								최동준
+							
+							
+								and
+								
+								
+									
+									김상봉
+									
+								
+							
+						},
+title={
+							
+							
+								전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구
+							
+						},
+journal={
+							
+							
+								신용카드리뷰
+							
+						},
+issn={1976-6521},
+year={2019},
+number={4},
+pages={71 - 104},
+doi={10.35348/ccr.2019.13.4.005},
+url={http://dx.doi.org/10.35348/ccr.2019.13.4.005}
+TY - JOUR
+AU - 최동준
+						
+						
+							
+							
+								
+								AU - 김상봉
+TI - 전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구
+T2 - 신용카드리뷰
+PY - 2019
+VL - 13
+IS - 4
+PB -  사단법인 한국신용카드학회
+SP - 71 - 104
+SN - 1976-6521
+AB - 이 연구는 최근(2019.10.29) 정부가 발표한 ‘디지털 정부혁신 추진계획’에 소개된 전자증명서가가져올 금융서비스 시장의 서류제출 방식의 변화에 대하여 다루었다. 정부는 스마트폰에 설치할수 있는 ‘전자문서지갑’에서 관공서 방문 없이 각종 전자증명서를 실시간으로 발급받고 필요로 하는 기관에 온라인으로 유통할 수 있는 ‘전자증명서 발급·유통시스템 구축사업’을 추진하고 있다.
+행정안전부는 전자증명서 방식의 도입으로 향후 5년간 약 5조 원의 정량적 효과가 발생할 것으로기대했다.
+전자증명서 기반 민원행정은 현행 ‘인터넷민원발급’, ‘행정정보공동이용’ 대비 스마트폰으로 모든 업무를 처리할 수 있어 종이문서 발생과 유통이 없다. 또한, 전자증명서 방식은 메타정보(XML)로 제공하여 디지털 데이터를 업무에 활용할 수 있어 매우 효율적이다. 조사결과에 따르면국민의 92.8%가 민원서류 열람·교부를 목적으로 행정서비스를 이용하고, 해당 민원서류의 37.1% 가 금융회사에 제출되고 있다. 이에, 금융회사 업무 중 ‘전자증명서’ 도입이 필요하다고 판단되는‘비대면 주택담보대출’ 업무를 중심으로 ‘전자증명서’ 적용절차에 대하여 연구하고 전자증명서 관련 API를 이용한 ‘스마트뱅킹 App’, ‘전자증명서 수취 서버’의 기능개발 범위를 제시하였다.
+이와 함께 전자적으로 발급되지 않은 증명서의 전자적 처리방법, 신청서와 증명서가 분리되어제출되는 구조적 문제, 금융회사 내부 이용을 위한 포맷 변환, 인터넷 차단된 네트워크에서의 전자증명서 무결성 검증, 민원인과 수취 기관 N:1 구조 해소를 위한 취합구조, 전자증명서 생태계조성을 위한 로드맵 공개 필요성 등에 대하여 설명했다. 마지막으로 이 사업의 성공적 추진을 위해 전자증명서 발급신청의 편의를 위한 ‘증명서 그룹’ 신청 도입 그리고 타법에 명시된 전자증명서 명칭과 혼란을 고려하여 ‘전자민원증명서’, ‘전자발급증명서’ 등 명칭변경에 대하여 제언했다.
+KW - 디지털 정부혁신, 전자문서지갑, 전자증명서, 비대면 주택담보대출, 민원서류 혁신
+DO - 10.35348/ccr.2019.13.4.005
+UR - http://dx.doi.org/10.35348/ccr.2019.13.4.005
+ER -
+최동준
+						
+						
+							, 
+							
+							
+								
+								김상봉
+								
+									
+									
+								
+							
+						
+						
+						(2019).
+						
+						
+						
+							전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구.
+						
+						
+						
+						
+							신용카드리뷰,
+						
+						
+						
+							
+								13(4),
+							
+							
+							
+						
+						
+						71 - 104.
+최동준
+						
+						
+							, 
+							
+							
+								
+								김상봉
+								
+									
+									
+								
+							
+						
+						
+						. 2019,
+						
+						“전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구”,
+						
+						
+							vol.13,
+						
+						
+						
+							no.4,
+						
+						
+						pp. 71 - 104.
+						Available from: doi:10.35348/ccr.2019.13.4.005
+최동준
+						
+						
+							
+								
+									and
+									
+									김상봉
+								
+								
+							
+						
+						
+						“전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구“
+						
+						
+						
+							신용카드리뷰
+						
+						
+						
+							
+								13.4
+							
+							
+							
+						
+						
+						pp. 71 - 104.
+						
+						(2019): 71.
+최동준
+						
+						
+							, 
+							
+								
+								김상봉
+								
+							
+						
+						.
+						전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구
+						
+						
+						
+							신용카드리뷰
+						
+						[Internet].
+						2019;
+						
+						
+							
+								13(4),
+							
+							
+							
+						:
+						71 - 104.
+						Available from: doi:10.35348/ccr.2019.13.4.005
+최동준
+						
+						
+							, 
+							
+							
+								
+								김상봉
+								
+									
+									
+								
+							
+						
+						. “전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구“
+						
+						신용카드리뷰
+						
+						
+							
+								13, no.4,
+							
+							
+							
+						
+						(2019): 71 - 104. doi: :10.35348/ccr.2019.13.4.005
+텍스트 파일로 저장
+피인용 논문

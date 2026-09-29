@@ -1,0 +1,1350 @@
+[
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/index.html"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-history"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-30-0-21-09-2026"
+  },
+  {
+    "title": "Adapting the step’s result and generating responses",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-receive-result"
+  },
+  {
+    "title": "HttpMessagingV2",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-httpmessagingv2"
+  },
+  {
+    "title": "SoapMessagingV2",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-soapmessagingv2"
+  },
+  {
+    "title": "receive",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-receive"
+  },
+  {
+    "title": "Selecting the API style for external service handlers",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-handlerapitype"
+  },
+  {
+    "title": "PdfValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-pdfvalidator"
+  },
+  {
+    "title": "TextProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-textprocessor"
+  },
+  {
+    "title": "RegExpProcessor - replace",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-regexpprocessor-replace"
+  },
+  {
+    "title": "XmlValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xmlvalidator"
+  },
+  {
+    "title": "XsdValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xsdvalidator"
+  },
+  {
+    "title": "TemplateProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-templateprocessor"
+  },
+  {
+    "title": "Stopping execution without ending the test session",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-exit-scope"
+  },
+  {
+    "title": "flow",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-flow"
+  },
+  {
+    "title": "Actor configuration parameters",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions-actor"
+  },
+  {
+    "title": "Conditionally including and depending on interaction elements",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-conditional"
+  },
+  {
+    "title": "Displaying data using instruct elements",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-instruct-presentation"
+  },
+  {
+    "title": "Displaying data using instruct elements",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-instruct-presentation"
+  },
+  {
+    "title": "Providing multiple values for a single input",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-multiple-uploads"
+  },
+  {
+    "title": "Metadata (test case)",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-metadata"
+  },
+  {
+    "title": "Metadata (test suite)",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-metadata"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-29-0-27-03-2026"
+  },
+  {
+    "title": "DomibusMessaging",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-domibusmessaging"
+  },
+  {
+    "title": "ZipProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-zipprocessor"
+  },
+  {
+    "title": "Test suites",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite"
+  },
+  {
+    "title": "DisplayProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-displayprocessor"
+  },
+  {
+    "title": "SimulatedMessaging",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-simulatedmessaging"
+  },
+  {
+    "title": "Displaying data using instruct elements",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-instruct-presentation"
+  },
+  {
+    "title": "Displaying data using instruct elements",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-instruct-presentation"
+  },
+  {
+    "title": "Displaying data using instruct elements",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-instruct-presentation"
+  },
+  {
+    "title": "Requesting inputs using request elements",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-form-inputs"
+  },
+  {
+    "title": "Requesting inputs using request elements",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-form-inputs"
+  },
+  {
+    "title": "Requesting inputs using request elements",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-form-inputs"
+  },
+  {
+    "title": "Imports",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-imports"
+  },
+  {
+    "title": "call",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "Rich documentation per step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-documentation"
+  },
+  {
+    "title": "XmlValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xmlvalidator"
+  },
+  {
+    "title": "XsdValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xsdvalidator"
+  },
+  {
+    "title": "Displaying contained steps without a boundary",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if-hide-boundary"
+  },
+  {
+    "title": "Test steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-actors"
+  },
+  {
+    "title": "Display steps under specific actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-step-actor"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-28-0-10-10-2025"
+  },
+  {
+    "title": "HttpMessagingV2",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-httpmessagingv2"
+  },
+  {
+    "title": "Authenticate calls to external handlers",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-authentication"
+  },
+  {
+    "title": "dependencies",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-metadata-dependencies"
+  },
+  {
+    "title": "scopes",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-metadata-scopes"
+  },
+  {
+    "title": "dependencies",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-metadata-dependencies"
+  },
+  {
+    "title": "scopes",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-metadata-scopes"
+  },
+  {
+    "title": "btxn",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-btxn"
+  },
+  {
+    "title": "Timeouts for external service handlers",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-handlertimeouts"
+  },
+  {
+    "title": "JsonPathProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-jsonpathprocessor"
+  },
+  {
+    "title": "JsonPointerProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-jsonpointerprocessor"
+  },
+  {
+    "title": "JsonPathProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-jsonpathprocessor"
+  },
+  {
+    "title": "CollectionUtils",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-collectionutils"
+  },
+  {
+    "title": "YamlConverter",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-yamlconverter"
+  },
+  {
+    "title": "foreach",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-foreach"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-27-0-24-06-2025"
+  },
+  {
+    "title": "HttpMessagingV2",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-httpmessagingv2"
+  },
+  {
+    "title": "Tuning reported data",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-httpmessagingv2-reportdisplay"
+  },
+  {
+    "title": "SoapMessagingV2",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-soapmessagingv2"
+  },
+  {
+    "title": "Tuning reported data",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-soapmessagingv2-reportdisplay"
+  },
+  {
+    "title": "XmlValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xmlvalidator"
+  },
+  {
+    "title": "SchematronValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-schematronvalidator"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-26-0-12-06-2025"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.26.0/"
+  },
+  {
+    "title": "JsonValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-jsonvalidator"
+  },
+  {
+    "title": "ShaclValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-shaclvalidator"
+  },
+  {
+    "title": "YamlValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-yamlvalidator"
+  },
+  {
+    "title": "Delegating to external handler services",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-handler"
+  },
+  {
+    "title": "Skip test steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-skipped"
+  },
+  {
+    "title": "RdfUtils",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-rdfutils"
+  },
+  {
+    "title": "CollectionUtils - find",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-collectionutils-find"
+  },
+  {
+    "title": "CollectionUtils - contains",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-collectionutils-contains"
+  },
+  {
+    "title": "CollectionUtils - append",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-collectionutils-append"
+  },
+  {
+    "title": "Output",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-output"
+  },
+  {
+    "title": "Imports",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-imports"
+  },
+  {
+    "title": "StringValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-stringvalidator"
+  },
+  {
+    "title": "NumberValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-numbervalidator"
+  },
+  {
+    "title": "ExpressionValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-expressionvalidator"
+  },
+  {
+    "title": "RegExpValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-regexpvalidator"
+  },
+  {
+    "title": "XPathValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xpathvalidator"
+  },
+  {
+    "title": "Built-in handlers",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-predefined-handlers"
+  },
+  {
+    "title": "Dynamic presentation in scriptlets",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-dynamic-references"
+  },
+  {
+    "title": "Dynamic steps in scriptlets",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-dynamic-steps"
+  },
+  {
+    "title": "Displaying data using instruct elements",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-instruct-presentation"
+  },
+  {
+    "title": "Requesting inputs using request elements",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact-form-inputs"
+  },
+  {
+    "title": "Explicitly specifying from and to actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-receive-actors"
+  },
+  {
+    "title": "Explicitly specifying from and to actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-send-actors"
+  },
+  {
+    "title": "Assignment by-reference and by-value",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-assign-by-value"
+  },
+  {
+    "title": "Scriptlets",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-25-0-31-01-2025"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.25.0/"
+  },
+  {
+    "title": "Test case groups",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-groups"
+  },
+  {
+    "title": "receive",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-receive"
+  },
+  {
+    "title": "send",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-send"
+  },
+  {
+    "title": "process",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-process"
+  },
+  {
+    "title": "receive",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-receive"
+  },
+  {
+    "title": "send",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-send"
+  },
+  {
+    "title": "process",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-process"
+  },
+  {
+    "title": "verify",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-verify"
+  },
+  {
+    "title": "DisplayProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-displayprocessor"
+  },
+  {
+    "title": "Output",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-output"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "exit",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-exit"
+  },
+  {
+    "title": "Skip child steps in case of error",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-stoponchilderror"
+  },
+  {
+    "title": "group",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-group"
+  },
+  {
+    "title": "XPathProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xpathprocessor"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-24-0-15-10-2024"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.24.0/"
+  },
+  {
+    "title": "Params",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-elements-params"
+  },
+  {
+    "title": "VariableUtils",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-variableutils"
+  },
+  {
+    "title": "CollectionUtils",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-collectionutils"
+  },
+  {
+    "title": "Use in send steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-httpmessagingv2-send"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-23-0-20-06-2024"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.23.0/"
+  },
+  {
+    "title": "HttpMessagingV2",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-httpmessagingv2"
+  },
+  {
+    "title": "SoapMessagingV2",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-soapmessagingv2"
+  },
+  {
+    "title": "System configuration parameters",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions-system"
+  },
+  {
+    "title": "HttpMessaging",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-httpmessaging"
+  },
+  {
+    "title": "HttpsMessaging",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-httpsmessaging"
+  },
+  {
+    "title": "SoapMessaging",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-soapmessaging"
+  },
+  {
+    "title": "Test case logging",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-steps-logging"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-22-0-08-04-2024"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.22.0/"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "reference (test suite)",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-metadata-specification"
+  },
+  {
+    "title": "reference (test case)",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-metadata-specification"
+  },
+  {
+    "title": "DisplayProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-displayprocessor"
+  },
+  {
+    "title": "Reusable external handlers",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-reusable-handlers"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-21-0-06-10-2023"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.21.0/"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "TokenGenerator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-tokengenerator"
+  },
+  {
+    "title": "DelayProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-delayprocessor"
+  },
+  {
+    "title": "JsonPointerProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-jsonpointerprocessor"
+  },
+  {
+    "title": "Test cases",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case"
+  },
+  {
+    "title": "update (test suite)",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-metadata-update"
+  },
+  {
+    "title": "update (test case)",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-metadata-update"
+  },
+  {
+    "title": "tags",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-metadata-tags"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-19-0-17-03-2023"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.19.0/"
+  },
+  {
+    "title": "Status checks for scriptlet steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions-step-status-scriptlets"
+  },
+  {
+    "title": "CollectionUtils",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-collectionutils"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-18-0-17-10-2022"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.18.0/"
+  },
+  {
+    "title": "XmlValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xmlvalidator"
+  },
+  {
+    "title": "ExpressionValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-expressionvalidator"
+  },
+  {
+    "title": "TokenGenerator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-tokengenerator"
+  },
+  {
+    "title": "SimulatedMessaging",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-simulatedmessaging"
+  },
+  {
+    "title": "DisplayProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-displayprocessor"
+  },
+  {
+    "title": "Dynamic presentation in scriptlets",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-dynamic-references"
+  },
+  {
+    "title": "call",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "SchematronValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-schematronvalidator"
+  },
+  {
+    "title": "XsdValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xsdvalidator"
+  },
+  {
+    "title": "SchematronValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-schematronvalidator"
+  },
+  {
+    "title": "XsdValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xsdvalidator"
+  },
+  {
+    "title": "SchematronValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-schematronvalidator"
+  },
+  {
+    "title": "Params",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-elements-params"
+  },
+  {
+    "title": "flow",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-flow"
+  },
+  {
+    "title": "Dynamic steps in scriptlets",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-dynamic-steps"
+  },
+  {
+    "title": "Displaying contained steps without a boundary",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if-hide-boundary"
+  },
+  {
+    "title": "Dynamic steps in scriptlets",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-dynamic-steps"
+  },
+  {
+    "title": "Displaying contained steps without a boundary",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if-hide-boundary"
+  },
+  {
+    "title": "Accessing test session metadata",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions-session-metadata"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-actors"
+  },
+  {
+    "title": "Simplified processing steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-process-simplified"
+  },
+  {
+    "title": "assign",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-assign"
+  },
+  {
+    "title": "Specification links",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html#introduction-spec-links"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-17-0-20-07-2022"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.17.0/"
+  },
+  {
+    "title": "Dynamic presentation in scriptlets",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets-dynamic-references"
+  },
+  {
+    "title": "TemplateProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-templateprocessor"
+  },
+  {
+    "title": "XsltProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xsltprocessor"
+  },
+  {
+    "title": "DisplayProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-displayprocessor"
+  },
+  {
+    "title": "SimulatedMessaging",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-simulatedmessaging"
+  },
+  {
+    "title": "send",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-send"
+  },
+  {
+    "title": "receive",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-receive"
+  },
+  {
+    "title": "Authenticate calls to external handlers",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-authentication"
+  },
+  {
+    "title": "Expressions",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-16-0-18-03-2022"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.16.0/"
+  },
+  {
+    "title": "Namespaces",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-namespaces"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-actors"
+  },
+  {
+    "title": "Checking the status of a specific step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions-step-status"
+  },
+  {
+    "title": "Test steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps"
+  },
+  {
+    "title": "log",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-log"
+  },
+  {
+    "title": "Test cases",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-test-cases"
+  },
+  {
+    "title": "Test cases",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-15-0-29-11-2021"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.15.0/"
+  },
+  {
+    "title": "send",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-send"
+  },
+  {
+    "title": "receive",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-receive"
+  },
+  {
+    "title": "listen",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-listen"
+  },
+  {
+    "title": "Type conversions",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/types/index.html#test-case-types-type-conversions"
+  },
+  {
+    "title": "Type conversions",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/types/index.html#test-case-types-type-conversions"
+  },
+  {
+    "title": "log",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-log"
+  },
+  {
+    "title": "Steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-steps"
+  },
+  {
+    "title": "verify",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-verify"
+  },
+  {
+    "title": "Simplified processing steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-process-simplified"
+  },
+  {
+    "title": "Simplified call steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call-simplified"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-14-0-17-08-2021"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.14.0/"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-13-0-01-07-2021"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.13.0/"
+  },
+  {
+    "title": "process",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-process"
+  },
+  {
+    "title": "Hide test steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-hidesteps"
+  },
+  {
+    "title": "Collapse sets of test steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-collapsed"
+  },
+  {
+    "title": "group",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-group"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-12-0-03-03-2021"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.12.0/"
+  },
+  {
+    "title": "Test suites as shared resource holders",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-sharing-empty"
+  },
+  {
+    "title": "Sharing resources across test suites",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-sharing"
+  },
+  {
+    "title": "Scriptlets (standalone)",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html#scriptlets"
+  },
+  {
+    "title": "Scriptlets (test case)",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-scriptlets"
+  },
+  {
+    "title": "call",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-call"
+  },
+  {
+    "title": "RegExpProcessor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-regexpprocessor"
+  },
+  {
+    "title": "CollectionUtils",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-collectionutils"
+  },
+  {
+    "title": "TokenGenerator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-tokengenerator"
+  },
+  {
+    "title": "SchematronValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-schematronvalidator"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-11-1-11-12-2020"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.11.1/"
+  },
+  {
+    "title": "Missing variables",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-referring-to-variables-missing"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-11-0-13-11-2020"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.11.0/"
+  },
+  {
+    "title": "Stop the test session in case of error",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-stoponerror"
+  },
+  {
+    "title": "Steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-steps"
+  },
+  {
+    "title": "Output",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-output"
+  },
+  {
+    "title": "verify",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-verify"
+  },
+  {
+    "title": "Checking the result of test steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions-step-results"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-10-0-07-09-2020"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.10.0/"
+  },
+  {
+    "title": "Imports",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-imports"
+  },
+  {
+    "title": "Where can expressions be used?",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions-where"
+  },
+  {
+    "title": "if",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "while",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-while"
+  },
+  {
+    "title": "repuntil",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-repuntil"
+  },
+  {
+    "title": "foreach",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-foreach"
+  },
+  {
+    "title": "flow",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-flow"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-actors"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-actors"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-actors"
+  },
+  {
+    "title": "log",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-log"
+  },
+  {
+    "title": "Metadata",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-metadata"
+  },
+  {
+    "title": "Metadata",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-metadata"
+  },
+  {
+    "title": "Rich documentation per step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-documentation"
+  },
+  {
+    "title": "Test suites",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite"
+  },
+  {
+    "title": "Test cases",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-9-0-30-04-2020"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.9.0/"
+  },
+  {
+    "title": "Metadata",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-metadata"
+  },
+  {
+    "title": "Metadata",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-metadata"
+  },
+  {
+    "title": "assign",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-assign"
+  },
+  {
+    "title": "Variables",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-variables"
+  },
+  {
+    "title": "Defining variables from expressions",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-variables-from-expression-output"
+  },
+  {
+    "title": "Base64Processor",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-base64processor"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-8-0-20-01-2020"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.8.0/"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-actors"
+  },
+  {
+    "title": "verify",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-verify"
+  },
+  {
+    "title": "Test steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps"
+  },
+  {
+    "title": "Rich documentation per step",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps-common-documentation"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-7-2-11-12-2019"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.7.2/"
+  },
+  {
+    "title": "Expressions and templates",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions-template-files"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-7-0-07-10-2019"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.7.0/"
+  },
+  {
+    "title": "Referring to configuration parameters",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-configuration"
+  },
+  {
+    "title": "Referring to configuration parameters",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-configuration"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-actors"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-actors"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-6-1-14-06-2019"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.6.1/"
+  },
+  {
+    "title": "Expressions and templates",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions-template-files"
+  },
+  {
+    "title": "TokenGenerator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-tokengenerator"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-6-0-29-05-2019"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.6.0/"
+  },
+  {
+    "title": "UDPMessaging",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-udpmessaging"
+  },
+  {
+    "title": "Checking whether a specific step succeeded",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions-step-success"
+  },
+  {
+    "title": "Test steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-steps"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "bptxn",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-bptxn"
+  },
+  {
+    "title": "process",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-process"
+  },
+  {
+    "title": "TokenGenerator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-tokengenerator"
+  },
+  {
+    "title": "XmlMatchValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xmlmatchvalidator"
+  },
+  {
+    "title": "Variables",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-variables"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-5-0-06-11-2018"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.5.0/"
+  },
+  {
+    "title": "XPathValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xpathvalidator"
+  },
+  {
+    "title": "XPathValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-xpathvalidator"
+  },
+  {
+    "title": "StringValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-stringvalidator"
+  },
+  {
+    "title": "RegExpValidator",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-regexpvalidator"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "Preliminary",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-preliminary"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "Preliminary",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-preliminary"
+  },
+  {
+    "title": "Imports",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-imports"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-actors"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-actors"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-actors"
+  },
+  {
+    "title": "exit",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-exit"
+  },
+  {
+    "title": "if",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-if"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-4-1-28-09-2018"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.4.1/"
+  },
+  {
+    "title": "HttpMessaging",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-httpmessaging"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-3-0-25-05-2018"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.3.0/"
+  },
+  {
+    "title": "btxn",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-btxn"
+  },
+  {
+    "title": "bptxn",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-bptxn"
+  },
+  {
+    "title": "btxn",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-btxn"
+  },
+  {
+    "title": "send",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-send"
+  },
+  {
+    "title": "receive",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-receive"
+  },
+  {
+    "title": "listen",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-listen"
+  },
+  {
+    "title": "bptxn",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-bptxn"
+  },
+  {
+    "title": "verify",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-verify"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "interact",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-interact"
+  },
+  {
+    "title": "foreach",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-foreach"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html#test-suite-actors"
+  },
+  {
+    "title": "Specifying the handler implementation",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-implementation"
+  },
+  {
+    "title": "receive",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html#tdl-step-receive"
+  },
+  {
+    "title": "Specifying the handler implementation",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-implementation"
+  },
+  {
+    "title": "SoapMessaging",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html#handlers-soapmessaging"
+  },
+  {
+    "title": "Metadata",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-metadata"
+  },
+  {
+    "title": "Actors",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html#test-case-actors"
+  },
+  {
+    "title": "Domain configuration parameters",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html#test-case-expressions-domain"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html#release-1-2-0-18-03-2018"
+  },
+  {
+    "title": "here",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/1.2.0/"
+  }
+]

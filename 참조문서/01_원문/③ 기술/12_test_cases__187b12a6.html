@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test cases &mdash; GITB TDL Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.css" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d4340937"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Scriptlets" href="../scriptlets/index.html" />
+    <link rel="prev" title="Test suites" href="../testsuite/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GITB TDL Documentation
+              <img src="../_static/logo_itb.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                GITB TDL version 1.30.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helloWorld/index.html">Hello world</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testsuite/index.html">Test suites</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Test cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#elements">Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#metadata">Metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dependencies">dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#documentation">documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scopes">scopes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update">update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tags">tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#specification">specification</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#imports">Imports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preliminary">Preliminary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#actors">Actors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#steps">Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#test-case-logging">Test case logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#available-steps">Available steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#output">Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scriptlets">Scriptlets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptlets/index.html">Scriptlets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/index.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../expressions/index.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constructs/index.html">Test steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handlers/index.html">Test step handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Example test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Release history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GITB TDL Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Test cases</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="test-cases">
+<span id="test-case"></span><span id="index-0"></span><h1>Test cases<a class="headerlink" href="#test-cases" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Test cases are the means by which a specific testing scenario is implemented. One or more test cases form the content of a test suite.
+The following example represents a complete, simple test case for the validation of an invoice that is uploaded by a user.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase1&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>UBL<span class="w"> </span>invoice<span class="w"> </span>validation<span class="w"> </span>1<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:description&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>to<span class="w"> </span>verify<span class="w"> </span>the<span class="w"> </span>correctness<span class="w"> </span>of<span class="w"> </span>a<span class="w"> </span>UBL<span class="w"> </span>invoice.<span class="w"> </span>The<span class="w"> </span>invoice<span class="w"> </span>is<span class="w"> </span>provided<span class="w"> </span>manually<span class="w"> </span>through<span class="w"> </span>user<span class="w"> </span>upload.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="w">    </span><span class="nt">&lt;imports&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;schema&quot;</span><span class="nt">&gt;</span>artifacts/UBL/maindoc/UBL-Invoice-2.1.xsd<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;schematron&quot;</span><span class="nt">&gt;</span>artifacts/BII/BII_CORE/BIICORE-UBL-T10-V1.0.xsl<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/imports&gt;</span>
+<span class="w">    </span><span class="nt">&lt;actors&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;User&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;User&quot;</span><span class="w"> </span><span class="na">role=</span><span class="s">&quot;SUT&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Step 1. Request the user to upload the UBL invoice.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;interact</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;userData&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;UBL invoice upload&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;request</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;invoice&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Upload the UBL invoice to validate&quot;</span><span class="w"> </span><span class="na">inputType=</span><span class="s">&quot;UPLOAD&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/interact&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Step 2. Validate the uploaded invoice.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XmlValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate invoice&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>$userData{invoice}<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xsd&quot;</span><span class="nt">&gt;</span>$schema<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;schematron&quot;</span><span class="nt">&gt;</span>$schematron<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="w">    </span><span class="nt">&lt;output&gt;</span>
+<span class="w">        </span><span class="nt">&lt;failure&gt;</span>
+<span class="w">            </span><span class="nt">&lt;default&gt;</span>&quot;The<span class="w"> </span>test<span class="w"> </span>session<span class="w"> </span>resulted<span class="w"> </span>in<span class="w"> </span>a<span class="w"> </span>failure.<span class="w"> </span>Please<span class="w"> </span>check<span class="w"> </span>the<span class="w"> </span>validation<span class="w"> </span>reports<span class="w"> </span>and<span class="w"> </span>apply<span class="w"> </span>required<span class="w"> </span>corrections.&quot;<span class="nt">&lt;/default&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/failure&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/output&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p id="index-13"><span id="index-12"></span><span id="index-11"></span><span id="index-10"></span><span id="index-9"></span><span id="index-8"></span><span id="index-7"></span><span id="index-6"></span><span id="index-5"></span><span id="index-4"></span><span id="index-3"></span><span id="index-2"></span><span id="index-1"></span>The following table provides an overview of the attributes and child elements that a <code class="docutils literal notranslate"><span class="pre">testcase</span></code> may have. A more detailed discussion per case
+follows in the subsequent sections.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;disabled</p></th>
+<td><p>no</p></td>
+<td><p>A boolean flag indicating whether this test case is disabled (default is “false”). Disabled test cases cannot be executed and any existing test results don’t count towards a conformance statement’s status.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;id</p></th>
+<td><p>yes</p></td>
+<td><p>A string to uniquely identify the test case by. This is referenced in the test suite XML.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;optional</p></th>
+<td><p>no</p></td>
+<td><p>A boolean flag indicating whether this test case is optional (default is “false”). Optional test cases may be executed but their results don’t count towards a conformance statement’s status.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;supportsParallelExecution</p></th>
+<td><p>no</p></td>
+<td><p>A boolean flag indicating whether this test case may be executed in parallel with other test cases for a given SUT (default is “true”).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>actors</p></th>
+<td><p>yes</p></td>
+<td><p>The set of actors that this test case refers to.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>imports</p></th>
+<td><p>no</p></td>
+<td><p>An optional set of imports used to load additional resources from the test suite.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>metadata</p></th>
+<td><p>yes</p></td>
+<td><p>A block containing the metadata used to describe the test case.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>namespaces</p></th>
+<td><p>no</p></td>
+<td><p>An optional set of namespace declarations to define the namespace prefixes used in the test case’s expressions.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>output</p></th>
+<td><p>no</p></td>
+<td><p>Definition of an output message to display for the overall test session.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>preliminary</p></th>
+<td><p>no</p></td>
+<td><p>An optional set of user interaction steps to display before the test session starts.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>scriptlets</p></th>
+<td><p>no</p></td>
+<td><p>Optional named groups of test steps which can be used within the test case.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>steps</p></th>
+<td><p>yes</p></td>
+<td><p>The sequence of steps that this test case foresees.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>variables</p></th>
+<td><p>no</p></td>
+<td><p>An optional set of variables that are used in the test case.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute is important in uniquely identifying the test case within a given test suite, and needs to be referenced by the
+<a class="reference internal" href="../testsuite/index.html#test-suite"><span class="std std-ref">test suite</span></a> if it is to be considered. It is not presented to normal users, only administrators, and is used when
+<a class="reference internal" href="../testsuite/index.html#test-suite-deploying"><span class="std std-ref">uploading a new version of a test suite</span></a> to determine whether the test case definition serves as an update to an existing
+test case.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">supportsParallelExecution</span></code> attribute is important in determining how the test case is handled in batch background executions (i.e. not executions
+that are interactively launched and followed by a tester). If this is set to “true”, the default value considered if missing, the test case is assumed
+to be able to correctly function while other test cases are being executed in parallel for the same SUT. This means that the design of the test case
+caters for such concurrent sessions and is able to correctly map exchanged messages to sessions. This is not always possible to do, especially in
+scenarios where messaging is initiated from the SUT (not by the Test Bed) or are asynchronous in nature.</p>
+<p>If the test case cannot correctly handle such concurrency, you need to set <code class="docutils literal notranslate"><span class="pre">supportsParallelExecution</span></code> to “true”. Doing so instructs the test
+engine to always execute the given test case in isolation. Any ongoing test session will first need to complete before the current test case is executed
+and its own test session will itself need to complete before executing any other test cases. The order of execution of test cases when making such
+considerations is defined by their <a class="reference internal" href="../testsuite/index.html#test-suite-test-cases"><span class="std std-ref">declaration order</span></a> in the <a class="reference internal" href="../testsuite/index.html#test-suite"><span class="std std-ref">test suite</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When <code class="docutils literal notranslate"><span class="pre">supportsParallelExecution</span></code> is set to “false”, the test case’s non-parallel execution is honoured only within the context of a single batch
+execution of a test suite. The flag becomes ineffective if the tester explicitly launches separate test sessions in parallel.</p>
+</div>
+</section>
+<section id="elements">
+<h2>Elements<a class="headerlink" href="#elements" title="Link to this heading"></a></h2>
+<p>We will now see how a test case breaks down into its individual sections and discuss the purpose of each.</p>
+<section id="metadata">
+<span id="test-case-metadata"></span><span id="index-24"></span><span id="index-23"></span><span id="index-22"></span><span id="index-21"></span><span id="index-20"></span><span id="index-19"></span><span id="index-18"></span><span id="index-17"></span><span id="index-16"></span><span id="index-15"></span><span id="index-14"></span><h3>Metadata<a class="headerlink" href="#metadata" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">metadata</span></code> element is basically the same as the one defined for the test suite <a class="reference internal" href="../testsuite/index.html#test-suite-metadata"><span class="std std-ref">Metadata</span></a>. Its purpose is to provide basic information
+about the test case to help users understand its purpose. Its structure is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>authors</p></th>
+<td><p>no</p></td>
+<td><p>A string to indicate the test case’s authors.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>dependencies</p></th>
+<td><p>no</p></td>
+<td><p>One or more <code class="docutils literal notranslate"><span class="pre">dependency</span></code> elements to record information on the test case’s dependencies.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>description</p></th>
+<td><p>no</p></td>
+<td><p>A string to provide a user-friendly description of the test case that is displayed to users.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>documentation</p></th>
+<td><p>no</p></td>
+<td><p>Rich text content that provides further information on the current test case.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>lastModified</p></th>
+<td><p>no</p></td>
+<td><p>A string acting as an indication of the last modification time for the test case.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>name</p></th>
+<td><p>yes</p></td>
+<td><p>The name of the test case that is used to identify it to users.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>published</p></th>
+<td><p>no</p></td>
+<td><p>A string acting as an indication of the test case’s publishing time.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>scopes</p></th>
+<td><p>no</p></td>
+<td><p>One or more <code class="docutils literal notranslate"><span class="pre">scope</span></code> elements to record information on the test case’s intended scope.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>specification</p></th>
+<td><p>no</p></td>
+<td><p>Optional information regarding the test case’s normative specification reference.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>tags</p></th>
+<td><p>no</p></td>
+<td><p>Optional tags used to record additional metadata for the test case and visually highlight its attributes.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>type</p></th>
+<td><p>no</p></td>
+<td><p>Either “CONFORMANCE” (the default) or “INTEROPERABILITY”. “INTEROPERABILITY” is used when more than one actor are defined as SUTs.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>update</p></th>
+<td><p>no</p></td>
+<td><p>Instructions determining the default choices when an update of this test case is taking place.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>version</p></th>
+<td><p>no</p></td>
+<td><p>A string that indicates the test case’s version.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>GITB software support:</strong> The test case <code class="docutils literal notranslate"><span class="pre">type</span></code> is configured as “CONFORMANCE” (the default value) as the
+“INTEROPERABILITY” type is not supported. Furthermore, the <code class="docutils literal notranslate"><span class="pre">lastModified</span></code> is used only for display purposes for administrators,
+whereas the <code class="docutils literal notranslate"><span class="pre">version</span></code>, <code class="docutils literal notranslate"><span class="pre">authors</span></code>, <code class="docutils literal notranslate"><span class="pre">dependencies</span></code>, <code class="docutils literal notranslate"><span class="pre">published</span></code> and <code class="docutils literal notranslate"><span class="pre">scopes</span></code> values are recorded but never used or displayed.</p>
+</div>
+<section id="dependencies">
+<span id="test-case-metadata-dependencies"></span><span id="index-29"></span><span id="index-28"></span><span id="index-27"></span><span id="index-26"></span><span id="index-25"></span><h4>dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> element serves to include metadata on possible dependencies that this test case might mave, such as the existence of
+test services or other supporting software. It contains one or more <code class="docutils literal notranslate"><span class="pre">dependency</span></code> elements with the following structure:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>description</p></th>
+<td><p>no</p></td>
+<td><p>A free text describing the nature of this dependency.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>identifier</p></th>
+<td><p>no</p></td>
+<td><p>A unique identifier for the dependency (if applicable).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>uri</p></th>
+<td><p>no</p></td>
+<td><p>A remote URI reference with further information on the dependency.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following example illustrates how dependency metadata could be included in a test case:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">  </span><span class="nt">&lt;gitb:name&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>1<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;gitb:description&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>description.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="hll"><span class="w">  </span><span class="nt">&lt;gitb:dependencies&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;gitb:dependency&gt;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">&lt;gitb:identifier&gt;</span>DEP_1<span class="nt">&lt;/gitb:identifier&gt;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">&lt;gitb:description&gt;</span>Description<span class="w"> </span>for<span class="w"> </span>dependency.<span class="nt">&lt;/gitb:description&gt;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">&lt;gitb:uri&gt;</span>https://wiki.test.org/dep1<span class="nt">&lt;/gitb:uri&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;/gitb:dependency&gt;</span>
+</span><span class="hll"><span class="w">  </span><span class="nt">&lt;/gitb:dependencies&gt;</span>
+</span><span class="nt">&lt;/metadata&gt;</span>
+</pre></div>
+</div>
+<p>Dependency metadata is not currently leveraged in the Test Bed, and is only recorded as metadata in the test case descriptor.</p>
+</section>
+<section id="documentation">
+<span id="test-case-metadata-documentation"></span><span id="index-33"></span><span id="index-32"></span><span id="index-31"></span><span id="index-30"></span><h4>documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">documentation</span></code> element complements the test case’s <code class="docutils literal notranslate"><span class="pre">description</span></code> by allowing the author to include extended rich text documentation as HTML. The structure of this element is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>import</p></th>
+<td><p>no</p></td>
+<td><p>A reference to a separate file within the test suite archive that defines the documentation content.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>from</p></th>
+<td><p>no</p></td>
+<td><p>The identifier of a test suite from which the <code class="docutils literal notranslate"><span class="pre">import</span></code> file will be loaded. If unspecified the current test suite is assumed.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>encoding</p></th>
+<td><p>no</p></td>
+<td><p>In case an <code class="docutils literal notranslate"><span class="pre">import</span></code> reference is defined this can be used to specify the file’s encoding. If not provided <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> is considered.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Using the above attributes to specify a reference to a separate file is not mandatory. The documentation’s content can also be provided as the element’s text content,
+typically enclosed within a CDATA section if this includes HTML elements (in which case the <code class="docutils literal notranslate"><span class="pre">from</span></code>, <code class="docutils literal notranslate"><span class="pre">import</span></code> and <code class="docutils literal notranslate"><span class="pre">encoding</span></code> attributes are omitted).
+When loading documentation from a separate file, it is also possible to lookup this file from another test suite. This is
+done by specifying as the value of the <code class="docutils literal notranslate"><span class="pre">from</span></code> attribute the <code class="docutils literal notranslate"><span class="pre">id</span></code> of the target test suite. This is used to lookup the
+target test suite as follows:</p>
+<ol class="arabic simple">
+<li><p>Look for the test suite in the same <strong>specification</strong> as the current test case.</p></li>
+<li><p>If not found in the same specification, look for the test suite in the other specifications of the test case’s <strong>domain</strong>.
+If across specifications multiple matching test suites are found, one of them will be arbitrarily picked. To avoid such
+a scenario it is obvious that you should ensure test suites used to load shared resources can be uniquely identified.</p></li>
+</ol>
+<p>This documentation can provide further information on the context of the test case, diagrams or reference information that are useful to understand how it is to be completed or its purpose within the
+overall specification. The content supplied supports several HTML features:</p>
+<ul class="simple">
+<li><p>Structure elements (e.g. headings, text blocks, lists).</p></li>
+<li><p>In-line styling.</p></li>
+<li><p>Tables.</p></li>
+<li><p>Links.</p></li>
+<li><p>Images.</p></li>
+</ul>
+<p>The simplest way to provide such information is to enclose the HTML content in a CDATA section to ensure the XML remains well-formed. The
+following sample provides an example of this approach:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;TS1-TC1&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>1<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:description&gt;</span>A<span class="w"> </span>short<span class="w"> </span>description<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>test<span class="w"> </span>case<span class="w"> </span>to<span class="w"> </span>offer<span class="w"> </span>a<span class="w"> </span>short<span class="w"> </span>summary<span class="w"> </span>of<span class="w"> </span>its<span class="w"> </span>purpose.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:documentation&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">            &lt;p&gt;Extended documentation for &lt;b&gt;Test case 1&lt;/b&gt;&lt;/p&gt;</span>
+<span class="cp">            &lt;p&gt;This is an example to support the &lt;a href=&quot;https://www.itb.ec.europa.eu/docs/tdl/latest&quot;&gt;GITB TDL docs&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="cp">        ]]&gt;</span><span class="nt">&lt;/gitb:documentation&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>Note that documentation such as this is also supported for:</p>
+<ul class="simple">
+<li><p>The overall <a class="reference internal" href="../testsuite/index.html#test-suite-metadata"><span class="std std-ref">test suite</span></a>.</p></li>
+<li><p>Individual <a class="reference internal" href="../constructs/index.html#tdl-steps-common-documentation"><span class="std std-ref">test case steps</span></a>.</p></li>
+</ul>
+</section>
+<section id="scopes">
+<span id="test-case-metadata-scopes"></span><span id="index-38"></span><span id="index-37"></span><span id="index-36"></span><span id="index-35"></span><span id="index-34"></span><h4>scopes<a class="headerlink" href="#scopes" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">scopes</span></code> element serves to include metadata on the test case’s scope, such as functional coverage or legal articles.
+It contains one or more <code class="docutils literal notranslate"><span class="pre">scope</span></code> elements with the following structure:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>description</p></th>
+<td><p>no</p></td>
+<td><p>A free text describing the covered scope.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>identifier</p></th>
+<td><p>no</p></td>
+<td><p>A unique identifier for the scope (if applicable).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>uri</p></th>
+<td><p>no</p></td>
+<td><p>A remote URI reference with further information on the covered scope.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following example illustrates how scope metadata could be included in a test case:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">  </span><span class="nt">&lt;gitb:name&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>1<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;gitb:description&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>description.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="hll"><span class="w">  </span><span class="nt">&lt;gitb:scopes&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;gitb:scope&gt;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">&lt;gitb:identifier&gt;</span>Invoicing<span class="nt">&lt;/gitb:identifier&gt;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">&lt;gitb:description&gt;</span>Description<span class="w"> </span>for<span class="w"> </span>this<span class="w"> </span>scope.<span class="nt">&lt;/gitb:description&gt;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">&lt;gitb:uri&gt;</span>https://wiki.test.org/invoicing<span class="nt">&lt;/gitb:uri&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;/gitb:scope&gt;</span>
+</span><span class="hll"><span class="w">  </span><span class="nt">&lt;/gitb:scopes&gt;</span>
+</span><span class="nt">&lt;/metadata&gt;</span>
+</pre></div>
+</div>
+<p>Scope metadata is not currently leveraged in the Test Bed, and is only recorded as metadata in the test case descriptor.</p>
+</section>
+<section id="update">
+<span id="test-case-metadata-update"></span><span id="index-41"></span><span id="index-40"></span><span id="index-39"></span><h4>update<a class="headerlink" href="#update" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">update</span></code> element allows the test suite’s developer to prescribe what should happen when this test case is being uploaded and
+an existing test case with the same identifier is found. Through this you can define if the test case’s existing metadata
+(e.g. name, description and documentation) should be updated to match the definitions from the new archive. In addition, you can
+specify whether the testing history linked to the test case being updated should be reset. Note that these choices represent the
+default selected options during the test suite upload, and can always be verified and replaced by the Test Bed’s operator.</p>
+<p>It could be interesting to use the <code class="docutils literal notranslate"><span class="pre">update</span></code> element if the test developer is not the one performing the test suite upload. Doing so,
+avoids providing detailed instruction to operations staff, by already encoding the relevant choices within the test suite archive itself.</p>
+<p>The structure of the <code class="docutils literal notranslate"><span class="pre">update</span></code> element is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;resetTestHistory</p></th>
+<td><p>no</p></td>
+<td><p>A boolean value determining whether any previously executed test sessions for the test case being updated should be considered as obsolete (default is “false”).</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;updateMetadata</p></th>
+<td><p>no</p></td>
+<td><p>A boolean value determining whether the existing test case’s metadata should be updated based on the new archive (default is “false”).</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following example shows how you can specify that the test case’s metadata should be updated to reflect the new values in the archive
+(see attribute <code class="docutils literal notranslate"><span class="pre">updateMetadata</span></code>). Also we specify here that any existing test sessions should be considered obsolete, forcing users to
+re-execute their tests for the updated version (see attribute <code class="docutils literal notranslate"><span class="pre">resetTestHistory</span></code>).</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;TS1-TC1&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>1<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:description&gt;</span>A<span class="w"> </span>short<span class="w"> </span>description<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>test<span class="w"> </span>case<span class="w"> </span>to<span class="w"> </span>offer<span class="w"> </span>a<span class="w"> </span>short<span class="w"> </span>summary<span class="w"> </span>of<span class="w"> </span>its<span class="w"> </span>purpose.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="hll"><span class="w">        </span><span class="nt">&lt;gitb:update</span><span class="w"> </span><span class="na">updateMetadata=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">resetTestHistory=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>Relevant options to manage updates at test suite level are possible through a similar <code class="docutils literal notranslate"><span class="pre">update</span></code> element of the <a class="reference internal" href="../testsuite/index.html#test-suite-metadata-update"><span class="std std-ref">test suite</span></a> definition.</p>
+</section>
+<section id="tags">
+<span id="test-case-metadata-tags"></span><span id="index-46"></span><span id="index-45"></span><span id="index-44"></span><span id="index-43"></span><span id="index-42"></span><h4>tags<a class="headerlink" href="#tags" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">tags</span></code> element allows you to specify arbitrary additional metadata for the test case that may help better distinguish it for users. You
+may also use the same tags across multiple test cases as a means of classifying them based on common traits. The meaning you provide to such
+tags is fully up to you, but typical examples would be to highlight test cases linked to “security” or test cases focusing on “unhappy flow”
+scenarios. Other than highlighting certain traits, tags have no impact on a test case’s execution or result.</p>
+<p>The structure of the <code class="docutils literal notranslate"><span class="pre">tags</span></code> element is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>tag</p></th>
+<td><p>yes</p></td>
+<td><p>One or more elements representing the test case’s tags.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Each <code class="docutils literal notranslate"><span class="pre">tag</span></code> element has the following structure:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;background</p></th>
+<td><p>no</p></td>
+<td><p>A string for the <a class="reference external" href="https://en.wikipedia.org/wiki/Web_colors">hexadecimal code</a> of the tag’s background colour. If not specified a generic default colour will be selected by the Test Bed.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;foreground</p></th>
+<td><p>no</p></td>
+<td><p>A string for the <a class="reference external" href="https://en.wikipedia.org/wiki/Web_colors">hexadecimal code</a> of the tag’s foreground colour (its text). If not specified a generic default colour will be selected by the Test Bed.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;name</p></th>
+<td><p>yes</p></td>
+<td><p>A string for the name of the tag to be displayed. Although no restrictions are applied this is expected to be concise.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">tag</span></code> element can also have an optional text content. If this is provided it is considered as a explanation over the meaning of this tag and
+is treated depending on how the tag is viewed. If through the Test Bed’s user interface this would be a tooltip, otherwise in a PDF report
+this would be a description added in a legend section.</p>
+<p>The following example illustrates the definition of two tags to be displayed for a test case. The first one highlights that it relates to
+security features and is expressed as a white-on-red “security” label. The second one specifies a white-on-black tag to
+highlight that this is a new test case in “version 2.0”.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;TS1-TC1&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>1<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:description&gt;</span>A<span class="w"> </span>short<span class="w"> </span>description<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>test<span class="w"> </span>case<span class="w"> </span>to<span class="w"> </span>offer<span class="w"> </span>a<span class="w"> </span>short<span class="w"> </span>summary<span class="w"> </span>of<span class="w"> </span>its<span class="w"> </span>purpose.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="hll"><span class="w">        </span><span class="nt">&lt;gitb:tags&gt;</span>
+</span><span class="hll"><span class="w">            </span><span class="nt">&lt;gitb:tag</span><span class="w"> </span><span class="na">foreground=</span><span class="s">&quot;#FFFFFF&quot;</span><span class="w"> </span><span class="na">background=</span><span class="s">&quot;#FF2E00&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;security&quot;</span><span class="nt">&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>related<span class="w"> </span>to<span class="w"> </span>security<span class="w"> </span>features.<span class="nt">&lt;/gitb:tag&gt;</span>
+</span><span class="hll"><span class="w">            </span><span class="nt">&lt;gitb:tag</span><span class="w"> </span><span class="na">foreground=</span><span class="s">&quot;#FFFFFF&quot;</span><span class="w"> </span><span class="na">background=</span><span class="s">&quot;#000000&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;version 2.0&quot;</span><span class="nt">&gt;</span>New<span class="w"> </span>test<span class="w"> </span>case<span class="w"> </span>added<span class="w"> </span>in<span class="w"> </span>version<span class="w"> </span>2.0.<span class="nt">&lt;/gitb:tag&gt;</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&lt;/gitb:tags&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="specification">
+<span id="test-case-metadata-specification"></span><span id="index-50"></span><span id="index-49"></span><span id="index-48"></span><span id="index-47"></span><h4>specification<a class="headerlink" href="#specification" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">specification</span></code> element is an optional part of a test case’s metadata, that allows you to record in a structured manner a normative specification
+reference for the test case. Besides being present in the test case definition, this information will also be rendered appropriately in the test case’s
+on-screen display and in reports.</p>
+<p>The structure of the <code class="docutils literal notranslate"><span class="pre">specification</span></code> element is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>description</p></th>
+<td><p>no</p></td>
+<td><p>A text describing the referred specification.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>link</p></th>
+<td><p>no</p></td>
+<td><p>A link to allow navigation to the referred specification’s online documentation.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>reference</p></th>
+<td><p>no</p></td>
+<td><p>The reference identifier or code.</p></td>
+</tr>
+</tbody>
+</table>
+<p>All the above elements are optional, meaning that you can choose to provide any documentation you see fit for the specification. Depending on what is provided,
+this information will be displayed accordingly, presenting for example the reference as a link if both are provided, or presenting only a link icon if only the
+link is present.</p>
+<p>The following example illustrates how this metadata could be used to identify the specification section relevant to the test case and point to its online
+documentation.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;TS1-TC1&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>1<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:description&gt;</span>A<span class="w"> </span>short<span class="w"> </span>description<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>test<span class="w"> </span>case<span class="w"> </span>to<span class="w"> </span>offer<span class="w"> </span>a<span class="w"> </span>short<span class="w"> </span>summary<span class="w"> </span>of<span class="w"> </span>its<span class="w"> </span>purpose.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="hll"><span class="w">        </span><span class="nt">&lt;gitb:specification&gt;</span>
+</span><span class="hll"><span class="w">            </span><span class="nt">&lt;gitb:reference&gt;</span>Section-1.2.A<span class="nt">&lt;/gitb:reference&gt;</span>
+</span><span class="hll"><span class="w">            </span><span class="nt">&lt;gitb:description&gt;</span>Security<span class="w"> </span>requirements<span class="nt">&lt;/gitb:description&gt;</span>
+</span><span class="hll"><span class="w">            </span><span class="nt">&lt;gitb:link&gt;</span>https://my.spec.wiki.org<span class="nt">&lt;/gitb:link&gt;</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&lt;/gitb:specification&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Similar specification reference information can also be added to <a class="reference internal" href="../testsuite/index.html#test-suite-metadata-specification"><span class="std std-ref">test suites</span></a>.</p>
+</div>
+</section>
+</section>
+<section id="namespaces">
+<span id="test-case-namespaces"></span><span id="index-53"></span><span id="index-52"></span><span id="index-51"></span><h3>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">namespaces</span></code> optional element is used to declare namespace mappings for use within the test case. The primary use cases of these namespaces is to allow
+the definition of prefixes used in XML and XPath expressions. In principle they could be applied to any type of language or expression that has such a concept
+(e.g. JSON-LD, Turtle) but currently their use is limited to XML.</p>
+<p>Each namespace to declare is defined as a child <code class="docutils literal notranslate"><span class="pre">ns</span></code> element with the following structure:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;prefix</p></th>
+<td><p>yes</p></td>
+<td><p>The namespace prefix that will be used in expressions.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The value to which the <code class="docutils literal notranslate"><span class="pre">prefix</span></code> is mapped is provided as the <code class="docutils literal notranslate"><span class="pre">ns</span></code> element’s text content.</p>
+<p>Namespaces declared using this approach can be used in two cases:</p>
+<ul class="simple">
+<li><p>Within any GITB TDL step that supports <a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">expressions</span></a>.</p></li>
+<li><p>As the expression to apply for the <a class="reference internal" href="../handlers/index.html#handlers-xpathvalidator"><span class="std std-ref">XPathValidator</span></a> embedded validation handler.</p></li>
+</ul>
+<p>The following example illustrates how namespaces can be used for XML-based processing. The sample test case:</p>
+<ol class="arabic simple">
+<li><p>Requests an invoice from the user.</p></li>
+<li><p>Extracts the invoice’s type using namespaces in an <a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign step</span></a> and then logs it.</p></li>
+<li><p>Validates the invoice’s type using namespaces with the <a class="reference internal" href="../handlers/index.html#handlers-xpathvalidator"><span class="std std-ref">XPathValidator</span></a>.</p></li>
+</ol>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
+<span class="cm">        Declare the namespaces to use used in XPath expressions.</span>
+<span class="cm">    --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;namespaces&gt;</span>
+<span class="w">       </span><span class="nt">&lt;ns</span><span class="w"> </span><span class="na">prefix=</span><span class="s">&quot;inv&quot;</span><span class="nt">&gt;</span>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2<span class="nt">&lt;/ns&gt;</span>
+<span class="w">       </span><span class="nt">&lt;ns</span><span class="w"> </span><span class="na">prefix=</span><span class="s">&quot;cbc&quot;</span><span class="nt">&gt;</span>urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2<span class="nt">&lt;/ns&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/namespaces&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Request the user to upload the invoice to validate.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;interact</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;input&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Upload invoice&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;request</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;File upload&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xml&quot;</span><span class="w"> </span><span class="na">inputType=</span><span class="s">&quot;UPLOAD&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/interact&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Use an XPath expression to extract the invoice type as an XML element.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;invoiceTypeElement&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$input{xml}&quot;</span><span class="nt">&gt;</span>/inv:Invoice/cbc:InvoiceTypeCode<span class="nt">&lt;/assign&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Log the extracted element.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;log&gt;</span>$invoiceTypeElement<span class="nt">&lt;/log&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Use XPath to validate the invoice.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XPathValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Check invoice type&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>$input{xml}<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;expression&quot;</span><span class="nt">&gt;</span>&quot;/inv:Invoice/cbc:InvoiceTypeCode/text()<span class="w"> </span>=<span class="w"> </span>&#39;380&#39;&quot;<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="imports">
+<span id="test-case-imports"></span><span id="index-59"></span><span id="index-58"></span><span id="index-57"></span><span id="index-56"></span><span id="index-55"></span><span id="index-54"></span><h3>Imports<a class="headerlink" href="#imports" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">imports</span></code> element allows the use of arbitrary resources from the same or another test suite. This can be very useful when a test case needs to send messages
+based on a template or load a binary file that is needed as input by a messaging, processing or validation handler (e.g. a certificate). The <code class="docutils literal notranslate"><span class="pre">imports</span></code> element
+defines one or more <code class="docutils literal notranslate"><span class="pre">artifact</span></code> children with the following structure:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;encoding</p></th>
+<td><p>No</p></td>
+<td><p>In case the artefact is to be treated as text, this is the character encoding to apply when reading its bytes (default is “UTF-8”).</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;from</p></th>
+<td><p>No</p></td>
+<td><p>The identifier of another test suite from which this resource will be loaded. If unspecified the current test suite is assumed.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;name</p></th>
+<td><p>Yes</p></td>
+<td><p>The name with which this artefact will be associated to the test session context for subsequent lookups.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;type</p></th>
+<td><p>No</p></td>
+<td><p>The type as which the artefact needs to be loaded (default is <code class="docutils literal notranslate"><span class="pre">binary</span></code>).</p></td>
+</tr>
+</tbody>
+</table>
+<p>The text value of the <code class="docutils literal notranslate"><span class="pre">artifact</span></code> element is the path within the test suite from which the relevant resource will be loaded. This path may be provided as a
+fixed value or as a <a class="reference internal" href="../expressions/index.html#test-case-referring-to-variables"><span class="std std-ref">variable reference</span></a> to determine the imported resource dynamically. In case a variable reference
+is provided this should be one of the following:</p>
+<ul class="simple">
+<li><p>A reference to a configuration value (i.e. a <a class="reference internal" href="../expressions/index.html#test-case-expressions-domain"><span class="std std-ref">domain</span></a>, <a class="reference internal" href="../expressions/index.html#test-case-expressions-organisation"><span class="std std-ref">organisation</span></a>, <a class="reference internal" href="../expressions/index.html#test-case-expressions-system"><span class="std std-ref">system</span></a> or <a class="reference internal" href="../expressions/index.html#test-case-expressions-actor"><span class="std std-ref">actor</span></a> parameter).</p></li>
+<li><p>A reference to a <a class="reference internal" href="#test-case-variables"><span class="std std-ref">variable</span></a> defined in the test case. In this case the value of the variable can even be adapted during the course of the test session resulting in
+different resources depending on the point at which the import is referenced.</p></li>
+</ul>
+<p>Importing resources is not limited to the current test suite. Using the <code class="docutils literal notranslate"><span class="pre">from</span></code> attribute it is possible to define another
+test suite as the source from which to lookup the resource, specifying as the attribute’s value the identifier of the target
+test suite. The lookup of the test suite using the <code class="docutils literal notranslate"><span class="pre">from</span></code> value is carried out as follows:</p>
+<ol class="arabic simple">
+<li><p>Look for the test suite in the same <strong>specification</strong> as the test case being executed.</p></li>
+<li><p>If not found in the same specification, look for the test suite in the other specifications of the test case’s <strong>domain</strong>. If across
+specifications multiple matching test suites are found, one of them will be arbitrarily picked. To avoid such a scenario
+it is obvious that you should ensure test suites used to load shared resources can be uniquely identified.</p></li>
+</ol>
+<p>The <code class="docutils literal notranslate"><span class="pre">type</span></code> attribute is optional and defaults to <code class="docutils literal notranslate"><span class="pre">binary</span></code> denoting a general-purpose file (regardless of whether it is text-based or not). You would
+likely never need to set this explicitly, however if you choose to do so you can set it set as:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">binary</span></code>: To load the artefact as a set of bytes without additional processing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">object</span></code>: To load the artefact as a XML Document Object Model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code>: To load the artefact as a XML Schema or Schematron file.</p></li>
+</ul>
+<p>In case the file is text-based you also have the option of setting the <code class="docutils literal notranslate"><span class="pre">encoding</span></code> attribute to consider (by default set as <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>).</p>
+<p>Regarding the path to the resource, this is considered first as relative to the test suite root, and if not found, as relative
+to the test suite definition file. In both cases the resource path can be prefixed with the test suite identifier (done
+for backwards compatibility and ideally avoided for new test suites).</p>
+<p>As an example consider the following test case fragment where a XML schema is loaded and set in the session context as a variable named “ublSchema”. The
+path specified suggests that the file is named “UBL-Invoice-2.1.xsd” and exists in a folder within the test suite archive named “resources”. This example also includes
+another input whose referenced resource is defined dynamically based on an external configuration parameter (at organisation level in this case).</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;imports&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            The &quot;ublSchema&quot; is loaded from a fixed resource within the test suite.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ublSchema&quot;</span><span class="nt">&gt;</span>resources/UBL-Invoice-2.1.xsd<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            The &quot;organisationSpecificSchema&quot; is loaded dynamically based on an organisation-level configuration property named &quot;xsdToUseForOrganisation&quot;.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;organisationSpecificSchema&quot;</span><span class="nt">&gt;</span>$ORGANISATION{xsdToUseForOrganisation}<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/imports&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XmlValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate invoice against UBL 2.1 Invoice Schema&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!--</span>
+<span class="cm">                Variable $fileContent is loaded in another step.</span>
+<span class="cm">            --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>$fileContent<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xsd&quot;</span><span class="nt">&gt;</span>$ublSchema<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>It is also possible to <a class="reference internal" href="../testsuite/index.html#test-suite-sharing"><span class="std std-ref">import resources from other test suites</span></a>. To do this you use the <code class="docutils literal notranslate"><span class="pre">from</span></code> attribute identifying the
+test suite that contains the resource, in which case the provided path is resolved in the context of the other test suite.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;imports&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            The &quot;ublSchema&quot; is loaded from a fixed resource within a test suite with identifier &quot;testSuite2&quot;.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ublSchema&quot;</span><span class="w"> </span><span class="na">from=</span><span class="s">&quot;testSuite2&quot;</span><span class="nt">&gt;</span>resources/UBL-Invoice-2.1.xsd<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/imports&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Test module import:</strong> The GITB TDL schema allows also for <code class="docutils literal notranslate"><span class="pre">module</span></code> elements to be defined for the import of test modules (validation,
+messaging and processing handlers). This approach is no longer supported as it required the handler implementations to be bundled within
+the Test Bed itself. The preferred and simpler approach now is to simply define the handler in the respective test step (e.g. the <code class="docutils literal notranslate"><span class="pre">verify</span></code>
+step’s <code class="docutils literal notranslate"><span class="pre">handler</span></code> attribute for validators) without previously importing it.</p>
+</div>
+</section>
+<section id="preliminary">
+<span id="test-case-preliminary"></span><span id="index-60"></span><h3>Preliminary<a class="headerlink" href="#preliminary" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">preliminary</span></code> element allows the test case to interact with the user before the test session begins. The purpose here is to allow the
+user to provide preliminary input or be informed of certain actions that need to take place before the test session starts. In terms of structure
+and use, the <code class="docutils literal notranslate"><span class="pre">preliminary</span></code> element is a <code class="docutils literal notranslate"><span class="pre">UserInteraction</span></code> element (see <a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a>). The difference is that the interaction takes place before the
+test session actually starts.</p>
+<p>The following example shows a test case that prompts the user before starting to initialise their server and upload a configuration file.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;preliminary</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Prepare your system&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Preparation instructions&quot;</span><span class="nt">&gt;</span>&quot;Make<span class="w"> </span>sure<span class="w"> </span>your<span class="w"> </span>system<span class="w"> </span>is<span class="w"> </span>up<span class="w"> </span>and<span class="w"> </span>running&quot;<span class="nt">&lt;/instruct&gt;</span>
+<span class="w">        </span><span class="nt">&lt;request</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Provide your configuration file&quot;</span><span class="w"> </span><span class="na">contentType=</span><span class="s">&quot;BASE64&quot;</span><span class="nt">&gt;</span>$sutConfigFile<span class="nt">&lt;/request&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/preliminary&gt;</span>
+<span class="w">    </span><span class="nt">&lt;variables&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sutConfigFile&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;binary&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/variables&gt;</span>
+<span class="w">    </span><span class="nt">&lt;actors&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;User&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;User&quot;</span><span class="w"> </span><span class="na">role=</span><span class="s">&quot;SUT&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            The provided file can be referenced as $sutConfigFile</span>
+<span class="cm">        --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="actors">
+<span id="test-case-actors"></span><span id="index-72"></span><span id="index-71"></span><span id="index-70"></span><span id="index-69"></span><span id="index-68"></span><span id="index-67"></span><span id="index-66"></span><span id="index-65"></span><span id="index-64"></span><span id="index-63"></span><span id="index-62"></span><span id="index-61"></span><h3>Actors<a class="headerlink" href="#actors" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">actors</span></code> element is where the test case defines the actors involved in its steps and, importantly, their role. It
+defines the following attributes:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;adminDisplayOrder</p></th>
+<td><p>no</p></td>
+<td><p>A number indicating the relative display order of the predefined administrator actor used for <a class="reference internal" href="../constructs/index.html#tdl-step-interact-admin-interactions"><span class="std std-ref">administrator interactions</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;adminName</p></th>
+<td><p>no</p></td>
+<td><p>A custom name to display for the predefined administrator actor used for <a class="reference internal" href="../constructs/index.html#tdl-step-interact-admin-interactions"><span class="std std-ref">administrator interactions</span></a> (default is “Administrator”).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;engineDisplayOrder</p></th>
+<td><p>no</p></td>
+<td><p>A number indicating the relative display order of the predefined test engine actor used to display <a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a> and <a class="reference internal" href="../constructs/index.html#tdl-step-exit"><span class="std std-ref">exit</span></a> steps.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;engineName</p></th>
+<td><p>no</p></td>
+<td><p>A custom name to display for the predefined test engine actor used to display <a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a> and <a class="reference internal" href="../constructs/index.html#tdl-step-exit"><span class="std std-ref">exit</span></a> steps (default is “Test engine”).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;userDisplayOrder</p></th>
+<td><p>no</p></td>
+<td><p>A number indicating the relative display order of the predefined user actor used for <a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">user interactions</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;userName</p></th>
+<td><p>no</p></td>
+<td><p>A custom name to display for the predefined user actor used for <a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">user interactions</span></a> (default is the <code class="docutils literal notranslate"><span class="pre">SUT</span></code> actor’s name).</p></td>
+</tr>
+</tbody>
+</table>
+<p>Besides these attributes, the <code class="docutils literal notranslate"><span class="pre">actors</span></code> element defines one or more <code class="docutils literal notranslate"><span class="pre">actor</span></code> children to list the specification actors
+involved in the test case. Each <code class="docutils literal notranslate"><span class="pre">actor</span></code> element has the following structure:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;displayOrder</p></th>
+<td><p>no</p></td>
+<td><p>A number indicating the relative positioning that needs to be respected when displaying the actor in test case’s execution diagram. Setting this here overrides any corresponding <a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">setting at test suite level</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;id</p></th>
+<td><p>yes</p></td>
+<td><p>The actor’s unique (within the specification) ID. This must match an actor ID specified in the test suite.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;name</p></th>
+<td><p>no</p></td>
+<td><p>The name to display for the actor. This can differ from the ID to display an actor name specific to the test case. Not specifying this will default to the name for actor provided in the test suite.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;role</p></th>
+<td><p>no</p></td>
+<td><p>The actor’s role in the test case. This is “SUT” if the actor is the focus of the test case, or “SIMULATED” (the default value) if the actor is simulated by the Test Bed.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The main purpose of the <code class="docutils literal notranslate"><span class="pre">actors</span></code> element is to identify which of the <a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">actors defined in the test suite</span></a>
+is the SUT (System Under Test - the actor the target system is testing for). This is done by defining the <code class="docutils literal notranslate"><span class="pre">role</span></code> attribute as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;actors&gt;</span>
+<span class="w">      </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;sender&quot;</span><span class="w"> </span><span class="na">role=</span><span class="s">&quot;SUT&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- The &quot;SIMULATED&quot; role is considered by default. --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;receiver&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>When a test case is executed, it is presented as a series of <a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">test steps</span></a> associated to the test case’s
+<a class="reference internal" href="#test-case-actors"><span class="std std-ref">actors</span></a>. The presentation resembles a sequence diagram with the actors displayed at the top as
+the diagram’s lifelines. The displayed actors include:</p>
+<ul class="simple">
+<li><p>The actors defined in the test case using the <code class="docutils literal notranslate"><span class="pre">actor</span></code> elements.</p></li>
+<li><p>Predefined actors to represent the <strong>user</strong> (for user inputs), the <strong>administrator</strong> (for administrator inputs), and the <strong>test engine</strong> (for validations and processing steps).</p></li>
+</ul>
+<p>Actors are displayed as long as they are associated with a visible test step. For your defined actors this takes place
+by referring to them in <a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a> and <a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a> steps, whereas for
+predefined actors this involves the use of other displayed steps, notably <a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a>,
+<a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a> and <a class="reference internal" href="../constructs/index.html#tdl-step-exit"><span class="std std-ref">exit</span></a> steps.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also <a class="reference internal" href="../constructs/index.html#tdl-steps-common-step-actor"><span class="std std-ref">explicitly set the actor</span></a> under which to display each test step,
+overriding the Test Bed’s default display.</p>
+</div>
+<p>The presentation of actors, both declared in the test case and predefined ones, can be managed by adapting
+their name and relative display order. For test case actors declared in <code class="docutils literal notranslate"><span class="pre">actor</span></code> elements, you do this by setting the
+<code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">displayOrder</span></code> attributes, whereas for predefined actors you use:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adminName</span></code> and <code class="docutils literal notranslate"><span class="pre">adminDisplayOrder</span></code> for the administrator actor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userName</span></code> and <code class="docutils literal notranslate"><span class="pre">userDisplayOrder</span></code> for the user actor.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">engineName</span></code> and <code class="docutils literal notranslate"><span class="pre">engineDisplayOrder</span></code> for the test engine actor.</p></li>
+</ul>
+<p>The following example shows use of custom ordering and naming to manage the actors’ display:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
+<span class="cm">        Display first the SUT &#39;sender&#39; actor, followed by the simulated &#39;receiver&#39; actor.</span>
+<span class="cm">        Following these present the user, administrator and test engine actors (as needed).</span>
+<span class="cm">    --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;actors</span><span class="w"> </span><span class="na">userName=</span><span class="s">&quot;User&quot;</span><span class="w"> </span><span class="na">userDisplayOrder=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">adminName=</span><span class="s">&quot;Administrator&quot;</span><span class="w"> </span><span class="na">adminDisplayOrder=</span><span class="s">&quot;3&quot;</span><span class="w"> </span><span class="na">engineName=</span><span class="s">&quot;Test Bed&quot;</span><span class="w"> </span><span class="na">engineDisplayOrder=</span><span class="s">&quot;4&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;sender&quot;</span><span class="w"> </span><span class="na">role=</span><span class="s">&quot;SUT&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Message sender&quot;</span><span class="w"> </span><span class="na">displayOrder=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;receiver&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Message receiver&quot;</span><span class="w"> </span><span class="na">displayOrder=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="variables">
+<span id="test-case-variables"></span><span id="index-76"></span><span id="index-75"></span><span id="index-74"></span><span id="index-73"></span><h3>Variables<a class="headerlink" href="#variables" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Implicit variables:</strong> Variables are automatically created for new <a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assignments</span></a> and you should typically never need
+to declare them explicitly. The exception is test cases <a class="reference external" href="https://www.itb.ec.europa.eu/docs/itb-ou/latest/api/index.html#start">executed via API</a>
+that are designed to work with client-provided inputs. Such inputs must map to test case variables.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">variables</span></code> element can be defined to create one or more variables that will be used during the test case’s execution. It contains one
+or more <code class="docutils literal notranslate"><span class="pre">var</span></code> elements, one per variable, with the following structure:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;name</p></th>
+<td><p>yes</p></td>
+<td><p>The name of the variable. It is with this name that the variable can be referenced.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;type</p></th>
+<td><p>yes</p></td>
+<td><p>The type of the variable. One of the GITB data types can be used (see <a class="reference internal" href="../types/index.html#test-case-types"><span class="std std-ref">Types</span></a>).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>value</p></th>
+<td><p>no</p></td>
+<td><p>One or more values for the variable. More than one values are applicable in case of a <code class="docutils literal notranslate"><span class="pre">map</span></code> or <code class="docutils literal notranslate"><span class="pre">list</span></code> type.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Variables can be used to record arbitrary information for the duration of the test session. These can be fixed values defined along with the
+variable’s definition or dynamically produced values resulting from test steps. The way to reference variables is defined based on the expression
+language in place. Using the default XPath 3.0 expression language a variable named <code class="docutils literal notranslate"><span class="pre">myVar</span></code> is referenced as <code class="docutils literal notranslate"><span class="pre">$myVar</span></code>. More information on
+expressions to reference variable values is provided in <a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">Expressions</span></a>.</p>
+<p>Definition of variables using the <code class="docutils literal notranslate"><span class="pre">variables</span></code> element is <strong>optional</strong> given that test steps resulting in output will automatically create
+variables as needed to store the output in the test session context. Such steps include:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">Assign steps</span></a> that define new values or calculate expressions.</p></li>
+<li><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">User interaction steps</span></a> that request data from the user.</p></li>
+<li><p>Messaging steps to record the output of a <a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a> or a <a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a>.</p></li>
+<li><p><a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">Processing steps</span></a> to record the output of the process.</p></li>
+</ul>
+<p>The type of the automatically created variables in the above cases is inferred from the type of the relevant data or expression result. For example,
+when assigning a string to a variable, this will automatically be set with a <code class="docutils literal notranslate"><span class="pre">string</span></code> type. Considering this, you would use the <code class="docutils literal notranslate"><span class="pre">variables</span></code> element
+to predefine variables in the following cases:</p>
+<ul class="simple">
+<li><p>To predefine all variables if you prefer this from the perspective of code organisation.</p></li>
+<li><p>To explicitly set the type of variables in cases where the automatic determination is not suitable (e.g. force a <code class="docutils literal notranslate"><span class="pre">string</span></code> type for a numeric value).</p></li>
+<li><p>To cover exceptional cases where automatic type determination is not possible.</p></li>
+<li><p>To provide initial values to variables.</p></li>
+<li><p>To cover inputs provided for test sessions started via <a class="reference external" href="https://www.itb.ec.europa.eu/docs/itb-ou/latest/api/index.html#start">REST API</a>.</p></li>
+</ul>
+<p>For examples of automatic variable definition refer to the corresponding steps as well as the documentation on <a class="reference internal" href="../expressions/index.html#test-case-variables-from-expression-output"><span class="std std-ref">expressions</span></a>.
+Coming back to explicitly defined variables, the following example shows two such cases, one to store a user-uploaded file and another to store a part of it,
+extracted via XPath:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;imports&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;schemaFile&quot;</span><span class="nt">&gt;</span>artifacts/UBL/maindoc/UBL-Invoice-2.1.xsd<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/imports&gt;</span>
+<span class="w">    </span><span class="nt">&lt;variables&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;fileContent&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;targetElement&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/variables&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Store the uploaded result in the fileContent variable.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;interact</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;UBL invoice upload&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;request</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Upload the UBL invoice to validate&quot;</span><span class="w"> </span><span class="na">contentType=</span><span class="s">&quot;BASE64&quot;</span><span class="nt">&gt;</span>$fileContent<span class="nt">&lt;/request&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/interact&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Extract a part of it and store in the targetElement variable.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;$targetElement&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$fileContent&quot;</span><span class="nt">&gt;</span>/*[local-name()<span class="w"> </span>=<span class="w"> </span>&#39;testcase&#39;]/*[local-name()<span class="w"> </span>=<span class="w"> </span>&#39;steps&#39;]<span class="nt">&lt;/assign&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Pass the targetElement for validation.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XmlValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate content&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>$targetElement<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xsd&quot;</span><span class="nt">&gt;</span>$schemaFile<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>Setting a variable’s initial value is achieved using the <code class="docutils literal notranslate"><span class="pre">value</span></code> element, with one or more being used in case of a <code class="docutils literal notranslate"><span class="pre">map</span></code> or <code class="docutils literal notranslate"><span class="pre">list</span></code>
+type. The following example illustrates setting values for different variable types:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;variables&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aList&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;list[string]&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;value&gt;</span>List<span class="w"> </span>value<span class="w"> </span>1<span class="nt">&lt;/value&gt;</span>
+<span class="w">            </span><span class="nt">&lt;value&gt;</span>List<span class="w"> </span>value<span class="w"> </span>2<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/var&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aMap&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;map&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;value</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;key1&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>Map<span class="w"> </span>value<span class="w"> </span>1<span class="nt">&lt;/value&gt;</span>
+<span class="w">            </span><span class="nt">&lt;value</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;key2&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>Map<span class="w"> </span>value<span class="w"> </span>2<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/var&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;aString&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;value&gt;</span>A<span class="w"> </span>string<span class="w"> </span>value<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/var&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/variables&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>List variables:</strong> When a <code class="docutils literal notranslate"><span class="pre">list</span></code> is defined as a variable it also needs to specify its internal element type. To do this you
+need to specify the <code class="docutils literal notranslate"><span class="pre">type</span></code> attribute as <code class="docutils literal notranslate"><span class="pre">list[INTERNAL_TYPE]</span></code>. For example a <code class="docutils literal notranslate"><span class="pre">list</span></code> of <code class="docutils literal notranslate"><span class="pre">string</span></code> elements is defined as
+<code class="docutils literal notranslate"><span class="pre">&lt;var</span> <span class="pre">name=&quot;myList&quot;</span> <span class="pre">type=&quot;list[string]&quot;/&gt;</span></code>.</p>
+</div>
+</section>
+<section id="steps">
+<span id="test-case-steps"></span><span id="index-83"></span><span id="index-82"></span><span id="index-81"></span><span id="index-80"></span><span id="index-79"></span><span id="index-78"></span><span id="index-77"></span><h3>Steps<a class="headerlink" href="#steps" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">steps</span></code> element is where the test case’s testing logic is implemented. It consists of a sequence of test steps realised by means
+of a GITB TDL step construct. The structure of the element is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;logLevel</p></th>
+<td><p>no</p></td>
+<td><p>The minimum logging level that this test case should produce. This can be (in increasing severity) <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code>, <code class="docutils literal notranslate"><span class="pre">INFO</span></code> (the default level), <code class="docutils literal notranslate"><span class="pre">WARNING</span></code> or <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>, but can also be set dynamically as a variable reference. See also the <a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a> step.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;stopOnError</p></th>
+<td><p>no</p></td>
+<td><p>A boolean flag determining whether the test session should stop if any step fails (default is “false”). See also <a class="reference internal" href="../constructs/index.html#tdl-steps-common-stoponerror"><span class="std std-ref">Stop the test session in case of error</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="test-case-logging">
+<span id="test-case-steps-logging"></span><h4>Test case logging<a class="headerlink" href="#test-case-logging" title="Link to this heading"></a></h4>
+<p>The test case’s <strong>logging level</strong> affects log statements produced automatically by the Test Bed or <a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">added explicitly by the test case</span></a>.
+While executing a test session, the Test Bed automatically produces the following log output:</p>
+<ul class="simple">
+<li><p>At <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> level, information on each step’s start, end and latest status.</p></li>
+<li><p>At <code class="docutils literal notranslate"><span class="pre">INFO</span></code> level, information on key lifecycle points such as the start and end of the session.</p></li>
+<li><p>At <code class="docutils literal notranslate"><span class="pre">WARNING</span></code> level, detected issues that although not blocking for the test session could be signs of problems.</p></li>
+<li><p>At <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> level, information on unexpected errors that forced the test session to fail.</p></li>
+</ul>
+<p>When using the <code class="docutils literal notranslate"><span class="pre">logLevel</span></code> attribute to set the test case’s log level, this defines the minimum level of messages to be added to the
+session’s log. A good example is setting the <code class="docutils literal notranslate"><span class="pre">logLevel</span></code> to <code class="docutils literal notranslate"><span class="pre">WARN</span></code> which will exclude all <code class="docutils literal notranslate"><span class="pre">DEBUG</span></code> and <code class="docutils literal notranslate"><span class="pre">INFO</span></code> output while including all output
+of levels <code class="docutils literal notranslate"><span class="pre">WARNING</span></code> and <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>. This could be interesting if you want to only share test engine errors and problematic issues signalled by
+using the <a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a> step while ignoring status updates.</p>
+<p>In certain cases you may prefer to set the test case logging level dynamically. This is achieved by using a variable reference as the
+<code class="docutils literal notranslate"><span class="pre">logLevel</span></code> value, referring either to a <a class="reference internal" href="../expressions/index.html#test-case-configuration"><span class="std std-ref">configuration property</span></a> or a <a class="reference internal" href="#test-case-variables"><span class="std std-ref">predefined test case variable</span></a>.
+Interestingly, when referring to a variable and given that the provided expression is calculated every time, you can adapt the test case’s
+logging level during the course of the test session. You may for example start with a <code class="docutils literal notranslate"><span class="pre">WARNING</span></code> level but switch to <code class="docutils literal notranslate"><span class="pre">INFO</span></code>
+for a specific set of steps. An example of this is illustrated below:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;variables&gt;</span>
+<span class="w">        </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;loggingLevel&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;value&gt;</span>WARNING<span class="nt">&lt;/value&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/var&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/variables&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps</span><span class="w"> </span><span class="na">logLevel=</span><span class="s">&quot;$loggingLevel&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            The following log entry is ignored as we only log at WARNING level and above.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;log</span><span class="w"> </span><span class="na">level=</span><span class="s">&quot;INFO&quot;</span><span class="nt">&gt;</span>&#39;An<span class="w"> </span>info<span class="w"> </span>message&#39;<span class="nt">&lt;/log&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            For the group that follows switch to INFO level.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;loggingLevel&quot;</span><span class="nt">&gt;</span>&#39;INFO&#39;<span class="nt">&lt;/assign&gt;</span>
+<span class="w">        </span><span class="nt">&lt;group&gt;</span>
+<span class="w">            </span>...
+<span class="w">        </span><span class="nt">&lt;/group&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Switch back to WARNING level.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;loggingLevel&quot;</span><span class="nt">&gt;</span>&#39;WARNING&#39;<span class="nt">&lt;/assign&gt;</span>
+<span class="w">        </span>...
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="available-steps">
+<span id="test-case-steps-steps"></span><h4>Available steps<a class="headerlink" href="#available-steps" title="Link to this heading"></a></h4>
+<p>The test case’s steps are defined as children of the <code class="docutils literal notranslate"><span class="pre">steps</span></code> element. The available test steps that can be defined are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Step name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a></p></td>
+<td><p>Send a message to an actor</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a></p></td>
+<td><p>Receive a message from an actor</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-listen"><span class="std std-ref">listen</span></a></p></td>
+<td><p>Listen for exchanged messages between actors</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-btxn"><span class="std std-ref">btxn</span></a></p></td>
+<td><p>Begin a messaging transaction</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-etxn"><span class="std std-ref">etxn</span></a></p></td>
+<td><p>End a messaging transaction</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a></p></td>
+<td><p>Process a set of inputs to get an output</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-bptxn"><span class="std std-ref">bptxn</span></a></p></td>
+<td><p>Begin a processing transaction</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-eptxn"><span class="std std-ref">eptxn</span></a></p></td>
+<td><p>End a processing transaction</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if</span></a></p></td>
+<td><p>Apply if-else logic to conditionally execute test steps</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-while"><span class="std std-ref">while</span></a></p></td>
+<td><p>Loop over a set of steps while a condition is true</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-repuntil"><span class="std std-ref">repuntil</span></a></p></td>
+<td><p>Repeat a set of steps while a condition is true (executing at least once)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-foreach"><span class="std std-ref">foreach</span></a></p></td>
+<td><p>Execute a set of steps a fixed number of times</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-flow"><span class="std std-ref">flow</span></a></p></td>
+<td><p>Execute sets of steps concurrently</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-exit"><span class="std std-ref">exit</span></a></p></td>
+<td><p>Immediately terminate the test session</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a></p></td>
+<td><p>Process an expression and assign its output to a variable</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a></p></td>
+<td><p>Log a message in the test session log.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-group"><span class="std std-ref">group</span></a></p></td>
+<td><p>Display a set of steps as a logical group</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+<td><p>Validate content</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a></p></td>
+<td><p>Call a scriptlet</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+<td><p>Trigger an interaction with the user</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="output">
+<span id="test-case-output"></span><span id="index-95"></span><span id="index-94"></span><span id="index-93"></span><span id="index-92"></span><span id="index-91"></span><span id="index-90"></span><span id="index-89"></span><span id="index-88"></span><span id="index-87"></span><span id="index-86"></span><span id="index-85"></span><span id="index-84"></span><h3>Output<a class="headerlink" href="#output" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">output</span></code> element is an optional means of defining a final result message for a given test session. It is processed once all
+steps have completed, checking the data in the test session’s context to display specific messages. Using this
+element allows extended feedback to be returned that may be important to summarise and contextualise the steps’ results.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">output</span></code> element supports messages for a success, failure, or undefined result; defined as different cases with match conditions and an
+overall default. The structure of the <code class="docutils literal notranslate"><span class="pre">output</span></code> element is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>failure</p></th>
+<td><p>no</p></td>
+<td><p>The set of output cases to apply in case the test completes with a failure.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>success</p></th>
+<td><p>no</p></td>
+<td><p>The set of output cases to apply in case the test completes with a success.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>undefined</p></th>
+<td><p>no</p></td>
+<td><p>The set of output cases to apply in case the test completes with an undefined result.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">success</span></code>, <code class="docutils literal notranslate"><span class="pre">failure</span></code> and <code class="docutils literal notranslate"><span class="pre">undefined</span></code> elements share a common structure to define their specific cases and overall defaults:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;match</p></th>
+<td><p>no</p></td>
+<td><p>The approach to follow when matching message cases. Can be <code class="docutils literal notranslate"><span class="pre">first</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">all</span></code> or <code class="docutils literal notranslate"><span class="pre">cascade</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>case</p></th>
+<td><p>no</p></td>
+<td><p>Zero or more specific cases to apply depending on the provided match conditions.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>default</p></th>
+<td><p>no</p></td>
+<td><p>An optional default if no specific case was found to apply.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Finally, each <code class="docutils literal notranslate"><span class="pre">case</span></code> element shares a common structure as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>cond</p></th>
+<td><p>yes</p></td>
+<td><p>Defines a condition <a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">expression</span></a> expected to return a “true” or “false” value.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>message</p></th>
+<td><p>yes</p></td>
+<td><p>Defines an <a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">expression</span></a> expected to return the output message (as a string).</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="docutils literal notranslate"><span class="pre">output</span></code> section is flexible as it doesn’t require you to define messages for each outcome type. In addition, you could
+opt only to provide default messages without specific cases or only provide certain specific messages without generic defaults.
+It is important to note that the condition expressions tolerate failures, meaning that if a condition cannot
+be evaluated its relevant case will simply be skipped. In addition, if any error is raised when creating the text message itself, the output
+message will be altogether skipped; under no circumstances will a test session fail due to the evaluation of its <code class="docutils literal notranslate"><span class="pre">output</span></code> section
+(relevant warnings will however be included in the test session’s log).</p>
+<p>The following snippet illustrates how the <code class="docutils literal notranslate"><span class="pre">output</span></code> section could be leveraged to return user-friendly failure messages based on the executed
+test steps (using the <a class="reference internal" href="../expressions/index.html#test-case-expressions-step-status"><span class="std std-ref">STEP_STATUS</span></a> variable to determine the cause of the failure). For successful
+and undefined states we only include a default message to make test sessions more user friendly.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps</span><span class="w"> </span><span class="na">stopOnError=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span>...
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;checkIntegrity&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate integrity&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span>...
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;checkSyntax&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate syntax&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span>...
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">        </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;checkContent&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate business rules&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span>...
+<span class="w">        </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">        </span>...
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="w">    </span><span class="nt">&lt;output&gt;</span>
+<span class="w">        </span><span class="nt">&lt;success&gt;</span>
+<span class="w">            </span><span class="nt">&lt;default&gt;</span>&quot;Test<span class="w"> </span>session<span class="w"> </span>completed<span class="w"> </span>successfully.&quot;<span class="nt">&lt;/default&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/success&gt;</span>
+<span class="w">        </span><span class="nt">&lt;failure&gt;</span>
+<span class="w">            </span><span class="nt">&lt;case&gt;</span>
+<span class="w">                </span><span class="nt">&lt;cond&gt;</span>$STEP_STATUS{checkIntegrity}<span class="w"> </span>=<span class="w"> </span>&#39;ERROR&#39;<span class="nt">&lt;/cond&gt;</span>
+<span class="w">                </span><span class="nt">&lt;message&gt;</span>&quot;Please<span class="w"> </span>verify<span class="w"> </span>the<span class="w"> </span>integrity<span class="w"> </span>of<span class="w"> </span>your<span class="w"> </span>data<span class="w"> </span>and<span class="w"> </span>re-submit.&quot;<span class="nt">&lt;/message&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/case&gt;</span>
+<span class="w">            </span><span class="nt">&lt;case&gt;</span>
+<span class="w">                </span><span class="nt">&lt;cond&gt;</span>$STEP_STATUS{checkSyntax}<span class="w"> </span>=<span class="w"> </span>&#39;ERROR&#39;<span class="nt">&lt;/cond&gt;</span>
+<span class="w">                </span><span class="nt">&lt;message&gt;</span>&quot;Please<span class="w"> </span>verify<span class="w"> </span>the<span class="w"> </span>syntax<span class="w"> </span>of<span class="w"> </span>your<span class="w"> </span>data<span class="w"> </span>and<span class="w"> </span>re-submit.&quot;<span class="nt">&lt;/message&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/case&gt;</span>
+<span class="w">            </span><span class="nt">&lt;case&gt;</span>
+<span class="w">                </span><span class="nt">&lt;cond&gt;</span>$STEP_STATUS{checkContent}<span class="w"> </span>=<span class="w"> </span>&#39;ERROR&#39;<span class="nt">&lt;/cond&gt;</span>
+<span class="w">                </span><span class="nt">&lt;message&gt;</span>&quot;Please<span class="w"> </span>verify<span class="w"> </span>your<span class="w"> </span>data<span class="w"> </span>content<span class="w"> </span>and<span class="w"> </span>re-submit.&quot;<span class="nt">&lt;/message&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/case&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- The default will be applied if no specific case was found to match. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;default&gt;</span>&quot;Your<span class="w"> </span>data<span class="w"> </span>failed<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>processed<span class="w"> </span>correctly.<span class="w"> </span>Please<span class="w"> </span>check<span class="w"> </span>the<span class="w"> </span>session<span class="w"> </span>log<span class="w"> </span>to<span class="w"> </span>determine<span class="w"> </span>the<span class="w"> </span>cause<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>failure.&quot;<span class="nt">&lt;/default&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/failure&gt;</span>
+<span class="w">        </span><span class="nt">&lt;undefined&gt;</span>
+<span class="w">            </span><span class="nt">&lt;default&gt;</span>&quot;Test<span class="w"> </span>session<span class="w"> </span>stopped<span class="w"> </span>before<span class="w"> </span>producing<span class="w"> </span>a<span class="w"> </span>result.&quot;<span class="nt">&lt;/default&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/undefined&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/output&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>It may seem at first unintuitive to provide output messages for anything other than failures. However, there are a few cases where this could be
+particularly useful:</p>
+<ul class="simple">
+<li><p>A success message as a <strong>user-friendly confirmation</strong> that the test succeeded.</p></li>
+<li><p>A success message to <strong>highlight a warning</strong> (steps resulting in warnings are successful).</p></li>
+<li><p>An undefined message for an <a class="reference internal" href="../constructs/index.html#tdl-step-exit"><span class="std std-ref">exit step</span></a> that terminated with an undefined result.</p></li>
+</ul>
+<p>As mentioned earlier you can choose to omit certain outcomes altogether. For example, the following test case defines only failure messages
+(a specific one and a default one):</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps</span><span class="w"> </span><span class="na">stopOnError=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span>...
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="w">    </span><span class="nt">&lt;output&gt;</span>
+<span class="w">        </span><span class="nt">&lt;failure&gt;</span>
+<span class="w">            </span><span class="nt">&lt;case&gt;</span>
+<span class="w">                </span><span class="nt">&lt;cond&gt;</span>$STEP_STATUS{checkContent}<span class="w"> </span>=<span class="w"> </span>&#39;ERROR&#39;<span class="nt">&lt;/cond&gt;</span>
+<span class="w">                </span><span class="nt">&lt;message&gt;</span>&quot;Please<span class="w"> </span>verify<span class="w"> </span>your<span class="w"> </span>data<span class="w"> </span>content<span class="w"> </span>and<span class="w"> </span>re-submit.&quot;<span class="nt">&lt;/message&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/case&gt;</span>
+<span class="w">            </span><span class="nt">&lt;default&gt;</span>&quot;Your<span class="w"> </span>data<span class="w"> </span>failed<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>processed<span class="w"> </span>correctly.<span class="w"> </span>Please<span class="w"> </span>check<span class="w"> </span>the<span class="w"> </span>session<span class="w"> </span>log<span class="w"> </span>to<span class="w"> </span>determine<span class="w"> </span>the<span class="w"> </span>cause<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>failure.&quot;<span class="nt">&lt;/default&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/failure&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/output&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>The examples up to this point consider outputting a single message depending on the result. It is possible to have <strong>several messages</strong> be
+returned which could be used as an alternative to test step reports for simple test cases. This is achieved through the <code class="docutils literal notranslate"><span class="pre">match</span></code> attribute
+of the <code class="docutils literal notranslate"><span class="pre">failure</span></code>, <code class="docutils literal notranslate"><span class="pre">success</span></code> and <code class="docutils literal notranslate"><span class="pre">undefined</span></code> elements that supports the following values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">first</span></code> (the default), meaning that the first (sequentially) condition to match will be considered. If none match the
+default applies.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code>, meaning that all conditions with passing conditions will be considered. If none match the default applies.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cascade</span></code>, meaning that once a first condition is found to pass, the check will cascade to subsequent conditions and include them if
+they also pass. If a condition check fails then the cascade stops even if later conditions would also pass. If none match
+the default applies.</p></li>
+</ul>
+<p>To illustrate this with an example, consider the following test case output section:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;output&gt;</span>
+<span class="w">    </span><span class="nt">&lt;failure</span><span class="w"> </span><span class="na">match=</span><span class="s">&quot;all&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;case&gt;</span>
+<span class="w">            </span><span class="nt">&lt;cond&gt;</span>$flag1<span class="nt">&lt;/cond&gt;</span>
+<span class="w">            </span><span class="nt">&lt;message&gt;</span>&quot;The<span class="w"> </span>integrity<span class="w"> </span>check<span class="w"> </span>on<span class="w"> </span>your<span class="w"> </span>data<span class="w"> </span>failed.&quot;<span class="nt">&lt;/message&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/case&gt;</span>
+<span class="w">        </span><span class="nt">&lt;case&gt;</span>
+<span class="w">            </span><span class="nt">&lt;cond&gt;</span>$flag2<span class="nt">&lt;/cond&gt;</span>
+<span class="w">            </span><span class="nt">&lt;message&gt;</span>&quot;The<span class="w"> </span>syntax<span class="w"> </span>check<span class="w"> </span>on<span class="w"> </span>your<span class="w"> </span>data<span class="w"> </span>failed.&quot;<span class="nt">&lt;/message&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/case&gt;</span>
+<span class="w">        </span><span class="nt">&lt;default&gt;</span>&quot;Your<span class="w"> </span>data<span class="w"> </span>failed<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>processed<span class="w"> </span>correctly.<span class="w"> </span>Please<span class="w"> </span>check<span class="w"> </span>the<span class="w"> </span>session<span class="w"> </span>log<span class="w"> </span>to<span class="w"> </span>determine<span class="w"> </span>the<span class="w"> </span>cause<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>failure.&quot;<span class="nt">&lt;/default&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/failure&gt;</span>
+<span class="nt">&lt;/output&gt;</span>
+</pre></div>
+</div>
+<p>In the above example given that match is set to <code class="docutils literal notranslate"><span class="pre">all</span></code>, both messages could be displayed if both <code class="docutils literal notranslate"><span class="pre">flag1</span></code> and <code class="docutils literal notranslate"><span class="pre">flag2</span></code> are true.
+If <code class="docutils literal notranslate"><span class="pre">match</span></code> was set to <code class="docutils literal notranslate"><span class="pre">first</span></code> then only the first message would be generated. Finally, the <code class="docutils literal notranslate"><span class="pre">cascade</span></code> option allows you to
+fine-tune the display of multiple related messages, without forcing an all or nothing approach.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Messages are also expressions:</strong> Output messages are themselves <a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">expressions</span></a> allowing dynamic
+output to be returned (e.g. concatenating text with session variable values). For a fixed message make sure to enclose the text
+in quotes.</p>
+</div>
+</section>
+<section id="scriptlets">
+<span id="test-case-scriptlets"></span><span id="index-96"></span><h3>Scriptlets<a class="headerlink" href="#scriptlets" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">scriptlets</span></code> element is meant to define reusable blocks of steps that can be called during the test case’s execution.
+They resemble function blocks in programming languages considering that they can be called multiple times with different
+inputs and produce different outputs.</p>
+<p>Scriptlets are typically defined as separate XML documents that can be used across test cases or even across test suites.
+Defining a scriptlet within a test case results in it being private to its containing test case. To define such private
+scriptlets, include the <code class="docutils literal notranslate"><span class="pre">scriptlets</span></code> element with one or more <code class="docutils literal notranslate"><span class="pre">scriptlet</span></code> children.</p>
+<p>Details on how each <code class="docutils literal notranslate"><span class="pre">scriptlet</span></code> element is defined are provided in the <a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">scriptlet documentation</span></a>. This
+includes the <a class="reference internal" href="../scriptlets/index.html#scriptlets-embedded"><span class="std std-ref">differences to consider</span></a> when comparing scriptlets embedded in test cases and ones
+that are defined as standalone XML documents.</p>
+<p>Calling a scriptlet from a test case is achieved through the <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a> step. The following example
+illustrates the definition of a scriptlet within a test case to validate XML documents. This is called twice for each
+of the inputs provided by the user.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Request two files to be uploaded.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;interact</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;userData&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Upload files&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;request</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Upload the first file&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;file1&quot;</span><span class="w"> </span><span class="na">contentType=</span><span class="s">&quot;BASE64&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;request</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Upload the second file&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;file2&quot;</span><span class="w"> </span><span class="na">contentType=</span><span class="s">&quot;BASE64&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/interact&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Call the scriptlet for the first file and store the result under variable &quot;call1&quot;.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;call</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;call1&quot;</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;validateDocument&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;contentToValidate&quot;</span><span class="nt">&gt;</span>$userData{file1}<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/call&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Call the scriptlet for the second file and store the result under variable &quot;call2&quot;.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;call</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;call2&quot;</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;validateDocument&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;contentToValidate&quot;</span><span class="nt">&gt;</span>$userData{file2}<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/call&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Log the root element names of the validated files.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;log&gt;</span>&quot;File<span class="w"> </span>1:<span class="w"> </span>&quot;<span class="w"> </span>||<span class="w"> </span>$call1{rootName}<span class="nt">&lt;/log&gt;</span>
+<span class="w">        </span><span class="nt">&lt;log&gt;</span>&quot;File<span class="w"> </span>2:<span class="w"> </span>&quot;<span class="w"> </span>||<span class="w"> </span>$call2{rootName}<span class="nt">&lt;/log&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="w">    </span><span class="nt">&lt;scriptlets&gt;</span>
+<span class="w">        </span><span class="nt">&lt;scriptlet</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;validateDocument&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;imports&gt;</span>
+<span class="w">                </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;schemaToUse&quot;</span><span class="nt">&gt;</span>resources/aSchemaFile.xsd<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">                </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;schematronToUse&quot;</span><span class="nt">&gt;</span>resources/aSchematronFile.sch<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/imports&gt;</span>
+<span class="w">            </span><span class="nt">&lt;params&gt;</span>
+<span class="w">                </span><span class="nt">&lt;var</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;contentToValidate&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/params&gt;</span>
+<span class="w">            </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">                </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XmlValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate XML structure&quot;</span><span class="nt">&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>$contentToValidate<span class="nt">&lt;/input&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xsd&quot;</span><span class="nt">&gt;</span>$schemaToUse<span class="nt">&lt;/input&gt;</span>
+<span class="w">                </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">                </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;XmlValidator&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate business rules&quot;</span><span class="nt">&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;xml&quot;</span><span class="nt">&gt;</span>$contentToValidate<span class="nt">&lt;/input&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;schematron&quot;</span><span class="nt">&gt;</span>$schematronToUse<span class="nt">&lt;/input&gt;</span>
+<span class="w">                </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/steps&gt;</span>
+<span class="w">            </span><span class="nt">&lt;output</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;rootName&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$contentToValidate&quot;</span><span class="nt">&gt;</span>name(/*)<span class="nt">&lt;/output&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/scriptlet&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/scriptlets&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Using scriptlets across test cases:</strong> Scriptlets defined within test cases are private to that test case. If you want
+to use a scriptlet across several test cases, within the test suite or across test suites, you need to define it in
+its own XML document. See the <a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">scriptlet documentation</span></a> for details on this.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../testsuite/index.html" class="btn btn-neutral float-left" title="Test suites" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../scriptlets/index.html" class="btn btn-neutral float-right" title="Scriptlets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, European Commission, DIGIT.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1618 @@
+[
+  {
+    "title": "a context-neutral data model that captures the fundamental characteristics of an entity",
+    "url": "https://joinup.ec.europa.eu/sites/default/files/inline-files/ISA%20Handbook%20for%20using%20Core%20Vocabularies.pdf"
+  },
+  {
+    "title": "Changelog",
+    "url": "https://github.com/SEMICeu/CCCEV/blob/master/releases/2.2.0/Changelog.md"
+  },
+  {
+    "title": "SEMIC Style Guide",
+    "url": "https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification"
+  },
+  {
+    "title": "Constraint",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Constraint"
+  },
+  {
+    "title": "Criterion",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "Evidence Type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType"
+  },
+  {
+    "title": "Evidence Type List",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList"
+  },
+  {
+    "title": "Information Concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept"
+  },
+  {
+    "title": "Information Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationRequirement"
+  },
+  {
+    "title": "Reference Framework",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#ReferenceFramework"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "Agent",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Agent"
+  },
+  {
+    "title": "Asset",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Asset"
+  },
+  {
+    "title": "Location",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Location"
+  },
+  {
+    "title": "Period of Time",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#PeriodofTime"
+  },
+  {
+    "title": "Supported Value",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#SupportedValue"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Code"
+  },
+  {
+    "title": "Decimal",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Decimal"
+  },
+  {
+    "title": "Duration",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Duration"
+  },
+  {
+    "title": "Instant",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Instant"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Literal"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/html/overview.jpg"
+  },
+  {
+    "title": "Constraint",
+    "url": "http://data.europa.eu/m8g/Constraint"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "constrains",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Constraint.constrains"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20constrains%20in%20Constraint&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Constraint.constrains"
+  },
+  {
+    "title": "constrains",
+    "url": "http://data.europa.eu/m8g/constrains"
+  },
+  {
+    "title": "Information Concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept"
+  },
+  {
+    "title": "Criterion",
+    "url": "http://data.europa.eu/m8g/Criterion"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "bias",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion.bias"
+  },
+  {
+    "title": "weight",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion.weight"
+  },
+  {
+    "title": "weighting consideration description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion.weightingconsiderationdescription"
+  },
+  {
+    "title": "weighting type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion.weightingtype"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20bias%20in%20Criterion&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Criterion.bias"
+  },
+  {
+    "title": "bias",
+    "url": "http://data.europa.eu/m8g/bias"
+  },
+  {
+    "title": "Decimal",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Decimal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20weight%20in%20Criterion&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Criterion.weight"
+  },
+  {
+    "title": "weight",
+    "url": "http://data.europa.eu/m8g/weight"
+  },
+  {
+    "title": "Decimal",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Decimal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20weighting consideration description%20in%20Criterion&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Criterion.weightingconsiderationdescription"
+  },
+  {
+    "title": "weighting consideration description",
+    "url": "http://data.europa.eu/m8g/weightingConsiderationDescription"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20weighting type%20in%20Criterion&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Criterion.weightingtype"
+  },
+  {
+    "title": "weighting type",
+    "url": "http://data.europa.eu/m8g/weightingType"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Code"
+  },
+  {
+    "title": "OP's Number weight controlled vocabulary",
+    "url": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/number-weight"
+  },
+  {
+    "title": "Evidence",
+    "url": "http://data.europa.eu/m8g/Evidence"
+  },
+  {
+    "title": "confidentiality level type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.confidentialityleveltype"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.description"
+  },
+  {
+    "title": "is about",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.isabout"
+  },
+  {
+    "title": "is conformant to",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.isconformantto"
+  },
+  {
+    "title": "is created by",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.iscreatedby"
+  },
+  {
+    "title": "is issued by",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.isissuedby"
+  },
+  {
+    "title": "is provided by",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.isprovidedby"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.name"
+  },
+  {
+    "title": "supports concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.supportsconcept"
+  },
+  {
+    "title": "supports requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.supportsrequirement"
+  },
+  {
+    "title": "supports value",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.supportsvalue"
+  },
+  {
+    "title": "validity period",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.validityperiod"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20confidentiality level type%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.confidentialityleveltype"
+  },
+  {
+    "title": "confidentiality level type",
+    "url": "http://data.europa.eu/m8g/confidentialityLevelType"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Code"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.description"
+  },
+  {
+    "title": "description",
+    "url": "http://purl.org/dc/terms/description"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is about%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.isabout"
+  },
+  {
+    "title": "is about",
+    "url": "http://purl.org/dc/terms/subject"
+  },
+  {
+    "title": "Agent",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Agent"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is conformant to%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.isconformantto"
+  },
+  {
+    "title": "is conformant to",
+    "url": "http://purl.org/dc/terms/conformsTo"
+  },
+  {
+    "title": "Evidence Type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is created by%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.iscreatedby"
+  },
+  {
+    "title": "is created by",
+    "url": "http://purl.org/dc/terms/creator"
+  },
+  {
+    "title": "Agent",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Agent"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is issued by%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.isissuedby"
+  },
+  {
+    "title": "is issued by",
+    "url": "http://purl.org/dc/terms/publisher"
+  },
+  {
+    "title": "Agent",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Agent"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is provided by%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.isprovidedby"
+  },
+  {
+    "title": "is provided by",
+    "url": "http://data.europa.eu/m8g/isProvidedBy"
+  },
+  {
+    "title": "Agent",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Agent"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.name"
+  },
+  {
+    "title": "name",
+    "url": "http://www.w3.org/2000/01/rdf-schema#label"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20supports concept%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.supportsconcept"
+  },
+  {
+    "title": "supports concept",
+    "url": "http://data.europa.eu/m8g/supportsConcept"
+  },
+  {
+    "title": "Information Concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20supports requirement%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.supportsrequirement"
+  },
+  {
+    "title": "supports requirement",
+    "url": "http://data.europa.eu/m8g/supportsRequirement"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20supports value%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.supportsvalue"
+  },
+  {
+    "title": "supports value",
+    "url": "http://data.europa.eu/m8g/supportsValue"
+  },
+  {
+    "title": "Supported Value",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#SupportedValue"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20validity period%20in%20Evidence&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Evidence.validityperiod"
+  },
+  {
+    "title": "validity period",
+    "url": "http://data.europa.eu/m8g/validityPeriod"
+  },
+  {
+    "title": "Period of Time",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#PeriodofTime"
+  },
+  {
+    "title": "Evidence Type",
+    "url": "http://data.europa.eu/m8g/EvidenceType"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.description"
+  },
+  {
+    "title": "evidence type classification",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.evidencetypeclassification"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.identifier"
+  },
+  {
+    "title": "is specified in",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.isspecifiedin"
+  },
+  {
+    "title": "issuing place",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.issuingplace"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.name"
+  },
+  {
+    "title": "sample",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.sample"
+  },
+  {
+    "title": "validity period constraint",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.validityperiodconstraint"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.description"
+  },
+  {
+    "title": "description",
+    "url": "http://purl.org/dc/terms/description"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20evidence type classification%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.evidencetypeclassification"
+  },
+  {
+    "title": "evidence type classification",
+    "url": "http://data.europa.eu/m8g/evidenceTypeClassification"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Code"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.identifier"
+  },
+  {
+    "title": "identifier",
+    "url": "http://purl.org/dc/terms/identifier"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Literal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is specified in%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.isspecifiedin"
+  },
+  {
+    "title": "is specified in",
+    "url": "http://data.europa.eu/m8g/isSpecifiedIn"
+  },
+  {
+    "title": "Evidence Type List",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20issuing place%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.issuingplace"
+  },
+  {
+    "title": "issuing place",
+    "url": "http://data.europa.eu/m8g/issuingPlace"
+  },
+  {
+    "title": "Location",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Location"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.name"
+  },
+  {
+    "title": "name",
+    "url": "http://www.w3.org/2000/01/rdf-schema#label"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20sample%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.sample"
+  },
+  {
+    "title": "sample",
+    "url": "http://www.w3.org/ns/adms#sample"
+  },
+  {
+    "title": "Asset",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Asset"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20validity period constraint%20in%20Evidence Type&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceType.validityperiodconstraint"
+  },
+  {
+    "title": "validity period constraint",
+    "url": "http://data.europa.eu/m8g/validityPeriodConstraint"
+  },
+  {
+    "title": "Period of Time",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#PeriodofTime"
+  },
+  {
+    "title": "Evidence Type List",
+    "url": "http://data.europa.eu/m8g/EvidenceTypeList"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList.description"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList.identifier"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList.name"
+  },
+  {
+    "title": "specifies evidence type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList.specifiesevidencetype"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Evidence Type List&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceTypeList.description"
+  },
+  {
+    "title": "description",
+    "url": "http://purl.org/dc/terms/description"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Evidence Type List&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceTypeList.identifier"
+  },
+  {
+    "title": "identifier",
+    "url": "http://purl.org/dc/terms/identifier"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Literal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Evidence Type List&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceTypeList.name"
+  },
+  {
+    "title": "name",
+    "url": "http://www.w3.org/2000/01/rdf-schema#label"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20specifies evidence type%20in%20Evidence Type List&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23EvidenceTypeList.specifiesevidencetype"
+  },
+  {
+    "title": "specifies evidence type",
+    "url": "http://data.europa.eu/m8g/specifiesEvidenceType"
+  },
+  {
+    "title": "Evidence Type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType"
+  },
+  {
+    "title": "Information Concept",
+    "url": "http://data.europa.eu/m8g/InformationConcept"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept.description"
+  },
+  {
+    "title": "expression of expected value",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept.expressionofexpectedvalue"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept.identifier"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept.name"
+  },
+  {
+    "title": "type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept.type"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23InformationConcept.description"
+  },
+  {
+    "title": "description",
+    "url": "http://purl.org/dc/terms/description"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20expression of expected value%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23InformationConcept.expressionofexpectedvalue"
+  },
+  {
+    "title": "expression of expected value",
+    "url": "http://data.europa.eu/m8g/expressionOfExpectedValue"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Literal"
+  },
+  {
+    "title": "XPath",
+    "url": "https://www.w3.org/TR/xpath-31/"
+  },
+  {
+    "title": "Object Constraint Language",
+    "url": "https://www.omg.org/spec/OCL/"
+  },
+  {
+    "title": "JavaScript",
+    "url": "https://www.javascript.com/"
+  },
+  {
+    "title": "Rule Interchange Format",
+    "url": "https://www.w3.org/TR/rif-overview/"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23InformationConcept.identifier"
+  },
+  {
+    "title": "identifier",
+    "url": "http://purl.org/dc/terms/identifier"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Literal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23InformationConcept.name"
+  },
+  {
+    "title": "name",
+    "url": "http://www.w3.org/2000/01/rdf-schema#label"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20type%20in%20Information Concept&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23InformationConcept.type"
+  },
+  {
+    "title": "type",
+    "url": "http://purl.org/dc/terms/type"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Code"
+  },
+  {
+    "title": "Information Requirement",
+    "url": "http://data.europa.eu/m8g/InformationRequirement"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "Reference Framework",
+    "url": "http://data.europa.eu/m8g/ReferenceFramework"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#ReferenceFramework.description"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#ReferenceFramework.identifier"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#ReferenceFramework.name"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Reference Framework&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23ReferenceFramework.description"
+  },
+  {
+    "title": "description",
+    "url": "http://purl.org/dc/terms/description"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Reference Framework&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23ReferenceFramework.identifier"
+  },
+  {
+    "title": "identifier",
+    "url": "http://purl.org/dc/terms/identifier"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Literal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Reference Framework&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23ReferenceFramework.name"
+  },
+  {
+    "title": "name",
+    "url": "http://www.w3.org/2000/01/rdf-schema#label"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "Requirement",
+    "url": "http://data.europa.eu/m8g/Requirement"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.description"
+  },
+  {
+    "title": "has concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.hasconcept"
+  },
+  {
+    "title": "has evidence type list",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.hasevidencetypelist"
+  },
+  {
+    "title": "has qualified relation",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.hasqualifiedrelation"
+  },
+  {
+    "title": "has requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.hasrequirement"
+  },
+  {
+    "title": "has supporting evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.hassupportingevidence"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.identifier"
+  },
+  {
+    "title": "is derived from",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.isderivedfrom"
+  },
+  {
+    "title": "is issued by",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.isissuedby"
+  },
+  {
+    "title": "is requirement of",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.isrequirementof"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.name"
+  },
+  {
+    "title": "type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.type"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20description%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.description"
+  },
+  {
+    "title": "description",
+    "url": "http://purl.org/dc/terms/description"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has concept%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.hasconcept"
+  },
+  {
+    "title": "has concept",
+    "url": "http://data.europa.eu/m8g/hasConcept"
+  },
+  {
+    "title": "Information Concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has evidence type list%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.hasevidencetypelist"
+  },
+  {
+    "title": "has evidence type list",
+    "url": "http://data.europa.eu/m8g/hasEvidenceTypeList"
+  },
+  {
+    "title": "Evidence Type List",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has qualified relation%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.hasqualifiedrelation"
+  },
+  {
+    "title": "has qualified relation",
+    "url": "http://data.europa.eu/m8g/hasQualifiedRelation"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has requirement%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.hasrequirement"
+  },
+  {
+    "title": "has requirement",
+    "url": "http://data.europa.eu/m8g/hasRequirement"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20has supporting evidence%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.hassupportingevidence"
+  },
+  {
+    "title": "has supporting evidence",
+    "url": "http://data.europa.eu/m8g/hasSupportingEvidence"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20identifier%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.identifier"
+  },
+  {
+    "title": "identifier",
+    "url": "http://purl.org/dc/terms/identifier"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Literal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is derived from%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.isderivedfrom"
+  },
+  {
+    "title": "is derived from",
+    "url": "http://data.europa.eu/m8g/isDerivedFrom"
+  },
+  {
+    "title": "Reference Framework",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#ReferenceFramework"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is issued by%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.isissuedby"
+  },
+  {
+    "title": "is issued by",
+    "url": "http://purl.org/dc/terms/publisher"
+  },
+  {
+    "title": "Agent",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Agent"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20is requirement of%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.isrequirementof"
+  },
+  {
+    "title": "is requirement of",
+    "url": "http://data.europa.eu/m8g/isRequirementOf"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20name%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.name"
+  },
+  {
+    "title": "name",
+    "url": "http://www.w3.org/2000/01/rdf-schema#label"
+  },
+  {
+    "title": "String",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#String"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20type%20in%20Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23Requirement.type"
+  },
+  {
+    "title": "type",
+    "url": "http://purl.org/dc/terms/type"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Code"
+  },
+  {
+    "title": "Agent",
+    "url": "http://xmlns.com/foaf/0.1/Agent"
+  },
+  {
+    "title": "FOAF",
+    "url": "http://xmlns.com/foaf/spec/"
+  },
+  {
+    "title": "Asset",
+    "url": "http://www.w3.org/ns/adms#Asset"
+  },
+  {
+    "title": "Location",
+    "url": "http://purl.org/dc/terms/Location"
+  },
+  {
+    "title": "Period of Time",
+    "url": "http://www.w3.org/2006/time#ProperInterval"
+  },
+  {
+    "title": "duration",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#PeriodofTime.duration"
+  },
+  {
+    "title": "endtime",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#PeriodofTime.endtime"
+  },
+  {
+    "title": "starttime",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#PeriodofTime.starttime"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20duration%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23PeriodofTime.duration"
+  },
+  {
+    "title": "duration",
+    "url": "http://www.w3.org/2006/time#hasXSDDuration"
+  },
+  {
+    "title": "Duration",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Duration"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20endtime%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23PeriodofTime.endtime"
+  },
+  {
+    "title": "endtime",
+    "url": "http://www.w3.org/2006/time#hasEnd"
+  },
+  {
+    "title": "Instant",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Instant"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20starttime%20in%20Period of Time&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23PeriodofTime.starttime"
+  },
+  {
+    "title": "starttime",
+    "url": "http://www.w3.org/2006/time#hasBeginning"
+  },
+  {
+    "title": "Instant",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Instant"
+  },
+  {
+    "title": "Supported Value",
+    "url": "http://data.europa.eu/m8g/SupportedValue"
+  },
+  {
+    "title": "provides value for",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#SupportedValue.providesvaluefor"
+  },
+  {
+    "title": "query",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#SupportedValue.query"
+  },
+  {
+    "title": "value",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#SupportedValue.value"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20provides value for%20in%20Supported Value&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23SupportedValue.providesvaluefor"
+  },
+  {
+    "title": "provides value for",
+    "url": "http://data.europa.eu/m8g/providesValueFor"
+  },
+  {
+    "title": "Information Concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20query%20in%20Supported Value&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23SupportedValue.query"
+  },
+  {
+    "title": "query",
+    "url": "http://data.europa.eu/m8g/query"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Literal"
+  },
+  {
+    "title": "XPath",
+    "url": "https://www.w3.org/TR/xpath-31/"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20value%20in%20Supported Value&body=Explain%20your%20issue%20for%20https://semiceu.github.io/CCCEV/releases/2.2.0%23SupportedValue.value"
+  },
+  {
+    "title": "value",
+    "url": "http://data.europa.eu/m8g/value"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Literal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20Code&body=Explain%20your%20issue"
+  },
+  {
+    "title": "Code",
+    "url": "http://www.w3.org/2004/02/skos/core#Concept"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20Decimal&body=Explain%20your%20issue"
+  },
+  {
+    "title": "Decimal",
+    "url": "http://www.w3.org/2001/XMLSchema#decimal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20Duration&body=Explain%20your%20issue"
+  },
+  {
+    "title": "Duration",
+    "url": "http://www.w3.org/2001/XMLSchema#duration"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20Instant&body=Explain%20your%20issue"
+  },
+  {
+    "title": "Instant",
+    "url": "http://www.w3.org/2006/time#Instant"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20Literal&body=Explain%20your%20issue"
+  },
+  {
+    "title": "Literal",
+    "url": "http://www.w3.org/2000/01/rdf-schema#Literal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/CCCEV/issues/new?title=Issue%20for%20String&body=Explain%20your%20issue"
+  },
+  {
+    "title": "String",
+    "url": "http://www.w3.org/2001/XMLSchema#string"
+  },
+  {
+    "title": "following documentation",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/CCCEV_AnExplanatoryExample.pdf"
+  },
+  {
+    "title": "JSON-LD context file",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/context/cccev-ap.jsonld"
+  },
+  {
+    "title": "here",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/context/cccev-ap.jsonld"
+  },
+  {
+    "title": "here",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/shacl/cccev-ap-SHACL.ttl"
+  },
+  {
+    "title": "here",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/voc/cccev-ap.ttl"
+  },
+  {
+    "title": "here",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/uml"
+  },
+  {
+    "title": "PC-R3",
+    "url": "https://semiceu.github.io/style-guide/1.0.0/gc-publication-conventions.html#sec:pc-r3"
+  },
+  {
+    "title": "status",
+    "url": "http://publications.europa.eu/resource/authority/concept-status/DEPRECATED"
+  },
+  {
+    "title": "GC-R2",
+    "url": "https://semiceu.github.io/style-guide/1.0.0/gc-general-conventions.html#sec:gc-r2"
+  },
+  {
+    "title": "SC-R3",
+    "url": "https://semiceu.github.io/style-guide/1.0.0/gc-semantic-conventions.html#sec:sc-r3"
+  },
+  {
+    "title": "Agent",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Agent"
+  },
+  {
+    "title": "Asset",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Asset"
+  },
+  {
+    "title": "Constraint",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Constraint"
+  },
+  {
+    "title": "constrains",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Constraint.constrains"
+  },
+  {
+    "title": "Criterion",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion"
+  },
+  {
+    "title": "bias",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion.bias"
+  },
+  {
+    "title": "Criterion",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion"
+  },
+  {
+    "title": "weight",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion.weight"
+  },
+  {
+    "title": "Criterion",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion"
+  },
+  {
+    "title": "weighting consideration description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion.weightingconsiderationdescription"
+  },
+  {
+    "title": "Criterion",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion"
+  },
+  {
+    "title": "weighting type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Criterion.weightingtype"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "confidentiality level type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.confidentialityleveltype"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.description"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "is about",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.isabout"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "is conformant to",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.isconformantto"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "is created by",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.iscreatedby"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "is issued by",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.isissuedby"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "is provided by",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.isprovidedby"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.name"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "supports concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.supportsconcept"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "supports requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.supportsrequirement"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "supports value",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.supportsvalue"
+  },
+  {
+    "title": "Evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence"
+  },
+  {
+    "title": "validity period",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Evidence.validityperiod"
+  },
+  {
+    "title": "Evidence Type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.description"
+  },
+  {
+    "title": "Evidence Type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType"
+  },
+  {
+    "title": "evidence type classification",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.evidencetypeclassification"
+  },
+  {
+    "title": "Evidence Type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.identifier"
+  },
+  {
+    "title": "Evidence Type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType"
+  },
+  {
+    "title": "is specified in",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.isspecifiedin"
+  },
+  {
+    "title": "Evidence Type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType"
+  },
+  {
+    "title": "issuing place",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.issuingplace"
+  },
+  {
+    "title": "Evidence Type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.name"
+  },
+  {
+    "title": "Evidence Type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType"
+  },
+  {
+    "title": "sample",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.sample"
+  },
+  {
+    "title": "Evidence Type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType"
+  },
+  {
+    "title": "validity period constraint",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceType.validityperiodconstraint"
+  },
+  {
+    "title": "Evidence Type List",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList.description"
+  },
+  {
+    "title": "Evidence Type List",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList.identifier"
+  },
+  {
+    "title": "Evidence Type List",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList.name"
+  },
+  {
+    "title": "Evidence Type List",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList"
+  },
+  {
+    "title": "specifies evidence type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#EvidenceTypeList.specifiesevidencetype"
+  },
+  {
+    "title": "Information Concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept.description"
+  },
+  {
+    "title": "Information Concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept"
+  },
+  {
+    "title": "expression of expected value",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept.expressionofexpectedvalue"
+  },
+  {
+    "title": "Information Concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept.identifier"
+  },
+  {
+    "title": "Information Concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept.name"
+  },
+  {
+    "title": "Information Concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept"
+  },
+  {
+    "title": "type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationConcept.type"
+  },
+  {
+    "title": "Information Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#InformationRequirement"
+  },
+  {
+    "title": "Location",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Location"
+  },
+  {
+    "title": "Period of Time",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#PeriodofTime"
+  },
+  {
+    "title": "duration",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#PeriodofTime.duration"
+  },
+  {
+    "title": "Period of Time",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#PeriodofTime"
+  },
+  {
+    "title": "endtime",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#PeriodofTime.endtime"
+  },
+  {
+    "title": "Period of Time",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#PeriodofTime"
+  },
+  {
+    "title": "starttime",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#PeriodofTime.starttime"
+  },
+  {
+    "title": "Reference Framework",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#ReferenceFramework"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#ReferenceFramework.description"
+  },
+  {
+    "title": "Reference Framework",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#ReferenceFramework"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#ReferenceFramework.identifier"
+  },
+  {
+    "title": "Reference Framework",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#ReferenceFramework"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#ReferenceFramework.name"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.description"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "has concept",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.hasconcept"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "has evidence type list",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.hasevidencetypelist"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "has qualified relation",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.hasqualifiedrelation"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "has requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.hasrequirement"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "has supporting evidence",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.hassupportingevidence"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.identifier"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "is derived from",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.isderivedfrom"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "is issued by",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.isissuedby"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "is requirement of",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.isrequirementof"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.name"
+  },
+  {
+    "title": "Requirement",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement"
+  },
+  {
+    "title": "type",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#Requirement.type"
+  },
+  {
+    "title": "Supported Value",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#SupportedValue"
+  },
+  {
+    "title": "provides value for",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#SupportedValue.providesvaluefor"
+  },
+  {
+    "title": "Supported Value",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#SupportedValue"
+  },
+  {
+    "title": "query",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#SupportedValue.query"
+  },
+  {
+    "title": "Supported Value",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#SupportedValue"
+  },
+  {
+    "title": "value",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/#SupportedValue.value"
+  }
+]

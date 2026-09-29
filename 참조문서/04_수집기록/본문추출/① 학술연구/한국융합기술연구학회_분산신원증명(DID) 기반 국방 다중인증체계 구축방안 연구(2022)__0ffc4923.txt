@@ -1,0 +1,401 @@
+분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구
+본문 바로가기
+허위 인용 신고
+오류신고
+로그인
+Sitemap
+English
+KCI 소개
+논문 검색
+학술지 검색
+기관 정보 검색
+인용 정보 검색
+통계 정보
+정보마당
+논문유사도검사
+분석정보서비스
+통합검색
+논문
+학술지
+기관
+학술대회
+다국어입력
+검색
+HOME > 논문 >
+논문 상세
+KCI 등재
+분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구
+A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System
+아시아태평양융합연구교류논문지
+이 학술지 인용지수 조회
+이 학술지 논문 검색
+약어 :
+											
+												APJCRI
+2022, vol.8,
+											
+												no.10,
+											 
+											
+												통권 54호
+											
+											
+											
+											
+												
+												
+												pp. 49-60 (12 pages)
+DOI :
+10.47116/apjcri.2022.10.05
+발행기관 :
+사단법인 한국융합기술연구학회
+이 기관으로 동향 분석
+이 기관 일반 현황
+연구분야 :
+복합학
+이 분야로 동향 분석
+이 분야로 인용지수 조회
+이 분야로 논문 검색
+>
+학제간연구
+이 분야로 동향 분석
+이 분야로 인용지수 조회
+이 분야로 논문 검색
+신규용
+											/Kyuyong Shin
+1
+1
+육군사관학교
+초록
+열기/닫기 버튼
+현재 우리 군(軍)은 국방 분야의 중요 정보 및 정보자산을 보호하기 위해 물리적인 망 분리 정책을 추구해오고 있다. 하지만 물리적인 망 분리에 대한 안전성 문제가 계속 제기되고 있고, 국가정책으로 공공 부문에 대한 민간 클라우드 활용을 장려하고 있다는 점 때문에 우리 군(軍)도 현재 자체적으로 운용 중인 각종 서비스에 대한 민간 클라우드 전환을 계획하고 있다. 만일 국방 분야의 각종 서비스가 민간 클라우드로 전환된다면 현재 패스워드 기반의 단일인증 방식으로 운용되고 있는 각종 국방정보체계에 대한 침해 우려가 증가할 것이기 때문에 보다 강력한 사용자 인증수단이 요구될 것이다. 따라서 본 논문은 기존의 패스워드 기반의 단일인증(SFA)에 최신 신원증명 기술인 분산신원증명(Decentralized Identity, DID) 기반 인증을 추가한 분산신원증명(DID) 기반 국방 다중인증(MFA)체계 구축방안을 제안한다. 제안하는 분산신원증명(DID) 기반 국방 다중인증체계는 사용자 측면에서 편의성과 향상된 보안성을 제공하고, 관리적인 측면에서 업무효율 증대 및 비용 절감 효과를 기대할 수 있다.
+Currently, the Korean military has been pursuing a policy of physically separating networks to protect important information and information assets in the defense field. However, continuing to adhere to the physical network separation policy for security purpose only will be highly limited in the future in that physical network separation does not completely prevent security breaches. Thus, the Korean military is also making a plan to switch to the public cloud for various services currently in operation on its own network, requiring more powerful user authentication mechanisms. To deal with this problem, this paper proposes a DID-based multi-factor authentication system. The proposed system is intended to offer user convenience and improved security, in order to increase work efficiency and reduce costs in terms of management.
+키워드
+열기/닫기 버튼
+분산신원증명
+이 키워드로 연구동향 분석
+이 키워드로 논문 검색
+,
+다중인증
+이 키워드로 연구동향 분석
+이 키워드로 논문 검색
+,
+블록체인
+이 키워드로 연구동향 분석
+이 키워드로 논문 검색
+,
+국방통합데이터센터
+이 키워드로 연구동향 분석
+이 키워드로 논문 검색
+,
+자기주권신원
+이 키워드로 연구동향 분석
+이 키워드로 논문 검색
+DID, Multi-Factor Authentication(MFA), Blockchain, DIDC, SSI
+피인용 횟수
+KCI
+1회
+FWCI
+(2026-07-18 기준)
+0.31
+열기/닫기 버튼
+같은 출판연도, 주제분야, 논문 형태에 따라 인용을 측정하여 정규화한 인용지수입니다.
+OpenAlex
+(2026-07-01 기준)
+0
+열기/닫기 버튼
+KCI와 OpenAlex의
+ISSN, 발행년, 권, 호 시작페이지
+가 일치하는 논문을 대상으로 조회한 결과입니다.
+1
+피인용 수
+0 회
+논문 바로가기
+피인용 목록
+427
+											
+											
+												회 열람
+KCI 원문 미리보기
+원문 찾아보기
+논문 인용하기
+서지정보 내보내기
+Endnote
+RefWorks
+RIS Format
+Plan text
+BibTex
+Excel
+Tab delimited
+Citeasy
+현재 페이지 인쇄
+인용현황
+KCI에서 이 논문을 인용한 논문의 수는
+1건
+입니다.
+열기/닫기 버튼
+* 인용논문 목록은 2026년 인용지수 공개 후 확정됩니다.
+참고문헌
+(17)
+열기/닫기 버튼
+* 2026년 이후 발행 논문의 참고문헌은 현재 구축 중입니다.
+오류신고
+논문누락 오류신고
+인용관련 오류신고
+논문 인용하기
+닫기
+분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구
+A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System
+아시아태평양융합연구교류논문지
+Asia-pacific Journal of Convergent Research Interchange
+타입을 선택하세요 :
+BibTex
+RIS
+APA
+Harvard
+MLA
+Vancouver
+Chicago
+ACS
+AMA
+NLM
+IEEE
+국문
+@article{ART002890824,<br />author={신규용},<br />title={분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구},<br />journal={아시아태평양융합연구교류논문지},<br />issn={2508-9080},<br />year={2022},<br />volume={8},<br />number={10},<br />pages={49-60},<br />doi={10.47116/apjcri.2022.10.05},<br />url={http://fucos.or.kr/journal/APJCRI/Articles/v8n10/5.html} <br />}
+TY - JOUR<br />AU - 신규용<br />TI - 분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구<br />T2 - 아시아태평양융합연구교류논문지<br />JO - 아시아태평양융합연구교류논문지<br />PY - 2022<br />VL - 8<br />IS - 10<br />PB - 사단법인 한국융합기술연구학회<br />SP - 49<br />EP - 60<br />SN - 2508-9080<br />AB - 현재 우리 군(軍)은 국방 분야의 중요 정보 및 정보자산을 보호하기 위해 물리적인 망 분리 정책을 추구해오고 있다. 하지만 물리적인 망 분리에 대한 안전성 문제가 계속 제기되고 있고, 국가정책으로 공공 부문에 대한 민간 클라우드 활용을 장려하고 있다는 점 때문에 우리 군(軍)도 현재 자체적으로 운용 중인 각종 서비스에 대한 민간 클라우드 전환을 계획하고 있다. 만일 국방 분야의 각종 서비스가 민간 클라우드로 전환된다면 현재 패스워드 기반의 단일인증 방식으로 운용되고 있는 각종 국방정보체계에 대한 침해 우려가 증가할 것이기 때문에 보다 강력한 사용자 인증수단이 요구될 것이다. 따라서 본 논문은 기존의 패스워드 기반의 단일인증(SFA)에 최신 신원증명 기술인 분산신원증명(Decentralized Identity, DID) 기반 인증을 추가한 분산신원증명(DID) 기반 국방 다중인증(MFA)체계 구축방안을 제안한다. 제안하는 분산신원증명(DID) 기반 국방 다중인증체계는 사용자 측면에서 편의성과 향상된 보안성을 제공하고, 관리적인 측면에서 업무효율 증대 및 비용 절감 효과를 기대할 수 있다.<br />KW - 분산신원증명, 다중인증, 블록체인, 국방통합데이터센터, 자기주권신원<br />DO - 10.47116/apjcri.2022.10.05<br />UR - http://fucos.or.kr/journal/APJCRI/Articles/v8n10/5.html<br />ER -
+신규용. (2022). 분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구. 아시아태평양융합연구교류논문지, 8(10), 49-60.
+신규용. 2022, "분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구", 아시아태평양융합연구교류논문지, vol.8, no.10 pp.49-60. Available from: doi:10.47116/apjcri.2022.10.05
+신규용 "분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구" 아시아태평양융합연구교류논문지 8.10 pp.49-60 (2022) : 49.
+신규용. 분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구.  2022; 8(10): 49-60. Available from: doi:10.47116/apjcri.2022.10.05
+신규용. "분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구" 아시아태평양융합연구교류논문지 8, no.10 (2022) : 49-60.doi: 10.47116/apjcri.2022.10.05
+신규용. 분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구. 아시아태평양융합연구교류논문지, 8(10), 49-60. doi: 10.47116/apjcri.2022.10.05
+신규용. 분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구. 아시아태평양융합연구교류논문지. 2022; 8(10) 49-60. doi: 10.47116/apjcri.2022.10.05
+신규용. 분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구.  2022; 8(10): 49-60. Available from: doi:10.47116/apjcri.2022.10.05
+신규용. "분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구" 아시아태평양융합연구교류논문지 8, no.10 (2022) : 49-60.doi: 10.47116/apjcri.2022.10.05
+텍스트파일로 저장
+영문
+@article{ART002890824,<br />author={Kyuyong Shin},<br />title={A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System},<br />journal={Asia-pacific Journal of Convergent Research Interchange},<br />issn={2508-9080},<br />year={2022},<br />volume={8},<br />number={10},<br />pages={49-60},<br />doi={10.47116/apjcri.2022.10.05},<br />url={http://fucos.or.kr/journal/APJCRI/Articles/v8n10/5.html} <br />}
+TY - JOUR<br />AU - Kyuyong Shin<br />TI - A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System<br />T2 - Asia-pacific Journal of Convergent Research Interchange<br />JO - Asia-pacific Journal of Convergent Research Interchange<br />PY - 2022<br />VL - 8<br />IS - 10<br />PB - Korea Convergence Technology Research Society<br />SP - 49<br />EP - 60<br />SN - 2508-9080<br />AB - Currently, the Korean military has been pursuing a policy of physically separating networks to protect important information and information assets in the defense field. However, continuing to adhere to the physical network separation policy for security purpose only will be highly limited in the future in that physical network separation does not completely prevent security breaches. Thus, the Korean military is also making a plan to switch to the public cloud for various services currently in operation on its own network, requiring more powerful user authentication mechanisms. To deal with this problem, this paper proposes a DID-based multi-factor authentication system. The proposed system is intended to offer user convenience and improved security, in order to increase work efficiency and reduce costs in terms of management.<br />KW - DID, Multi-Factor Authentication(MFA), Blockchain, DIDC, SSI<br />DO - 10.47116/apjcri.2022.10.05<br />UR - http://fucos.or.kr/journal/APJCRI/Articles/v8n10/5.html<br />ER -
+Kyuyong Shin. (2022). A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System. Asia-pacific Journal of Convergent Research Interchange, 8(10), 49-60.
+Kyuyong Shin. 2022, "A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System", Asia-pacific Journal of Convergent Research Interchange, vol.8, no.10 pp.49-60. Available from: doi:10.47116/apjcri.2022.10.05
+Kyuyong Shin "A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System" Asia-pacific Journal of Convergent Research Interchange 8.10 pp.49-60 (2022) : 49.
+Kyuyong Shin. A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System.  2022; 8(10): 49-60. Available from: doi:10.47116/apjcri.2022.10.05
+Kyuyong Shin. "A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System" Asia-pacific Journal of Convergent Research Interchange 8, no.10 (2022) : 49-60.doi: 10.47116/apjcri.2022.10.05
+Kyuyong Shin. A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System. Asia-pacific Journal of Convergent Research Interchange, 8(10), 49-60. doi: 10.47116/apjcri.2022.10.05
+Kyuyong Shin. A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System. Asia-pacific Journal of Convergent Research Interchange. 2022; 8(10) 49-60. doi: 10.47116/apjcri.2022.10.05
+Kyuyong Shin. A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System.  2022; 8(10): 49-60. Available from: doi:10.47116/apjcri.2022.10.05
+Kyuyong Shin. "A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System" Asia-pacific Journal of Convergent Research Interchange 8, no.10 (2022) : 49-60.doi: 10.47116/apjcri.2022.10.05
+Download
+원문 찾아보기
+닫기
+분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구
+A Study on Establishing a DID-based Defense Multi-Factor Authentication(MFA) System
+아시아태평양융합연구교류논문지
+							
+								Asia-pacific Journal of Convergent Research Interchange
+2022, vol.8,
+								no.10,
+								 
+								
+									통권 54호
+								
+								
+								
+								
+									
+									
+									pp. 49-60 (12 pages)
+발행기관 :  사단법인 한국융합기술연구학회
+연구분야 : 복합학 > 학제간연구
+신규용
+							/Kyuyong Shin
+1
+1
+육군사관학교
+RISS
+Google
+원문 보러가기
+기관에서 직접 입력한 원문 URL로 연결합니다.
+원문이 연결되지 않는 경우
+여기
+를 클릭하여 관리자에 알려주시기 바랍니다.
+Loading....
+논문검색 결과 리스트
+번호
+논문정보
+관심 논문 등록
+닫기
+관심 논문 등록
+내 참고문헌 등록
+관심 논문으로 등록하면 해당 논문의 동향 정보를 조회 할 수 있습니다.
+등록된 논문은 마이페이지 >
+관심정보관리
+에서 확인 할 수 있습니다.
+이 논문을 새로운 목록에 추가하거나 이미 생성된 목록 중 한 곳에 추가합니다.
+신규 목록 생성
+OR
+목록 선택
+참고문헌 관리 >
+참고문헌 반출
+에 선택한 논문을 등록합니다.
+이 논문을 새로운 폴더에 추가하거나 이미 생성된 폴더 중 한 곳에 추가합니다.
+신규 폴더 생성
+OR
+폴더 선택
+선택 정보
+분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구
+신규용
+										
+										
+										
+										,
+										
+										
+											 사단법인 한국융합기술연구학회
+										 
+										, 
+										
+										
+											아시아태평양융합연구교류논문지
+										
+										,
+										2022, vol.8,
+										no.10,
+										 
+										
+											통권 54호
+										
+										
+										
+										
+											
+											
+											pp. 49-60 (12 pages)
+저장
+취소
+논문 인용 알림 설정
+닫기
+이 논문이 새로운 논문에 인용되면 로그인 시 알림을 받습니다.
+설정된 알림은 마이페이지 > 관심정보 알림 >
+알림 설정 목록
+에서 확인 할 수 있습니다.
+선택 정보
+분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구
+신규용
+										
+										
+										외 0명 
+										,
+										
+										
+											 사단법인 한국융합기술연구학회
+										 
+										, 
+										
+										
+											아시아태평양융합연구교류논문지
+										
+										,
+										2022, vol.8,
+										no.10,
+										 
+										
+											통권 54호
+										
+										
+										
+										
+											
+											
+											pp. 49-60 (12 pages)
+저장
+취소
+서지 정보 내보내기
+닫기
+선택 정보
+필드명 설명 자료 다운로드
+분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구
+신규용
+										
+										
+										
+										,
+										
+										
+											 사단법인 한국융합기술연구학회
+										 
+										, 
+										
+										
+											아시아태평양융합연구교류논문지
+										
+										,
+										2022, vol.8,
+										no.10,
+										 
+										
+											통권 54호
+										
+										
+										
+										
+											
+											
+											pp. 49-60 (12 pages)
+제목,저자
+논문 ID
+주저자명
+공동저자명
+주저자 소속기관
+주저자 ORCID
+논문 제목
+논문 외국어 제목
+논문 영어 제목
+출처
+학술지 ID
+학술지명
+학술지 약어명
+학술지 외국어명
+발행기관 ID
+발행기관명
+발행기관 영어명
+ISSN
+EISSN
+발행연도
+발행일
+권, 호 ,특별호,
+페이지, 논문번호
+초록 , 키워드
+초록
+외국어 초록
+영문 초록
+키워드
+외국어 키워드
+영어 키워드
+기타 정보
+언어
+참고문헌 목록
+참고문헌 수
+피인용 횟수
+DOI
+주제분야
+URL
+KCI 등재구분
+저장
+취소
+전송할 데이터 생성이 완료되었습니다.
+Citeasy 참고문헌 반입 버튼을 클릭한다음 Citeasy 시스템으로 이동하여 반입을 완료하세요.
+Citeasy 참고문헌 반입
+취소
+Loading
+다운로드 파일을 생성중입니다.
+Loading
+데이터를 생성중입니다.
+개인정보 처리방침
+이메일 자동수집 거부
+문의사항 042-869-6674, 6675 , E-mail :
+kciadmin@nrf.re.kr
+관리 책임자 : 연구데이터분석팀 팀장 조석민
+관리 담당자 : 연구데이터분석팀 담당 이길용
+[34113] 대전광역시 유성구 가정로 201 한국연구재단
+Copyright(c) 2014 NRF ALL Right Reserved. Contact us for more information.

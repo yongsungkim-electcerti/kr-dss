@@ -1,0 +1,169 @@
+EIRA | Interoperable Europe Portal
+Skip to main content
+EIRA
+Subscribe to this solution
+Share Solution reuse
+Interoperability Architecture Solutions
+101 members
+Topics:
+Collaboration
+Digital government
+Tools
+ICT
+Reusable Software Components
+Standardisation
+Bookmark
+Like (5)
+Welcome
+What is the European Interoperability Reference Architecture (EIRA©)?
+For what? You are working on the...
+For whom? You are a...
+EIRA©'s value proposition
+Key concepts to understand EIRA©
+The EIRA© is a reference architecture
+The EIRA© requires interoperability enablers
+The EIRA© Validator
+Main characteristics of the EIRA©
+Benefits of the EIRA©
+Find out more
+Releases
+What is the European Interoperability Reference Architecture (EIRA©)?
+A reference architecture is a blueprint/template that provides a
+recommended framework
+for designing and implementing systems.
+EIRA©
+is a
+quality assurance specification
+that provides
+guidelines
+on how to analyse and design a
+Digital Public Service
+- unit of analysis of EIRA© - so that is
+interoperable by design
+- focus of EIRA©.
+The
+latest release of EIRA© is the
+v7.0.0
+👉 Explore the web version of the EIRA model
+EIRA©
+is formed by different Architecture Building Blocks (ABBs), informing key
+requirements and capabilities
+to consider to ensure interoperability, covering all interoperability
+views defined in the European Interoperability Framework (EIF)
+:
+Legal View
+– This includes the most salient public policy development aspects, ensuring compliance with legislation when implementing a Digital Public Service.
+Organisational View
+– This focuses on organisational and governance aspects, detailing the stakeholders involved and capabilities and business services achieved with the Digital Public Service
+Semantic View
+– This addresses how data and information are structured and shared to enable seamless communication between systems.
+Technical Application View
+– This covers the application of technical requirements, ensuring that digital solutions consider technical aspects for the end-to-end analysis.
+Technical Infrastructure View
+– Contains the most salient infrastructure services that need to be considered to support technical aspects for the infrastructure (i.e. computing hosting, networking, and data hosting) of Digital Solutions.
+For what? You are working on the...
+Analysis
+of Requirements of an Interoperable Solution (Digital Public Service incl.) use case
+Design
+of a Solution for Target Interoperable Solution (Digital Public Service incl.) use case
+For whom? You are a...
+Business analyst
+Enterprise architect
+Solution architect
+Working in the implementation of digital public services in a specific policy domain or in cross-domain infrastructure services.
+EIRA©'s value proposition
+Check
+EIRA©'s value proposition
+detailing how this
+quality assurance specification
+brings value to different
+use cases
+for support to Digital Public Services and
+target profiles
+.
+Key concepts to understand EIRA©
+The EIRA© is a reference architecture
+This means that the EIRA© is a blueprint/template that provides a
+recommended framework
+for designing and implementing systems. This framework entails:
+Guidance
+for creating solutions that meet specific needs or objectives.
+Best practices, standards, and guidelines
+to create systems that are efficient, scalable, and interoperable.
+A common language and approach for technology development and deployment that
+reduces complexity and costs
+.
+This way, the EIRA© operates as a checklist for
+quality assurance
+: it ensures quality during the analysis and solution design stages.
+The EIRA© requires interoperability enablers
+Interoperability enablers
+refer to the critical success factors that
+facilitate the seamless integration, communication, and collaboration between different systems
+,
+applications or (digital) services
+, ensuring diverse technologies work together harmoniously for improved efficiency and innovation.
+The implementation of the EIRA©
+key interoperability enablers is a critical condition
+to allow and ensure that Digital Public Services are interoperable, as shown in the image:
+The EIRA© Validator
+The
+EIRA© Validator
+allows users to
+validate ArchiMate® models against the EIRA©
+. It is implemented through the
+Interoperability TestBed
+, which is is a service offered by the European Commission’s DIGIT to facilitate the conformance testing of IT systems. More information on the Interoperability Test Bed and its latest release is available
+here
+.
+The EIRA© Validator is available
+here
+.
+The set of
+Business Rules
+for the EIRA© and the eGovERA© can be found in the following links:
+The EIRA© Validator Rules
+The eGovERA© Validator Rules
+Main characteristics of the EIRA©
+Common terminology to achieve coordination:
+Common understanding of the most salient ABBs needed to build interoperable Digital Public Services.
+Reference architecture for delivering Digital Public Services:
+A framework to categorise (re)usable Solution Building Blocks (SBBs) of an eGovernment solution.
+Technology- and product-neutral and service-oriented architecture (SOA) style:
+A service-oriented architecture style and promotion of ArchiMate® as a modelling language.
+Alignment with the EIF and the TOGAF®:
+The EIRA© views correspond to the interoperability levels in the EIF. Moreover, the EIRA© reuses terminology and paradigms from TOGAF® (i.e., architecture patterns, building blocks and views).
+Benefits of the EIRA©
+Development of
+more interoperable e-Government solutions
+.
+Cost-savings
+due to better assessment of solution portfolios.
+Cost-savings
+via increased findability.
+Machine readability
+.
+Facilitated validation
+using the EIRA
+©
+and the eGovERA
+©
+validator.
+Integration with
+the European Library of Architecture Principles
+(
+ELAP
+) EIRA
+©
+Library of Interoperability Specifications (
+ELIS
+).
+Find out more
+Check out
+these further notions
+about the EIRA
+©
+to know more!
+Releases
+Release history
+Report abusive content

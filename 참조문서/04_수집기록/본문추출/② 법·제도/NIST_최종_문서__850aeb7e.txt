@@ -1,0 +1,104 @@
+SP 800-63-4, Digital Identity Guidelines | CSRC
+You are viewing this page in an unauthorized frame window.
+This is a potential security issue, you are being redirected to
+https://csrc.nist.gov
+.
+Official websites use .gov
+A
+.gov
+website belongs to an official government
+                            organization in the United States.
+Secure .gov websites use HTTPS
+A
+lock
+(
+Lock
+Locked padlock icon
+) or
+https://
+means you’ve safely connected to
+                            the .gov website. Share sensitive information only on official,
+                            secure websites.
+Information Technology Laboratory
+Computer Security Resource Center
+Publications
+NIST SP 800-63-4
+Digital Identity Guidelines
+Share to Facebook
+Share to X
+Share to LinkedIn
+Share ia Email
+Documentation
+Topics
+Date Published:
+July 2025
+Supersedes:
+SP 800-63-3 (03/02/2020)
+Author(s)
+David Temoshok (NIST)
+,
+Diana Proud-Madruga (Electrosoft)
+,
+Yee-Yin Choong (NIST)
+,
+Ryan Galluzzo (NIST)
+,
+Sarbari Gupta (Electrosoft)
+,
+Connie LaSalle (NIST)
+,
+Naomi Lefkovitz (NIST)
+,
+Andrew Regenscheid (NIST)
+Abstract
+These guidelines cover the identity proofing, authentication, and federation of users (e.g., employees, contractors, or private individuals) who interact with government information systems over networks. They define technical requirements in each of the areas of identity proofing, enrollment, authenticators, management processes, authentication protocols, federation, and related assertions. They also offer technical recommendations and other informative text as helpful suggestions. The guidelines are not intended to constrain the development or use of standards outside of this purpose. This publication supersedes NIST Special Publication (SP) 800-63-3.
+These guidelines cover the identity proofing, authentication, and federation of users (e.g., employees, contractors, or private individuals) who interact with government information systems over networks. They define technical requirements in each of the areas of identity proofing, enrollment,...
+See full abstract
+These guidelines cover the identity proofing, authentication, and federation of users (e.g., employees, contractors, or private individuals) who interact with government information systems over networks. They define technical requirements in each of the areas of identity proofing, enrollment, authenticators, management processes, authentication protocols, federation, and related assertions. They also offer technical recommendations and other informative text as helpful suggestions. The guidelines are not intended to constrain the development or use of standards outside of this purpose. This publication supersedes NIST Special Publication (SP) 800-63-3.
+Hide full abstract
+Keywords
+assertions
+;
+authentication
+;
+authentication assurance
+;
+authenticator
+;
+credential service provider
+;
+digital authentication
+;
+identity proofing
+;
+federation
+;
+passwords
+;
+PKI
+Control Families
+None selected
+Documentation
+Publication:
+https://doi.org/10.6028/NIST.SP.800-63-4
+Download URL
+Supplemental Material:
+Project homepage
+Blog post
+5 Key Changes graphic
+Publication Parts:
+SP 800-63A-4
+SP 800-63B-4
+SP 800-63C-4
+Document History:
+06/08/20:
+SP 800-63-4 (Draft)
+12/16/22:
+SP 800-63-4 (Draft)
+08/21/24:
+SP 800-63-4 (Draft)
+07/31/25:
+SP 800-63-4 (Final)
+Topics
+Security and Privacy
+identity & access management

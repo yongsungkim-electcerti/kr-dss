@@ -1,0 +1,74 @@
+[
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/#gitb-tdl-documentation"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/#chapter-overview"
+  },
+  {
+    "title": "Introduction",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/introduction/index.html"
+  },
+  {
+    "title": "Hello world",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/helloWorld/index.html"
+  },
+  {
+    "title": "Test suites",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testsuite/index.html"
+  },
+  {
+    "title": "Test cases",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/testcase/index.html"
+  },
+  {
+    "title": "Scriptlets",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/scriptlets/index.html"
+  },
+  {
+    "title": "Types",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/types/index.html"
+  },
+  {
+    "title": "Expressions",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/expressions/index.html"
+  },
+  {
+    "title": "Test steps",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/constructs/index.html"
+  },
+  {
+    "title": "Test step handlers",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/handlers/index.html"
+  },
+  {
+    "title": "Example test suites",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/examples/index.html"
+  },
+  {
+    "title": "Release history",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/changelog/index.html"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/tdl/latest/#related-documentation"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/services/latest/"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/guides/latest/"
+  },
+  {
+    "title": "",
+    "url": "https://www.itb.ec.europa.eu/docs/itb-ta/latest/"
+  }
+]

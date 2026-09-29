@@ -1,0 +1,489 @@
+Electronic identification and trust services including e-signatures (RP 2026) | Interoperable Europe Portal
+Skip to main content
+Rolling Plan for ICT standardisation
+Join this collection
+0 Solutions
+190 members
+Topics:
+Standardisation
+Bookmark
+Like (0)
+Electronic identification and trust services including e-signatures (RP 2026)
+(A.) Policy and legislation
+(
+A.1)   Policy objectives
+This relates to Regulation (EU) No 910/2014 of the European Parliament and of the Council of 23 July 2014 on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC, amended by Regulation (EU) 2024/1183 as regards establishing the European Digital Identity Framework and by Directive (EU) 2022/2555 on measures for a high common level of cybersecurity across the Union (NIS2 Directive).
+(A.2) EC perspective and progress report
+The NIS2 Directive applies to trust service providers, which are listed under Annex I, point 8, digital infrastructure sector, regardless of their size. As a rule, according to Art 3 (1) (b), qualified trust service providers are considered as essential entities under the NIS2 Directive. Trust service providers must implement cybersecurity risk-management measures laid down in Article 21 NIS2 and report significant incidents according to Article 23 NIS2. Commission Implementing Regulation (EU) 2024/2690 of 17 October 2024 lays down the rules for the application of the NIS2 Directive as regards the technical and methodological requirements of cybersecurity risk-management measures and further specification of the cases in which an incident is considered to be significant also with regard to trust service providers.
+The eIDAS Regulation (EU) 910/2014, was originally adopted on 23 July 2014, addressing in one comprehensive piece of legislation, electronic identification, electronic signatures, electronic seals, electronic time stamping, electronic registered delivery services, electronic documents and certificate services for website authentication as core instruments for electronic transactions in the European Union.
+The Regulation (EU) 2024/1183 of 11 April 2024 amending Regulation (EU) No 910/2014 as regards establishing the European Digital Identity Framework was published on 30 April 2024 and entered into force on 20 May 2024.  This amendment mandates that each Member State shall provide at least one European Digital Identity Wallet which offers to natural and legal persons secure and easy access to different e-services, provided by both the public and private sector supporting a wide range of different use cases. The wallet is required to support privacy by design, ensure strict data minimalisation, and give users full control over which personal data attributes are issued to and exchanged from the wallet, with issuers and verifiers practicing restraint in attribute handling. The European Digital Identity Wallet, trust services and end-user products must be accessible to persons with disabilities following the requirements of Regulation 2019/882. The wallet must fulfil the requirements for Level of Assurance ‘High’ and the security and functionalities of the wallet must be certified. The data processing of the wallet must be demonstrated to be conformant to GDPR.
+In addition, the revised eIDAS Regulation establishes new qualifiable trust services consisting of:
+the issuance and validation of Electronic attestation of attributes concerning information related to natural and legal person identity, such as addresses, age, gender, civil status, family composition, nationality, educational and professional qualifications and titles, licenses, other permits and payment data, that can be offered, shared and exchanged across borders, in full security, enforcing strong data protection and with legal effect across borders,
+the management of remote electronic qualified signature or seal creation device,
+the electronic archiving of electronic data and electronic documents, ensuring the receipt, storage, retrieval and deletion of electronic data and electronic documents ensuring their durability, legibility, integrity, confidentiality and proof of origin throughout the preservation period, and
+the recording of electronic data in electronic ledgers, a sequence of electronic data records, with ensured integrity and accuracy of the chronological ordering.
+This relates to Regulation (EU) No 910/2014 of the European Parliament and of the Council of 23 July 2014 on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC, amended by Regulation (EU) 2024/1183 as regards establishing the European Digital Identity Framework and by Directive (EU) 2022/2555 on measures for a high common level of cybersecurity across the Union (NIS2 Directive).
+The revised eIDAS Regulation requires the Commission to issue many implementing acts that, in case of trust services, shall list reference standards and, when necessary, establish specifications and procedures for the requirements specified in the Regulation.
+The Commission receives advice from Member States and engages with the private sector to establish technical and operational specifications, and reference standards for the requirements of the European Digital Identity framework. This occurs within the “European Digital Identity Cooperation Group” established by
+Commission Decision C(2024)6132
+pursuant to Article 46e of the eIDAS regulation, which defines the rules of procedure concerning the involvement of the Member States and other stakeholders. The requirements include issuance and exchange of selected attestation of attributes, the functionality and security of the European Digital Identity Wallets, the assurance of the European Digital Identity framework including certification of the wallet, identity proofing and governance.
+In 2024, the Commission implemented a comprehensive standardisation strategy through several concrete actions:
+GitHub Repository
+and
+Roadmap
+: A dedicated public repository consolidates and tracks all Standards and Technical Specifications (STS) relevant to the EUDI Wallet ecosystem, enabling transparent monitoring of development, maturity, and regulatory alignment.
+SDO Collaboration
+: Engagement and structured collaboration channels with all SDOs facilitate ongoing technical dialogue, gap identification, and priority alignment.
+Multi-Stakeholder Platform (MSP)
+: Reactivated Regulation (EU) 1025/2012 identification procedure to enable formal recognition of technical specifications from non-recognised SDOs, proposed by the Commission to support potential referencing in secondary legislation.
+EISMEA Funding
+: A dedicated call for proposals co-finances ESOs standardisation activities.
+The EC has decided to prepare a thorough Standardisation strategy (hereinafter also - “strategy”) related to the EUDI Wallet implementation as derived from the revised eIDAS Regulation.
+Standardisation Strategy
+This strategy is a comprehensive plan aimed at guiding, promoting, and supporting the development and maintenance of standards and technical specifications within the digital identity domain. This strategy focuses on facilitating the adoption and creation of standards and technical specifications that ensure the digital identity solution is consistent, secure, GDPR compliant, interoperable, and user-friendly across all EU member states. It aligns with existing relevant standards and regulations to ensure coherence and compliance across the board.
+The key components of the strategy are:
+Assessment: Analyse current practices against the latest EU Digital Identity Wallet Architectural Reference Framework (ARF), to identify gaps in high-level requirements for implementing the eIDAS Regulation.
+Planning: Identify the nature of the gaps and plan a course of action for each one. This involves determining whether gaps can be filled by existing standards, require the development of new standards, or need interim technical specifications.
+Support for Implementing Acts: Assist in the preparation of the Implementing Acts by providing comprehensive analysis, gap identification, and recommendations for integrating standards and technical specifications.
+Integration into Public Procurements: Facilitate the use of standardised solutions in public procurements by referencing approved standards.
+An initial gap analysis has been carried out. The results are summarized in a few Gap Analysis Report documents (“fiche”), related to specific Implementing Acts. These “fiche” documents touch upon the different topics that are included in the ARF and point out the necessary work to be done to close the gaps, as far as can be foreseen at this stage, and as a basis for discussion and collaboration with SDO’s and other stakeholders.
+SDOs Involvement or engagement.
+The engagement with the SDOs is needed so that both the EC and the SDO’s will agree on a common gap analysis, the work needed to close the gap, including the association with each SDO.
+More precisely, there is a need to agree on the following:
+Confirm the common understanding of the technical gaps that were found regarding the ARF.
+Agreement on the support of existing standards or technical specifications regarding the required functionalities from the technical requirements, sorted into the following categories: (1) fully supported; (2) partially supported; or – (3) not supported at all.
+Detect and map the requirements into: (1) Existing standards published; (2) existing standards in draft or under development by SDOs recognised under Reg. 1025/2012; (3) existing technical specifications from non-recognised SDOs (e.g., OpenID4VP by OpenID or Verifiable Credentials by W3C); or – (4) needs not covered by any available standards or specifications.
+The foreseen activities involving SDOs include an initial gap definition to commence discussion aiming to gather the following information:
+Commenting on the initial gap analysis.
+Collaborating with SDOs to influence the development or enhancement of standards by contributing to working groups, providing technical input, and participating in the drafting process.
+Monitoring the progress of these developments to ensure that the necessary updates or new standards are addressed in a timely manner.
+Identifying major functionalities that require new or updated standards.
+Assigning the responsibility for developing these standards to recognized European Standardisation Organizations.
+Securing funding for the process.
+Ensuring that the developed standards meet the EUDIW requirements and are ready for integration into the Implementing Acts.
+(A.3) References
+Regulation (EU) No. 910/2014
+of the European Parliament and of the Council of 23 July 2014 on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC (eIDAS Regulation).
+Regulation (EU) 2024/1183
+of the European Parliament and of the Council of 11 April 2024 amending Regulation (EU) No 910/2014 as regards establishing the European Digital Identity Framework
+Directive (EU) 2022/2555
+of the European Parliament and of the Council of 14 December 2022 on measures for a high common level of cybersecurity across the Union, amending Regulation (EU) No 910/2014 and Directive (EU) 2018/1972, and repealing Directive (EU) 2016/1148 (NIS 2 Directive) and
+Commission Implementing
+of 17 October 2024 laying down rules for the application of Directive (EU) 2022/2555 as regards technical and methodological requirements of cybersecurity risk-management measures and further specification of the cases in which an incident is considered to be significant with regard to DNS service providers, TLD name registries, cloud computing service providers, data centre service providers, content delivery network providers, managed service providers, managed security service providers, providers of online market places, of online search engines and of social networking services platforms, and trust service providers.
+Consolidated text
+as in force on 19 October 2024
+List of adopted and published
+Implementing Acts
+related to Regulation (EU) No. 910/2014
+Commission Recommendation C(2021) 2021/3968
+of 3rd June 2021 on a common Union Toolbox for a coordinated approach towards a European Digital
+Identity Framework
+The European Digital Identity Wallet Architecture and Reference Framework (ARF)
+establishing high level requirements as reference to create uniform conditions for its implementation
+(B.) Requested actions and progress in standardisation
+Action 1.
+SDOs to take ongoing EU policy activities into account in standardisation, e.g. in ISO/IEC JTC 1/SC 27/WG 5 (identity management and privacy technologies) and other working groups of ISO/IEC JTC 1/SC 27. Also, the standards being developed by ISO/IEC JTC1 SC17 including on mobile driving licenses and identity management via mobile devices are particularly relevant to electronic identification. Furthermore, in order to promote the strengths of the European approach to electronic identification and trust services at global level and to foster mutual recognition of electronic identification and trust services with non-EU countries, ESOs should keep European and international standards aligned wherever possible. The promotion and maintenance of related European approaches, which especially take into account data protection considerations, in international standards should be supported.
+Action 2:
+As required by the revised eIDAS Regulation prepare standards for:
+Interfaces between the European Digital Identity Wallet and trust services as well as services for signing by means of electronic signatures and seals.
+Interfaces between the European Digital Identity Wallet and relying parties and issuers of electronic attestations of attributes.
+Interfaces related to Authentic Sources of attributes.
+Issuance and revocation of wallets.
+Policy and security requirements on providers of electronic attestation of attribute services including issuance and revocation of electronic attestation of attribute.
+Policy and security requirements on providers of trust services operating a remote signing device.
+Policy and security requirements on providers of services issuing certificates for relying party access certificates to the European Digital Identity Wallet.
+Policy and security requirements on providers of services issuing certificates for relying party registration for use of the European Digital Identity Wallet.
+Policy and security requirements on providers of services supporting certificate transparency.
+Extended validation for electronic attestation of attributes.
+k)Security evaluation and certification of the European Digital Identity Wallet.
+Security assessment and certification of services supporting the European Digital Identity Wallet.
+Tests for conformance of European Digital Identity Wallets.
+Policy and security requirements on providers of trust services for electronic ledger.
+Policy and security requirements on providers of trust services for electronic archiving.
+Update to trusted lists to support new trust services.
+Management of trust relating to the EU Digital Identity Wallet.
+Supporting additional requirements for identity proofing and validation of attributes.
+Adapting existing standards to take into account new provisions and requirements in the revised Regulation including accessibility for persons with disabilities and special needs, alignment with NIS2.
+Ensuring that the requirements of privacy by design are met so that compliance with GDPR can be demonstrated.
+Next generation of registered electronic mail and electronic delivery to take account of new services and components available under the revised regulation including EU digital identity wallets and electronic ledgers.
+Use of electronic identities and electronic signatures with other trust services including electronic ledgers in support of smart contracts.
+Support implementation and use of the Trusted Lists, including support for new trust services and other potential used of trust lists for managing the trust infrastructure of the EU Digital Identity Wallet.
+Maintain and update the set of standards supporting creation and validation of electronic signatures, seals, certificates, attestations and timestamps and their preservation.
+Action 3
+: SDOs to cooperate and work in the areas of identifiers, vocabularies, semantics, taxonomies, ontologies for electronic attestations, considering work from stakeholders that are already involved in these activities in their respective sectors.
+Action 4
+: The impact of quantum computing technologies on the cryptographic algorithms, in particular public key cryptography, used for electronic identification and trust services including electronic signatures needs to be analysed, and the potential impact on the relevant standards identified.  This should lead to guidance on the migration to Quantum Safe Cryptography.
+Action 5:
+SDOs to engage in a collaborative process to address the gaps between existing standards/technical specifications and the requirements of the EUDI Wallet ecosystem. This involves reviewing the initial gap analysis and participating in discussions to agree on the necessary steps for addressing these gaps. Additionally, SDOs are to contribute to identifying key functionalities that need new or updated standards/technical specifications and be involved in their development to support the successful implementation of the EUDI Wallet as outlined in the eIDAS 2 regulations.
+Action 6:
+SDOs to develop technical interoperability mechanisms between wallets released in different regions of the world, such as EUDIW, LACnet. Technical interoperability could set the grounds for the future adoption of political and regulatory decisions that allow, in the long term, for mutual recognition of digital identities with legal effects that would support international trade and commerce and would providing a way to evaluate the trustworthiness of a wallet or an attestation in cross-regional contexts.
+(C.) Activities and additional information
+(C.1) Related standardisation activities
+CEN & CENELEC
+CEN/TC 224
+‘
+Personal identification and related personal devices with secure element, systems, operations and privacy in a multi sectorial environment
+’ develops standards for strengthening the interoperability and security of personal identification and its related personal devices, systems, operations and privacy. CEN/TC 224 addresses sectors such as Government/Citizen, Transport, Banking, e-Health, as well as Consumers and providers from the supply side such as card manufacturers, security technology, conformity assessment body and software manufacturers.
+CEN/TC 224/WG 20 is dedicated to standardisation of EUDI wallet.
+On September 2024, CEN/TC 224 organized with ETSI/TC ESI the “ETSI & CEN Workshop on EU Digital Identity Framework Standards”.
+The presentations are available on
+https://www.etsi.org/events/2353-cen-etsi-workshop#pane-5/
+.
+An important document has recently been finalised by the TC, CEN/TR 17982:2023 ‘European Digital Identity Wallets standards Gap Analysis’. This document identifies relevant existing standards and standards work in progress around European Digital Identity Wallets. It also
+identifies missing work items and overlaps in standards
+and is supposed to work as a roadmap for future standardisation projects in the area.
+CEN/CLC/JTC 19
+‘
+Blockchain and Distributed Ledger Technologies
+’ focuses on European requirements for Distributed Ledger Technologies and proceeds with the identification and possible adoption of standards already available or under development in other SDOs (especially ISO TC 307), which could support the EU Digital Single Market and/or EC Directives/Regulations.
+In the context of the revision of eIDAS Regulation, CEN/CLC/JTC 19/WG 1 started developing the Technical Specification “Policy and Security Requirements on Trust Services on Electronic Ledger” in support of the new Electronic Ledger Trust Service.
+CEN & CENELEC Sector Forum Energy Management & Energy Transition (SFEM)
+starting from April 2021 has a dedicated focus group for Blockchain and DLT which brings together stakeholders coming from the energy sector as well as from academic and research bodies. This focus group prepared an overview of blockchain/DLT related activities and applications in the electricity sector (incl. sector coupling) and elaborated a complete view of the current challenges (technical and non-technical) regulatory, RD&I, Pre-normative research (PNR), use cases, and standardisation needs in the field of “DLT in energy”. The final report of the group was prepared in November 2022 for the review of the Swiss Federal Office of Energy and was made available in 2023.
+CEN/TC 468
+‘
+Management and preservation of digital content
+’ is relevant for archival and can be relevant for the qualified trust services for electronic archiving.
+CEN & CENELEC standards and their status can be searched here:
+https://standards.cencenelec.eu/dyn/www/f?p=205:105:0
+:
+ETSI
+ETSI TC ESI
+is progressing several work items in support of the amended eIDAS Regulation and the associated Architecture Reference Framework (see B2 above and
+https://portal.etsi.org/tb.aspx?tbid=607&SubTB=607#/lt-50611-work-programme
+)
+TC SET
+keeps on improving the UICC technology by adding the possibility to host and address several virtual Secure Elements embedded into the same hardware component. This allows multiple virtual Secure Elements to coexist logically separated and be addressed independently thought the same physical interface. This technology is the base for a new feature allowing to have multiple subscriptions to a mobile network active in a mobile phone using just one eUICC. This also offers the means to embed independent identity (e.g. eIDAS), payment or transport applications in the same physical secure element.
+These additional features also imply working on the improvement of the interface between the device and the embedded SE. TC SET is working on the definition of a high speed, versatile interface based on MIPI I3C technology allowing easier integration in mobile devices for supporting multiple applications in addition to network authentication. This will benefit to digital identity wallet integration when high level of assurance is required.
+ETSI ISG PDL
+(Permission Distributed Ledgers) provides the foundations for the operation of permissioned distributed ledgers, with the ultimate purpose of creating an open ecosystem of industrial solutions to be deployed by different sectors. . ISG PDL (Industry Specification Group on Permissioned distributed ledgers, and Distributed Ledger technology) has published Group Reports and Specifications (GRs & GSs) for smart contracts and a GS for DAOs (Distributed Autonomous Organisations) among other subjects’ non-repudiation, redactability, digital identity, etc… these have many digital identity related matters, not least of which the following:
+ETSI GR PDL 014v1.1.1 Study on non-repudiation techniques.
+ETSI GR PDL 017v1.1.1 eIDAS2 (developed in cooperation with TC ESI).
+ETSI GS PDL 018v1.2.1 Redactable Distributed Ledgers.
+ETSI GR PDL 019v1.1.1 PDL Services for Identity and Trust Management
+ETSI GS PDL 023v1.1.1 DID - Decentralized identifiers Framework
+ETSI GR PDL 030v1.1.1 Trust in Telecom System (draft)
+ETSI GS PDL-023 – DID “Decentralized Identity” Framework (developed in cooperation with TC ESI and STF 655).
+ETSI ISG ETI
+(Encrypted Traffic Integration) is developing a Zero Trust Architecture approach to networks that builds on the identity management platform being developed by TC CYBER in TS 103 486 and in the cited work in TC ESI in order to enable a semantic, or capability, assured path through networks.
+GS1
+GS1 is developing standards for Verifiable Credentials (VCs) . These VCs enable machine-verifiable supply-chain claims and align with the goals of the European Digital Identity Framework under eIDAS 2.0 (European Commission – EUDI). Use cases include provenance, product certification, regulatory reporting, and location traceability. The approach is consistent with the W3C Verifiable Credentials Data Model
+Demonstrators and specifications (public):
+GS1 Verifiable Credentials:
+https://www.gs1.org/standards/
+”
+ISO
+The ISO Technical Committee,
+ISO/TC 154
+Processes, data elements and documents in commerce, industry and administration
+, addresses standardisation and registration of business, and administration processes and supporting data used for information interchange between and within individual organizations and supports standardisation activities in the area of industrial data.
+Ongoing work:
+Requirements and roles & responsibilities for fulfilling trusted e-communications in commerce, industry and administration
+Qualified trust services for long-term signature of kinds of electronic documents
+Validation of long-term signature
+Trusted (or qualified) electronic registered delivery services (or platform)
+Dematerialisation and proof of dematerialisation
+Requirements for providing trusted e-communications in the mobile environment
+Requirements for providing trusted e-communications in the cloud environment
+Projects include the ISO 14533 series of standards for
+Processes, data elements and documents in commerce, industry and administration -- Long term signature profiles.
+https://www.iso.org/committee/53186.html
+The ISO Technical Committee
+ISO/TC 321
+Transaction Assurance in e-Commerce
+, addresses standardisation in the field of “transaction assurance in e- commerce related upstream/downstream processes”, including the following:
+Assurance of transaction process in e-commerce (including easier access to e-platforms and estores);
+Protection of online consumer rights including both prevention of online disputes and resolution process;
+Interoperability and admissibility of inspection result data on commodity quality in cross-border e-commerce;
+Assurance of e-commerce delivery to the final consumer.
+https://www.iso.org/committee/7145156.html
+ISO/TC307
+(Blockchain and Distributed Ledger Technology) established with
+ISO/IEC JTC1/SC27
+the joint working group 4 (JWG 4) that developed:
+ISO/TR 23249:2022 Blockchain and distributed ledger technologies – Overview of existing DLT systems for identity management
+ISO/TR 23644:2023 Blockchain and distributed ledger technologies (DLTs) — Overview of trust anchors for DLT-based identity management.
+https://www.iso.org/committee/6266604.html
+ISO/IEC JTC 1
+ISO/IEC JTC 1/SC 37
+,
+Biometrics
+, is responsible for the standardisation of generic biometric technologies pertaining to human beings to support interoperability and data interchange among applications and systems. Generic human biometric standards include: common file frameworks, biometric application programming interfaces, biometric data interchange formats, related biometric profiles and other standards in support of technical implementation of biometric systems, evaluation criteria to biometric technologies, methodologies for performance testing and reporting, cross-jurisdictional and societal aspects of biometric implementation. The complete list of standards published or under development, can be found in on the SC 37 homepage:
+https://www.iso.org/committee/313770.html
+Published standards and ongoing projects related to the topics include the series of biometric data interchange standards for different biometric modalities, biometric technical interfaces, related biometric profiles and other standards in support of technical implementation of biometric systems, and cross jurisdictional and societal aspects of biometric implementation. Representative projects include revisions to some of the ISO/IEC 19794 series for
+Biometric data interchange formats,
+ISO/IEC 29794 series for
+Biometric sample quality
+and ISO/IEC 39794 series for
+Extensible biometric data interchange formats.
+These projects include generic extensible data interchange formats for the representation of data, a tagged binary data format based on an extensible specification in ASN.1 and a textual data format based on an XML schema definition (both capable of holding the same information). The ISO/IEC 30107 series for
+Biometric presentation attack detection
+and ISO/IEC 24779 series for
+Cross-Jurisdictional and societal aspects of implementation of biometric technologies - pictograms, icons and symbols for use with biometric systems
+are multi-part standards of relevance.
+ISO/IEC JTC 1/SC 27
+,
+Information security, cybersecurity and privacy protection,
+is responsible for international IT security. The most relevant standards to electronic identification and trust services are developed by SC 27/WG 5
+Identity Management and Privacy Technologies
+. After completion of foundational frameworks, specifically, the ISO/IEC 24760 series
+A framework for identity management
+and ISO/IEC 29100 for
+Privacy framework
+, priorities for WG 5 are related standards and Standing Documents on supporting technologies, models, and methodologies. WG 5’s Projects include:
+A framework for identity management – Part 1: Terminology and concepts (ISO/IEC 24760-1, 2nd edition:2019)
+A framework for identity management – Part 2: Reference framework and requirements (ISO/IEC 24760-2, 1st edition:2015)
+A framework for identity management – Part 3: Reference framework and requirements (ISO/IEC 24760-3, 1st edition:2016)
+Privacy framework (ISO/IEC 29100, 1st edition:2011; Amendment 1:2018)
+Privacy architecture framework (ISO/IEC 29101, 2nd edition:2018)
+A framework for access management (ISO/IEC 29146, 1st edition:2016)
+Requirements for partially anonymous, partially unlinkable authentication (ISO/IEC 29191, 1st edition:2012)
+Privacy enhancing data de-identification terminology and classification of techniques (ISO/IEC 20889, 1st edition:2018)
+Privacy impact assessment – methodology (ISO/IEC 29134, 1st edition:2017)
+Extension to ISO/IEC 27001 and ISO/IEC 27002 for privacy management – Requirements and guidelines (ISO/IEC 27701, 1st edition:2019)
+WG 5 Standing Document 2 – “Privacy references list”
+WG 5 Standing Document 4 – “Standards Privacy Assessment”
+ISO/IEC JTC 1 SC 27 is working in close collaboration with CEN/CLC/JTC 13
+‘Cybersecurity and Data protection
+’ on eIDAS related standardisation activity.
+ISO/JTC 1/SC 17
+Cards and security devices for personal identification
+is responsible for standardisation and interface associated with their use in inter-industry applications and international interchange in the area of:
+Identification and related documents,
+Cards,
+Security devices and tokens
+https://www.iso.org/committee/45144.html
+ITU-T
+ITU-T SG3
+is responsible,
+inter alia
+, for studying international telecommunication/ICT policy and economic issues and tariff and accounting matters (including costing principles and methodologies). SG3 has approved
+Recommendation ITU-T D.1140/X.1261
+, “Policy framework including principles for digital identity infrastructure” and
+Recommendation ITU-T D.1141
+, “Policy framework and principles for data protection in the context of big data relating to telecommunication/information and communication technology services”.
+More info:
+http://itu.int/ITU-T/go/tsg3
+ITU-T SG11
+is developing a new standard
+Q.TSCA
+“Requirements for issuing End-Entity and Certification Authority certificates for enabling trustable signalling interconnection between network entities”. This draft standard is a continuation of SG11 activities on implementation of security measures (Recommendations ITU-T Q.3057, Q.3062 and Q.3063) on signalling level in order to cope with different types of attacks on existing ICT infrastructure and services (e.g. OTP intercept, calls intercept, spoofing numbers, robocalls, etc.). SG2 is developing a new standard E.RAA4QTSCA “Registration Authority Assignment criteria to issue digital public certificates for use by Q.TSCA”. More details about these activities can be found at:
+https://itu.int/go/SIG-SECURITY
+.
+In addition,
+SG11 is addressing the growing problem of counterfeited telecommunication/ICT products and devices, which is adversely affecting all stakeholders in the ICT field (vendors, governments, operators and consumers). Within this activity, SG11 developed number of Recommendations which describe approaches on how to combat the circulation of counterfeit equipment (Q.5050-Q.5069-series “Combating counterfeiting and stolen ICT devices”). SG11 continues its studies related to Equipment Identity Registers (CEIR). SG11 approved Q.Suppl.76 which defines common approaches and interfaces for data exchange between the central equipment identity register and the equipment identity register. Two new draft Recommendations ITU-T Q.5055 “Technical requirement, interfaces and generic functions of CEIR” and ITU-T Q.5056 “Framework for combating online Multimedia Content Misappropriation” are under approval process for the time being. More details of ITU activities on this subject are available at:
+https://itu.int/go/CS-ICT
+.
+ITU-T SG13 studies
+the concepts and mechanisms to enable trusted ICT, including framework, requirements, capabilities, architectures and implementation scenarios of trusted network infrastructures and trusted cloud solutions in coordination with all study groups concerned. It has approved Recommendations ITU-T Y.3058 “Functional architecture for trust enabled service provisioning”, Y.3059 “Trust Registry for Devices: requirements, architectural framework”, Y.3060 “Autonomous networks - overview on trust”, Y.3062 “Trustworthiness evaluation for IMT-2020 and Beyond with autonomous network functions” and agreed G.Suppl.84 “Standardisation roadmap on Trustworthy Networking and Services”.
+ITU-T SG17
+(security) leads ITU-T’s work on
+security, identity, and trust
+.
+It standardises identity management frameworks that enable secure, interoperable, and privacy-respecting digital identities for users, devices, and services.
+SG17 Recommendations
+address:
+Identity lifecycle management, including registration, authentication, authorization, and revocation
+Interoperable identity frameworks and federation models enabling cross-domain trust
+Privacy and data protection, incorporating privacy-by-design, consent, and minimization of personally identifiable information (PII)
+In addition, SG17 develops standards for telebiometrics, enabling the secure use of biometric characteristics for remote identity verification and authentication. This work integrates biometric technologies into IdM systems while addressing security, interoperability, performance, and privacy protection, supporting applications such as e-government, financial services, and remote access.
+SG17 also maintains the X.660–X.680 series of Recommendations on Object Identifiers (OIDs), which provide a globally unique and hierarchical identification mechanism for objects such as identities, credentials, algorithms, protocols, and data structures. OIDs are a fundamental enabler of interoperability, unambiguous identification, and trust management across security and identity systems, including PKI, directory services, and telebiometric applications.
+On trust management, ITU-T X.509 defines the format of public key certificate, enabling secure authentication and encrypted communication across the internet and making global e-commerce, e-government, and online privacy possible. It has been implemented in virtually all major operating systems and browsers and become the cornerstone of international public key infrastructure and privilege management infrastructure and the enabler of scalable trust in today’s digital world. SG17 continues working on de-centralized PKI and designing identity and trust management models for AI agents (e.g.,
+XSTR.gidi
+,
+Xdpidm-aAI
+).
+More info:
+http://itu.int/ITU-T/go/tsg17
+ITU-T SG20
+is the lead study group for Internet of Things identification. The Study Group developed Recommendation ITU-T Y.4811 “Reference framework of converged service for identification and authentication for IoT devices in decentralized environment”. ITU-T SG20 is working on draft Technical Report “Identification management service of IoT device” (YSTR.IoT-IMS), draft Recommendation “Framework and requirements for identity visualization in and across metaverse” (Y.metaID), draft Recommendation “Requirements and functional architecture of authentication system based on Internet of things and wireless signal fingerprints in power grid” (Y.PIoT-arch), draft Recommendation “Framework of unified authentication service for data collaboration in IoT-based electric power infrastructure” (Y.uas-dc-fr)  and draft Supplement to ITU-T Y.4811 – “Implementation of converged service for identification and authentication for IoT devices in decentralized environment” (Y.Supp-Imp-CSIADE).
+More info:
+http
+Under the
+Security, Infrastructure and Trust Working Group
+led by ITU under the Financial Inclusion Global Initiative (a joint programme of the ITU, World Bank and Bank for International Settlements and supported by the Gates Foundation), studies on strong authentication technologies applications for digital financial services are being undertaken. The use of identity verification and authentication system based on DLT are also being studied.
+See Report:
+https://www.itu.int/en/ITU-T/extcoop/figisymposium/Documents/ITU_SIT_WG_Implementation%20of%20Secure%20Authentication%20Technologies%20for%20DFS.pdf
+UNECE
+The United Nations Economic Commission for Europe in its Recommendation 14 outlines base elements to take into account in the use of electronic authentication methods. It recommends that the authentication methods should be chosen in light of the nature of the electronic transaction and the relationship between the parties involved in the exchange. Not all electronic exchanges require the highest level of reliability.
+See: (available also in French and Russian)
+http://www.unece.org/fileadmin/DAM/cefact/recommendations/rec14/ECE_TRADE_C_CEFACT_2014_6E_Rec14.pdf
+Further work is being developed on this topic within UN/CEFACT. See:
+http://www.unece.org/fileadmin/DAM/cefact/cf_plenary/2018_plenary/ECE_TRADE_C_CEFACT_2018_7E.pdf
+OASIS
+The
+OASIS Security Services (SAML) TC
+maintains and extends the widely used Security Assertion Markup Language (SAML, also ITU-T Recommendation X.1141) standard.
+A profile of SAML
+is used for cross-border identification and authentication of citizens in the eIDAS nodes provided by the
+eID Building Block of the Connecting Europe Facility (CEF)
+. SAML is also used at national level in Member States.
+The PKCS#11 industry cryptographic method is commonly used in most commercial certificate authority (CA) software for proving identity, as well as cross-platform smart card software.  The
+OASIS PKCS#11 committee
+recently released its Specification v3.1 and Profiles v3.1 in support of the “Cryptoki” (from “cryptographic token interface”) API to use and access PKCS#11 certificates.
+OASIS’
+Lightweight Verifiable Credential Schema and Process
+(LVCSP) committee (
+https://www.oasis-open.org/committees/lvcsp
+) defines methods for enabling individuals (credential subjects) to voluntarily share their verified identity attestations, such as know-your-customer (KYC) determinations across different platforms and services, using the W3C Verifiable Credential (VC) standard.  These methods allow shared identity attestations consistent with GDPR traceability, the permission of data subjects, and decentralized exchanges.
+The
+OASIS Trust Elevation TC
+defines a set of standardised protocols that service providers may use to elevate the trust in an electronic identity credential presented to them for authentication.
+The
+OASIS DSS-X TC
+defines standard Digital Signature Service Core Protocols, Elements, and Bindings. The latest version provides both JSON- and XML-based request/response protocols for signing and verifying, including updated timestamp formats, transport and security bindings and metadata discovery methods. This TC works in close liaison with the
+ETSI Electronic Signatures and Infrastructures (ESI) TC
+.
+The
+OASIS ebXML Message TC
+maintains the OASIS ebMS3 (also ISO 15000-1) standard and the AS4 standard (also ISO 15000-2). AS4 is profiled as the message exchange protocol of the European Commission’s
+eDelivery Building Block
+. Several dozens policy domains use eDelivery for cross-border secure and reliable exchange of documents and data. AS4 is also used in the
+EESSI system for digitalisation in social security coordination
+.
+The
+OASIS Business Document Exchange TC
+provides complementary eDelivery specifications for service location and capability lookup.
+The
+OASIS ebCore TC
+has delivered
+version 3 of the CPPA specification
+. CPPA3 provides standard data definitions, and formats for electronic, XML-based protocol profiles and business collaboration agreements, as well as algorithms for formation, matching, discovery and registration. Version 3 is an evolution of work done in the joint ebXML project with UN/CEFACT. It complements other ebXML standards for messaging including
+AS4
+.
+OIDF
+Set of standards and related certification profiles addressing identity transactions over the internet. Active working groups in this area include: the OpenID Connect WG, AccountChooser WG, Native Applications WG, Mobile operator Discovery, Registration and Authentication WG (MODRNA), Health Related Data Sharing WG (HEART), and Risk and Incident Sharing and Coordination WG (RISC)
+http://openid.net/wg/
+IETF
+The following IETF Working Groups are active in this area:
+The
+Web Authorization Protocol (OAUTH) WG
+developed a protocol suite that allows a user to grant a third-party Web site or application access to the user’s protected resources, without necessarily revealing their long-term credentials, or even their identity. It also developed security schemes for presenting authorisation tokens to access a protected resource.
+The ongoing standardisation effort within the OAUTH working group is focusing on enhancing interoperability of OAUTH deployments.
+The
+Public Notary Transparency (TRANS) WG
+developed a standards-track specification of the Certificate Transparency protocol (RFC6962) that allows detection of the mis-issuance of certificates issued by CAs or via ad-hoc mapping by maintaining cryptographically verifiable audit logs.
+The
+Automated Certificate Management Environment (ACME) WG
+specifies conventions for automated X.509 certificate management, including validation of control over an identifier, certificate issuance, certificate renewal, and certificate revocation. The initial focus of the ACME WG is on domain name certificates (as used by web servers), but other uses of certificates can be considered as work progresses.
+The
+Supply Chain Integrity, Tranparency, and Trust (SCITT) Working Group
+works to define a set of interoperable building blocks that will allow implementers to build integrity and accountability into software supply chain systems to help assure trustworthy operation. For example, a public computer interface system could report its software composition that can then be compared against known software compositions or certifications for such a device thereby giving confidence that the system is running the software expected and has not been modified, either by attack or accident, in the supply chain.
+The
+Secure Patterns for Internet Credentials (spice)
+Working Group is chartered to analyze existing and emerging IETF technologies and address any remaining gaps to facilitate their application in digital credentials and presentations.
+The SPICE WG will develop digital credential profiles that support various use cases. The profiles developed by the SPICE WG will enable digital credentials to leverage existing IETF technologies. Privacy by design, confidentiality, and consent will be considered, and implementation guidance will be given for each proposed standard in the program of work.
+The
+Digital Emblems (diem)
+Working Group is chartered to define an architecture and discovery mechanism enabling digital emblems to be presented and validated across applications and platforms in a cohesive way.
+https://wiki.ietf.org/en/group/iab/Multi-Stake-Holder-Platform#h-315-electronic-identification-and-trust-services-including-e-signatures
+W3C
+Verifiable Credentials provide a mechanism to express credentials, e.g. driving licenses, on the Web in a way that is cryptographically secure, privacy respecting, and machine-verifiable. Currently, the following Specifications and Notes have already been issued:
+Verifiable Credentials Data Model 2.0
+https://www.w3.org/TR/vc-data-model/
+Verifiable Credentials Implementation Guidelines 1.0
+https://www.w3.org/TR/vc-imp-guide/
+Verifiable Credentials Use Cases
+https://www.w3.org/TR/vc-use-cases/
+Decentralized Identifiers (DIDs) are a new type of identifier that enables verifiable, decentralized digital identity. A DID refers to any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) as determined by the controller of the DID. In contrast to typical, federated identifiers, DIDs have been designed so that they may be decoupled from centralized registries, identity providers, and certificate authorities:
+Decentralized Identifiers (DIDs) v1.0
+https://www.w3.org/TR/did-core/
+Use Cases and Requirements for Decentralized Identifiers
+https://www.w3.org/TR/did-use-cases/
+DID Implementation Guide v1.0
+https://www.w3.org/TR/did-imp-guide/
+DID Specification Registries
+https://www.w3.org/TR/did-spec-registries/
+DID Method Rubric v1.0
+https://www.w3.org/TR/did-rubric/
+W3C is working on a charter for a DID Methods Working Group. A DID Method specification defines the precise operations by which Decentralized Identifiers (DIDs) and DID documents are created, resolved, updated, and deactivated. Since the publication of the DID Core v1.0 specification, many DID Methods have been created and deployed. As national governments and large corporations continue to adopt this technology, it is beneficial for those organizations to have standardised, production-grade DID Methods to deploy.
+Web Authentication defines an API enabling the creation and use of strong, attested, scoped, public key-based credentials by web applications, for the purpose of strongly authenticating users. The current work is on Web Authentication: An API for accessing Public Key Credentials - Level 3
+https://www.w3.org/TR/webauthn-3/
+Web payments:  An important goal of Secure Payment Confirmation (SPC) is to streamline strong customer authentication (SCA). One way to reduce friction is to allow many authentications for a given registration. In other words, ideally the user registers once and can then authenticate “everywhere” (consistent with the policies of the relying party; they have to opt-in). The following Specifications are relevant:
+Secure Payment Confirmation
+https://www.w3.org/TR/secure-payment-confirmation/
+Payment Request API
+http://www.w3.org/TR/payment-request/
+Payment Method IDs
+http://www.w3.org/TR/payment-method-id/
+Payment Handler API
+https://www.w3.org/TR/payment-handler/
+Payment Method Manifest
+https://www.w3.org/TR/payment-method-manifest/
+Work on Social Networking includes identity schemes that can play a role:
+ActivityPub
+https://www.w3.org/TR/activitypub/
+Social Web Protocols
+https://www.w3.org/TR/social-web-protocols/
+IndieAuth
+https://www.w3.org/TR/indieauth/
+The Web Crypto API describes a JavaScript API for performing basic cryptographic operations in web applications, such as hashing, signature generation and verification, and encryption and decryption:
+https://www.w3.org/TR/WebCryptoAPI/
+See also the note on use cases:
+http://www.w3.org/TR/webcrypto-usecases/
+narrowing the scope of the Web Crypto API.
+Identity for WebRTC 1.0 defines a set of ECMAScript APIs in WebIDL to allow and application using WebRTC to assert an identity, and to mark media streams as only viewable by another identity. This specification is being developed in conjunction with a protocol specification developed by the IETF RTCWEB group.
+https://www.w3.org/TR/webrtc-identity/
+Accessibility of authentication methods in Web Accessibility Guidelines (
+WCAG 2.2
+). Especially relevant are success criteria 3.3.8 on Accessible Authentication (Minimum) and 3.3.9 on Accessible Authentication (enhanced). Such criteria will be integrated in the updated standard EN 301 549 on ICT Accessibilit
+y.
+IEEE
+IEEE has standards and pre-standards activities relevant to Electronic Identification and Trust Services, including dealing with blockchain technology, authentication, and biometric identification.
+IEEE 1363.3, Standard for Identity-Based Cryptographic Techniques using Pairings
+IEEE 2410, Standard for Biometric Open Protocol
+IEEE 2790, Standard for Biometric Liveness Detection
+IEEE 3801, IEEE Standard for Blockchain-based Electronic Contracts
+IEEE P2049.3, Standard for Human Augmentation: Identity
+IEEE P2799, Standard for Confirming and Conveying Identity Over the Internet
+IEEE P2933, Standard for Clinical Internet of Things (IoT) Data and Device Interoperability with TIPPSS–-Trust, Identity, Privacy, Protection, Safety, Security
+IEEE P2989, Standard for Authentication in Multi-Server Environment
+IEEE P3210
+, Standard for Blockchain-based Digital Identity System Framework
+There are also several pre-standards activities looking at digital identity, including guidelines for the provision and use of digital identities for digital resilience.
+For more information, see:
+https://ieee-sa.imeetcentral.com/eurollingplan/
+.
+(C.2) Other activities related to standardisation
+EUDI Wallet Pilot Projects
+European Digital Identity Wallet Consortium (EWC). Focus: Testing the storage and display of digital travel credentials, facilitating instant payments, and enabling cross-border identification for businesses.
+POTENTIAL Consortium. Focus: User authentication for accessing government services, opening bank accounts, e-prescriptions, and digital driving licenses.
+NOBID Consortium. Focus: Authorizing payments for products and services using the EUDI Wallet.
+DC4EU Consortium. Focus: Deploying the wallet in educational contexts (e.g., professional credentials) and social security applications, utilizing the European Blockchain Services Infrastructure.
+The pilots are exploring various use cases that include:
+Accessing digital public services (e.g., applying for passports or driving licenses).
+Opening bank accounts online without repeated identity verification.
+Facilitating travel through digital identity documents.
+Signing contracts electronically between businesses and consumers.
+Other related important projects ordered by date
+2023-08-23 OntoChain
+https://ontochain.ngi.eu
+OntoChain aims to enable trustworthy transactions of services and contents. The project defines innovative decentralised reputation models that reveal the hidden quality/types of services and credibility of data sources, keeping a balance between privacy and trust.
+2022-10-31 eSSIF-Lab
+https://essif-lab.eu
+Self-sovereign identity (SSI) supports identity management in a safe and reliable internet allowing secure transactions and eliminating logins. SSI aims to empower EU organisations to make secure and innovate transactions with stakeholders saving billions of euro on administrative expenses.
+2020-12-31 AMBER
+https://www.amber-biometrics.eu
+AMBER addresses issues facing biometric solutions on mobile devices and develop solutions and theory to ensure secure, ubiquitous and efficient
+authentication whilst protecting privacy of citizen.
+2020-08-31 SMOWL
+https://smowl.net/en/
+SMOWL is a practical and reliable solution for online user identification and monitoring. It consists in a new cyber-security service covering the need for a continuous, automatic and scalable authentication of online user’s identity and monitoring.
+2020-03-31 Smart-Trust
+https://web.archive.org/web/20201230011033/https://smart-trust.eu/
+Smart-Trust introduces a new technological enabler for Mobile ID which drastically increases the reliability and trust levels of identity verification at European borders, thus increasing the security of member states.
+2019-12-31 DECODE
+https://decodeproject.eu
+DECODE provides tools that put individuals in control of whether they keep their personal information private or share it for the public good.
+2019-02-28 ARIES - A ReliAble euRopean Identity EcoSystem
+https://www.aries-project.eu/
+ARIES aims to set up a reliable identity ecosystem combining mature technologies for high level of assurance, such as biometrics or use of secure elements, with innovative credential derivation mechanisms.
+2018-12-31 SAFEcrypto
+https://www.safecrypto.eu
+SAFEcrypto will provide a new generation of practical, robust and physically secure post quantum cryptographic solutions that ensure long-term security for future ICT systems, services and applications. Novel public-key cryptographic schemes (digital signatures, authentication, public-key encryption, identity-based encryption) will be developed using lattice problems as the source of computational hardness.
+2018-09-30 CREDENTIAL - Secure Cloud Identity Wallet
+https://credential.eu
+The goal of CREDENTIAL is to develop, test and showcase innovative cloud based services for storing, managing, and sharing digital identity information and other critical personal data.
+2018-04-30 ReCRED
+http://www.recred.eu
+ReCRED’s ultimate goal is to promote the user’s personal mobile device to the role of a unified authentication and authorization proxy towards the digital world.
+Report abusive content

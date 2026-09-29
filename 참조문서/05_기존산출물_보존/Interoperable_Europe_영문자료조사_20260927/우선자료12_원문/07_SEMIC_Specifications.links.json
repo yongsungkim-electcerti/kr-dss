@@ -1,0 +1,674 @@
+[
+  {
+    "title": "Permalink",
+    "url": "https://interoperable-europe.ec.europa.eu/node/705742"
+  },
+  {
+    "title": "Reusing our specification? Let us know!",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/specifications#reuse"
+  },
+  {
+    "title": "Principles and Guidelines",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/specifications#principles"
+  },
+  {
+    "title": "Digital Government Core Vocabularies (CoreVocs)",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/specifications#cv"
+  },
+  {
+    "title": "Application Profiles",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/specifications#ap"
+  },
+  {
+    "title": "Validators",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/specifications#validators"
+  },
+  {
+    "title": "Other vocabularies and semantic specifications",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/specifications#other"
+  },
+  {
+    "title": "this survey",
+    "url": "https://ec.europa.eu/eusurvey/runner/SEMICSpecificationAdoption"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/semic-style-guide-semantic-engineers"
+  },
+  {
+    "title": "Access the latest release",
+    "url": "https://semiceu.github.io/style-guide/1.0.0/index.html"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/style-guide"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-ap-reuse-guidelines"
+  },
+  {
+    "title": "Access the latest release",
+    "url": "https://semiceu.github.io/DCAT-AP-reuse-guidelines/"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/DCAT-AP-reuse-guidelines"
+  },
+  {
+    "title": "this page",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/core-vocabularies#What%20are%20the%20Core%20Vocabularies"
+  },
+  {
+    "title": "version 2.1.2",
+    "url": "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.2/"
+  },
+  {
+    "title": "version 2.1.1",
+    "url": "https://joinup.ec.europa.eu/collection/semic-support-centre/solution/core-public-service-vocabulary-application-profile/release/320"
+  },
+  {
+    "title": "version 2.1.0",
+    "url": "https://joinup.ec.europa.eu/collection/semic-support-centre/solution/core-person-vocabulary/release/210"
+  },
+  {
+    "title": "version 2.0.0",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-person-vocabulary/release/200"
+  },
+  {
+    "title": "version 1.00",
+    "url": "http://data.europa.eu/w21/8227687d-e25e-4ec5-ae6f-3e98ad8cd4ab"
+  },
+  {
+    "title": "Core Business",
+    "url": "https://joinup.ec.europa.eu/solution/registered-organization-vocabulary"
+  },
+  {
+    "title": "Core Location",
+    "url": "https://joinup.ec.europa.eu/solution/core-location-vocabulary"
+  },
+  {
+    "title": "Core Person",
+    "url": "https://joinup.ec.europa.eu/solution/core-person-vocabulary"
+  },
+  {
+    "title": "Working Group",
+    "url": "https://joinup.ec.europa.eu/document/core-vocabularies-working-group-members"
+  },
+  {
+    "title": "Version 0.2",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-person-vocabulary/release/02"
+  },
+  {
+    "title": "this page",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/core-vocabularies#What%20are%20the%20Core%20Vocabularies"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-person-vocabulary"
+  },
+  {
+    "title": "Download the latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-person-vocabulary/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/Core-Person-Vocabulary"
+  },
+  {
+    "title": "version 2.3.0",
+    "url": "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0/"
+  },
+  {
+    "title": "version 2.2.0",
+    "url": "https://joinup.ec.europa.eu/collection/registered-organization-vocabulary/solution/core-business-vocabulary/release/220"
+  },
+  {
+    "title": "version 2.1.0",
+    "url": "https://github.com/SEMICeu/Core-Business-Vocabulary/tree/master/releases/2.1.0"
+  },
+  {
+    "title": "version 2.0.0",
+    "url": "https://joinup.ec.europa.eu/collection/registered-organization-vocabulary/solution/core-business-vocabulary/release/200"
+  },
+  {
+    "title": "version 1.00",
+    "url": "http://data.europa.eu/w21/8227687d-e25e-4ec5-ae6f-3e98ad8cd4ab"
+  },
+  {
+    "title": "Core Business",
+    "url": "https://joinup.ec.europa.eu/solution/registered-organization-vocabulary"
+  },
+  {
+    "title": "Core Location",
+    "url": "https://joinup.ec.europa.eu/solution/core-location-vocabulary"
+  },
+  {
+    "title": "Core Person",
+    "url": "https://joinup.ec.europa.eu/solution/core-person-vocabulary"
+  },
+  {
+    "title": "Working Group",
+    "url": "https://joinup.ec.europa.eu/document/core-vocabularies-working-group-members"
+  },
+  {
+    "title": "Version 0.2",
+    "url": "https://joinup.ec.europa.eu/collection/registered-organization-vocabulary/solution/core-business-vocabulary/release"
+  },
+  {
+    "title": "this page",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/core-vocabularies#What%20are%20the%20Core%20Vocabularies"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/registered-organization-vocabulary/solution/core-business-vocabulary"
+  },
+  {
+    "title": "Download the latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/registered-organization-vocabulary/solution/core-business-vocabulary/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/Core-Business-Vocabulary"
+  },
+  {
+    "title": "version 2.1.1",
+    "url": "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/"
+  },
+  {
+    "title": "version 2.1.0",
+    "url": "https://joinup.ec.europa.eu/collection/semic-support-centre/solution/core-location-vocabulary/release/210"
+  },
+  {
+    "title": "version 2.0.2",
+    "url": "https://joinup.ec.europa.eu/collection/semic-support-centre/solution/core-location-vocabulary/release/202"
+  },
+  {
+    "title": "version 2.0.0",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-location-vocabulary/release/200"
+  },
+  {
+    "title": "version 1.00",
+    "url": "http://data.europa.eu/w21/8227687d-e25e-4ec5-ae6f-3e98ad8cd4ab"
+  },
+  {
+    "title": "Core Business",
+    "url": "https://joinup.ec.europa.eu/solution/registered-organization-vocabulary"
+  },
+  {
+    "title": "Core Location",
+    "url": "https://joinup.ec.europa.eu/solution/core-location-vocabulary"
+  },
+  {
+    "title": "Core Person",
+    "url": "https://joinup.ec.europa.eu/solution/core-person-vocabulary"
+  },
+  {
+    "title": "Working Group",
+    "url": "https://joinup.ec.europa.eu/document/core-vocabularies-working-group-members"
+  },
+  {
+    "title": "version 0.2",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-location-vocabulary/release/02"
+  },
+  {
+    "title": "this page",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/core-vocabularies#What%20are%20the%20Core%20Vocabularies"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-location-vocabulary"
+  },
+  {
+    "title": "Download the latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-location-vocabulary/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/Core-Location-Vocabulary"
+  },
+  {
+    "title": "version 2.2.0",
+    "url": "https://semiceu.github.io/CCCEV/releases/2.2.0/"
+  },
+  {
+    "title": "version 2.1.0",
+    "url": "https://joinup.ec.europa.eu/collection/semic-support-centre/solution/core-criterion-and-core-evidence-vocabulary/release/210"
+  },
+  {
+    "title": "version 2.00",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary/release/200"
+  },
+  {
+    "title": "version 1.00",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary/release/100"
+  },
+  {
+    "title": "this page",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/core-vocabularies#What%20are%20the%20Core%20Vocabularies"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-criterion-and-core-evidence-vocabulary"
+  },
+  {
+    "title": "Download the latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-criterion-and-core-evidence-vocabulary/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/CCCEV"
+  },
+  {
+    "title": "version 2.1.2",
+    "url": "https://semiceu.github.io/CPOV/releases/2.1.2/"
+  },
+  {
+    "title": "version 2.1.1",
+    "url": "https://joinup.ec.europa.eu/collection/semic-support-centre/solution/core-public-organisation-vocabulary/release/211"
+  },
+  {
+    "title": "version 2.1.0",
+    "url": "https://github.com/SEMICeu/CPOV/tree/master/releases/2.1.0"
+  },
+  {
+    "title": "version 2.0.0",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-public-organisation-vocabulary/release/200"
+  },
+  {
+    "title": "version 1.00",
+    "url": "https://joinup.ec.europa.eu/solution/core-public-organisation-vocabulary/releases"
+  },
+  {
+    "title": "this page",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/core-vocabularies#What%20are%20the%20Core%20Vocabularies"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-public-organisation-vocabulary"
+  },
+  {
+    "title": "Download the latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-public-organisation-vocabulary/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/CPOV"
+  },
+  {
+    "title": "version 1.1.1",
+    "url": "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.1.1/"
+  },
+  {
+    "title": "version 1.1.0",
+    "url": "https://joinup.ec.europa.eu/collection/semic-support-centre/solution/core-public-event-vocabulary/release/110"
+  },
+  {
+    "title": "version 1.0",
+    "url": "https://github.com/SEMICeu/Core-Public-Event-Vocabulary/tree/master/releases/1.0.0"
+  },
+  {
+    "title": "first public draft",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-public-event-vocabulary/release/004"
+  },
+  {
+    "title": "this page",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/core-vocabularies#What%20are%20the%20Core%20Vocabularies"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-public-event-vocabulary"
+  },
+  {
+    "title": "Download the latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-public-event-vocabulary/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/Core-Public-Event-Vocabulary"
+  },
+  {
+    "title": "use cases",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-public-service-vocabulary/document/core-public-service-vocabulary-use-cases"
+  },
+  {
+    "title": "this page",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/core-vocabularies#What%20are%20the%20Core%20Vocabularies"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-public-service-vocabulary"
+  },
+  {
+    "title": "Download the latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-public-service-vocabulary/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/CPSV"
+  },
+  {
+    "title": "this page",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/core-vocabularies#What%20are%20the%20Core%20Vocabularies"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav"
+  },
+  {
+    "title": "Download the latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-assessment-vocabulary-cav/release/140"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/isa-camss/CAV"
+  },
+  {
+    "title": "this page",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/core-vocabularies#What%20are%20the%20Core%20Vocabularies"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://joinup.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-standards-and-specifications-vocabulary-cssv/about"
+  },
+  {
+    "title": "Download the latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/common-assessment-method-standards-and-specifications-camss/solution/core-standards-and-specifications-vocabulary-cssv/release/200"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/isa-camss/CSSV"
+  },
+  {
+    "title": "",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/helpdesk-faq"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe"
+  },
+  {
+    "title": "Download latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/DCAT-AP"
+  },
+  {
+    "title": "DCAT-AP for High-Value Datasets (HVD)",
+    "url": "https://semiceu.github.io/DCAT-AP/releases/2.2.0-hvd/"
+  },
+  {
+    "title": "DCAT Application Profile",
+    "url": "https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/about"
+  },
+  {
+    "title": "Data Catalogue Vocabulary (DCAT)",
+    "url": "http://www.w3.org/TR/vocab-dcat/"
+  },
+  {
+    "title": "v.3.0.1",
+    "url": "https://semiceu.github.io/DCAT-AP/drafts/3.0.1-hvd/"
+  },
+  {
+    "title": "v.3.0.0",
+    "url": "https://semiceu.github.io/DCAT-AP/releases/3.0.0-hvd"
+  },
+  {
+    "title": "DCAT-AP 3.0.0",
+    "url": "https://joinup.ec.europa.eu/collection/semic-support-centre/solution/dcat-application-profile-data-portals-europe/release/300"
+  },
+  {
+    "title": "DCAT-AP 2.1.1",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-ap-hvd"
+  },
+  {
+    "title": "Download latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/dcat-ap-hvd/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/DCAT-AP"
+  },
+  {
+    "title": "version 3.2.0",
+    "url": "https://joinup.ec.europa.eu/collection/semic-support-centre/solution/core-public-service-vocabulary-application-profile/release/320"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-public-service-vocabulary-application-profile"
+  },
+  {
+    "title": "Download latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/core-public-service-vocabulary-application-profile/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/semiceu/CPSV-AP"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/access-base-registries/solution/bregdcat-ap"
+  },
+  {
+    "title": "Download latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/access-base-registries/solution/bregdcat-ap/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/BregDCAT-AP"
+  },
+  {
+    "title": "Asset Description Metadata Schema",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/asset-description-metadata-schema-adms"
+  },
+  {
+    "title": "European Interoperability Framework",
+    "url": "http://ec.europa.eu/isa/documents/isa_annex_ii_eif_en.pdf"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/asset-description-metadata-schema-adms-revision"
+  },
+  {
+    "title": "Download latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/asset-description-metadata-schema-adms/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/ADMS-AP"
+  },
+  {
+    "title": "DCAT-AP",
+    "url": "https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/about"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/geodcat-application-profile-data-portals-europe"
+  },
+  {
+    "title": "Download latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/geodcat-application-profile-data-portals-europe/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/GeoDCAT-AP"
+  },
+  {
+    "title": "DCAT-AP",
+    "url": "https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/about"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/statdcat-application-profile-data-portals-europe/about"
+  },
+  {
+    "title": "Download latest release",
+    "url": "https://joinup.ec.europa.eu/collection/semic-support-centre/solution/statdcat-application-profile-data-portals-europe/release/101"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/StatDCAT-AP"
+  },
+  {
+    "title": "OpenML",
+    "url": "https://www.openml.org/"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/mldcat-ap"
+  },
+  {
+    "title": "Download latest release",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/solution/mldcat-ap/releases"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/MLDCAT-AP/tree/main"
+  },
+  {
+    "title": "",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/helpdesk-faq"
+  },
+  {
+    "title": "DCAT-AP Validator",
+    "url": "https://www.itb.ec.europa.eu/shacl/dcat-ap/upload"
+  },
+  {
+    "title": "DCAT-AP GitHub",
+    "url": "https://github.com/SEMICeu/DCAT-AP"
+  },
+  {
+    "title": "MLDCAT-AP Validator",
+    "url": "https://www.itb.ec.europa.eu/shacl/mldcat-ap/upload"
+  },
+  {
+    "title": "MLDCAT-AP GitHub",
+    "url": "https://github.com/SEMICeu/MLDCAT-AP"
+  },
+  {
+    "title": "CPSV-AP Validator",
+    "url": "https://www.itb.ec.europa.eu/shacl/cpsv-ap/upload"
+  },
+  {
+    "title": "CPSV-AP GitHub",
+    "url": "https://github.com/SEMICeu/CPSV-AP"
+  },
+  {
+    "title": "BregDCAT-AP",
+    "url": "https://joinup.ec.europa.eu/collection/access-base-registries/solution/abr-specification-registry-registries"
+  },
+  {
+    "title": "DCAT-AP",
+    "url": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe"
+  },
+  {
+    "title": "REST",
+    "url": "https://www.itb.ec.europa.eu/shacl/swagger-ui.html"
+  },
+  {
+    "title": "SOAP",
+    "url": "https://www.itb.ec.europa.eu/shacl/soap/bregdcat-ap/validation?wsdl"
+  },
+  {
+    "title": "BregDCAT-AP Validator",
+    "url": "https://www.itb.ec.europa.eu/shacl/bregdcat-ap/upload"
+  },
+  {
+    "title": "BregDCAT-AP GitHub",
+    "url": "https://github.com/SEMICeu/BregDCAT-AP"
+  },
+  {
+    "title": "SEMIC Style Guide",
+    "url": "https://semiceu.github.io/style-guide/1.0.0/gc-conceptual-model-conventions.html"
+  },
+  {
+    "title": "here",
+    "url": "https://meaningfy-ws.github.io/semic-styleguide-rdf-validator/"
+  },
+  {
+    "title": "SHACL Validator",
+    "url": "https://www.itb.ec.europa.eu/shacl/semicstyleguide/upload"
+  },
+  {
+    "title": "SEMIC Style Guide GitHub",
+    "url": "https://github.com/SEMICeu/style-guide"
+  },
+  {
+    "title": "SEMIC Style Guide",
+    "url": "https://semiceu.github.io/style-guide/1.0.0/gc-conceptual-model-conventions.html"
+  },
+  {
+    "title": "here",
+    "url": "https://meaningfy-ws.github.io/model2owl-docs/public-review/checkers/model2owl-checkers.html"
+  },
+  {
+    "title": "UML Validator",
+    "url": "https://www.itb.ec.europa.eu/model2owl/upload"
+  },
+  {
+    "title": "SEMIC Style Guide GitHub",
+    "url": "https://github.com/SEMICeu/style-guide"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://joinup.ec.europa.eu/collection/support-centre/solution/asset-description-metadata-schema-adms/about"
+  },
+  {
+    "title": "Download latest release",
+    "url": "https://joinup.ec.europa.eu/collection/semic-support-centre/solution/asset-description-metadata-schema-adms/release/200"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/ADMS"
+  },
+  {
+    "title": "Single Digital Gateway Regulation",
+    "url": "https://ec.europa.eu/growth/single-market/single-digital-gateway_en"
+  },
+  {
+    "title": "procedure",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32018R1724&from=EN#d1e32-36-1"
+  },
+  {
+    "title": "information area",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32018R1724&from=EN#d1e32-31-1"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://joinup.ec.europa.eu/collection/catalogue-services/open-specifications-cpsv-ap-and-sdg-services-model-describing-procedures#5"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/catalogue-of-services-isa/SDG-model"
+  },
+  {
+    "title": "Learn more",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/linked-data-event-streams-ldes"
+  },
+  {
+    "title": "Consult technical documentation in Github",
+    "url": "https://github.com/SEMICeu/LinkedDataEventStreams"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu"
+  },
+  {
+    "title": "Contact us to get involved",
+    "url": "mailto:digit-semic-team@ec.europa.eu"
+  },
+  {
+    "title": "Back to top",
+    "url": "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/specifications#top"
+  },
+  {
+    "title": "Report abusive content",
+    "url": "https://interoperable-europe.ec.europa.eu/contact?category=report&uri=/collection/semic-support-centre/specifications&destination=collection/semic-support-centre/specifications"
+  }
+]

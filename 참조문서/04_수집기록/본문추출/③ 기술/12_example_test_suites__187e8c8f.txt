@@ -1,0 +1,814 @@
+Example test suites — GITB TDL Documentation
+Example test suites
+Example test suites
+
+The following section provides downloadable complete examples of GITB TDL
+test suites
+, illustrating common steps and
+interesting practices. These are designed to be
+self-contained
+and work with any Test Bed installation, meaning that
+you can deploy and try them out of the box.
+To remove all external dependencies from the test suites, they lack certain concepts that are typically found in conformance tests,
+such as
+configuration parameters
+and use of
+custom supporting services
+.
+Doing so however results in test suites that can be used as-is and that should be straightforward to understand.
+Each test suite is covered in a separate section below, providing per case:
+The
+download link
+for the test suite (ready to
+deploy to a Test Bed instance
+).
+A
+summary
+of the test suite’s purpose and main features.
+An overview of the test suite’s included
+resources
+.
+A listing of all the
+TDL features
+used in the test suite.
+Example 1: Validation of XML content via various inputs
+
+View
+test suite on GitHub
+or
+download test suite archive
+.
+This example showcases validation of XML content using the Test Bed’s built-in
+XML validation
+capabilities. The test suite includes
+two test cases covering the different ways in which the XML to validate is provided, specifically through
+manual upload
+and
+HTTP request
+.
+The validation logic is defined once and
+reused
+across both test cases.
+<archive root>
+├── resources
+│   ├── LargePurchaseOrder.sch
+│   ├── PurchaseOrder.xsd
+│   ├── sample.xml
+│   └── sampleInvalid.xml
+├── scriptlets
+│   └── validate.xml
+├── testCases
+│   ├── testCase1.xml
+│   └── testCase2.xml
+└── testSuite.xml
+Concept used
+Type
+Purpose
+Resource(s)
+assign
+Test step
+Prepare step inputs.
+validate.xml
+call
+Test step
+Call the scriptlet to carry out the common validation steps.
+testCase1.xml
+testCase2.xml
+HttpMessagingV2
+Test step handler
+Carry out the content retrieval using HTTP.
+testCase2.xml
+import
+Test case section
+Import the validation artefacts to use and samples to use when providing manual input.
+testCase1.xml
+validate.xml
+interact
+Test step
+Display popup for manual input.
+testCase1.xml
+log
+Test step
+Log progress messages in the test session log.
+validate.xml
+output
+Test case section
+Display user-friendly messages upon test completion.
+testCase1.xml
+testCase2.xml
+scriptlet
+Scriptlet
+Share common validation logic across test cases.
+validate.xml
+send
+Test step
+Perform a HTTP GET to retrieve content.
+testCase2.xml
+verify
+Test step
+Validate the retrieved content.
+validate.xml
+XmlValidator
+Test step handler
+Validate the retrieved content using XML Schema and Schematron.
+validate.xml
+Example 2: Validation of JSON content with fixed and dynamic schemas
+
+View
+test suite on GitHub
+or
+download test suite archive
+.
+This example showcases validation of
+JSON content
+retrieved over HTTP. Besides checking the content’s structure, the included test case
+also uses a
+dynamically generated schema
+to make session-specific tests, ensuring that referred dates and item counts match the test
+case’s expectations.
+<archive root>
+├── resources
+│   ├── schema.json
+│   └── schemaTemplate.txt
+├── scriptlets
+│   └── validate.xml
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+Concept used
+Type
+Purpose
+Resource(s)
+assign
+Test step
+Define variable and prepare validator inputs.
+testCase1.xml
+validate.xml
+call
+Test step
+Call the scriptlet to carry out a schema’s validation.
+testCase1.xml
+Default scriptlet parameters
+Scriptlet
+Use a default value for the displayed validation step description.
+validate.xml
+Dynamic scriptlet presentation
+Scriptlet
+Use different step descriptions within the scriptlet based on test case inputs.
+validate.xml
+group
+Test step
+Group together visually the validation steps.
+testCase1.xml
+hidden
+Common concepts
+Hide the instruction popup from the displayed execution diagram.
+testCase1.xml
+HttpMessagingV2
+Test step handler
+Carry out the content retrieval using HTTP.
+testCase1.xml
+import
+Test case section
+Import the schema to use and the template to generate the dynamic schema.
+testCase1.xml
+interact
+Test step
+Display popup with instructions for the user.
+testCase1.xml
+JsonValidator
+Test step handler
+Validate the retrieved JSON content.
+validate.xml
+log
+Test step
+Log progress messages in the test session log.
+validate.xml
+output
+Test case section
+Display user-friendly messages upon test completion.
+testCase1.xml
+process
+Test step
+Create the expected timestamp and generate the dynamic schema to use.
+testCase1.xml
+scriptlet
+Scriptlet
+Encapsulate the validation logic and steps.
+validate.xml
+send
+Test step
+Perform a HTTP GET to retrieve content.
+testCase1.xml
+stopOnError
+Common concepts
+Skip subsequent steps if the content retrieval fails.
+testCase1.xml
+TemplateProcessor
+Test step handler
+Use a template to generate the dynamic schema to use based on session-specific data.
+testCase1.xml
+TokenGenerator
+Test step handler
+Generate a timestamp for the current date with the expected format.
+testCase1.xml
+verify
+Test step
+Validate the retrieved content.
+validate.xml
+Example 3: Test suite presentation, test case groups and simulated exchanges
+
+View
+test suite on GitHub
+or
+download test suite archive
+.
+This example focuses on features that can be used to enhance a test suite’s
+presentation
+, enhancing testers’
+user experience
+.
+Presentation features in use include test case
+tags
+, rich
+documentation
+and specific outcome
+messages
+for different test session
+results. In addition, this test suite defines test cases with
+simulated exchanges
+for illustration, which are moreover
+grouped
+to
+require that at least is executed, but allowing other simulation test cases to fail or be skipped. Although not the focus of this test suite,
+each test case proceeds to
+validate XML content
+using XML Schema and Schematron, the content either being retrieved via HTTP GET or, for the
+test cases based on simulated exchanges, provided as fixed inputs.
+<archive root>
+├── resources
+│   ├── LargePurchaseOrder.sch
+│   ├── PurchaseOrder.xsd
+│   ├── sample.xml
+│   ├── sampleInvalidContent.xml
+│   └── sampleInvalidStructure.xml
+├── scriptlets
+│   └── validate.xml
+├── testCases
+│   ├── testCase1.xml
+│   ├── testCase2.xml
+│   ├── testCase3.xml
+│   └── testCase4.xml
+└── testSuite.xml
+Concept used
+Type
+Purpose
+Resource(s)
+assign
+Test step
+Prepare step inputs.
+testCase2.xml
+testCase3.xml
+testCase4.xml
+validate.xml
+call
+Test step
+Call the scriptlet to carry out validation.
+testCase1.xml
+testCase2.xml
+testCase3.xml
+testCase4.xml
+documentation
+Test case section
+Show rich documentation per test case importing from test suite HTML files.
+testCase1.xml
+testCase2.xml
+testCase3.xml
+testCase4.xml
+groups
+Test suite section
+Group together test cases so that only one is needed to complete successfully.
+testSuite.xml
+HttpMessagingV2
+Test step handler
+Carry out the content retrieval using HTTP.
+testCase1.xml
+import
+Test case section
+Import validation artefacts and sample files to use with simulated exchanges.
+testCase2.xml
+testCase3.xml
+testCase4.xml
+validate.xml
+log
+Test step
+Log progress messages in the test session log.
+validate.xml
+output
+Test case section
+Display user-friendly messages upon test completion for different step outcomes.
+testCase1.xml
+testCase2.xml
+testCase3.xml
+testCase4.xml
+scriptlet
+Scriptlet
+Share common validation logic across test cases.
+validate.xml
+send
+Test step
+Perform a HTTP GET to retrieve content or display a simulated exchange.
+testCase1.xml
+testCase2.xml
+testCase3.xml
+testCase4.xml
+SimulatedMessaging
+Test step handler
+Display a simulated exchange between specification actors.
+testCase2.xml
+testCase3.xml
+testCase4.xml
+tags
+Test case section
+Visually highlight the test cases using simulation.
+testCase2.xml
+testCase3.xml
+testCase4.xml
+verify
+Test step
+Validate the retrieved content.
+validate.xml
+XmlValidator
+Test step handler
+Validate content using XML Schema and Schematron.
+validate.xml
+Example 4: Setup and teardown phases with fine-tuned error management
+
+View
+test suite on GitHub
+or
+download test suite archive
+.
+This test suite illustrates the use of
+step groups
+and
+error management flags
+to split a test case into sections with different
+execution behaviours. The included test case splits its steps into setup, main and teardown phases, ensuring that setup and teardown
+steps always execute and never fail test sessions, whereas main steps fail eagerly. Besides managing step failures,
+group display features
+are used such as collapsing the display of setup and teardown steps, and hiding the group boundary for the main steps’ group.
+<archive root>
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+Concept used
+Type
+Purpose
+Resource(s)
+DisplayProcessor
+Test step handler
+Display an arbitrary step report.
+testCase1.xml
+group
+Test step
+Group together visually and behaviourally test steps.
+testCase1.xml
+output
+Test case section
+Display user-friendly messages upon test completion.
+testCase1.xml
+process
+Test step
+Make a processing step to display step reports simulating validations.
+testCase1.xml
+send
+Test step
+Perform a messaging call to display a simulated exchange.
+testCase1.xml
+SimulatedMessaging
+Test step handler
+Display a simulated exchange between specification actors.
+testCase1.xml
+stopOnChildError
+Common concepts
+Manage how step failures are managed within a specific group.
+testCase1.xml
+warning level
+Common concepts
+Treat teardown step failures as warnings to ensure they never cause session failures.
+testCase1.xml
+Example 5: Linking test cases with specification references
+
+View
+test suite on GitHub
+or
+download test suite archive
+.
+This test suite illustrates how test cases can be displayed with
+specification references
+, when it is important to have direct
+traceability between test cases and normative requirements. The included tests cover
+XML and JSON validation
+using
+built-in
+validators
+for XML and JSON content received via
+HTTP GET
+requests. The different syntaxes handled by each test case are
+further highlighted using
+tags
+.
+<archive root>
+├── resources
+│   ├── PurchaseOrder.json
+│   └── PurchaseOrder.xsd
+├── testCases
+│   ├── testCase1.xml
+│   ├── testCase2.xml
+└── testSuite.xml
+Concept used
+Type
+Purpose
+Resource(s)
+assign
+Test step
+Prepare validator inputs.
+testCase2.xml
+HttpMessagingV2
+Test step handler
+Carry out content retrieval using HTTP.
+testCase1.xml
+testCase2.xml
+import
+Test case section
+Import validation artefacts.
+testCase1.xml
+testCase2.xml
+JsonValidator
+Test step handler
+Validate JSON content using JSON Schema.
+testCase2.xml
+log
+Test step
+Log progress messages in the test session log.
+testCase1.xml
+testCase2.xml
+output
+Test case section
+Display user-friendly messages upon test completion for different step outcomes.
+testCase1.xml
+testCase2.xml
+send
+Test step
+Perform HTTP GETs to retrieve the content to validate.
+testCase1.xml
+testCase2.xml
+specification
+Test case section
+Display specification links for each test case.
+testCase1.xml
+testCase2.xml
+tags
+Test case section
+Visually highlight the syntax covered by each test case.
+testCase1.xml
+testCase2.xml
+verify
+Test step
+Validate the retrieved content.
+testCase1.xml
+testCase2.xml
+XmlValidator
+Test step handler
+Validate XML content using XML Schema.
+testCase1.xml
+Example 6: Request and asynchronous polling for status update
+
+View
+test suite on GitHub
+or
+download test suite archive
+.
+This is a more complex scenario that considers sending a request and then using a
+polling approach
+to check for its
+processing status. It involves reusing steps via
+scriptlets
+, generating messages using
+templates
+,
+iterating
+to
+make poll attempts following
+delays
+, making
+conditional processing
+, and extracting values from XML content using
+XPath
+expressions.
+<archive root>
+├── resources
+│   ├── ackRequestTemplate.xml
+│   ├── ackResponseTemplate.xml
+│   ├── messageRequest.xml
+│   └── messageResponse.xml
+├── scriptlets
+│   └── createSimulatedStatusResponse.xml
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+Concept used
+Type
+Purpose
+Resource(s)
+assign
+Test step
+Prepare step inputs, assign variables and check results.
+testCase1.xml
+createSimulatedStatusResponse.xml
+call
+Test step
+Call the scriptlet to carry out status request steps.
+testCase1.xml
+hidden
+Common concepts
+Hide the user interaction popup from the displayed execution diagram.
+createSimulatedStatusResponse.xml
+import
+Test case section
+Import validation artefacts.
+testCase1.xml
+createSimulatedStatusResponse.xml
+interact
+Test step
+Display popup to request the simulated status to return.
+createSimulatedStatusResponse.xml
+log
+Test step
+Log progress messages in the test session log.
+testCase1.xml
+createSimulatedStatusResponse.xml
+namespace
+Test case section
+Declare namespaces for XPath lookups.
+testCase1.xml
+output
+Test case section
+Display user-friendly messages upon test completion.
+testCase1.xml
+process
+Test step
+Use templates and generate timestamps.
+testCase1.xml
+createSimulatedStatusResponse.xml
+scriptlet
+Scriptlet
+Encapsulate the status request steps.
+createSimulatedStatusResponse.xml
+send
+Test step
+Perform messaging request.
+testCase1.xml
+SimulatedMessaging
+Test step handler
+Display a simulated exchange between specification actors.
+testCase1.xml
+stopOnError
+Common concepts
+Immediately stop the test session if a step fails.
+testCase1.xml
+TemplateProcessor
+Test step handler
+Use a template to generate messages based on parameters.
+testCase1.xml
+createSimulatedStatusResponse.xml
+TokenGenerator
+Test step handler
+Generate a timestamp for the polling responses.
+createSimulatedStatusResponse.xml
+verify
+Test step
+Validate the retrieved status value.
+testCase1.xml
+while
+Test step
+Iterate through the polling attempts until polling should complete.
+testCase1.xml
+Example 7: Working with images
+
+View
+test suite on GitHub
+or
+download test suite archive
+.
+This is an example showing how to handle
+images
+in test cases, both ones that are retrieved from remote services and ones provided
+from the user. This example also includes several
+interactions
+(also for the display of images), validation, and determining of an
+uploaded image’s
+content type
+tolerating
+case differences
+, with a fallback to processing the image’s
+file name
+using a
+XPath if/else statement
+.
+<archive root>
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+Concept used
+Type
+Purpose
+Resource(s)
+assign
+Test step
+Prepare step inputs and conditionally set variables with values.
+testCase1.xml
+CollectionUtils
+Test step handler
+Lookup the QR code’s content type from the response headers.
+testCase1.xml
+DisplayProcessor
+Test step handler
+Display a summary report.
+testCase1.xml
+hidden
+Common concepts
+Hide the QR code request.
+testCase1.xml
+HttpMessagingV2
+Test step handler
+Request the QR code via HTTP GET.
+testCase1.xml
+interact
+Test step
+Display popups to present the QR code with instructions, and to request inputs.
+testCase1.xml
+log
+Test step
+Log information in the test session log.
+testCase1.xml
+output
+Test case section
+Display user-friendly messages upon test completion.
+testCase1.xml
+send
+Test step
+Request the QR code to display.
+testCase1.xml
+stopOnError
+Common concepts
+Immediately stop the test session if a step fails.
+testCase1.xml
+StringValidator
+Test step handler
+Make text-based assertions.
+testCase1.xml
+verify
+Test step
+Validate expected values.
+testCase1.xml
+Example 8: Administrator review of validation warnings
+
+View
+test suite on GitHub
+or
+download test suite archive
+.
+This is an example that focuses on having an
+administrator
+review the status of a test session. In addition, this example involves
+interactions
+, validation of
+JSON content
+at
+warning level
+, and use of
+session status flags
+, in
+conditional logic
+and the final
+output
+messages.
+<archive root>
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+Concept used
+Type
+Purpose
+Resource(s)
+admin
+Test step
+Administrator interaction.
+testCase1.xml
+ExpressionValidator
+Test step handler
+Check the review result as an expression.
+testCase1.xml
+if
+Test step
+Conditionally proceed with administrator review steps.
+testCase1.xml
+import
+Test case section
+Import the validation artefact to use and samples to use when providing manual input.
+testCase1.xml
+interact
+Test step
+Display popups to for the user and the administrator.
+testCase1.xml
+JsonValidator
+Test step handler
+Validate JSON content using JSON Schema.
+testCase1.xml
+output
+Test case section
+Display user-friendly messages upon test completion.
+testCase1.xml
+STEP_STATUS
+Expressions
+Check the status of specific steps.
+testCase1.xml
+stopOnError
+Common concepts
+Immediately stop the test session if a step fails.
+testCase1.xml
+TEST_SUCCESS
+Expressions
+Check the status of the overall test session.
+testCase1.xml
+verify
+Test step
+Validate JSON document and administrator review result.
+testCase1.xml
+Example 9: Using simulation for demonstration purposes
+
+View
+test suite on GitHub
+or
+download test suite archive
+.
+This is an example illustrating how test cases can also be used to
+demonstrate
+how a protocol is expected to work.
+It involves use of several
+simulated actors
+with exchanges using
+imported resources
+as inputs and outputs, as
+well as
+simulated processing steps
+to present results. An additional
+delay
+is also added between steps to simulate
+asynchronous processing.
+<archive root>
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+Concept used
+Type
+Purpose
+Resource(s)
+DelayProcessor
+Test step handler
+Force a delay between steps.
+testCase1.xml
+DisplayProcessor
+Test step handler
+Display an arbitrary step report simulating a processing step.
+testCase1.xml
+group
+Test step
+Group together visually the demonstration’s steps.
+testCase1.xml
+hidden
+Common concepts
+Force processing steps to be visible.
+testCase1.xml
+import
+Test case section
+Import the samples to use in exchanges.
+testCase1.xml
+output
+Test case section
+Display user-friendly messages upon test completion.
+testCase1.xml
+process
+Test step
+Simulate delays and processing tasks.
+testCase1.xml
+SimulatedMessaging
+Test step handler
+Display a simulated exchange between specification actors.
+testCase1.xml
+variables
+Test case section
+Define the delay between steps.
+testCase1.xml
