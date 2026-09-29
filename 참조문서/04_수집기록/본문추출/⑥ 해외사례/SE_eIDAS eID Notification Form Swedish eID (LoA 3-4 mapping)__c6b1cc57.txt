@@ -1,0 +1,406 @@
+  
+ 
+1 
+ 
+ 
+Notification form for electronic identity 
+scheme under Article 9(5) of Regulation (EU) 
+No 910/2014 
+The Kingdom of Sweden hereby notifies the European Commission of an electronic identification 
+scheme to be published in the list referred to in Article 9(3) of Regulation (EU) No 910/2014 and 
+confirms the following:  
+ the information communicated in this notification is consistent with the information which 
+has been communicated to the Cooperation Network in accordance with Article 7(g) of 
+Regulation (EU) No 910/2014, and  
+ the electronic identification scheme can be used to access at least one service (several 
+hundreds) provided by a public sector body in The Kingdom of Sweden.  
+2020-12-14 
+Anna Eriksson 
+Director General, Agency for Digital Government 
+  
+2020-12-14 
+ Diarienummer: 2020-1972 
+ 
+ 
+  
+ 
+2 
+ 
+ 
+1 General information 
+Title of scheme  Levels of assurance (low, substantial or high) 
+Swedish eID (Svensk e-legitimation) Substantial and High 
+2 Authority responsible for the scheme 
+Name of the authority  Postal address E-mail address Telephone No.     
+Agency for Digital 
+Government  
+Storgatan 37 
+852 30 Sundsvall 
+Sweden 
+e-legitimation@digg.se +46 77 111 44 00 
+ 
+The Agency for Digital Government (DIGG) is an agency under the Swedish Government, appointed 
+as responsible for the Swedish eID scheme Svensk e-legitimation and the notification process for the 
+scheme according to Article 9 of Regulation No 910/2014 (eIDAS). 
+3 Information on relevant parties, entities and bodies 
+(where there are multiple parties, entities or bodies, 
+please list them all, in accordance with Article 3(2) and 
+(3) 
+3.1 Entity which manages the registration process of the unique person identification 
+data 
+Name of entity which manages the registration process of the unique person identification data  
+The Swedish Tax Agency is responsible for the population register and the registration of residents 
+living in Sweden. This register is used as the basis for the registration for an electronic identification 
+means. 
+3.2 Party issuing the electronic identification means 
+Name of the party issuing the electronic identity means and indication of whether the party is referred to in 
+Article 7(a)(i), (ii) or (iii) of Regulation (EU) No 910/2014 
+Electronic identification means are issued by independent entities (“Issuers of eID means”) according 
+to Article 7(a)(iii) in compliance with the requirements of the Swedish Trust Framework. The 
+electronic identification means included in the notification are: 
+ BankID, issued by Finansiell ID-teknik BID AB (“BID”) 
+ Freja eID+, issued by Freja eID Group AB (publ) (Freja) 
+ EFOS, issued by The Swedish Social Insurance Agency 
+  
+ 
+3 
+ 
+3.3 Party operating the authentication procedure 
+Name of party operating the authentication procedure 
+The Issuers of the eID means are responsible for operating their respective authentication procedure. 
+3.4 Supervisory body 
+Name of supervisory body 
+The Agency for Digital Government supervises the eID scheme, manages the Swedish Trust 
+Framework and audits the Issuers of eID means. 
+4 Description of the electronic identification scheme 
+Document(s) may be enclosed for each of the following descriptions. 
+(a) Briefly describe the scheme including the context within which it operates and its scope 
+The core of the Swedish eID scheme (Svensk e-legitimation) consists of 
+A legal framework: 
+• Ordinance (2018:1486) with instructions for the Agency for Digital Government 
+• Act (2016:561) on complementary provisions to the eIDAS regulation 
+• Act (2013: 311) on system of freedom of choice with regard to services for electronic 
+identification 
+• Population Registration Act (1991:481) 
+A contractual agreement structure: 
+• A framework services agreement 
+• The Swedish Trust Framework 
+A supervisory regime: 
+• Audit and supervision process of Issuers of eID means 
+• The Swedish eID trust mark 
+A technical infrastructure: 
+• The Sweden Connect identity federation 
+• The eIDAS node (Proxy Service) 
+ 
+Together these components create an open ecosystem for Issuers of eID means. All issuers who pass 
+the agency’s audit have the right to enter into the contractual arrangement with the agency, and to 
+provide electronic identification to the public sector. New Issuers of eID means who enter into the 
+market can join the scheme successively. If they are active on the national level and approved for the 
+trust mark they can also apply to be included in the scope of the Swedish eID scheme notification. 
+Swedish eIDs issued at assurance levels 3 and 4 as defined in the Swedish Trust Framework comply 
+with the requirements of Commission Implementing Regulation (EU) 2015/1502 for ‘Substantial’ and 
+‘High’ respectively. 
+  
+ 
+4 
+ 
+(b) Where applicable, list the additional attributes which may be provided for natural persons under the 
+scheme if requested by a relying party 
+Not applicable. Sweden only includes mandatory attributes in assertions. 
+(c) Where applicable, list the additional attributes which may be provided for legal persons under the scheme 
+if requested by a relying party 
+Not applicable.  
+4.1 Applicable supervisory, liability and management regime 
+4.1.1 Applicable supervisory regime 
+Describe the supervisory regime of the scheme with respect to the following:   
+(where applicable, information shall include the roles, responsibilities and powers of the supervising body 
+referred to in point 3.4, and the entity to which it reports. If the supervising body does not report to the 
+authority responsible for the scheme, full details of the entity to which it reports shall be provided). 
+(a) supervisory regime applicable to the party issuing the electronic identification means 
+The Agency for Digital Government is the supervisory authority for Issuers of eID means. The Agency 
+for Digital Government is a state authority which reports to the Government, where the Ministry of 
+Infrastructure acts as the point of contact. 
+The agency ensures that only issuers that have successfully completed their audit, entered into a 
+contractual agreement with the agency and passed the appropriate technical tests are allowed to be 
+used in a cross-border context. 
+This agreement also regulates responsibilities in event of an incident and a suspension of an eID 
+mean. 
+(b) supervisory regime applicable to the party operating the authentication procedure 
+The same supervisory regime as described in 4.1.1(a) applies. 
+4.1.2 Applicable liability regime 
+Describe briefly the applicable national liability regime for the following scenarios: 
+(a) liability of the Member State under Article 11(1) of Regulation (EU) No 910/2014 
+There is no specific national liability regime for the implementation of eIDAS in Swedish law, the 
+liability provisions of the eIDAS Regulation thus becomes directly applicable. As a result, the Kingdom 
+of Sweden is responsible for damages caused deliberately or by negligence for the non-fulfillment of 
+the obligations under (d) and (f) of Article 7 in a cross-border transaction. 
+According to Swedish tort law, liability for damages can also exist if a number of legal criteria are 
+met. It is not possible in general terms to indicate in what situations such liability may arise. 
+(b) liability of the party issuing the electronic identification means under Article 11(2) of Regulation (EU) No 
+910/2014 
+The issuer is liable for damage caused intentionally or negligently by failure to attribute the eID 
+means to its rightful holder in accordance with the technical specifications, standards and procedures 
+  
+ 
+5 
+ 
+set out through the eIDAS Regulation for the relevant assurance level as notified by the Kingdom of 
+Sweden. 
+All participants of the Sweden Connect identity federation are responsible for their own actions. 
+Liability in cases of negligence is subject to the general provisions of Swedish tort law. Such liability 
+may in certain circumstances be limited in the agreements concluded between the parties. Liability 
+for damages in non-contractual relations may also exist if a number of legal criteria are met.  
+However, all parties are still bound by the general provisions of Swedish and European law, including 
+the provisions of the eIDAS Regulation.  
+(c) liability of the party operating the authentication procedure under Article 11(3) of Regulation (EU) No 
+910/2014 
+The Issuers of the eID means are responsible for operating their respective authentication procedure 
+and liable for damage as described in (b). 
+4.1.3 Applicable management arrangements 
+Describe the arrangements for suspending or revoking of either the entire identification scheme or 
+authentication, or their compromised parts. 
+Through the contractual arrangements, the Agency for Digital Government has the ability to 
+temporarily suspend or permanently terminate the use an eID means or an Issuer of eID means, both 
+nationally and in the cross-border context, on the grounds that an issuer has failed to comply with 
+the contractual obligations. 
+Both the Issuer of an eID means and the Agency for Digital Government may also suspend or 
+permanently terminate the use of an eID mean on the grounds that there is an ongoing security 
+incident which may have a material impact on relying parties. 
+An Issuer of eID means may also on its own initiative terminate the contract with the agency, in 
+which case the use of the eID means will be terminated as well. 
+4.2 Description of the scheme components 
+Describe how the following elements of Commission Implementing Regulation (EU) 2015/1502 (1) have been 
+met in order to reach a level of assurance of an electronic identification means under the scheme the 
+Commission is being notified of:   
+The document LoA Mapping – the Swedish Trust Framework provides a detailed analysis on the 
+conformity of the Swedish Trust Framework with the eIDAS implementing Regulation (EU) 
+2015/1502. To support the enforcement of the Trust Framework within the Swedish eID scheme, a 
+number of components acts together: 
+The Agency for Digital Government 
+Under the ordinance (2018:1486), the Agency for Digital Government manages the Swedish Trust 
+Framework and performs audits of Issuers of eID means based on its provisions. 
+The agency is also responsible for the development, operation and management of the Swedish 
+identity federation Sweden Connect, the Swedish eIDAS-node and to be the Single Point of Contact. 
+Act (2016:561), on complementary provisions to the eIDAS Regulation, makes the agency responsible 
+for the notification of the Swedish eID scheme to the Commission. 
+  
+ 
+6 
+ 
+The agency represents Sweden in the eIDAS Cooperation Network and other international forums on 
+a personal appointment from the government cabinet office. 
+The Swedish Population Register 
+As set out in the Population Registration Act (1991:481), The Swedish Tax Agency is responsible for 
+the civil registry of Sweden. Persons permanently living in Sweden are registered in the population 
+register with a unique identifier (Swedish personal identity number). Normally a person keeps this 
+identifier their whole life, only under very rare conditions can a someone change their personal 
+identity number. Persons not permanently living in Sweden receive a unique co-ordination number. 
+More details on the Swedish population register and the personal identity number is provided in the 
+Swedish System for Population Registration document. 
+The Swedish Trust Framework  
+The Swedish Trust Framework has a role similar to the eIDAS implementing Regulation (EU) 
+2015/1502 in setting out minimum technical specifications and procedures for assurance levels. In 
+some aspects the Swedish Trust Framework has more stringent requirements for each of the 
+assurance levels than the corresponding eIDAS assurance levels. The intent is however to notify the 
+Swedish assurance level 3 as ‘substantial’ and level 4 as ‘high’. 
+Much like the eIDAS implementing Regulation (EU) 2015/1502, the Swedish Trust Framework defines 
+outcome-based provisions rather than normative requirements of specific controls. Even though the 
+trust framework is not completely free of normative elements, it is still technology neutral. This 
+allows the trust framework to stand the test of time and avoids locking into what was appropriate at 
+the time of writing, permitting adaptation as both technology and threats develops.  
+Sweden does not issue eID means to legal persons, nor provides bindings between natural persons 
+and legal persons, partly because it is not clear how mandates to represent a legal entity could be 
+expressed by the attributes described for cross-border use. 
+The audit and supervision process 
+The Agency of Digital Government performs audits based on the trust framework with the assistance 
+of auditors contracted directly by the agency. The auditors have the ability to determine control 
+equivalency based on the guidance provided by the agency. As a result, an Issuer of eID means is 
+given the opportunity to develop new technologies and procedures, and have this evaluated to the 
+outcome-based provisions of the trust framework. 
+The audit and supervision of Issuers of eID means are described in detail in the enclosed White 
+Paper. 
+  
+  
+ 
+7 
+ 
+The agreement structure and the Swedish eID trust mark 
+Any Issuer of eID means who have undergone the agency’s audit with successful result may sign a 
+license agreement which grants use of the Swedish eID trust mark in relation to the provided 
+services.  
+ 
+ 
+FIGURE 1: THE SWEDISH EID TRUST MARK 
+The Swedish Trust Framework is part of the license agreement, and the Issuers of eID means agrees 
+to comply with these provisions throughout the term of the agreement. The license agreement is a 
+pre-requisite to both provide authentication services to the public sector as well as to be included in 
+the notification of the Swedish eID scheme. 
+The agency has the right to terminate the license agreement if the Issuer of eID means does not 
+comply with all of the provisions of the agreement. If this happen then all other agreements for the 
+provisioning of eID services (such as the one for cross-border use of eID means) also will terminate. 
+The identity federation Sweden Connect 
+Sweden Connect is the brand for the Swedish identity federation used to connect Identity Providers 
+(IdP) to relying Service Providers. The Swedish eIDAS Proxy Service acts as one such Service Provider 
+in connection to the Swedish IdPs.  
+The authentication function used for cross-border authentication is provided by the respective IdP of 
+the Issuer of the eID means. The Agency for Digital Government has defined an interoperability 
+framework on the national level called Sweden Connect Technical Framework. Before any IdP is 
+allowed to connect to the identity federation, it has to undergo a technical conformance assessment 
+based on these technical specifications.  
+Issuers of eID means 
+Each Issuer of eID means can apply with one or more types of eID means, but must show compliance 
+with the requirements of the Swedish Trust Framework for each of them.  
+The Issuer of eID means is contractually obliged to comply with the requirements of the licence 
+agreement, and is liable for damages if they are negligent in their duties. 
+How each of the eID means included in the notification fulfils the requirements of the Swedish Trust 
+Framework and the Commission Implementing Regulation (EU) 2015/1502 is described in detail in 
+the LoA Mapping document and its annexes. 
+
+  
+ 
+8 
+ 
+4.2.1 Enrolment 
+(a) Application and registration 
+A Swedish eID may be issued only at the request of the applicant, and only after the applicant is 
+made aware of the conditions under which the issuance occurs and what responsibility will lie with 
+the applicant. 
+An application for a Swedish eID shall be associated with a personal identity number or a verified co-
+ordination number, and all other information otherwise necessary for the issuer to be able to provide 
+the eID. 
+Further details on application and registration are provided in the LoA Mapping document. 
+(b) Identity proofing and verification (natural person) 
+Issuers of eID means shall verify that the information provided in an application for eID is complete 
+and consistent with the personal data registered in an official register. 
+Issuers of eID means shall verify the applicant's identity in-person, in an equivalent manner as for the 
+issuance of a recognised photo ID document. In addition, Issuers of eID means at assurance level 
+‘substantial’ may also verify the applicant’s identity remotely, using another Swedish eID or by other 
+reliable means that provides an equivalent degree of security in the proofing process. 
+Further details on identity proofing and verification are provided in the LoA Mapping document. 
+(c) Identity proofing and verification (legal person) 
+Not applicable. 
+(d) Binding between the electronic identification means of natural and legal persons 
+Not applicable. 
+4.2.2 Electronic identification means management 
+(a) Electronic identification means characteristics and design (including, where appropriate, information on 
+security certification) 
+Means for electronic identification must always utilise two different authentication factors, where 
+the first factor consists of a token of electronically stored information that the user shall 
+demonstrate control of. The token is required to provide protection from duplication and tampering 
+on a level which is commensurate to the risks associated with the assurance level (‘substantial’ or 
+‘high’). For assurance level ‘high’ a hardware token must be used. 
+Further details on electronic identification means characteristics and design are provided in the LoA 
+Mapping document. 
+(b) Issuance, delivery and activation 
+Issuers of eID means shall provide the authentication token in-person to the applicant upon 
+completion of identity verification while providing the personal code which the user should use to 
+activate the token, separately and independently from the token and based on the contact details 
+recorded in the official register or other information of the same degree of credibility. 
+  
+ 
+9 
+ 
+Additionally, Issuers of Swedish eID at assurance level ‘substantial’ may provide the token remotely, 
+through the same channel in which the applicant was identified in the proofing process. 
+Further details on issuance, delivery and activation are provided in the LoA Mapping document. 
+(c) Suspension, revocation and reactivation 
+Issuers of eID means shall provide a revocation service with adequate availability. Revocation 
+requests shall be processed promptly and in a secure manner whilst also having controls in place to 
+prevent systematic abuse of the revocation service. 
+Further details on suspension, revocation and reactivation are provided in the LoA Mapping 
+document. 
+(d) Renewal and replacement 
+The Swedish Trust Framework requires that any renewal or replacement of an eID must follow the 
+same procedures as initial issuance. 
+Further details on renewal and replacement are provided in the LoA Mapping document. 
+4.2.3 Authentication 
+Describe the authentication mechanism including terms of access to authentication by relying parties other 
+than public sector bodies. 
+Issuers of eID means must ensure that technical security controls are implemented when verifying an 
+electronic identity, so that it is highly unlikely that outsiders can compromise the protection 
+mechanisms by guessing, eavesdropping, replaying or manipulating the communication channels. All 
+cryptographic protocols used are required to use strong cipher suites and be based on proven 
+primitives in trustworthy implementations, regardless of the assurance level. 
+The provisions governing the infrastructure of Swedish eID does not distinguish between public 
+sector bodies and other relying parties. It is at the discretion of the party operating the 
+authentication procedure to accept or reject any authentication request received by entities other 
+than public sector bodies. 
+Further details on authentication are provided in the LoA Mapping document. 
+4.2.4 Management and organisation 
+Describe the management and organisation of the following aspects:  
+(a) General provisions on management and organisation 
+Issuers of eID means are registered legal entities, already established at the national level and fully 
+operational. They are liable for all commitments that follow from the contractual agreements, 
+regardless whether a specific commitment is carried out by the issuer itself or if it has been 
+outsourced. 
+Further details on general provisions on management and organisation are provided in the LoA 
+Mapping document. 
+  
+ 
+10 
+ 
+(b) Published notices and user information 
+The Issuer of eID means is obliged to make the terms and conditions for the use of the provided 
+services available to the applicant. These terms and conditions are required to include the user's 
+obligation to protect their electronic identity, the issuer's obligations and responsibilities, service 
+levels and any other guarantees made. 
+Further details on published notices and user information are provided in the LoA Mapping 
+document. 
+(c) Information security management 
+Issuers of eID means must have an information security management system (ISMS) based on 
+ISO/IEC 27001 or equivalent principles for the management and control of information security.  
+Further details on information security management are provided in the LoA Mapping document. 
+(d) Record keeping 
+Issuers of eID means shall retain records for at least ten years (in accordance with the general rules 
+on limitation of claims for damages), unless destruction is required to preserve the rights of data 
+subjects or supported by law or other regulations. Issuers shall have procedures in place to ensure 
+that only specifically authorised staff have access to the records.  
+These records include application forms and documents relating to the provision, acceptance and 
+revocation of eIDs, agreements, policy documents and service definitions, log records, 
+documentation and other evidence demonstrating compliance with the requirements.   
+Further details on record keeping are provided in the LoA Mapping document. 
+(e) Facilities and staff 
+Issuers of eID means shall have established programs for background checking, aptitude testing and 
+training. Segregation of duties shall be applied throughout the chain of issuing and providing of the 
+eID means to the user. 
+Further details on facilities and staff are provided in the LoA Mapping document. 
+(f) Technical controls 
+Technical controls shall be implemented to manage the risks associated with the services. These shall 
+be evaluated on a regular basis, improved as new technology becomes available, and as result of an 
+ongoing risk assessment. 
+Further details on technical controls are provided in the LoA Mapping document. 
+(g) Compliance and audit 
+Issuers of eID means shall have an internal audit process where an independent auditor reviews the 
+compliance with all requirements of the Swedish Trust Framework. The annual audit report shall be 
+provided to the Agency for Digital Government. The agency has in turn the right to conduct 
+additional assessments, as to verify that the internal auditor’s conclusions are correct. 
+Further details on compliance and audit are provided in the LoA Mapping document. 
+  
+ 
+11 
+ 
+4.3 Interoperability requirements 
+Describe how the interoperability and minimum technical and operational security requirements under 
+Commission Implementing Regulation (EU) 2015/1501 (2) are met. List and attach any document that may 
+give further information on compliance, such as the opinion of the Cooperation Network, external audits, etc. 
+The Swedish eID Scheme meets the interoperability and technical and operational security 
+requirements as described in the document Sweden Connect eIDAS interoperability framework 
+mapping. 
+The Swedish eIDAS Proxy Service is based on custom development and is fully compliant with the 
+eIDAS technical specifications, including crypto and operational security aspects. 
+1. The Swedish eIDAS Proxy Service is able to connect with other Member States in both the test 
+environment and in production, and are fully integrated and operational. 
+2. The Swedish eIDAS Proxy Service is developed according to approved eIDAS technical 
+requirements and does not impose costs or additional issues for other Member States. 
+The Swedish eIDAS Proxy Service does not store any personal data, except for the purposes specified 
+in Article 9(3). 
+The Swedish eID scheme is used exclusively for the identification of natural persons. 
+4.4 Supporting documents 
+List here all supporting documentation submitted and state to which of the elements above they relate. 
+Include any domestic legislation which relates to the electronic identification provision relevant to this 
+notification. Submit an English version or English translation whenever available 
+• Appendix 1: White paper – Introduction to the Swedish eID scheme 
+• Appendix 2: LoA Mapping – The Swedish Trust Framework  
+• Appendix 3: The Swedish system for population registration 
+• Appendix 4: The Swedish eIDAS Interoperability Framework mapping 
+ 
