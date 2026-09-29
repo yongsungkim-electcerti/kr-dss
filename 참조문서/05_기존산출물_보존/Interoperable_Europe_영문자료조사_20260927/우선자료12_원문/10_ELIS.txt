@@ -1,0 +1,101 @@
+Welcome
+What is the EIRA Library of Interoperability Specifications (ELIS)?
+For what? You are working on the...
+For whom? You are a...
+ELIS value proposition
+Benefits
+Versions information
+Releases
+What is the EIRA Library of Interoperability Specifications (ELIS)?
+The
+EIRA Library of Interoperability Specifications (ELIS)
+is an Artifact that
+links the
+EIRA
+architectural building blocks (ABBs) to the standards and specifications
+that can be used to implement Solution Building Blocks based on those EIRA ABBs. The aim of this library is to
+support solutions architects when modelling using EIRA
+.
+The latest release of ELIS is the
+v7.0.0
+.
+The
+EIRA Library of Interoperability Specifications (ELIS)
+is a
+CAMSS
+Solutions aimed specifically at fostering
+interoperability
+in the architecture of digital services. EIRA (European Interoperability Reference Architecture) provides a comprehensive set of guidelines and specifications that are essential for developing interoperable systems.
+ELIS, as a component of EIRA, serves as a curated library of interoperability specifications
+. It supports the implementation of EIRA by
+offering a collection of technical standards, interoperability specifications, and best practices designed to guide the development of interoperable digital government services
+.
+ELIS
+ensures that the architectural components and services adhere to common standards, making them capable of seamless communication and data exchange across different IT systems.
+The ELIS is also available
+through a SPARQL endpoint
+(
+http://publications.europa.eu/webapi/rdf/sparql
+), and you can launch the query and retrieve the data.
+For what? You are working on the...
+Analysis
+of Requirements of an Interoperable Solution (Digital Public Service incl.) use case.
+Design
+of a Solution for Target Interoperable Solution (Digital Public Service incl.) use case.
+For whom? You are a...
+Business analyst
+to define the different interoperability aspects of European public services.
+Solution/Enterprise Architect
+in the process of modelling public services using EIRA, as it defines the interoperability aspects of the ABBs contained in it.
+ELIS value proposition
+Check
+ELIS value proposition
+detailing how this
+quality assurance tool
+brings value to different
+use cases
+for support to Digital Public Services and
+target profiles
+.
+Benefits
+Alignment with the compliance standards set by the EIF.
+Achievement of a threshold guided by criteria that cover all interoperability layers.
+Assessment results shown as a convenient score through which to analyze the specification in its different interoperability dimensions.
+*
+This is a continuous work CAMSS develops as a regular basis for the development of different solutions, however, it could not directly reflect the latest status due to maintenance and enhancement. It is a work in progress to identify different EU legislation and policies regarding the digitalisation of public services and the establishment of standardisation initiatives.
+Versions information
+30/04/2026:
+version 7.0.0
+27/06/2025:
+version 6.1.1
+27/08/2024:
+version 6.1.0
+10/10/2023:
+version 6.0.0
+01/12/2022:
+version 5.0.1
+31/05/2022:
+version 5.0.0
+14/05/2021:
+version 1.1.0
+12/03/2021:
+version 1.0.1
+20/03/2020:
+version 1.0.0
+26/03/2019:
+version 1.0.0 BETA
+Releases
+Release history
+Last update: 14/12/2022
+New Release ELIS 5.0.1
+Standardisation
+Sign in or register to like this content
+0
+News
+Last update: 16/06/2022
+New release ELIS 5.0.0
+Standardisation
+0
+Archived
+News
+Report abusive content

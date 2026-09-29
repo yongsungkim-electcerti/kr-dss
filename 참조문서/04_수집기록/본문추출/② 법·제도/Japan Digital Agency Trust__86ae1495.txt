@@ -1,0 +1,51 @@
+Trust (digital identity, etc.)｜Digital Agency
+Skip to main content
+This page has been translated using TexTra by NICT. Please note that the translation may not be completely accurate.If you find any mistranslations, we appreciate your feedback on the "
+Request form for improving the automatic translation
+".
+Trust (digital identity, etc.)
+Last Updated:
+Sep 18, 2026
+As a foundation for data distribution and coordination, there is a need for mechanisms and tools that help trust the parties with whom data is exchanged as well as the data, and that improve the possibility of verifying the identity and existence of the subject and the non-tampering and authenticity of the data. Currently, we are promoting initiatives that utilize digital identities of "people, corporations, things, etc." to establish and prove "identity, qualification, attributes, etc." in the digital realm.
+Notice
+September 18, 2026
+Efforts toward International Collaboration and Interoperability
+, we published the verification results report and verification scope definition document for "Verification of Educational Credential Interoperability between Japan and the EU in 2025".
+Outline
+Through various policies to secure and improve trust, we aim to promote digital completion of administrative procedures, utilize digital identities across countries, and improve users' peace of mind and safety regarding the handling of personal information. Specifically, we are working on governance and use cases related to the use of digital identities, as well as promoting international cooperation.
+Efforts to expand digital identity
+The use of digital identity, which establishes and certifies the "identities, qualifications, attributes, etc." of "persons, corporations, things, etc." in digital media, is a fundamental and important element for ensuring and improving trust in the digital society.
+We are considering and implementing measures to expand the social implementation and appropriate and effective use of digital identities, as well as measures related to governance so that people can use them with peace of mind.
+Expert Panel on Summarizing Issues of Attribute Verification
+In order to realize digital certification of "identity, qualification, attribute, etc." (collectively referred to as attribute certification), which is necessary for the digital completion and automation of administrative procedures, etc., we will discuss expected risks in the utilization of VC and DIW, which are new related technologies and mechanisms, appropriate technical and operational measures against each risk, and methods to promote their implementation.
+Expert Panel on Summarizing Issues of Attribute Verification
+Verifiable Credential(VC/VDC)
+Verifiable (Digital) Credential (VC/VDC) is a general-purpose machine-readable data format and data distribution format for information on "identities, qualifications, attributes, etc." of "persons, corporations, things, etc." This VC is attracting attention as an important trend related to digital identity. Regarding VC, we will consider the governance required for appropriate utilization, such as organizing the benefits and points to note. function
+Expert Panel on Governance in Leveraging Verifiable Credentials (VC/VDC)
+Based on the relationship with the current laws and regulations, systems, and mechanisms, we will organize the points to note regarding the process of using the VC. In addition, we will consider necessary governance and discuss the use of the VC that is expected to be utilized in the future.
+Expert Panel on Governance in Leveraging Verifiable Credentials (VC/VDC)
+Digital Identity Wallet(DIW)
+The "Digital Identity Wallet," a mechanism and app (wallet) that allows individuals and corporations to store, manage, and present their "identity, qualifications, attributes, etc." information by themselves, is expected to contribute to improving privacy and completing procedures digitally. We are implementing measures such as social implementation and governance so that citizens can use and utilize it with peace of mind.
+Digital Identity Wallet (DIW) Advisory Board
+An advisory board of external experts was held to examine and organize the benefits, risks, and points of contention as a reference and premise for considering measures for the future social implementation of DIW.
+2024 DIW Advisory Board Report (PDF / 8,301 kb)
+Efforts toward International Collaboration and Interoperability
+In recent years, international discussions on governance and interoperability of digital identities have become active. Under this initiative, we are participating in international discussions and demonstrating use cases to ensure interoperability between Japan and other countries and regions. For details, please refer to the following page.
+Digital Identity Mapping Exercise (PDF / 1,751 kb)
+EU-Japan Memorandum of Cooperation on Digital Identity
+Based on the Japan-EU Memorandum of Cooperation on Digital Identity, we implemented a pilot project on digital identity. The purpose of this project is to show that certificates related to digital identity can be interoperable even between different countries and regions. We conducted a demonstration of VC communication via DIW based on a specific use case, and confirmed its effectiveness. As a result, we found that by utilizing existing frameworks, the inter-operability of digital certificates can be realized even in countries and regions with different governance structures, as well as in environments with different technical regions. As the results of this project, we compiled a report jointly with the EU on the background, purpose, contents of implementation, and knowledge obtained, including technical aspects. Architecture
+Report of Pilot Project on Digital Identity (PDF / 254 kb)
+We also compiled a demonstration results report and a demonstration scope definition document that describe the technical aspects of this project in more detail.
+Research Paper on Interoperability of Educational Credentials between Japan and EU in 2025 (PDF / 1,752 kb)
+FY 2025 Demonstrative Research on Interoperability of Educational Credentials between Japan and EU Scope Definition Document (PDF / 1,007 kb)
+Other Efforts
+We are also making various other efforts to secure and expand trust in digital.
+Digital Society Promotion Standard Guidelines for Trust
+Digital Society Promotion Standards Guidelines Among
+, we are formulating and operating guidelines related to securing and expanding trust and appropriate use of digital identities. For details, please refer to the following page of the Digital Society Promotion Standards Guidelines.
+DS-500 Guidelines for Online identity verification Methods in Administrative Procedures
+DS-511 Guidelines on Treatment of Digital Identity in identity verification for Administrative Procedures, etc.
+DS-531 Basic Approach to digitalization of Disposition Notice, etc.
+Trusted Web
+The Trusted Web is an initiative that adds a new framework of trust to the Internet and the web. It is a mechanism that strengthens the control of data by individuals and corporations without relying on a specific service, and a mechanism that allows the verification of exchanged data and the other party. I prepared a white paper summarizing that idea, and I worked on various fields using that idea.
+Trusted Web

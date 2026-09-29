@@ -22,3 +22,6 @@ gradlew text eol=lf
 # 클론·체크아웃 전에 `git lfs install` 이 필요하다. 미설치 상태에서는
 # 파일 대신 포인터 텍스트가 체크아웃된다.
 *.pdf   filter=lfs diff=lfs merge=lfs -text
+
+# 다운로드 원문은 기록된 SHA-256을 유지하도록 줄바꿈을 변환하지 않는다.
+참조문서/01_원문/** -text

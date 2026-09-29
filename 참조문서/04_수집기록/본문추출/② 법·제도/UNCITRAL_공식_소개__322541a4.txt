@@ -1,0 +1,26 @@
+UNCITRAL Model Law on the Use and Cross-border Recognition of Identity Management and Trust Services (2022) | United Nations Commission on International Trade Law
+Skip to main content
+United Nations Commission on International Trade Law
+UNCITRAL Model Law on the Use and Cross-border Recognition of Identity Management and Trust Services (2022)
+Date of adoption: 7 July 2022
+Purpose
+The UNCITRAL Model Law on the Use and Cross-border Recognition of Identity Management and Trust Services (MLIT) provides a set of model legislative provisions that legally enable the use of identity management services for online identification of physical and legal persons as well as the use of trust services to provide assurances as to the quality of data in electronic form.
+Moreover, the Model Law offers legislative mechanisms to facilitate the cross-border recognition of the use of identity management and trust services.
+The Model Law does not affect the application of other laws, such as laws on data privacy and protection.
+Why is it relevant?
+Digital trade calls for trust in the identity of the commercial partners and the quality of data that underpins electronic exchanges, such as its origin and integrity. Identity management services provide assurance as to the proper online identification of physical and legal persons, while trust services certify the quality of data. These services are typically provided by specialised third parties.
+The Model Law sets a uniform legislative standard for promoting trust in electronic transactions and documents. It is the first global legislative text to do so and, as such, offers a legal building block to digital trade worldwide, complementing the existing suite of UNCITRAL legislative texts on electronic commerce.
+Key provisions
+The Model Law consists of four chapters, dealing respectively with general provisions, identity management, trust services and cross-border recognition. Chapters I and IV apply both to identity management and to trust services, while chapter II and III deal respectively with identity management and trust services.
+Chapter I contains the definition of certain terms used in the Model Law; the delimitation of the scope of application; and general provisions on the voluntary use of identity management and trust services and on the relationship with other laws.
+Chapter II establishes the basic elements of the legal regime applicable to identity management, lists certain core obligations of identity management service providers and of subscribers, and sets rules on liability of identity management service providers.
+A core provision is article 9, which contains a rule for functional equivalence between offline identification and identification carried out using identity management that requires the use of a reliable method. The reliability of the method is assessed with an ex-post determination based on the circumstances listed in article 10 or with an ex-ante designation according to article 11.
+Chapter III establishes the basic elements of the legal regime applicable to the use of trust services, including liability of trust service providers. Articles 16 to 21 describe the functions pursued with certain named trust services (electronic signatures; electronic seals; electronic timestamps; electronic archiving; electronic registered delivery services; website authentication) and associated requirements, including the use of a reliable method whose reliability is assessed with an ex-post determination based on the circumstances listed in article 22 or with an ex-ante designation according to article 23.
+Chapter IV deals with enabling cross-border recognition of identity management and trust services, which is one of the main goals of the Model Law, using several mechanisms based on a decentralized approach and leveraging on both ex-ante and ex-post mechanisms for the assessment of the reliability of the methods used.
+Additional information
+The Model Law is accompanied by an Explanatory Note to assist States in enacting its provisions and offer guidance to other users of the text.
+Additional Resources
+Text
+General Assembly resolution 77/101
+UNCITRAL Model Law on Electronic Signatures (2001)
+Go to top

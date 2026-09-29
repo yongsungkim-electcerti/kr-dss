@@ -1,0 +1,288 @@
+Universal DPI Safeguards Framework
+Announcing the Action Tracker
+2026/27 Working Groups applications are open
+Universal DPI Safeguards Framework
+The Universal DPI Safeguards Framework offers practical, rights-based guidance to ensure that Digital Public Infrastructure (DPI) is safe, inclusive, and effective. It addresses the governance, design, deployment, and use of DPI by identifying risks and proposing key safeguards across different stages of the DPI life cycle. This framework is adaptable to various contexts and builds on global consultations to promote trust, accountability, and human rights in digital transformation.
+Framework
+Adoption Pathways
+Indicators Library
+How We Built It: A Collaborative Approach
+The DPI Safeguards Initiative weaves together global efforts to design and sustain DPI, drawing from a rich pool of knowledge resources. To fit all DPI and meet diverse needs, it evolves through ongoing feedback from stakeholders like you.
+The Universal DPI Safeguards Framework
+The Framework translates principles into actionable recommendations to mitigate risks across the DPI life cycle. It is designed as an open knowledge asset, adaptable to diverse contexts, and comprises five components: Principles, Risks, Life Cycle Stages, Process and Practice Recommendation.
+Principles
+Principles, currently 18, are core propositions to mitigate risk which have been derived based on the possible risks observed in the DPI ecosystem, both new risks and existing structural vulnerabilities.
+Risks to be mitigated
+Risk is the possibility of harm to people interacting with the DPI. Currently, the Framework describes 13 interrelated risks.
+Responsible authorities
+A functional group of stakeholders with assigned or assumed roles, responsibilities and accountability for effective implementation and evolution of DPI safeguards.
+Life cycle stages
+DPI has five life cycle stages, namely: Conception and Scoping, Strategy and Design, Development, Deployment, and Operations and Maintenance.
+The harmonizing principles
+Principles are core propositions that form the foundation of a flexible, universal framework that guides the effective functioning of a DPI. The purpose of DPI is to maximize participation, agency and trust for all individuals. This implies that the risks described in the sections above need to be mitigated, and residual risks need to be managed in the context of each country’s sociopolitical environment. To achieve this, all responsible authorities should be guided by a set of principles to ensure trust and coordinated responses throughout the DPI life cycle. These principles form a common language that helps to build mutual understanding and support ongoing cooperation.
+The principles are divided into two categories: Foundational and Operational. The former refers to principles that should serve as the basis for any DPI, while the latter refers to principles that come into play at an operational level and may vary across contexts.
+Foundational principles: The building blocks for safe and inclusive DPI
+F1. Do no harm
+Harms to individuals may not be immediately obvious. A human rights-based framework should be integrated throughout the DPI life cycle to anticipate, assess, and effectively mitigate any potential human rights harms and power differentials.
+F2. Do not discriminate
+All individuals, regardless of intersecting identities, should have unbiased access and equal opportunity. Risks due to the circumstances of all vulnerable communities, historically marginalized groups and those who opt-out should be mitigated.
+F3. Do not exclude
+All individuals should have a choice of channels (digital/non-digital) to access and benefit from services enabled by DPI based on their individual capacity and resources. Access should not be limiting, conditional or mandatory — explicitly or in practice.
+F4. Reinforce transparency and accountability
+DPI should be developed with democratic participation, have public oversight, promote fair market competition and avoid vendor lock-in. All partnerships should be transparent, accountable and publicly governed.
+F5. Uphold the rule of law
+DPI should be introduced with a clear legal basis, with required legal and regulatory aspects embedded into its design, supported with capacity for sector specific tailoring (such as health), implementation, oversight and regulation by law.
+F6. Promote autonomy and agency
+Ensure that everyone (especially indigenous communities with sui generis rights), on their own or with assistance, can take control of their data, promote their agency, exercise choice, and contribute to their society’s well-being.
+F7. Foster community engagement
+All stages of the DPI life cycle should centre on the needs and interests of individuals and communities at risk. They should participate at critical junctures and provide feedback actively in an environment of transparency and trust.
+F8. Ensure effective remedy and redress
+Complaint response and redress mechanisms, avenues for appeal without reprisal, supported by robust administrative and judicial review, should be accessible to all in a transparent and equitable manner during service delivery.
+F9. Focus on future sustainability
+Inculcating foresight is key to anticipating and limiting long term and inter-generational harms. For example, mitigating the environmental impact with a net-zero strategy or minimizing resource needs with reuse of software.
+Operational principles: Driving continuous trust and adaptation
+O1. Leverage market dynamics
+DPI should foster an increasingly inclusive environment for public and private innovation such that market players can compete and introduce diverse equitable solutions that cater to emerging needs of all people across the society.
+O2. Evolve with evidence
+Independent, transparent, and continuous assessments, due diligence, or audits should engage with people, understand concerns, review evidence and rapidly cease or initiate activities that contain heightened risks or harms.
+O3. Ensure data privacy by design
+DPI should embed legal, regulatory and technical principles that enforce core privacy principles (e.g., data minimization, provisions to delink, ability to limit observability) and legal safeguards should be enacted around them.
+O4. Assure data security by design
+DPI should incorporate and continually upgrade security measures, such as encryption or pseudonymization, to protect personal data. A legal framework should fill the gaps where technical design may be insufficient for data security.
+O5. Ensure data protection during use
+Personal data should be processed or retained lawfully and transparently only by authorized personnel within a legal framework including transaction history, data subject rights and protections against overreaching requests.
+O6. Respond to gender, ability or age
+Not all individuals experience DPI in the same way, and some continue to face barriers and challenges related to access or use. DPI implementation should not exacerbate existing challenges or introduce new barriers and inequalities.
+O7. Practice inclusive governance
+Long-term effectiveness of DPI is contingent upon the establishment of a robust legal, regulatory and institutional framework that should promote transparent and participatory multi-stakeholder governance focused on safety and inclusion.
+O8. Sustain financial viability
+As DPI are a public infrastructure, diversified, phased and sustainable financing models should be established. Governments can lead during the build phase and local digital partners or the private sector can lead on operations and maintenance.
+O9. Build and share open assets
+DPI should share and reuse open protocols, specifications, Digital Public Goods (DPGs), and the associated knowledge. This enhances flexibility and assures that proprietary systems do not limit the ability to improve safety and inclusion.
+Mitigating key risks
+The DPI Safeguards initiative addresses risks related to DPI that may emerge in relation to the international human rights framework, the Sustainable Development Goals, and the Roadmap for Digital Cooperation. These risks can undermine safety and inclusion and include structural vulnerabilities which limit the effectiveness of safeguards.
+Risks
+01
+Safety
+02
+Inclusion
+03
+Structural Vulnerabilities
+Safety
+Privacy vulnerability
+Digital insecurity
+Physical insecurity
+Lack of recourse
+Inclusion
+Discrimination
+Unequal access
+Exclusion
+Disempowerment
+Structural Vulnerabilities
+Digital distrust
+Weak rule of law
+Weak institutions
+Technical shortcomings
+Unsustainability
+Responsible Authorities
+The Framework takes into account various ‘Responsible Authorities’ in the DPI ecosystem. It is adaptable to different contexts and is applicable across the DPI life cycle. It recognizes that DPI comprises technological systems and services that operate at the intersection of individuals on one hand, and civic, public and private entities that hold social, political and economic power on the other.
+Governments
+Typical persona (non-exhaustive)
+Policymaker
+DPI Programme Manager
+DPI Implementer
+Minister with Responsibility for ICT
+Potential use of the Framework
+Adopt the Framework to:
+• Build a safe and inclusive society.
+• Be proactive and respond to people’s needs.
+• Develop risk mitigation mechanisms.
+• Assess current state and identify steps to be taken.
+• Drive safe and inclusive progress towards the SDGs.
+Regulators
+Typical persona (non-exhaustive)
+Executive Legal Officer
+Head of ICT Regulation Authority
+Potential use of the Framework
+Promote DPI safeguards in:
+• Frameworks and programmes for universal services.
+• Obligation and application of concessions.
+• Competition rules.
+• Public relations campaigns.
+• Voluntary codes of practice.
+Funders
+Typical persona (non-exhaustive)
+Project Manager
+Local Head of Development Agency
+Potential use of the Framework
+Add DPI safeguards to funding criteria to support and show commitment to rights-based, safe and inclusive progress through DPI to attain specificSDG- related outcomes.
+Technology Providers
+Typical persona (non-exhaustive)
+Cybersecurity and Privacy Expert
+CEO, Local Technology Provider
+Product Manager
+Technical Expert
+Potential use of the Framework
+Adopt and incorporate DPI safeguards in practice to:
+• Build trust as advisors to the government.
+• Ensure success and long-term adoption of DPI.
+• Assess progress and develop roadmap for long term evolution of DPI.
+• Share safety and inclusion related best practices with stakeholders.
+• Actively participate in and contribute expertise to DPI safeguards community.
+Advocates
+Typical persona (non-exhaustive)
+Digital Rights Activist
+Digital Inclusion Advisor
+Director, Civil Society Organization
+Researcher
+Potential use of the Framework
+Use the Framework to:
+• Assess safe and inclusive practices.
+• Share safety and inclusion related best practices with stakeholders.
+• Curate and share unique perspectives of their local communities with the DPI safeguards community.
+When? The Iterative DPI Life Cycle
+DPI evolves through five iterative stages. The DPI Safeguards Frameworks is applicable at each stage, ensuring safety and inclusivity.
+Conception and Scoping
+The Conception and Scoping stage of the DPI life cycle is crucial as it establishes and reviews the purpose, goals, constraints and boundaries of a DPI. These parameters guide subsequent decision-making and ensure alignment with strategic and operational objectives, as well as the needs of individuals. Typical activities include:
+• Framing of the goals and objectives.
+• Identifying core problems and challenges.
+• Assessing impact potential.
+• Analysing the enabling environment for barriers to DPI implementation, effectiveness and adoption, taking account of relevant risks.
+• Anchoring rule of law and institutional capacity for safe, inclusive DPI implementation.
+Strategy and Design
+This is the stage where a comprehensive plan comprising DPI design or adjustments are formulated to translate functional and performance objectives into actionable steps, including scalability and sustainability, and planning for optimum service delivery. Typical activities include:
+• Mapping and engaging with stakeholders to understand individual and societal needs.
+• Identifying parties across responsible authorities and personas for collaboration.
+• Raising awareness regarding the barriers to DPI implementation in the enabling environment and advocating for their removal.
+• Establishing standards, protocols and metrics to assess adoption and societal impact.
+• Setting design objectives and specifications according to best practices and principles with a focus on incremental improvements and resilient architecture, and employing evidence-based strategies to mitigate design-related risks.
+Development
+In the development stage, a prototype DPI is built according to defined specifications, ensuring functionality, reliability and scalability. Existing technical building blocks are evaluated before further development. This phase ensures that solutions are refined and tested to minimize risk sand maximize the effectiveness of safeguards before widespread implementation. The mitigation of risks associated with implementation is critical at this stage, appropriate to the maturity of DPI implementation and the local context. This phase presents a valuable opportunity to empower local developers. Typical activities include:
+• Evaluating and selecting existing building blocks, including technical stacks.
+• Software coding to design specifications as necessary.
+• Building open Application Programming Interfaces (APIs) and sandboxes.
+• Analysing the enabling environment for barriers to DPI implementation, effectiveness and adoption, taking account of relevant risks.
+• Running and iterating through pilot project/s, with an emphasis on practicality and the mitigation of risks related to security, privacy, and experience of people.
+• Filling gaps in institutional structures, policies and regulations.
+Deployment
+During the deployment stage, the DPI is implemented in its operational environment. Any outstanding organizational changes are made to deliver value to users and to protect safety and inclusion. Change management strategies are recommended. This stage is critical to ensure successful large-scale adoption of DPI. Typical activities include:
+• Installing, configuring, activating and scaling of hardware, software and networking components.
+• Capacity-building of relevant responsible authorities and personas.
+• Refining based on evidence, relevant data and feedback.
+• Activating a robust governance framework with monitoring and redress.
+• Planned and gradual onboarding of people to carefully manage system scaling and integrity through the adoption timeframe.
+Operations and Maintenance
+Regular operations and maintenance ensures ongoing optimal performance, stability and efficiency of the DPI within the operational environment. Typical activities include:
+• Continuous monitoring, management, maintenance, evaluation and upgrading to ensure safety and security through technical, organizational and normative means.
+• Employing innovative methods for ongoing engagement across the ecosystem.
+• Ensuring redressal mechanisms are fit for purpose.
+• Continuously assessing readiness to leverage policy windows or opportunities to scale.
+• Managing environmental impact.
+• Learning and continuously improving.
+Explore the Universal DPI Safeguards Framework
+What are the Pathways?
+A Holistic Approach to DPI Safeguards
+The pathways reflect that safeguards implementation flows through not only policy and regulation, but also institutions, people, processes, and technology. Safeguarding DPI also requires wide-ranging inputs from society and a commitment to measuring outcomes.
+The Five Pathways Explained
+The pathways have been designed to reflect that safeguards implementation flows through, not only policy and regulation, but also institutions, people, processes, and technology.
+Legal and Regulatory
+Button Text
+Legal and Regulatory
+Establishes the laws, regulations, and enforceable oversight needed to codify rights, mandate transparency, and make safeguard obligations actionable across the DPI lifecycle.
+Institutional Structures
+Button Text
+Institutional Structures
+Sets up clear mandates, coordinating bodies, and independent oversight with complaint resolution, audits, and knowledge-sharing to govern DPI consistently and accountably.
+Technical Foundations
+Button Text
+Technical Foundations
+Defines the standards, privacy- and security-by-design practices, and certification and conformance mechanisms that embed safeguards into architecture, procurement, contracts, and operations.
+Capacity and Resources
+Button Text
+Capacity and Resources
+Builds multidisciplinary talent, training, and sustainable financing to implement, operate, and continually improve safeguarded DPI over time.
+Whole-of-Society Approach
+Button Text
+Whole-of-Society Approach
+Reflects the nature of DPI as being built for the benefit of the public. In order to ensure that this is the case, governments must create participatory processes to engage throughout the DPI lifecycle.
+How It Works
+A Holistic Approach to DPI Safeguards
+01
+Reflect
+Answer Guided Questions
+You will be prompted to reflect on your existing DPI governance, design and implementation through a set of tailored self-assessment questions for each pathway.
+02
+Identify
+Identify Strengths & Gaps
+The tool helps you identify your strengths and gaps without imposing a one-size-fits-all model, allowing you to define context-specific priorities.
+03
+Act
+Receive an Action Plan
+Based on your answers, you will receive indicative implementation steps with practical, actionable recommendations to help operationalize the DPI Safeguards.
+Explore the Adoption Pathways
+Curated Indicator Library
+This library integrates existing measurement frameworks from across the ecosystem, compiling indicators that reflects the updated approach to safeguards by leveraging existing frameworks and tools, including:
+HIGH VISUAL PERFORMANCE
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+1
+2024 DPI safeguards framework
+2024 DPI safeguards framework
+The Universal DPI Safeguards Framework provides practical, rights-based guidance to ensure safe, inclusive, and accountable digital public infrastructure. Built through global consultations, it identifies risks and proposes safeguards across the DPI lifecycle to strengthen trust, governance, and human rights.
+Explore
+2
+Global DPI Map indicators
+Community of Practice on DPI Measurement (University College London (UCL) - Institute for Innovation and Public Purpose)
+This project develops global baselines and measurement frameworks to map DPI deployments, with a strong focus on inclusion. By combining theory and real-world evidence, it provides tools to assess accessibility, governance, risks, and societal outcomes.
+Explore
+Framework for measurement (working paper)
+Deconstructing inclusion in DPI: Lessons from measuring real-world DPI deployments (Blog post)
+3
+Co-Develop Inclusivity Pulse for DPI
+Co-Develop Inclusivity Pulse for DPI
+This initiative develops a methodology to track inclusion in DPI, identifying barriers faced by marginalized groups. By measuring who benefits and who is excluded, it equips governments and partners to design more equitable digital transformations.
+Explore
+Draft metrics
+4
+privacy framework
+Revised privacy framework for DPG Standards
+This framework strengthens privacy within digital public goods by embedding robust safeguards into the DPG Standard. It aligns with global regulations, promotes transparency and accountability, and ensures user trust, rights protection, and sustainable, ethical digital ecosystems.
+Explore
+HIGH VISUAL PERFORMANCE
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+5
+Aapti: Gender-Inclusive Digital Identity
+Aapti Institute's Gender Inclusive Digital Identity Systems
+This research explores how women in developing countries interact with digital IDs and related infrastructure. Insights on awareness, access, and usage inform recommendations for embedding gender-inclusive design practices in digital public infrastructure.
+Explore
+Report
+Tool
+6
+CDPI Tech Architecture Principles
+DPI Tech Architecture Principles
+The DPI Tech Architecture Principles guide digital public infrastructure design, emphasizing interoperability, modular building blocks, inclusive innovation, decentralized systems, and security-by-design to ensure scalable, user-centric, secure, and accessible solutions that foster trust, choice, and innovation.
+Explore
+7
+DIAL Common Measurement Framework
+DIAL Common Measurement Framework
+This Framework provides a  common reference framework that unifies metrics, captures diverse impacts, integrates existing data, and guides investment, policy, and research across people, households, governments, and markets.
+Explore
+Payment system measurement for inclusion
+8
+Freedom Online Coalition
+Freedom Online Coalition (FoC) Rights-Respecting DPI Principles
+FOC’s DPI principles guide human-centred, inclusive, rights-respecting digital infrastructure. They emphasize privacy, security, transparency, interoperability, sustainability, data-driven approaches, openness, collaboration, and contextual adaptation to ensure equitable access, accountability, and empowerment across communities and systems.
+Explore
+9
+Global development  network
+Global Development Network
+GDN’s DPI programme evaluates socioeconomic impacts of digital public infrastructure in Ethiopia, Bangladesh, and Benin. By fostering South-South and North-South research collaboration, it builds evidence to inform inclusive, efficient, and scalable DPI policies globally.
+Explore
+Flexible implementation and assessment tool
+Customized digital tool
+The 18 DPI Safeguard Principles are translated into measurable outcome statements that can support a more objective assessment across the complete DPI lifecycle, these Measurable Outcomes and the related indicators bridge the gap between the foundational DPI Safeguard Principles and a range of more fine-grained DPI indicators available for RAs to choose from.
+Explore Outcomes and Indicators Library
+DPI Safeguards is initiated by the United Nations Office for Digital and Emerging Technologies (ODET) and the United Nations Development Programme (UNDP). © 2026
+Brand usage and guidelines
+Contact us
+DPI Safeguards Digest
+x

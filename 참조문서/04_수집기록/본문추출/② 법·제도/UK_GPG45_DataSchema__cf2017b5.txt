@@ -1,0 +1,651 @@
+Data taxonomy, data model and data dictionary for GPG 45 - GOV.UK
+Cookies on GOV.UK
+We use some essential cookies to make this website work.
+We’d like to set additional cookies to understand how you use GOV.UK, remember your settings and improve government services.
+We also use cookies set by other sites to help us deliver content from their services.
+You have accepted additional cookies.
+You can
+change your cookie settings
+at any time.
+You have rejected additional cookies.
+You can
+change your cookie settings
+at any time.
+Accept additional cookies
+Reject additional cookies
+View cookies
+Hide cookie message
+Skip to main content
+Office for Digital
+Identities & Attributes
+Department for
+Science, Innovation
+& Technology
+Department for
+Digital, Culture,
+Media & Sport
+Print this page
+© Crown copyright 2026
+This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit
+nationalarchives.gov.uk/doc/open-government-licence/version/3
+or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email:
+psi@nationalarchives.gov.uk
+.
+Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
+This publication is available at https://www.gov.uk/government/publications/uk-digital-verification-services-trust-framework-data-schema-1-0/data-taxonomy-data-model-and-data-dictionary-for-gpg-45
+Introduction
+This specification describes the data taxonomy, data model and data dictionary for the
+‘How to check someone’s identity’
+guidance, also known as Good Practice Guide (GPG) 45, a supporting document for the
+UK digital verification services trust framework
+(‘the DVS trust framework’, also referred to in this document where a single string of text is needed as ‘uk_dvstf’).
+The data taxonomy provides a description of the hierarchy and classification of data for GPG 45.
+The data model provides a description of the data element name, any relevant sub elements or the data type.
+The data dictionary is a collection of names, definitions, and lists (enumerations) relating to GPG 45 and the DVS trust framework.
+Data taxonomy
+This section describes the data taxonomy for GPG 45.
+This taxonomy provides a standardised terminology for describing GPG 45 data, setting out the types of data and elements it covers and defining the names of the data elements.
+The GPG 45 taxonomy includes titles and descriptions for the following areas:
+Identity claims
+Assurance processes
+Identity checking processes
+Identity evidence
+Identity claims
+A claimed identity is a combination of information (often a name, date of birth and address) that represents some of the key attributes of whoever a person is claiming to be.
+Description:
+Given name(s): Individual’s given name(s)
+Family name(s): Individual’s family / surname name(s)
+Address: Individual’s address
+Date of birth: Individual’s birth date
+Nationalities: One or more countries of citizenship
+Biometric information: Measurements of a biological or behavioural attribute, like an iris or fingerprint
+Assurance processes
+Assurance processes describe the assurance framework, policies and rules that govern the identity checking process described in GPG 45.
+Description:
+Trust framework: The assurance framework relevant to the claim. For the UK, this is the DVS trust framework and any applicable supplementary codes
+Assurance policy: Indicates the policy and/or procedure used to prove the user’s claim to the identity. For the DVS trust framework this is always GPG 45
+Assurance level: In GPG 45 terms this indicates level of confidence
+Assurance procedure: This describes confidence levels in more detail, for the DVS trust framework this is always a GPG 45 profile
+Identity checking processes
+These processes are represented in the data model within the verification outcomes, alongside evidence details.
+Description:
+Identity evidence: the evidence provided in order to prove the existence of the identity
+Validation method: a description of the checking process used to validate that evidence is authentic
+Verification method: a description of the checking process used to verify that the user is the legitimate owner of the identity
+GPG 45 Data model
+The data model provides a description of the data element name, the relevant sub-elements and the data type.
+Verified claims
+This is made up from two pieces of data, the identity the person is claiming to be (‘claims’), and the information about the checks that have been done to prove the identity exists and belongs to them (‘verification’)
+verified_claims:
+claims: object (
+claims
+)
+verification: object (
+verification
+)
+Claims
+This is the identity information that represents the person making the claim. This can include:
+their given name
+their family name
+whether the names have been transliteration from their original language
+their date of birth
+their nationalities
+their biometric information
+their address
+their age
+whether they are over a specific age
+whether they are under a specific age
+These are represented like this:
+claims:
+given_name: string
+family_name: string
+transliteration_status: object (
+transliteration_status
+)
+biometric_information: array (
+biometric_information
+)
+birthdate:
+date
+nationalities: array (
+nationality
+)
+address: object (
+address
+)
+age: number
+is_under: number
+is_over: number
+Transliteration status
+Transliteration is the process of converting text from one writing system or language into another by focusing on how words sound. It tries to the reflect the pronunciation of the original word using similar sounds in the target language so that speakers of either language can recognise the word.
+It is not the same as translation which focuses and converting the meaning of a word, for example 東京 translates to ‘eastern capital’ but is more commonly known in English in its transliterated form, Tokyo.
+The transliteration status conveys information about the:
+original language the text was written in
+language the text has been transliterated to
+the way the transliteration was done
+transliteration_status:
+original_language:
+language
+transliterated_language:
+language
+transliteration_type:
+transliteration_type
+Biometric information
+The biometric information represents one or more biometric characteristics about the person making the claim. The biometric information can contain any type of biometric modality and be encoded using several different methods and standards. Biometric data can include the:
+biometric characteristic (‘modality’) that is being exchanged
+the biometric data (‘attachments’)
+biometric_information:
+biometric_modality:
+biometric_modality
+attachments: array (
+attachment
+)
+Address
+This contains a physical address, it can include the:
+street address
+town or city (‘locality’)
+post code
+country
+whether the address has been transliteration from the original language
+address:
+street_address: string
+locality: string
+postal_code: string
+country: string
+transliteration_status: object (
+transliteration_status
+)
+Verification
+This is the information about how the claims have been proven and linked to the person it includes:
+a way to identify the assurance framework (‘trust framework’) relevant to the claim, for the DVS trust framework this is always ‘uk_dvstf’
+information about the certified service’s entry in the DVS register
+the evidence that was used to prove the claim
+the assurance level achieved in the claim being true, for the DVS trust framework this is always a GPG 45 level of confidence
+the processes that were performed in order to prove the claim
+verification:
+trust_framework: ‘uk_dvstf’
+dvs_registration: object (
+dvs_registration
+)
+evidence: array (
+evidence
+)
+assurance_level:
+assurance_level
+assurance_process: object (
+assurance_process
+)
+DVS registration
+The DVS registration information identifies which certified service was used to prove the claim. It contains:
+the name of the certified service
+an identifier that uniquely identifies the service in the DVS register
+dvs_registration:
+registered_name: string
+registration_id: string
+Evidence
+This describes the evidence that was used by the service to prove the claim to the identity by the person. This includes the:
+details of the documents, electronic records or vouches that were used for the verification
+evidence:
+document: object (
+document
+)
+electronic_record: object (
+electronic_record
+)
+vouch: object (
+vouch
+)
+Document
+This describes how a document was used by the service to prove the claim. This can include:
+details about the document
+a copy of the document (‘attachments’)
+details about the checks that were done to validate the document
+details about the checks that were done to verify the person matches the identity in the document
+document:
+type: ‘document’
+document_details: object (
+document_details
+)
+attachments: array (
+attachment
+)
+check_details: object (
+check_details
+)
+Document details
+This describes the document that was used by the service to prove the claim. This can include:
+the type of document
+a document reference or identification number that uniquely identifies a document that was issued
+a reference or identification number that uniquely identifies the person that is independent of a specific issued document
+a serial number that identifies the document irrespective of any personalisation information (this is usually only present on physical materials and not part of the personalisation of the document)
+the date of issue
+the date of expiry
+details about the issuer of the document
+whether the information about the document has been transliteration from the original language
+document_details:
+type:
+document_type
+document_number: string
+serial_number: string
+personal_number: string
+date_of_issuance:
+date
+date_of_expiry:
+date
+issuer:
+authority
+transliteration_status: object (
+transliteration_status
+)
+Electronic record
+This describes an electronic record that was used by the service to prove the claim. This can include:
+details about the electronic record
+a copy of the electronic record (‘attachments’)
+details about the checks that were done for the electronic record
+details about the checks that were done to verify the person matches the identity in the electronic record
+electronic_record:
+type: ‘electronic_record’
+record: object (
+record
+)
+attachments: array (
+attachment
+)
+check_details: object (
+check_details
+)
+Record
+This describes a record that was used by the service to prove the claim. This can include:
+the type of record
+a reference number that uniquely identifies the record
+the time the record was created
+the date the record will expire
+details about the source of the record
+whether the information about the record has been transliteration from the original language
+record:
+type:
+record_type
+reference_number: string
+created_at:
+timestamp
+date_of_expiry:
+timestamp
+source: object (
+authority
+)
+transliteration_status: object (
+transliteration_status
+)
+Vouch
+This contains the information about a vouch that was used by the service to prove the claim. This can include:
+details about the vouch (‘attestation’) itself
+electronic version or copy of the vouch (‘attachments’)
+details about the checks that were done to validate the vouch
+details about the checks that were done to verify the person matches the identity in the vouch
+vouch:
+type: ‘vouch’
+attestation: object (
+attestation
+)
+attachments: array (
+attachment
+)
+check_details: object (
+check_details
+)
+Attestation
+This contains the information about a vouch that was used by the service to prove the claim. This can include:
+a reference number that uniquely identifies the vouch
+the date the vouch was issued
+the date the evidence will expire
+details about the person that is providing the vouch
+whether the information about the attestation has been transliteration from the original language
+attestation:
+type: ‘vouch’
+reference_number: string
+date_of_issuance:
+date
+date_of_expiry:
+date
+voucher: object (
+voucher
+)
+transliteration_status: object (
+transliteration_status
+)
+Authority
+This identifies an authority that is able to issue or create evidence. This can include the:
+name of the authority
+address of the authority
+identifying code of the country or supranational organisation where the authority is based
+region(s)/state(s)/province(s)/municipality(ies) within the country where authority has jurisdiction to issue or create evidence
+authority:
+name: string
+address:
+address
+country_code:
+country_code
+jurisdiction: string
+Voucher
+This identifies the person that vouched for the person’s claim to the identity. This can include the:
+name of the person providing the vouch
+date of birth of the person providing the vouch
+address of the person providing the vouch
+identifying code of the country or supranational organisation where the voucher is based
+occupation of the person providing the vouch
+name of the organisation that the voucher is representing
+voucher:
+name: string
+birthdate:
+date
+address:
+address
+country_code:
+country_code
+occupation: string
+organisation: object (
+authority
+)
+Check details
+This contains the information about the checks that were performed. This can include:
+an identifier that describes what processes were followed to perform the check (‘check method’), this can either be the process that was followed to validate the evidence, or verify the person’s claim to the identity
+a unique reference number representing the check that was performed
+the time when the check was performed
+the name of the organisation that performed the check if the service did not perform the check itself
+The check_id is a method to link the check performed with the evidence with the requirements of the trust framework, if this is present there should be a matching entry in
+evidence_ref
+that demonstrates how it fits into the overall proofing and verification process required by the trust framework.
+check_details:
+check_method:
+check_method
+check_id: string
+time:
+timestamp
+organisation: string
+Attachment
+This provides the ability to exchange image or other binary data that may be needed, including scans of documents, photographs, video recordings, certificates, as well as other electronic data such as digital or verifiable credentials. This includes:
+a description of the attachment
+the type of data that has been encoded in the attachment
+the format of the encoding
+the encoded attachment data
+attachment:
+desc: string
+content_type:
+encoding
+content_format:
+encoding_format
+content: data
+Assurance process
+This contains detailed information about:
+the standard or policy that was followed in order to verify the claim (‘policy’), for the DVS trust framework this is always GPG 45
+the specific procedure from the policy was followed (‘procedure’), for the DVS trust framework this is always a GPG 45 profile
+how the details on which assurance processes were followed and how they meet the DVS trust framework
+assurance_process:
+policy: ‘gpg45’
+procedure:
+procedure
+assurance_details: array (
+assurance_details
+)
+Assurance details
+This contains information about the checks and processes that were performed to support the claim to the identity by the person. This includes:
+the type of check performed, for example validation, verification, counter fraud
+how the assurance process is classified in the trust framework, for the DVS trust framework this is always a score given by one of the steps in the proofing and verification process
+the evidence used to get the assurance in the claims and the person
+assurance_details:
+assurance_type:
+assurance_type
+assurance_classification:
+assurance_classification
+evidence_ref: array (
+evidence_references
+)
+Evidence references
+This contains:
+a unique reference number representing the check that was performed with the evidence
+other data about the checks or evidence that is required by the assurance process in order to demonstrate compliance with the trust_framework
+The check_id is a method to link the checks performed with the evidence to the assurance processes, if check_id is present there must be a matching check_id in a
+check_details
+object
+evidence_ref:
+check_id: string
+evidence_ref: object (
+evidence_metadata
+)
+Evidence metadata
+This contains:
+information on how the process used in
+check_details
+demonstrates compliance with the assurance_type. This is additional information that may be needed in order to fully explain how the evidence was used in the assurance process.
+evidence_metadata:
+evidence_classification:
+evidence_classification
+GPG 45 data dictionary
+To make sure there is consistency in how the data about identity proofing and verification is exchanged some of the elements must have a set format and use shared terms. The following section defines both allowed values and formats for a number of the elements in the GPG 45 data model.
+Data definitions
+Some elements of this data model must have defined structure so that they are constructed and understood by all participants in the DVS trust framework.
+Country code
+Country codes should be 3-letter codes following ISO 3166-1 or ICAO Doc 9303. Other 2-letter and single codes may be used in some circumstances for compatibility reasons, for example Germany often uses ‘D’ as its issuer country code.
+country_code: string
+Date
+Dates must always be in ISO 8601 ‘YYYY-MM-DD’ format
+date: string
+Encoding
+This describes the type of encoding used for the corresponding data. This should use media types as defined by
+IANA
+, or interchange formats defined by ISO/IEC 19794-5, ISO/IEC 39794-5, ANSI/NIST-ITL, or ISO/IEC 18013
+encoding: string
+Language
+Language codes must follow ISO 639-1 or RFC 5646
+language: string
+Nationality
+Nationality should use 3-letter codes following ISO 3166-1 or ICAO Doc 9303. Other 2-letter and single codes may be used in some circumstances for compatibility reasons.
+nationality: string
+Timestamp
+Time stamps must always be in ISO 8601 ‘YYYY-MM-DDThh:mm(:ss)TZD’ format
+date: string
+Predefined values
+The table below defines the meaning of the terms used in this data model.
+Predefined value
+Definition
+activity_history
+Activity history check according to GPG 45
+adoption_certificate
+A document relating to the adoption of a person
+adoption_register
+A record relating to the adoption of a person
+auth
+Verifying the user is the owner of the claims by use of an electronic authentication process that is linked to the owner of the claims
+bank_account
+A financial account maintained by a bank
+bank_statement
+A summary of bank transactions over a given period
+base64
+This is a standard binary-to-text encoding system that uses printable characters to represent a sequence of bytes
+birth_certificate
+A document relating to the birth of a person
+birth_register
+A record relating to the birth of a person
+building_society_account
+A financial account maintained by a building society
+bus_pass
+An older or disabled person’s bus pass
+bvp
+Biometric verification by an automated system with the user physically present to the system and the verifier, the use of a biometric modality (such as face) to match the user with a known template of the owner of the claims
+bvr
+Biometric verification by an automated system where the user and capture device is remote to the verifier, the use of a biometric modality (such as face) to match the user with a known template of the owner of the claims
+byte_data
+Data that is made up of bytes as defined by ISO/IEC 2382-1
+civil_partnership_register
+A record relating to the civil partnership of a person
+counter_fraud
+Counter fraud check was performed
+credit_account
+A specific type of financial account maintained by a bank or other financial institution where it offers the customer credit
+credit_union_account
+A financial account maintained by a credit union
+current_account
+A specific type of financial account maintained by a bank or other financial institution used for day to day money exchange
+data
+Found an existing electronic record that matches the claims made by the user
+driving_permit
+A permit / licence required to operate a motor vehicle on public roads
+education_certificate
+Certificate of completing education / course
+education_record
+A record from an educational institution
+firearm_certificate
+A certificate required in order to own a firearm
+freedom_pass
+A pass that provides free public transport for older or disabled people in London and local buses in England
+home_office_travel_document
+An international travel document issued by the Home Office to someone who not a British Citizen and is unable to obtain a national passport from their country
+icao
+Transliteration has been done following ICAO Doc 9303 standard
+id_card
+An identity card issued by a recognised country
+kbv
+Verifying the user is the owner of the claims by knowledge based challenges/questions that only the owner of the claims should know how to answer.
+loan_account
+A specific type of financial account maintained by a bank or other financial institution relating to sums borrowed by the customer
+loan_statement
+A summary of loan transactions over a given period
+manual
+Transliteration has been done manually and is not likely to follow a defined standard
+marriage_register
+A record relating to the marriage of a person
+military_id
+Active service personnel ID card
+military_record
+Records about service personnel held by an organisation responsible for the armed forces
+mortgage_account
+A loan used to purchase or maintain a property
+mortgage_statement
+A summary of mortgage transactions over a given period
+pass_card
+Proof of age card issued under the rules of PASS
+passport
+An ICAO compliant passport issued by a recognised country
+passport_card
+An ICAO compliant passport card issued by a recognised country
+pilot_permit
+A permit / licence required to operate an aircraft
+population_register
+A record relating to a person being resident or a citizen in a given jurisdiction
+prison_record
+Records about an inmate held by an organisation responsible for managing prisons
+proof_of_age_id
+ID predominately used as a proof of age
+purchase_agreement
+Contract between a buyer and a seller that defines the terms and conditions of a purchase
+pvp
+Physical verification in person by a qualified/authorised person, the comparison of a physical characteristic (such as face) of the user with a known image/template of the owner of the claims
+pvr
+Physical verification by a qualified/authorised person when the user is remote, the comparison of a physical characteristic (such as face) from an image or video of the user with a known image/template of the owner of the claims.
+rental_agreement
+Contractual agreement relating to renting a property
+social_security_record
+Records held by an organisation responsible for managing social security registration or payments
+social_security_statement
+A summary social security awards or transactions over a given period
+student_loan_account
+A record of a student loan
+tax_record
+Records about a person held by an organisation responsible for managing tax registration or payments
+tax_statement
+A summary of tax liabilities and transactions over a given period
+token
+Verifying the user is the owner of the claims by use of an electronic authentication token such as hardware token or smartcard that is linked and issued to the owner of the claims
+unknown_transliteration
+Transliteration status or method is not known
+utility_account
+A record relating to a utility
+utility_statement
+A summary of utility usage over a given period
+validation
+Validating the authenticity of evidence according to GPG 45
+vcrypt
+Validation the cryptographic security features of the evidence are intact and correct
+vdig
+Validation that digital/electronic evidence is genuine by the inspection of its properties and content
+verification
+Verifying the person is the owner of the identity in accordance with GPG 45
+veterans_card
+Armed Forces Veteran Card
+visa
+A type of legal document issued by a country to a foreign citizen that allows them to enter, stay, work or travel within the country
+voter_id
+Photographic identity card used for voting at polling stations
+voter_register
+A record relating to a person’s right to vote
+vpip
+Validation that physical evidence is genuine through inspection of its physical properties in person
+vpiruv
+Validation that physical evidence is genuine through inspection of its physical properties in person including its optical characteristics under non-visible light
+vri
+Validation that physical evidence is genuine through the inspection of an image taken remotely under visible light
+Predefined lists
+Some elements in this data model are only allowed to have certain predefined values, these restrictions are:
+Element
+Type
+Predefined values
+Notes
+assurance_classification
+string
+score_1, score_2, score_3, score_4
+Scores taken from GPG 45
+assurance_level
+string
+low, medium, high, very_high
+Confidence levels from GPG 45
+assurance_type
+string
+validation, verification, counter_fraud, activity_history
+biometric_modality
+string
+face, fingerprint, voice, iris
+check_method
+string
+auth, token, kbv, pvp, pvr, bvp, bvr, vpip, vpiruv, vri, vdig, vcrypt, data
+document_type
+string
+passport, id_card, passport_card, driving_permit, military_id, veterans_card, proof_of_age_id, home_office_travel_document, bus_pass,education_certificate, rental_agreement, purchase_agreement, pass_card, freedom_pass, voter_id, bank_statement, utility_statement, mortgage_statement, loan_statement, tax_statement, social_security_statement, pilot_permit, birth_certificate, adoption_certificate, marriage_certificate, civil_partnership_certificate, firearm_certificate
+encoding_format
+string
+base64, byte_data
+evidence_classification
+string
+low_kbv, medium_kbv, high_kbv, id_fraud, mortality_check
+procedure
+string
+L1A, L1B, L1C, L2A, L2B, L3A, M1A, M1B, M1C, M1D, M2A, M2B, M2C, M3A, H1A, H1B, H1C, H2A, H2B, H2C, H2D, H2E, H3A, V1A, V1B, V1C, V1D, V2A, V2B, V2C, V2D, V3A
+Identity profiles from GPG 45
+record_type
+string
+social_security_record, bank_account, building_society_account, credit_union_account, current_account, student_loan_account, credit_account, mortgage_account, loan_account, birth_register, population_register, voter_register, adoption_register, marriage_register, civil_partnership_register, education_record, utility_account, military_record, tax_record, prison_record, death_register, fraud_register
+transliteration_type
+string
+manual, icao, unknown_transliteration
+Back to top
+Is this page useful?
+Maybe
+Yes
+this page is useful
+No
+this page is not useful
+Thank you for your feedback
+Report a problem with this page
+Help us improve GOV.UK
+Do not include personal or financial information like your National Insurance number or credit card details.
+This field is for robots only. Please leave blank
+What were you doing?
+What went wrong?
+Send
+Cancel
+Help us improve GOV.UK
+To help us improve GOV.UK, we’d like to know more about your visit today.
+Please fill in this survey (opens in a new tab
+and requires JavaScript
+)
+.
+Cancel

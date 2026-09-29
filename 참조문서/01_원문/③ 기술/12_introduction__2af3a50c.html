@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; GITB TDL Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.css" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d4340937"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hello world" href="../helloWorld/index.html" />
+    <link rel="prev" title="GITB TDL Documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GITB TDL Documentation
+              <img src="../_static/logo_itb.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                GITB TDL version 1.30.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-the-gitb-tdl">What is the GITB TDL?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#where-is-it-used">Where is it used?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-is-it-maintained">How is it maintained?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#core-concepts">Core concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test-case">Test case</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-suite">Test suite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-session">Test session</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-session-context">Test session context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#actor">Actor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#messaging-handlers">Messaging handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#validation-handlers">Validation handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processing-handlers">Processing handlers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-lifecycle-of-a-test-session">The lifecycle of a test session</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-create">Step 1: Create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-configure">Step 2: Configure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-initiate">Step 3: Initiate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-run-preliminary">Step 4: Run preliminary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-5-run-test-steps">Step 5: Run test steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-6-finalise">Step 6: Finalise</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-7-consult">Step 7: Consult</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#specification-links">Specification links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../helloWorld/index.html">Hello world</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testsuite/index.html">Test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testcase/index.html">Test cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptlets/index.html">Scriptlets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/index.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../expressions/index.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constructs/index.html">Test steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handlers/index.html">Test step handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Example test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Release history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GITB TDL Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<span id="id1"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<p>The purpose of the current documentation is to make it possible for you to understand and create test suites
+using the GITB TDL. The approach followed herein is to document the available possibilities providing easy to
+follow examples but also to note where appropriate certain considerations on the use of TDL in the GITB Test Bed
+software.</p>
+<section id="what-is-the-gitb-tdl">
+<span id="index-1"></span><span id="index-0"></span><h2>What is the GITB TDL?<a class="headerlink" href="#what-is-the-gitb-tdl" title="Link to this heading"></a></h2>
+<p>The <a class="reference external" href="http://www.cen.eu/work/areas/ict/ebusiness/pages/ws-gitb.aspx">GITB project</a> represents a CEN standardisation initiative funded by the European Commission’s DG GROW
+to provide the specifications for a generic interoperability Test Bed and their implementation in the form
+of the GITB Test Bed software. The focus of these specifications and software is not any kind of testing
+(e.g. performance, regression, penetration) but rather conformance and interoperability testing. Simply
+put, <em>conformance testing</em> verifies that the requirements of a given specification are met, whereas
+<em>interoperability testing</em> comes as a second step to verify that two or more parties can interact as expected.
+Furthermore, the focus here is on technical specifications related to e.g. messaging protocols or content,
+whereas the parties previously mentioned would typically be software components.</p>
+<p>A key element of the GITB specifications is the <strong>GITB Test Description Language</strong> (GITB TDL) that is used to
+express how individual tests are defined in terms of involved actors and foreseen steps. The goal for GITB TDL
+is to provide test descriptions that are executable, i.e. ready to be processed by a testing engine capable of
+understanding GITB TDL, but also human readable. To achieve this, GITB TDL is based on XML, defining specific
+elements to match its foreseen testing constructs.</p>
+<section id="where-is-it-used">
+<h3>Where is it used?<a class="headerlink" href="#where-is-it-used" title="Link to this heading"></a></h3>
+<p>The short answer is that GITB TDL is used in the GITB Test Bed software to define and run tests.</p>
+<p>To be more complete however, GITB TDL is not tied to the GITB software per se but can be processed by any Test Bed
+implementation that conforms to the GITB specifications. In fact, the GITB specification foresees the concept
+of TDL compliance and splits this in <em>GITB compliant TDL processors</em> and <em>GITB TDL compliant producers</em>. Simply
+put, a TDL processor is any software that can read GITB TDL content and understand it, typically being a
+Test Bed implementation that can read and execute GITB TDL test cases when requested (without necessarily conforming
+to other elements of the overall GITB specification). On the other hand, a TDL producer is software that can
+output TDL content, in which case we would typically be referring to test case editors or converter tools from
+other test case representations. Finally, consider that compliance to GITB TDL is not necessarily an “all-or-nothing”
+statement; compliance can be partial by supporting only a limited set of constructs. To support this last point, GITB
+TDL concepts and constructs are formalised using a <a class="reference external" href="https://www.itb.ec.europa.eu/skos/gitb_tdl_skos.rdf">published taxonomy</a> that can be referenced to understand the TDL
+constructs that are used (within a test case) or supported (by a Test Bed).</p>
+<p>One of the goals of GITB TDL is also to help reuse existing work by ideally sharing test cases between Test Bed
+implementations. To this effect the <a class="reference external" href="https://joinup.ec.europa.eu/collection/gitb-trr">GITB Test Registry and Repository (TRR)</a> aims to act as a reuse portal for
+GITB TDL test cases by facilitating their discovery and listing their expected and used constructs.</p>
+</section>
+<section id="how-is-it-maintained">
+<span id="index-2"></span><h3>How is it maintained?<a class="headerlink" href="#how-is-it-maintained" title="Link to this heading"></a></h3>
+<p>Following the initial work from the CEN GITB workgroup, the maintenance and evolution of GITB TDL has been taken over
+by the European Commission, specifically the <a class="reference external" href="https://joinup.ec.europa.eu/solution/interoperability-test-bed/about">Interoperability Test Bed Team</a> of DIGIT B.2. DIGIT B.2 foresees the
+maintenance of the GITB software and specification based on the needs of the testing community and carries out evolutive
+maintenance with regular releases. Regarding GITB TDL in particular, introduced changes are always done in a backwards-compatible manner, adding
+capabilities rather than changing existing ones. Releases of GITB TDL and its version numbers currently follow the
+versioning of the GITB software.</p>
+</section>
+</section>
+<section id="core-concepts">
+<span id="introduction-core-concept"></span><h2>Core concepts<a class="headerlink" href="#core-concepts" title="Link to this heading"></a></h2>
+<p>Before diving into GITB TDL it is important to be aware of certain core concepts.</p>
+<section id="test-case">
+<span id="index-3"></span><h3>Test case<a class="headerlink" href="#test-case" title="Link to this heading"></a></h3>
+<p>A <strong>test case</strong> represents a set of steps and assertions that form a cohesive scenario for testing purposes.
+These are captured as a single XML file authored using GITB TDL constructs.</p>
+</section>
+<section id="test-suite">
+<span id="index-4"></span><h3>Test suite<a class="headerlink" href="#test-suite" title="Link to this heading"></a></h3>
+<p>A <strong>test suite</strong> is used to group together related test cases into a cohesive set. A test suite can include
+metadata such a name and description that provide useful context to understand the purpose of its contained
+tests. A test suite is expressed as an XML file and is bundled in a ZIP archive along with its contained
+test cases and the resources they use.</p>
+</section>
+<section id="test-session">
+<span id="index-5"></span><h3>Test session<a class="headerlink" href="#test-session" title="Link to this heading"></a></h3>
+<p>A <strong>test session</strong> represents a single execution of a test case. It typically involves the provision of
+configuration from the user starting the test, goes through the steps the test case foresees and eventually
+completes providing the session’s overall result.</p>
+</section>
+<section id="test-session-context">
+<span id="index-7"></span><span id="index-6"></span><h3>Test session context<a class="headerlink" href="#test-session-context" title="Link to this heading"></a></h3>
+<p>The <strong>test session context</strong> can be considered a persistent store specific to a given test session that is used to record
+values. These values can either be configuration parameters provided before the test session starts, configuration parameters
+generated during the test session’s initiation, or values that are added dynamically during the session as a result of the
+ongoing test steps. The test session context is very important in that it gives a level of control above individual test
+steps that allow the testing of complete conversations. In addition, its ability to store and lookup arbitrary content dynamically
+makes it possible to implement complex flows and control logic.</p>
+<p>The test session context can be viewed as a map or keys to values, where each key is a string identifier and the value can be
+any type supported by GITB, including additional nested maps.</p>
+</section>
+<section id="actor">
+<span id="index-9"></span><span id="index-8"></span><h3>Actor<a class="headerlink" href="#actor" title="Link to this heading"></a></h3>
+<p>An <strong>actor</strong>, from the perspective of GITB, represents a party involved in the overall process that the test cases
+aim to test. What exactly is an actor depends fully on the tests or the specification they relate to. Here are
+some examples:</p>
+<ul class="simple">
+<li><p>A specification that foresees sending a message from one party to another could define a “Sender” and “Receiver”
+actor to represent the involved parties.</p></li>
+<li><p>A solution that foresees a central EU portal exchanging information with national endpoints could define the “Portal”
+and “National endpoint” as actors.</p></li>
+<li><p>A content specification (e.g. XML-based) for which we simply want to allow users to upload samples for validation
+could define a “User” actor to represent this role in test cases.</p></li>
+</ul>
+<p>Once actors are defined they play an important role in the testing process as follows:</p>
+<ul class="simple">
+<li><p>They define properties relevant to the testing (think of them as actor-specific configuration elements).</p></li>
+<li><p>Each test case foresees that actors are either simulated by the Test Bed or are the focus of the test. In the latter case
+they are referred to as having a role of <strong>SUT</strong> (System Under Test).</p></li>
+</ul>
+</section>
+<section id="messaging-handlers">
+<span id="introduction-concepts-messaging-handlers"></span><span id="index-10"></span><h3>Messaging handlers<a class="headerlink" href="#messaging-handlers" title="Link to this heading"></a></h3>
+<p><strong>Messaging handlers</strong> are embedded or external components whose purpose is to allow
+messaging for actors, defining how these receive and send messages. How this actually takes place can be
+completely arbitrary and is not tied to a specific protocol. What is important is that the Test Bed can signal to the handler that
+it needs to send data or similarly signal that it is waiting to receive data. In this latter case, the handler notifies the
+Test Bed by means of a call-back with the relevant received payload.</p>
+<p>To enable interaction with the Test Bed, messaging handlers implement the <a class="reference external" href="https://www.itb.ec.europa.eu/specs/latest/gitb_ms.wsdl">GITB messaging service API</a>. This interface defines the
+methods needed to signal events between the Test Bed and the handler and provide relevant input and output. Implementations can
+either be embedded Test Bed components or external web service endpoints. Input to a handler is provided using the test session’s
+configuration and context whereas the output of messaging is recorded in the session context for subsequent use.</p>
+<p>Having the actual implementation of sending and receiving decoupled in dedicated components means that the Test Bed can be extended
+to handle virtually any needed protocol, requiring only that an appropriate handler exists. If for example the Test Bed needs to send
+and receive email, it does not need to support e.g. SMTP natively, it just needs access to a handler that can send and receive emails on its behalf.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Messaging handlers as adapters:</strong> Messaging handlers are used when messaging to and from simulated actors but can also
+act as adapters over existing software, translating GITB-specific calls to the actual processes that carry out messaging.</p>
+</div>
+</section>
+<section id="validation-handlers">
+<span id="introduction-concepts-validation-handlers"></span><span id="index-11"></span><h3>Validation handlers<a class="headerlink" href="#validation-handlers" title="Link to this heading"></a></h3>
+<p><strong>Validation handlers</strong> are similar in concept to messaging handlers but much simpler. Their purpose is limited to validating content and
+returning a report with the result. Validation is a fully decoupled process in that the content being validated, as well as any other parameters,
+are provided by the Test Bed as input without needing to be aware of how validation actually takes place. The result of a validation handler is
+recorded in the test session context for subsequent use in the test case.</p>
+<p>Validation handlers implement the <a class="reference external" href="https://www.itb.ec.europa.eu/specs/latest/gitb_vs.wsdl">GITB validation service API</a> that defines the operations needed by the Test Bed to request
+validation for specific input and receive the results. Implementations can be either embedded components or external web service endpoints.</p>
+</section>
+<section id="processing-handlers">
+<span id="introduction-concepts-processing-handlers"></span><span id="index-12"></span><h3>Processing handlers<a class="headerlink" href="#processing-handlers" title="Link to this heading"></a></h3>
+<p><strong>Processing handlers</strong> are extensions to the Test Bed’s capabilities to undertake actions that it does not natively support. The
+purpose of a processing handler is to receive a set of input parameters that it can process and produce a
+set of output values. These output values are stored in the test session context for subsequent use.</p>
+<p>Processing handlers implement the <a class="reference external" href="https://www.itb.ec.europa.eu/specs/latest/gitb_ps.wsdl">GITB processing service API</a> that defines the operations needed by the Test Bed to request
+processing for specific input and receive the results. Implementations can be either embedded components or external web service endpoints.</p>
+</section>
+</section>
+<section id="the-lifecycle-of-a-test-session">
+<h2>The lifecycle of a test session<a class="headerlink" href="#the-lifecycle-of-a-test-session" title="Link to this heading"></a></h2>
+<p>The following diagram illustrates the steps involved in creating and using a test case. These steps occur within a Test Bed as part of overall
+test management before and after the test’s execution and also during the test session itself.</p>
+<figure class="no-bottom-margin align-center" id="id2">
+<img alt="../_images/lifecycle.png" src="../_images/lifecycle.png" />
+<figcaption>
+<p><span class="caption-number">Figure 1: </span><span class="caption-text">The test session lifecycle</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="step-1-create">
+<h3>Step 1: Create<a class="headerlink" href="#step-1-create" title="Link to this heading"></a></h3>
+<p>Before we can start testing we need to create a test suite and at least one contained test case. The test suite will define actors matching the
+specification’s requirements and the test cases will each define one actor from the ones configured as the SUT. Other actors will be defined
+as being simulated.</p>
+</section>
+<section id="step-2-configure">
+<h3>Step 2: Configure<a class="headerlink" href="#step-2-configure" title="Link to this heading"></a></h3>
+<p>The actor that is identified as the SUT may have one or more optional or required configuration parameters that need to be provided. These are
+verified before test session execution to ensure that all required parameters are defined. Configuration parameters are provided by administrators
+of the organisation that is engaged in testing.</p>
+</section>
+<section id="step-3-initiate">
+<h3>Step 3: Initiate<a class="headerlink" href="#step-3-initiate" title="Link to this heading"></a></h3>
+<p>During this step a new test session is created and the messaging handlers of any simulated actors present are notified to prepare. This is done
+by calling the simulated actors’ messaging handlers passing the session information and also the configuration parameters of the SUT. Apart from
+preparing the messaging handlers for the upcoming session this notification may also result in specific configuration provided from the messaging
+handlers to the SUT (e.g. a dynamically created address to send messages to).</p>
+</section>
+<section id="step-4-run-preliminary">
+<h3>Step 4: Run preliminary<a class="headerlink" href="#step-4-run-preliminary" title="Link to this heading"></a></h3>
+<p>With all actors configured, this is the phase where notifications may be presented to the user to prepare for the upcoming test.
+These notifications can either be instructions to follow or requests for data to be provided before the test session starts.</p>
+</section>
+<section id="step-5-run-test-steps">
+<h3>Step 5: Run test steps<a class="headerlink" href="#step-5-run-test-steps" title="Link to this heading"></a></h3>
+<p>During this phase the test session proceeds to execute the steps defined in the test case’s description. Any supported set of steps can take place
+resulting in a test session context that is populated with variables and referenced according to the implemented test logic. The test steps may involve automatic
+processing and validation, interaction with messaging handlers to send and receive messages, user input requests, and any control logic constructs
+that are needed to correctly express the expected flow. The test session eventually completes, resulting in one of three outcomes:</p>
+<ul class="simple">
+<li><p><strong>Success:</strong> If all test steps are completed successfully.</p></li>
+<li><p><strong>Failure:</strong> If one of the test steps failed.</p></li>
+<li><p><strong>Undefined:</strong> If the session was terminated before completion.</p></li>
+</ul>
+</section>
+<section id="step-6-finalise">
+<h3>Step 6: Finalise<a class="headerlink" href="#step-6-finalise" title="Link to this heading"></a></h3>
+<p>Upon finalisation the Test Bed cleans up the state relevant to the test session and also notifies external handler implementations to consider the
+session as closed.</p>
+</section>
+<section id="step-7-consult">
+<h3>Step 7: Consult<a class="headerlink" href="#step-7-consult" title="Link to this heading"></a></h3>
+<p>The results of the test session can be consulted either immediately following completion or by looking up the results in the organisation’s test session
+history. A test session records its output per step that can be used to produce detailed test step reports or an overview report for the complete
+test session.</p>
+</section>
+</section>
+<section id="specification-links">
+<span id="introduction-spec-links"></span><h2>Specification links<a class="headerlink" href="#specification-links" title="Link to this heading"></a></h2>
+<p>The following table provides the links to access the latest version of the GITB specifications. These include XSDs defining the GITB
+TDL constructs but also related specifications such as the WSDLs for messaging, processing and validation services.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Specification</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Link</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GITB core elements</p></td>
+<td><p>The XSD defining core elements used in other GITB XSDs</p></td>
+<td><p><a class="reference external" href="https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_core.xsd">https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_core.xsd</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>GITB test description language (TDL)</p></td>
+<td><p>The XSD defining the types used when defining TDL test suites and test cases</p></td>
+<td><p><a class="reference external" href="https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tdl.xsd">https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tdl.xsd</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GITB test presentation language (TPL)</p></td>
+<td><p>The XSD defining types used to report on the status of a test session</p></td>
+<td><p><a class="reference external" href="https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tpl.xsd">https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tpl.xsd</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>GITB test reporting language (TRL)</p></td>
+<td><p>The XSD defining the types used to report step output</p></td>
+<td><p><a class="reference external" href="https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tr.xsd">https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tr.xsd</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GITB messaging service API</p></td>
+<td><p>The WSDL defining messaging service operations</p></td>
+<td><p><a class="reference external" href="https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_ms.wsdl">https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_ms.wsdl</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>GITB messaging service types</p></td>
+<td><p>The XSD defining the messaging service message types</p></td>
+<td><p><a class="reference external" href="https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_ms.xsd">https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_ms.xsd</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GITB validation service API</p></td>
+<td><p>The WSDL defining validation service operations</p></td>
+<td><p><a class="reference external" href="https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_vs.wsdl">https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_vs.wsdl</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>GITB validation service types</p></td>
+<td><p>The XSD defining the validation service message types</p></td>
+<td><p><a class="reference external" href="https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_vs.xsd">https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_vs.xsd</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GITB processing service API</p></td>
+<td><p>The WSDL defining processing service operations</p></td>
+<td><p><a class="reference external" href="https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_ps.wsdl">https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_ps.wsdl</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>GITB processing service types</p></td>
+<td><p>The XSD defining the processing service message types</p></td>
+<td><p><a class="reference external" href="https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_ps.xsd">https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_ps.xsd</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GITB Test Bed service API</p></td>
+<td><p>The WSDL defining Test Bed service operations</p></td>
+<td><p><a class="reference external" href="https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_tbs.wsdl">https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/wsdl/gitb_tbs.wsdl</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>GITB Test Bed service types</p></td>
+<td><p>The XSD defining the Test Bed service message types</p></td>
+<td><p><a class="reference external" href="https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tbs.xsd">https://github.com/ISAITB/gitb-types/blob/master/gitb-types-specs/src/main/resources/schema/gitb_tbs.xsd</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>The final GITB workgroup report can be downloaded here [<a class="reference download internal" download="" href="../_downloads/0dc573d06adafa1a273edd793577016d/CEN_WS_GITB3_CWA_Final.pdf"><code class="xref download docutils literal notranslate"><span class="pre">CEN_WS_GITB3_CWA_Final.pdf</span></code></a>].</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="GITB TDL Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../helloWorld/index.html" class="btn btn-neutral float-right" title="Hello world" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, European Commission, DIGIT.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

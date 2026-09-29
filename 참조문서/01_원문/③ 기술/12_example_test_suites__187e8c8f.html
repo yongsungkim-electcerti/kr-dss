@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example test suites &mdash; GITB TDL Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.css" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d4340937"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Release history" href="../changelog/index.html" />
+    <link rel="prev" title="Test step handlers" href="../handlers/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GITB TDL Documentation
+              <img src="../_static/logo_itb.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                GITB TDL version 1.30.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helloWorld/index.html">Hello world</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testsuite/index.html">Test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testcase/index.html">Test cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptlets/index.html">Scriptlets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/index.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../expressions/index.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constructs/index.html">Test steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handlers/index.html">Test step handlers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example test suites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example-1-validation-of-xml-content-via-various-inputs">Example 1: Validation of XML content via various inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-2-validation-of-json-content-with-fixed-and-dynamic-schemas">Example 2: Validation of JSON content with fixed and dynamic schemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-3-test-suite-presentation-test-case-groups-and-simulated-exchanges">Example 3: Test suite presentation, test case groups and simulated exchanges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-4-setup-and-teardown-phases-with-fine-tuned-error-management">Example 4: Setup and teardown phases with fine-tuned error management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-5-linking-test-cases-with-specification-references">Example 5: Linking test cases with specification references</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-6-request-and-asynchronous-polling-for-status-update">Example 6: Request and asynchronous polling for status update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-7-working-with-images">Example 7: Working with images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-8-administrator-review-of-validation-warnings">Example 8: Administrator review of validation warnings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-9-using-simulation-for-demonstration-purposes">Example 9: Using simulation for demonstration purposes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Release history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GITB TDL Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Example test suites</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="example-test-suites">
+<span id="examples"></span><h1>Example test suites<a class="headerlink" href="#example-test-suites" title="Link to this heading"></a></h1>
+<p>The following section provides downloadable complete examples of GITB TDL <a class="reference internal" href="../testsuite/index.html#test-suite"><span class="std std-ref">test suites</span></a>, illustrating common steps and
+interesting practices. These are designed to be <strong>self-contained</strong> and work with any Test Bed installation, meaning that
+you can deploy and try them out of the box.</p>
+<p>To remove all external dependencies from the test suites, they lack certain concepts that are typically found in conformance tests,
+such as <a class="reference internal" href="../expressions/index.html#test-case-configuration"><span class="std std-ref">configuration parameters</span></a> and use of <a class="reference internal" href="../handlers/index.html#handlers-custom-handlers"><span class="std std-ref">custom supporting services</span></a>.
+Doing so however results in test suites that can be used as-is and that should be straightforward to understand.</p>
+<p>Each test suite is covered in a separate section below, providing per case:</p>
+<ul class="simple">
+<li><p>The <strong>download link</strong> for the test suite (ready to <a class="reference internal" href="../testsuite/index.html#test-suite-deploying"><span class="std std-ref">deploy to a Test Bed instance</span></a>).</p></li>
+<li><p>A <strong>summary</strong> of the test suite’s purpose and main features.</p></li>
+<li><p>An overview of the test suite’s included <strong>resources</strong>.</p></li>
+<li><p>A listing of all the <strong>TDL features</strong> used in the test suite.</p></li>
+</ul>
+<section id="example-1-validation-of-xml-content-via-various-inputs">
+<span id="examples-example1"></span><span id="index-10"></span><span id="index-9"></span><span id="index-8"></span><span id="index-7"></span><span id="index-6"></span><span id="index-5"></span><span id="index-4"></span><span id="index-3"></span><span id="index-2"></span><span id="index-1"></span><span id="index-0"></span><h2>Example 1: Validation of XML content via various inputs<a class="headerlink" href="#example-1-validation-of-xml-content-via-various-inputs" title="Link to this heading"></a></h2>
+<p>View <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/tree/master/testSuites/xmlValidationViaVariousInputs">test suite on GitHub</a> or <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/raw/refs/heads/master/testSuites/xmlValidationViaVariousInputs/testSuite.zip">download test suite archive</a>.</p>
+<p>This example showcases validation of XML content using the Test Bed’s built-in <strong>XML validation</strong> capabilities. The test suite includes
+two test cases covering the different ways in which the XML to validate is provided, specifically through <strong>manual upload</strong> and <strong>HTTP request</strong>.
+The validation logic is defined once and <strong>reused</strong> across both test cases.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;archive root&gt;
+├── resources
+│   ├── LargePurchaseOrder.sch
+│   ├── PurchaseOrder.xsd
+│   ├── sample.xml
+│   └── sampleInvalid.xml
+├── scriptlets
+│   └── validate.xml
+├── testCases
+│   ├── testCase1.xml
+│   └── testCase2.xml
+└── testSuite.xml
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept used</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Resource(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Prepare step inputs.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Call the scriptlet to carry out the common validation steps.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-httpmessagingv2"><span class="std std-ref">HttpMessagingV2</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Carry out the content retrieval using HTTP.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">import</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Import the validation artefacts to use and samples to use when providing manual input.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Display popup for manual input.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Log progress messages in the test session log.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">output</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Display user-friendly messages upon test completion.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">scriptlet</span></a></p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">Scriptlet</span></a></p></td>
+<td><p>Share common validation logic across test cases.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Perform a HTTP GET to retrieve content.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Validate the retrieved content.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-xmlvalidator"><span class="std std-ref">XmlValidator</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Validate the retrieved content using XML Schema and Schematron.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-2-validation-of-json-content-with-fixed-and-dynamic-schemas">
+<span id="examples-example2"></span><span id="index-26"></span><span id="index-25"></span><span id="index-24"></span><span id="index-23"></span><span id="index-22"></span><span id="index-21"></span><span id="index-20"></span><span id="index-19"></span><span id="index-18"></span><span id="index-17"></span><span id="index-16"></span><span id="index-15"></span><span id="index-14"></span><span id="index-13"></span><span id="index-12"></span><span id="index-11"></span><h2>Example 2: Validation of JSON content with fixed and dynamic schemas<a class="headerlink" href="#example-2-validation-of-json-content-with-fixed-and-dynamic-schemas" title="Link to this heading"></a></h2>
+<p>View <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/tree/master/testSuites/validationOfJsonContentWithFixedAndDynamicSchemas">test suite on GitHub</a> or <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/raw/refs/heads/master/testSuites/validationOfJsonContentWithFixedAndDynamicSchemas/testSuite.zip">download test suite archive</a>.</p>
+<p>This example showcases validation of <strong>JSON content</strong> retrieved over HTTP. Besides checking the content’s structure, the included test case
+also uses a <strong>dynamically generated schema</strong> to make session-specific tests, ensuring that referred dates and item counts match the test
+case’s expectations.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;archive root&gt;
+├── resources
+│   ├── schema.json
+│   └── schemaTemplate.txt
+├── scriptlets
+│   └── validate.xml
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept used</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Resource(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Define variable and prepare validator inputs.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Call the scriptlet to carry out a schema’s validation.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets-elements-params"><span class="std std-ref">Default scriptlet parameters</span></a></p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">Scriptlet</span></a></p></td>
+<td><p>Use a default value for the displayed validation step description.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets-dynamic-references"><span class="std std-ref">Dynamic scriptlet presentation</span></a></p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">Scriptlet</span></a></p></td>
+<td><p>Use different step descriptions within the scriptlet based on test case inputs.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-group"><span class="std std-ref">group</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Group together visually the validation steps.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-hidesteps"><span class="std std-ref">hidden</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common"><span class="std std-ref">Common concepts</span></a></p></td>
+<td><p>Hide the instruction popup from the displayed execution diagram.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-httpmessagingv2"><span class="std std-ref">HttpMessagingV2</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Carry out the content retrieval using HTTP.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">import</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Import the schema to use and the template to generate the dynamic schema.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Display popup with instructions for the user.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-jsonvalidator"><span class="std std-ref">JsonValidator</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Validate the retrieved JSON content.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Log progress messages in the test session log.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">output</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Display user-friendly messages upon test completion.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Create the expected timestamp and generate the dynamic schema to use.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">scriptlet</span></a></p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">Scriptlet</span></a></p></td>
+<td><p>Encapsulate the validation logic and steps.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Perform a HTTP GET to retrieve content.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-stoponerror"><span class="std std-ref">stopOnError</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common"><span class="std std-ref">Common concepts</span></a></p></td>
+<td><p>Skip subsequent steps if the content retrieval fails.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-templateprocessor"><span class="std std-ref">TemplateProcessor</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Use a template to generate the dynamic schema to use based on session-specific data.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-tokengenerator"><span class="std std-ref">TokenGenerator</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Generate a timestamp for the current date with the expected format.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Validate the retrieved content.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-3-test-suite-presentation-test-case-groups-and-simulated-exchanges">
+<span id="examples-example3"></span><span id="index-40"></span><span id="index-39"></span><span id="index-38"></span><span id="index-37"></span><span id="index-36"></span><span id="index-35"></span><span id="index-34"></span><span id="index-33"></span><span id="index-32"></span><span id="index-31"></span><span id="index-30"></span><span id="index-29"></span><span id="index-28"></span><span id="index-27"></span><h2>Example 3: Test suite presentation, test case groups and simulated exchanges<a class="headerlink" href="#example-3-test-suite-presentation-test-case-groups-and-simulated-exchanges" title="Link to this heading"></a></h2>
+<p>View <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/tree/master/testSuites/testSuitePresentationTestCaseGroupsAndSimulatedExchanges">test suite on GitHub</a> or <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/raw/refs/heads/master/testSuites/testSuitePresentationTestCaseGroupsAndSimulatedExchanges/testSuite.zip">download test suite archive</a>.</p>
+<p>This example focuses on features that can be used to enhance a test suite’s <strong>presentation</strong>, enhancing testers’ <strong>user experience</strong>.
+Presentation features in use include test case <strong>tags</strong>, rich <strong>documentation</strong> and specific outcome <strong>messages</strong> for different test session
+results. In addition, this test suite defines test cases with <strong>simulated exchanges</strong> for illustration, which are moreover <strong>grouped</strong> to
+require that at least is executed, but allowing other simulation test cases to fail or be skipped. Although not the focus of this test suite,
+each test case proceeds to <strong>validate XML content</strong> using XML Schema and Schematron, the content either being retrieved via HTTP GET or, for the
+test cases based on simulated exchanges, provided as fixed inputs.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;archive root&gt;
+├── resources
+│   ├── LargePurchaseOrder.sch
+│   ├── PurchaseOrder.xsd
+│   ├── sample.xml
+│   ├── sampleInvalidContent.xml
+│   └── sampleInvalidStructure.xml
+├── scriptlets
+│   └── validate.xml
+├── testCases
+│   ├── testCase1.xml
+│   ├── testCase2.xml
+│   ├── testCase3.xml
+│   └── testCase4.xml
+└── testSuite.xml
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept used</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Resource(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Prepare step inputs.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase3.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase4.xml</span></code> <code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Call the scriptlet to carry out validation.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase3.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase4.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../testcase/index.html#test-case-metadata-documentation"><span class="std std-ref">documentation</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Show rich documentation per test case importing from test suite HTML files.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase3.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase4.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-xmlvalidator"><span class="std std-ref">groups</span></a></p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-groups"><span class="std std-ref">Test suite section</span></a></p></td>
+<td><p>Group together test cases so that only one is needed to complete successfully.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testSuite.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-httpmessagingv2"><span class="std std-ref">HttpMessagingV2</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Carry out the content retrieval using HTTP.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">import</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Import validation artefacts and sample files to use with simulated exchanges.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase3.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase4.xml</span></code> <code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Log progress messages in the test session log.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">output</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Display user-friendly messages upon test completion for different step outcomes.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase3.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase4.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">scriptlet</span></a></p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">Scriptlet</span></a></p></td>
+<td><p>Share common validation logic across test cases.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Perform a HTTP GET to retrieve content or display a simulated exchange.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase3.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase4.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-simulatedmessaging"><span class="std std-ref">SimulatedMessaging</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Display a simulated exchange between specification actors.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase3.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase4.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-metadata-tags"><span class="std std-ref">tags</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Visually highlight the test cases using simulation.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase3.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase4.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Validate the retrieved content.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-xmlvalidator"><span class="std std-ref">XmlValidator</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Validate content using XML Schema and Schematron.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">validate.xml</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-4-setup-and-teardown-phases-with-fine-tuned-error-management">
+<span id="examples-example4"></span><span id="index-48"></span><span id="index-47"></span><span id="index-46"></span><span id="index-45"></span><span id="index-44"></span><span id="index-43"></span><span id="index-42"></span><span id="index-41"></span><h2>Example 4: Setup and teardown phases with fine-tuned error management<a class="headerlink" href="#example-4-setup-and-teardown-phases-with-fine-tuned-error-management" title="Link to this heading"></a></h2>
+<p>View <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/tree/master/testSuites/setupAndTeardownPhasesWithFineTunedErrorManagement">test suite on GitHub</a> or <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/raw/refs/heads/master/testSuites/setupAndTeardownPhasesWithFineTunedErrorManagement/testSuite.zip">download test suite archive</a>.</p>
+<p>This test suite illustrates the use of <strong>step groups</strong> and <strong>error management flags</strong> to split a test case into sections with different
+execution behaviours. The included test case splits its steps into setup, main and teardown phases, ensuring that setup and teardown
+steps always execute and never fail test sessions, whereas main steps fail eagerly. Besides managing step failures, <strong>group display features</strong>
+are used such as collapsing the display of setup and teardown steps, and hiding the group boundary for the main steps’ group.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;archive root&gt;
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept used</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Resource(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-simulatedmessaging"><span class="std std-ref">DisplayProcessor</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Display an arbitrary step report.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-group"><span class="std std-ref">group</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Group together visually and behaviourally test steps.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">output</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Display user-friendly messages upon test completion.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Make a processing step to display step reports simulating validations.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Perform a messaging call to display a simulated exchange.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-simulatedmessaging"><span class="std std-ref">SimulatedMessaging</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Display a simulated exchange between specification actors.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-stoponchilderror"><span class="std std-ref">stopOnChildError</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common"><span class="std std-ref">Common concepts</span></a></p></td>
+<td><p>Manage how step failures are managed within a specific group.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-level"><span class="std std-ref">warning level</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common"><span class="std std-ref">Common concepts</span></a></p></td>
+<td><p>Treat teardown step failures as warnings to ensure they never cause session failures.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-5-linking-test-cases-with-specification-references">
+<span id="examples-example5"></span><span id="index-58"></span><span id="index-57"></span><span id="index-56"></span><span id="index-55"></span><span id="index-54"></span><span id="index-53"></span><span id="index-52"></span><span id="index-51"></span><span id="index-50"></span><span id="index-49"></span><h2>Example 5: Linking test cases with specification references<a class="headerlink" href="#example-5-linking-test-cases-with-specification-references" title="Link to this heading"></a></h2>
+<p>View <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/tree/master/testSuites/linkingTestCasesWithSpecificationReferences">test suite on GitHub</a> or <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/raw/refs/heads/master/testSuites/linkingTestCasesWithSpecificationReferences/testSuite.zip">download test suite archive</a>.</p>
+<p>This test suite illustrates how test cases can be displayed with <strong>specification references</strong>, when it is important to have direct
+traceability between test cases and normative requirements. The included tests cover <strong>XML and JSON validation</strong> using <strong>built-in</strong> validators
+for XML and JSON content received via <strong>HTTP GET</strong> requests. The different syntaxes handled by each test case are
+further highlighted using <strong>tags</strong>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;archive root&gt;
+├── resources
+│   ├── PurchaseOrder.json
+│   └── PurchaseOrder.xsd
+├── testCases
+│   ├── testCase1.xml
+│   ├── testCase2.xml
+└── testSuite.xml
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept used</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Resource(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Prepare validator inputs.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-httpmessagingv2"><span class="std std-ref">HttpMessagingV2</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Carry out content retrieval using HTTP.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">import</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Import validation artefacts.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-jsonvalidator"><span class="std std-ref">JsonValidator</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Validate JSON content using JSON Schema.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Log progress messages in the test session log.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">output</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Display user-friendly messages upon test completion for different step outcomes.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Perform HTTP GETs to retrieve the content to validate.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-metadata-specification"><span class="std std-ref">specification</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Display specification links for each test case.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../testcase/index.html#test-case-metadata-tags"><span class="std std-ref">tags</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Visually highlight the syntax covered by each test case.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Validate the retrieved content.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">testCase2.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-xmlvalidator"><span class="std std-ref">XmlValidator</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Validate XML content using XML Schema.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-6-request-and-asynchronous-polling-for-status-update">
+<span id="examples-example6"></span><span id="index-75"></span><span id="index-74"></span><span id="index-73"></span><span id="index-72"></span><span id="index-71"></span><span id="index-70"></span><span id="index-69"></span><span id="index-68"></span><span id="index-67"></span><span id="index-66"></span><span id="index-65"></span><span id="index-64"></span><span id="index-63"></span><span id="index-62"></span><span id="index-61"></span><span id="index-60"></span><span id="index-59"></span><h2>Example 6: Request and asynchronous polling for status update<a class="headerlink" href="#example-6-request-and-asynchronous-polling-for-status-update" title="Link to this heading"></a></h2>
+<p>View <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/tree/master/testSuites/requestAndAsynchronousPollingForStatusUpdate">test suite on GitHub</a> or <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/raw/refs/heads/master/testSuites/requestAndAsynchronousPollingForStatusUpdate/testSuite.zip">download test suite archive</a>.</p>
+<p>This is a more complex scenario that considers sending a request and then using a <strong>polling approach</strong> to check for its
+processing status. It involves reusing steps via <strong>scriptlets</strong>, generating messages using <strong>templates</strong>, <strong>iterating</strong> to
+make poll attempts following <strong>delays</strong>, making <strong>conditional processing</strong>, and extracting values from XML content using
+<strong>XPath</strong> expressions.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;archive root&gt;
+├── resources
+│   ├── ackRequestTemplate.xml
+│   ├── ackResponseTemplate.xml
+│   ├── messageRequest.xml
+│   └── messageResponse.xml
+├── scriptlets
+│   └── createSimulatedStatusResponse.xml
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept used</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Resource(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Prepare step inputs, assign variables and check results.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">createSimulatedStatusResponse.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Call the scriptlet to carry out status request steps.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-hidesteps"><span class="std std-ref">hidden</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common"><span class="std std-ref">Common concepts</span></a></p></td>
+<td><p>Hide the user interaction popup from the displayed execution diagram.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">createSimulatedStatusResponse.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">import</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Import validation artefacts.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">createSimulatedStatusResponse.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Display popup to request the simulated status to return.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">createSimulatedStatusResponse.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Log progress messages in the test session log.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">createSimulatedStatusResponse.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">namespace</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Declare namespaces for XPath lookups.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">output</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Display user-friendly messages upon test completion.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Use templates and generate timestamps.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">createSimulatedStatusResponse.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">scriptlet</span></a></p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">Scriptlet</span></a></p></td>
+<td><p>Encapsulate the status request steps.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">createSimulatedStatusResponse.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Perform messaging request.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-simulatedmessaging"><span class="std std-ref">SimulatedMessaging</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Display a simulated exchange between specification actors.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-stoponerror"><span class="std std-ref">stopOnError</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common"><span class="std std-ref">Common concepts</span></a></p></td>
+<td><p>Immediately stop the test session if a step fails.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-templateprocessor"><span class="std std-ref">TemplateProcessor</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Use a template to generate messages based on parameters.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> <code class="docutils literal notranslate"><span class="pre">createSimulatedStatusResponse.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-tokengenerator"><span class="std std-ref">TokenGenerator</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Generate a timestamp for the polling responses.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">createSimulatedStatusResponse.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Validate the retrieved status value.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-while"><span class="std std-ref">while</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Iterate through the polling attempts until polling should complete.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-7-working-with-images">
+<span id="examples-example7"></span><span id="index-87"></span><span id="index-86"></span><span id="index-85"></span><span id="index-84"></span><span id="index-83"></span><span id="index-82"></span><span id="index-81"></span><span id="index-80"></span><span id="index-79"></span><span id="index-78"></span><span id="index-77"></span><span id="index-76"></span><h2>Example 7: Working with images<a class="headerlink" href="#example-7-working-with-images" title="Link to this heading"></a></h2>
+<p>View <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/tree/master/testSuites/workingWithImages">test suite on GitHub</a> or <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/raw/refs/heads/master/testSuites/workingWithImages/testSuite.zip">download test suite archive</a>.</p>
+<p>This is an example showing how to handle <strong>images</strong> in test cases, both ones that are retrieved from remote services and ones provided
+from the user. This example also includes several <strong>interactions</strong> (also for the display of images), validation, and determining of an
+uploaded image’s <strong>content type</strong> tolerating <strong>case differences</strong>, with a fallback to processing the image’s <strong>file name</strong> using a
+<strong>XPath if/else statement</strong>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;archive root&gt;
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept used</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Resource(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Prepare step inputs and conditionally set variables with values.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-collectionutils"><span class="std std-ref">CollectionUtils</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Lookup the QR code’s content type from the response headers.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-simulatedmessaging"><span class="std std-ref">DisplayProcessor</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Display a summary report.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-hidesteps"><span class="std std-ref">hidden</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common"><span class="std std-ref">Common concepts</span></a></p></td>
+<td><p>Hide the QR code request.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-httpmessagingv2"><span class="std std-ref">HttpMessagingV2</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Request the QR code via HTTP GET.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Display popups to present the QR code with instructions, and to request inputs.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Log information in the test session log.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">output</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Display user-friendly messages upon test completion.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Request the QR code to display.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-stoponerror"><span class="std std-ref">stopOnError</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common"><span class="std std-ref">Common concepts</span></a></p></td>
+<td><p>Immediately stop the test session if a step fails.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-stringvalidator"><span class="std std-ref">StringValidator</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Make text-based assertions.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Validate expected values.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-8-administrator-review-of-validation-warnings">
+<span id="examples-example8"></span><span id="index-98"></span><span id="index-97"></span><span id="index-96"></span><span id="index-95"></span><span id="index-94"></span><span id="index-93"></span><span id="index-92"></span><span id="index-91"></span><span id="index-90"></span><span id="index-89"></span><span id="index-88"></span><h2>Example 8: Administrator review of validation warnings<a class="headerlink" href="#example-8-administrator-review-of-validation-warnings" title="Link to this heading"></a></h2>
+<p>View <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/tree/master/testSuites/adminVerificationOfValidationWarnings">test suite on GitHub</a> or <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/raw/refs/heads/master/testSuites/adminVerificationOfValidationWarnings/testSuite.zip">download test suite archive</a>.</p>
+<p>This is an example that focuses on having an <strong>administrator</strong> review the status of a test session. In addition, this example involves
+<strong>interactions</strong>, validation of <strong>JSON content</strong> at <strong>warning level</strong>, and use of <strong>session status flags</strong>, in <strong>conditional logic</strong>
+and the final <strong>output</strong> messages.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;archive root&gt;
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept used</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Resource(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-admin-interactions"><span class="std std-ref">admin</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Administrator interaction.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-expressionvalidator"><span class="std std-ref">ExpressionValidator</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Check the review result as an expression.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Conditionally proceed with administrator review steps.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">import</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Import the validation artefact to use and samples to use when providing manual input.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Display popups to for the user and the administrator.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-jsonvalidator"><span class="std std-ref">JsonValidator</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Validate JSON content using JSON Schema.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">output</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Display user-friendly messages upon test completion.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions-step-status"><span class="std std-ref">STEP_STATUS</span></a></p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">Expressions</span></a></p></td>
+<td><p>Check the status of specific steps.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-stoponerror"><span class="std std-ref">stopOnError</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common"><span class="std std-ref">Common concepts</span></a></p></td>
+<td><p>Immediately stop the test session if a step fails.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions-test-success"><span class="std std-ref">TEST_SUCCESS</span></a></p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">Expressions</span></a></p></td>
+<td><p>Check the status of the overall test session.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Validate JSON document and administrator review result.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-9-using-simulation-for-demonstration-purposes">
+<span id="examples-example9"></span><span id="index-107"></span><span id="index-106"></span><span id="index-105"></span><span id="index-104"></span><span id="index-103"></span><span id="index-102"></span><span id="index-101"></span><span id="index-100"></span><span id="index-99"></span><h2>Example 9: Using simulation for demonstration purposes<a class="headerlink" href="#example-9-using-simulation-for-demonstration-purposes" title="Link to this heading"></a></h2>
+<p>View <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/tree/master/testSuites/simulationForDemo">test suite on GitHub</a> or <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/raw/refs/heads/master/testSuites/simulationForDemo/testSuite.zip">download test suite archive</a>.</p>
+<p>This is an example illustrating how test cases can also be used to <strong>demonstrate</strong> how a protocol is expected to work.
+It involves use of several <strong>simulated actors</strong> with exchanges using <strong>imported resources</strong> as inputs and outputs, as
+well as <strong>simulated processing steps</strong> to present results. An additional <strong>delay</strong> is also added between steps to simulate
+asynchronous processing.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;archive root&gt;
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concept used</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Purpose</p></th>
+<th class="head"><p>Resource(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../handlers/index.html#handlers-delayprocessor"><span class="std std-ref">DelayProcessor</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Force a delay between steps.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-simulatedmessaging"><span class="std std-ref">DisplayProcessor</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Display an arbitrary step report simulating a processing step.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-group"><span class="std std-ref">group</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Group together visually the demonstration’s steps.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-hidesteps"><span class="std std-ref">hidden</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common"><span class="std std-ref">Common concepts</span></a></p></td>
+<td><p>Force processing steps to be visible.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">import</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Import the samples to use in exchanges.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">output</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Display user-friendly messages upon test completion.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a></p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test step</span></a></p></td>
+<td><p>Simulate delays and processing tasks.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../handlers/index.html#handlers-simulatedmessaging"><span class="std std-ref">SimulatedMessaging</span></a></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handler</span></a></p></td>
+<td><p>Display a simulated exchange between specification actors.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">variables</span></a></p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test case section</span></a></p></td>
+<td><p>Define the delay between steps.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../handlers/index.html" class="btn btn-neutral float-left" title="Test step handlers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../changelog/index.html" class="btn btn-neutral float-right" title="Release history" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, European Commission, DIGIT.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

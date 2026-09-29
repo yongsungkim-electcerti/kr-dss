@@ -1,0 +1,101 @@
+European Interoperability Framework (EIF) | Interoperable Europe Portal
+Skip to main content
+IOPEU Monitoring
+Join this collection
+0 Solutions
+350 members
+Topics:
+Observatories
+Standardisation
+Bookmark
+Like (0)
+European Interoperability Framework (EIF)
+The
+European Interoperability Framework (EIF)
+, revised in
+2017
+, sets out principles and recommendations to guide public administrations in delivering interoperable digital services (a new revision is currently underway).
+It is composed by:
+Objectives:
+▪️  Support European public administrations in the design and delivery of seamless cross-border European public services.
+▪️  Provide support to Member States to design and update their national interoperability frameworks (NIFs), policies, etc.
+▪️  Contribute to the establishment of the digital single market by fostering cross-border and cross-sectoral interoperability.
+European Interoperability Framework in detail
+1. Introduction
+This first section provides an
+overview
+of the European Interoperability Framework, encompassing its
+purpose
+,
+legal framework
+and
+scope
+. Discover here how the EIF aims at enhancing interoperability of digital public services and at overcoming the challenges that could hinder progress towards the EU digital single market.
+Go to Section 1
+2. Underlying principles of European public services
+In this section, you will find the
+key interoperability principles
+that are essential to create interoperable European public services. Specifically, the EIF is built on 12 principles, organised into four categories, each connected to specific recommendations.
+Go to Section 2
+3. Interoperability layers
+This section highlights the importance of addressing interoperability across all its layers:
+legal
+,
+organisational
+,
+semantic
+and
+technical
+interoperability. These are all the aspects that should be considered when designing European public services.
+Go to Section 3
+4. The conceptual model for integrated public services provisions
+The conceptual model presented in Section 4 provides a
+common scheme
+for designing European public services or for improving existing ones. Read how it applies to all levels of government, from local to EU-wide and is closely aligned with the interoperability principles.
+Go to Section 4
+5. Conclusions
+Go through the conclusive remarks and tie together all the elements of the EIF.
+Go to Section 5
+Additional resources
+Do you want to learn more about the latest version of the EIF? Have a look at these resources:
+EIF full text
+EIF Brochure
+EIF leaflet
+Previous versions of the EIF
+To  know more about how the EIF evolved, consult the previous versions:
+EIF 2010
+Access
+here
+the full text of the second version of the EIF.
+EIF 2004
+Access
+here
+the full text of the first version of the EIF.
+Specialised versions of the EIF
+European Interoperability Framework for Smart Cities and Communities (EIFSCC)
+The
+European Interoperability Framework for Smart Cities and Communities
+(EIF4SCC) was designed to support local governments in developing interoperable digital services and aims to provide
+EU local administrations
+with
+definitions
+,
+principles
+,
+recommendations
+,
+practical use cases
+drawn from cities and communities from around Europe and beyond, and a
+common model to facilitate delivery of services
+to the public across domains, cities, regions and borders.
+More information and resources
+European Higher Education Interoperability Framework (HEIF)
+The
+European Higher Education Interoperability Framework
+(HEIF) addresses the need to develop seamless digital teaching and learning across Europe as part of the Digital Education Action Plan. This framework encompasses the full learning journey, reflecting a shared vision and a strong commitment from higher education and policy stakeholders to
+harmonise digital processes
+and
+support Europe-wide student mobility
+and virtual campuses between universities.
+More information and resources
+Report abusive content

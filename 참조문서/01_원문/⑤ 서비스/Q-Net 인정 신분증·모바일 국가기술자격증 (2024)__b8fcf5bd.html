@@ -1,0 +1,1381 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	// RN WebView 인지 체크
+	if(!window.ReactNativeWebView && !window.top.ReactNativeWebView){
+		location.href = "https://mo.q-net.or.kr/mobileqr.png";
+	}
+</script>
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko" dir="ltr">
+<head>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimal-ui"/>
+	<script type="text/javascript" src="/qnet/js/commonRcv.js"></script>
+	<title>인정신분증 | Q-Net</title>
+	<!-- 상단 include 영역 -->
+	
+
+<script type="text/javascript" src="/qnet_app/type/common/js/jquery-3.5.1.min.js"></script>
+
+<script src="/qnet_app/type/common/js/jquery.form.js"></script>
+<script src="/qnet_app/type/common/js/jquery.tmpl.js"></script>
+
+<!-- jqueryAlert -->
+<link rel="stylesheet" href="/qnet_app/type/common/js/jqueryalert.css"/>
+<script src="/qnet_app/type/common/js/jqueryalert.js"></script>  
+
+<!-- date-picker -->
+<script type="module" src="/qnet_app/type/common/js/date-picker/duet.js"></script>
+<script nomodule src="/qnet_app/type/common/js/date-picker/duet.esm.js"></script>
+
+<!-- swiper -->
+<link rel="stylesheet" href="/qnet_app/type/common/js/swiper/swiper.css"/> <!-- swiper -->
+<script src="/qnet_app/type/common/js/swiper/swiper.js"></script>  <!-- swiper -->
+
+<link rel="stylesheet" type="text/css" href="/qnet_app/type/common/css/common.css?v=1" /><!-- reset -->
+<link rel="stylesheet" type="text/css" href="/qnet_app/type/common/css/contentsA.css?v=2025010601" /><!-- 개별 -->
+<link rel="stylesheet" type="text/css" href="/qnet_app/type/common/css/contentsB.css" /><!-- 개별 -->
+<link rel="stylesheet" type="text/css" href="/qnet_app/type/common/css/contentsC.css?v=2024121801" /><!-- 개별 -->
+
+<link rel="stylesheet" type="text/css" href="/qnet_app/type/common/css/board.css?v=1" /><!-- board -->
+<link rel="stylesheet" type="text/css" href="/qnet_app/type/KOR_A/css/layout.css" /><!-- layout -->
+<!-- <link rel="stylesheet" type="text/css" href="/qnet_app/type/KOR_A/css/main.css" /> main -->
+<!-- <link rel="stylesheet" type="text/css" href="/qnet_app/type/common/css/common_and.css" /> --><!-- 안드로이드 -->
+
+
+
+<script type="text/javascript" src="/qnet_app/type/common/js/layout.js"></script><!-- 공통_layout -->
+<script type="text/javascript" src="/qnet_app/type/common/js/board.js"></script><!-- board -->
+<script type="text/javascript" src="/qnet_app/type/KOR_A/js/layout.js"></script><!-- 개별 layout -->
+
+<script type="text/javascript" src="/qnet_app/type/common/js/commonV2.js?v=3"></script><!-- 공통_layout -->
+<script type="text/javascript" src="/qnet_app/type/common/js/util.js"></script><!-- 공통_layout -->
+<script type="text/javascript" src="/qnet_app/type/common/js/jquery-ui.js?v=1" charset="euc-kr"></script>
+<script type="text/javascript" src="/qnet_app/type/common/js/comAjax.js?v=0.2672903914461512" charset="euc-kr"></script>
+<script type="text/javascript" src="/qnet_app/type/common/js/autoNumeric.js" charset="euc-kr"></script>
+<script type="text/javascript" src="/qnet/js/jquery.maskedinput.min.js" charset="euc-kr"></script>
+<script type="text/javascript" src="/qnet_app/type/common/js/common_w.js?v=2024112002"></script><!-- wallet common -->
+<script type="text/javascript" src="/qnet/js/netfunnel.js?v=44" charset="euc-kr"></script>
+
+<script type="text/javascript" src="/qnet_app/type/common/js/webViewBridge.js"></script><!-- 공통_webview -->
+<script>
+	var gnbDep1 = 3;
+	var gnbDep2 = 1;
+	var gnbDep3 = 0;
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#lnkRcvInfo").click(function() {
+			NetFunnel_Action({},'/rcv001.do?id=rcv00103&gSite=Q&gId=&rcvPFlag=Y&gTitle=');
+		});
+		$("#btnNext").click(function() {
+
+			NetFunnel_Action ({},"/rcv002.do?id=rcv00201&gSite=Q&gId=&rcvPFlag=Y&gTitle=&fromUrl=info");
+
+		});
+		$("#btnKtitq").click(function() {
+			popup3('http://t.q-net.or.kr/'); // goKoreaTestingInstitute
+		});
+		
+		
+		$("#lnkLicenseInfo").click(function() {
+			NetFunnel_Action({},'/rcv002.do?id=rcv002_licenseInfo&gSite=Q&gId=&rcvPFlag=Y&gTitle=');
+			return false;
+		});
+		$("#baseInfo").click(function() {
+			NetFunnel_Action({},'/rcv002.do?id=rcv002_baseInfo&gSite=Q&gId=&rcvPFlag=Y&gTitle=');
+			return false;
+		});
+		$("#identi").click(function() {
+			NetFunnel_Action({},'/rcv002.do?id=rcv002_identi&gSite=Q&gId=&rcvPFlag=Y&gTitle=');
+			return false;
+		});
+		$("#calculator").click(function() {
+			NetFunnel_Action({},'/rcv002.do?id=rcv002_calculator&gSite=Q&gId=&rcvPFlag=Y&gTitle=');
+			return false;
+		});
+		
+		
+	});
+
+
+
+</script>
+<body class="typeSub"><!-- 메인:typeMain / 서브:typeSub -->
+	<div id="dim"></div>
+	
+<script>
+function qrScan(){
+	wvb.call.qrScanner(null, function(res){
+		var strUrl = res.data;
+		doQrAction(strUrl);
+	},function(res){
+		//console.log("fail");
+	});
+}
+/**
+ * 
+ */
+function doQrAction(url){
+	if(url.includes("didLogin")){
+		doDidLogin(url);
+	}else{
+		getVerify(strUrl);
+	}
+}
+
+function doDidLogin(url){
+	var parm = url.split("?");
+	var targetUrl = parm[0];
+	var parms = parm[1];
+	
+	const urlParam = new URLSearchParams(parms);
+	const ent      = Array.from(urlParam.entries());
+	const jsonData     = Object.fromEntries(ent);
+	
+	var parmData = { "type" 	 : "post", 
+      		    "async" 	 : true,	 
+		  	    "pattern"	     : jsonData.pattern
+		  	};
+	
+    dataJS.ajaxData(url, parmData, function(data, parm){
+    	result = data.isLogin;
+		if(!result){
+			$.alert("로그인이 필요한 서비스 입니다.",{
+						callEvent: function(){						
+							//로그인페이지로 이동
+							location.href='/man003.do?id=man0030101'+'&refId=&gbn=';
+						}});
+		}else{			
+    		$.alert("로그인 되었습니다.\n웹화면에서 확인하시기 바랍니다.");
+		}
+    	
+    });
+}
+function getVerify(url){
+	var parm = url.split("?");
+	var targetUrl = parm[0];
+	var parms = parm[1];
+	
+	const urlParam = new URLSearchParams(parms);
+	const ent      = Array.from(urlParam.entries());
+	const jsonData     = Object.fromEntries(ent);
+	
+	var parmData = { "type" 	 : "post", 
+      		    "async" 	 : true,	 
+		  	    "id"	     : jsonData.id,
+		  	    "cred_id"    : jsonData.credId
+ 			};
+	
+    dataJS.ajaxData(url, parmData, function(data, parm){
+    	result = !data.revoked;
+    	var msg = result ? "정상자격증입니다." : "검증되지않은 자격증입니다.";
+    	$.alert("[자격증진위확인결과]\n"+msg);
+    });
+}
+</script>
+
+<!-- header  -->
+<div id="header">
+	<header>
+		<button type="button" class="btn_back" onclick="window.history.back();">
+			<span class="txtHidden">뒤로가기</span>
+		</button>
+        <div id="gnb_dim"></div> <!-- dim -->
+
+        <div class="header_util">
+            <!-- D : 본 주석은 개발자를 위한 주석으로 개발 참고 후 삭제 바랍니다.
+                
+                알림 있을 시 btn_alrem 내 on 클래스 추가
+            -->
+            <button type="button" class="btn_scan" onclick="javascript:qrScan();">
+                <span class="txtHidden">스캔</span>
+            </button>
+            <button type="button" class="btn_alrem" onclick="location.href='/man001.do?id=man00113'">
+                <span class="txtHidden">알림</span>
+            </button>
+            <a href="/man001.do?id=man00114" target="_self" class="btn_setting">
+                <span class="txtHidden">설정</span>
+            </a>
+        </div>
+
+        
+
+
+
+<script>	
+function goWallet(){
+	if("false" == "false"){
+		var param = {};
+	   	 	param["action"]  = "POST";
+	   		param["id"]      = "wll20101";
+	   		param["call_id"] = "appMain";
+	   		param["call_gb"] = "S";
+		dataJS.formSubmit("/wll201.do", param);
+	}else{
+		var param = {};
+	   	 	param["action"]  = "POST";
+	   		param["id"]      = "wll10102";
+	   		param["topic"]  = "check";
+		dataJS.formSubmit("/wll101.do", param);
+	}
+}
+
+function stopAlert(){
+	$.alert("원활한 원서접수 서비스 제공을 위해 접수 첫날 시스템 부하를 최소화하고자 모바일 자격증 발급 서비스를 일시 중단합니다.\n모바일 발급 기능은 오늘 18시 이후부터 정상적으로 이용이 가능하오니 양해 부탁드립니다.\n\n - 발급 가능 일시: 오늘 2026.6.22. 18:00부터\n - 대상 서비스 : 모바일 자격증 신청 및 발급",{
+		callEvent:function(){
+			document.location.href = "/index.do?id=appMain";
+		}
+	});
+}
+</script>
+<!-- gnb nav  -->
+
+<!-- 
+	D : 본 주석은 개발자를 위한 주석으로 개발 참고 후 삭제 바랍니다.
+	초기 HTML 셋팅 시 nav 내 aria-hidden 속성 추가 필요
+-->
+<nav aria-hidden="true">
+	<div class="gnbWrap">
+		<div class="gnb_top">
+		    <p class="gnb_tit">전체메뉴</p>
+		</div>
+	
+		<!-- D : 본 주석은 개발자를 위한 주석으로 개발 참고 후 삭제 바랍니다.
+	        * GNB 가이드
+	        - 하위 메뉴가 있을때만 li에 class="child" 추가
+	        - 현재 페이지 내에 on 클래스 추가 필요
+		-->
+	    <ul id="gnb">
+	        <!--   -->
+	        <li class="child"><a href="/ctf001.do?gSite=Q&gId=&">자격증</a>
+	            <ul class="menuM">
+	                <li><a href="/ctf001.do?gSite=Q&gId=&">종목 검색</a></li>
+	                <li class="child">
+	                	<a href="/ctf002.do?id=ctf00201&gSite=Q&gId=&htmlPageId=001">자격증발급안내</a>
+	                    <ul class="menuS">
+	                        <li><a href="/ctf002.do?id=ctf00201&gSite=Q&gId=&htmlPageId=001">국가기술자격증 발급 </a></li>
+	                        <li><a href="/ctf002.do?id=ctf00201&gSite=Q&gId=&htmlPageId=002">인정발급</a></li>
+	                        <li><a href="/ctf002.do?id=ctf00201&gSite=Q&gId=&htmlPageId=003">자격증 발급문의</a></li>
+	                        <li><a href="/ctf002.do?id=ctf00201&gSite=Q&gId=&htmlPageId=004">기능사보 자격부여</a></li>
+	                    </ul>
+	                </li>
+	                
+	                
+					<li class="child">
+	                	<a href="#none">자격증 발급 신청</a>
+	                	<ul class="menuS">
+	                        <li><a href="/ctf003.do?id=ctf00301&gSite=Q&gId=">수첩형 자격증 발급 </a></li>
+	                        
+	                    	<li><a href="/wll901.do?id=wll90101&gSite=Q&gId=&statCd=M">모바일형 자격증 발급</a></li>
+	                    	
+	                    </ul>
+	                </li>
+	                <li><a href="/iss002.do?id=iss00201&gSite=Q&gId=">확인서 발급 신청</a></li>
+	                
+	                <li><a href="/cst006.do?id=cst00601&code=1204&gSite=Q&gId=">공개문제</a></li>
+	                <li><a href="/ctf002.do?id=ctf00202&gSite=Q&gId=">국가기술자격 연계서비스 안내</a></li>
+	            </ul>
+	        </li>
+	
+	        <li class="child"><a href="#none">시험안내</a>
+	            <ul class="menuM">
+	                <li><a href="/sch001.do?id=sch00105&gSite=Q&gId=">일정안내</a></li>
+	                <li><a href="/rcv001.do?id=rcv00104&gSite=Q&gId=">필기시험안내</a></li>
+	                <li class="child"><a href="/rcv013.do?id=rcv01303&gSite=Q&gId=">실기시험안내</a>
+	                    <ul class="menuS">
+	                        <li><a href="/rcv013.do?id=rcv01303&gSite=Q&gId=">접수안내</a></li>
+	                        <li><a href="/rcv013.do?id=rcv01315&gSite=Q&gId=">일정 변경기준</a></li>
+	                        <li><a href="/rcv013.do?id=rcv01316&gSite=Q&gId=">타지사 이동사유</a></li>
+	                        <li><a href="/rcv013.do?id=rcv01304&gSite=Q&gId=">선택분야</a></li>
+	                    </ul>
+	                </li>
+	                <li><a href="/rcv013.do?id=rcv01312&gSite=Q&gId=">수험자 지참준비물</a></li>
+	                <li><a href="/crf006.do?id=crf00603&gSite=Q&gId=">응시자격안내</a></li>
+	            </ul>
+	        </li>
+	
+	        <li class="child"><a href="/rcv001.do?id=rcv00103&gSite=Q&gId=">원서접수</a>
+	            <ul class="menuM">
+	                <li class="child"><a href="#none">원서접수안내</a>
+	                    <ul class="menuS">
+	                        <li><a href="/rcv001.do?id=rcv00103&gSite=Q&gId=">원서접수안내</a></li>
+	                        <li><a href="/rcv002.do?id=rcv002_licenseInfo&gSite=Q&gId=">접수시 유의사항</a></li>
+	                        <li><a href="/rcv002.do?id=rcv002_baseInfo&gSite=Q&gId=&rcvPFlag=Y&gTitle=">기본 안내사항</a></li>
+	                        <li><a href="/rcv002.do?id=rcv002_identi&gSite=Q&gId=&rcvPFlag=Y&gTitle=">신분증 인정범위</a></li>
+	                        <li><a href="/rcv002.do?id=rcv002_calculator&gSite=Q&gId=&rcvPFlag=Y&gTitle=">공학용계산기</a></li>
+	                    </ul>
+	                </li>
+	                <li><a href="/myp011.do?id=myp01101&gSite=Q&gId=">응시자격자가진단</a></li>
+	                <li><a href="/rcv202.do?id=rcv20210&gSite=Q&gId=">국가기술자격 원서접수</a></li>
+	                <!-- 전문자격 추가 - HHS 2025.10.15 -->
+	                <li><a href="/rcv202.do?id=rcv20215&gSite=Q&gId=08">공인중개사 원서접수 </a></li>
+	                <li><a href="/rcv202.do?id=rcv20214&gSite=Q&gId=">전문자격 원서접수</a></li>
+	                <li class="child"><a href="/myp002.do?id=myp00201&gSite=Q&gId=">원서접수내역</a>
+	                    <ul class="menuS">
+	                        <li><a href="/myp002.do?id=myp00201&gSite=Q&gId=">진행중인접수</a></li>
+							<li><a href="/myp002.do?id=myp00205&gSite=Q&gId=">지난 접수 </a></li>
+							<li><a href="/myp002.do?id=myp00207&gSite=Q&gId=">취소/환불 내역</a></li>
+	                    </ul>
+	                </li>
+	                <li><a href="/rcv003.do?id=rcv00301&gSite=Q&gId=">원서접수현황</a></li>
+	            </ul>
+	        </li>
+	        <li class="child"><a href="/myp003.do?id=myp00301&gSite=Q&gId=">합격자 발표</a>
+	        	<ul class="menuM">
+	                <li><a href="/myp003.do?id=myp00301&gSite=Q&gId=">합격자 발표</a></li>
+	            </ul>
+	        </li>
+	        <li class="child"><a href="#none">공지사항</a>
+	            <ul class="menuM">
+	                <li><a href="/man004.do?id=man00401&notiType=10&gSite=Q&gId=">공지사항</a></li>
+	                <li><a href="/man004.do?id=man00401&gSite=Q&gId=&notiType=60">시행계획공지(상시 필기)</a></li>
+	                <li><a href="/man004.do?id=man00401&gSite=Q&gId=&notiType=65">시행계획공지(상시 실기)</a></li>
+	                <li><a href="/cst014.do?id=cst01401&gSite=Q&gId=">부정신고센터</a></li>
+	            </ul>
+	        </li>
+	        <li class="child"><a href="#none">이용안내</a>
+	            <ul class="menuM">
+	                <li class="child"><a href="#none">이용안내</a>
+	                    <ul class="menuS">
+	                        <li><a href="/cst002.do?id=cst00201&gSite=Q&gId=">이용안내</a></li>
+	                        <li><a href="#none" onclick="fn_linkUtil('Y','Y','confirm','해당 기능은 산업인력공단 홈페이지에서만 제공하고 있습니다.\n페이지로 이동하시겠습니까?','http://www.hrdkorea.or.kr/2/2/3/2')" title="새창열림">자주하는 질문</a></li>
+	                        <!-- <li><a href="http://www.hrdkorea.or.kr/2/2/2/1" target="_blank">자주하는 질문</a></li> -->
+	                    </ul>
+	                </li>
+	                <li><a href="#none" onclick="fn_linkUtil('Y','Y','confirm','해당 기능은 큐넷 홈페이지에서만 제공하고 있습니다.\n페이지로 이동하시겠습니까?','http://www.q-net.or.kr/man001.do?id=infoprotection&gSite=Q&gId=')" title="새창열림">개인정보처리방침</a></li>
+	                <!-- <li><a href="http://www.q-net.or.kr/man001.do?id=infoprotection&gSite=Q&gId=">개인정보처리방침</a></li> -->
+	                <li><a href="#none" onclick="fn_linkUtil('Y','Y','confirm','해당 기능은 큐넷 홈페이지에서만 제공하고 있습니다.\n페이지로 이동하시겠습니까?','http://www.q-net.or.kr/man001.do?id=agreement&gSite=Q&gId=')" title="새창열림">이용약관</a></li>
+	                <!-- <li><a href="http://www.q-net.or.kr/man001.do?id=agreement&gSite=Q&gId=">이용약관</a></li> -->
+	            </ul>
+	        </li>
+	
+	        <li class="child"><a href="#none">마이페이지</a>
+	            <ul class="menuM">
+	                <li class="child"><a href="/myp002.do?id=myp00201">접수/응시/면제정보</a>
+	                    <ul class="menuS">
+	                        <li><a href="/myp002.do?id=myp00201">원서접수내역</a></li>
+	                        <li><a href="/myp011.do?id=myp01101&gSite=Q&gId=">응시자격자가진단</a></li>
+	                        <li><a href="/myp011.do?id=myp01106&gSite=Q&gId=">응시 가능한 종목 보기</a></li>
+	                        <li><a href="/myp006.do?id=myp00601">응시자격 서류제출 확인</a></li>
+	                        <li><a href="/myp007.do?id=myp00703">면제 정보 보기</a></li>
+	                        <!-- <li><a href="/myp027.do?id=myp02701">필기시험 면제기간 검색</a></li> -->
+	                        
+	                        <!-- <li><a href="/myp026.do?id=myp02601">사후환불 신청</a></li> -->
+	                        <!-- <li><a href="/myp024.do?id=myp02402">코로나19관련 중단시험 접수자 대상 환불 신청</a></li> -->
+	                    </ul>
+	                </li>
+	                <li class="child"><a href="/qlf002.do?id=qlf00202">자격증/확인서</a>
+	                    <ul class="menuS">
+	                        <li><a href="/qlf002.do?id=qlf00202">자격증 취득조회</a></li>
+	                        
+	                        
+	                        <li><a href="/iss002.do?id=iss00201&gSite=Q&gId=">확인서 발급신청내역</a></li>
+	                        
+	                    </ul>
+	                </li>
+	                
+	                
+	                
+	                <li>
+	                
+	                 	<a href="/man001.do?id=man00103">전자지갑</a>
+	                
+	                </li>
+	                
+	                <li class="child"><a href="/myp001.do?id=myp00106&gSite=Q&gId=">개인정보관리</a>
+	                    <ul class="menuS">
+							<li><a href="/myp001.do?id=myp00106&gSite=Q&gId=">개인정보수정</a></li>
+	                        <li><a href="/myp011.do?id=myp01108&gSite=Q&gId=">학력/경력/수상경력 수정</a></li>
+	                        <li><a href="/myp001.do?id=myp00104&gSite=Q&gId=">회원탈퇴</a></li>
+	                    </ul>
+	                </li>
+	                <li><a href="/myp004.do?id=myp00401&gSite=Q&gId=">원서접수 사진변경신청</a></li>
+	                <li><a href="/myp022.do?id=myp02201&gSite=Q&gId=">관심 자격 등록·수정	</a></li>
+	                <li><a href="/man006.do?id=man00606&gSite=Q&gId=">금융인증서 등록</a></li>
+	                <li><a href="/myp001.do?id=myp00107&gSite=Q&gId=">다른인증수단 등록</a></li>
+	            </ul>
+	        </li>
+	
+	        <!-- 숨김메뉴 -->
+	        <li class="hidden" style="display:none;">
+	            <a href="#none">GNB 미노출 메뉴 </a>
+	            <ul class="menuM">
+	                <li><a href="/man003.do?id=man00301&gSite=&gId=">회원가입</a></li>
+	                <li><a href="/man003.do?id=man0030101&gSite=QgId=">실명인증</a></li>
+	                <li><a href="/man002.do?id=man00201&gSite=Q&gId=">아이디 찾기</a></li>
+					<li><a href="/man002.do?id=man00208&gSite=Q&gId=">비밀번호 재설정</a></li>
+	                <li><a href="/man001.do?id=man00103&gSite=Q&gId=&login=Y">로그인</a></li>
+	                <li><a href="#none">설정</a></li>
+	            </ul>
+	        </li>
+	        <!-- //숨김메뉴 -->
+	    </ul>
+	    
+	    <div class="g_footer">
+			<div class="f_top">
+				<button type="button" class="familySite_btn" style="background-color: #079EF1;border: none;" data-popid="sitelist_pop"><span style="color: #fff;">관련사이트</span></button>
+				<a href="tel:1644-8000" class="consel_btn" style="background: #003883;border: none;"><span style="color: #fff;line-height:normal;">고객센터 (전화상담, 유료)</span></a>
+			</div>
+			<div class="f_link">
+				<ul class="f_menu">
+					<li class="point"><a href="#none" onclick="fn_linkUtil('Y','Y','confirm','해당 기능은 큐넷 홈페이지에서만 제공하고 있습니다.\n페이지로 이동하시겠습니까?','http://www.q-net.or.kr/man001.do?id=infoprotection&gSite=Q&gId=')" title="새창열림">개인정보처리방침</a></li>
+					<li><a href="#none" onclick="fn_linkUtil('Y','Y','confirm','해당 기능은 큐넷 홈페이지에서만 제공하고 있습니다.\n페이지로 이동하시겠습니까?','http://www.q-net.or.kr/man001.do?id=agreement&gSite=Q&gId=')" title="새창열림">이용약관</a></li>
+					<li><a href="#none" onclick="fn_linkUtil('Y','Y','confirm','해당 기능은 산업인력공단 홈페이지에서만 제공하고 있습니다.\n페이지로 이동하시겠습니까?','http://www.hrdkorea.or.kr/4/1/4')" title="새창열림">찾아오시는길</a></li>
+				</ul>
+			</div>
+			<address>
+				<p>
+					<b>
+						44538 울산광역시 중구 종가로 345 한국산업인력공단 <br>
+						고객지원 1644-8000 (운영시간 09:00 ~ 18:00, 유료)
+					</b>
+					<span>ⓒ 2023 Human Resources Development Service of Korea. <br>All Rights Reserved.  </span>
+				</p>
+			</address>
+	
+			<div class="f_logo">
+				<a onclick="fn_linkUtil('Y','N','confirm','','http://c.q-net.or.kr')" title="새창열림">
+					<img src="/qnet_app/type/common/img/common/logo_gnb.png" alt="cq-net" class="cq-net">
+				</a>
+				<!-- <a href="#none" target="_blank" title="새창열림">
+					<img src="/qnet_app/type/common/img/common/logo2_gnb.png" alt="웹접근성 마크" class="accessibility">
+				</a> -->
+				
+			</div>
+		</div>	
+	
+	    <button type="button" class="btn_close"><span class="txtHidden">닫기</span></button>
+    
+    </div>
+</nav>
+<!-- //header -->
+<script type="text/JavaScript">
+$(document).ready(function(){
+	if(isApp()){	
+
+
+	}
+});
+</script>
+
+	</header>
+</div>
+<!-- //header -->
+
+	<div id="container">
+
+		<div id="contents">
+			<!-- snb -->
+			
+
+
+
+<div class="snbArea">
+	<div class="snbInnerArea">
+		<nav id="snb_nav">
+			<div class="snb_area">
+				<!--<button class="dep1">1뎁스 메뉴명</button>
+				<button class="dep2">2뎁스 메뉴명</button>
+				<button class="dep3">3뎁스 메뉴명</button>-->
+
+				<ul id="snb">
+					<!--   -->
+					<li class="child"><a href="/ctf001.do?gSite=Q&gId=&">자격증</a>
+						<ul class="menuM">
+							<li><a href="/ctf001.do?gSite=Q&gId=&">종목 검색</a></li>
+							<li class="child"><a href="/ctf002.do?id=ctf00201&gSite=Q&gId=&htmlPageId=001">자격증발급안내</a>
+								<ul class="menuS">
+									<li><a href="/ctf002.do?id=ctf00201&gSite=Q&gId=&htmlPageId=001">국가기술자격증 발급 </a></li>
+									<li><a href="/ctf002.do?id=ctf00201&gSite=Q&gId=&htmlPageId=002">인정발급</a></li>
+									<li><a href="/ctf002.do?id=ctf00201&gSite=Q&gId=&htmlPageId=003">자격증 발급문의</a></li>
+									<li><a href="/ctf002.do?id=ctf00201&gSite=Q&gId=&htmlPageId=004">기능사보 자격부여</a></li>
+								</ul>
+							</li>
+							
+							
+							<li><a href="/ctf003.do?id=ctf00301&gSite=Q&gId=">수첩형 자격증 발급 신청</a></li>
+							
+							<li><a href="/wll901.do?id=wll90101&gSite=Q&gId=">모바일형 자격증 발급 신청</a></li>
+							
+							<li><a href="/iss002.do?id=iss00201&gSite=Q&gId=">확인서 발급 신청</a></li>
+							
+							<li><a href="/cst006.do?id=cst00601&code=1204&gSite=Q&gId=">공개문제</a></li>
+							<li><a href="/ctf002.do?id=ctf00202&gSite=Q&gId=">국가기술자격 연계서비스 안내</a></li>
+						</ul>
+					</li> 
+		
+					<li class="child"><a href="/sch001.do?id=sch00101&gSite=Q&gId=">시험안내</a>
+						<ul class="menuM">
+							<li><a href="/sch001.do?id=sch00101&gSite=Q&gId=">일정안내</a></li>
+							<li><a href="/rcv001.do?id=rcv00104&gSite=Q&gId=">필기시험안내</a></li>
+							<li class="child"><a href="/rcv013.do?id=rcv01303&gSite=Q&gId=">실기시험안내</a>
+								<ul class="menuS">
+									<li><a href="/rcv013.do?id=rcv01303&gSite=Q&gId=">접수안내</a></li>
+									<li><a href="/rcv013.do?id=rcv01315&gSite=Q&gId=">일정 변경기준</a></li>
+									<li><a href="/rcv013.do?id=rcv01316&gSite=Q&gId=">타지사 이동사유</a></li>
+									<li><a href="/rcv013.do?id=rcv01304&gSite=Q&gId=">선택분야</a></li>
+								</ul>
+							</li>
+							<li><a href="/rcv013.do?id=rcv01312&gSite=Q&gId=">수험자 지참준비물</a></li>
+							<li><a href="/crf006.do?id=crf00603&gSite=Q&gId=">응시자격안내</a></li>
+						</ul>
+					</li>
+		
+					<li class="child"><a href="/rcv001.do?id=rcv00103&gSite=Q&gId=">원서접수</a>
+						<ul class="menuM">
+							<li class="child"><a href="/rcv001.do?id=rcv00103&gSite=Q&gId=">원서접수안내</a>
+								<ul class="menuS">
+									<li><a href="/rcv002.do?id=rcv002_licenseInfo&gSite=Q&gId=">접수시 유의사항</a></li>
+									<li><a href="/rcv002.do?id=rcv002_baseInfo&gSite=Q&gId=&rcvPFlag=Y&gTitle=">기본 안내사항</a></li>
+									<li><a href="/rcv002.do?id=rcv002_identi&gSite=Q&gId=&rcvPFlag=Y&gTitle=">신분증 인정범위</a></li>
+									<li><a href="/rcv002.do?id=rcv002_calculator&gSite=Q&gId=&rcvPFlag=Y&gTitle=">공학용계산기</a></li>
+								</ul>
+							</li>
+							<li><a href="/myp011.do?id=myp01101&gSite=Q&gId=">응시자격자가진단</a></li>
+							<li><a href="/rcv202.do?id=rcv20210&gSite=Q&gId=">국가기술자격 원서접수</a></li>
+							<li><a href="/rcv202.do?id=rcv20215&gSite=Q&gId=08">공인중개사 원서접수 </a></li>
+							<!-- 전문자격 추가 - HHS 2025.07.04 -->
+							<li><a href="/rcv202.do?id=rcv20214&gSite=Q&gId=">전문자격 원서접수 </a></li>
+							<li class="child"><a href="/myp002.do?id=myp00201&gSite=Q&gId=">원서접수내역</a>
+								<ul class="menuS">
+									<li><a href="/myp002.do?id=myp00201&gSite=Q&gId=">진행중인접수</a></li>
+									<li><a href="/myp002.do?id=myp00205&gSite=Q&gId=">지난 접수 </a></li>
+									<li><a href="/myp002.do?id=myp00207&gSite=Q&gId=">취소/환불 내역</a></li>
+								</ul>
+							</li>
+							<li><a href="/rcv003.do?id=rcv00301&gSite=Q&gId=">원서접수현황</a></li>
+						</ul>
+					</li>
+					<li class="child"><a href="/myp003.do?id=myp00301&gSite=Q&gId=">합격자 발표</a>
+						<ul class="menuM">
+							<li><a href="/myp003.do?id=myp00301&gSite=Q&gId=">합격자 발표</a></li>
+						</ul>
+					</li>
+					<li class="child"><a href="/man004.do?id=man00401&notiType=10&gSite=Q&gId=">공지사항</a>
+						<ul class="menuM">
+							<li><a href="/man004.do?id=man00401&notiType=10&gSite=Q&gId=">공지사항</a></li>
+							<li><a href="/man004.do?id=man00401&gSite=Q&gId=&notiType=60">시행계획공지(상시 필기)</a></li>
+							<li><a href="/man004.do?id=man00401&gSite=Q&gId=&notiType=65">시행계획공지(상시 실기)</a></li>
+							<li><a href="/cst014.do?id=cst01401&gSite=Q&gId=">부정신고센터</a></li>
+						</ul>
+					</li>
+					<li class="child"><a href="#none">이용안내</a>
+			            <ul class="menuM">
+			                <li class="child"><a href="#none">이용안내</a>
+			                    <ul class="menuS">
+			                        <li><a href="/cst002.do?id=cst00201&gSite=Q&gId=">이용안내</a></li>
+			                        <li><a href="#none" onclick="fn_linkUtil('N','Y','confirm','해당 기능은 산업인력공단 홈페이지에서만 제공하고 있습니다.\n페이지로 이동하시겠습니까?','http://www.hrdkorea.or.kr/2/2/2/1')" title="새창열림">자주하는 질문</a></li>
+			                        <!-- <li><a href="http://www.hrdkorea.or.kr/2/2/2/1" target="_blank">자주하는 질문</a></li> -->
+			                    </ul>
+			                </li>
+			                <li><a href="#none" onclick="fn_linkUtil('Y','Y','confirm','해당 기능은 큐넷 홈페이지에서만 제공하고 있습니다.\n페이지로 이동하시겠습니까?','http://www.q-net.or.kr/man001.do?id=infoprotection&gSite=Q&gId=')" title="새창열림">개인정보처리방침</a></li>
+			                <!-- <li><a href="http://www.q-net.or.kr/man001.do?id=infoprotection&gSite=Q&gId=">개인정보처리방침</a></li> -->
+			                <li><a href="#none" onclick="fn_linkUtil('Y','Y','confirm','해당 기능은 큐넷 홈페이지에서만 제공하고 있습니다.\n페이지로 이동하시겠습니까?','http://www.q-net.or.kr/man001.do?id=agreement&gSite=Q&gId=')" title="새창열림">이용약관</a></li>
+			                <!-- <li><a href="http://www.q-net.or.kr/man001.do?id=agreement&gSite=Q&gId=">이용약관</a></li> -->
+			            </ul>
+			        </li>
+			        
+					<li class="child"><a href="/myp002.do?id=myp00201">마이페이지</a>
+						<ul class="menuM">
+							<li class="child"><a href="/myp002.do?id=myp00201">접수/응시/면제정보</a>
+								<ul class="menuS">
+									<li><a href="/myp002.do?id=myp00201">원서접수내역</a></li>
+									<li><a href="/myp011.do?id=myp01101&gSite=Q&gId=">응시자격자가진단</a></li>
+									<li><a href="/myp011.do?id=myp01106&gSite=Q&gId=">응시 가능한 종목 보기</a></li>
+									<li><a href="/myp006.do?id=myp00601">응시자격 서류제출 확인</a></li>
+									<li><a href="/myp007.do?id=myp00703">면제 정보 보기</a></li>
+									<!-- <li><a href="/myp027.do?id=myp02701">필기시험 면제기간 검색</a></li> -->
+									
+									<!-- <li><a href="/myp026.do?id=myp02601">사후환불 신청</a></li> -->
+									<!-- <li><a href="/myp024.do?id=myp02402">코로나19관련 중단시험 접수자 대상 환불 신청</a></li> -->
+								</ul>
+							</li>
+							<li class="child"><a href="/qlf002.do?id=qlf00202">자격증/확인서</a>
+								<ul class="menuS">
+									<li><a href="/qlf002.do?id=qlf00202">자격증 취득조회</a></li>
+									
+									
+									<li><a href="/iss002.do?id=iss00201&gSite=Q&gId=">확인서 발급신청내역</a></li>
+									
+								</ul>
+							</li>
+							
+							
+							<li class="child"><a href="/wll101.do?id=wll10101">전자지갑</a></li>
+							
+							<li class="child"><a href="/myp001.do?id=myp00106&gSite=Q&gId=">개인정보관리</a>
+								<ul class="menuS">
+									<li><a href="/myp001.do?id=myp00106&gSite=Q&gId=">개인정보수정</a></li>
+									<li><a href="/myp011.do?id=myp01108&gSite=Q&gId=">학력/경력/수상경력 수정</a></li>
+									<li><a href="/myp001.do?id=myp00104&gSite=Q&gId=">회원탈퇴</a></li>
+									<li><a href="/myp001.do?id=myp00107&gSite=Q&gId=">다른인증수단</a></li>
+								</ul>
+							</li>
+							<li><a href="/myp004.do?id=myp00401&gSite=Q&gId=">원서접수 사진변경신청</a></li>
+							<li><a href="/myp022.do?id=myp02201&gSite=Q&gId=">관심 자격 등록·수정	</a></li>
+							<li><a href="/man006.do?id=man00606&gSite=Q&gId=">금융인증서 등록</a></li>
+						</ul>
+					</li>
+	
+					<!-- 숨김메뉴 -->
+					<li class="hidden" style="display:none;">
+						<a href="#none">GNB 미노출 메뉴 </a>
+						<ul class="menuM">
+							<li><a href="/man003.do?id=man00301&gSite=QgId=">회원가입</a></li>
+							<li><a href="/man003.do?id=man0030101&gSite=QgId=">실명인증</a></li>
+							<li><a href="/man002.do?id=man00201&gSite=Q&gId=">아이디 찾기</a></li>
+							<li><a href="/man002.do?id=man00208&gSite=Q&gId=">비밀번호 재설정</a></li>
+							<li><a href="/man001.do?id=man00103&gSite=QgId=">로그인</a></li>
+							<li><a href="#none">설정</a></li>
+						</ul>
+					</li>
+					<!-- //숨김메뉴 -->
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+
+
+
+
+			<!-- //snb -->
+			<!-- Tab -->
+			<div class="contTabArea">
+				<div id="contTab_line" data-id="scrollTab">
+					<ul class="tabList">
+						<li><a href="/rcv001.do?id=rcv00103&gSite=Q&gId=">원서접수안내</a></li>
+						<li><a href="/rcv002.do?id=rcv002_licenseInfo&gSite=Q&gId=">접수시
+								유의사항</a></li>
+						<li><a
+							href="/rcv002.do?id=rcv002_baseInfo&gSite=Q&gId=&rcvPFlag=Y&gTitle=">기본
+								안내사항</a></li>
+						<li class="on"><a
+							href="/rcv002.do?id=rcv002_identi&gSite=Q&gId=&rcvPFlag=Y&gTitle=">신분증
+								인정범위</a></li>
+						<li><a
+							href="/rcv002.do?id=rcv002_calculator&gSite=Q&gId=&rcvPFlag=Y&gTitle=">공학용계산기</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //Tab -->
+			<article> <!-- 컨텐츠 -->
+			<div class="groupCont receiptInfo4">
+				<div class="conSection">
+					<div class="division">
+						<b class="headLine2">인정 신분증 범위</b>
+						<ul class="txtList dot">
+							<li>국가기술자격검정(한국산업인력공단 시행)에 응시하는 수험자는 시험시 아래 “인정 신분증”을 반드시
+								지참하여야 하며, 일체 훼손·변형이 없는 경우만 유효로 인정됩니다.</li>
+							<li><span class="c_Blue"> 주의사항 : 신분증은 사진·주민등록번호(최소
+									생년월일)·성명·발급기관 직인이 있는 경우만 인정 </span></li>
+						</ul>
+					</div>
+					<div class="division">
+						<b class="headLine2">신분증 인정범위</b>
+						<ul class="listWrap">
+							<li>
+								<p class="txtBody1 wB">모든 수험자 공통 적용 신분증</p>
+								<ul class="txtList dot">
+									<li>모바일 신분증
+										<div class="Guidetable">
+											<div class="contTable">
+												<table style="min-width: 900px">
+													<caption class="hidden">
+														<p>테이블 캡션</p>
+													</caption>
+													<colgroup>
+														<col style="width: 21%" />
+														<col style="width: 10%" />
+														<col style="width: 10%" />
+														<col style="width: 10%" />
+														<col style="width: 10%" />
+														<col style="width: 10%" />
+														<col style="width: 10%" />
+														<col style="width: 10%" />
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col" style="background-image: linear-gradient(to right bottom, transparent 49%, black 50%, transparent 51%);">구분&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;발급처
+															</th>
+															<th scope="col">모바일 신분증앱</th>
+															<th scope="col">삼성월렛</th>
+															<th scope="col">네이버</th>
+															<th scope="col">토스</th>
+															<th scope="col">카카오뱅크</th>
+															<th scope="col">KB스타뱅킹</th>
+															<th scope="col">농협은행</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>①모바일 주민등록증</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+														</tr>
+														<tr>
+															<td>②모바일 운전면허증</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+														</tr>
+														<tr>
+															<td>③모바일 국가보훈등록증</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+															<td>O</td>
+														</tr>
+														<tr>
+                                                            <td>④모바일 장애인등록증</td>
+                                                            <td>O</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>⑤모바일 공무원증</td>
+															<td colspan="7">모바일 공무원증 앱에서 확인(해당 앱은 관리자의 승인을 받은 사용자만 설치 가능)</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</li>
+									<li>모바일 신분확인 서비스
+										<ul class="txtList hyphen">
+											<li>(모바일 주민등록증 확인서비스)정부24· PASS앱· KB스타뱅킹 국민지갑· 우리WON뱅킹 원더월렛 등을 통한 모바일 주민등록 확인</li>
+											<li>(모바일 운전면허 확인서비스)PASS앱 등을 통한 모바일 운전면허 확인</li>
+										</ul>
+									</li>
+									<li>모바일 국가기술 자격증(확인)
+										<ul class="txtList hyphen">
+											<li>큐넷 전자지갑 및 모바일신분증앱에 발급된 모바일 국가기술자격증</li>
+											<li>정부24·PASS·네이버·카카오·삼성월렛 등을 통해 전자증명서 형태로 발급된 국가기술자격증(상장형)</li>
+											<li>네이버 자격증 서비스를 통한 국가기술자격증</li>
+										</ul>
+									</li>
+									<li>실물 신분증
+										<ul class="txtList hyphen">
+											<li>주민등록증(주민등록증발급신청확인서(유효기간 이내인 것))</li>
+											<li>운전면허증(경찰청에서 발행된 것)</li>
+											<li>건설기계조종사면허증</li>
+											<li>여권</li>
+											<li>공무원증(장교ㆍ부사관ㆍ군무원신분증 포함)</li>
+											<li>장애인등록증(복지카드)(주민등록번호가 표기된 것)</li>
+											<li>(구)국가유공자증 및 국가보훈등록증</li>
+											<li>국가기술자격증 : 국가기술자격법에 의거 한국산업인력공단 등 10개 기관에서 발행된 것</li>
+											<li>동력수상레저기구 조종면허증(해양경찰청에서 발행된 것)</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<p class="txtBody1 wB">대상자별 추가 인정 가능 신분증</p>
+								<ul class="txtList dot">
+									<li>초&middot;중&middot;고 및 만18세 이하인 자
+										<ul class="txtList hyphen">
+											<li>초·중·고등학교 학생증(사진ㆍ생년월일ㆍ성명ㆍ학교장 직인이 표기ㆍ날인된 것</li>
+											<li>NEIS 및 정부24를 통해 발급(흑백,컬러)된 재학증명서(사진ㆍ생년월일ㆍ성명ㆍ학교장 직인이 표기ㆍ날인되고, 발급일로부터 1년 이내인 것)(스마트폰을 활용할 경우 정부24앱 전자문서지갑에 발급된 재학증명서만 인정)</li>
+											<li>국가자격검정용 신분확인증명서(별지1호 서식에 따라 학교장 확인ㆍ직인이 날인되고, 유효기간 이내인 것)</li>
+											<li>청소년증(청소년증발급신청확인서(유효기간 이내인 것) 포함)</li>
+											<li>국가자격증(국가공인 및 민간자격증 불인정)</li>
+										</ul>
+									</li>
+									<li>미취학아동
+										<ul class="txtList hyphen">
+											<li>한국산업인력공단 발행 "국가자격검정용 임시신분증"(별지2호 서식에 따라 공단 직인이 날인되고, 유효기간 이내인 것)</li>
+											<li>국가자격증(국가공인 및 민간자격증 불인정)</li>
+										</ul>
+									</li>
+									<li>사병(군인)
+										<ul class="txtList hyphen">
+											<li>국가자격검정용 신분확인증명서(별지1호 서식에 따라 소속부대장이 증명ㆍ날인하고, 유효기간 이내인 것)</li>
+										</ul>
+									</li>
+									<li>외국인
+										<ul class="txtList hyphen">
+											<li>외국인등록증 및 모바일외국인등록증</br>
+											(모바일신분증앱, 삼성월렛, 네이버, 토스, 카카오뱅크, KB스타뱅킹, 농협은행 앱에 발급된 것)</li>
+											<li>외국국적통포국내거소신고증</li>
+											<li>영주증</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="division">
+						<b class="headLine2">신분증 인정기준</b>
+						<ul class="txtList dot">
+							<li>① 사진, 주민등록번호(최소 생년월일), 성명, 발급자(직인 등)가 모두 기재된 경우에 한하여 유효·인정</li>
+							<li>② 일체 훼손·변형이 없는 원본 신분증인 경우만 유효·인정
+								<ul class="txtList hyphen">
+									<li>일체 훼손·변형: 사진 또는 외지(코팅지)와 내지가 탈착·분리 등의 변형이 있는 것, 훼손으로 사진·인적사항 등을 인식할 수 없는 것 등</li>
+									<li>다만, 신분증이 훼손된 경우 시험응시는 허용하나 별도절차를 통해 사후 신분확인 실시</li>
+								</ul>
+							</li>
+							<li>③ 아래 인정신분증에 포함되지 않는 증명서 등은 ①, ②항의 요건을 충족하더라도 신분증으로 인정하지 않음</li>
+							<li>④아래 인정신분증의 경우 ①, ②항의 요건을 충족하지 않으면 신분증으로 인정하지 않음</li>
+						</ul>
+					</div>
+					<div class="division">
+						<b class="headLine2">국가자격검정용 신분확인 증명서 유의사항</b>
+						<ul class="txtList dot">
+							<li>사진은 발급일 전 6개월 이내에 모자 등을 쓰지 않고 촬영한 상반신 정면 컬러사진으로 개인식별이 가능한 것이어야 함</li>
+							<li>사진 부착 시에는 사진과 종이여백이 상호 겹치게 기관직인(학교장 또는 부대장)을 날인하고 사진 전체를 스카치테이프(투명)로 부착해야 함 (단, 사진을 따로 부착하지 않고, 전자파일을 증명서와 함께 출력한 경우 생략 가능)</li>
+						</ul>
+					</div>
+					<div class="division">
+						<b class="headLine2">신분증 인정이 불가능한 사항 예시</b>
+						<ul class="txtList dot">
+							<li>초&middot;중&middot;고등학교 학생증 또는 NEIS 및 정부24 재학증명서에 사진&middot;성명&middot;주민등록번호(생년월일)&middot;학교장 직인 중 하나라도 표기&middot;날인되지 않은 경우</li>
+							<li>신분증 원본이 아닌 화면 캡처본, 녹화·촬영본, 복사본 등</li>
+							<li>NEIS 및 정부24에서 발행되지 않은 재학증명서</li>
+							<li>건강보험증, 주민등록초본, 대학학생증, 사원증, 민간자격증, 신용카드, 운전경력증명서 등</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 서브 --> </article>
+		</div>
+		<!-- //#content -->
+		<a href="#none" id="btn_top" class="topBtn"><span
+			class="txtHidden">상단바로가기</span></a>
+	</div>
+	<iframe name="fDownFrame" title="빈프레임" src="" scrolling="no"
+		frameborder="0" style="display: none"></iframe>
+	<!-- //2014.12.11 KJH : 파일다운로드용 빈 프레임 -->
+
+	<!-- //container -->
+	<!-- footer include 영역 -->
+	
+
+
+<script type="text/javascript" src="/qnet_app/type/common/js/common_w.js?v=2024112001"></script><!-- wallet common -->
+<script>
+var currentSlide = [];
+$(function(){
+	
+	$("#dockVerify").bind("click", function(e){
+		//워크넷 제출 기능 추가후 활성화
+		$.alert("해당 서비스는 연계기관 기능 개발 완료 후 개시 예정입니다.");
+		return;
+		
+		var arry = [];
+		arry.push($("#credId").val());
+		var param = {};
+   	 	param["action"]  = "POST";
+   		param["call_gb"] = "S";
+   		param["org_id"]  = "28";
+   		param["inst_cd"] = "hrdk";
+   		param["id"]      = "wll10205";
+   		param["key"]     = "lcs_no";
+   		param["type"]    = "lcs";
+   		param["schema"]  = "hrdk_credentials";
+   		param["call_id"] = "wll10301";
+   		param["call_page"] = "wll103";
+   		param["credential_id"] = arry;
+	dataJS.formSubmit("/wll102.do", param);
+	});
+});
+	
+	function prevBtn(obj, index, parent){
+		obj.bind("click", function(e){
+			var totalSlides = obj.parent().parent().find('#inSwiper .swiper-slide').length;
+	        if (currentSlide[index] === 1) {
+	        	currentSlide[index] = totalSlides;
+	        } else {
+	        	currentSlide[index]--;
+	        }
+
+	        moveSlides(currentSlide[index], parent);
+		});
+	}
+	
+	function nextBtn(obj, index, parent){
+		obj.bind("click", function(e){
+			var totalSlides = obj.parent().parent().find('#inSwiper .swiper-slide').length;
+	        if (currentSlide[index] === totalSlides) {
+	        	currentSlide[index] = 1;
+	        } else {
+	        	currentSlide[index]++;
+	        }
+	        moveSlides(currentSlide[index], parent);
+		});
+	}
+
+	function dockOpen(){	
+		NetFunnel_Action({action_id:"wallet"}, function(ev, ret){
+				
+			if("false" == "false"){
+				var param = {};
+			  	 	param["action"]  = "POST";
+			   		param["id"]      = "wll20101";
+			   		param["call_id"] = "appMain";
+			   		param["call_gb"] = "S";
+				dataJS.formSubmit("/wll201.do", param); 
+			}else{
+			var param = {};
+		   	 	param["action"]  = "POST";
+		   		param["id"]      = "wll10102";
+		   		param["topic"]  = "check";
+			dataJS.formSubmit("/wll101.do", param);
+			}
+			return;		 
+	 	
+		});
+		
+		return;
+			
+		//해당부분 실행안함, 차후 변경부분에 따라 적용 가능 소스 남김
+		var swiperRoot = $(".dock .swiper-wrapper");
+		swiperRoot.empty();
+		
+		initTabSwiper();
+		if("false" == "false"){
+			var param = {};
+		   	 	param["action"]  = "POST";
+		   		param["id"]      = "wll10102";
+		   		param["topic"]  = "check";
+			dataJS.formSubmit("/wll101.do", param);
+		}else{
+		
+			var callGb = "S"; // 보관만 사용
+	    	
+	        var url = "/wll103.do"
+	       	var param = { "type" 	 : "post", 
+	  		      		  "async" 	 : true,	 
+		 			  	  "org_id"   : "28",
+					  	  "call_gb"  : callGb,
+					  	  "id"	     : "wll10302"  
+	        			};
+	        
+	        dataJS.ajaxData(url, param, function(data, param){
+	        	currentSlide = [];
+	        	var data = data.results;
+	        	if(typeof data != "undefined" && data != "" && data != null){
+		        	if(data.length > 0){
+		        		var swiperRoot = $(".dock .swiper-wrapper");
+		        		$.each(data, function(i,v){
+		        			currentSlide[i] = 1;
+		        			var item = data[i];
+		        			var swiperSlide = $("#swiper-slide").clone();
+		        			swiperSlide.removeAttr("id");
+		        			var cardFront = swiperSlide.find(".cardfont");
+		        			cardFront.find(".tit").text(item.lcs_nm);
+		        			cardFront.find(".name").text(item.hgul_nm);
+		        			cardFront.find(".date").text(item.resd_no);
+		        			var qualgbNm = item.qualgb_nm;
+		        			var imgSrc     = "국가기술자격" == qualgbNm ? "/common/loadimg.do?suno=&div=I&lcsno="+item.lcs_no : "/getUsrPic.do?lcsNo=" + item.lcs_no;
+		        			cardFront.find(".profile").find("img").attr("src",imgSrc);
+		        			cardFront.find(".profile").find("img").attr("style","border-radius: var(--radius-lv2);");
+		        			cardFront.find(".qrArea").find("img").attr("src", "/qrVcCode.do?cred_id="+item.credential_id);
+		        			cardFront.find("#credId").val(item.credential_id);
+		        			var cardBack = swiperSlide.find(".cardback");
+		        			cardBack.find(".tit").text(item.qualgb_nm);
+		        			cardBack.find(".info_list").find(".lcsNo").text(item.lcs_no);
+		        			cardBack.find(".info_list").find(".type").text(item.lcs_nm);
+		        			cardBack.find(".info_list").find(".name").text(item.hgul_nm);
+		        			cardBack.find(".info_list").find(".birth").text(item.resd_no);
+		        			cardBack.find(".info_list").find(".passDt").text(item.last_pass_dt);
+		        			cardBack.find(".info_list").find(".giveDt").text(item.last_give_dt);
+		        			cardBack.find(".info_list").find(".mgmtNm").text(item.all_mgmt_nm);
+		        			cardBack.find(".profile").find("img").attr("src", imgSrc);
+		        			cardBack.find(".profile").find("img").attr("style","border-radius: var(--radius-lv2);");
+		        			
+		        			var sub = JSON.parse(item.sub_contents);
+		        			if(null != sub){
+		        				cardBack.find(".utilArea").attr("style", "display:block;");
+		        				// event bind
+		        				prevBtn(cardBack.find(".utilArea").find(".prevBtn"), i, cardBack.find("#inSwiper"));
+		        				nextBtn(cardBack.find(".utilArea").find(".nextBtn"), i, cardBack.find("#inSwiper"));
+		        				
+		        				var slideCount = Math.ceil(sub.length/5);
+		                    	var subArray   = [];
+		                    	for(var sc=0,len=slideCount;sc<len;sc++){
+		                    		var divSlide = $("<div>");
+		                    			  divSlide.addClass("swiper-slide");
+		                    			  divSlide.addClass("slide"+(sc+2));
+		                    			  var divContIn = $("<div>");
+		                    			  	    divContIn.addClass("contIn");
+		                    			  	    divContIn.addClass("backgroundimg");
+		                    			  	    var pTitle = $("<p>");
+		                    			  	          pTitle.addClass("tit");
+		                    			  	          pTitle.attr("style", "color:#000");
+		                    			  	          pTitle.text("교육·훈련 내용");
+		                    			  	    var ulCont = $("<ul>");
+		                    			  	          ulCont.addClass("cnt_list");
+		                    			  	          subArray[sc] = sub.slice((sc*5),(sc+1)*5);
+			                    			  	        $.each(subArray[sc], function(i){
+			            	        						var subItem = subArray[sc][i];
+			            	        						var li =  $("<li>");
+			            	        							var pSubTitle = $("<p>");
+			            	        								  pSubTitle.addClass("sTit");
+			            	        								  pSubTitle.append(subItem.unit_name);
+			            	        							li.append(pSubTitle);
+			            	        							var divSub = $("<div>");
+			            	        								  divSub.addClass("sTxt");
+			            	        								  var spanSub = $("<span>");
+			            	        								  	    spanSub.append(subItem.ncs_cl_cd);
+			            	        								  var spanGrd = $("<span>");
+			            	        								        spanGrd.append(subItem.grd_cd);
+			            	        								   divSub.append(spanSub).append(spanGrd);
+			            	        						     li.append(pSubTitle).append(divSub);
+			            	        						ulCont.append(li);
+			            		        				});
+			                    		  	divContIn.append(pTitle);
+			                    		  	divContIn.append(ulCont);
+		                    			  divSlide.append(divContIn);
+		                    		cardBack.find(".swiper-wrapper").append(divSlide);
+		                    	}
+		        			}else{
+		        				cardBack.find(".utilArea").attr("style", "display:none;");
+		        			}
+		        			
+		        			
+		        			//utilArea
+		        			var BacklcsNo = cardBack.find(".info_list").find(".lcsNo").text();
+		        			swiperRoot.append(swiperSlide);
+		        		});
+		        		
+		        		ui.LayerPop.Show('#pop_eleIdentificationN');
+		        		
+		        	    toggleSwiper();
+		        	}
+	        	}
+	        });
+		}
+	}
+
+    function moveSlides(slideNumber, obj) {
+    	
+    	var slideObj = obj.find(".swiper-slide");
+        var slideWidth = slideObj.outerWidth();
+        var newLeftPosition = -(slideNumber - 1) * slideWidth;
+        slideObj.css('left', newLeftPosition + 'px');
+    }
+    
+	function toggleSwiper() { 
+		//var activeCardWrap = $(".swiperList1 .swiper-slide-active .cardWrap");
+        var activeCardWrap = $(".swiperList1 .swiper-slide-active .cardWrap");
+        if (activeCardWrap.hasClass('on')) {
+            if (swiperListDock) {
+                // alert('check')
+               // swiperList.destroy();
+               // swiperList = null;
+            }
+        } else {
+
+            if (!swiperListDock) {
+               initTabSwiper();
+            }
+        }
+
+        if ($(activeCardWrap).hasClass('on')) {
+           // $("#pop_eleIdentificationN .pagination2").addClass('none');
+        } else {
+            $("#pop_eleIdentificationN .pagination2").removeClass('none');
+        }
+	}
+
+	function fnVerify(credId){
+		var arry = [];
+		arry.push(credId);
+		var param = {};
+	   	 	param["action"]  = "POST";
+	   		param["call_gb"] = "S";
+	   		param["org_id"]  = "28";
+	   		param["inst_cd"] = "hrdk";
+	   		param["id"]      = "wll10205";
+	   		param["key"]     = "exam_no";
+	   		param["type"]    = "confirm";
+	   		param["schema"]  = "hrdkorea_confirmationdoc";
+	   		param["call_id"] = "wll10403";
+	   		param["call_page"] = "wll104";
+	   		param["credential_id"] = arry;
+		dataJS.formSubmit("/wll102.do", param);
+	}
+	
+	function stopAlert(){
+		$.alert("원활한 원서접수 서비스 제공을 위해 접수 첫날 시스템 부하를 최소화하고자 모바일 자격증 발급 서비스를 일시 중단합니다.\n모바일 발급 기능은 오늘 18시 이후부터 정상적으로 이용이 가능하오니 양해 부탁드립니다.\n\n - 발급 가능 일시: 오늘 2026.6.22. 18:00부터\n - 대상 서비스 : 모바일 자격증 신청 및 발급",{
+			callEvent:function(){
+				document.location.href = "/index.do?id=appMain";
+			}
+		});
+	}
+		
+</script>
+<input name="cred_id" type="hidden" value="">
+<!-- dock -->
+<aside id="dock">
+	<nav class="dock_menu">
+		<a href="/index.do?id=appMain" class="dock_home">
+			<i>
+				<img src="/qnet_app/type/KOR_A/img/layout/dock_ico_home.svg" alt="">	
+			</i>
+			<p class="dock_tit">홈</p>
+		</a>
+		<a href="/myp001.do?id=mypIndex" class="dock_my">
+			<i>
+				<img src="/qnet_app/type/KOR_A/img/layout/dock_ico_user.svg" alt="">	
+			</i>
+			<p class="dock_tit">마이</p>
+		</a>
+		
+		
+		
+		
+		<a href="/man001.do?id=man00103" class="dock_login"> 
+			<i>
+				<img src="/qnet_app/type/KOR_A/img/layout/dock_ico_walletN.svg" alt="">	
+			</i>
+			<p class="dock_tit">지갑</p>
+		</a>
+		 
+		 
+		<!-- class "out" 추가시 로그아웃으로 변경 -->
+         
+         <a href="/man001.do?id=man00103" class="dock_login"> 
+          <i class="login">
+              <img src="/qnet_app/type/KOR_A/img/layout/dock_ico_login.svg" alt="">	
+          </i>
+          <p class="dock_tit login">로그인</p>
+         </a>
+         
+		
+		<a href="#gnbmenuopen" class="dock_gnb">
+			<i>
+				<img src="/qnet_app/type/KOR_A/img/layout/dock_ico_menu.svg" alt="">	
+			</i>
+			<p class="dock_tit">메뉴</p>
+		</a>
+		
+	</nav>
+</aside>
+<!-- //dock -->
+<!-- 레이어팝업 : 모바일 자격증 -->
+<div class="pop_wrap bottomSheet" id="pop_eleIdentificationN">
+	<section class="popLayout popLayer">
+		<div class="popConts">
+            <div class="popInner limit">
+                <!-- 팝업 내용 입력-->
+                <div class="txtG eleIdentificationN">
+                    <div class="popInnerCont">
+                        <div class="dock swiper-container list swiperList1">
+                            <div class="dock swiper-wrapper">
+                            </div>
+                        </div>
+                        <div class="btnArea double">
+                            <div class="swiper-pagination pagination2"></div>
+
+                            <a href="#none" class="baseBtn gray btn_popClose"><span class="base">닫기</span></a>
+                            <a href="#none" class="baseBtn"><span id="dockVerify" class="base">제출</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //팝업 내용 입력 -->
+            </div>
+		
+		</div>
+	</section>
+
+</div>
+<script>
+//슬라이드
+$('.dock_wallet').on('click', function () {
+    initTabSwiper();
+});
+
+function initTabSwiper() {
+	
+    /* setTimeout(function () { */
+    	//'.dock .swiper-container.list',
+        swiperListDock = new Swiper('.swiperList1', {
+            direction: 'horizontal',
+            autoplay: false,
+            loop: false,
+            slidesPerView: 1,
+            spaceBetween: 32,
+            autoHeight: true,
+            observer: true,
+            observeParents: true,
+            on: {
+                slideChange: function () {
+                    toggleSwiper();
+                }
+            },
+            pagination: {
+                el: "#pop_eleIdentificationN .pagination2",
+                clickable: true,
+            },
+        });
+    /* }, 200); */
+}
+function fn_dock_logout(){
+	$.confirm('로그아웃 하시겠습니까?',{
+        callEvent:function(){ 
+        	location.href="/man001.do?id=man00102";
+        },
+        cancelEvent:function(){
+			return false;
+        }
+    });
+}
+
+</script>
+
+	
+
+<div id="footer">
+	<footer>
+		<div class="f_top">
+			<button type="button" class="familySite_btn" data-popid="sitelist_pop"><span style="color: #fff;">관련사이트</span></button>
+			<a href="tel:1644-8000" class="consel_btn"><span style="color: #fff;line-height:normal;">고객센터 (전화상담, 유료)</span></a>
+		</div>
+		<div class="f_link">
+			<ul class="f_menu">
+				<li><a href="#none" onclick="fn_linkUtil('Y','Y','confirm','해당 기능은 큐넷 홈페이지에서만 제공하고 있습니다.\n페이지로 이동하시겠습니까?','http://www.q-net.or.kr/man001.do?id=infoprotection&gSite=Q&gId=')" title="새창열림">개인정보처리방침</a></li>
+				<li><a href="#none" onclick="fn_linkUtil('Y','Y','confirm','해당 기능은 큐넷 홈페이지에서만 제공하고 있습니다.\n페이지로 이동하시겠습니까?','http://www.q-net.or.kr/man001.do?id=agreement&gSite=Q&gId=')" title="새창열림">이용약관</a></li>
+				<li><a href="#none" onclick="fn_linkUtil('Y','Y','confirm','해당 기능은 산업인력공단 홈페이지에서만 제공하고 있습니다.\n페이지로 이동하시겠습니까?','http://www.hrdkorea.or.kr/4/1/4')" title="새창열림">찾아오시는길</a></li>
+			</ul>
+		</div>
+		<address>
+			<p>
+				<b>
+					44538 울산광역시 중구 종가로 345 한국산업인력공단 <br>
+					고객지원 1644-8000 (운영시간 09:00 ~ 18:00, 유료)
+				</b>
+				<span>ⓒ 2023 Human Resources Development Service of Korea. <br>All Rights Reserved.  </span>
+			</p>
+		</address>
+
+		<div class="f_logo">
+			<a href="#none" onclick="fn_linkUtil('Y','N','confirm','','http://c.q-net.or.kr')" title="새창열림">
+				<img src="/qnet_app/type/KOR_A/img/layout/logo_cqnet.png" alt="cq-net" class="cq-net"/>
+			</a>
+			<!-- <a href="#none" target="_blank" title="새창열림">
+				<img src="/qnet_app/type/KOR_A/img/layout/logo_accesibility.png" alt="웹접근성 마크" class="accessibility"/>
+			</a> -->
+			
+		</div>
+	</footer>
+
+	
+	<!-- Custom Select -->
+	<script id="cutomSelectBoxTemplate" type="text/x-jquery-tmpl">
+		<div class="pop_wrap bottomSheet typeSelect">
+			<section class="popLayout popLayer">
+				<div class="popConts">
+					<div class="popInner limit">
+						<!-- 팝업 내용 입력-->
+						<div class="txtG">
+							<button type="button" class="btn_popX btn_popClose"><span class="base txtHidden">닫기</span></button>
+							<h2 class="popTit"></h2>
+							<div class="popInnerCont selectCont">
+								<!-- 셀렉트 박스 옵션 -->
+								<div class="optList">
+								</div>
+								<!-- 셀렉트 박스 옵션 -->
+							</div>
+						</div>
+						<!-- //팝업 내용 입력 -->
+					</div>
+				</div>
+			</section>
+		</div>
+	</script>
+	
+	<script>
+	$(document).ready(function(){
+		$(document).on('click',  'button.familySite_btn', function() {
+			ui.LayerPop.Show("#"+$(this).data('popid'));
+			ui.accessibility.focusloop("#"+$(this).data('popid'));
+			return false;
+		});	
+		$(document).on('click', '#sitelist_pop div.optList button', function() {
+			var popId = $(this).closest('div.bottomSheet').attr('id');
+			var siteUrl = $(this).data('val');
+			var openPopId = $(this).data('popid');
+			var status = "scrollbars=yes, resizable=yes";			
+			var data = {
+				popUrl : siteUrl
+				, data : null
+			};
+			wvb.call.openBrowser(data, null, null);			
+			//window.open(siteUrl,openPopId,status);
+			//ui.LayerPop.Closed('#'+popId);
+			//ui.accessibility.focusloopClose();
+			return false;
+		});
+	});
+	</script>
+	
+	<div class="pop_wrap bottomSheet typeSelect" id="sitelist_pop">    
+		<section class="popLayout popLayer">     
+			<div class="popConts">      
+				<div class="popInner limit">       
+					<!-- 팝업 내용 입력-->       
+					<div class="txtG">        
+						<button type="button" class="btn_popX btn_popClose" data-pop-focus="first"><span class="base txtHidden">닫기</span></button>        
+						<h2 class="popTit">관련사이트</h2>        
+						<div class="popInnerCont selectCont">         
+							<!-- 셀렉트 박스 옵션 -->         
+							<div class="optList">         
+								<button type="button" data-val="http://www.hrdkorea.or.kr" data-popid="familypop1"><span>공단홈페이지</span></button>
+								<button type="button" data-val="http://www.tvworknet.or.kr" data-popid="familypop2"><span>한국직업방송</span></button>
+								<button type="button" data-val="http://www.worldjob.or.kr" data-popid="familypop3"><span>WORLD JOB 해외취업및연수</span></button>
+								<button type="button" data-val="http://meister.hrdkorea.or.kr" data-popid="familypop4"><span>마이스터넷</span></button>
+								<button type="button" data-val="https://c.q-net.or.kr" data-popid="familypop5"><span>과정평가형.일학습병행자격 외부평가시스템</span></button>
+								<button type="button" data-val="http://eps.hrdkorea.or.kr" data-popid="familypop6"><span>외국인고용허가제</span></button>
+								<button type="button" data-val="http://www.ncs.go.kr" data-popid="familypop7"><span>NCS 국가직무능력표준</span></button>
+								<button type="button" data-val="http://www.bizhrd.net" data-popid="familypop8"><span>HRD콘테츠네트워크</span></button>
+								<button type="button" data-val="http://www.hrd.go.kr"  data-popid="familypop9" data-pop-focus="last"><span>HRD-Net 직업능력지식포털</span></button>
+							</div>         
+							<!-- 셀렉트 박스 옵션 -->        
+						</div>       
+					</div>       
+					<!-- //팝업 내용 입력 -->      
+				</div>     
+			</div>    
+		</section>   
+	</div>
+
+</div>
+</body>
+</html>

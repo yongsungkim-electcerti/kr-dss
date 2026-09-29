@@ -1,0 +1,971 @@
+DIGITAL PUBLIC
+INFRASTRUCTURE FOR
+DIGITAL GOVERNMENTS
+OECD PUBLIC GOVERNANCE 
+POLICY PAPERS NO. 68
+
+  1 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+This paper was approved by the Public Governance Committee on 12 December 2024 and prepared for 
+publication by the OECD Secretariat. 
+This document, as well as any data and map included herein, are without prejudice to the status of or 
+sovereignty over any territory, to the delimitation of international frontiers and boundaries and to the name 
+of any territory, city or area. 
+Photo credits: Cover © Shutterstock 
+ © OECD 2024 
+ Attribution 4.0 International (CC BY 4.0)  
+This work is made available under the Creative Commons Attribution 4.0 International licence. By using this work, you 
+accept to be bound by the terms of this licence (https://creativecommons.org/licenses/by/4.0/).  
+Attribution – you must cite the work.  
+Translations – you must cite the original work, identify changes to the original and add the following text: In the event 
+of any discrepancy between the original work and the translation, only the text of original work should be considered 
+valid.  
+Adaptations – you must cite the original work and add the following text: This is an adaptation of an original work by 
+the OECD. The opinions expressed and arguments employed in this adaptation should not be reported as representing 
+the official views of the OECD or of its Member countries.  
+Third-party material – the licence does not apply to third-party material in the work. If using such material, you are 
+responsible for obtaining permission from the third party and for any claims of infringement. You must not use the 
+OECD logo, visual identity or cover image without express permission or suggest the OECD endorses your use of the 
+work.  
+Any dispute arising under this licence shall be settled by arbitration in accordance with the Permanent Court of 
+Arbitration (PCA) Arbitration Rules 2012. The seat of arbitration shall be Paris (France). The number of arbitrators 
+shall be one. 
+
+2  
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+Abstract 
+This paper explores digital public infrastructure (DPI), defined as shared 
+digital systems that are secure and interoperable and that can support the 
+inclusive delivery of and access to public and private services across 
+society. Governments play a pivotal role in designing, developing and 
+managing DPI, as well as in leveraging DPI systems to increase efficiency 
+and coherence in the implementation of digital government policies. Key 
+components of DPI include digital identity, payments, data sharing, digital 
+post, and core government data registries. Building robust DPI requires 
+addressing governance challenges such as funding, public-private 
+collaboration, and robust safeguards including for privacy and security. As 
+DPI becomes a global priority, enhanced cross-border co-operation is also 
+vital to address issues like resilience and to ensure effective DPI across 
+diverse economic contexts. 
+
+   3 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Acknowledgements 
+This paper was developed by the OECD Directorate for Public Governance (GOV) under the leadership of 
+Elsa Pilichowski, Director. It was prepared by the Innovative, Digital, and Open Government Division, under 
+the overall direction of Carlos Santiso and supervision by Barbara Ubaldi, Head of the Digital Government 
+Unit. The report was authored by Cecilia Emilsson and Felipe González-Zapata. 
+The authors gratefully acknowledge the valuable insights and suggestions provided by the OECD Working 
+Party of Senior Digital Government Officials (E-Leaders). Special thanks are also extended to Brett Carson, 
+Simon Cox, Andras Hlacs, and Margarita Escobar from GOV, as well as Clarisse Girot, Christian 
+Reimsbach-Kounatze, Idil Uzun, and Giuseppe Bianco from the Directorate for Science, Technology, and 
+Innovation (STI), for their feedback. Editorial and publication support was provided by Andrea Uhrhammer. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+4    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Table of contents 
+Abstract ................................................................................................................................ 2 
+Acknowledgements.............................................................................................................. 3 
+Executive summary.............................................................................................................. 6 
+1 What is digital public infrastructure? .............................................................................. 8 
+2 Digital public infrastructure as an enabler of the ‘Government as a Platform’ 
+model .................................................................................................................................. 10 
+3 Types of digital public infrastructure ............................................................................. 12 
+DPI for security and trust ................................................................................................... 13 
+DPI for data and information sharing ................................................................................. 15 
+DPI for communication and public service interaction ....................................................... 17 
+4 Enablers of successful digital public infrastructure ..................................................... 19 
+Strategic frameworks to govern DPI .................................................................................. 20 
+Collaboration with the private sector and non-governmental actors ................................... 21 
+Investment and funding models ........................................................................................ 22 
+Safeguards ....................................................................................................................... 23 
+5 Policy recommendations ................................................................................................ 25 
+References .......................................................................................................................... 26 
+ 
+Figures 
+Figure 1. Digital public infrastructure as a service enabler 
+10 
+Figure 2. Types of digital public infrastructure 
+12 
+Figure 3. DPI availability in OECD countries, 2023 
+13 
+Figure 4. DPI enablers 
+19 
+
+   5 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+ 
+Boxes 
+Box 1. Digital identity solutions in the United Kingdom and the European Union 
+13 
+Box 2. Systems for G2P payments in Denmark and P2G payments in Italy 
+14 
+Box 3. Brazil’s Cadastro Único 
+15 
+Box 4. Data sharing systems in Spain, Japan, and the United Kingdom 
+16 
+Box 5. Sweden’s Digital post 
+17 
+Box 6. Canada’s GC Notify 
+17 
+Box 7. Single digital gateways in Spain and Ukraine 
+18 
+Box 8. Norway’s national joint solutions 
+20 
+Box 9. IndiaStack 
+21 
+Box 10. Denmark’s public-private collaboration on digital identity 
+22 
+Box 11. Sweden’s funding model for DPI 
+22 
+ 
+
+6    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Executive summary 
+This paper explores the development and impact of digital public infrastructure (DPI) on digital government 
+and outlines key recommendations for policymakers. DPI refers to a set of shared, secure, and 
+interoperable digital systems designed to support broad access to public and private services. Examples 
+include digital identity, data sharing systems, digital payments and digital post and notifications. These DPI 
+systems act as common digital building blocks that underpin government processes and services and 
+enable digital government transformation at scale. Governments play a central role in DPI’s design, 
+development, deployment, and oversight, with some systems tailored specifically to public sector needs, 
+others benefiting both the public and private sectors, and some capable of operating across borders. 
+DPI offers substantial socioeconomic advantages. It can generate savings and efficiency gains for the 
+public sector and for the private sector. Alongside economic gains, reliable DPI can promote inclusivity, 
+service resilience, security, and user satisfaction, providing essential infrastructure for efficient, scalable, 
+and innovative services. The main benefits are: 
+• 
+Efficiency: When public sector institutions and private service providers can rely on established 
+tools and platforms, they can redirect resources to more valuable tasks and create economies of 
+scale, saving time and money.  
+• 
+Interoperability: DPI can promote interoperability by providing common components and 
+facilitating standardised approaches and methods for designing and providing services, for sharing 
+and accessing data, and for communicating and collaborating among and across teams, 
+departments, organisations, and borders.  
+• 
+User experience and inclusion: Robust and reliable DPI supports a better user experience with 
+digital public services and can help make services more inclusive by providing tools that assist 
+public sector institutions and private service providers in tailoring the services more efficiently to 
+user needs.  
+• 
+Scalability: As the volume and complexity of data and digital public services continue to grow; 
+scalability becomes a critical consideration. Reusable digital building blocks are designed to scale 
+up along with increased demand and to prevent lock-in effects, ensuring that the ability to offer 
+quality services can adapt to evolving needs rapidly without significant rework, investment or 
+impact on service continuity.  
+• 
+Resilience: Countries with robust digital foundations are better equipped to navigate crises and 
+deliver essential services. This was demonstrated during the COVID-19 pandemic, when some 
+countries were able to implement key services and support more rapidly in response to emerging 
+challenges by leveraging DPI.  
+• 
+Innovation: Having access to a foundation of reusable digital tools and platforms allows public 
+sector institutions and private service providers to build on existing solutions rather than start from 
+scratch, and to experiment with new approaches and technologies more efficiently. 
+
+   7 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Country experiences show that the implications of DPI for digital government go beyond technology 
+adoption. It is essential to consider how DPI is managed and governed by governments, how it is funded, 
+what public-private partnerships are required for its design, development, deployment, and use, and what 
+safeguards are needed for trusted and sustainable DPI. This includes ensuring that DPI does not lead to 
+exclusion, and addressing challenges such as privacy concerns, security vulnerabilities, and issues around 
+dependence and resilience.  
+Policy recommendations 
+To ensure the successful design, development and implementation of DPI, countries should consider the 
+following actions: 
+• 
+Adopt a strategic framework to effectively govern and manage the country’s DPI. This could 
+cover digital identity, digital payments, core data registries, data-sharing systems, digital 
+notifications, digital post, and single digital gateways.  
+• 
+Promote multi-stakeholder collaboration on DPI to enable transparency, innovation, and 
+scalability, including potential cross-sectoral and cross-border adoption. 
+• 
+Ensure sustainable DPI through strategic investment and funding across DPI design, 
+development, operation, and maintenance, while considering the transition from legacy systems 
+and aligning with policy goals such as environmental sustainability and resilience. Robust planning, 
+prioritisation, and oversight are critical to maximise long-term benefits and return on investment. 
+• 
+Adopt a human-centred approach to DPI by prioritising individuals’ rights, needs, and 
+preferences. This also includes implementing robust safeguards, such as privacy-by-design and 
+digital security measures, robust data governance frameworks, and ethical standards.   
+• 
+Engage in international digital co-operation to strengthen peer learning and share valuable 
+solutions, including digital public goods, to support the development of DPI across countries and 
+regions with different contexts and economic development levels. 
+ 
+ 
+ 
+
+8    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+While global attention to Digital public infrastructure (DPI) is growing, developing DPI has long been a 
+priority among OECD countries as part of their digital government efforts. DPI, as defined by the G20, 
+refers to a set of shared digital systems that are secure and interoperable and can support the inclusive 
+delivery of and access to public and private services at societal scale (G20, 2023[1]). In most OECD 
+countries, governments play a pivotal role in designing, developing, deploying and overseeing DPI. Some 
+DPI are designed specifically for public sector needs, while others adopt a whole-of-society approach, 
+benefiting both public and private sectors. A related concept is digital public goods (DPGs), which refers 
+to the use of open-source software, open data, open AI models, open standards, and open content to 
+facilitate re-use across organisations, sectors, levels of government, and countries (United Nations, 
+2024[2]). Elements of a country’s DPI can be designed to incorporate DPGs (e.g. open source and open 
+standards) (Digital Public Goods Alliance; GIZ, 2022[3]). 
+DPI can offer significant socioeconomic advantages. In Norway, the joint national solutions for geospatial 
+data provided by the National Mapping Authority generate yearly benefits to the country’s private sector of 
+up to 13 billion NOK (approximately 1 billion EUR) (Kartverket, 2024[4]). In Estonia, the use of digital 
+signatures has saved up to 2% of GDP (e-Estonia, 2019[5]). Additionally, it is estimated that DPI can 
+increase the GDP of low- and middle-income countries by between 1 and 1.4 percentage points by 2030 
+(UNDP, 2023[6]). While economic benefits are a key factor for investing in DPI, other major opportunities 
+include greater inclusion and a better user experience through improved public and private services, as 
+well as more reliable, secure and resilient access to and use of those services.   
+In recent years, DPI has featured in discussions at the United Nations (UN) and G20, particularly in relation 
+to advancing inclusive digital transformation in developing countries. Building on the results of the 2023 
+G20 Indian Presidency1, and inspired by India’s IndiaStack, several initiatives have emerged to frame and 
+promote DPI in developing countries. Notably, the UN Global Digital Compact identifies DPI as an enabler 
+to close digital divides and accelerate actions and progress towards the achievement of the Sustainable 
+Development Goals (SDGs) (United Nations, 2024[2]). Furthermore, the UN has developed the Universal 
+DPI Safeguards Framework, which establishes guiding principles and practices for safe and inclusive DPI. 
+Universities and non-profit organisations, such as the University College London and Co-Develop, also 
+contribute to the global dialogue on DPI governance and implementation.  
+DPI drives digital government transformation at scale by providing common building blocks that support 
+government processes and services in the digital era. Discussions around DPI began over a decade ago 
+with the idea of evolving 'Government 2.02' into a 'Government as a Platform' model, a cornerstone of the 
+OECD Digital Government Policy Framework (OECD, 2020[7]). The rising momentum of DPI underscores 
+the need for stronger international digital co-operation. While the concept has been around for years, it has 
+only recently gained broader attention. Additionally, there is growing demand for cross-border 
+ 
+1 Outputs included the G20 Framework for Systems of Digital Public Infrastructure, as well as a separate compendium and playbook developed 
+with the United Nations Development Programme (UNDP). 
+2 According to O’Reilly (2011[8]), Government 2.0 is “the use of technology—especially the collaborative technologies at the heart of Web 2.0—
+to better solve collective problems at a city, state, national, and international level.” Web 2.0 describes the current state of the internet since the 
+early 2000s, characterised by websites and applications with user-generated content, ease of use, and participation.  
+1 What is digital public infrastructure? 
+
+   9 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+interoperability of DPI systems to facilitate access to both public and private services. Enhanced 
+collaboration across diverse regions and contexts can foster the exchange of lessons—both on 
+overcoming challenges and adopting successful strategies—while advancing cross-border interoperability. 
+This, in turn, can contribute to a more inclusive and sustainable digital transformation. 
+
+10    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+The term “Government as a Platform” is a type of governance model where governments provide digital 
+infrastructure, services, and frameworks that enable public and private entities to build upon and deliver 
+services more efficiently to citizens, fostering collaboration and innovation. It was coined more than a 
+decade ago and reflects a desire to transform government structures by designing and delivering 
+government services enabled by a core set of reusable digital components (O’Reilly, 2011[8]; OECD, 
+2020[7]). With this approach, governments can equip service providers (including those outside the public 
+sector and in other countries) with resources to create innovative applications and services that 
+governments or individual teams cannot develop alone, benefiting both economies and society (OECD, 
+2024[9]). DPI is a central element of implementing this vision (Figure 1).  
+Figure 1. Digital public infrastructure as a service enabler 
+ 
+Source: Authors’ elaboration based on Loosemore (2018[10]), Making government as a platform real 
+The main benefits of DPI can be summarised as: 
+• 
+Efficiency: When public sector institutions and private service providers can rely on established 
+tools and platforms, they can redirect resources to more valuable tasks and create economies of 
+scale, resulting in time savings and cost effectiveness.  
+2 Digital public infrastructure as an 
+enabler of the ‘Government as a 
+Platform’ model 
+
+   11 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+• 
+Interoperability: DPI promotes interoperability by providing common components and facilitating 
+standardised approaches and methods for designing and providing services, for sharing and 
+accessing data, and for communication and collaboration between and across teams, 
+departments, organisations, and borders.  
+• 
+User experience and inclusion: Robust and reliable DPI supports a better user experience with 
+digital public services and can help make services more inclusive by providing a foundation of tools 
+that assist public sector institutions and private service providers in tailoring the services more 
+efficiently to user needs. 
+• 
+Scalability: As the volume and complexity of data and digital public services continue to grow; 
+scalability becomes a critical consideration. Reusable digital building blocks are designed to scale 
+up along with increased demand and to prevent lock-in effects, ensuring the ability to offer quality 
+services can adapt to evolving needs rapidly without significant rework, investment or impact on 
+service continuity. 
+• 
+Resilience: Countries with robust digital foundations are better equipped to navigate crises and 
+deliver essential services. This was demonstrated during the COVID-19 pandemic, when some 
+countries were able to implement key services and support more rapidly in response to emerging 
+challenges by leveraging DPI. 
+• 
+Innovation: By providing a foundation of reusable digital tools and platforms, DPI allows public 
+sector institutions and private service providers to focus their efforts on building upon existing 
+solutions rather than starting from scratch, allowing them to experiment with new approaches and 
+technologies more efficiently. 
+Additionally, by enabling the benefits mentioned above, DPI contributes to enhancing the public sector’s 
+ability to use digital technologies and data to transform how it operates and delivers services (OECD, 
+2024[11]). DPI can support increased maturity across each of the six dimensions of the OECD Digital 
+Government Policy Framework: Digital by design, Data-driven, Government as a platform, Open by default, 
+User-driven, Proactiveness (OECD, 2020[7]). 
+
+12    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+For several years, OECD Member and partner countries have been active in developing, deploying, and 
+overseeing DPI as part of their digital government strategies. This chapter looks at examples of DPI 
+available across these countries today. While some DPI systems are tailored to the needs of the public 
+sector, others are available for use across the broader digital economy. The chapter is divided into three 
+sections based on types of DPI and the foundational need that they address. While the DPI types are 
+presented separately, most of them are highly interlinked and dependent on each other. The types of DPI 
+are: 
+• 
+DPI for security and trust, including common systems for digital identity and digital payments. 
+• 
+DPI for data and information sharing, including interoperable base registries and data sharing 
+systems.  
+• 
+DPI for communication and public service interaction, including digital post, notification services 
+and single digital gateways.  
+As digital needs evolve across sectors and digital technologies continue to advance, new forms of DPI, 
+such as those supporting AI development, are likely to emerge in the future. 
+Figure 2. Types of digital public infrastructure 
+ 
+Source: Authors’ elaboration 
+Figure 3 shows an overview of the availability of these types of DPI across OECD countries, with data 
+collected from the OECD Digital Government Index (OECD, 2024[12]). While most countries have data 
+sharing systems, digital identity, and single digital gateways in place, DPI such as digital post, notifications 
+and digital payment are less frequently available. 
+3 Types of digital public infrastructure  
+
+   13 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Figure 3. DPI availability in OECD countries, 2023  
+% of surveyed OECD countries 
+ 
+Note: Digital identity: % of surveyed countries where at least 50% of national online public services can be accessed through a digital identity 
+solution with two-factor authentication. Data sharing system: % of surveyed countries that has a public sector data interoperability system. Digital 
+post: % of surveyed countries that has a common tool for government digital post. Digital notifications: % of surveyed countries that has a 
+common public sector tool for digital notifications. Digital payments: % of surveyed countries that has a common tool for digital payments in the 
+public sector. Single digital gateway: % of surveyed countries that has an online national public service catalogue, either as a website or app.   
+Source: OECD (2022), Survey on Digital Government 2.0 
+DPI for security and trust 
+Digital identity  
+Digital identity is a core digital public infrastructure, facilitating secure and efficient access to services 
+across both public and private sectors, and increasingly across borders. In line with the OECD 
+Recommendation on the Governance of Digital Identity, well-governed digital identity systems can 
+streamline access to essential services, promote greater inclusivity, and enhance economic opportunities, 
+including for marginalised groups. One of the key benefits of digital identity lies in its potential to improve 
+user experience, security and efficiency through unified authentication methods like single sign-on or 
+federated identity solutions (OECD, 2023[13]; OECD, 2024[14]). Countries are also increasingly adopting 
+digital identity wallets and credentials, which will allow individuals and organisations to securely share 
+verified attributes and credentials and more easily access services both online and offline (OECD, 2024[9]). 
+Digital identity is highly linked to secure and trusted digital payments, data and information sharing, and 
+communication and public service interaction.  
+Box 1. Digital identity solutions in the United Kingdom and the European Union 
+GOV.UK OneLogin 
+GOV.UK One Login provides a single way for users to create an account, log in and prove their identity 
+to access all central government services in the UK. It replaces the previous landscape of siloed and 
+73%
+85%
+58%
+55%
+55%
+85%
+Digital identity
+Data sharing
+system
+Digital post
+Digital
+notifications
+Digital payments
+Single digital
+gateways
+
+14    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+duplicative sign-in and identity-proofing methods, providing one ‘front door’ for connected services that 
+will continue to be operated by departments. This will replace up to 300 individual accounts, accessed 
+via 44 different sign-in methods; and will provide a significantly improved user experience. The One 
+Login system is fully operational. Users are able to set up an account, sign in and then prove (and 
+reuse) their identity to access an initial set of 50 (and growing) government services. Over 6.2 million 
+people have proven who they are through One Login, and its identity verification app - which has a 
+rating of 4.8* and 4.7* on Android and iOS stores respectively - has been downloaded more than 8.8 
+million times. 
+European Digital Identity Wallet  
+The European Digital Identity Wallet (EUDIW) will include the possibility for users, such as citizens or 
+residents in the EU, to store and share a wide range of attributes held by public bodies, for example, 
+name, address, tax information, the right to apply for social benefits, student qualifications, and the right 
+to drive. Users will be able to locate and store the attributes they need in their personal digital wallet 
+and share them directly with any requesting authority or service provider when required. As the 
+information is stored as information attributes, the user can select what data to submit in each case, 
+and the wallet will also enable users to electronically sign and seal documents. Each Member State will 
+offer at least one version of the EU Digital Identity Wallet by 2026, built to the same common 
+specifications.  
+Source: OECD (2024[9]), G7 Compendium of Digital Government Services; Information provided by the United Kingdom’s Government 
+Digital Service 
+Digital payments 
+Combined with secure digital identity frameworks and interoperable base registries (core data registries), 
+a unified and secure government-to-person (G2P) payment system can support more security and 
+accuracy in high-volume transactions like social cash benefits, which represent up to 20% of GDP in some 
+OECD countries (OECD, 2024[15]) or tax refunds and emergency cash transfers. One example is 
+Denmark’s NemKonto (Box 2). Another is Brazil’s Pix system, which is an instant payment system 
+managed by Brazil’s central bank that enables people, companies, and governmental entities to send or 
+receive instant payment transfers. In addition, a consistent, integrated person-to-government (P2G) digital 
+payment system for public services can simplify transactions for citizens and businesses to manage 
+payments such as taxes and fees. This reduces administrative complexity, enhances transparency, and 
+improves service efficiency (OECD, 2024[9]). One example is Italy’s PagoPA (Box 2). Other relevant 
+examples in this area include standardised e-invoicing, such as the mandatory use of the PEPPOL 
+standard in the EU, and e-procurement systems. 
+Box 2. Systems for G2P payments in Denmark and P2G payments in Italy 
+Denmark’s NemKonto 
+NemKonto makes it both easier and safer for public authorities in Denmark to make payments. The 
+NemKonto system makes payments to the person's Danish personal registration number (CPR-
+number), meaning that each individual authority does not have to know the bank details, thereby making 
+the system more secure. It also means that people do not have to contact several different authorities 
+if they change bank accounts. People simply get the new account assigned as their NemKonto, and 
+payments will automatically be deposited to the new account. For companies, the payments are made 
+to a company’s identification number in the Danish Central Business Register (CVR-number) for the 
+
+   15 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+same reasons. Users can check their NemKonto through the self-service feature on the National 
+Account Register website. Users, excluding companies, can also update their NemKonto on the self-
+service option. Access to the self-service requires the use of MitID (the Danish National eID). 
+Italy’s national payment platform PagoPa 
+PagoPA is a national payment platform that allows Italian citizens to choose how to pay taxes, duties, 
+or fees to the public administration and other participating entities that provide services to citizens. 
+Citizens can decide which among the currently 409 Payment Service Providers (PSPs) is best for them. 
+For public sector bodies, using pagoPA enables a more centralised and immediate collection 
+management system for reconciling debt positions and is especially effective for receiving any type of 
+payment. Benefits include time and resource savings, automated payments and debt reconciliation, 
+improved user experience, and enhanced traceability by reducing the use of cash payments. 
+Source: Agency for Digital Government (2024[16]) Nemkonto; OECD (2024[9]), G7 Compendium of Digital Government Services 
+DPI for data and information sharing 
+Base registries (core data registries) 
+Base registries, also known as core databases, foundational registries or core data registries, are 
+authoritative sources of key data elements or entities that are fundamental for various administrative or 
+governmental processes and services. These registries typically contain essential information about 
+individuals, organisations, locations, or assets, and serve as a reliable and centralised source of verified 
+information. They form the backbone of DPI and play a crucial role in enabling efficient and effective public 
+service delivery. Examples of base registries include registries and databases of people, companies, 
+licenses, buildings, locations, roads and vehicles. These are often managed by different public sector 
+organisations such as tax authorities, company offices, land registers, statistical agencies or environmental 
+agencies.   
+Box 3. Brazil’s Cadastro Único 
+Cadastro Único is a government-based registry used to support low-income households in Brazil. It 
+enables federal and local governments to better understand the country’s vulnerable population by 
+recording information such as address, family composition, education, employment, income status, 
+disability, among other details. The registry is the main reference used by the Brazilian State to select 
+and include low-income families in federal programmes, granting benefits from initiatives such as the 
+Bolsa Família Programme (conditional cash transfer), Pé de Meia (educational incentive), Tarifa Social 
+de Energia Elétrica (electricity), Auxílio Gás (cooking gas), Minha Casa Minha Vida Programme 
+(housing), among others. Additionally, it serves as a criterion for selecting beneficiaries of programmes 
+offered by state and municipal governments. Currently, more than 40 federal programmes and more 
+than 2,000 municipal and state programmes and policies use information from the registry. 
+Source: OECD (2024[17]) G20 Compendium on Data Access and Sharing Across the Public Sector and with the Private Sector for Public 
+Interest 
+
+16    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Data sharing  
+Effective data sharing systems, with appropriate safeguards including a risk-based approach to privacy 
+and security, are critical for creating better and more joined-up public services and interoperability, 
+facilitating the implementation of the once-only principle to reduce administrative burden. It is essential for 
+enhancing service quality and promoting innovation through data-driven insights. Moreover, these systems 
+have the potential to foster partnerships between the public and private sectors and civil society to co-
+create services, driving societal progress and economic growth. Examples of existing data sharing systems 
+include Estonia’s X-tee data exchange layer, the United Kingdom’s National Data Library, Japan’s Co-
+operation Network System for Personal Information, and Spain’s National Data Intermediation Platform 
+(PID) (Box 4).  
+Box 4. Data sharing systems in Spain, Japan, and the United Kingdom 
+Spain’s National Data Intermediation Platform (PID) 
+Spain’s National Data Intermediation Platform, known as the PID, is a brokerage system enabling 
+competent authorities in Spain to access data services from authoritative sources, thereby obtaining 
+relevant information related to public service users. The platform includes an authorisation process to 
+verify that there is a public interest and lawful basis for an authority to access the data, in compliance 
+with the GDPR. The PID is provided by the Secretariat-General for Digital Administration of the Ministry 
+for Digital Transformation and Public Function.  
+Japan’s Co-operation Network System for Personal Information 
+The Digital Agency of Japan manages the Co-operation Network System (NWS) for Personal 
+Information, which is used to exchange personal information associated with the Individual Number 
+between government agencies and other organisations, as stipulated by the Individual Number Act. 
+This system allows citizens to avoid submitting multiple documents (Certificates of Residence, 
+Certificates of Tax, etc.) when completing various administrative procedures. To protect citizen’s 
+privacy, only public sector entities have access to the NWS- private citizens and businesses cannot use 
+it. Additionally, the NWS does not store personal information itself; it only transmits specific data held 
+in a decentralised manner by individual public organisations.  
+The UK’s National Data Library 
+The National Data Library will unlock the value of public data assets. It will provide simple, secure and 
+ethical access to our key public data assets for researchers, policy makers and business – including 
+those at the frontier of AI development – and make it easier to find, discover and make connections 
+across different datasets. By unlocking public sector data, the National Data Library will support world-
+class science and R&D and will lay the foundations for the UK to compete at the global frontier of the 
+development of AI, delivering on the Government’s AI action plan. It will also drive forward a modern 
+government, enhancing the everyday experience of people and businesses when using public services.  
+Source: OECD (2024[17]) G20 Compendium on Data Access and Sharing Across the Public Sector and with the Private Sector for Public 
+Interest; OECD (2024[9]) G7 Compendium of Digital Government Services; Information provided by the United Kingdom’s Government 
+Digital Service 
+
+   17 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+DPI for communication and public service interaction 
+The digital age allows the public sector, citizens, and businesses to communicate more easily and securely 
+with each other. Sharing sensitive information with citizens and users of public services requires secure 
+digital communication as sensitive personal information is often exchanged. At the same time, it is 
+important to provide solutions that make these processes more user-friendly and consistent, reaching 
+people where they are or through their preferred channels. 
+Digital post  
+DPI tools such as digital post allow public authorities and private service providers to safely and securely 
+send important, often sensitive, information and messages to citizens and businesses through digital 
+channels. For example, digital post can be used to send out administrative decisions to individuals, or tax 
+declarations. In most countries that deploy digital post, these digital documents and messages are legally 
+binding, just like paper documents with official stamps, including deadlines, contracts, and signed 
+agreements. Since sensitive information is often shared, security is critical, and people need a secure 
+digital identity to access their digital post. Other aspects such as inclusion and accessibility are also 
+important. Examples of countries with existing digital post are Sweden (Box 5), Denmark’s digital post and 
+Norway’s digital mailbox.  
+Box 5. Sweden’s Digital post  
+In Sweden, citizens and organisations can receive digital post from public authorities through a secure 
+digital mailbox, accessed using electronic identification (e-ID). Currently, there are three digital mailbox 
+providers available, and acquiring one is free. The service, called "Mina meddelanden," is a national 
+infrastructure enabling safe and secure digital communication with public institutions, orchestrated by 
+the Agency for Digital Government (DIGG). 
+Various public entities use this platform to send either all or selected types of mail digitally. New senders 
+are continually added to the system automatically. Individuals only receive mail from authorities they 
+already interact with. To start receiving digital mail, users must choose a digital mailbox provider, 
+depending on whether they want to receive mail from both public and private organisations or just public 
+entities. This system simplifies communication while ensuring security and convenience for users. 
+Source: Agency for Digital Government (2024[18]), Digital post  
+Digital notifications 
+Common solutions for digital notifications make it easy for public sector institutions to send traditional 
+emails, text messages, and physical letters with information to service users, including citizens and 
+businesses. For example, these solutions can be used to notify citizens about a progress in their 
+administrative procedures or to prompt them to review or update important documents. Several countries 
+have developed dedicated, whole-of-government notification services based on open-source solutions, 
+such as the United Kingdom (GOV.UK Notify), Canada (GC Notify) (Box 6), the United States (Notify.gov). 
+Box 6. Canada’s GC Notify  
+
+18    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+GCNotify is a free-to-use, secure, cloud-based tool that provides a simple and efficient way for 
+Government of Canada departments to integrate email and text notifications into their services. 
+GCNotify is a government-run service, so using it does not require any external procurement. It provides 
+a bilingual interface and bilingual options for Government of Canada signature branding in email 
+messages by default to ensure compliance with the Federal Identity Program. It is enabled by a robust 
+Application Programming Interface (API) that allows connection to other services, including electronic 
+mailing list software like Listserv or other applications to send password resets, email confirmations, or 
+responses to forms. 
+Source: OECD (2024[9]), G7 Compendium of Digital Government Services 
+Single digital gateways 
+Single digital gateways to digital services can serve as digital public infrastructure by facilitating the 
+discovery and access of government services while promoting cost-effectiveness by reducing the need for 
+individual solutions and platforms. Aligned with the concept of government as a platform, single digital 
+gateways can function as centralised “app stores” of government services. They enable the integration of 
+digital building blocks –such as digital identity, digital notifications, and payments– as demonstrated by 
+Italy's IO app, Denmark's Borger.dk, and Estonia’s mRiik, as well as Spain’s Mi Carpeta Ciudadana and 
+Ukraine’s Diia app (Box 7).  
+Box 7. Single digital gateways in Spain and Ukraine  
+Spain’s citizen folder “Mi Carpeta Ciudadana” 
+"Mi Carpeta Ciudadana" allows citizens to receive notifications and consult their personal data, 
+documentation, appointments, notifications and open files managed by the different public 
+administrations in a single point, which will allow them to be updated on their procedures and keep their 
+administrative information up to date without having to travel, all from their mobile device. 
+It consists of a web portal and a mobile app, both for iOS and Android system, as well as a virtual 
+assistant (Ada), currently available only on the web, to help throughout the process, by searching for 
+services and typification of incidents, which is in constant learning for the continuous improvement and 
+evolution of the service. Mi Carpeta Ciudadana is the first big mobile app released within the Public 
+Administrations Digitisation Plan 2021 – 2025. 
+Ukraine’s Diia app 
+Diia - which is Ukrainian for "action" and an acronym for "state and me" - is a government-issued 
+application and portal that provides a new level of interaction between the state and citizens that is 
+convenient, seamless, and human-centred. It combines a mobile application with digital documents and 
+a portal of public services for citizens and businesses. By the end of the first quarter of 2024, Ukrainians 
+could access up to 118 services on the portal and up to forty-five services through the Diia application. 
+Through the app, Ukrainian citizens can also store digital documents with the same legal validity as 
+their plastic or paper counterparts – forming a digital identity wallet. There are currently nineteen digital 
+documents available through the app – including the national ID card, foreign biometric passport, 
+driver’s license and more. 
+Source: General Secretariat of Digital Government (2024[19]), Mi Carpeta Ciudadana – More Information; OECD (2024[9]), G7 Compendium 
+of Digital Government Services 
+
+   19 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Building reliable and effective DPI is a long-term effort. The global experience (including of OECD 
+countries) illustrates that the implications of DPI for digital government go beyond technology adoption. 
+DPI plays a critical role in enabling improved operations and services, in and beyond the public sector. For 
+instance, in Chile, the volume of transactions through DPI represents up to three times the number of 
+transactions done by the financial sector (Barros and Painecura Galaz, 2024[20]). Governments have a 
+critical role in designing, developing and operating DPI systems that enable digital transformation across 
+sectors. Therefore, essential questions include how DPI is managed and governed by governments, how 
+it is funded, what public-private partnerships are required for its development, deployment and use, and 
+what safeguards are needed for trusted, scalable and sustainable DPI.  
+Figure 4. DPI enablers 
+ 
+Source: Authors’ elaboration 
+4 Enablers of successful digital public 
+infrastructure 
+
+20    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Strategic frameworks to govern DPI 
+The key role of DPI in driving the digital transformation of governments and other sectors has led some 
+countries to establish dedicated frameworks or "stacks" to strategically govern, manage, and use DPI 
+components in the public sector and across sectors. These frameworks not only facilitate collaboration 
+among different stakeholders and create a shared vision for the design, development, management, and 
+promotion of DPI but also play a key role in enhancing cross-sectoral DPI. This is particularly important in 
+addressing emergencies such as climate crises or pandemics, where DPI readiness and resilience are 
+essential.  
+For example, Norway's National Joint Solutions are a set of DPI components overseen by the Norwegian 
+Agency for Digital Government (Digdir) (see Box 8). Other countries have adopted comparable 
+frameworks, such as Korea’s Digital Platform Government strategy, Sweden’s joint digital government 
+infrastructure Ena, Ireland’s Build to Share initiative, Australia’s MyGov, and the Singapore Government 
+Tech Stack. There have also been suggestions for developing a common EuroStack for the European 
+Union (Bria, 2024[21]). At the global level, the International Telecommunications Union (ITU) is leading the 
+GovStack initiative, which focuses on promoting common technical specifications for DPI components and 
+other resources, including their GovStack Playbook. 
+Box 8. Norway’s national joint solutions 
+Launched several years ago, the National Joint Solutions initiative, led by the Norwegian Agency for 
+Digital Government (Digdir), has produced 26 accessible national joint solutions, with 19 managed and 
+directly provided by Digdir. Eleven solutions are open for use by private entities, and eight are free of 
+charge, including the national cadaster register. Notable examples of joint solutions include ID-porten 
+(a single-sign-on solution), Varsling (common notification), eBevis & eSignature, Altinn (common 
+service platform), Basic data registers (including population register & company register), Styrning av 
+tilgang (access control), and Digital postkasse (digital post). Currently, 69% of public agencies in 
+Norway use these joint solutions, with 66% expressing positive views on how they contribute to better 
+solutions within their own organisations. The National Joint Solutions are managed by the Norwegian 
+Agency for Digital Government (Digdir) in collaboration with other relevant government agencies.  
+Source: OECD (2024[22]), The Digital Transformation of Norway's Public Sector 
+When it comes to developing countries, DPI offers an opportunity to leapfrog progress from a less 
+advanced starting point, compared to the trajectory of progress in developed countries with established 
+DPI. Developed countries often have a significant number of ageing DPI systems and legacy technology 
+that is both expensive and complex to operate and even more expensive to transition from. In contrast, the 
+relative technological greenfield of developing countries means they can move more directly and quickly 
+to efficient and streamlined solutions. For developing countries to make such progress requires a holistic 
+strategic approach that builds firm foundations. It would involve building the fundamental infrastructure 
+supporting systems, applications, networks and users, and pairing it with open, interoperable and quality 
+data. One example is the work of the Government of India with the IndiaStack, which consists of a wide 
+range of common building blocks that are driving the digital transformation of both government and the 
+economy, led by the Ministry of Electronics and Information Technology (MeitY) (Box 9).  
+
+   21 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Box 9. IndiaStack 
+IndiaStack is a comprehensive set of open application programming interfaces (APIs) and digital public 
+infrastructure that has revolutionised service delivery in India. It consists of key components such as 
+Aadhaar, the world's largest biometric-based digital identity system; the Unified Payments Interface 
+(UPI) for real-time, interoperable digital payments, and a series of components for electronic signature 
+and storage of personal documents.  
+IndiaStack is managed through a collaborative ecosystem involving government bodies, regulatory 
+authorities, private entities, and non-profit organisations. The management and development of 
+IndiaStack's core components are spearheaded by key institutions under the leadership of the Ministry 
+of Electronics and Information Technology (MeitY), including the Unique Identification Authority of India 
+(UIDAI), the National Payments Corporation of India (NPCI), and iSPIRT (Indian Software Product 
+Industry Round Table), among others.  
+Source: IndiaStack (2024[23]), indiastack.org 
+Collaboration with the private sector and non-governmental actors 
+Fostering public-private collaboration is essential to ensure innovation, scalability, security, and 
+accessibility when designing, developing and governing DPI. Given the broad impact of DPI on 
+governments, societies, and economies, it is crucial to establish partnerships and promote a dynamic DPI 
+ecosystem that includes the public sector, private sector, academia, and non-profit organisations. Such an 
+ecosystem and its partnerships must balance the coherent and sustainable management of DPI with its 
+application across sectors. This can take several forms, including: 
+• 
+Co-governance and oversight of DPI: Involving private and non-governmental actors in DPI 
+governance can enhance transparency, accountability, and shared ownership of DPI components. 
+This includes participation from representatives of the IT sector and relevant civil society 
+organisations, which can contribute to a more trusted and sustainable development and use of 
+DPI. Examples such as Norway's National Joint Solutions and India's IndiaStack, which are 
+managed in collaboration with non-governmental stakeholders (Box 10), highlight the important 
+role these actors play in DPI governance. 
+• 
+Co-development of DPI: The design, development and management of DPI may require 
+collaboration with non-government actors, often through public-private partnerships (PPPs). For 
+instance, Estonia’s data-sharing platform X-Road is currently managed by the Nordic Institute for 
+Interoperability Solutions, a multi-country non-profit organisation that oversees its core 
+development, ensuring scalability across countries and sectors. In Denmark, the digital identity 
+system MitID (the successor to NemID) is a joint project between public authorities and private 
+banks, with shared ownership and funding. 
+• 
+Cross-sectoral adoption and use of DPI: Crucially, DPI components offer benefits beyond the 
+public sector, extending to the wider digital economy. DPI often plays a key role in providing more 
+inclusive access to private services. The examples from India, Norway, Denmark, Ireland, and 
+Singapore demonstrate how DPI components can be integrated by the private sector to deliver 
+services across various sectors. 
+ 
+
+22    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Box 10. Denmark’s public-private collaboration on digital identity 
+In Denmark, the digital identity system MitID is managed through a public-private collaboration involving 
+both government entities and private sector partners. The Danish Agency for Digital Government leads 
+the public side, ensuring that MitID adheres to national standards and public policy goals. Private sector 
+partners, notably banks and other financial institutions, play a crucial role in implementing and operating 
+the system. This partnership allows the system to integrate with essential services, including online 
+banking, government services, and private platforms. 
+The public-private collaboration ensures that MitID is both secure and widely adopted across different 
+sectors. By involving private actors, especially banks, the system benefits from their experience in 
+managing secure transactions and customer verification. Additionally, the collaboration supports 
+innovation while maintaining robust security standards. This cooperative model also helps distribute the 
+costs and administrative responsibilities between the public and private sectors. 
+Source: MitID (2024[24]), About MitID 
+Investment and funding models 
+A key element of successfully implementing DPI is ensuring its support through strategic and sustainable 
+investments in digital government. This requires allocating and managing funds not only for the transition 
+from legacy systems and the development of DPI but also for DPI operation and maintenance, all while 
+aligning with broader policy goals such as environmental sustainability and national resilience. The 
+comparison between DPI and physical infrastructure highlights the importance of securing long-term 
+development, operation, maintenance, and eventual decommissioning of DPI through multi-year funding, 
+alongside potentially shared business models between governments and private sector providers. 
+The approach to investing in DPI varies across OECD countries. Many have adopted centralised funding 
+models for the development of DPI components. In addition to this, some countries are exploring business 
+models that involve contributions from both public and private institutions that use DPI components, 
+introducing transaction fees to help finance the operation and maintenance of these systems. For example, 
+Sweden, drawing on the experiences of Norway, Finland, and Denmark, has introduced fixed and variable 
+fees for entities using DPI components such as digital identity and post (Box 11). 
+Given the critical role of DPI, robust investment management models are essential. This includes 
+establishing effective planning, prioritisation, and oversight mechanisms that ensure the realisation of 
+benefits and a satisfactory return on investment. It also includes the implementation of monitoring tools 
+such as DPI-specific key performance indicators (KPIs) that inform the development and operation of DPI 
+systems throughout their lifecycle.  
+Box 11. Sweden’s funding model for DPI 
+DIGG, the agency responsible for digital government in Sweden, has developed a fee and 
+compensation model for public actors using DPI, such as digital identity and digital post. The purpose 
+of this model is to regulate the fees public entities must pay and the compensation suppliers receive. 
+The compensation model consists of two parts: fixed and variable. The fixed portion is designed to 
+encourage competition by offering smaller or newer suppliers a consistent pecuniary compensation. 
+
+   23 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+The variable part is based on transaction volume, where suppliers receive additional compensation if 
+they exceed a certain number of annual transactions. Fees paid by public actors are determined by the 
+number of transactions in a given period, including administrative costs incurred by DIGG. 
+In developing this model, Digg collaborated with experts, public users, and vendors to account for the 
+diverse needs of various actors, including large and small authorities, municipalities, and regions. They 
+also drew insights from similar systems in Norway, Finland, and Denmark. DIGG plans to evaluate the 
+model's effectiveness after some time to address potential changes in the e-identification and digital 
+mail markets. 
+Source: Swedish Agency for Digital Government (2024[25]), Avgifter och ersättning inom auktorisationssystem e-legitimering och digital post 
+[Fees and Compensation within the Authorisation System for e-Identification and Digital Mail] 
+Safeguards 
+While DPI offers a wide range of benefits, it also presents challenges and potential risks that need to be 
+addressed to ensure the development of effective and trusted systems that contribute to better digital 
+societies and leave no one behind. Examples of such risks and challenges include: 
+• 
+Issues of exclusion: Exclusion arises when DPI is not designed to address the needs of minorities 
+or groups with specific requirements, including but not limited to the elderly, migrants, individuals 
+with disabilities, or those with limited digital literacy.  
+• 
+Privacy concerns: Poorly designed DPI may lead to the misuse or unauthorised access to 
+personal data, eroding public trust and exposing individuals to risks such as identity theft or 
+surveillance. 
+• 
+Security vulnerabilities: Weak digital security measures in DPI can make societies vulnerable to 
+data breaches, cyberattacks, or disruptions of critical services. 
+• 
+Dependence and resilience: Overreliance on DPI without adequate fallback systems may 
+compromise societal resilience during system failures, natural disasters, or cyber incidents. 
+To enhance inclusion, privacy, and overall satisfaction with DPI, adopting a human-centred approach is 
+essential3. This involves designing, developing, and implementing DPI systems that prioritise the needs, 
+rights, experiences, and well-being of individuals (OECD, 2024[9]). Such an approach requires 
+understanding and addressing people’s perspectives, preferences, and challenges to create DPI systems 
+that are meaningful, accessible, and beneficial. 
+Safeguards are also crucial, and international cooperation can play a significant role in their development.  
+For example, the UN Universal DPI Safeguards Framework offers a set of principles, processes, and 
+practice recommendations to guide the design, deployment, and use of DPI systems. These safeguards 
+aim to mitigate potential risks and ensure sustainable, effective implementation (United Nations, 2024[26])). 
+Safeguards can take various forms depending on a country’s context and approach to DPI. For instance, 
+robust digital security and privacy-by-design and by default measures are important, including mechanisms 
+for empowering users with oversight or control over their personal data flowing across DPI components. 
+Ethical and trust-related measures are also critical, including promoting fair access, algorithmic 
+transparency, adopting strong data governance frameworks, incorporating digital public goods, and 
+engaging the public in DPI decision-making (OECD, 2020[7])). Recognising the role of DPI in enabling 
+ 
+3 Relevant OECD guidance supporting a human-centered approach to service design includes the Recommendation on Human-Centered Public 
+Administrative Services and the Good Practice Principles for Public Service Design and Delivery in the Digital Age. 
+
+24    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+trusted access to and sharing of data, it is vital to design DPI frameworks and systems that align with 
+existing public sector data governance frameworks (OECD, 2024[17]).  
+
+   25 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Digital public infrastructure (DPI) plays a key role in facilitating digital government transformation and 
+advancing the broader digital economy. Countries seeking to design, develop and implement successful 
+DPI could consider taking the following steps: 
+• 
+Adopt a strategic framework to effectively govern and manage the country’s DPI. This could 
+cover digital identity, digital payments, core data registries, data sharing systems, digital 
+notifications, digital post, and single digital gateways, such as Norway’s National Joint Solutions 
+or India’s IndiaStack.  
+• 
+Promote multi-stakeholder collaboration on DPI to enable transparency, innovation, and 
+scalability, including potential cross-sectoral and cross-border adoption, drawing on examples 
+such as Denmark’s MitID. 
+• 
+Ensure sustainable DPI through strategic investment and funding across DPI design, 
+development, operation, and maintenance, while considering the transition from legacy systems 
+and aligning with policy goals such as environmental sustainability and resilience. Robust 
+planning, prioritisation, and oversight are critical to maximise long-term benefits and return on 
+investment. 
+• 
+Adopt and ensure a human-centred approach to DPI by prioritising individuals’ rights, needs, 
+and preferences. This also includes implementing robust safeguards, such as privacy-by-design 
+and digital security measures, robust data governance frameworks, and ethical standards.   
+• 
+Engage in international digital co-operation to strengthen peer learning and share valuable 
+solutions, including digital public goods, to support the development of DPI across countries and 
+regions with different contexts and economic development levels.  
+5 Policy recommendations 
+
+26    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+References 
+ 
+Agency for Digital Government (2024), “Digital post”, www.digg.se, https://www.digg.se/digitala-
+tjanster/digital-post (accessed on  November 2024). 
+[18] 
+Agency for Digital Government (2024), “NemKonto”, Systems, 
+https://en.digst.dk/systems/nemkonto/ (accessed on  November 2024). 
+[16] 
+Barros, A. and P. Painecura Galaz (2024), “Transversal Services, large animal!”, Blog el ABC, 
+https://www.alejandrobarros.com/servicios-transversales-animal-de-gran-tamano/ (accessed 
+on  October 2024). 
+[20] 
+Bria, F. (2024), “Toward European Digital Independence: Building the Euro Stack”, Redirecting 
+Europe’s AI Industrial Policy: From Competitiveness to Public Interest, 
+https://ainowinstitute.org/publication/x-european-digital-independence-building-the-eurostack. 
+[21] 
+Digital Public Goods Alliance; GIZ (2022), GovStack Denitions: Understanding the Relationship 
+between Digital Public Infrastructure, Building Blocks & Digital Public Goods, 
+https://www.digitalpublicgoods.net/DPI-DPG-BB-Definitions.pdf. 
+[3] 
+e-Estonia (2019), Estonia to share its e-governance know-how, https://e-estonia.com/global-
+digital-society-fund/ (accessed on  November 2024). 
+[5] 
+G20 (2023), G20 New Delhi Leaders’ Declaration, 
+https://www.consilium.europa.eu/en/press/press-releases/2023/09/09/g20-new-delhi-leaders-
+declaration/. 
+[1] 
+General Secretariat of Digital Government (2024), “Mi Carpeta Ciudadana - More Information”, 
+Carpetaciudadana.gob.es, 
+https://masinformacioncarpeta.carpetaciudadana.gob.es/infocc/en/masInformacion.html 
+(accessed on  November 2024). 
+[19] 
+IndiaStack (2024), indiastack.org, https://indiastack.org/. 
+[23] 
+Kartverket (2024), Bekymret for finansiering av fellesløsningene, https://kartverket.no/om-
+kartverket/nyheter/alle/2024/mars/finansiering-av-felleslosninger-for-geodata (accessed 
+on  November 2024). 
+[4] 
+
+   27 
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Loosemore, T. (2018), “Making government as a platform real”, Public Digital Insights Blog, 
+https://public.digital/pd-insights/blog/2018/09/making-government-as-a-platform-real. 
+[10] 
+MitID (2024), About MitID, https://www.mitid.dk/en-gb/about-mitid/ (accessed on  October 2024). 
+[24] 
+OECD (2024), “2023 OECD Digital Government Index: Results and key findings”, OECD Public 
+Governance Policy Papers, No. 44, OECD Publishing, Paris, 
+https://doi.org/10.1787/1a89ed5e-en. 
+[12] 
+OECD (2024), G20 Compendium on Data Access and Sharing Across the Public Sector and with 
+the Private Sector for Public Interest, OECD Publishing, Paris, 
+https://doi.org/10.1787/df1031a4-en. 
+[17] 
+OECD (2024), G7 Compendium of Digital Government Services, OECD Publishing, Paris, 
+https://doi.org/10.1787/69fbf288-en. 
+[9] 
+OECD (2024), G7 Mapping Exercise of Digital Identity Approaches, OECD Publishing, Paris, 
+https://doi.org/10.1787/56fd4e94-en. 
+[14] 
+OECD (2024), Recommendation of the Council on Human-centred Public Administrative 
+Services, https://legalinstruments.oecd.org/instruments/instruments/OECD-LEGAL-0503. 
+[11] 
+OECD (2024), Social benefits to households, In cash, % of GDP, 2022, 
+https://www.oecd.org/en/data/indicators/social-benefits-to-households.html?oecdcontrol-
+00b22b2429-var3=2022 (accessed on  November 2024). 
+[15] 
+OECD (2024), The Digital Transformation of Norway’s Public Sector, OECD Publishing, Paris, 
+https://doi.org/10.1787/1620e542-en. 
+[22] 
+OECD (2023), Recommendation of the Council on the Governance of Digital Identity, 
+https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0491. 
+[13] 
+OECD (2021), “The OECD Framework for digital talent and skills in the public sector”, OECD 
+Working Papers on Public Governance, No. 45, OECD Publishing, Paris, 
+https://doi.org/10.1787/4e7c3f58-en. 
+[27] 
+OECD (2020), The OECD Digital Government Policy Framework: Six Dimensions of a Digital 
+Government, OECD Publishing, Paris, https://doi.org/10.1787/f64fed2a-en. 
+[7] 
+OECD (2014), Recommendation of the Council on Digital Government Strategies, 
+https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0406. 
+[28] 
+O’Reilly, T. (2011), “Government as a Platform”, Innovations: Technology, Governance, 
+Globalization, Vol. 6/1, pp. 13-40, https://doi.org/10.1162/INOV_a_00056. 
+[8] 
+
+28    
+DIGITAL PUBLIC INFRASTRUCTURE FOR DIGITAL GOVERNMENTS © OECD 2024 
+  
+Swedish Agency for Digital Government (2024), Avgifter och ersättning inom 
+auktorisationssystem e-legitimering och digital post [Fees and Compensation within the 
+Authorisation System for e-Identification and Digital Mail], https://www.digg.se/digitala-
+tjanster/auktorisationssystem/avgifter-och-ersattning-inom-auktorisationssystem-e-
+legitimering-och-digital-post (accessed on  October 2024). 
+[25] 
+UNDP (2023), The Human and Economic Impact of Digital Public Infrastructure, UNDP, New 
+York, https://www.undp.org/sites/g/files/zskgke326/files/2023-07/undp-the-human-and-
+economic-impact-of-digital-public-infrastructure-final.pdf. 
+[6] 
+United Nations (2024), Global Digital Compact, https://www.un.org/techenvoy/global-digital-
+compact (accessed on  November 2024). 
+[2] 
+United Nations (2024), Universal Digital Public Infrastructure Safeguards Framework, https://dpi-
+safeguards-framework.org/frameworkpdf. 
+[26] 
+ 
+ 
+ 

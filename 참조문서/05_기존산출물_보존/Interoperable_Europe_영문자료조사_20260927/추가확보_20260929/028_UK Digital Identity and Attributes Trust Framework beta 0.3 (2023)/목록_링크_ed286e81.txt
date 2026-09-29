@@ -1,0 +1,1449 @@
+UK digital identity and attributes trust framework beta version (0.3) - GOV.UK
+Cookies on GOV.UK
+We use some essential cookies to make this website work.
+We’d like to set additional cookies to understand how you use GOV.UK, remember your settings and improve government services.
+We also use cookies set by other sites to help us deliver content from their services.
+You have accepted additional cookies.
+You can
+change your cookie settings
+at any time.
+You have rejected additional cookies.
+You can
+change your cookie settings
+at any time.
+Accept additional cookies
+Reject additional cookies
+View cookies
+Hide cookie message
+Skip to main content
+Office for Digital
+Identities & Attributes
+Department for
+Digital, Culture,
+Media & Sport
+(2017 to 2023)
+Department for
+Science, Innovation
+& Technology
+Print this page
+© Crown copyright 2023
+This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit
+nationalarchives.gov.uk/doc/open-government-licence/version/3
+or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email:
+psi@nationalarchives.gov.uk
+.
+Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
+This publication is available at https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-beta-version/uk-digital-identity-and-attributes-trust-framework-beta-version
+1. Ministerial foreword
+Julia Lopez MP, Minister for Media, Data and Digital Infrastructure
+In 2021, we published an ‘alpha’ prototype of the UK digital identity and attributes trust framework - a set of rules and standards designed to establish trust in digital identity products in the UK. Over the past 18 months, we have worked with over 250 organisations across civil society, industry, standards bodies, and academia to test whether we’ve got these rules and standards right.
+With thanks to those who provided feedback, I am excited to publish this beta update of the trust framework.
+This is another step towards realising our ambition of enabling the use of secure and trusted digital identity products in the UK. People will be able to choose to use these products, making it easier, safer and cheaper to prove things about themselves.
+Seeking out views from the public has been central to moving the trust framework to beta phase.
+Research on public perceptions of digital identities and attributes
+conducted by BritainThinks provided important insights about what people need to trust and adopt digital identities. Users were clear that they wanted digital identities to be easy to use, safe, reliable, and offer control over personal data, with clarity over providers’ business models. We have taken all of these into account when updating the trust framework.
+The trust framework has been developed in an open and iterative way, inviting all interested parties to provide feedback throughout the process. As part of this, 43 businesses completed a self-assessment against trust framework alpha rules. I was grateful for participants’ time taken to complete this exercise and their constructive feedback, and glad to see that participants were well aligned with trust framework rules.
+We have previously committed to encouraging the recognition of trusted digital identities across borders. During the alpha phase, we have assessed how trust framework rules compare to frameworks being developed in other countries. We will continue working with international partners to better understand how to achieve the ambition of international interoperability in a way which best aligns with UK democratic values and principles.
+With the publication of this beta update, we will be able to test the effectiveness of the trust framework in more dynamic ways. This testing has already begun, with the government’s work to
+enable digital right to work, rent, and criminal record checks
+, and will continue until we are confident the trust framework is ready to go ‘live’.
+We will use sandboxes and live market testing to ensure that the trust framework is fit for use in the real world. Testing during the beta phase will also allow industry to show consumers how trustworthy digital identity and attribute products can benefit them by offering simple and secure ways for people to prove things about themselves. Further information on beta testing will be published in due course.
+Just as it would not have been possible to publish the beta version of the trust framework without the active and constructive input of all interested parties, working with them will be fundamental to our approach as we move towards live publication, once legislation has come into force.
+I look forward to continuing to work together on our shared ambition to unlock the benefits of digital identities and attributes.
+2. Feedback received and updates
+The UK digital identity and attributes trust framework is being developed through an iterative process. This approach allows for testing to ensure that trust framework rules are appropriate, proportionate, and deliver on the
+digital identities principles set out by the government
+.
+This section sets out the key policy changes made for the beta publication of the trust framework. These changes have been made in response to feedback received through the alpha testing process. This process included a self-assessment exercise with providers and regular engagement with over 250 stakeholders across industry, civil society, the public sector, and other experts.
+2.1 Alpha testing process
+The publication of the alpha trust framework was followed by an online survey. Survey responses were used to develop the alpha version 2, which refined the trust framework’s requirements.
+The objectives of alpha testing were to:
+assess whether trust framework rules are fit for purpose and where they should be improved;
+understand the level of interest from organisations to become certified against the trust framework;
+begin to test and refine the proposed certification process for joining the trust framework through user research; and
+gather evidence of stakeholder understanding and feedback to refine the trust framework and progress to the beta phase.
+In order to fulfil these objectives, testing of the alpha trust framework was conducted through a self-assessment exercise with industry. In September 2021,
+DCMS
+published an expression of interest for non-public sector organisations to take part in alpha testing by completing a self-assessment against rules in the trust framework alpha version 2. To be eligible to take part in self-assessments, organisations had to be interested in playing the roles of identity, attribute, or orchestration service providers.
+DCMS
+received 43 submissions from eligible private sector organisations that were interested in participating in the self-assessment exercise. The high number of submissions and the variety in organisations’ sectors and stages of development give us confidence in the robustness of the testing exercise.
+Alongside the self-assessment materials, participants were invited to fill out a user research questionnaire. User research formed a central part of alpha testing because it allowed respondents to provide direct feedback on the self-assessment materials and trust framework rules.
+Self-assessment submissions were of a high quality. Strong alignment with the majority of the trust framework rules demonstrated that these rules were fit for purpose. The areas where participants provided constructive feedback or where compliance was weaker are reflected within the beta update. The volume of self-assessments received made it clear that there was high interest in certification against the trust framework.
+As well as running self-assessments,
+DCMS
+invited other stakeholders to submit feedback on the trust framework rules. Overall, over 250 organisations engaged with
+DCMS
+over 28 structured feedback sessions during the alpha phase. Close collaboration with a range of organisations was vital to inform the beta update, and we look forward to continued engagement as we refine the trust framework throughout the beta phase.
+In December 2021, the government announced its intention to use the trust framework to
+enable digital right to work, rent and criminal record checks using digital identity providers
+. Our proposals for certification are now being tested through this live use case andarly findings have helped to refine the trust framework. We will continue to undertake dynamic tests of the trust framework throughout the beta phase.
+2.2 Changes made for beta version
+New roles
+The trust framework alpha version 2 outlined three broad role types that providers could play under the trust framework: identity, attribute, and orchestration service providers. During alpha testing, some organisations expressed concerns that their services were not captured by any of these three broad role types. In particular, digital wallet providers and providers operating business-to-business models found it difficult to identify what trust framework rules they needed to meet.
+To address this feedback, we have developed sub-roles for each of the three broad role types. These sub-roles do not substantively change the three broad role types or the rules that apply to them. Rather, they add a layer of granularity to each one with the intention of clarifying which role type - and corresponding rules - apply to trust framework participants. Any of the roles can be played by organisations operating a business-to-business model. We have clarified how providers operating in this way can meet rules throughout the text.
+Relying party flow down terms
+Relying parties do not need to be certified against the trust framework in order to adopt digital identities. However, it is vital that their practices reflect the principles behind the trust framework rules. Alpha version 2 of the trust framework included a commitment to define these behaviours through flow down terms. The beta version of the trust framework sets out these flow down terms and how they apply to organisations who have a relationship with trust framework organisations.
+The terms are designed to encourage relying parties to follow good practice while allowing the market to innovate. As this is the first time they are included, the effectiveness and proportionality of flow down terms will be tested during the beta phase.
+Fraud and security
+Ensuring that digital identity and attribute solutions are safe and mitigate against fraud is vital for the safety of citizens and businesses. The processes that organisations need to follow to mitigate and manage fraud depend on their sector and corresponding regulations. However, the trust framework also plays an important role in setting fraud management requirements for all trust framework participants.
+During alpha testing, we received feedback that the rules on fraud management should be more detailed. We have included more explanation on existing requirements and new requirements on best practice to support organisations in developing solutions that rely on robust fraud mitigation and management. This includes detail on fraud monitoring and reporting (including a requirement to monitor the threat of synthetic identities), and examples of methods to conduct intelligence and fraud analysis.
+The fraud landscape is evolving at pace and management requirements in the trust framework will be frequently reviewed to stay relevant and robust.
+Schemes
+Previous versions of the trust framework included an option for organisations to join the trust framework through a scheme that is licensed by the governing body. The findings from alpha testing have shown that the market is not at a stage of development for
+DCMS
+to enable certification through schemes or determine an effective licensing process. We intend to keep intervention to what is necessary for the market to function and have updated the trust framework’s position on schemes accordingly. We will be testing options for scheme oversight at a later stage.
+To reflect the fact that schemes are in the early stages of development, the trust framework states that providers can only join the trust framework through direct certification by independent certification bodies. Any previous certifications aligned with and/or referenced in trust framework rules, including certification against potential scheme rules, can be used to prove compliance during trust framework certification more easily.
+While schemes will not be subject to licensing at this stage, the trust framework beta outlines recommendations for scheme owners. Following these requirements will facilitate interoperability and ensure the proper functioning of the market. Scheme owners are strongly encouraged to follow these recommendations when setting up a scheme.
+We will continue to proactively monitor the development of schemes and engage regularly with scheme owners. This will enable us to respond with policy interventions that support trust framework participants and the broader digital identity market.
+Biometrics
+The use of biometric technology for identity verification and authentication can offer accuracy and security to services that seek higher levels of assurance. To ensure that all users of digital identities can benefit from these features, biometric technology needs to be inclusive and accessible. Appropriate testing of biometric technology helps ensure the technology works for a wide range of users. Following feedback from stakeholders in industry and civil society, the trust framework beta includes the strengthened requirement to test biometric technologies following an industry standard, which will apply to all services using biometrics.
+Data schema
+One of the key goals of the trust framework is to facilitate interoperability. In the previous version of the trust framework, we published a draft of technical guidance covering
+OpenID Connect
+and W3C’s
+Verifiable Credentials
+data models, and invited industry to collaborate on its development. This collaboration made it clear that the best way to support industry in achieving technical interoperability would be to offer an overarching data schema designed to be consistent with different approaches to data exchange. This approach is broader than the technical guidance originally suggested and therefore allows for greater flexibility. The data schema enables industry to exchange data consistently while remaining technology agnostic. Following the data schema is not mandatory but providers are encouraged to use it to facilitate interoperability.
+Working within the market
+Alpha testing assessed whether it was feasible to expect that trust framework participants would only share and receive identity and attribute data with other trust framework participants. This was tested through user research conducted with self-assessment participants and engagement with industry.
+The response to this issue was mixed. It is clear there would be significant security and trust benefits if providers only worked with other trust framework participants. However, mandating that they must do so could jeopardise some providers’ business models. Consequently, the beta version of the trust framework does not mandate that providers can only share data with other trust framework participants. Instead, we have introduced a requirement for providers to provide information on the services used in their supply chains, including whether they are trust framework participants, during certification. Certification bodies will periodically report this information to the governing body in an anonymous and aggregate form. Details on how providers should comply with this requirement will be communicated directly by certification bodies.
+The governing body will use the information to monitor the market. This will help establish where there is demand for particular types of certified providers, assess the security of the market and observe how the digital identity and attributes market is progressing. This will support the governing body to actively review its position on this issue. It is possible that future trust framework iterations may include an expectation to only share and receive identity and attribute data with other trust framework participants.
+Inclusion monitoring
+The trust framework alpha version 2 explained our proposal for certified providers to submit an annual ‘exclusion report’ as part of the certification process. We consulted on this requirement in the
+digital identity and attributes consultation
+.
+Responses to the consultation show a clear appetite for measures to improve inclusion. However, there was a concern from some respondents that the term ‘exclusion report’ gave an inaccurate impression of the purpose of the report. The report has been renamed to an ‘inclusion monitoring report’ and the beta version includes an explanation of its purpose.
+We believe this reporting tool will have tangible benefits, encouraging inclusive digital identity solutions and providing an evidence base so that the governance body can determine whether any further policy intervention is needed.
+Details on how the report needs to be completed will be provided by certification bodies directly. Information gathered through reports will be delivered to the governing body anonymously. The governing body will use organisations’ reports to monitor inclusion across the market and make recommendations for further action, if needed.
+User agreement
+Ensuring that users understand and agree with how their data is used in digital identity and attribute services is vital to create trust and protect citizens - two key objectives of the trust framework.
+Research on public perceptions of digital identities and attributes
+conducted by the think tank BritainThinks found that personal control of data was a key determinant of whether individuals are likely to use a digital identity. As a result, the trust framework includes a requirement for providers to obtain user agreement for how personal data in digital identities and attributes is shared and disclosed.
+During alpha testing, several organisations provided feedback on the trust framework’s requirement to obtain user agreement.
+The first point of feedback on user agreement received reflected a misunderstanding that this user agreement obliged the use of consent as the lawful basis for data processing. None of the trust framework iterations determined which lawful bases under UK GDPR providers should use for the processing of personal data. Adopting a lawful basis that is appropriate for the service is the provider’s responsibility, and consent is only one option that providers might consider. To address this misunderstanding, the beta version of the trust framework clarifies the definition of user agreement and reiterates that the trust framework does not determine what lawful basis providers should use.
+The second point of feedback highlighted that organisations who do not interact with users directly would find it difficult to obtain user agreement. This feedback allowed us to iterate our conception of user agreement to protect customers’ interests without placing a disproportionate burden on industry. The beta version of the trust framework addresses concerns about organisations with a business-to-business operating model’s ability to obtain user agreement. To do this, the trust framework requires providers who are in direct contact with users to obtain user agreement on behalf of their own service and others in the supply chain with whom data will be shared, but who do not have direct contact with the user.
+The updated requirement for user agreement aims to achieve the best balance between putting users in control of their digital identity and attributes and avoiding adding unnecessary friction for businesses and users. During beta testing, we will directly test this approach to identify best practice and where rules might be difficult to adhere to. This will allow us to work together with industry, civil society and the public to further refine user agreement requirements as we move towards the ‘live’ phase of the trust framework.
+Good Practice Guide 45 update
+During self-assessments, participants were required to describe how their services aligned with
+Good Practice Guide 45 (GPG45)
+on how to prove and verify someone’s identity. Several participants found it difficult to self-assess against the guidance, despite evidence in the description of the service that they were meeting the rules. Other organisations gave us direct feedback on areas of the guidance that needed more detail. We have made updates to the guidance in response. Changes include additional detail on document inspection training and additional examples of fraud databases that can be used as part of identity checking.
+Data Protection Impact Assessment
+When publishing alpha version 2, we committed to publishing a Data Protection Impact Assessment (
+DPIA
+) of the trust framework, in response to the
+ICO’s position paper on the government’s proposal for a trusted digital identity system
+. The
+DPIA
+articulates how the privacy of citizens is protected at a trust framework level, describing the potential risks associated with data processing performed for the purposes of digital identities. The
+DPIA
+will be published in due course.
+Alternative pathway
+The digital identity and attributes consultation asked the public if a requirement to allow an alternative pathway for those who fail a digital check should be set out in legislation or in standards. The majority of analysed responses agreed that the proposal to require an alternative pathway should be set out in standards.
+In response, the trust framework beta includes a requirement for providers to allow users to retake an identity or attributes check in case a check fails and there is no suspicion of fraudulent activity. This can be done, for example, by resolving transposition errors or using different data, without compromising on the level of confidence required for the identity and attributes.
+Trust mark
+Future legislation will allow the governing body to issue trust marks for organisations who have been certified against the trust framework and agreed to be subject to governance. This visual representation will make it easier for users and relying parties to identify trustworthy providers. These providers will be defined as being trust-marked organisations and entered into a list of trust-marked organisations held by the governing body.
+Prior to the publication of the live trust framework,
+DCMS
+will be maintaining a list of certified organisations, but will not be issuing trust marks.
+Liability
+Clarity around liability is essential for the trust framework to work. Alpha testing concluded that the liability between organisations should be predominantly left to organisations to determine through contractual arrangements (which may be embedded into scheme-level terms and conditions, for organisations that decide to join a scheme).
+This is for three main reasons. Firstly, the varying sectors, use cases and risk appetites for organisations building and using digital identity solutions are so broad that it would be extremely difficult to agree conditions that work for all parties. Secondly, there is a desire from the market for the government to deliver what only the government can deliver; setting liability arrangements between commercial organisations would overstep this boundary. Lastly, industry is well-equipped to manage their liabilities in other areas and the trust framework will provide the foundation upon which to build these arrangements in a digital identity context.
+Trust framework rules and certification can be used as criteria for fault-based liability, whereby organisations are only liable to each other in most circumstances if they have not followed trust framework rules. This is a position we envisage organisations considering as they develop their commercial relationships.
+Information on beta testing
+The publication of this update allows us to start more dynamic testing as part of the beta phase. Alpha testing focused on assessing understanding of the trust framework, and beta testing aims to evaluate its effectiveness. Live testing of the effectiveness of the trust framework was initiated with the certification scheme set up for digital right to work, rent, and criminal record checks, and will continue with other use cases.
+This new testing phase will also support the development of the market. Relying parties will be able to further understand how trusted digital identity and attributes services can support businesses, and providers will be able to refine their services based on testing.
+We will be focused on testing sections of the trust framework that received substantial updates as part of the beta publication, such as rules on user agreement, the inclusivity of biometric technologies, and flow down terms for relying parties.
+Testing will use various methodologies, including sandbox style exercises. Details on how organisations can take part will be published in due course.
+3. Introduction
+This is the UK digital identity and attributes trust framework beta version, which follows two alpha iterations published in February and August 2021. The trust framework aims to make it easier and more secure for people to use services that enable them to prove who they are or information about themselves. It is a set of rules for organisations to follow if they want to provide secure and trustworthy digital identity and/or attribute solutions.
+This document explains what rules organisations will need to follow to be certified against the trust framework in the future.
+This document does not:
+supersede the requirements in any other contracts, policies, or legislation that organisations already need to meet;
+explain what legislative or governance arrangements are needed to make sure the trust framework is ready for use in the economy - this is covered in the
+digital identity and attributes consultation response
+;
+provide a technical architecture for digital identity and attributes;
+set commercial arrangements for organisations..
+3.1 Terms and definitions
+Whenever ‘you’ is used in this document it refers to organisations, in the context of the specific service(s) they want to use under the trust framework.
+We use ‘user’ to refer to people who will use digital identity or attribute services to prove their identity or eligibility.
+The word ‘must’ is used for any rules that organisations have to prove they have met.
+The word ‘should’ is used when it’s only recommended that organisations meet a rule.
+If needed, certification process auditors will provide guidance on how to meet ‘must’ criteria, and also advise if a ‘should’ recommendation is being approached satisfactorily.
+Read the glossary
+for a full list of terms and definitions.
+4. What are digital identities
+In the context of this trust framework, a digital identity is a digital representation of a person acting as an individual or as a representative of an organisation. It enables them to prove who they are during interactions and transactions. They can use it online or in person. Services and organisations that let users use secure digital identities can better trust that those users are who they say they are.
+Digital identity products and services developed under the trust framework are not the same as centralised identity databases or digital identity cards. The trust framework will enable users to choose a range of services created by different organisations that use different technologies to meet diverse user needs.
+Anyone can choose to create one or more digital identities (a user may choose to have different digital identities to use in different contexts). They do not have to create a digital identity if they would prefer not to.
+Sometimes digital identities will be created for just one type of transaction at a specific point in time.
+Example
+Cliff needs to prove his identity to apply for a loan online. Doing this creates a digital identity.
+Cliff can only use this digital identity to complete his application and open an account. He cannot use it to do anything else.
+Other digital identities will be ‘reusable’, which means they can be used again and again for different interactions and transactions across organisations.
+Example
+Peggy is buying her first home. She creates a digital identity when she checks her credit score online with a credit scoring agency. The credit scoring agency is a participant of a scheme in the trust framework.
+Peggy decides to apply for a mortgage from a bank. The bank chooses to accept digital identities. This means she can use her digital identity again to apply for the mortgage.
+Peggy will need to prove who she is several times throughout the process of buying a house, for example when she interacts with the bank, estate agents and solicitors. She can do this online, or if any of these interactions happen in real life, Peggy can show her digital identity using an app on her phone.
+Whether or not an identity is reusable will rely on organisations agreeing to work together and use identities in comparable ways under the trust framework.
+Using digital identities will mean users do not have to rely on manual processes (such as by post or over the phone) to interact with organisations or access services. Digital identities will be able to be used both online and offline where the process is enabled digitally. Making these sorts of interactions and transactions available digitally can also:
+save organisations time and money;
+reduce the risk of fraud to organisations and users;
+be easier and quicker for users to complete;
+reduce the risk of errors that come from managing data manually;
+encourage data minimisation; and
+encourage innovation by helping organisations develop more services.
+This government is committed to delivering these benefits without the need for a national identity card. This means people will have the choice over if, when, and how they use digital identities.
+5. What are attributes
+Attributes are pieces of information that describe something about a person or an organisation. You can use a combination of attributes to create a digital identity. You must ‘bind’ attributes to a person before you can do this.
+An attribute could be something:
+A person or an organisation is
+A person or an organisation has
+That’s issued to a person or an organisation
+Attributes could be related to:
+Physical or digital documents such as a bank statement
+Devices such as a mobile phone
+Credentials such as a university degree
+Someone’s health condition
+Some examples of attributes are:
+Identity-related attributes such as name, address, or date of birth
+The number of children someone has
+Someone’s bank account number
+Someone’s National Insurance number
+Someone’s NHS number
+The number of people that work for a company
+A Companies House company number
+That someone is over 18
+Attributes are not only used to create digital identities. They can also help prove a user is eligible or entitled to do something. In some situations, this proof can be added to an existing digital identity. In others, there will be no need for you to know the identity of the user before they can complete an interaction or transaction.
+An organisation can check attributes to see if someone is eligible to complete an interaction or transaction.
+Example
+Carmen is a doctor and is moving to a new hospital to work. She must prove who she is and that she has the relevant qualifications before being able to start work at the hospital.
+Carmen could get a digital version of her registration certificate that confirms her registration and licence to be a doctor in the UK.
+The information from this registration certificate can be checked against an authoritative source, and then added as attributes to Carmen’s digital identity, which may take the form of a personal data store app (sometimes known as a ‘digital wallet’ - see glossary).
+This attribute can be shared with the hospital when she arrives to work there. This will save Carmen and the hospital time, and mean she has to take fewer documents with her when she goes through the onboarding process.
+Attributes can be created, collected and checked by an attribute service provider. An attribute service provider could be an organisation or a piece of software, like a personal data store or digital wallet.
+Attribute service providers can share the attributes they keep with other organisations or individuals, as long as they have the user’s agreement.
+Sharing attributes can mean:
+users share information about themselves to access services more easily;
+users only share what information is necessary to access services;
+users and organisations do not have to update information in more than one place whenever something changes.
+Sometimes attributes will be used for just one type of transaction at a specific point in time.
+In other situations the attributes will be ‘reusable’, which means they can be used again and again for different interactions and transactions.
+6. What the UK digital identity and attributes trust framework does
+The UK digital identity and attributes trust framework will let people use and reuse their digital identities. It will also give them a way to share their attributes with other people and organisations more easily.
+One reason why this does not currently happen is because one organisation does not know how another creates digital identities or attributes. This means they’re not able to trust if the processes the other organisation followed are secure and meet their needs.
+The trust framework is a set of rules that different organisations agree to follow to deliver one or more of their services. This includes legislation, standards, guidance and the rules in this document. By following these rules, all services and organisations using the trust framework can describe digital identities and attributes they’ve created in a consistent way. This should make it easier for organisations and users to complete interactions and transactions or share information with other trust framework participants.
+6.1 Rules of the trust framework
+UK digital identity and attributes trust framework participants will be certified against a set of government-approved rules. This means that one organisation can trust that the information another shares with them is accurate and reliable.
+To meet the rules of the trust framework, you will need to prove you’re able to safely manage users’ digital identities or attributes. The rules will be ‘outcome based’. By following them, you will achieve certain goals. The rules will not instruct you to use specific technologies or processes, but will recommend you follow open technical standards to strengthen interoperability between participants. This means you will be able to focus on innovating and developing products and services that work best for your users, without being restricted to using certain technologies.
+7. What you get from adopting trust-marked digital identities and attributes
+Being part of the UK digital identity and attributes trust framework will help your organisation:
+save time, effort and money;
+improve the user experience of your existing services;
+develop new services, which can create new revenue streams;
+deal with data breaches, identity fraud and misuse.
+show that you’re committed to creating trustworthy products and services that protect people’s data;
+share digital identities and attributes with other organisations from a variety of countries, industries and sectors;
+comply with regulation, such as data protection.
+8. Benefits for users
+Being able to share their digital identities and attributes with different organisations, and between users, will make it easier for users when they choose to complete interactions and transactions digitally. This is because it will be much quicker and safer to prove their identity and eligibility when they interact with a new organisation. The UK government plans to make it possible for this to happen across different industries, sectors and countries where it’s safe and legal to do so.
+The trust framework focuses on user choice and user control at the centre of its design. It includes privacy and data protection rules, which you must follow when developing and managing your products and services. These rules are designed to give users more control over what personal information they use to create a digital identity. You must also follow rules to develop accessible and inclusive products and services. These rules are designed to allow as many users as possible to create digital identities and manage their attributes.
+In most circumstances, users will be asked for their agreement about which services and organisations can see and share their personal data, and for how long they will have access to it. They will not have a choice in specific situations, for example if they’re the subject of a police investigation. They’ll also know exactly who is involved in creating and maintaining their digital identity.
+There will also be more opportunities for ‘data minimisation’. This is when information is only shared if it’s needed to give a user access to a service. For example, when buying age-restricted products, a retailer only needs to know that a user is over a certain age e.g. ‘over 18’. They do not need to see the rest of the information on their identity document. Making sure personal information is shared and managed securely will put users, services and organisations at a lower risk of identity fraud.
+Individuals using digital identities will also be more protected from fraud committed using lost and stolen documents. The use of digital identities could, for example, enable a user to no longer have to carry physical documents, consequently mitigating the risk of a document being lost or stolen and used fraudulently.
+9. Who runs the trust framework
+The trust framework will be overseen by a governing body. As an interim arrangement, the government will establish a governance function in the Department for Digital, Culture, Media and Sport. As the market matures, the path to a permanent institutional arrangement should become clearer.
+For further details please refer to the
+digital identity and attributes consultation response
+.
+10. How organisations participate in the trust framework
+In order to participate in the trust framework, providers must get certified against trust framework rules by an approved certification body. Details on this process can be found on the
+certification page
+. All organisations certified against the trust framework will be subject to oversight from the governing body.
+10.1 Roles and responsibilities
+Whether an organisation uses the trust framework on their own or as part of a scheme, they will need to perform at least one of the following roles:
+identity service providers
+attribute service providers
+orchestration service providers
+relying parties
+scheme owners
+A chart showing how the different providers and parties relate to the trust framework
+The role(s) you choose to play in the framework will impact which trust framework rules are relevant and whether you need to become certified. It is possible for organisations to fulfil multiple roles under the trust framework. If your organisation chooses to perform multiple roles, you must follow the rules for each role.
+To be certified, an independent certifying body will need to check that you follow all the rules for the role(s) you want to perform. You’ll get a trust mark after you’ve been certified and approved. This will:
+show other organisations that you meet the rules; and
+help users feel more confident about using your product or service.
+Identity service providers
+Identity service providers prove and/or verify users’ identities. They can do this using online or offline channels, or a combination of both.An identity service provider can be a public or private sector organisation. They can provide business-to-consumer and/or business-to-business identity services.
+They can provide a number of services including:
+specialising in proving and/or verifying users’ identities;
+offering identity proving and verification alongside other services - an example of this might be a bank, solicitor, library or postal organisation;
+offering wider identity capabilities such as authentication, personal data, and digital wallet services.
+An identity service provider does not need to do all parts of the identity checking process. They can specialise in designing and building components that can be used during a specific part of the process. For example, they could develop software to:
+validate identity evidence (e.g. mobile account validation);
+check identity evidence is genuine (e.g. passport chip reading);
+provide authentication services;
+provide biometrics-enabled identity verification (e.g. face biometrics);
+provide biometric authentication (e.g. fingerprint biometrics on a mobile device); and
+provide identity fraud services (e.g fraud database checking).
+Identity service providers can be authorised by a user to share the verified digital identity with relying parties. The relying party can then use this to give them access to the service or create an account. Other identity service providers might choose to create an account associated with a user’s identity. The user can then use and reuse this account to do different things with different relying parties.
+The trust framework describes how identity service providers fall into sub-roles. All rules that apply to identity service providers apply to all sub-roles, unless otherwise indicated. Identity service provider sub-roles include:
+identity verification services (which offers a point in time verification, and the user may or may not have an account);
+reusable digital identity services with an account and authentication;
+reusable authentication services with an account and authentication;
+identity holder services controlled by a user such as personal data stores, wallets, apps, SSI services.
+Digital identities and attributes can only be associated with a digital account with the user’s agreement. The trust framework sets no limits to the number of accounts a user can create, however organisations and schemes may set their own limits.
+Attribute service providers
+Attribute service providers collect, create, check or share pieces of information that describe something about a user. Attribute service providers can share their attributes with relying parties and identity service providers, subject to rules of obtaining users’ agreement being followed.
+If an identity service provider is collecting, creating, checking or sharing attributes as part of their service, they will also be an attribute service provider. They will need to follow the rules for both roles.
+Attribute service providers must be able to assess the quality of the attributes they keep. Relying parties and identity service providers will use this information to choose which attribute service provider they request attributes from.
+The trust framework describes how attribute service providers fall into sub-roles. All rules that apply to attribute service providers apply to all sub-roles, unless otherwise indicated. Attribute service provider sub-roles include:
+attribute issuers from the public sector — attributes found in documents or databases such as passports, driving licences, birth certificates;
+attribute issuers from the private sector — mobile number, bank account, credit score, mortgage;
+attribute service providers — including in organisational databases (e.g. a credit reference agency database);
+attribute holder services controlled by a user such as personal data stores, wallets, apps, SSI services.
+Orchestration service providers
+Orchestration service providers make sure data can be securely shared between participants in the trust framework through the provision of their technology infrastructure.
+The trust framework describes how orchestration service providers fall into sub-roles. All rules that apply to orchestration service providers apply to all sub-roles, unless otherwise indicated. Orchestration service provides sub-roles include:
+Identity and attribute broker service providers
+Identity and attribute hub service providers
+Identity access management service providers
+Distributed ledger service providers
+An organisation is able to play more than one role in the trust framework and is not, for example, limited to just being an orchestration provider.
+The technical options for orchestration of identity and attributes is broad and open to innovation. The trust framework sets out the outcomes for orchestration providers.
+Relying parties
+Relying parties are organisations that use (or ‘consume’) products or services from other participants in the trust framework. This means that organisations such as airlines, banks and retailers may not have to check users’ identities or attributes themselves.
+A relying party might need to make sure a user is who they say they are before letting them do something. To do this, the relying party can ask an identity service provider to prove a user’s identity. A relying party might also need to check if a user is eligible to do something. They can do this by requesting attributes, or information about attributes, from an attribute service provider.
+Relying parties do not need to be certified against the trust framework, but they will be subject to flow down terms from the trust framework organisation(s) they have a relationship with to ensure security of the market.
+In the context of the trust framework, a relying party is an organisation that receives, interprets and - depending on the use case - stores information received from other trust framework organisations. Organisations which are providing additional functions related to the information received e.g. binding it to an individual, will likely also be playing another role under the trust framework and may require certification.
+Scheme owners
+A scheme owner creates and runs a scheme for the use of digital identities and attributes. A scheme is made up of different organisations who agree to follow a specific set of rules around the use of digital identities and attributes. These organisations might work in the same sector, industry or region, which means they will build products and services for similar types of users.
+A scheme might help organisations work together more effectively for a number of reasons. For example, it could make it easier for them to comply with the rules of the trust framework or comply with broader rules and regulations specific to a sector(s).
+The scheme owner sets the rules for their own scheme. At present schemes do not need to be licensed by the governing body, but they must ensure their scheme follows the rules of the trust framework to ensure security across the economy. The feasibility of this approach will be tested during the beta phase.
+Organisations who provide additional functions, such as technology to connect different providers, will likely also be playing another role under the trust framework — such as of an orchestration service provider — and may require certification.
+Private sector schemes
+In order to manage the certification process for their scheme’s participants, private sector schemes must be accredited by UKAS using a standard such as
+ISO 17021:2012
+or
+ISO/IEC 17065:2012
+.
+Organisations that choose to join a private sector scheme still need to get certified against the trust framework through the process described in section 10 (‘How organisations participate in the trust framework’). As described in the certification page, the trust framework discourages re-auditing of standards for which providers hold previous certification.
+While scheme owners do not need a licence to operate, they should follow certain requirements in order to protect the providers taking part in the scheme and the trust framework market. Scheme owners should:
+have publishable documentation that articulates their scheme and demonstrates alignment with trust framework rules;
+have a complaints, redress and escalation process;
+have scheme-wide fraud and security management processes that complies with the trust framework;
+have completed a
+Data Protection Impact Assessment
+(
+DPIA
+) for the scheme;
+not have a conflict of interest in their relationship with scheme participants; and
+not prevent organisations from being part of more than one scheme.
+Public sector schemes
+Public sector organisations can also work with the governing body to develop new schemes that use the trust framework certification process or to use the certification process within existing delivery mechanisms. This is the process being followed to enable
+digital right to work, right to rent and criminal record checks
+.
+Relationships between participants
+It is up to individual organisations to determine commercial relationships and decide who to work with, but interoperability across the trust framework is highly encouraged.
+When deciding who to work with, providers should consider that sharing and receiving identity and attribute data with other trust framework participants is the easiest way to promote interoperability and offer protections to users. Trust framework participants are able to work with organisations outside of the trust framework to provide digital identity and attributes services, as long as the participant meets the trust framework’s rules. However, prioritising organisations that are certified against the trust framework is strongly recommended. In all circumstances where data is shared, participants must follow the privacy and data protection rules in section 15.13.
+During certification, organisations will be required to inform certification bodies which organisations they work with to provide services that are within the scope of the trust framework. This information will help certification bodies assess whether the appropriate protections are in place throughout supply chains and evaluate the overall level of risk posed to the trust framework market. Details on how to report this information will be provided by the certification bodies directly.
+The information gathered will be submitted anonymously and in aggregate form to the governing body by certification bodies. The governing body will use this information to assess the evolution of the digital identity and attributes market, including any emerging risks.
+The following are examples of some of the possible relationships between trust framework participants. Please note these are not exhaustive and are for illustrative purposes only.
+Example 1
+An example of the relationships between the various participants in the framework
+Example 2
+Another example of the relationships between the various participants in the framework
+11. Rules for identity service providers
+Identity service providers must follow these as well as the
+rules for all trust framework participants
+.
+11.1 Create a digital identity
+All identity service providers must use the guidance on
+how to prove and verify someone’s identity
+as a methodology to explain their product or service. This is also known as Good Practice Guide (GPG) 45. If you claim your service meets particular levels of confidence or profiles detailed within the guidance, you will need to evidence how these are met during the certification process. If your service only meets one element of the identity checking process, such as biometric facial matching, you will need to accurately describe how your service aligns to that part of the guidance. If your service uses components from third parties, you need to accurately describe how their services align to the relevant part of the guidance.
+This approach is intended to be flexible enough to enable organisations to develop innovative services to meet their user’s needs, whilst providing a methodology in which to consistently describe their service offering. This will help to enable interoperability and assure relying parties that providers are meeting the level of confidence they require. The guidance will remain as best practice and will be iterated as required during the testing of the trust framework.
+12. Rules for attribute service providers
+Attribute service providers should follow these as well as the
+rules for all trust framework participants
+12.1 Understanding attributes
+Attributes are pieces of information that describe something about a person or organisation.
+Attributes can help people prove that they are who they say they are, or that they’re eligible or entitled to do something.
+You should read the guidance on
+understanding attributes
+.
+12.2 Create attributes
+You should follow the guidance on
+how to create attributes
+.
+You should:
+create the new attribute in an appropriate way;
+bind it to a person or organisation; and
+show how reliable and secure it is.
+All attribute service providers should link their attributes to a person or organisation using a process called binding. This involves using an ‘identifying attribute’ to make the connection. An identifying attribute, or ‘identifier’, is a unique attribute or combination of attributes that can be used to identify a person or organisation.
+Example
+When someone starts a new job they’re given a unique employee number, which is an identifying attribute. This links the person with their job title (another attribute).
+The HR department uses the identifying attribute to link the employee’s other attributes to the employee. Their other attributes include their salary and how many hours they work a week.
+For example, one office has 2 employees named Daniel Jones. When the HR department gets a phone call from one of them, the HR representative asks for their employee number. This helps them know which Daniel Jones they’re talking to.
+If you do not bind your attributes, other organisations will not be able to tell who they belong to. This will make them harder to use and less valuable.
+Sharing attributes
+Before you share or allow checks against an attribute, you must check:
+when the attribute was last updated;
+you’ll share it in a way that meets the
+privacy and data protection rules
+; and
+if the person or organisation requesting it has the right to see it.
+You can then share it in an appropriate way.
+12.3 Assessing attribute quality
+You should have a way of assessing the quality of attributes that you create or share. This could mean that you follow the guidance on
+how to score attributes
+or you could follow your own processes.
+Relying parties can use your assessment to decide which attributes meet their needs.
+13. Rules for all identity and attribute service providers
+13.1 Create a reusable digital identity or attribute service
+If you are an identity or attribute service provider who wants to create a reusable digital identity or attribute service, you must link the digital identity and/or attributes to an authenticator (such as a password, piece of software or device). You must follow the guidance on
+using authenticators to protect an online service
+. This is also known as GPG 44.
+If someone has already been through an identity verification process to use another service you provide, you might be able to develop this into a trust framework service. For example:
+1.A bank could reuse a user’s details from when they signed up to online banking to help them create a trust framework digital identity service. To do this they must ensure that their identity checking and authentication aligns with the following guidance:
+how to prove and verify someone’s identit
+y
+and
+using authenticators to protect an online service
+. They must also meet the other relevant rules in the trust framework.
+2.If an identity proofing and verification process has bound an identity to a qualified electronic signature by a
+qualifie
+d trust service provider
+:
+A service provider could rely on the identity verification process that was used by a
+qualified trust service provider
+(QTSP) to create a qualified certificate. This process could be used to create a trust framework digital identity service for a user. The service provider must ensure that their identity checking and authentication aligns with the following guidance:
+how to prove and verify someone’s identit
+y
+and
+using authenticators to protect an online service
+. They must also meet the other relevant rules in the trust framework.
+3.If a strong authentication process has bound a user to an electronic signature issued by an advanced electronic signature provider:
+A service provider could provide a service under the trust framework. To do so they must follow the relevant authentication requirements as described in
+using authenticators to protect an online service
+, and they must follow the guidance on how
+to prove and verify someone’s identit
+y
+if they verify the identity of their users. They must also meet the other relevant rules in the trust framework.
+4.A simple electronic signature provider could provide a service under the trust framework. To do so they must follow the guidance on
+using authenticators to protect an online service
+. If they want to verify the identity of the user they must follow the guidance on how
+to prove and verify someone’s identit
+y
+. They must also meet the other relevant rules in the trust framework.
+You must get the user’s permission before you use their data to do this.
+13.2 Manage digital identity and attribute accounts
+A digital identity or attribute account is the software based service used to allow an identity or attribute to be asserted by a user multiple times.
+While not all services include a user account, those that do should follow the rules in this section.
+You must have a process to revoke, suspend, close, recover and make changes to accounts.
+You must close an account if the user:
+has used the account to do something illegal;
+has not followed the terms of use they agreed to;
+wants to close it;
+has died.
+You must close the account if you have evidence it was created fraudulently, including using a synthetic identity.
+If you suspect an account is compromised
+There are many reasons an account can become compromised. Usually this is a result of deliberate fraudulent activity where an impostor has obtained access to the account. This can happen because there’s been a data breach.
+If you suspect someone who should not have access to an account has either accessed or used the account, you must have processes in place to:
+suspend the account until you establish if the user is genuine;
+let the user know the account has been suspended;
+establish that the user is genuine; and
+ask them to look at their recent account activity, and check if there are any interactions they do not recognise, if you are able to do so.
+If you suspect that fraud might be taking place, you should not communicate your suspicion to the user before you have completed an investigation that confirms it. Informing the user could cause emotional distress to genuine users that are struggling or educate an attacker on how your fraud controls work.
+If your investigation concludes that the account has been compromised, you must have a process in place to inform the user and take them through an account recovery process. This process must follow the guidance outlined in
+using authenticators to protect an online service
+. If it’s a digital identity account, you should
+prove and verify the user’s identity
+again.
+You should verify someone’s identity using either:
+the same level of confidence originally adopted but a different identity profile;
+the same level of confidence and identity profile but different identity evidence; or
+a higher level of confidence than the one originally adopted. You should also consider using different identity evidence.
+If you suspect fraud is taking place, you must follow the rules in section 15.10 on Fraud management. You must also have a way to:
+give the governing body and relevant scheme owners information about the impostor and the things they did; and
+in alignment with legal and regulatory requirements, provide law enforcement agencies information about the impostor and the things they did.
+If a user makes changes to their account
+You should have a process in place to tell the user if any changes have been made to their account. You should also tell them if you’ve had a request to close their account.
+If the user wants to change their contact details, you must
+do a verification check
+to make sure they’re the same person who created the digital identity. You will need the same or higher level of confidence to what you currently have.
+13.3 Make sure your products and services are inclusive
+Making your products and services inclusive means as many people as possible can use them no matter who they are or where they’re from. This includes people who do not have traditional identity documents such as passports, or who may find it difficult verifying their identity to access services online. However, there are reasons why someone might be legitimately excluded - it is fair to restrict service access on account of someone’s age e.g. you cannot buy certain products until you are 18.
+Organisations must follow the
+Equality Act 2010
+when considering how to make sure no one is excluded because of their ‘protected characteristics’. This applies to all organisations offering services. Public sector organisations or non-public sector organisations carrying out public functions will also need to meet the public sector equality duty (PSED) detailed in the Equality Act 2010.
+How to make your product or service more inclusive
+There are many reasons why a user may be excluded from using a product or service. Common reasons include users being asked to provide specific evidence as proof of their identity or services relying on specific databases to check users’ information.
+Example 1
+A service that only accepts a UK passport as proof of someone’s identity will exclude users who do not have, cannot find or cannot afford a UK passport.
+Example 2
+A service that only checks users’ information against a credit reference agency database will stop users who do not have much of a credit history from creating a digital identity. This could exclude users because of their age or income.
+You can improve the inclusivity of your service by accepting a wide variety of evidence as proof of users’ identities and eligibility, provided they still combine to meet the relying party’s required level of confidence. You can also choose to
+accept a declaration from someone that knows the user
+(known as a ‘vouch’) as evidence.
+Another reason why you might exclude users is if a product or service uses any software that’s only been tested with a specific user group.
+Example
+A service might check users’ identities using an existing facial recognition system that was tested with a small sample of users. As most of these users were white men, the system was not taught how to recognise users of other genders or ethnicities.
+By choosing this system, the service will exclude some users from proving their identity because of the way they look.
+In order to improve the inclusivity of your service, you should choose software that you know has been performance tested with a variety of users from different demographics.
+If your service involves the use of biometric technology, you must adopt solutions developed and tested to be inclusive and accessible. This must follow industry standards that cover performance testing and bias reduction, such as
+ISO/IEC 19795-1:2021
+.
+Submit an annual inclusion monitoring report
+You must submit an annual inclusion monitoring report. The information gathered through inclusion monitoring reports will be submitted anonymously to the governance function by certification bodies. This will provide an evidence base so that the governing body can recommend whether any further policy intervention might be needed to encourage the development of an inclusive digital identity market.
+The report will be designed to map what avenues to acquire a digital identity your service offers. The report will collect information on what technology and what identity evidence is accepted by your service, and will also include an opportunity for you to explain any inclusion measures you are planning to take in the future. You are not required to collect information on users solely for the purposes of reporting. Details on how to submit the inclusion monitoring report will be provided by the certification bodies directly.
+Allow your user to retake an identity or attributes check
+There are many reasons why an identity or attribute check might fail. If a user fails a check and there is no suspicion of fraud, you must have a process to allow the user to undergo an identity or attribute check again.
+You should have a process to check whether the check failed due to:
+a transposition error — for example, dates might appear in different formats;
+a failure in technology — for example, there might be an issue with readings from the near-field communication (NFC) chips in passports, resulting in a false-negative result.
+If you identify that the attribute check failed for either of these reasons or similar, you should give the user a chance to undergo the check again, with the corrected data if applicable.
+If that check still fails, you should consider using alternative identity evidence and methods of identity verification, following guidance on
+how to prove and verify someone’s identity
+. To do this, you could:
+verify the user’s identity using a different identity profile for the same level of confidence than you did when you first set up the digital identity account;
+verify the user’s identity using the same identity profile but alternative data sources;
+verify the user’s identity using the same identity profile but a different process.
+If there is a suspicion of fraud, you must follow the rules in the fraud management section of the trust framework.
+13.4 Make sure your products and services are accessible
+You must
+follow the accessibility regulations
+if you’re a public sector organisation that’s developing apps or websites. This includes any products or services that help users create digital identities or manage their attributes.
+If you are a public sector organisation that develops products or services for the public in Wales, you’ll likely be subject to
+Welsh Language Act 1993
+or the
+Welsh Language (Wales) Measure 2011
+. You should check your exact legal obligations carefully so you can plan for English<>Welsh bilingualism from the outset of all relevant service development processes. The Welsh Government has published a detailed
+Bilingual Technology Toolkit
+to help organisations provide a good user experience in both Welsh and English.
+You should develop and use products and services that everyone can use even if you’re not a public sector organisation. To help do this, you could follow the:
+Web Content Accessibility Guidelines
+(WCAG)
+The European Telecommunication Standards Institute (ETSI) standard for accessibility requirements
+EN 301 549 V3.2.1 (2021-03)
+Accessibility requirements suitable for public procurement of ICT products and services in Europe
+EN 301 549 V1.1.2 (2015-04)
+Further useful guidance for meeting the requirements of the
+Equality Act 2010
+which states that web products must be accessible to all can be found in
+BS 8878:2010
+Web accessibility. Code of practice.
+You and/or the organisations you work with should make sure users have more than one way to use a product or service. For example, a user should have a manual way to access a service if they’re unable to use the online service.
+13.5 Retiring your product or service
+If you decide to retire your product or service, you should have a transition plan and:
+notify any users that manage their attributes with your product or service;
+provide users and relying parties with a reasonable period of time to migrate to other providers;
+notify any relying parties that consume attributes you’ve created; and
+notify the governing body (and the relevant scheme owner(s), if you’re part of a scheme).
+14. Rules for orchestration service providers
+Orchestration service providers must
+follow the rules for all trust framework participants
+. There are no orchestration service provider specific rules.
+15. Rules for all identity, attribute and orchestration service providers
+Anyone that wants to be an identity service provider, attribute service provider or orchestration service provider must meet these rules.
+15.1 Making your products and services interoperable with others
+The trust framework recommends the data schema is followed to encourage interoperability between organisations and schemes, in the UK and internationally. The data schema guidance is relevant for:
+Attribute service providers
+Identity service providers
+Relying parties
+Scheme owners which develop technical guidance for their scheme’s participants
+The data schema has been written to be consistent and not in conflict with different industry approaches for data exchange and technical standards, such as
+OpenID Connect
+and W3C’s
+Verifiable Credentials
+data models.
+To enable open and collaborative development, the draft data schema has been uploaded to Github. To contribute, please refer to the following
+link
+.
+If you are sharing data under the trust framework, you must be able to validate that you are receiving messages from another organisation. This must be in alignment with industry best practice.
+How digital identities and attributes will be shared
+Each organisation will need to provide enough information for another to be able to:
+identify the person; and/or
+decide if the person or organisation is eligible for something.
+If the digital identity or attributes belong to a person, the organisation might need to provide a:
+Date of birth
+First name
+Last name
+Process that uniquely identifies the user, such as a user or account number
+To check if a person is eligible to do something, a relying party might also ask an organisation for more information. This could include their:
+Nationality
+Place of birth
+Previous name(s)
+Email address
+Address
+Phone number
+Gender
+Occupation
+Income
+Citizen registration number (for people resident outside the UK or non-UK nationals)
+Tax reference number
+Biometric information
+Passport number
+Qualifications
+Employment history
+Non-UK identity card number
+Role in an organisation
+An organisation should
+meet the privacy and data protection rules
+when undertaking attribute checks and sharing attributes. This should include consideration of data minimisation and zero knowledge proof approaches.
+The relying party will need to decide if the information is sufficient for what they need. Knowing where the attribute comes from and how it has been checked could help them make this decision.
+If the digital identity and attributes are linked to a UK or international business, the organisation may need to provide:
+Its legal name
+A registered identifier, such as a Companies House number
+To check if an organisation is eligible to do something, a relying party might also ask them for more information. This could include:
+Any email addresses associated with the business
+Any addresses associated with the business
+The country of its incorporation
+Its VAT number
+Its turnover
+Its Legal Entity Identifier (LEI)
+Its Standard Industrial Classification (SIC) code
+Its Economic Operators Registration and Identification (EORI) number
+Its Excise Authorisation Verification (SEED) number
+Its Data Universal Numbering System (DUNS) number
+Its data protection registration number
+Where digital identities and attributes are shared in a face to face environment, you should use industry best practice for use of mobile credentials, such as
+ISO/IEC 18013-5:2021
+.
+15.2 Check if a user can act on behalf of an organisation or another person
+Be aware that some users might be acting on behalf of an organisation or another person when they interact with your organisation. This is known as ‘delegated authority’. There are a number of reasons why this might be appropriate, such as:
+the user might have been formally appointed using a lasting power of attorney (LPA) to look after someone else’s money and property;
+the user may be a parent acting on behalf of a child where the child is not old enough to access a service themselves; or
+the user might be appointed to act on behalf of a business. To do this they need to be able to: assert proof of their identity; have this linked to the business that they are representing; and have attributes that show that the business exists.
+A user will only have delegated authority if they have been given permission to make decisions and complete tasks on behalf of the other person. A user may have delegated authority on a one-time basis, related to one specific task or service, or something more comprehensive. A user does not necessarily have delegated authority if they’re helping someone do something. This could include:
+a user helping a friend who’s not confident using a computer to fill in an online form;
+anyone who offers ‘assisted digital support’ to users of a product or service.
+Where delegated authority is used, you must check if the user has authority to act on someone’s behalf. The details of their agreement with the other person might exist as an attribute.
+Services can choose whether to offer delegated authority. If your service permits delegated authority of any type, you must follow
+this guidance
+.
+15.3 Respond to complaints and disputes
+You must have a process for dealing with complaints and disputes. Disputes could involve your users or other trust framework participants. The government will provide signposting support within the governance function for complaints to existing regulatory and redress channels. In cases where the trust framework itself has been breached, an investigation of a trust-marked organisation’s compliance with the trust framework will be investigated by the relevant certification body.
+15.4 Staff and resources
+Your organisation must have a way to:
+make sure your staff (including contractors) have the right experience, training (such as data protection training), and qualifications needed to do their job;
+do background checks on your staff;
+make sure any personal, cryptographic or sensitive information you keep can only be accessed by authorised staff.
+You can help to demonstrate you have met these rules by:
+following the ‘applicable skills and security awareness’ control of
+ISO/IEC 27001:2017
+, or equivalent industry standards such as the
+National Cyber Security Centre (
+NCSC
+) Cyber Assessment Framework (
+CAF
+)
+, and
+National Institute of Standards and Technology (NIST) Cybersecurity Framework
+;
+following
+BS
+7858:2019
+on screening individuals.
+15.5 Encryption and cryptography
+You must:
+follow industry standards and best practice for encryption and cryptographic techniques, including for encrypting data at rest and data in transit; and
+describe your processes in an encryption and cryptographic controls policy document.
+When dealing with data at rest:
+all user-writable partitions on portable devices and portable storage media must be encrypted at the media-level (i.e. Full Disk Encryption (FDE));
+information held encrypted at rest must also be integrity protected;
+where multiple layers of encryption are available such as media-level and database fieldlevel, you must ensure each layer is applied proportionally to mitigate risks;
+the encryption software deployed on devices should have sufficient entropy as part of the authentication mechanism;
+the encryption software deployed on devices must restrict the number of authentication attempts within any given time interval.
+When dealing with data in transit, encrypted communications channels must be protected using one of the following methods:
+at the application layer, using Transport Layer Security (TLS); ensure this is the latest;
+at the network layer, using Internet Protocol Security (IPSec);
+you must follow
+NCSC
+guidance and consult the most up to date cryptography profiles.
+For further information on handling cryptographic modules, you should consult the following:
+NIST FIPS 140-2
+, Security Requirements for Cryptographic Modules
+NIST FIPS 140-3
+, Security Requirements for Cryptographic Modules
+The specific standards and best practices you should follow may vary depending on the maturity of the technical approach. As well as the standards above it is advised that you consult the following standards:
+NIST SP 800-175B
+- Guideline for Using Cryptographic Standards in the Federal Government: Cryptographic Mechanisms
+NIST SP 800-67
+- Recommendation for the Triple Data Encryption Algorithm (TDEA) Block Cipher
+ETSI TS 103 458
+- Application of Attribute Based Encryption (ABE) for PII and personal data protection on Internet of Things (IoT) devices, WLAN, cloud and mobile services
+Additional guidance can be found in the
+ISO/IEC 18033
+family of standards:
+ISO/IEC 18033-1:2015
+- Information technology - Security techniques - Encryption algorithms - Part 1: General
+ISO/IEC 18033-2:2006
+- Information technology - Security techniques - Encryption algorithms - Part 2: Asymmetric ciphers
+ISO/IEC 18033-3:2010
+- Information technology - Security techniques - Encryption algorithms - Part 3: Block ciphers
+ISO/IEC 18033-4:2011
+- Information technology - Security techniques - Encryption algorithms - Part 4: Stream ciphers
+ISO/IEC 18033-5:2015
+- Information technology - Security techniques - Encryption algorithms - Part 5: Identity-based ciphers
+ISO/IEC 18033-2 and ISO/IEC 18033-5 are devoted to two different classes of asymmetric ciphers, known as conventional asymmetric ciphers (or just asymmetric ciphers), and identity-based ciphers. ISO/IEC 18033-3 and ISO/IEC 18033-4 are devoted to two different classes of symmetric ciphers, known as block ciphers and stream ciphers.
+For guidance on hash functions, you can read the following NIST standards:
+NIST FIPS 180-4
+- Secure Hash Standard (SHS)
+NIST FIPS 202
+- SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions
+NIST SP 800-107
+- Recommendation for Applications Using Approved Hash Algorithms
+You should also follow
+NCSC
+guidance on:
+using IPsec to protect data
+; and
+using TLS to protect data
+.
+If your service includes digital signatures, you should also follow current Digital Signature Standards (DSS), such as either:
+NIST FIPS 186-5
+- Digital Signature Standard (DSS)
+ETSI TS 119 312
+- Electronic Signatures and Infrastructures (ESI); Cryptographic Suites
+15.6 Service and quality management
+You must have service and quality management processes that cover all areas of your organisation that are applicable to the trust framework. Your service and quality management process should be set out in a collection of documents that describe your organisation’s objectives and explain how you will achieve them.
+Your organisation’s objectives could include, for example:
+investigating and fixing all faults within 2 hours — this refers to your service management;
+making sure every member of staff completes 5 hours of security training every month — this refers to your quality management.
+The trust framework does not mandate certification to any particular standard to meet your objectives, but you should follow best practice in service and quality management. You could do this by following a recognised industry standard, such as
+ISO 9001:2015
+,
+ISO 20000:2018
+or the Information Technology Information Library (
+ITIL
+). Depending on which sector you operate in, you may find
+Six Sigma
+useful too.
+You should have policies or documentation that describe how you approach end-to-end service management in areas such as:
+Service Design
+Service Transition
+Service Operation
+Useful guidance on these practices can be found in the Information Technology Information Library (
+ITIL
+).
+Your management system documentation should include the following information:
+how your management processes are organised;
+how you measure how well you’ve met your objectives;
+who in your organisation is responsible for meeting the objectives;
+how you carry out routine operational tasks;
+what standards you follow;
+what tools, funding, people and other resources you need;
+how you plan to improve the quality of your products or services on an ongoing basis (known as ‘continuous improvement’);
+how you deal with customer relationships;
+how you resolve service disappointments.
+15.7 Information management
+An information management system is a collection of documents that will need to explain:
+why your organisation needs to keep the information it keeps, covering both personal and non-personal data;
+how you create, organise and store information;
+who has access to the information;
+how information is classified;
+how you share information (including why it’s shared, who it’s shared with, how often it’s shared, what format it’s in and how it’s protected);
+how long you retain and protect data;
+how you archive information.
+Your organisation must have an information management system that follows an industry standard, such as
+ISO/IEC 27001:2017
+. If you don’t follow this particular standard, you must still ensure your information management system meets the criteria detailed in this section.
+Archiving information
+Your organisation must have have an archiving policy that:
+follows any legislation or regulations that your organisation needs to follow;
+follows any standards or best practice relevant to the industry or sector your organisation is part of.
+It must also explain:
+how archived information is used to support your organisation’s work;
+why your organisation needs continued access to archived information;
+what are the risks of not having access to archived information;
+how archiving information protects the interests and legal rights of your organisation and others you work with;
+the relationship between this information and any other records, data or evidence you keep.
+Disposal schedule
+You must have a disposal schedule that records how you manage and delete information. It should show:
+that your organisation meets any legislation or regulations about keeping and deleting information;
+what information was created but later deleted;
+what format the information is in (for example if it was physical or digital);
+where information is located;
+how information is transferred for disposal, if this is relevant.
+Data management
+You must have a data management policy that explains how you create, obtain, transform, share, protect, document and preserve data. It should include:
+file naming conventions;
+how you create metadata;
+how your organisation makes sure data is available when it’s needed;
+how you know data is accurate and complete;
+how you maintain and secure your data.
+Your data management policy must cover the full data lifecycle. It should explain how architectures, policies, practices and procedures are implemented and maintained.
+15.8 Information security
+Information security incorporates cyber security as well as broader security considerations. Your organisation must have an information security management system that follows an industry standard, such as
+ISO/IEC 27001:2017
+. If you don’t follow this particular standard, you must still ensure your information security management system meets the criteria detailed in this section.
+It must be based on the principles of:
+Confidentiality
+Integrity
+Availability
+You’ll also need a number of security documents to support your information security policy. These include:
+Technical controls
+Organisational controls
+Physical security controls
+NCSC
+guidance
+on building and operating secure online services can support you in the development of your information security management system.
+Confidentiality
+You must make sure any information your organisation keeps can only be accessed by authorised users. For example, you could make it so users need an authenticator (such as a password) to access the information.
+You could also use an access-control list or role-based access control to protect information held by your organisation. These must specify:
+which users or systems can access your information;
+how they are granted access;
+what they can do with your information.
+This should be explained in your organisation’s password control policy or access control policy.
+Integrity
+You must be able to show that you’ve done everything you can to maintain the integrity of any information your organisation holds. You might need to prove this for legal reasons, for example if you suffer a breach. Your organisation must have an information security policy that explains how you’ll:
+stop information from being modified, either by accident or on purpose (including how you’ll protect it against malicious acts);
+keep information in its ‘correct state’ - the format or reason for collecting the information should not change;
+restore information to its correct state if you suspect it’s been tampered with.
+Availability
+You must make sure that any information your organisation keeps is available to those that need it.
+You will need:
+tools and processes that can cope with the amount of requests you expect to get;
+a backup policy, in case you need to recover any information.
+You should explain how these work in your:
+Data support and operations plan
+Policy and business/organisation continuity plan
+Disaster recovery plan
+Information security policy
+Technical and security controls
+You must have a document that explains what hardware and software your organisation uses to protect information, such as firewalls, intrusion detection systems and encryption techniques. It must also explain what software you use to monitor and control access to information.
+You should follow
+NCSC
+guidance on Secure Design Principles
+and the
+NCSC
+Cyber Assessment Framework (
+CAF
+)
+.
+Organisational controls
+You must have a document that explains how your organisation will continue to meet security rules. For example, it could explain what information security training your staff will regularly have to complete. It should also explain what roles are in your organisation and what parts of the information security process they’re responsible for.
+Physical security controls
+You must have a document that explains what security controls protect the physical locations where the following things are kept:
+any information your organisation has;
+any technology that helps you provide your products or services.
+It could include how you:
+assessed the risks of hosting information in different locations;
+secure any data centres or locations you use that are operated by third parties;
+protect information and technology when they are accessed from a remote location (i.e. outside of the usual place of work).
+Security governance
+You must make sure your information security policy is followed at all times and that you have a way for managing security risks. This is also known as ‘security governance’.
+You must:
+make a security plan based on security risks you’ve identified;
+have a process for investigating and responding to security risks;
+report security risks in a way that’s proportionate to your organisation and product or service; and
+have a robust assurance and review process.
+Use security measures to protect the information you collect
+You must use technical and organisational safeguards to protect personal data. Your security measures must guarantee the confidentiality and integrity of information. This means they need to reliably protect information from:
+Loss or misuse
+Unauthorised use, access, modification or disclosure
+Fraud
+To do this, you must make sure that you:
+use safeguards (for example, pseudonymisation, anonymisation and encryption) that are robust;
+use security measures that ensure confidentiality, integrity and availability;
+test your security measures regularly, using the same tests each time, and improve them whenever you can;
+can quickly restore access to personal data if there’s a physical or technical incident; and
+know how you’ll tell people if there’s a security breach, so they can protect themselves from potential identity theft.
+You must also show how you meet these rules in your ongoing internal audits.
+15.9 Risk management
+Your organisation must have a risk management framework that follows industry standards, such as:
+ISO/IEC 27005:2018
+ISO 31000:2018
+If the standard you follow is not one of the above, your risk management framework must still include guidance about how to:
+identify risks to your organisation, including where they can come from and the impact they could have;
+identify risks to your users, such as
+phishing attacks
+;
+find out how likely it is that risks could happen;
+measure how effective your current processes are at managing risks;
+compare any risks you’ve identified to the established risk criteria;
+monitor risks;
+report risks to your stakeholders;
+measure residual risk;
+write, implement and maintain your organisation’s risk strategy; and
+protect your organisation from internal risks, including writing a bribery and corruption policy.
+NCSC
+guidance on
+cyber security-related risk management
+can support you in the development of your risk management framework.
+You should set out and communicate the risks your organisation will and will not take in pursuance of its business goals. This is often referred to as a statement of risk appetite and it will help those who are responsible for making risk management decisions understand where the risk management boundaries lie.
+15.10 Fraud management
+You must follow best practice guidance on fraud management. Best practice can vary between sectors and regulatory environments. For example, this could include:
+Guidance from the
+Chartered Institute of Public Finance and Accountancy (
+CIPFA
+)
+Government Functional Standard GovS 013: Counter fraud
+Government Internal Audit Agency’s standards
+Guidance from the
+Association of Certified Fraud Examiners (
+ACFE
+)
+Guidance from the
+Chartered Institute of Management Accountants
+As well as best practice, you must meet the following rules.
+Fraud monitoring
+You must have processes in place to regularly monitor for threats to your service and attempted fraud (whether it was successful or not). These should include:
+misuse of your service — where your service is not being used in compliance with your terms of service or the trust framework;
+impersonation — where someone is using the identity of someone else;
+synthetic identity — where someone is using a made up identity;
+takeover — where someone uses an account that isn’t theirs; and
+document fraud — where counterfeit, forged or camouflaged documents are being used within your service.
+Your monitoring processes must take into account all channels that are used to deliver your service, which could include online, telephone, and face to face channels.
+Your monitoring processes should include:
+known fraud — you should undertake checks to establish whether there is a potential link to previous incidents of known fraud. This should be done at registration and at sufficient intervals to manage the risk of enabling the use of a synthetic identity or impersonation of a real person. This should include a check on if the individual has been a victim of fraud.
+evidence failures — you should monitor whether a user fails an evidence check that they should pass, especially in the case of repeated failure. You should have a process to establish whether the failure is indicative of potential fraud.
+Your fraud monitoring processes must be assessed during internal audits.
+You must have a process to establish whether incidents where there is a suspicion of fraud should trigger fraud audits or exceptional audits conducted by an independent internal auditor or a third party.
+You must also have a process to identify, notify and support a user whose identity, attribute or account has been compromised. For users with an account, you should refer to section ‘If you suspect an account is compromised’ for how to do this.
+Legal, policies and procedures for fraud management
+You must make sure you follow all relevant legal and policy requirements and procedures for the sectors you work in or with, including:
+thresholds for investigating;
+data sharing agreements;
+fraud dispute and resolution process; and
+interacting with individuals you believe or suspect have committed fraud.
+You must do a risk analysis and identify the potential ways that someone may use your service for fraud or perform fraud against your service.
+When setting thresholds for investigating, you must consider whether the thresholds could unfairly impact genuine users or allow inappropriate or unacceptable activity to take place. You should review your thresholds regularly to make sure that they are still effective.
+If you suspect any criminal activity has taken place, you must have a process to investigate it.
+You must also have a clear understanding of legal and regulatory mechanisms for sharing fraud data. What these are may depend on which industry or sector you are working in.
+Fraud reporting
+You must:
+define a set of indicators to make sure reporting and analysis is consistent;
+have a standardised, structured, clear reporting process for all connected services, organisations, users, regulators, and agencies;
+have minimum operational rules for monitoring fraud and threat alerts;
+send regular reporting and analysis to the relevant authorities to help manage the threat of identity fraud and identity misuse;
+keep a log of any revoked or suspended accounts (if applicable);
+keep a log of any breaches; and
+advise when an external source has been breached.
+Information you report could include, for example:
+the claimed identity;
+all information that was gathered or used during the proofing process;
+any persistent identifiers;
+the indicators discovered, where they came from and details of any actions taken, for example this could include indicators related to:
+evidence that is known to be lost, stolen or revoked, not known to exist;
+a unique reference number, issue data or expiry date from evidence that is known to be false;
+email address or phone number that might be compromised, or used to create accounts a lot recently;
+a user that does not look like the person on a piece of evidence, the biometric information does not match what’s on the evidence.
+any other information you have used to determine that the user may not be genuine;
+IP addresses used by the user;
+date, time and session identifiers.
+Where the trust framework or scheme of which you are a participant provides a commonly agreed set of indicators then you must use them for your reporting.
+Intelligence and fraud analysis
+You must have a way to:
+actively look for suspicious activity;
+monitor transactions, including for harvesting of data where a third party is using your service to gather information and data about your users;
+detect indications of coercive behaviour;
+carry out threat intelligence.
+Methods to carry out this analysis could include, for example:
+device monitoring — analysing if the device can be linked to other registrations, to known fraud or suspicious devices;
+anomaly detection — analysing if there are discrepancies or patterns in key information that are indicative of a potential attack or fraud;
+velocity detection — analysing if there is repeated use of key information and behavioural discrepancies such as if the user is not ‘realistic’ or ‘normal’.
+You should follow the
+NCSC
+guidance
+on Transaction monitoring for online services.
+Sharing threat indicators (‘shared signals’)
+You must:
+have a structured ‘shared signals’ framework that you can use to send and receive relevant identity data and intelligence;
+notify all relevant parties, including the victim, if there’s a fraud incident;
+sign up to an agreed shared signals approach for threat and fraud intelligence across the trust framework;
+have a process for sharing information around detected and mitigated fraud threats; and
+have a process for reporting cyber security and fraud incidents.
+If fraud or crime is suspected (both during initial interaction with the user and on an ongoing basis) that meets the approved threshold for your industry or sector, you must save the relevant metadata and artefacts (allowing for data protection and legal considerations) for investigation.
+You should use open and/or common standards to share threat indicators with other participants, for example using
+STIX and TAXII
+.
+Where the trust framework or scheme you are a participant of provides a commonly agreed set of indicators or sharing infrastructure then you must use them for your reporting.
+15.11 Respond to incidents
+You must have a process for dealing with incidents that could have an impact on your product, service or users. These incidents might be related to:
+fraud, for example if a user’s identity is being used by someone else to sign in to your service;
+service delivery, for example if users cannot use your product or service because it’s temporarily unavailable;
+a data breach.
+Your process must follow industry best practice, such as the
+NCSC
+guidance on incident management
+, in addition to any legislative requirements.
+You should follow the
+NCSC
+guidance on best practice on logging monitoring
+.
+You must have a process in place to manage requests from law enforcement agencies, the governing body or another organisation in the trust framework if they’re investigating an incident.
+Respond to a fraud incident
+You must follow industry best practice and established guidance if you suspect that fraudulent activity has taken place, for example if a user is:
+using a ‘synthetic’ (made up) identity;
+pretending to be someone they’re not, alive or deceased.
+You must have an incident response plan that:
+makes sure effective and timely action is taken if fraud happens;
+explains who in your organisation will be involved in responding to the incident
+minimises losses;
+collects the evidence for future investigations;
+notifies the relevant organisations if an attribute is found to be fraudulent; and
+covers any necessary communication security rules.
+Respond to a service delivery incident
+You must have a process for managing and responding to service delivery incidents. This process must follow industry good practice, such as the
+Information Technology Infrastructure Library (ITIL)
+service management processes. Your process should cover how you will:
+log, categorise, prioritise and assign incidents;
+create and manage tasks;
+manage and escalate service level agreements (SLAs); and
+resolve and close incidents.
+Responding to data breaches
+You must follow data protection legislation on data breaches, as explained in the Information Commissioner Office’s (ICO’s) guidance on how to
+respond to data breaches
+.
+Data breaches can lead to:
+Identity theft
+Threats to a user’s safety or privacy
+Emotional or financial damage to a user
+If a data breach happens, you must have a process to tell any users whose personal data might have been affected. You must contact them using a method that’s appropriate for your users, product or service. You must also inform the governing body and any relevant scheme owners.
+Taking part in an investigation
+You might be asked to provide specific information as part of an investigation into an incident. Who’s carrying out the investigation will depend on the industry or sector where the incident happened.
+You will get some information about the user or transaction and will be asked to provide identifiers that match it. You might also be asked to provide any of the following information, if you have it:
+a user’s name, date of birth, address or gender;
+the IP address, phone number or email address a user was using during a specific time period;
+the ‘device fingerprint’ and geolocation of the device a user was using during a specific time period;
+the calling line identifier (CLI) a user was using during a specific time period;
+the reference numbers assigned to the user’s account;
+unique references that identify the request you received;
+contra-indicators and failure codes;
+unique identifiers related to a piece of evidence (for example a passport number).
+To make sure you are following the
+Data Protection Act 2018
+and the
+UK GDPR
+(which make up the ‘data protection legislation’) you must check that whoever’s asking you for the information has a lawful basis for processing this data.
+15.12 Tell users about your product or service
+You must make sure your users know exactly what your product or service does. You must clearly explain:
+any terms and conditions of use that the user needs to be aware of;
+any fees that the user will need to pay to use your product or service; and
+how your organisation makes money from your identity or attribute service (‘business monetisation statement’), where relevant. This must be separate from the terms and conditions and easy to access for the user.
+15.13 Privacy and data protection rules
+Personal data is information that relates to an identifiable living person. You must follow data protection legislation whenever you do anything with users’ personal data. The Information Commissioner’s Office (ICO) has a
+guide to Data Protection
+that explains what requirements you must meet. The trust framework does not determine which lawful basis a provider should use to process personal data. Choosing an appropriate lawful basis is the provider’s responsibility.
+Due to the importance of personal data to digital identity and/or attribute services, as part of the trust framework certification process you will be audited to ensure you meet the following legislative requirements or related best practice.
+This list is not exhaustive of all data protection legislative requirements and instead highlights areas which are particularly important for trust framework services.
+You have appointed a data protection officer to carry out the tasks defined in article 39 of the
+UK GDPR
+. This could be in addition to legislative requirements if you do not meet the circumstances outlined in article 37 of the
+UK GDPR
+.
+You have completed a
+Data Protection Impact Assessment
+(
+DPIA
+), also known as a ‘privacy impact assessment’, for your digital identity and/or attribute service(s). This must include justification for your lawful basis for processing and detail all forms of personal data which may be created as a result of your service e.g. analytics data.
+Your policies follow the principle of
+‘transparency’
+. In particular, your privacy notice must include the lawful basis you are using for data processing and an explanation of what user agreement does and does not mean.
+You have processes in place to maximise ‘
+data minimisation
+’, particularly when sharing data with other organisations, within the parameters of your particular service or use case.
+You have processes in place to ensure ‘
+data accuracy
+’, including accuracy of personal data you collect and create.
+You have a clear process to manage requests related to ‘
+right of access
+’, ‘
+right to rectification
+’ and ‘
+right to data portability
+’. To note these rights have been highlighted for auditing but you must have a clear process for all of the data protection rights.
+You have given consideration to how your service safely accommodates and protects children. Where relevant this will involve conforming to the
+Age Appropriate Design Code
+.
+Where automated decision-making is part of your service, you have met the requirements in the
+ICO guidance
+.
+Where your service processes biometric or other special category data,
+ICO guidance
+is followed.
+Protecting privacy
+You must follow privacy best practice, aligning with
+‘privacy by design and default’
+ICO guidance
+. You should also demonstrate that your privacy compliance process follows an industry standard such as
+ISO/IEC 27701:2019
+.
+Getting your users’ agreement
+If you have direct contact with end users, as opposed to only providing services to other businesses, you must obtain user agreement, whichever lawful basis you are using to process personal data. User agreement means asking users to provide positive confirmation that they have understood how the data in their digital identities or attributes will be shared or disclosed. This must include data processing undertaken by third-party services or components you use to provide digital identities or attributes.
+When requesting user agreement you must:
+ask the user to positively opt in;
+specify why you or others in your supply chain are processing the data and what you are going to do with it;
+describe the types of third party services for which you obtained the user agreement. For example, you could say the user’s data will be checked with a credit reference agency;
+name your organisation and any third party services for which you obtained the user agreement; and
+use clear, plain language that is easy to understand.
+You must keep a record of when and how you got user agreement and exactly what the user was told at the time. You must clearly explain to the user:
+what the consequences of refusing user agreement would be, including the impact on their ability to access services; and
+whether they are able to withdraw the agreement and what the implications of doing this would be.
+You could refer the user to your privacy notice for a more detailed explanation on user agreement.
+Rules for services offering reusable digital identities and attributes
+If your service offers reusable digital identities and attributes, you must obtain user agreement at the point of opening the user account. You should also obtain user agreement at the point of each interaction where data is shared or disclosed, if feasible.
+You must have processes in place to renew user agreement obtained for the account at appropriate intervals. You must take third-party services into account when renewing user agreement.
+If you make substantive changes to the way your product or service handles users’ data, you must ask the user to renew their user agreement. You must have a way for the user to renew their user agreement if:
+you make any changes to how your product or service handles users’ data;
+your product or service starts offering something different to what users might expect.
+You do not need to refresh user agreement when you change the third-party organisations you partner with to provide digital identities and attributes, as long as the
+purpose of processing
+remains the same.
+Prohibited processing of personal data
+Under the trust framework, you must not collect and process personal data to:
+‘profile’ users of any age for marketing purposes;
+create aggregate data sets that could reveal sensitive information about users;
+process digital identities or attributes without the user’s agreement.
+15.14 Keep records
+You must record what you did to create, manage, share or consume a digital identity or attribute. How you do this will depend on the type of service you provide and which legislation is relevant to the industry or sector your organisation is part of. You must do this in a way that meets the requirements in article 30 of the
+UK GDPR
+.
+You must keep your own copies of any records. You must dispose of these records when you no longer have any use for them.
+If an identity or attribute service provider is sharing information with a relying party, they might need to make sure the relying party gets a copy of any records about that digital identity or attribute.
+Before you start keeping records, you must have:
+clear rules for keeping, managing and disposing of them;
+a records management policy and a disposal statement; and
+a named person in your organisation who oversees records management.
+You must have rules that cover your day-to-day records management. For example:
+which records to keep;
+who should keep them;
+how to keep them, covering the formats and media you use;
+when to dispose of records - this is usually covered in a disposal statement.
+The rules for your organisation can be as detailed as you need them to be. These rules can be a part of your records management policy or maintained separately.
+Records management policy
+You must have a regularly updated and internally published records management policy. The policy must include:
+a commitment to managing records, including what’s covered and why;
+the policy’s objectives (for example, to help you meet standards or legal rules);
+how the records management policy relates to your organisation’s other policies, such as data security or fraud policies;
+the job roles in your organisation and what their management responsibilities are; and
+specific plans for records that are particularly important or sensitive.
+It must be easy for anyone in your organisation to find and use the policy. This will help everyone understand why it’s important to follow the management rules and keep records correctly.
+The records management policy must have been agreed at a senior level. It will usually be part of your wider information management strategy. You must choose a named person to check it’s being followed and regularly review it.
+Your other responsibilities
+You must also:
+have guidance on common issues that the rules do not cover, such as naming conventions;
+know how (and how often) you’re going to check that your records are being managed according to your policy; and
+make sure that access to records is controlled and monitored.
+Disposing of records
+Your organisation must have clear rules on how long to keep records which meet requirements in data protection legislation. When it’s time to stop keeping them, you must dispose of them in an appropriate way. Before you decide whether to keep or dispose of a record, you must consider if you need it for:
+Legal reasons
+Performance analysis
+Fraud analysis
+Audits or other investigations
+You might need to keep just part of the record. For example, a medical research organisation might need a record of someone’s symptoms and what treatment they had. They can keep this and dispose of any other information that was part of the record.
+Disposal statement
+Your organisation must have a formal written disposal statement. It must include the types of record you handle and:
+how long you keep each type;
+how you dispose of each type; and
+your processes for archiving and destroying records.
+What people in your organisation need to do
+Anyone who handles records must follow the records management policy. This includes temporary staff and contractors. Everyone who works for your organisation must know:
+which information needs to be added to the record-keeping system;
+what your records management policy is;
+what they must do to follow data protection legislation and (if your organisation is a public authority) the
+Freedom of Information Act
+.
+Accountability for records management
+You must choose a named person with accountability for overseeing your records management. They will be ultimately responsible for making sure your records are accurate, accessible and secure. They will need to:
+check your records are being managed according to the records management policy and disposal statement;
+make sure you meet your legal and regulatory requirements;
+set up or maintain your record-keeping systems;
+identify important or sensitive records that need specific management plans;
+set up a way to document who has accessed, added or changed a record; and
+act as a single point of contact for records management issues.
+15.15 Working with relying parties
+Relying parties are organisations that use (or ‘consume’) products or services from other participants in the trust framework.
+Where a trust framework participant works with a relying party, the participant must have processes agreed with the relying party to set out ‘flow down’ terms through their contractual arrangements. These must:
+ensure the relying party understands its responsibilities that flow down from its contract with the trust framework participant;
+confirm the role of the relying party to support the management of fraud with service providers;
+confirm the role of the relying party to support the management of information security with service providers;
+confirm the role of the relying party to support the requirements for the retention of data policies;
+confirm the role of the relying party to support compliance with trust framework prohibited processing of personal data rules;
+confirm the role of the relying party to support data minimisation requirements, including excessive processing;
+confirm the role of the relying party to support data accuracy and repair;
+confirm the role of the relying party to support identity repair and recourse; and
+confirm the boundaries for liability between the relying party and service provider.
+15.16 Prohibited conduct
+When doing anything related to the trust framework, you (including any third party using services from the framework) must not do anything that’s illegal in the UK. This could include:
+Selling illegal goods, substances or services
+Promoting acts of violence or terror
+Bribery
+Fraud
+Conspiracy
+Copyright infringement
+Breaching data protection legislation
+Breaching financial regulations
+Breaking the law in any other way
+You must not:
+be misleading or deceptive;
+contradict the terms of use;
+target, with the intention to exploit, users who are suffering from physical, emotional or financial distress (for example promoting services like unaffordable loans to users that are in financial trouble);
+damage the reputation, image, goodwill or trustworthiness of the trust framework or the trust mark.
+16. Table of standards, guidance and legislation
+This is a table of all standards, guidance and legislation referred to in the trust framework for ease of reference. Not all will be applicable to every trust framework participant and we recommend you read the relevant rules for your organisation in full.
+STANDARD/GUIDANCE
+Rules for identity service providers
+Government guidance on
+how to prove and verify someone’s identity
+Rules for attribute service providers
+Government guidance on
+understanding attributes
+Government guidance on
+how to create attributes
+Government guidance on
+how to score attributes
+Rules for all identity and attribute service providers
+Government guidance on
+using authenticators to protect an online service
+ICO guidance on
+qualified trust service providers
+(QTSP)
+ISO/IEC 18013-5:2021
+- Use of mobile credentials
+Make sure your products and services are inclusive
+Equality Act 2010
+Government guidance on
+how to accept a vouch as evidence of someone’s identity
+ISO/IEC 19795-1:2021
+-
+Information technology — Biometric performance testing and reporting
+Make sure your products and services are accessible
+Government guidance on understanding the
+accessibility regulations
+Welsh Language Act 1993
+Bilingual Technology Toolkit
+W3C Web Content Accessibility Guidelines
+EN 301 549 V3.2.1 (2021-03)
+- ETSI standard for accessibility requirements
+EN 301 549 V1.1.2 (2015-04)
+- Accessibility requirements suitable for public procurement of ICT products and services in Europe
+BS 8878:2010
+- Web accessibility Code of practice
+Making your products and services interoperable with others
+OpenID Connect
+W3C Verifiable Credentials
+Staff and resources
+ISO/IEC 27001:2017
+NCSCs Cyber Assessment Framework (
+CAF
+)
+NIST Cybersecurity Framework
+BS 7858:2019
+- Screening of individuals working in a secure environment. Code of practice
+Cryptography and encryption
+NCSC
+guidance on Using IPsec to protect data
+NIST FIPS 140-2
+, Security Requirements for Cryptographic Modules
+FIPS 140-3
+- Security Requirements for Cryptographic Modules
+SP 800-175B
+- Guideline for Using Cryptographic Standards in the Federal Government: Cryptographic Mechanisms
+SP 800-67
+- Recommendation for the Triple Data Encryption Algorithm (TDEA) Block Cipher
+ETSI TS 103 458
+- Application of Attribute Based Encryption (ABE) for PII and personal data protection on Internet of Things (IoT) devices, WLAN, cloud and mobile services
+ISO/IEC 18033-1:2015
+- Information technology — Security techniques — Encryption algorithms — Part 1: General
+ISO/IEC 18033-2:2006
+- Information technology — Security techniques — Encryption algorithms — Part 2: Asymmetric ciphers
+ISO/IEC 18033-3:2010
+- Information technology — Security techniques — Encryption algorithms — Part 3: Block ciphers
+ISO/IEC 18033-4:2011
+- Information technology — Security techniques — Encryption algorithms — Part 4: Stream ciphers
+ISO/IEC 18033-5:2015
+- Information technology — Security techniques — Encryption algorithms — Part 5: Identity-based ciphers
+NIST FIPS 180-4
+- Secure Hash Standard (SHS)
+NIST FIPS 202
+- SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions
+NIST SP 800-107
+- Recommendation for Applications Using Approved Hash Algorithms
+NCSC
+guidance on
+using TLS to protect data
+FIPS 186-5
+- Digital Signature Standard (DSS)
+ETSI TS 119 312
+- Electronic Signatures and Infrastructures (ESI); Cryptographic Suites
+Quality Management
+Information Technology Infrastructure Library (ITIL)
+ISO 20000:2018
+Information technology — Service management
+ISO 9001:2015
+- Quality management systems — Requirements
+Six Sigma methodology
+Information management
+ISO/IEC 27001:2013
+- Information technology — Security techniques — Information security management systems — Requirements
+Information security
+NCSC
+guidance on
+Secure Design Principles
+NCSC
+Cyber Assessment Framework (
+CAF
+)
+NCSC
+guidance on
+Building and operating secure online services
+Risk Management
+ISO/IEC 27005:2018
+- Information technology — Security techniques — Information security risk management
+ISO 31000:2018
+- Risk management
+NCSC
+guidance on
+phishing attacks
+NCSC
+guidance on
+cyber security-related risk management
+Fraud management
+Guidance from the
+Chartered Institute of Public Finance and Accountancy (
+CIPFA
+)
+Government Functional Standard GovS 013: Counter fraud
+Government Internal Audit Agency’s standards
+Guidance from the
+Association of Certified Fraud Examiners (
+ACFE
+)
+Guidance from the
+Chartered Institute of Management Accountants
+NCSC
+guidance on
+Transaction monitoring for online services
+Incident management
+National Cyber Security Centre (
+NCSC
+) guidance on incident management
+NCSC
+guidance on best practice on
+logging monitoring
+Information Technology Infrastructure Library (ITIL)
+ICO guidance on how to
+respond to data breaches
+Privacy and data protection requirements
+Data Protection Act 2018
+UK GDPR
+ICO guidance on
+privacy by design and default’
+ISO/IEC 27701:2019
+- Security techniques — Extension to ISO/IEC 27001 and ISO/IEC 27002 for privacy information management — Requirements and guidelines
+Keep records
+Freedom of Information Act
+Glossary of terms and definitions
+Term
+Definition
+Accreditation
+The independent, third-party evaluation of a conformity assessment body against recognised standards, conveying formal demonstration of its impartiality and competence to carry out specific conformity assessment tasks.
+Audit
+The independent verification activity, such as inspection or examination, of a product, process or service, to ensure compliance to requirements.
+Attributes
+Pieces of information that describe something about a person or an organisation.
+Attribute service providers
+Individuals or organisations that collect, create, check or share attributes.
+Authenticator
+Something that users can use to access a service. It could be some information (like a password), a piece of software or a device.
+Calling line identifier (CLI)
+Something that lets whoever’s receiving a phone call see the caller’s number.
+Certification
+Represents a written assurance by an independent third party, accredited by UKAS, of the conformity of a product, process or service to specified requirements.
+Compromised account
+An account has been compromised if a threat actor has accessed it to perform actions using a genuine user’s credentials. This could happen because someone has been a victim of coercion, social engineering, phishing or other cyber attacks.
+Contra-indicators
+A way of categorising any wrong or contradictory information that you might get from, or about, users.
+Cryptographic
+A way to guarantee the integrity and confidentiality of data transmitted over a public network. This is done by a combination of encryption and signing.
+Data minimisation
+Data minimisation means collecting the minimum amount of personal data needed to deliver an individual element of a service.
+Delegated authority
+When a user is authorised to act on behalf of someone else.
+Digital identity
+A digital representation of who a user is. It lets them prove who they are during interactions and transactions. They can use it online or in person.
+Digital signatures
+A type of electronic signature that’s used to validate the authenticity and integrity of a message, like an email, credit card transaction or a digital document.
+Digital wallet
+An electronic device, online service or software program that allows one party to make electronic transactions with another party for
+goods and services
+.
+Encryption
+Encryption is a mathematical function that encodes data in such a way that only authorised users can access it.
+Firewall
+A network security system that monitors and controls incoming and outgoing network traffic.
+Hash function
+When data is converted into a fixed-length value. A hash cannot be reversed to reveal the original data.
+Identifier
+A piece of information that can be used to make a connection between an attribute and a person or organisation.
+Identity service providers
+Identity service providers prove and verify users’ identities. They might not need to do all parts of the identity checking process. They can specialise in designing and building components that can be used during a specific part of the process.
+Industry standards
+Relevant established standards from organisations including but not limited to ISO/IEC, ITU, ETSI, ENISA, ANSI, NIST, BSI.
+Internet Protocol (IP) address
+A numerical label assigned to any device connected to a computer network that uses Internet Protocol.
+Intrusion detection system
+Software that automatically looks for possible incidents during events in a computer system or network.
+Metadata
+Data that provides information about other data.
+Orchestration service providers
+Orchestration service providers make sure data can be securely shared between participants in the trust framework through the provision of their technology infrastructure.
+Personal data store
+Service which lets an individual store, manage and deploy their key personal data in a highly secure and structured way.
+Phishing
+When criminals attempt to trick users into submitting personal information by asking them to click on links within for example scam emails or text messages.
+Pseudonymisation
+A security technique that replaces or removes information in a data set that identifies an individual. It does not change the status of the data as personal data (
+ICO Guidance
+).
+Public Key Infrastructure (
+PKI
+)
+A way to implement secure electronic transactions over insecure networks, such as the internet. It’s used to authenticate identities for the purposes of data encryption and signing.
+Qualified trust service
+A service offered by a
+qualified trust service provider
+that meets the rules in the UK electronic identification and trust services (eIDAS) regulation.
+Relying party
+Organisations that rely on (or ‘consume’) products or services from trust framework participants.
+Relying party flow down terms
+Terms that trust framework participants include in contractual arrangements with relying parties so they support participants’ compliance with the trust framework.
+Scheme
+A group of different organisations who agree to follow a specific set of rules around the use of digital identities and/or attributes.
+Scheme owner
+An organisation that creates, runs and sets the rules of a scheme.
+Shared signals
+When intelligence is shared across the trust framework to reduce the impact of fraud on its participants and users.
+Trust framework
+A set of rules and specifications that organisations agree to follow in order to achieve a common purpose.
+Unique identifier
+Unique data used to represent someone’s identity and associated attributes.
+User
+People who use digital identity and attribute products and services to prove their identity or eligibility to do something.
+User agreement
+Something that confirms users have understood how their digital identities or attributes will be shared.
+Zero knowledge proof
+A mathematical method by which one party can prove to another party that they know the same thing, without conveying any information apart from the fact that they know it.
+Back to top
+Is this page useful?
+Maybe
+Yes
+this page is useful
+No
+this page is not useful
+Thank you for your feedback
+Report a problem with this page
+Help us improve GOV.UK
+Do not include personal or financial information like your National Insurance number or credit card details.
+This field is for robots only. Please leave blank
+What were you doing?
+What went wrong?
+Send
+Cancel
+Help us improve GOV.UK
+To help us improve GOV.UK, we’d like to know more about your visit today.
+Please fill in this survey (opens in a new tab
+and requires JavaScript
+)
+.
+Cancel

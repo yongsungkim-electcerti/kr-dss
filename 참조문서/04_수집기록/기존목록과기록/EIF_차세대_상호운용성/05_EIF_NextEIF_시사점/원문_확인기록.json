@@ -1,0 +1,18 @@
+[
+  {
+    "id": "E17",
+    "path": "C:\\Users\\sol74\\orca\\workspaces\\kr-dss\\기술문서\\Interoperable_Europe_영문자료조사_20260927\\우선자료12_원문\\01A_EIF_2017_Brochure.pdf",
+    "pages": 48,
+    "bytes": 890435,
+    "sha256": "64e99921919e1e754f8a4bde0f2c15b1d7b86897803500945434eba20a07ac68",
+    "verified_on": "2026-09-27"
+  },
+  {
+    "id": "N02",
+    "path": "C:\\Users\\sol74\\orca\\workspaces\\kr-dss\\기술문서\\EIF_차세대_상호운용성\\01_원문\\EIF_Next_Generation_Blueprint_Draft_0_2_20251115.pdf",
+    "pages": 85,
+    "bytes": 1455026,
+    "sha256": "deae2cd72960559aad3b4f6c262471f3ff760885b94e29cda6ae699f533a3231",
+    "verified_on": "2026-09-27"
+  }
+]

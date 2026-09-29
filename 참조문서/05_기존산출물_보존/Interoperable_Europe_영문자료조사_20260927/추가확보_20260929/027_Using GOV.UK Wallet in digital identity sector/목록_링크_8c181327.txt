@@ -1,0 +1,106 @@
+Using GOV.UK Wallet in the digital identity sector - GOV.UK
+Cookies on GOV.UK
+We use some essential cookies to make this website work.
+We’d like to set additional cookies to understand how you use GOV.UK, remember your settings and improve government services.
+We also use cookies set by other sites to help us deliver content from their services.
+You have accepted additional cookies.
+You can
+change your cookie settings
+at any time.
+You have rejected additional cookies.
+You can
+change your cookie settings
+at any time.
+Accept additional cookies
+Reject additional cookies
+View cookies
+Hide cookie message
+Skip to main content
+Guidance
+Using GOV.UK Wallet in the digital identity sector
+Organisations certified against the trust framework will be able to use the information in GOV.UK Wallet.
+From:
+Government Digital Service
+and
+Office for Digital Identities and Attributes
+Published:
+14 May 2025
+Last updated:
+1 September 2026
+            —
+See all updates
+Get emails about this page
+Print this page
+GOV.UK Wallet lets users prove things about themselves using government-issued documents safely stored on their phone. It’s secured by GOV.UK One Login and a proven identity.
+Users can choose to share documents with a digital verification service, which will be able to access, verify, and use the information on offer.
+The powers to access and use the information are laid out in the
+Data (Use and Access) Bill
+. Digital verification services will first need to be certified against the
+UK digital identity and attributes trust framework
+, and added to the
+digital identity and attribute services register
+.
+How digital verification services can use GOV.UK Wallet
+Once on the register, digital verification services will be able to use GOV.UK Wallet in 2 ways. They could do any, or all, of the following:
+Use the information in GOV.UK Wallet to offer a range of identity and attribute services.
+Share information from GOV.UK Wallet with other businesses who need to prove information about an individual.
+Find out more about how this will work in our
+technical documentation
+.
+1. Using the information in GOV.UK Wallet
+If certified as an identity or attribute service provider, services can use the information in GOV.UK Wallet to help someone prove something about themselves digitally. This is similar to how this is done now using physical documents.
+If they are also certified as a holder service, they could use information from GOV.UK Wallet to create a new reusable digital identity document. This is also known as a ‘derived credential’. It could either prove specific things like age, or contain a range of different identity or other eligibility information.
+2. Sharing GOV.UK Wallet information with other businesses
+Businesses certified as orchestration service providers could in future share information from GOV.UK Wallet with another business to prove something about a user. An example would be a retailer using GOV.UK Wallet to verify a customer’s eligibility to buy age-restricted products, such as alcohol or energy drinks.
+There’ll be no record of where the documents in GOV.UK Wallet have been used, or for what purpose.
+What’s in GOV.UK Wallet
+GOV.UK Wallet currently holds the HM Armed Forces Veteran Card. This will be followed by the digital driving licence.
+Only government issued documents can be saved in GOV.UK Wallet. Users will not be able to save other types of documents, for example train or concert tickets.
+What’s next
+You can:
+contact our engagement team at
+govukwallet-queries@digital.cabinet-office.gov.uk
+if you’d like to know more about how you could use GOV.UK Wallet
+request access to our sandbox
+look at our
+technical documentation
+, and give us feedback
+find out more about how to be certified against the
+trust framework
+Updates to this page
+Published 14 May 2025
+Last updated 1 September 2026
+—
+Show all updates
+1 September 2026
+Updated to include mention of the sandbox
+17 October 2025
+Updated to say the HM Armed Forces Veteran Card is now available
+14 May 2025
+First published.
+Sign up for emails or print this page
+Get emails about this page
+Print this page
+Contents
+Is this page useful?
+Maybe
+Yes
+this page is useful
+No
+this page is not useful
+Thank you for your feedback
+Report a problem with this page
+Help us improve GOV.UK
+Do not include personal or financial information like your National Insurance number or credit card details.
+This field is for robots only. Please leave blank
+What were you doing?
+What went wrong?
+Send
+Cancel
+Help us improve GOV.UK
+To help us improve GOV.UK, we’d like to know more about your visit today.
+Please fill in this survey (opens in a new tab
+and requires JavaScript
+)
+.
+Cancel

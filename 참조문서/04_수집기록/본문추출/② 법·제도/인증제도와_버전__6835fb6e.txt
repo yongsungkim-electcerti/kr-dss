@@ -1,0 +1,283 @@
+Certification scheme for the UK digital verification services trust framework - GOV.UK
+Cookies on GOV.UK
+We use some essential cookies to make this website work.
+We’d like to set additional cookies to understand how you use GOV.UK, remember your settings and improve government services.
+We also use cookies set by other sites to help us deliver content from their services.
+You have accepted additional cookies.
+You can
+change your cookie settings
+at any time.
+You have rejected additional cookies.
+You can
+change your cookie settings
+at any time.
+Accept additional cookies
+Reject additional cookies
+View cookies
+Hide cookie message
+Skip to main content
+Guidance
+Certification scheme for the UK digital verification services trust framework
+Conformity assessment bodies must follow these processes and requirements when certifying services against the UK digital verification services trust framework.
+From:
+Office for Digital Identities and Attributes
+,
+Department for Science, Innovation and Technology
+and
+Department for Digital, Culture, Media and Sport
+Published:
+26 June 2025
+Last updated:
+21 September 2026
+            —
+See all updates
+Get emails about this page
+Print this page
+A certification scheme is a structured and standardised approach to providing third-party assurance that required regulations, standards and criteria are met.
+The UK digital verification services trust framework certification scheme (the certification scheme) is a set of documents used by conformity assessment bodies (
+CABs
+) when they are certifying products, services, and processes against the
+UK digital verification services trust framework
+(the trust framework). The documents contain processes, procedures and requirements that
+CABs
+must fulfil to certify a service in a compliant way.
+The documents in the certification scheme are for
+CABs
+. Digital verification services providers should refer to the
+UK digital verification services trust framework
+and
+supplementary codes
+for requirements that they must meet to build a service that can become certified.
+Certification scheme owner
+The Department for Digital, Culture, Media and Sports (DCMS) is the certification scheme owner for the UK digital verification services trust framework. It publishes, maintains and interprets the trust framework and its associated certification scheme.
+On a day-to-day basis, the trust framework and the associated certification scheme are managed by officials working in the Office for Digital Identities and Attributes (
+OfDIA
+), which is an office within DCMS.
+Approved and accredited conformity assessment bodies
+To certify services under the UK digital verification services trust framework certification scheme conformity assessment bodies (
+CABs
+) must:
+be approved by DCMS, and
+either be accredited by the UK Accreditation Service (
+UKAS
+) or be going through the accreditation process
+We publish a
+list of the conformity assessment bodies for the UK digital verification services trust framework
+on GOV.UK.
+CABs
+must apply for approval from
+OfDIA
+before they can apply to
+UKAS
+for accreditation.
+CABs
+will be unable to obtain accreditation without prior approval from
+OfDIA
+.
+Any certificate that is issued by a non-approved
+CAB
+is not valid under the certification scheme. It cannot be relied upon as evidence of conformity to the UK digital verification services trust framework.
+Only certificates issued by
+CABs
+accredited against the trust framework by
+UKAS
+are valid for the purposes of joining the digital verification services (DVS) register established under Section 32 of the Data (Use and Access) Act.
+If you are a
+CAB
+and want to be approved to certify services against the UK digital verification services trust framework, please email
+correspondence@dsit.gov.uk
+.
+Alignment to international standards
+The certification scheme aligns to the international standard: ISO/IEC 17065:2012 – Requirements for bodies certifying products, processes, and services.
+When certifying a digital verification service,
+CABs
+must follow both the requirements in the certification scheme and the ISO 17065 international standard.
+In developing the certification scheme,
+OfDIA
+has also referenced other international standards, including but not limited to:
+ISO/IEC 17000 – Conformity assessment – and general principles
+ISO/IEC 17007 – Conformity assessment – Guidance for drafting normative documents
+ISO/IEC 17020 – Conformity assessment – Requirements for the operation of various types of bodies performing inspection
+Certification scheme requirements for
+CABs
+The certification scheme requirements for
+CABs
+are captured in a number of documents, some of which are recognised by
+UKAS
+. Documents included (latest versions) on
+UKAS
+schedule for recognition of the scheme are:
+UK DVSTF certification scheme requirements for conformity assessment bodies v1.15
+(
+PDF
+,
+1.35 MB
+,
+76 pages
+)
+UK DVSTF CAB personnel skills and competencies v1.8
+(
+PDF
+,
+148 KB
+,
+10 pages
+)
+List of supplementary codes v1.2
+(
+PDF
+,
+127 KB
+,
+5 pages
+)
+Other supporting documents include
+UK DVSTF CAB principles and code of ethics v1.7
+(
+PDF
+,
+299 KB
+,
+29 pages
+)
+UK DVSTF certificate requirements v1.7
+(
+PDF
+,
+190 KB
+,
+17 pages
+)
+How we manage the certification scheme
+How we created the certification scheme
+The certification scheme has been developed by a combination of civil servants, industry specialists, regulators and other groups with specialist knowledge and experience of digital identity and certification.
+Stakeholder input has been incorporated into the certification scheme throughout its development.
+When we create a new version
+A new version of the certification scheme is created when:
+a new version of the UK digital verification services trust framework is published
+a new version of a supplementary code (for example, the requirements for the Right to Work process) is published
+the certification scheme requirements are amended
+Each version of the certification scheme is numbered based on the trust framework version it is aligned to, and the number of iterations since that version was published. For example:
+version 0.3.1 of the certification scheme is the first iteration of the certification scheme created aligned to version 0.3 of the trust framework
+version 0.4.4 of the certification scheme is the fourth iteration aligned to version 0.4 of the trust framework
+How changes are brought into effect
+When changes are made to the certification scheme they will be brought into force using this process:
+1. Periodic review
+The trust framework and its associated certification scheme are regularly reviewed to ensure that they are fit-for-purpose.
+The Data (Use and Access) Act
+requires that the trust framework is reviewed at least annually. This review process does not mean that a new version of the trust framework or the certification scheme will always be needed.
+2. Development and iteration
+When, as part of the review,
+OfDIA
+identifies a need to update the trust framework or certification scheme, then it develops the proposed changes and iterates them based on engagement with relevant stakeholders.
+3. Pre-release
+Once changes to the trust framework and certification scheme are finalised, they are made available as pre-release versions.
+Pre-release versions are near-final documents. They are intended to help:
+digital verification services providers to consider what changes they might need to make to their services before new versions of the trust framework or supplementary codes comes into effect
+CABs
+prepare changes to their processes and procedures, so they can successfully implement the certification scheme
+Pre-release versions of the trust framework or supplementary codes are published on GOV.UK.
+Pre-release versions of the certification scheme are provided directly to approved
+CABs
+that are participating in the certification scheme.
+CABs
+cannot certify a service using a pre-release version of the certification scheme.
+Where documents include fixed implementation or expiry dates, these are included as placeholders in the pre-release version. These dates are replaced with the final dates when they are finally released.
+4. Recognition from the UK Accreditation Scheme
+In parallel to pre-release of documents,
+OfDIA
+submits each version of the certification scheme to the UK Accreditation Scheme (
+UKAS
+) for formal recognition that it is fit-for-purpose as a set of documents.
+5. Accreditation
+Once the certification scheme has been recognised,
+CABs
+can start their accreditation or accreditation uplift process. This means they are assessed by
+UKAS
+, which checks that
+CABs
+comply with the rules of the scheme.
+6. Release
+Once the certification scheme is recognised and accreditation has started,
+OfDIA
+sets a timeline for transition from the current version to the new version. This timeline will include:
+the date from which services can be certified against that version of the trust framework or a supplementary code
+the date from which
+CABs
+must implement the new certification scheme
+the date from which previous versions of the trust framework, supplementary codes and certification scheme expire
+The pre-release versions of the documentation are replaced at this stage.
+The placeholder dates for implementation and expiry in the pre-release versions are replaced in the final version.
+Certification scheme versions
+These tables record each version of the certification scheme that
+OfDIA
+has developed and brought into effect.
+Current version
+Trust framework version
+Scheme version
+Status
+In effect from
+Expires
+Gamma (0.4)
+0.4.4
+Live
+1 July 2025
+1 December 2028
+1.0
+1.0.1
+Live
+2 September 2026
+Previous versions
+Trust framework version
+Scheme version
+Released
+Expiry
+Beta (0.3)
+0.3.1
+July 2024
+Beta (0.3)
+0.3.2
+July 2024
+January 2025
+Beta (0.3)
+0.3.3
+January 2025
+31 March 2026
+Updates to this page
+Published 26 June 2025
+Last updated 21 September 2026
+—
+Show all updates
+21 September 2026
+Renamed 'digital identity and attributes trust framework' to 'digital verification services trust framework' throughout the page. Included latest versions of the certification scheme documentation (pdf attachments) that relate to UK digital verification services trust framework 1.0.
+12 January 2026
+Text has been updated to reflect recent updates as well as links to the scheme documents have been added.
+26 June 2025
+First published.
+Sign up for emails or print this page
+Get emails about this page
+Print this page
+Contents
+Related content
+Is this page useful?
+Maybe
+Yes
+this page is useful
+No
+this page is not useful
+Thank you for your feedback
+Report a problem with this page
+Help us improve GOV.UK
+Do not include personal or financial information like your National Insurance number or credit card details.
+This field is for robots only. Please leave blank
+What were you doing?
+What went wrong?
+Send
+Cancel
+Help us improve GOV.UK
+To help us improve GOV.UK, we’d like to know more about your visit today.
+Please fill in this survey (opens in a new tab
+and requires JavaScript
+)
+.
+Cancel

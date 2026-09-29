@@ -1,0 +1,154 @@
+[
+  {
+    "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002890824#contents",
+    "text": "본문 바로가기"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/main.kci",
+    "text": ""
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/siteMap.kci",
+    "text": "Sitemap"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/main.kci?locale=en",
+    "text": "English"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/aboutKci.kci",
+    "text": "KCI 소개"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poArtiSear.kci",
+    "text": "논문 검색"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poSereSear.kci",
+    "text": "학술지 검색"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poInsiSear.kci",
+    "text": "기관 정보 검색"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poCitaSear.kci",
+    "text": "인용 정보 검색"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/statistics/poStatisticsMain.kci",
+    "text": "통계 정보"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/ss-mng/bbs/openBbsMain.kci",
+    "text": "정보마당"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/check/login.jsp",
+    "text": "논문유사도검사"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poFielResearchTrendList.kci",
+    "text": "분석정보서비스"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poCitaView.kci?sereId=SER000004906",
+    "text": "이 학술지 인용지수 조회"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poSereArtiList.kci?sereId=SER000004906",
+    "text": "이 학술지 논문 검색"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poSereArtiList.kci?sereId=SER000004906&volIsseId=VOL000151714",
+    "text": "2022, vol.8,\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tno.10,\r\n\t\t\t\t\t\t\t\t\t\t\t \r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t통권 54호\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t\t\t\t\tpp. 49-60 (12 pages)"
+  },
+  {
+    "url": "http://doi.org/10.47116/apjcri.2022.10.05",
+    "text": "10.47116/apjcri.2022.10.05"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poInsiResearchTrendDetail.kci?poResearchTrendSearchBean.insiId=INS000063357",
+    "text": "이 기관으로 동향 분석"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poInsiSearSoceView.kci?insiGeneInfoBean.insiId=INS000063357",
+    "text": "이 기관 일반 현황"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poFielResearchTrendList.kci?clasSearchBean.largMajorCd=H",
+    "text": "복합학"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poFielResearchTrendList.kci?clasSearchBean.largMajorCd=H",
+    "text": "이 분야로 동향 분석"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poCitaSearList.kci?years=2&directory=H",
+    "text": "이 분야로 인용지수 조회"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poFielResearchTrendList.kci?clasSearchBean.largMajorCd=H&poResearchTrendSearchBean.middMajorCds=H99",
+    "text": "학제간연구"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poFielResearchTrendList.kci?clasSearchBean.largMajorCd=H&poResearchTrendSearchBean.middMajorCds=H99",
+    "text": "이 분야로 동향 분석"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/search/poCitaSearList.kci?years=2&directory=H99",
+    "text": "이 분야로 인용지수 조회"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/citationindex/poCretDetail.kci?citationBean.cretId=CRT001076265&citationBean.artiId=ART002890824",
+    "text": "신규용\r\n\t\t\t\t\t\t\t\t\t\t\t/Kyuyong Shin"
+  },
+  {
+    "url": "https://openalex.org/W4307867123",
+    "text": "논문 바로가기"
+  },
+  {
+    "url": "https://openalex.org/works?page=1&filter=cites:w4307867123",
+    "text": "피인용 목록"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/citationindex/poCretDetail.kci?citationBean.cretId=CRT001076265&citationBean.artiId=ART002890824",
+    "text": "신규용\r\n\t\t\t\t\t\t\t/Kyuyong Shin 1"
+  },
+  {
+    "url": "https://www.google.co.kr/search?q=분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구",
+    "text": "Google"
+  },
+  {
+    "url": "http://fucos.or.kr/journal/APJCRI/Articles/v8n10/5.html",
+    "text": "원문 보러가기"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/personal/poInfoOfInterestDrawerList.kci?myInfoOfInterestSearBean.scraListDivCd=INTRT04",
+    "text": "관심정보관리"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/bib/poBiblList.kci",
+    "text": "참고문헌 반출"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/po/personal/poNotificationsSettingList.kci",
+    "text": "알림 설정 목록"
+  },
+  {
+    "url": "https://www.kci.go.kr/kciportal/resources/kci_data_filed.pdf",
+    "text": "필드명 설명 자료 다운로드"
+  },
+  {
+    "url": "http://pf.kakao.com/_xfymxaxj/chat",
+    "text": ""
+  },
+  {
+    "url": "https://www.nrf.re.kr/page/409?menuNo=409",
+    "text": "개인정보 처리방침"
+  },
+  {
+    "url": "http://www.nrf.re.kr/member/not_email",
+    "text": "이메일 자동수집 거부"
+  }
+]

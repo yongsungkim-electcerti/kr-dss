@@ -1,0 +1,234 @@
+European Interoperability 
+Reference Architecture (EIRA©)
+Value proposition
+
+2
+Value proposition – Overview
+The European Interoperability Reference Architecture (EIRA©) is a quality assurance specification that supports interoperable solutions, including 
+Digital Public Services, in the following use cases of their lifecycle:
+
+3
+Value proposition – Analysis of Requirements of an Interoperable Solution (Digital Public 
+Service incl.) use case
+Analysis of Requirements 
+of an Interoperable 
+Solution (Digital Public 
+Service incl.)
+•
+How can I identify our requirements?
+•
+How can I describe our requirements in an 
+unambiguous way?
+•
+How can I validate our requirements? 
+Business need
+Target personas
+Business 
+Analyst
+•
+EU regulation compliance
+•
+Public policy alignment
+•
+No silos
+•
+No duplications
+•
+Interoperability requirements
+•
+Traceability
+Benefits
+Value stream
+Identify digital 
+business 
+capabilities
+Identify and 
+describe H-L 
+requirements
+Identify and 
+describe traceable 
+D-L requirements
+Validate  H-L 
+requirements
+Identify and 
+describe business 
+principles
+Validate D-L 
+requirements
+•
+Applying quality assurance to robust, well-proven DIGIT specifications 
+and solutions
+•
+Enabling differentiation between common domain agnostic vs. domain 
+specific requirements
+•
+Agile progress from business principles to High-Level (H-L) requirements 
+to traceable Detail-Level (D-L) requirements
+•
+Technology agnostic
+DIGIT approach
+
+4
+Value proposition of the DIGIT approach – Analysis of Requirements of an 
+Interoperable Solution (Digital Public Service incl.) use case
+Analysis of Requirements 
+of an Interoperable 
+Solution (Digital Public 
+Service incl.)
+Gains (desires)
+Pains (fears)
+Service
+Gain creators
+Pain relievers
+Needs
+Formulate my problem
+ statement
+Conflicts of interests
+Proportionality and transparency
+No support to public policy
+•
+Self-service
+•
+Project-based 
+consultancy 
+approach (limited 
+in time and with 
+deliverables) 
+•
+Knowledge 
+transfer on DIGIT 
+specifications and 
+solutions
+Lack of understanding in the 
+requirements
+F I T
+Openness
+Alignment with requirements
+Driving to alternative solution 
+options to choose from
+Not reinventing the wheel
+Differentiation between business agnostic 
+and domain specific requirements
+DIGIT is a reliable quality tools/services provider
+Comprehensiveness of requirements
+Assurance that requirements are aligned
+Conformance validation of requirements
+Uncertainty regarding requirements
+Public value
+EU sovereignty
+Use in multiple Public Administrations
+Machine-readable requirements
+Assurance in the identification of requirements
+Business 
+Analyst
+Identify the digital 
+business capabilities
+Identify the sources of legal
+ binding requirements
+DIGIT
+
+5
+Value proposition – Design of a Solution for Target Interoperable Solution (Digital Public 
+Service incl.) use case
+Design of a Solution for 
+Target
+Interoperable Solution 
+(Digital Public Service 
+incl.)
+What are the solution-specific components I 
+should implement in my Interoperable Solution(s)?
+Business need
+Target personas
+Business 
+Analyst
+•
+Specific solution realising the 
+reference model and detailed 
+requirements
+•
+Specifications traced back to 
+the requirements
+Benefits
+Value stream
+Select eGovERA© models, 
+depending on policy area(s) 
+and/or if business agnostic
+Select Solution Building 
+Blocks (SBBs) to address 
+D-L requirements
+Define a solution’s 
+specific architecture
+Use existing D-L Solution Architecture 
+Templates (SATs) to identify the 
+solution’s D-L requirements
+EIRA©, by building eGovERA© Foundation, can be used as a model to drive 
+the design of a target digital public service (one or multiple in a specific 
+policy area). 
+DIGIT approach
+Solution/Enterprise 
+Architect
+
+6
+Value proposition of the DIGIT approach – Design of a Solution for Target 
+Interoperable Solution (Digital Public Service incl.) use case
+Design of a Solution for 
+Target Interoperable 
+Solution (Digital Public 
+Service incl.)
+Gains (desires)
+Pains (fears)
+Service
+Gain creators
+Pain relievers
+Needs
+Design my solution
+Complexity
+Limited skills
+•
+Self-service
+•
+Project based 
+consultancy 
+approach (limited 
+in time and with 
+deliverables) 
+•
+Knowledge transfer 
+on DIGIT 
+specifications and 
+solutions
+Lack of understanding on the 
+Solution Building Blocks (SBBs)
+F I T
+Shareable
+Not reinventing the wheel
+Differentiation between business agnostic 
+and domain specific specifications
+DIGIT is a reliable quality tools/services provider
+Comprehensiveness of specifications
+Assurance that specifications are aligned
+Conformance validation  of specifications
+Uncertainty regarding specifications
+Reusable
+Flexibility
+[Re]use in multiple Public Administrations
+Machine-readable design
+Assurance in the identification of specifications
+Solution 
+Architect
+Compliance with 
+requirements
+Identify the sources of legal
+ binding requirements
+DIGIT
+Interoperable
+
+Thank you 
+
+Stay in touch 
+https://joinup.ec.europa.eu/collection/interoperable-
+europe/interoperable-europe 
+(@InteroperableEU) / Twitter
+DIGIT-INTEROPERABILITY@ec.europa.eu 
+Interoperable Europe | LinkedIn
+Interoperable Europe - YouTube

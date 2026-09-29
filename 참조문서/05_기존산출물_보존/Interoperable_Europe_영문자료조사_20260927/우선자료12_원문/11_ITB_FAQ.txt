@@ -1,0 +1,1242 @@
+FAQ
+​
+This page lists answers to
+frequently asked questions
+on the Interoperability Test Bed and its services. Questions are grouped in thematic categories.
+​
+General information on the Interoperability Test Bed and its services
+Data validation: Configuring and using the Interoperability Test Bed's validators
+Conformance testing: Configuring and using the GITB Test Bed software
+Conformance testing: Developing test cases and using the GITB Test Description Language
+Using the Interoperability Test Bed solutions as managed services ("as-a-service" model)
+Didn't find the answer you are looking for? Send us an email at
+DIGIT-ITB@ec.europa.eu
+or raise a ticket on
+GitHub
+.
+​
+​
+General information on the Interoperability Test Bed and its services
+What is the Interoperability Test Bed (ITB)?
+The Interoperability Test Bed (ITB) is a service provided by the European Commission's DIGIT to facilitate the
+conformance testing
+of IT systems and
+data validation
+.
+Conformance testing
+is managed through the
+GITB Test Bed software
+, a complete web platform enabling projects to build a conformance testing service for their specifications. Using the GITB software, you define your specifications and their test cases as multi-step scenarios to validate the conformance of IT systems. Test cases are authored in the
+GITB Test Description Language (TDL)
+and include a series of steps including message exchanges between the Test Bed and systems under test, validations, processing steps, user interactions and control flow logic. Users then connect to the Test Bed, and in a self-service manner, proceed to execute tests and view their reports.
+Data validation
+is addressed by the ITB's validators, reusable software components for popular syntaxes (
+XML
+,
+RDF
+,
+JSON
+,
+CSV
+and
+YAML
+), that enable you to quickly create web applications supporting validation of data via user interface, REST and SOAP APIs, and command-line tools. Creating a validator involves no coding, requiring only the configuration of your validation artefacts and other options to customise your validator's appearance and behaviour. Besides being used as standalone services, validators can also be integrated into
+conformance test cases
+to carry out validations in test cases.
+Both the GITB Test Bed and the validators can be used
+as-a-service
+through DIGIT-managed instances. Alternatively you can choose to
+self-host your services
+based on our public
+Docker images
+and
+extensive guides
+.
+What does "GITB" stand for?
+The acronym "GITB" reflects the Interoperability Test Bed's origins. It stands for "
+Global eBusiness Interoperability Test Bed
+" which is the name of the CEN Workshop Agreement (CWA) from which the Test Bed's specifications were originally produced. Work under the GITB CWA resulted in the test description language, service APIs and proof-of-concept software that still form the foundations of the Test Bed. The term "
+Interoperability Test Bed
+" on the other hand, abbreviated as "ITB", has always referred to the European Commission initiative to support interoperability through testing and validation services. This initiative analysed and eventually adopted the GITB CWA as the foundation upon which to build its services.
+The term "GITB" is used today when referring to the test description language (
+GITB TDL
+), service APIs (
+GITB service APIs
+), and the conformance testing software (
+GITB Test Bed
+). Nonetheless, most users use "GITB" and "ITB" interchangeably, with "ITB" being most commonly used to refer to the GITB Test Bed software.
+What can I test with the ITB?
+Using the ITB, and to be more precise, the
+GITB Test Bed
+, you can test IT systems against their target specifications. The focus is on
+technical
+and
+semantic
+specifications, or more simply put, the message exchange processes, APIs and data that are involved in communications between IT systems. You can test multi-step exchanges for conversation consistency, validate data at various steps, leverage built-in and custom test capabilities, and address edge cases that are typically not possible when using actual test systems.
+Note that while the typical Test Bed use case is validating message exchanges between IT systems, it can be adapted to
+other needs
+as well. For example, you can define test cases with user interactions that may not involve IT systems at all (e.g., manual upload of data for validation), or use simulated exchanges and processing steps to demonstrate how different communication flows work.
+It is important to point out that while the ITB can support various needs, it is not a replacement for other
+specialised testing tools
+. You should avoid using the ITB for penetration testing, stress testing or functional regression testing, given that specialised tools will be able to manage and report on such tests more appropriately. As a rule of thumb the ITB's place is in testing IT systems at their boundaries, ensuring that their interactions with other systems are according to commonly agreed specifications, and making this available to users in an intuitive and self-service manner.
+Finally, things are simpler in case you are focusing on the ITB's
+validators
+. Validators are used whenever you want to create a validation service as a web app, to be used by users or as part of any automated processes requiring data validation. Validation is driven by the artefacts (e.g. schemas) most appropriate for the syntax in question, but can be extended via configuration and custom plugin extensions.
+How does validation compare to conformance testing?
+In the context of the Interoperability Test Bed (ITB), data validation and conformance testing are complementary but nonetheless different processes.
+Data validation
+, refers to checking that data matches a specification's requirements by verifying it against the specification's validation artefacts. This takes place using the Test Bed's validators, web apps that use a configuration-driven approach to validate data received through various means, and produce a report. As an example, an electronic invoice validator will receive an invoice for validation and check that it matches the relevant eInvoicing specification in terms of content and syntax.
+Conformance testing
+is a much broader concept whereby IT systems are verified to ensure they conform to their target specifications. This includes data validation, but also extends to cover overall processes, involving also message exchanges and user interactions. Testing in this case happens based on test scenarios executed through the GITB Test Bed software, that replicate real-world communications. Revisiting the electronic invoice example, we could imagine conformance testing for an eInvoicing platform which needs to pass a series of tests to prove it conforms to the eInvoicing specifications. Such tests may require that invoices are generated to contain specific data unique to each test session, and are sent to a simulated receiver using prescribed web service calls with specific characteristics.
+Validators can be used in a
+standalone manner
+, but can also
+complement conformance testing
+, by being used in test steps that require the validation of received data.
+How does the ITB compare to other tools and solutions (Gherkin, Cucumber, Jenkins, Kibana, JIRA, ...)?
+Testing IT systems can be achieved in various ways, and involving several tools and technologies to address different needs. To better understand how the ITB compares to other tools we will consider how such tools could be used to create a full conformance testing service. The goal is not only to execute tests, but also to make available an online service that can be intuitively used by non-developer users.
+Building from the bottom up, you could consider using
+Cucumber
+, a popular tool for running automated tests written in plain language. Such tests would be written in
+Gherkin
+, the domain-specific language providing the keywords and expressions needed to express test steps and assertions. Once you create your test cases you will need a way to trigger and monitor their execution, manually and also in batch mode. Looking at available tools you could choose an automation server such as
+Jenkins
+that allows orchestrating such processes and triggering further integrations, via user interface and also REST API. In case you need detailed access to logs from tests and the systems being tested you could then consider using something like
+Kibana
+and its analytics dashboards. Finally, putting aside the technical building blocks to execute and report on tests, you would need an overarching dashboard to create and document test cases, assign them, and monitor their execution status. Lacking a specific solution for this purpose you would be tempted to reuse your issue tracker (e.g.
+JIRA
+) with wiki-based documentation to fill in the gaps.
+The ITB provides a comprehensive solution addressing all these needs. Executable tests are written in the
+GITB Test Description Language (TDL)
+(think Gherkin), and executed by its test engine (think Cucumber) while returning detailed reports and logs, the content of which is fully controlled by you (think Kibana). The ITB comes with an intuitive user interface and extensive REST API, enabling the management of your testing setup, execution of tests, and integration with other systems (think Jenkins). Moreover, the ITB is used to precisely manage how tests are linked to specifications, provide extensive documentation, and enable rich reporting and monitoring (think JIRA). Note finally, that the ITB supports the management of your test setup as an administrator, and at the same time the exposure of the resulting service to end users, which can be challenging to achieve if you are using tools that are not designed for this.
+In brief, the ITB is a
+built-for-purpose
+,
+intuitive
+and
+self-service
+conformance testing solution, that is moreover designed for reuse and customisation, allowing you to tailor it as best suits your project.
+Is the ITB free to use and how it is licensed?
+Yes, both the ITB (aka GITB Test Bed), its validators, and all supporting components and artefacts provided by the Interoperability Test Bed are
+free to use
+,
+open source
+, and
+permissively licensed
+under the
+European Union Public License (EUPL) 1.2
+.
+Detailed licensing information and copyright notices for Test Bed components and third-party libraries used, are available in our
+GitHub repositories
+.
+How can I contribute to the ITB's evolution and maintenance?
+The bulk of the development work for the ITB is undertaken by DIGIT, with our internal development repositories synchronised to
+GitHub
+and
+code.europa.eu
+. The best way to contribute feature ideas is via our
+issue trackers
+on GitHub. After having created a ticket and discussed with the Test Bed team, you are then welcome to submit a relevant pull request.
+For requested features requiring significant updates, development is best managed by the Test Bed team. In this case, user-requested features are prioritised and made available as soon as possible on our
+nightly build channel
+(or our "latest" tags in case of our validators). This allows you to immediately test and use the features you need without waiting for the next stable release.
+Who maintains the ITB?
+The ITB is maintained by the European Commission's
+Directorate-General for Digital Services (DIGIT)
+, and specifically the
+Interoperability Test Bed team
+of Unit B.2. The Test Bed team is also responsible for reviewing and approving community contributions on the ITB's
+GitHub repositories
+.
+Feel free to reach out to the Test Bed team by sending an email to
+DIGIT-ITB@ec.europa.eu
+.
+How can I get support?
+The Test Bed team is happy to receive any feedback, questions and support requests you may have. To reach out for support:
+Raise a ticket on our
+GitHub repositories
+. Use the
+GITB Test Bed software repository
+for issues on our conformance testing solution (what most people refer to as "ITB"); or the
+XML
+,
+RDF (SHACL)
+,
+JSON
+and
+CSV validator repository
+in case your issue concerns a validator.
+Send us an
+email
+at
+DIGIT-ITB@ec.europa.eu
+.
+Use our
+AI assistant
+. The assistant is available on all
+documentation pages
+and also on
+Gurubase.io
+(the service that powers the assistant).
+Don't hesitate to get in touch. We constantly take on input from users to improve our documentation, and prioritise feedback when evolving our solutions.
+I want to know more about the ITB. Where do I start?
+If you are unaware of what the ITB can do for you, the best entry point is its
+value proposition
+. This explains the
+need
+the ITB aims to fulfil, the
+use cases
+it covers and the different
+services
+you can expect to receive from the Test Bed team.
+Once you have a high-level understanding of what the ITB can do for you, you can proceed with the more hands-on guides to, depending on your use case, set up your validator or conformance testing service.
+I'm interested in setting up a validator. Where do I start?
+To get started with our validators, visit our
+guides
+and follow the
+XML
+,
+RDF
+,
+JSON
+,
+CSV
+or
+YAML
+validation guide, depending on the target validator's syntax. Each guide, besides acting as a full documentation reference, includes a step-by-step tutorial on setting up a validator for a simple, fictional specification.
+Following the relevant guide you will:
+Create your validator's
+configuration
+.
+Get the validator's
+software
+from the
+Docker Hub
+and plug into it your configuration.
+Run your validator locally to
+test
+and complete its configuration.
+Once you are ready to publish your validator, you can either
+host it yourself
+or have it
+hosted by the Test Bed
+on your behalf. In the latter case you will need to share the validator's configuration as a Git repository and contact the Test Bed team via email at
+DIGIT-ITB@ec.europa.eu
+.
+I'm interested in setting up conformance testing. Where do I start?
+For conformance testing you will be using the
+GITB Test Bed software
+(aka the ITB). Follow these steps to begin experimenting and developing your own testing service:
+Start with the
+developer onboarding guide
+. This introduces at a high level all key concepts before diving into more details.
+Install a Test Bed
+developer instance
+(and choose to set up the proposed samples).
+Follow the tutorials to
+create a first simple test suite
+and
+extend it with tests making and receiving HTTP calls
+.
+Check the guide on
+complex test development
+. Skim through this at first to know what it covers and come back to it if needed for your use case.
+Once you have gone through these guides, keep handy the documentation for the
+GITB TDL
+(the language used to author test cases), and the
+GITB test service APIs
+(the guide on writing extension services). At least the GITB TDL documentation will be your constant companion while writing tests.
+When installing the Test Bed (see the second step above), you will be prompted to set up a set of
+samples
+. It is strongly advised to do this when starting out as these samples can be a good source of inspiration. On top of these you will still be able to add the configurations related to the tutorials mentioned in the next steps.
+Are there testing cases for which the Interoperability Test Bed is not suitable?
+The Test Bed’s focus is on
+conformance testing
+, specifically testing IT systems against semantic and technical specifications, and focusing on their
+interactions
+in accordance with commonly agreed specifications. Ideal Test Bed use cases include:
+Content validation.
+Service simulation.
+Testing of message exchange processes.
+Testing of conversational consistency.
+Enabling self-service testing by users.
+Monitoring of conformance testing progress.
+In contrast, scenarios where you would be better suited for another, built-for-purpose testing tool include:
+Performance testing.
+Penetration testing.
+Unit testing.
+Functional or regression testing within a single application.
+Note that if the common specifications you need to be testing against include aspects such as performance and security, you may cover these with specific test cases. Don't choose the Test Bed however if such needs are your only, or primary concern.
+Does the Interoperability Test Bed provide an MCP server?
+Yes! The Test Bed provides an official
+ITB MCP server
+for use with your AI agent of choice. It provides agents with access to all ITB topics, allowing them to efficiently retrieve documentation, samples and guidelines from the official sources.
+Follow the
+official guide
+to set up the ITB MCP server in your agent, and use it to develop your tests and validators.
+​
+​
+Data validation: Configuring and using the Interoperability Test Bed's validators
+Where can I find the change history for a validator?
+Each validator's change history is maintained in its respective guide in the
+Change history
+section. Click to see this for the
+XML
+,
+RDF
+,
+JSON/YAML
+and
+CSV
+validator.
+Validators follow a
+continuous delivery model
+with their
+Docker Hub
+"latest" images including all changes listed in the change history. The change history also includes release numbers marking the points at which
+milestone releases
+were published. These releases complement the continuously updated "latest" tags, by providing fixed versions to use for self-hosted instances where stability is of most importance.
+How do validators manage data privacy?
+All validators are
+stateless
+applications and are used
+anonymously
+. When using a validator there is no trace kept on who used it, the data that was validated, or the resulting report.
+Can my validator report warnings?
+This depends on the validator and specifically on the syntax being validated and the artefacts used for validation. Specifically:
+The
+XML
+and
+RDF
+validators can produce warnings as these are supported, respectively, by Schematron and SHACL shapes.
+The
+JSON
+,
+YAML
+, and
+CSV
+validators only produce errors, as warnings are not supported in their respective schemas.
+Note that all validators can be extended with
+custom plugins
+that can produce report items at any severity level.
+What is the difference between the online SHACL validator and SHACL shape validator?
+The Test Bed's online
+SHACL validator
+and
+SHACL shape validator
+are two distinct RDF validators that serve different purposes.
+The
+SHACL validator
+is a configuration of the Test Bed's
+SHACL validator software
+to produce a "generic" RDF validator. This means that it's a validator that validates RDF content using SHACL shapes, but that does not come preconfigured with any shapes. To use it you provide the content to validate as well as the shapes to use.
+The
+SHACL shape validator
+is a different validator instance, focusing on the validation of the SHACL shapes themselves. The shapes to validate are provided as the validator's input and are validated against another set of shapes (preconfigured by the Test Bed team) to ensure the input shapes are correct with respect to the
+SHACL specification
+(i.e., this is a "SHACL for SHACL" validator).
+Both validators are part of the development workflow for SHACL shapes as follows:
+You build up your SHACL shapes by using the
+SHACL validator
+and validating sample RDF content to ensure your shapes work as expected.
+Once you are happy with your shapes, you use the
+SHACL shape validator
+to cross-check your shapes against the SHACL specification.
+With your shapes finalised you follow the
+RDF validation guide
+to create your own
+customised validator
+, with your shapes preconfigured.
+Note that if you set up an empty (configuration-wise) instance of the
+SHACL validator
+, the result matches the online generic
+SHACL validator
+, i.e., a validator that expects you to provide the shapes to use alongside the input to validate.
+I rely on online resources for validation but my validator will not have internet access. What can I do?
+In your validator you may refer to online validation artefacts, or your local artefacts may have internal references to remote resources. This creates two issues for your validator:
+It requires
+internet access
+to work as expected.
+It depends on the
+availability of the service
+hosting the referenced resources.
+These points become problematic in case you must ensure full availability and consistency for your validator, or if your validator must work in an air-gapped environment without internet access. Thankfully, you can configure your validator to work in a fully offline manner as follows:
+Refer to
+local copies
+of your validation artefacts, rather than using remote references.
+Provide
+local mappings
+for online resources referred to by validation artefacts.
+Taking the
+XML validator
+as an example and based on its
+configuration guide
+, the first point is addressed by configuring validation artefacts as local files:
+# Refer to local XSD(s) and Schematron file(s), relative to your domain root.
+validator.schemaFile.large = xsd/PurchaseOrder.xsd
+validator.schematronFile.large = sch/LargePurchaseOrder.sch
+# Avoid using remote references to online resources (such as the following).
+# validator.schemaFile.large.remote.0.url = https://my.server.com/PurchaseOrder.xsd
+# validator.schematronFile.large.remote.0.url = https://my.server.com/LargePurchaseOrder.sch
+This brings us to the second point, mapping online resource references to local copies:
+# Mapping for the address schema URI, pointing to a local copy.
+validator.remoteSchemaImportMapping.0.uri = https://www.itb.ec.europa.eu/common/Address.xsd
+validator.remoteSchemaImportMapping.0.file = imports/Address.xsd
+Such resource mappings (available also for the
+SHACL validator
+for
+owl:imports
+, and for the
+JSON/YAML validator
+for
+schema references
+), cover references in your own artefacts, as well as in other artefacts that are outside your control. You simply need to provide the URI to be looked up and map it to the local resource to return.
+My XML validator complains when I use Schematron rules that import documents or use XSLT functions. How can I fix this?
+If you are using Schematron files in your XML validator and are trying to import documents or use XSLT functions, you might be getting an error such as the following:
+Schematron file [myRules.sch] is provided in pure Schematron format (as a .sch file) and contains references to functions (built-in or external). To be able to use functions you must convert the Schematron file to its XSLT representation and use the XSLT file instead
+As the message states, you should be converting your .sch files from the "pure" Schematron format to
+XSLT
+. Once converted you will be able to use such imports and functions without problems. In fact, converting to XSLT is always a
+best practice
+as this ensures optimal validation performance.
+How you make the conversion depends on your technology stack and supporting tooling. In case you are using
+Apache Maven
+, a good approach is to use the popular
+ph-schematron-maven-plugin
+as follows:
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>eu.europa.ec.itb</groupId>
+    <artifactId>sch-to-xslt-converter</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+	
+    <properties>
+        <input.schPattern>*.sch</input.schPattern>
+        <input.folder>PATH\TO\FOLDER\CONTAINING\SCH\FILES</input.folder>
+        <output.folder>PATH\TO\OUTPUT\FOLDER</output.folder>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.helger.maven</groupId>
+                <artifactId>ph-schematron-maven-plugin</artifactId>
+                <version>9.0.1</version>
+                <configuration>
+                    <schematronDirectory>${input.folder}</schematronDirectory>
+                    <schematronPattern>${input.schPattern}</schematronPattern>
+                    <xsltDirectory>${output.folder}</xsltDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>convert</id>
+                        <goals>
+                            <goal>convert</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+With this POM definition you can convert your Schematron files using
+mvn generate-resources
+(or any goal later in the Maven lifecycle).
+Can I use the GeoJSON validator to check for compliance to the Regulation on Deforestation-free Products (EUDR)?
+The Interoperability Test Bed's
+GeoJSON validator
+is a service used to validate JSON documents against the
+GeoJSON specification
+. The validation is based purely on the published GeoJSON
+JSON Schema documents
+without any additional domain or regulation-specific extensions, such as the provisions for the
+Regulation on Deforestation-free Products (EUDR)
+. JSON documents that are compliant with respect to the EUDR will also be validated successfully by the GeoJSON validator, but the opposite may not always be the case. Briefly put, do not rely on the GeoJSON validator alone to test for EUDR compliance.
+Why create a specific validator when I can rely on the ITB's generic validators?
+The ITB provides generic validators for
+XML
+,
+RDF
+,
+JSON
+,
+CSV
+and
+YAML
+, that don't have preconfigured validation artefacts. To make a validation you provide as inputs both the data to validate, as well as the validation artefacts to use.
+When working with a given specification that defines it's own validation artefacts, nothing prevents you from using these with the generic validators. If however you plan on exposing a validation service to your project's users, you should not rely on them to supply the correct validation artefacts. By defining a
+project-specific validator
+you will preconfigure the needed validation artefacts - among other settings - within the validator, and only expose to users a set of well-defined validation options. This brings multiple benefits:
+You make the validator
+simpler to use
+. Users need only input their data and choose the type of validation to perform.
+You
+avoid inconsistencies
+. Users don't need to know which validation artefacts to use per validation type and cannot supply the wrong ones.
+The validator is more
+user-friendly
+. Custom validators can also be extended with banners that include branding, instructions and documentation pointers.
+When your ultimate goal is to build a validation service for your project's specification(s), by all means begin by using the appropriate generic validator as a development tool, but eventually switch to a custom validator once the first version of your validation artefacts is stable.
+Defining a custom validator is covered in detail in the ITB's
+XML
+,
+RDF
+,
+JSON
+,
+CSV
+and
+YAML
+validation guides.
+Do I need to monitor my validator for security vulnerabilities?
+No, you don't need to scan yourself your validator instance or its software for vulnerabilities. The Test Bed team performs such scans daily, and will publish a patch within the same day if an applicable vulnerability is detected. What you need to do on your end is to ensure you receive
+automatic release notifications
+via
+GitHub
+or the Portal (GitHub being the most popular approach). Releases for security patches are clearly flagged as such.
+Note that if your validator is hosted on Test Bed infrastructure, security patching is managed by the Test Bed team.
+Can I safely upgrade my validator to a new release?
+Yes, always. When defining a validator you are reusing as-is the ITB's validator software components, with your project-specific configuration. This configuration typically involves a series of validation artefacts and a configuration file that instructs the validator on how it should be set up. New releases of the validator software are guaranteed to always be
+backwards compatible
+with existing configuration.
+In fact, you can even downgrade a validator to an earlier release if needed. Configuration properties that are not supported by the earlier validator release will simply be ignored.
+​
+​
+Conformance testing: Configuring and using the GITB Test Bed software
+Where can I find the change history for the ITB?
+The official releases of the GITB Test Bed software (aka ITB) are listed:
+In
+GitHub
+.
+In the
+Interoperable Europe Portal
+, accessible from the
+News and releases
+page.
+The easiest way to get an
+overview of all changes
+in a given release is to view the
+Release history
+page from the Test Bed's
+user guide
+. In addition to this, you can dive deeper into
+specification changes
+by viewing the Release history pages of the
+GITB Test Description Language (TDL)
+and
+GITB test service APIs
+.
+What is the meaning behind the ITB's concepts (domain, specification, actor, community, organisation, system)?
+The ITB's
+user guide
+features a detailed
+glossary
+for its concepts, including also an
+example
+based on a fictional specification. In brief the meaning of each concept is as follows:
+Domain:
+This represents your project from the perspective of the specifications to test for.
+Specification:
+Specifications represent the sets of requirements that users will be testing against. A specification should be able to stand by itself as a target for meaningful testing. If for example users need to always test against specification A and specification B, then it may be more appropriate to define a single unified specification.
+Specification group:
+Groups provide an additional hierarchical level above specifications, to make their organisation, display and reporting more meaningful. A classic use case is to use groups when you need to support testing for multiple specification versions. In this case the specification itself is defined using the specification group concept, whereas each version is defined as a specification.
+Actor:
+Actors represent the roles that systems play within a specification, and are displayed on test execution diagrams as message sources and destinations. If it is not meaningful to express multiple roles then you could just define actors as e.g. "My system" and "Test Bed". If multiple actors within a specification can be tested for, then these will appear as an extra level of detail beneath specifications.
+Community:
+This represents your project from the perspective of user management. Practically the community is where you can define things like report settings and custom configuration properties.
+Organisation:
+Organisations represent the parties that will be connecting to test. You would typically have multiple organisations within a community.
+System:
+Systems are the actual software systems that are being tested and that will eventually be considered as conformant to their target specifications. You may have multiple systems per organisation in case of different solutions being tested, or to express different versions of the same software.
+In most cases you will be using one domain, one or more specifications, one community, multiple organisations, and one or more systems per organisation. In any case keep in mind that how you use these concepts is up to you, and that you can even re-label them as part of your community's settings to make them more meaningful.
+What authentication methods does the ITB support?
+The ITB supports three authentication methods:
+Authentication using username and password.
+Integration with
+EU Login
+using the
+CAS protocol
+.
+Integration with any identity provider using the
+OpenID Connect (OIDC) protocol
+.
+Integration with any identity provider using the
+Lightweight Directory Access Protocol (LDAP)
+.
+The ITB comes by default with basic username and password accounts which are great in getting you up and running fast. Although nothing prevents you from using such authentication in
+production
+, it is typically more appropriate (if not required) to integrate in production with an
+external identity provider
+.
+Can I use the ITB for peer-to-peer testing?
+The ITB is best used for
+standalone conformance testing
+, whereby a system is tested in a standalone manner, aiming to achieve maximum specification coverage. Achieving full control and coverage, requires that there is only one "moving part" present (the system being tested), and also that the test platform is able to behave (and misbehave) based on each considered test scenario.
+Peer-to-peer testing on the other hand involves the simultaneous connection of
+multiple software systems
+, as part of tests aiming to pair compatible peers with each other. Once connected, peer systems exchange message between themselves based on predefined scenarios, with their messages being captured by means of a proxy and verified for correctness. Peer-to-peer testing is great as a collaborative community event where besides going through tests, focus is placed on community building and the sense of a collective testing goal.
+The ITB does not currently support true peer-to-peer testing as it expects a single system under test. Having said this, it is perfectly possible to
+organise community testing events
+around the ITB, where peers test one-on-one with the ITB, before engaging in tests with each other albeit without the ITB's management or monitoring.
+How is versioning supported (for test suites, specifications and systems)
+The ITB does not foresee an explicit version concept as the meaning of this varies per project. You can nonetheless perfectly support versioning at various levels:
+Specification versions:
+Either append the version number to the specification name, or for a much cleaner approach, define your specification as specification group in the ITB, with each version defined as an option (a specification ultimately) in the group.
+Test suite versions:
+Test suites and test cases provide fine-grained version management to specify how updates are handled. To reflect new versions projects typically append version numbers next to test suite and/or test case names. Note that when test sessions are executed they represent a snapshot it time and record the test suite and test case names at the time of execution.
+System versions:
+For organisations to test multiple system versions you can simply define multiple system entries (one per version) and name them accordingly.
+As an administrator, you may also want to take a snapshot of your community and its testing status at a given point in time. This is achieved by making
+conformance snapshots
+that capture the complete state for your community as a readonly snapshot that you can then revisit, label and share with users. See this as akin to making a tag in a Git repository.
+Can I deploy a preconfigured ITB instance?
+Yes. Preconfigured ITB instances are termed
+"sandboxes"
+and there is a
+specific guide
+explaining how to prepare, share and use them. When defining such an instance you would typically connect as Test Bed administrator to a development environment and start by choosing to
+export a community
+. From here you can also include the community's linked domain, as well your system settings (useful particularly when using a
+custom theme
+). What is not included in such an export are:
+Test sessions
+.
+User accounts
+, if the source ITB instance is integrated with an external identity provider.
+You can make multiple export archives if meaningful, including several communities and domains, the latter case being especially useful of you are exporting a single community that is not linked to a single domain. Regardless of the approach used to share your preconfigured ITB instance, the process involves the automated reading and importing of the provided archives in sequence, as part of the Test Bed's startup. Subsequent updates can also be applied using the same approach, with the already processed archives being ignored.
+What themes are supported by the ITB?
+When managing your own ITB instance, you can adapt also the overall instance's
+theme
+. This includes setting custom colours and images to match your organisation's branding. You can create
+custom themes
+when connected as the Test Bed administrator, or rely on the ITB's preconfigured themes, specifically:
+The
+European Commission
+"ec" theme. This is appropriate when your ITB instance will be used as a Commission-offered service.
+The default
+GITB
+"gitb" theme. This is effectively a neutral - from a branding perspective - theme as a starting point for non-Commission services.
+Themes can be activated either
+manually
+, through the ITB's
+user interface
+when connected as the Test Bed administrator, or
+automatically
+as part of the ITB's
+environment configuration
+using the
+THEME
+environment variable.
+While using the ITB REST API I get a 403 error stating a missing or invalid API key. What is this?
+All
+REST API
+operations require the use of an API key provided as the
+ITB-API-KEY
+HTTP header. This is used to authorise the incoming call as well as provide context on what it refers to. Depending on the operation, the ITB-API-KEY may be one of four values:
+The ITB's
+master API key
+for operations normally reserved for the Test Bed administrator.
+The ITB's
+development API key
+for operations supporting developers or AI agents, when the ITB is running in development mode.
+A
+community API key
+for community administrator operations.
+An
+organisation API key
+for operations in the scope of specific organisations.
+Besides using the correct API key for each operation, you should also ensure that the REST API is overall enabled as part of the ITB's
+system settings
+.
+Where can I find the various API key values required by the ITB's REST API?
+Depending on the
+REST API
+operation being used, you need to provide different API keys as the
+ITB-API-KEY
+header, as part of the operations' request parameters, and within the payload. These API keys can be retrieved from the following locations:
+The
+master API key
+is defined as part of the
+system configuration
+, visible only to the Test Bed administrator.
+The
+development API key
+is defined as part of the
+system configuration
+, visible from there only to the Test Bed administrator. To facilitate automation in AI agents, the API key is also exposed in a text file on the root of the ITB's filesystem repository (when running in development mode).
+The
+community API key
+can be found in the
+community details screen
+, visible to the Test Bed and community administrators.
+All
+other API keys
+can be retrieved from an organisation's
+REST API keys
+for any information (e.g. organisation, systems, specifications) linked to a given organisation. As a Test Bed or community administrator you can also retrieve each element's API key from its detail page (for example the
+specification details page
+).
+Can I use the ITB in Continuous Integration and Continuous Delivery (CI/CD) processes?
+Yes, the ITB supports very well continuous integration. Typical options to consider for use in CI/CD processes include:
+Use either a
+persistent ITB instance
+or a
+short-lived
+instance
+valid for the process duration.
+When using a short-lived instance, potentially
+pre-configure
+it based on an existing data archive.
+Potentially package the
+latest test suites
+and
+deploy them
+using the ITB's
+REST API
+.
+Use the ITB's
+REST API
+to
+launch tests
+and
+produce reports
+.
+Use the
+forceSequentialExecution
+and
+waitForCompletion
+options to control execution and avoid polling for test completion.
+When launching tests in CI/CD processes, make sure your test cases work correctly when headless (i.e., without a user interface). If you define
+user interaction steps
+ensure these are handled appropriately.
+I have created custom configuration properties at organisation or system level, but I cannot input values for them, nor are they included in tests? What am I doing wrong?
+This is a typical behaviour experienced when you are using the
+Test Bed administrator
+account to manage community-specific settings and develop tests. These include custom configuration properties for organisations and systems, but also extend to settings such as custom landing pages and report settings.
+Such settings apply when you are
+part of the community
+in question, meaning that you are either a
+community administrator
+or
+organisation user
+. When connected as such, you will see the defined configuration properties available for input, and they will also be included in test sessions (assuming they are set for test inclusion) and accessible via the
+ORGANISATION
+and
+SYSTEM
+maps in the GITB TDL. The Test Bed administrator in contrast is not part of any specific community, considering that a single Test Bed instance is multitenant in the sense that it can hold any number of domains and communities, each with completely different tests and settings.
+To summarise and avoid confusion, use this approach when developing test cases:
+Simplest approach:
+create and use a
+community administrator account
+and test your developed tests through the
+My conformance statements
+screen.
+Alternate approach:
+test through an organisation in the community using the
+Manage tests
+feature, which is available to both community and Test Bed administrators. You can also connect through an organisation user to see exactly how the community's users will experience the testing process.
+Approach to avoid:
+testing when connected as the Test Bed administrator through her own
+My organisation
+or
+My conformance statements
+screens. These serve fine for simple tests but will ignore any community-specific settings, and result in errors if test cases depend on them (typically organisation or system level configuration properties).
+I'm customising my PDF conformance certificates with custom images but they appear with aliasing issues. What am I doing wrong?
+When using images in your conformance certificates you need to ensure they are of high enough resolution to render well in the resulting PDF reports. Even in case of high-resolution images, you may nonetheless still notice aliasing issues in image outlines if these are curved.
+To address all aliasing issues and ensure perfect rendering across all PDF viewers the best approach is to use
+Scalable Vector Graphics (SVG)
+images. These ensure perfect rendering and also result in significantly smaller PDF files.
+I'm customising my PDF conformance certificates with custom images but they are not displaying. What am I doing wrong?
+When images don't display in PDF reports this typically means that their size is too large to fit on the page. To address this make sure that when adding the images, you set their size so that they fit the page constraints. Note that if you use conformance badges and dynamic badge inclusion (using the
+$BADGE
+or
+$BADGES
+placeholders) you may not be able to specify the image dimensions. In this case, you should ensure that images have appropriate dimensions allowing them to be rendered as-is, and in the case of Scalable Vector Graphics (SVGs), that their document dimensions are constrained.
+In case you are using SVGs and these fail to display you should also check the following:
+Document dimensions as integers:
+Make sure that the document dimensions are set as integers without decimal parts.
+No external or embedded images:
+External or embedded images (e.g. PNGs) are not be loaded due to security restrictions. You should replace all such resources by SVGs.
+Review filters:
+Adding filter layers to apply for example box shadows is known to result in aliasing issues. Reconsider these if you come across such issues.
+Note that the first two points (document dimensions and image references) would also logged as warnings by the
+itb-ui
+container upon PDF report generation. If while developing you see unexpected PDF outputs, make sure to check the logs as your first troubleshooting step.
+Do I need to monitor my ITB instance for security vulnerabilities?
+No, you don't need to scan yourself your ITB instance or the GITB Test Bed software for vulnerabilities. The Test Bed team scans the GITB software daily, and will publish a patch within the same day if an applicable vulnerability is detected. What you need on your end is to:
+Ensure you receive
+automatic release notifications
+via
+GitHub
+or the Portal (GitHub being the simplest). Releases for security patches are clearly flagged as such.
+When logging into your ITB instance notice any
+warnings
+you receive. The ITB will warn you through the
+service health dashboard
+in case the release you are using has known issues. It will also provide relevant details and update instructions.
+Note that if you are using the
+DIGIT ITB instance managed by the Test Bed team
+, security patching is managed by the Test Bed team.
+Can I safely upgrade my GITB Test Bed instance to a new release?
+Yes, you can always upgrade your Test Bed instance to a
+newer version
+. When your updated instance starts up for the first time after the update it will automatically handle any internal update steps that may be needed. In terms of backwards compatibility, all configurations and test suites of prior versions will remain valid, and have the exact same meaning and behavior after the update. Moreover, you can also upgrade over multiple versions in one go - there is no need to do incremental updates.
+What is
+not supported
+is to downgrade a Test Bed instance to an earlier version, due to potential internal upgrade steps that cannot be undone. If you do find yourself in this situation and your downgraded Test Bed instance fails to start, you should contact the Test Bed team for support.
+How do I switch from using a nightly build to a stable release?
+The Test Bed's
+nightly builds
+are a powerful tool for test developers, allowing the use of new features as soon as they are developed. Nightly builds are typically meant for development, whereas production Test Bed instances use stable releases.
+In case you have chosen to use a nightly build in a production instance, you need to take care if you eventually want to switch it back to a stable release. Specifically you need to ensure that the target stable instance you will be using is a
+newer version
+than the nightly build currently in place. Nightly builds are labelled using a release number followed by a "-snapshot" suffix, indicating the future stable version they will be released as. As an example, a nightly build labelled as "
+1.29.0-snapshot
+" can always be replaced with a stable "
+1.29.0
+" release or later (such as 1.29.1 or 1.30.0).
+In case you have any doubts about how to replace a nightly build, feel free to ping the Test Bed team for help.
+​
+​
+Conformance testing: Developing test cases and using the GITB Test Description Language
+What does "SUT" mean?
+The term "SUT" means
+System Under Test
+. It is a key concept in the ITB, used in test cases to identify the specification actor that corresponds to the system being tested. When you define a conformance statement in the Test Bed you do so by selecting one of your systems and a target specification actor to create a
+conformance statement
+. The tests that you need to pass are the ones linked to the specification in question, where the selected actor is marked as the test case SUT.
+In case specification actors are not displayed when creating conformance statements, this is because the specifications' test cases only define one actor as the SUT.
+What is the "Test engine" actor?
+The "Test engine" actor is an actor lifeline added to test execution diagrams to represent processing done by the ITB's test engine. Such processing could be:
+Carrying out
+processing
+steps.
+Carrying out
+validation
+steps.
+Receiving user and administrator
+interactions
+.
+Besides displaying such test steps, this actor is not under the control of test developers.
+Is there a "hello world" test case?
+Yes. the
+GITB Test Description Language (TDL) documentation
+includes a section specifically on a typical
+hello world scenario
+. This scenario features a simple prompt requesting the user's name, followed by a greeting message.
+Besides this hello world case you may also find interesting the documentation's
+sample test suites
+. These cover various use cases and features, and can serve as good inspiration when starting out. They are designed to have no external dependencies and can also be automatically imported upon first installation of the ITB through its
+startup configuration wizard
+.
+Where can I find sample test cases?
+The
+GITB Test Description Language (TDL) documentation
+includes a dedicated section with complete
+sample test suites
+(also available on
+GitHub
+). These samples cover various use cases and features, and are designed to be self-contained so you can import them into any specification to try out. Note that these samples, along with additional test configuration, can also be imported automatically upon first installation of the ITB through its
+startup configuration wizard
+. Doing so is a great way to start experimenting without needing to dive into the documentation.
+How do I write boolean expressions (equals, and, or, not)?
+Most GITB TDL test steps support use of
+expressions
+to carry out simple processing tasks. The expression language used for this purpose is
+XPath 3.0
+.
+Using XPath expressions you can do multiple tasks such as logical operations, string manipulation, and transformations. When it comes to boolean expressions, these would typically be found in step conditions, for example in
+if steps
+and
+while steps
+, or in
+verify steps
+using the built-in
+ExpressionValidator
+as follows:
+<!-- Equality check -->
+<verify handler="ExpressionValidator" desc="Validate value">
+   <input name="expression">$variable = "wantedValue"</input>
+</verify>
+<!-- Inequality check -->
+<verify handler="ExpressionValidator" desc="Validate value">
+   <input name="expression">$variable != "unwantedValue"</input>
+</verify>
+<!-- Negation -->
+<verify handler="ExpressionValidator" desc="Validate value">
+   <input name="expression">not(contains($variable, 'x'))</input>
+</verify>
+<!-- Using 'or' and 'and' -->
+<verify handler="ExpressionValidator" desc="Validate value">
+   <input name="expression">not(contains($variable, 'x')) and $otherVariable != "unwantedValue"</input>
+</verify>
+Note that even though XPath is a language made to manipulate XML, you don't have to be validating XML to use it. Simply consider XPath as a toolkit of functions and expressions that you can use in tests.
+How can I make HTTP calls in test cases?
+Simple HTTP calls are made in GITB TDL test cases using the built-in
+HttpMessagingV2
+handler. This is used in
+send steps
+to make calls from the ITB to other systems, and in
+receive steps
+to have the ITB receive calls. In case more complex processing is needed, such as using client certificates, you can take full control of the HTTP exchanges by delegating them to a
+custom messaging service
+.
+Making simple HTTP calls to and from the ITB, is the focus of the
+basic messaging guide
+, whereas exchanges based on a custom service are covered in the
+complex test development guide
+.
+What is the endpoint address to use for external custom services?
+When using
+custom services
+to extend the test engine's capabilities, you need to configure their
+endpoint address
+in your test cases. Although extension services can be implemented with any framework and technology stack, most users start from the ITB's
+service template
+. If so, the default endpoint address to configure per API type and service type are as follows (assuming services running on localhost, port 8080 and with no custom context root):
+For a
+REST-based
+test service, the address to use corresponds to the base REST API path, excluding the specific operations' sub-path:
+Validation services:
+http://localhost:8080/api/validation
+Messaging services:
+http://localhost:8080/api/messaging
+Processing services:
+http://localhost:8080/api/processing
+For a
+SOAP-based
+service, this needs to be the address leading to the service's WSDL definition:
+Validation services:
+http://localhost:8080/services/validation?WSDL
+Messaging services:
+http://localhost:8080/services/messaging?WSDL
+Processing services:
+http://localhost:8080/services/process?WSDL
+These are the values that you would need to configure in your test steps'
+handler
+attributes, or even better, as configuration in your domain's
+test services
+.
+Is it better to use built-in step handlers or external custom services?
+If what you are trying to achieve can be handled by the GITB TDL's
+built-in step handlers
+, then it is simpler to use them instead of making a
+custom extension
+. In addition, avoiding a custom service means that your ITB setup will require one less component to be available. Using a custom extension service makes sense when:
+What you need is
+not covered
+by built-in handlers.
+You are more
+comfortable
+writing testing logic in code.
+You would need to define
+several TDL steps
+to achieve something that can be simply done via custom code.
+As a rule of thumb, avoid introducing custom services to simplify your ITB setup, but if you need to add at least one, then use them depending on your needs and preferences. The ITB's
+developer onboarding guide
+has a
+specific section
+that expands further on this topic.
+Can I use the same validation service for multiple verifications?
+Yes. In fact it is a lot simpler to only ever have
+one of each service type
+that may manage potentially multiple actions. When you use a
+validation service
+in a
+verify step
+, the ITB simply calls the endpoint providing the configured inputs, and processes the returned validation report. Nothing prevents you from passing extra inputs to the
+verify step
+that serve in telling the service what kind of validation it needs to do. A typical approach is to pass a "type" input that is read as a first step from the service, before proceeding to read other inputs and carry out the requested check. It is simpler, and even more efficient, to follow this approach as opposed to defining multiple distinct service endpoints.
+In the same way as this applies for validation services, you can follow this approach for custom
+messaging
+and
+processing
+extensions. Aim to have at most a
+single test service application
+alongside the ITB that has
+up to one
+of each endpoint type configured.
+My custom extension service needs environment-specific configuration. Should I pass this from the test case as service inputs?
+Your
+custom extension service
+may require configuration to work correctly that is environment-specific. As an example consider a
+messaging service
+that needs the address of an internal gateway component, used to handle messaging with remote systems. Information such as the target system's identifier would vary per test session, and as such would be passed as an input. The address of the gateway however would remain the same across test sessions. To manage such configuration we have two options:
+Manage the configuration
+within the messaging service app
+.
+Define it as a
+domain configuration property
+and
+pass it as an input
+.
+The second option is the preferred approach in this case. It allows you to easily view through the ITB's
+user interface
+such environment-specific configurations, and adapt them without needing to restart the service app. Having said this, there is no right or wrong approach, and you should follow what seems simpler for you.
+Why do test sessions get stuck on 'receive' steps when the expected messages are sent?
+When the test engine executes a
+receive step
+, the test session will pause until an a relevant message is received. If you believe that the expected messages are being sent but the test session remains stuck, this can be due to one of these reasons:
+You have not sent a message matching the
+precise expectations
+of the receive step.
+You are sending the expected message
+before
+the test engine executes the receive step and begins waiting for it.
+The second case is often the one that causes most confusion. It can typically be attributed to cases where messages are sent asynchronously, which may lead to race conditions between the relevant receive step being executed and the expected message being sent. If this is the case, you need to adapt your messaging logic to not make any assumptions on the order of actions, supporting potentially the
+buffering of received messages
+to match against the expectations of receive steps. This is one of the pitfalls of
+custom messaging services
+, for which reason there is a
+dedicated section
+in the guide on
+complex test development
+.
+Another reason that may lead to hanging receive steps, is when these are combined with long-lasting
+user interactions
+. When adding instructions to test cases you would typically include information popups before key steps to guide the tester. In GITB TDL terms, this means adding an
+interact step
+before a
+receive step
+. The problem in this case is that if in your popup you prompt the user to send a message, the user may do so while the interaction remains open. This results in the message being sent before the receive step executes and begins expecting the message. To address this specific case it is advised to set
+blocking
+to false on such interactions, thus ensuring that the subsequent receive step already executes before the interaction popup is closed.
+Note that the Test Bed's
+built-in messaging handlers
+(such as
+HttpMessagingV2
+for HTTP exchanges) handle most race conditions automatically through retries over a limited period.
+How can I manage user interactions when test sessions execute in the background?
+If your test cases include
+interact steps
+, you need to consider how these behave when executed in the background. This can occur either because a user chose through the user interface to execute tests in the background, or because you are starting tests using the ITB's
+REST API
+.
+If you expect users to eventually provide manual input to such test sessions, you will need to define
+interaction timeouts
+. Failure to do so will just skip the interactions and log warnings, which may lead to failures if inputs are expected. For cases where manual input is never expected you can choose to either skip interactions altogether or to
+delegate their handling
+to an external service. In fact such interaction delegation can go a lot further as you can decide dynamically whether interactions are delegated or not.
+When launching tests via the REST API, where no manual input is expected, handle user interactions as follows:
+Define a
+boolean variable
+in your test cases set by default to
+false
+. This will apply when executing through the UI.
+In your
+REST API call
+to trigger test sessions, include an input setting this variable to
+true
+.
+In all interactions use the
+skipped
+attribute, checking the boolean variable.
+Replace interaction inputs with matching
+REST call inputs
+set with the values to consider.
+If you need to do something fancy in an interaction, check the boolean variable (or another one) to
+delegate the interaction
+to an external service.
+These options should cover all needs with respect to the management of user interactions in headless tests.
+​
+​
+Using the Interoperability Test Bed solutions as managed services ("as-a-service" model)
+Can my validator be hosted on the Interoperability Test Bed's infrastructure?
+Yes, as long as the following two conditions are met:
+The validator's purpose is to
+support interoperability
+, and not to generate profit.
+The validator's
+usage
+will not be excessive.
+Regarding the second point, the goal is to ensure fair usage of the ITB's limited resources, keeping in mind that these are shared by multiple users. If using your validator will result in excessive resource usage - either due to overly complex validation artefacts or due to the sheer number of calls - you are always welcome to use our validator software (see for
+XML
+,
+RDF
+,
+JSON
+and
+CSV
+) with your configuration on your own infrastructure. The Test Bed team reserves the right to throttle usage and even remove validators in case of abuse.
+Can my conformance testing community be hosted on the DIGIT-hosted ITB instance?
+Interoperable Europe (DIGIT B2) maintains an instance of the
+GITB Test Bed software
+(aka ITB) available at
+https://www.itb.ec.europa.eu/itb
+. This service is available for projects that cannot or prefer not to run their own ITB instance. Note that most large-scale projects choose to use their own ITB instance, to benefit from the full operational control it affords.
+If you choose to use the DIGIT ITB service, you can do so given the following constraints:
+You can only use the service for
+non-profit projects
+in support of
+interoperability
+.
+The service is themed as a
+European Commission service
+and uses
+EU Login
+for authentication.
+The service is hosted on internet-accessible
+public cloud infrastructure
+.
+The service does not provide
+24x7 availability
+but is rather subject to an
+operational window
+.
+The service's
+REST API
+is disabled.
+Your usage must be
+reasonable
+so as to not impact the platform's overall stability.
+You cannot operate
+custom extension services
+on the ITB's infrastructure for security reasons. You are free to host such services on your own infrastructure and use them remotely.
+If the above constraints seem appropriate for your project then feel free to email the Test Bed team at
+DIGIT-ITB@ec.europa.eu
+.
+Where are the ITB's managed services (validators and the GITB Test Bed) hosted?
+All services provided "as-a-service" by the Interoperability Test Bed are hosted on
+Microsoft's Azure
+in data centres located within the European Union. Moreover, all resources are monitored by the Test Bed team and DIGIT's cybersecurity experts.
+What are the operational hours for the ITB's managed services (validators and the GITB Test Bed)?
+All Test Bed services hosted by DIGIT have operational hours as follows:
+The
+GITB Test Bed platform
+is online from
+Monday through Friday
+, between
+05h00 and 20h00 CET
+.
+Hosted validators and documentation resources are
+continuously online
+with the exception of planned maintenance windows.
+Note that published resources such as Docker images are not subject to operational windows and remain always available. In case your needs in using the DIGIT-hosted GITB Test Bed platform are not covered by the provided window please contact the Test Bed team at
+DIGIT-ITB@ec.europa.eu
+.
+How do I manage my validator if it is hosted by the Interoperability Test Bed?
+When your validator is hosted by the Interoperability Test Bed it's configuration remains
+fully under your control
+. Moreover, you never need to involve the Test Bed team when making updates.
+Considering that the validators' software is managed by the Test Bed team, what defines your validator is its configuration. Assuming you are eligible to have your validator hosted, you will need to:
+Provide an appropriate
+name
+for your validator to the Test Bed team.
+Publish your validator's configuration to a
+Git repository
+that is accessible over the internet.
+In case of a private repository,
+provide read access
+to the Test Bed's automation server.
+Configure a
+webhook
+in your repository, based on the Test Bed team's instructions.
+This process and the required configuration steps, will be summarised for you when you first contact the Test Bed team at
+DIGIT-ITB@ec.europa.eu
+.
+With this setup in place, your validator's configuration can be read when needed to get its latest version. In addition, whenever you push updates to your repository's main or master branch, the configured webhook will trigger the online validator's update (within a few minutes). As such, the configuration is
+fully managed by you
+and
+updates are automatic
+. You are nonetheless always welcome to reach out to the Test Bed team whenever you have questions or require assistance.
+How do I manage my conformance testing if my configuration is hosted by the Interoperability Test Bed?
+When using conformance testing "as-a-service", in other words using
+DIGIT's GITB Test Bed instance
+, you remain in
+full control
+of your setup. As part of your onboarding you will have a
+community
+and
+domain
+created on your behalf by the Test Bed team, and you will be granted the role of
+community administrator
+. Using your administrator account you can:
+Manage your
+domain
+, including your specification groups, specifications, actors, and the test suites used to test for conformance.
+Manage your
+community
+, including the organisations that are testing, and various settings such as self-registration support and custom configuration properties.
+Create additional
+community administrators
+for your colleagues.
+The only aspects of the service outside your control relate to constraints, such operational hours and the overall theme.
+Note also that you can easily
+replicate
+your configuration to and from your development environment by using the ITB's
+export and import features
+. The only data you will be unable to replicate across environments are user accounts and executed tests.
+Is there a development or acceptance environment I can use to try out my conformance testing setup?
+No. The Test Bed team provides only one
+production instance
+meant for your live conformance testing.
+For development and testing purposes, you will need to foresee additional ITB instance(s) running on your own resources. You can set up such instances following our
+developer installation guide
+, but of course nothing prevents you from following rather our
+production installation guide
+. Having a production-like test instance can be interesting if you want to replicate the service in full, including also the integration with
+EU Login
+for authentication.
+Can I also have a self-hosted validator besides the one hosted by the Interoperability Test Bed?
+Yes. All validators are
+completely stateless
+so there is no question of any data migrations. You get the exact same service whether you run your validator on the Interoperability Test Bed, on your own server, or even on your workstation.
+To run one or more additional, self-hosted, validator instances:
+Use the
+XML
+,
+RDF
+,
+JSON
+or
+CSV
+validator Docker image, depending on the syntax you are dealing with.
+Pass the validator's
+configuration
+into the validator.
+It is quite commonplace to run multiple instances of a validator. Besides the instance hosted by the ITB you will also have at least a development instance on which you test your configuration updates. In addition, you may have further instances as internal data quality components, supporting for example data processing workflows or other production systems. When using self-hosted validators in production make sure to check the validators'
+production installation guide
+.
+Are the validators hosted by the Interoperability Test Bed suitable for integration with production systems?
+Nothing prevents you from integrating your production system with your ITB-hosted validator. You need to be aware however that, even though validators are online 24x7, DIGIT provides
+no Service Level Agreement (SLA) guarantee
+. In addition, if your validator is using
+excessive resources
+, the Test Bed team reserves the right to throttle its usage, and even remove it in case of abuse.
+If you rely on validators as critical components of your production infrastructure, the best approach is to run your own
+self-hosted instance(s)
+that you can operate as needed. The validators'
+production installation guide
+covers several deployment options and related configurations.
+If I start using DIGIT's managed ITB instance for my conformance testing can I later migrate to my own environment?
+Replicating your complete configuration across ITB instances can be achieved easily using the ITB's
+export and import features
+. Note however, that the purpose of this is not to migrate complete environments, but rather to
+copy configuration
+. Exports do not currently include users nor executed test sessions, the latter being mandatory if you want to maintain your community's conformance testing progress. If you are planning to use the DIGIT ITB instance "as-a-service" this is an important point to keep in mind.
+This limitation does not exist if you are running your own
+self-hosted ITB instance
+. You can choose to replicate your full or partial configuration across environments via export and import, or replicate everything by copying your current instance's persistent volumes.
+When using a validator why do I get an error "429 - Too Many Requests" response?
+The Interoperability Test Bed's managed validators, i.e., the validators that are hosted on the Test Bed's infrastructure, are configured with
+validation rate limits
+. These limits ensure that use of validators remains reasonable without impacting our server capacity. Limits are applied
+per client IP address
+and should normally never be perceivable through regular usage. Cases where limits may result in blocked requests are typically production scale machine-to-machine integrations that use our validators for bulk validations.
+The limits in place for our hosted validators are applied per client IP address and endpoint as follows:
+60 validations per minute through the web user interface.
+60 validations per minute through the REST API.
+30 validations per minute through the REST API (bulk validations).
+60 validations per minute through the SOAP API.
+In case rate limits are exceeded, the validator in question responds with a HTTP error response with status code 429 "Too many requests". In this case, the standard "Retry-After" response header is also included that provides the number of seconds to wait before attempting further validations. Rate limit capacities are renewed every minute.
+In case you are operating a production service integrating with one of our hosted validators, you can always run an identical validator instance (and
+scale it as you need
+) on your own infrastructure. For assistance, you are welcome to send an email to the Test Bed team at
+DIGIT-ITB@ec.europa.eu
+.
+Report abusive content

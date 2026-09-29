@@ -1,0 +1,614 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=euc-kr" />
+	<title>::: TTA표준화 위원회 :::</title>
+	<link href="/css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+	window.onerror	= null;
+	jpopWin	 = null;
+	var jx	= 0;
+	var jy	= 0;
+
+	function init(){
+		if (navigator.appName == "Netscape") {
+			window.document.captureEvents(Event.MOUSEMOVE);
+		}
+		window.document.onmousemove = mouseMove;
+	}
+
+	function mouseMove(e){
+		if (navigator.appName == "Netscape") {
+			jx = e.pageX + 30;
+			jy = e.pageY + 35;
+		}else{
+			jx = event.screenX - 250; //400;
+			jy = event.screenY - 300;
+		}
+	}
+
+	function ttasVote(a,b,c){
+		window.open('ttasVote.jsp?kind='+a+'&pk_num='+b+'&fileGubun='+c,'ttasVote','width=550,height=390,screenX='+jx+',left='+jx+',screenY='+jy+',top='+jy);
+	}
+	init();
+	
+	function openPopPegi(byn) {
+		
+		window.open('sayuPop.jsp?key='+byn,'sayu','width=500,height=350,screenX='+jx+',left='+jx+',screenY='+jy+',top='+jy);
+		
+	}
+	
+	
+	</script>
+</head>
+<body>
+<div id="header">
+	
+
+
+
+
+
+
+
+<!-- 건너뛰기 링크 -->
+<div class="jumplink">
+	<a href="#skip_sub">카테고리별 하위메뉴로 바로가기</a>
+	<a href="#skip_cnt">본문으로 바로가기</a>
+	<a href="#skip_foot">하단메뉴로 바로가기</a>
+	<a href="/main/sitemap.jsp">사이트맵으로 바로가기</a>
+</div>
+<!-- //건너뛰기 링크 -->
+<script type="text/javascript" src="/Scripts/RollOver.js"> </script>
+<script type="text/javascript" src="/Scripts/AC_RunActiveContent.js"> </script>
+<script src="/Scripts/jquery.min.js" type="text/javascript"></script>
+<script src="/mngr/include/js/jquery-ui-1.12.1/external/jquery/jquery.js" ></script>
+<script src="/mngr/include/js/jquery-ui-1.12.1/jquery-ui.min.js" ></script>
+<script type="text/javascript">
+
+function fn_mypage() {
+	window.open('/include/passCheck.jsp','win','width=450,height=200,toolbar=no,resizable=no,scrollbars=no');
+}
+</script>
+
+
+<div id="top">
+	<!-- TTA 바로가기 -->
+	<div class="gotta">
+		<a href="http://www.tta.or.kr" target="_blank" title="TTA 한국정보통신기술협회 - 새창으로">
+			<img src="/images/new_image/top_logo_s.gif" alt="TTA 한국정보통신기술협회" width="193" height="25" border="0" />
+		</a>
+	</div>
+	<!-- //TTA 바로가기 -->
+	<!-- 위원회 로고 -->
+	<h1 class="logo">
+		<a href="/index.jsp" title="정보통신표준위원회 ICT Standardization Committee - 첫페이지로"><img src="/images/new_image/top_logo.gif" width="245" height="36" border="0" alt="정보통신표준위원회 ICT Standardization Committee" /></a>
+	</h1>
+	<!-- //위원회 로고 -->
+	<!-- top menu -->
+	<ul class="topmenu">
+		<li>
+			<a href="/index.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image110','','/images/top_new1_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image110','','/images/top_new1_on.gif',1)">
+				<img src="/images/top_new1_off.gif" alt="HOME" id="Image110" name="Image110" width="35" height="6" border="0" />
+			</a>
+		</li>
+		<li>
+		
+			<a href="/mypage/login.jsp?returnUrl=https%3A%2F%2Fcommittee.tta.or.kr%2Fdata%2Fstandard_view.jsp%3Fby%3Dasc%26commit_code%3DPG1006%26firstDepthCode%3DTC010%26order%3Dt.standard_no%26pk_num%3DTTAK.KO-10.1415%26secondDepthCode%3DPG1006" id="mainLoginBtn" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image111','','/images/top_new2_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image111','','/images/top_new2_on.gif',1)">
+				<img src="/images/top_new2_off.gif" alt="LOGIN" id="Image111" name="Image111" width="34" height="6" border="0" />
+			</a>	
+		
+		</li>
+		<li>
+			<a href="javascript:fn_mypage();" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image112','','/images/top_new3_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image112','','/images/top_new3_on.gif',1)">
+				<img src="/images/top_new3_off.gif" alt="MYPAGE" id="Image112" name="Image112" width="44" height="6" border="0" />
+			</a>
+		</li>
+		<li>
+			<a href="mailto:webmaster@tta.or.kr" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image113','','/images/top_new4_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image113','','/images/top_new4_on.gif',1)">
+				<img src="/images/top_new4_off.gif" alt="CONTACT US" id="Image113" name="Image113" width="62" height="6" border="0" />
+			</a>
+		</li>
+		<li>
+			<a href="/main/sitemap.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image114','','/images/top_new5_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image114','','/images/top_new5_on.gif',1)">
+				<img src="/images/top_new5_off.gif" alt="SITEMAP" id="Image114" name="Image114" width="51" height="6" border="0" />
+			</a>
+		</li>
+	</ul>
+	<!-- //top menu -->
+	<!-- 상단 FAQ, Q&A -->
+	<div class="welcome">
+		&nbsp;
+
+		<a href="/main/faq.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image115','','/images/top_new6_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image115','','/images/top_new6_on.gif',1)">
+			<img src="/images/top_new6_off.gif" alt="FAQ" id="Image115" name="Image115" width="53" height="23" border="0" />
+		</a>
+		<a href="/main/qna.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image116','','/images/top_new7_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image116','','/images/top_new7_on.gif',1)">
+			<img src="/images/top_new7_off.gif" alt="Q&amp;A" id="Image116" name="Image116" width="56" height="23" border="0" />
+		</a>  
+		
+	</div>
+	<!-- //상단 FAQ, Q&A -->
+</div>
+	<!--
+/**
+* date : 2008-10-27
+* modified :  안선우 An, Sun-woo(asw0510@izytech.com)
+*   구조 변경 탑메뉴 롤오버 처리
+*/
+-->
+
+<script type="text/javascript" src="/Scripts/RollOver.js"> </script>
+<script type="text/javascript" src="/Scripts/addLoadEvent.js"> </script>
+<script type="text/javascript" src="/include/sub_TopMenu.js"> </script>
+<div id="t_top">
+	<ul id="mainmenu">
+		<li class="m1">
+			<a href="http://committee.tta.or.kr/summary/standard_status.jsp" id="a-m1"><img src="/images/m5_t_off.gif" alt="표준화현황" width="92" name="top-img-1" height="34" border="0" id="top-img-1" /></a>
+			<ul id="TopMenu1">
+				<li><a href="http://committee.tta.or.kr/summary/standard_status.jsp" id="a-m14"><img src="/images/new_image/m1_4_off.gif" alt="표준 제/개정 현황" name="top-img-14" width="74" height="12" border="0" id="top-img-14" /></a>
+				</li>
+				<li><a href="http://committee.tta.or.kr/summary/standard_status2.jsp" id="a-m16"><img src="/images/new_image/m1_6_off.gif" alt="TTA의 표준현황" name="top-img-16" width="74" height="12" border="0" id="top-img-16" /></a>
+				</li>
+				<!-- 
+				<li><a href="http://committee.tta.or.kr/summary/define.jsp" id="a-m11"><img src="/images/new_image/m1_1_off.gif" alt="정보통신표준의 개념과 분류" id="top-img-11" name="top-img-11" width="112" height="12" border="0" /></a>
+				</li>
+				<li><a href="http://committee.tta.or.kr/summary/standard.jsp" id="a-m12"><img src="/images/new_image/m1_2_off.gif" alt="정보통신표준화의 필요성" name="top-img-12" width="101" height="12" border="0" id="top-img-12" /></a>
+				</li>
+				<li><a href="http://committee.tta.or.kr/summary/system.jsp" id="a-m13"><img src="/images/new_image/m1_3_off.gif" alt="주요표준화기구 동향" name="top-img-13" width="83" height="12" border="0" id="top-img-13" /></a>
+				</li>
+				<li><a href="http://committee.tta.or.kr/summary/standard_status.jsp" id="a-m14"><img src="/images/new_image/m1_4_off.gif" alt="TTA의 표준현황" name="top-img-14" width="74" height="12" border="0" id="top-img-14" /></a>
+				</li>
+				<li><a href="http://committee.tta.or.kr/summary/life_standard.jsp" id="a-m15"><img src="/images/new_image/m1_5_off.gif" alt="생활 속 TTA 표준" name="top-img-15" width="67" height="12" border="0" id="top-img-15" /></a>
+				</li>
+				 -->
+			</ul>
+		</li>
+		<li class="m2">
+			<a href="http://committee.tta.or.kr/join/standard.jsp" id="a-m2"><img src="/images/new_image/m2_off.gif" alt="표준화참여" name="top-img-2" width="81" height="34" border="0" id="top-img-2" /></a>
+			<ul id="TopMenu2">
+				<li>
+					<a href="http://committee.tta.or.kr/join/standard.jsp" id="a-m21">
+						<img src="/images/new_image/m2_1_off.gif" alt="표준제안" name="top-img-21" width="37" height="12" border="0" id="top-img-21" />
+					</a>
+				</li>
+				<li>
+					<a href="http://committee.tta.or.kr/standard/subject.jsp" id="a-m22">
+						<img src="/images/new_image/m3_10_off.gif" alt="표준화 과제현황" name="top-img-22" height="12" border="0" id="top-img-22" />
+					</a>
+				</li>
+				<li>
+					<a href="http://committee.tta.or.kr/join/idea.jsp" id="a-m23">
+						<img src="/images/new_image/m2_2_off.gif" alt="표준초안 의견수렴" name="top-img-23" width="73" height="12" border="0" id="top-img-23" />
+					</a>
+				</li>
+				<li>
+					<a href="http://committee.tta.or.kr/join/ipr.jsp" id="a-m24">
+						<img src="/images/new_image/m2_3_off.gif" alt="IPR인지통보/확약서" name="top-img-24" width="79" height="12" border="0" id="top-img-24" />
+					</a>
+				</li>
+				<li>
+					<a href="http://committee.tta.or.kr/join/active.jsp" id="a-m25">
+						<img src="/images/new_image/m2_4_off.gif" alt="위원회활동 신청" name="top-img-25" width="65" height="12" border="0" id="top-img-25" />
+					</a>
+				</li>
+				<li>
+					<a href="http://member.tta.or.kr" target="_blank" id="a-m26">
+						<img src="/images/new_image/m2_5_off.gif" alt="회원사 가입안내" name="top-img-26" width="66" height="12" border="0" id="top-img-26" />
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="m3">
+			<a href="http://committee.tta.or.kr/standard/general.jsp" id="a-m3">
+				<img src="/images/new_image/m3_off.gif" alt="표준화위원회" name="top-img-3" width="91" height="34" border="0" id="top-img-3" />
+			</a>
+			<ul id="TopMenu3">
+				<li>
+					<a href="http://committee.tta.or.kr/standard/general.jsp?commit_code=TA" id="a-m31">
+						<img src="/images/new_image/m3_1_off.gif" alt="표준총회" id="top-img-31" name="top-img-31" width="36" height="12" border="0" />
+					</a>
+				</li>
+				<li>
+					<a href="http://committee.tta.or.kr/standard/general.jsp?commit_code=CC" id="a-m32">
+						<img src="/images/new_image/m3_2_off.gif" alt="운영위원회" name="top-img-32" width="44" height="12" border="0" id="top-img-32" />
+					</a>
+				</li>
+				<li>
+					<a href="http://committee.tta.or.kr/standard/general.jsp?commit_code=TC2" id="a-m33">
+						<img src="/images/new_image/m3_11_off.gif" alt="기술위원회" name="top-img-33" width="44" height="12" border="0" id="top-img-33" />
+					</a>
+				</li>
+				<li>
+					<a href="http://committee.tta.or.kr/standard/subject.jsp" id="a-m34">
+						<img src="/images/new_image/m3_10_off.gif" name="top-img-34" alt="표준화 과제현황" width="65" height="12" border="0" id="top-img-34" />
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="m4">
+			<a href="http://committee.tta.or.kr/data/introduction1.jsp" id="a-m4">
+				<img src="/images/new_image/m4_off.gif" alt="자료마당" name="top-img-4" width="68" height="34" border="0" id="top-img-4" />
+			</a>
+			<ul id="TopMenu4">
+				<li>
+					<a href="http://committee.tta.or.kr/data/introduction1.jsp" id="a-m41">
+						<img src="/images/new_image/m4_1_off.gif" alt="이용안내" name="top-img-41" width="35" height="12" border="0" id="top-img-41" />
+					</a>
+				</li>
+				<li>
+					<a href="http://committee.tta.or.kr/data/standard.jsp" id="a-m42">
+						<img src="/images/new_image/m4_2_off.gif" alt="자료검색" name="top-img-42" width="37" height="12" border="0" id="top-img-42" />
+					</a>
+				</li>
+				<!--li>
+					<a href="/data/data.jsp" id="a-m43">
+						<img src="/images/new_image/m4_3_off.gif" alt="자료구매" name="top-img-43" width="36" height="12" border="0" id="top-img-43" />
+					</a>
+				</li-->
+				<li>
+					<a href="https://www.tta.or.kr/tta/publicationHosuList?rep=1&hosuBbsId=1&key=15" id="a-m44" target="_blank">
+						<img src="/images/new_image/m4_4_off.gif" alt="TTA 간행물" name="top-img-44" width="47" height="12" border="0" id="top-img-44" />
+					</a>
+				</li>
+				<li>
+					<a href="http://terms.tta.or.kr/index.jsp" id="a-m45" target="_blank">
+						<img src="/images/new_image/m4_5_off.gif" alt="용어사전" name="top-img-45" width="36" height="12" border="0" id="top-img-45" />
+					</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<div class="totalsch">
+		
+		
+		<a href="http://committee.tta.or.kr/data/standard.jsp"><img src="/images/new_image/top_m_1.gif" alt="표준검색" width="84" height="22" border="0" /></a>
+		<a href="https://www.tta.or.kr/tta/integratedSearch" target="_blank" rel="noopener noreferrer"><img src="/images/new_image/top_m_2.gif" alt="통합검색" border="0" /></a>
+	</div>
+</div>
+
+</div>
+<div id="container">
+	<div id="snd">
+	<!-- 왼쪽 메뉴 -->
+		
+<div class="jumplink"><a name="skip_sub" id="skip_sub">카테고리별 하위메뉴</a></div>
+<div class="smenu">
+	<h2><img src="/images/new_image/sub4_title.gif" alt="자료마당" width="179" height="39" /></h2>
+	<ul>
+		<li>
+			<a href="/data/introduction1.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image51','','/images/new_image/menu4_1_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','/images/new_image/menu4_1_on.gif',1)">
+				<img src="/images/new_image/menu4_1_off.gif" alt="이용안내" name="Image51" width="156" height="21" border="0" id="Image51" />
+			</a>
+		</li>
+		<li>
+			<a href="/data/standard.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image54','','/images/new_image/menu4_2_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image54','','/images/new_image/menu4_2_on.gif',1)">
+				<img src="/images/new_image/menu4_2_off.gif" alt="자료검색" name="Image54" width="156" height="21" border="0" id="Image54" />
+			</a>
+			<!-- 
+			<ul>
+				<li>
+					<a href="/data/standard.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image56','','/images/new_image/menu4_2_1_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image56','','/images/new_image/menu4_2_1_on.gif',1)">
+						<img src="/images/new_image/menu4_2_1_off.gif" alt="표준" name="Image56" width="156" height="20" border="0" id="Image56" />
+					</a>
+				</li>
+				<li>
+					<a href="/data/book.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image58','','/images/new_image/menu4_2_2_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image58','','/images/new_image/menu4_2_2_on.gif',1)">
+						<img src="/images/new_image/menu4_2_2_off.gif" alt="도서" name="Image58" width="156" height="20" border="0" id="Image58" />
+					</a>
+				</li>				
+				<li>
+					<a href="/data/periodical.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image59','','/images/new_image/menu4_2_3_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image59','','/images/new_image/menu4_2_3_on.gif',1)">
+						<img src="/images/new_image/menu4_2_3_off.gif" alt="정기간행물" name="Image59" width="156" height="20" border="0" id="Image59" />
+					</a>
+				</li>				
+				<li>
+					<a href="/data/web.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image60','','/images/new_image/menu4_2_4_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image60','','/images/new_image/menu4_2_4_on.gif',1)">
+						<img src="/images/new_image/menu4_2_4_off.gif" alt="웹자료" name="Image60" width="156" height="20" border="0" id="Image60" />
+					</a>
+				</li>				
+				<li>
+					<a href="/data/webzine.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image61','','/images/new_image/menu4_2_5_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image61','','/images/new_image/menu4_2_5_on.gif',1)">
+						<img src="/images/new_image/menu4_2_5_off.gif" alt="유관기관 웹진" name="Image61" width="156" height="20" border="0" id="Image61" />
+					</a>
+				</li>		
+			</ul>
+			 -->
+		</li>
+		<!--li>
+			<a href="/data/data.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image155','','/images/new_image/menu4_3_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image155','','/images/new_image/menu4_3_on.gif',1)">
+				<img src="/images/new_image/menu4_3_off.gif" alt="자료구매" name="Image155" width="156" height="21" border="0" id="Image155" />
+			</a>
+		</li-->
+		<li>
+			<a href="https://www.tta.or.kr/tta/publicationHosuList?rep=1&hosuBbsId=1&key=15" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image50','','/images/new_image/menu4_4_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','/images/new_image/menu4_4_on.gif',1)" target="_blank">
+				<img src="/images/new_image/menu4_4_off.gif" alt="TTA 간행물" name="Image50" width="156" height="21" border="0" id="Image50" />
+			</a>
+		</li>
+		<li>
+			<a href="http://terms.tta.or.kr/index.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image52','','/images/new_image/menu4_5_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image52','','/images/new_image/menu4_5_on.gif',1)" target="_blank">
+				<img src="/images/new_image/menu4_5_off.gif" alt="용어사전" name="Image52" width="156" height="21" border="0" id="Image52" />
+			</a>
+		</li>
+	</ul>
+</div>
+<div class="jumplink"><a name="skip_cnt" id="skip_cnt">본문 시작</a></div>
+
+	<!-- /왼쪽 메뉴 -->
+	</div>
+	<div id="content">
+	<!-- 본문 -->
+		<div class="pagetit">
+			<h1><img src="/images/new_image/sub4_2_title.gif" alt="자료검색-표준" /></h1>
+			<p id="location">
+				<span class="home">홈</span> &gt; 자료마당 &gt; 자료검색 &gt; <span class="current">표준</span>
+			</p>
+		</div>
+		<div id="content-area">
+			<div class="board_top">
+				<div class="btn_left">
+					<h2 class="t_bold">자료 검색결과</h2>
+				</div>
+				<form id="form" name="form" method="post" action="standard.jsp">
+					<input type="hidden" id="nowPage" name="nowPage" value="1" />
+					<input type="hidden" id="pk_num" name="pk_num" value="TTAK.KO-10.1415" />
+					<input type="hidden" id="order" name="order" value="t.standard_no" />
+					<input type="hidden" id="by" name="by" value="asc" />
+					<input type="hidden" id="nowSu" name="nowSu" value="1" />
+				<div class="btn_right">
+					<a href="standard.jsp"><img src="../board_img/BT_to_search.gif" alt="검색페이지로" width="100" height="19" border="0" /></a>
+				</div>
+				</form>
+			</div>
+			<table class="s_table rwrite">
+				<colgroup>
+					<col width="17%" />
+					<col width="32%" />
+					<col width="19%" />
+					<col width="32%" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="t_bold">표준종류</th>
+						<td colspan="3">정보통신단체표준(TTAS)</td>
+					</tr>
+					<tr>
+						<th class="t_bold">표준번호</th>
+						<td>
+							
+							TTAK.KO-10.1415
+						</td>
+						<th class="t_bold">구 표준번호</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th class="t_bold">제개정일</th>
+						<td>2022-12-07</td>
+						<th class="t_bold">총 페이지 </th>
+						<td>51</td>
+					</tr>
+					<tr>
+						<th class="t_bold">한글 표준명</th>
+						<td colspan="3">블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터</td>
+					</tr>
+					<tr>
+						<th class="t_bold">영문 표준명</th>
+						<td colspan="3">Verifiable Credential Data of Blockchain-based Seafarers Qualification Service </td>
+					</tr>
+					<tr>
+						<th class="t_bold">한글 내용요약</th>
+						<td colspan="3">본 표준은 블록체인 기반 모바일 선원자격증명 서비스 필요성, 요구 사항, 모바일 선원자격증명 참여자(발급자, 소유자, 검증자) 별 DID에 저장되는 DID 문서 규격, 모바일 선원자격증명 발급, 제출, 검증 시나리오에 따른 VC, VP 및 DID 상호작용 규격 및 참여자 간 상호인증 규격, 모바일 선원자격증명의 전송 모드에 따른 송수신 메시지를 정의한다. 또한, 분산 식별자로 연결된 모든 노드에서 소유자인 선원의 모바일 선원자격증명 인증정보를 안전하게 인증할 방법을 설명하며, 모바일 선원자격증명 인증정보를 이용한 블록체인 기반의 모바일 선원자격증명에 대한 범용 인증 방법을 기술한다.</td>
+					</tr>
+					<tr>
+						<th class="t_bold">영문 내용요약</th>
+						<td colspan="3">
+							This standard defines the need and requirements for a Blockchain-based mobile seafarer’s qualification certificate, defines the DID Document specification stored in the DID for each mobile seafarer’s qualification certificate participant (issuer, owner, validator), and issuance, submission, and verification of a mobile seafarer’s qualification certificate. Defines VC&#8729;VP standards for each scenario and mutual authentication standards between participants, and defines transmission/reception messages for each transmission mode of mobile seafarer’s qualification certificate. It explains how to securely authenticate the user's mobile seafarer’s qualification certificate authentication information on all nodes connected by DID. And a Blockchain-based mobile seafarer’s qualification certificate universal authentication method using mobile seafarer’s qualification certificate authentication information is described.
+						</td>
+					</tr>
+					
+					<tr>
+						<th class="t_bold">관련 IPR 확약서</th>
+						<td colspan="3">
+							
+								<a href="/join/ipr_view.jsp?promise_no=2022-002" target="_blank" class="outlink">&nbsp;&nbsp;&nbsp;[확약서 보기]</a>
+							
+						</td>
+					</tr>
+					
+					
+					<tr>
+						<th class="t_bold">관련파일</th>
+						
+							<td colspan="2">&nbsp;&nbsp;
+								
+									<a href="javascript:alert('로그인 후 파일다운이 가능합니다');">
+										<img src="/images/file_icon.gif" alt="TTAK.KO-10.1415.pdf" border="0" />&nbsp;TTAK.KO-10.1415.pdf
+									</a>
+								
+							</td>
+							<td>
+								
+							</td>
+						
+					</tr>
+					
+		      		
+					<tr>
+						<th class="t_bold">표준이력</th>
+						<td colspan="3">
+							<table class="board_list">
+								<colgroup>
+									<col width="221px" />
+									<col width="131px" />
+									<col width="77px" />
+									<col width="35px" />
+									<col width="36px" />
+									<col width="53px" />
+									<col width="35px" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="board_th_first noPadding">표준명</th>
+										<th scope="col" class="noPadding">표준번호</th>
+										<th scope="col" class="noPadding">제개정일</th>
+										<th scope="col" class="noPadding">구분</th>
+										<th scope="col" class="noPadding">유효<br>여부</th>
+										<th scope="col" class="noPadding">IPR<br>확약서</th>
+										<th scope="col" class="board_th_last noPadding">파일</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+									<tr>
+										<td class="t_left"><strong>블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터</strong></td>
+										<td class="t_center">
+											<a href="standard_view.jsp?commit_code=PG1006&amp;firstDepthCode=TC010&amp;by=asc&amp;secondDepthCode=PG1006&amp;order=t.standard_no&amp;pk_num=TTAK.KO-10.1415&amp;nowSu=1"><strong>TTAK.KO-10.1415</strong></a>
+										</td>
+										<td class="t_center"><strong>2022-12-07</strong></td>
+										<td class="t_center">
+											
+								                          <strong>제정</strong>
+											
+										</td>
+										<td class="t_center">
+											
+												<strong>유효</strong>
+											
+										</td>
+										<td class="t_center">
+										
+														<a href="/join/ipr_view.jsp?promise_no=2022-002" target="_blank" style="color: blue;">
+															
+															<img src="/images/file_icon.gif" alt="2022-002" border="0" /><br>
+														</a>
+													
+												
+											
+										
+										</td>
+										<td class="t_center">
+											
+														<a href="javascript:alert('로그인 후 파일다운이 가능합니다');">
+															<img src="/images/file_icon.gif" alt="TTAK.KO-10.1415.pdf" border="0" />
+														</a>
+													
+										</td>
+									</tr>
+									
+                                        </td>
+                                    </tr>
+									
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					
+					
+		      
+				
+			
+				</tbody>
+			</table>
+	
+			<form id="form" name="form" method="post" action="/standard/standard.jsp">
+				<input type="hidden" id="nowPage" name="nowPage" value="1"/>
+				<input type="hidden" id="firstDepthCode" name="firstDepthCode" value="TC010"/>
+				<input type="hidden" id="secondDepthCode" name="secondDepthCode" value="PG1006"/>
+				<input type="hidden" id="thirdDepthCode" name="thirdDepthCode" value=""/>
+				<input type="hidden" id="commit_code" name="commit_code" value="PG1006"/>
+	
+			<div class="board_nav">
+				<div class="btn_right">
+					<span class="btn"><input type="submit" value="목록"/></span>
+				</div>
+			</div>
+			</form>
+		</div>
+	<!-- /본문 -->
+	</div>
+</div>
+<div id="footer">
+	
+<div class="jumplink"><a name="skip_foot" id="skip_foot">하단메뉴 시작</a></div>
+<!-- family site -->
+<div class="familysite">
+	<p>
+		<a href="https://forawatch.info/" target="_blank">
+			<img src="/images/new_image/down_img1.gif" alt="IT 표준화 포럼" border="0" />
+		</a>
+	</p>
+	<p>
+		<a href="https://expert.tta.or.kr/" target="_blank">
+			<img src="/images/new_image/down_img2.gif" alt="IT 국제표준화 전문가" border="0" />
+		</a>
+	</p>
+<!-- 	
+	<p>
+		<a href="https://edu.tta.or.kr/" target="_blank">
+			<img src="/images/new_image/down_img3.gif" alt="표준화 교육포탈" border="0" />
+		</a>
+	</p>
+ -->	
+<!--	<p>
+		<a href="https://www.tta.or.kr" target="_blank">
+			<img src="/images/new_image/down_img4.gif" alt="한국정보통신기술협회" border="0" />
+		</a>
+	</p> -->
+	<p>
+		<a href="https://consulting.tta.or.kr/" target="_blank">
+			<img src="/images/new_image/down_img6.gif" alt="ICT표준기술자문시스템" border="0" />
+		</a>
+	</p>	
+	<p>
+		<a href="/main/relatedsite01.jsp">
+			<img src="/images/new_image/down_img5.gif" alt="표준화 관련 사이트" border="0" />
+		</a>
+	</p>
+	<p>
+		<a href="https://terms.tta.or.kr/main.do" target="_blank">
+			<img src="/images/new_image/down_img7.gif" alt="정보통신 용어사전" border="0" />
+		</a>
+	</p>
+</div>
+<!-- //family site -->
+<!-- copyright -->
+<div class="ft_copy">
+<p class="ft_logo">
+	<a href="https://www.tta.or.kr" target="_blank">
+		<img src="/images/new_image/down_logo.gif" alt="TTA 한국정보통신기술협회 로고" width="194" height="24" border="0"/>
+	</a>
+</p>
+<address class="ft_address">
+	<p class="ft_add1">[13591] 경기도 성남시 분당구 분당로 47 (구.서현동 267-2) 대표전화 1551-1774 </p>
+	<p class="ft_add2">Copyright 2009 TTA All Rights Reserved.</p>
+</address>
+<ul class="ft_menu">	
+	<li>
+		<a href="https://www.tta.or.kr/tta/contents?contentId=226" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image110','','/images/new_image/down_bt4_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image106','','/images/new_image/down_bt4_on.gif',1)">
+			<img src="/images/new_image/down_bt4_off.gif" alt="개인정보처리방침" name="Image106" width="95" height="24" border="0" id="Image106" />
+		</a>
+	</li>
+	<li>
+		<a href="/mypage/service.jsp" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image107','','/images/new_image/down_bt1_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image107','','/images/new_image/down_bt1_on.gif',1)">
+			<img src="/images/new_image/down_bt1_off.gif" alt="서비스 이용안내" name="Image107" width="78" height="24" border="0" id="Image107" />
+		</a>
+	</li>
+	<li>
+		<a href="https://www.tta.or.kr/tta/contents?contentId=223" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image108','','/images/new_image/down_bt2_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image108','','/images/new_image/down_bt2_on.gif',1)">
+			<img src="/images/new_image/down_bt2_off.gif" alt="이메일무단수집거부" name="Image108" width="96" height="24" border="0" id="Image108" />
+		</a>
+	</li>
+	<li>
+		<a href="mailto:webmaster@tta.or.kr" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('Image109','','/images/new_image/down_bt3_on.gif',1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image109','','/images/new_image/down_bt3_on.gif',1)">
+			<img src="/images/new_image/down_bt3_off.gif" alt="Contact Us" name="Image109" width="62" height="24" border="0" id="Image109" />
+		</a>
+	</li>
+</ul>
+</div>
+<script type="text/javascript" src="/include/logAnal.js"> </script>
+</div>
+</body>
+</html>

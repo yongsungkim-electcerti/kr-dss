@@ -1,0 +1,54 @@
+KISA 한국인터넷진흥원
+바로가기  메뉴
+본문 바로가기
+주메뉴 바로가기
+푸터 바로가기
+로고
+전체메뉴
+ENG
+SEARCH
+닫기
+검색어 입력
+지식플랫폼
+연구보고서
+인쇄하기
+공유하기
+닫기
+트위터
+페이스북
+Trusted Web 구축을 위한 기술 및 보안연구
+등록일
+2024-04-11
+조회
+7397
+요약
+목차
+요약
+목차
+제1장 Trusted Web 개요
+제1절 현 인터넷/웹의 현안과 문제점
+제2절 Trusted Web 개요
+제2장 국가별 Trusted Web 구축 동향
+제1절 유럽 국가
+제2절 아메리카
+제3절 아시아
+제3장 Trusted Web 기반 기술
+제1절 블록체인(Blockchain)
+제2절 대체 불가능 토큰(NFT)
+제3절 분산 ID(Decentralized IDentity)
+제4절 Digital Wallet
+제5절 Solid Project
+제4장 Trusted Web 설계
+제1절 Trusted Web 아키텍처 설계
+제2절 Trusted Web 서비스 설계
+첨부파일
+최종보고서_Trusted Web 구축을 위한 기술 및 보안연구.pdf (3MB)
+이전글
+개정법 시행에 따른 개인정보 처리 기준 개발 및 개선방안 연구
+2025-01-24
+다음글
+블록체인 전문인력양성 현황조사 및 양성방안 연구
+2024-03-27
+목록
+지식플랫폼
+Now Loading

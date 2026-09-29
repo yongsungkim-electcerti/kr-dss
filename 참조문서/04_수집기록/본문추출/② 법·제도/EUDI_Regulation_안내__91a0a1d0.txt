@@ -1,0 +1,86 @@
+European Digital Identity (EUDI) Regulation | Shaping Europe’s digital future
+Skip to main content
+European Digital Identity (EUDI) Regulation
+The European Digital Identity (EUDI) Regulation will revolutionise digital identity in the EU by enabling the creation of a universal, trustworthy, and secure European digital identity wallet.
+From digital identification to digital Wallet
+The new
+Regulation establishing a framework for a European Digital Identity
+builds on the
+2014
+Regulation on electronic identification and trust services for electronic transactions in the internal market
+(eIDAS Regulation).
+Under the eIDAS regulation, EU Member States could, on a voluntary basis, notify national electronic identification schemes, which other Member States where then obliged to recognise. The recognition of notified electronic identification became mandatory in 2018. Yet, there was no requirement for Member States to develop a national electronic identification. Interoperability was achieved only by implementing a interoperability superstructure connecting the various identity systems, which was prone to technical problems. This has led to discrepancies between countries and prevented the extension to private digital services.
+The new regulation addresses the shortcomings of eIDAS by improving the effectiveness of the current framework for digital Identity and extending its benefits to the private sector. Member States will be mandated to offer citizens and businesses digital wallets, which can link their national digital identities with proof of other personal attributes like driving licenses, diplomas, and bank accounts. These wallets may be issued either by public authorities or recognised private entities. The aim is to provide Europeans with full control over their data while accessing online services, eliminating unnecessary data sharing. Service providers legally obliged to identify their customers unequivocally will be obliged to accept the wallet for authentication.
+The EU Digital Identity Wallets will build on national systems that already exist in some Member States. The new regulation establishes that d
+igital identities will continue to be provided by Member States. The European Digital Identity Wallet builds on this basis, expanding the functionalities and usability of national eIDs and ensuring mutual recognition of national wallets by the other member states.
+It will also promote a harmonised security approach, facilitating widespread acceptance of digital identities throughout the EU.
+This approach will be the cornerstone of the regulation, granting both citizens and online service providers with a common technical architecture, reference framework, and standards. This harmonisation ensures the recognition and acceptance of digital identity solutions throughout the EU, fostering trust and interoperability.
+fix-empty
+fix-empty
+Aligned with existing cybersecurity legislation, the regulation mandates compliance with cybersecurity requirements, bolstering confidence in digital identity solutions. Additionally, it enables the issuance of electronic attestations by public bodies, promoting the pan-European recognition of credentials in electronic form while prioritising data privacy.
+Beyond mere identification, the regulation will expand the scope of trust services to include recording of electronic data in an electronic ledger, the management of remote electronic signature and the creation devices or remote electronic seal creation devices.
+The
+European Digital Identity Cooperation Group
+supports the implementation of the EUDI Regulation, provides guidance to the Commission, and e
+ngages with the Commission and other relevant stakeholders to develop a
+common Union Toolbox
+.
+Main benefits of the EU Digital Identity Wallets
+Citizens and businesses:
+User control:
+Citizens will have the power to choose which aspects of their identity and data they share with third parties, ensuring privacy and control over personal information.
+Widespread usability:
+The EU Digital Identity Wallets will be available across the EU for accessing public and private digital services, making online interactions more seamless and efficient.
+Transparency and security:
+the EU digital wallets will be open-source licensed, ensuring transparency and security. Users will be reassured that their data is handled securely, with measures in place to prevent misuse or illegal tracking.
+Ease of use:
+The wallets will offer a user-friendly interface, allowing individuals to easily manage their digital identities and access services. Creating qualified eSignatures for non-professional use will be free, enhancing accessibility.
+Smooth onboarding:
+Citizens will be able to use national eID schemes to register for the wallets, ensuring a smooth transition to digital identity management.
+a) Governments:
+Improved access to digital services:
+The wallets can streamline the process of identity verification, making it easier for citizens to access government services online and boost uptake.
+Enhance fraud prevention:
+By providing a secure and verifiable means of identity, it can help reduce identity theft and related fraud as regards government services.
+Improves security:
+The overall security of citizen data will be enhanced and the risk of breaches reduced.
+b) Providers of digital services:
+Improve security and privacy:
+The wallets can reduce the risk associated with liability for traditional authentication methods.
+Reduce cost of authentication:
+The wallets can lower the costs associated with identity verification processes by simplifying and automating them.
+Avoid relying on competing big platforms
+: Service providers will have to rely less on identity services with unclear use of the obtained user data.
+c) Society:
+Increased online transactions:
+With easier and more secure verification, people may be more inclined to engage in online transactions.
+New business opportunities:
+The adoption of Identity Wallets can spur innovation, leading to new services and products.
+Resource reallocation:
+Resources previously dedicated to manual verification processes can be redirected to more productive uses.
+Economic growth:
+Overall, greater adoption of online transactions, new business opportunities and an improved resource allocation can contribute to overall economic stability and growth.
+The introduction of European Digital Identity Wallets will mark a significant milestone in Europe's digitalisation journey.
+Collectively, these aspects form a robust framework for a European digital identity, ensuring universal access, trustworthiness, security, and interoperability across the European Union.
+fix-empty
+fix-empty
+Next steps
+Regulation (EU) 2024/1183 establishing the European Digital Identity Framework
+has entered into force. The framework mandates Member States to provide EU Digital Identity (eID) Wallets to citizens by the end of 2026 in line with the Regulation and
+Implementing Regulations
+adopted.
+Quick Links
+European Digital Identity Wallet - Fact page
+Q&A Digital Identity
+EU Digital Identity Wallet Technical specifications
+Follow us
+DigitalEU on X
+Related Content
+Big Picture
+Electronic identification - eID
+Electronic identification (eID) is one of the tools to ensure secure access to online services and to carry out electronic transactions in a safer way.
+European Digital Identity Cooperation Group
+The European Digital Identity Cooperation Group supports the implementation of the EU digital...
+Last update
+22 June 2026
+Print as PDF

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Types &mdash; GITB TDL Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.css" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d4340937"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Expressions" href="../expressions/index.html" />
+    <link rel="prev" title="Scriptlets" href="../scriptlets/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GITB TDL Documentation
+              <img src="../_static/logo_itb.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                GITB TDL version 1.30.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helloWorld/index.html">Hello world</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testsuite/index.html">Test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testcase/index.html">Test cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptlets/index.html">Scriptlets</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#map-variables">Map variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-variables">List variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#type-conversions">Type conversions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../expressions/index.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constructs/index.html">Test steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handlers/index.html">Test step handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Example test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Release history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GITB TDL Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Types</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="types">
+<span id="test-case-types"></span><span id="index-0"></span><h1>Types<a class="headerlink" href="#types" title="Link to this heading"></a></h1>
+<p>The GITB specification foresees a type system that is used to better manage ongoing testing state and facilitate calculations.
+The supported types can be split in three main categories:</p>
+<ul class="simple">
+<li><p><strong>Primitive types:</strong> Simple values.</p></li>
+<li><p><strong>Object types:</strong> XML documents or other complex structures.</p></li>
+<li><p><strong>Container types:</strong> Structures that can contain primitive and object types or embedded container types.</p></li>
+</ul>
+<p>The following table lists the available types. Note that the value under “Type name” is what needs to be used when referring to a given type
+in GITB TDL:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Type name</p></th>
+<th class="head"><p>Type category</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></th>
+<td><p>Primitive</p></td>
+<td><p>Used for text values</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">number</span></code></p></th>
+<td><p>Primitive</p></td>
+<td><p>Used for numeric values (integers and floating point numbers)</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">boolean</span></code></p></th>
+<td><p>Primitive</p></td>
+<td><p>Boolean values (true/false)</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">binary</span></code></p></th>
+<td><p>Primitive</p></td>
+<td><p>A byte buffer used typically to represent file content</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">object</span></code></p></th>
+<td><p>Object</p></td>
+<td><p>An XML document recorded as a Document Object Model (DOM)</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">schema</span></code></p></th>
+<td><p>Object</p></td>
+<td><p>Identical to an <code class="docutils literal notranslate"><span class="pre">object</span></code> but with an additional property for a schemaLocation</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">map</span></code></p></th>
+<td><p>Container</p></td>
+<td><p>A map of key-value pairs (similar to a <code class="docutils literal notranslate"><span class="pre">java.util.Map</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></th>
+<td><p>Container</p></td>
+<td><p>A list of values (similar to a <code class="docutils literal notranslate"><span class="pre">java.util.List</span></code>)</p></td>
+</tr>
+</tbody>
+</table>
+<section id="map-variables">
+<span id="test-case-types-maps"></span><span id="index-1"></span><h2>Map variables<a class="headerlink" href="#map-variables" title="Link to this heading"></a></h2>
+<p>Variables of type <code class="docutils literal notranslate"><span class="pre">map</span></code> can contain values or any type, with even different types contained in the same <code class="docutils literal notranslate"><span class="pre">map</span></code>. In fact a <code class="docutils literal notranslate"><span class="pre">map</span></code>
+may also contain embedded <code class="docutils literal notranslate"><span class="pre">map</span></code> variables at any level of depth. The keys of a <code class="docutils literal notranslate"><span class="pre">map</span></code> are however always strings.</p>
+</section>
+<section id="list-variables">
+<span id="test-case-types-lists"></span><span id="index-2"></span><h2>List variables<a class="headerlink" href="#list-variables" title="Link to this heading"></a></h2>
+<p>Variables of type <code class="docutils literal notranslate"><span class="pre">list</span></code> can contain an arbitrary sequence of elements. A key difference however when comparing to a <code class="docutils literal notranslate"><span class="pre">map</span></code> is that
+the elements contained in a <code class="docutils literal notranslate"><span class="pre">list</span></code> are of a single type. This type is defined when the <code class="docutils literal notranslate"><span class="pre">list</span></code> is declared in the test case’s <a class="reference internal" href="../testcase/index.html#test-case-variables"><span class="std std-ref">Variables</span></a> section.</p>
+</section>
+<section id="type-conversions">
+<span id="test-case-types-type-conversions"></span><h2>Type conversions<a class="headerlink" href="#type-conversions" title="Link to this heading"></a></h2>
+<p>It is often the case when executing a test case that we need to convert a session context variable of one type to another. An an example
+consider a <code class="docutils literal notranslate"><span class="pre">string</span></code> variable containing XML content that we want to validate using a validator that only expects <code class="docutils literal notranslate"><span class="pre">binary</span></code> or <code class="docutils literal notranslate"><span class="pre">object</span></code>
+input. Conversions between types can be done explicitly using the <code class="docutils literal notranslate"><span class="pre">assign</span></code> step and the <code class="docutils literal notranslate"><span class="pre">type</span></code> attribute:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;toVariable&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$fromVariable&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>In this example, the <code class="docutils literal notranslate"><span class="pre">fromVariable</span></code> is converted to the <code class="docutils literal notranslate"><span class="pre">toVariable</span></code> as an <code class="docutils literal notranslate"><span class="pre">object</span></code>. Explicit conversions like this can however pollute
+the testing logic and can in most cases happen implicitly. An implicit conversion takes place when we attempt to use a source variable of a
+given type as a variable of another type. The supported conversions and specific conversion assumptions between types are provided in the
+following table:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">number</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">boolean</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">binary</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">object</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">schema</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">map</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">binary</span></code></p></th>
+<td><p>Yes - result is the string representation of the bytes</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes - result is the XML representation of the bytes</p></td>
+<td><p>Yes - same as with <code class="docutils literal notranslate"><span class="pre">object</span></code></p></td>
+<td><p>No</p></td>
+<td><p>Yes - a single item list containing the value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">boolean</span></code></p></th>
+<td><p>Yes - result as string (e.g. “true”)</p></td>
+<td><p>Yes - result is 1 if “true” otherwise 0</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes - bytes of the <code class="docutils literal notranslate"><span class="pre">boolean</span></code>’s <code class="docutils literal notranslate"><span class="pre">string</span></code> representation</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>Yes - a single item list containing the value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></th>
+<td><p>Yes - result is the comma-separated values</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>Yes - result is a map of the elements with keys their zero-based list index as <code class="docutils literal notranslate"><span class="pre">string</span></code> values</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">map</span></code></p></th>
+<td><p>Yes - result is the comma-separated key-value pairs</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes - a single item list containing the value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">number</span></code></p></th>
+<td><p>Yes - result as string (e.g. “10”)</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes - result is “true” if 1 otherwise “false”</p></td>
+<td><p>Yes - bytes of the <code class="docutils literal notranslate"><span class="pre">number</span></code>’s <code class="docutils literal notranslate"><span class="pre">string</span></code> representation</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>Yes - a single item list containing the value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">object</span></code></p></th>
+<td><p>Yes - result is the serialised XML</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>Yes - result is the XML’s bytes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>Yes - a single item list containing the value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">schema</span></code></p></th>
+<td><p>Yes - result is the serialised XSD</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>Yes - result is the XSD’s bytes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>Yes - a single item list containing the value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></th>
+<td><p>Yes</p></td>
+<td><p>Yes - parsed as double (e.g. “10” or “5.03”)</p></td>
+<td><p>Yes - parsed as “true” or “false” (ignoring case)</p></td>
+<td><p>Yes - result is the <code class="docutils literal notranslate"><span class="pre">string</span></code>’s bytes</p></td>
+<td><p>Yes - considered as serialised XML</p></td>
+<td><p>Yes - same as with <code class="docutils literal notranslate"><span class="pre">object</span></code></p></td>
+<td><p>No</p></td>
+<td><p>Yes - a single item list containing the value</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>GITB software support:</strong> Implicit conversions between types occurs when the expression referencing the source variable
+is a pure variable reference. For example given a <code class="docutils literal notranslate"><span class="pre">binary</span></code> variable <code class="docutils literal notranslate"><span class="pre">myVariable</span></code>, referencing <code class="docutils literal notranslate"><span class="pre">$myVariable</span></code> when
+assigning to a <code class="docutils literal notranslate"><span class="pre">string</span></code> works whereas but <code class="docutils literal notranslate"><span class="pre">concat('My</span> <span class="pre">value</span> <span class="pre">is</span> <span class="pre">',</span> <span class="pre">$myVariable)</span></code> does not. This is because the second
+case is a full XPath expression whereas the first case only identifies the variable.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../scriptlets/index.html" class="btn btn-neutral float-left" title="Scriptlets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../expressions/index.html" class="btn btn-neutral float-right" title="Expressions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, European Commission, DIGIT.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

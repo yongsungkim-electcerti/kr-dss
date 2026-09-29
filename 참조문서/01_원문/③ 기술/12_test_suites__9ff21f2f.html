@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test suites &mdash; GITB TDL Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.css" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d4340937"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Test cases" href="../testcase/index.html" />
+    <link rel="prev" title="Hello world" href="../helloWorld/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GITB TDL Documentation
+              <img src="../_static/logo_itb.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                GITB TDL version 1.30.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helloWorld/index.html">Hello world</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Test suites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#elements">Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#metadata">Metadata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dependencies">dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#documentation">documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scopes">scopes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#update">update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#specification">specification</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#actors">Actors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#endpoints-for-simple-configuration-values">Endpoints for simple configuration values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#endpoints-for-dynamic-configuration-values">Endpoints for dynamic configuration values</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#test-case-groups">Test case groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-cases">Test cases</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#test-suite-organisation-and-deployment">Test suite organisation and deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sharing-resources-across-test-suites">Sharing resources across test suites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test-suites-as-shared-resource-holders">Test suites as shared resource holders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testcase/index.html">Test cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptlets/index.html">Scriptlets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/index.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../expressions/index.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constructs/index.html">Test steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handlers/index.html">Test step handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Example test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Release history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GITB TDL Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Test suites</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="test-suites">
+<span id="test-suite"></span><span id="index-0"></span><h1>Test suites<a class="headerlink" href="#test-suites" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The purpose of a test suite is to group test cases into a cohesive set and define the actors
+that its test cases involve. In addition, test suites introduce metadata such as a version
+number and a description to facilitate their identification and management.</p>
+<p>The following is an example test suite that defines a single actor and two included test cases:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;testsuite</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;invoiceValidation&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>UBL<span class="w"> </span>invoice<span class="w"> </span>validation<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:description&gt;</span>A<span class="w"> </span>test<span class="w"> </span>suite<span class="w"> </span>to<span class="w"> </span>validate<span class="w"> </span>UBL<span class="w"> </span>invoices<span class="w"> </span>uploaded<span class="w"> </span>by<span class="w"> </span>a<span class="w"> </span>user<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="w">    </span><span class="nt">&lt;actors&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;User&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;gitb:name&gt;</span>User<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">            </span><span class="nt">&lt;gitb:desc&gt;</span>User<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>a<span class="w"> </span>UBL<span class="w"> </span>invoice<span class="w"> </span>for<span class="w"> </span>validation<span class="nt">&lt;/gitb:desc&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/gitb:actor&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase2&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/testsuite&gt;</span>
+</pre></div>
+</div>
+<p>A test suite is defined as the XML file’s root element <code class="docutils literal notranslate"><span class="pre">testsuite</span></code>. The following table defines its attributes and child elements:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;id</p></th>
+<td><p>yes</p></td>
+<td><p>A string to uniquely identify the test suite by.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;order</p></th>
+<td><p>no</p></td>
+<td><p>A number used to establish the relative ordering of this test suite compared to other test suites.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>actors</p></th>
+<td><p>no</p></td>
+<td><p>The list of actors that relate to the test suite’s test cases. If not defined the test suite is assumed to be used only for <a class="reference internal" href="#test-suite-sharing"><span class="std std-ref">resource sharing</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>groups</p></th>
+<td><p>no</p></td>
+<td><p>A list of groups to be referenced by test cases. Only a single successful test case is needed from within a group to consider the entire group as successful (see <a class="reference internal" href="#test-suite-groups"><span class="std std-ref">Test case groups</span></a> for details).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>metadata</p></th>
+<td><p>yes</p></td>
+<td><p>A block containing the metadata used to describe the test suite.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>testcase</p></th>
+<td><p>no</p></td>
+<td><p>A set of one or more test cases that are included in the test suite. If not defined the test suite is assumed to be used only for <a class="reference internal" href="#test-suite-sharing"><span class="std std-ref">resource sharing</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Regarding the test suite’s <code class="docutils literal notranslate"><span class="pre">order</span></code> attribute, this is set with an integer (negative, zero or positive) defining its relative
+order compared to other test suites, and defaulting to zero if unspecified. This is not considered as an absolute value
+because test suites may be associated to multiple specifications, either as copies or as shared test suites. Ordering is
+established once all applicable test suites are loaded, comparing first their <code class="docutils literal notranslate"><span class="pre">order</span></code> value, followed by their name.</p>
+<p>Test suite ordering affects the test suite’s display in screens and reports, as well as their execution order when
+multiple test suites are executed in one batch. You could choose to manage ordering in a fine grained manner, setting
+it for each test suite, or use a convention to manage exceptions. For example, you could use a convention whereby test
+suites that are to always be displayed first are set with a negative order, leaving others to be naturally sorted based
+on their name.</p>
+</section>
+<section id="elements">
+<h2>Elements<a class="headerlink" href="#elements" title="Link to this heading"></a></h2>
+<p>Here we will see how a test suite breaks down into its individual sections and discuss the purpose of each.</p>
+<section id="metadata">
+<span id="test-suite-metadata"></span><span id="index-10"></span><span id="index-9"></span><span id="index-8"></span><span id="index-7"></span><span id="index-6"></span><span id="index-5"></span><span id="index-4"></span><span id="index-3"></span><span id="index-2"></span><span id="index-1"></span><h3>Metadata<a class="headerlink" href="#metadata" title="Link to this heading"></a></h3>
+<p>The purpose of the <code class="docutils literal notranslate"><span class="pre">metadata</span></code> element is to provide basic information about the test suite. This information is used both by administrators to better
+manage existing test suites but also for end users to understand the test suite’s purpose. The structure of the <code class="docutils literal notranslate"><span class="pre">metadata</span></code> element is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>authors</p></th>
+<td><p>no</p></td>
+<td><p>A string to indicate the test suite’s authors.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>dependencies</p></th>
+<td><p>no</p></td>
+<td><p>One or more <code class="docutils literal notranslate"><span class="pre">dependency</span></code> elements to record information on the test suite’s dependencies.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>description</p></th>
+<td><p>no</p></td>
+<td><p>A string to provide a user-friendly description of the test suite that is displayed to users.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>documentation</p></th>
+<td><p>no</p></td>
+<td><p>Rich text content that provides further information on the current test suite.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>lastModified</p></th>
+<td><p>no</p></td>
+<td><p>A string acting as an indication of the last modification time for the test suite.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>name</p></th>
+<td><p>yes</p></td>
+<td><p>The name of the test suite that is used to identify it to users.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>published</p></th>
+<td><p>no</p></td>
+<td><p>A string acting as an indication of the test suite’s publishing time.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>scopes</p></th>
+<td><p>no</p></td>
+<td><p>One or more <code class="docutils literal notranslate"><span class="pre">scope</span></code> elements to record information on the test suite’s intended scope.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>type</p></th>
+<td><p>no</p></td>
+<td><p>Either “CONFORMANCE” (the default) or “INTEROPERABILITY”. “INTEROPERABILITY” is used when multiple systems under test are considered in the test suite’s test cases.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>update</p></th>
+<td><p>no</p></td>
+<td><p>Instructions determining the default choices when an update of this test suite is taking place.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>version</p></th>
+<td><p>no</p></td>
+<td><p>A string that indicates the test suite’s version.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>GITB software support:</strong> The test suite’s <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute is used to uniquely identify the test suite within a specification so ensure that it’s unique
+within a given specification. An uploaded test suite whose <code class="docutils literal notranslate"><span class="pre">id</span></code> matches that of an existing test suite will result in the existing test suite
+being updated. Furthermore, the <code class="docutils literal notranslate"><span class="pre">version</span></code> and <code class="docutils literal notranslate"><span class="pre">lastModified</span></code> values are used only for display purposes to administrators, whereas the
+<code class="docutils literal notranslate"><span class="pre">authors</span></code>, <code class="docutils literal notranslate"><span class="pre">dependencies</span></code>, <code class="docutils literal notranslate"><span class="pre">published</span></code> and <code class="docutils literal notranslate"><span class="pre">scopes</span></code> values are recorded but never used or displayed.
+Finally, the “INTEROPERABILITY” <code class="docutils literal notranslate"><span class="pre">type</span></code> (defined at test suite level) is currently ignored.</p>
+</div>
+<section id="dependencies">
+<span id="test-suite-metadata-dependencies"></span><span id="index-15"></span><span id="index-14"></span><span id="index-13"></span><span id="index-12"></span><span id="index-11"></span><h4>dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> element serves to include metadata on possible dependencies that this test suite might mave, such as the existence of
+test services or other supporting software. It contains one or more <code class="docutils literal notranslate"><span class="pre">dependency</span></code> elements with the following structure:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>description</p></th>
+<td><p>no</p></td>
+<td><p>A free text describing the nature of this dependency.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>identifier</p></th>
+<td><p>no</p></td>
+<td><p>A unique identifier for the dependency (if applicable).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>uri</p></th>
+<td><p>no</p></td>
+<td><p>A remote URI reference with further information on the dependency.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following example illustrates how dependency metadata could be included in a test suite:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">  </span><span class="nt">&lt;gitb:name&gt;</span>Test<span class="w"> </span>suite<span class="w"> </span>1<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;gitb:description&gt;</span>Test<span class="w"> </span>suite<span class="w"> </span>description.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="hll"><span class="w">  </span><span class="nt">&lt;gitb:dependencies&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;gitb:dependency&gt;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">&lt;gitb:identifier&gt;</span>DEP_1<span class="nt">&lt;/gitb:identifier&gt;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">&lt;gitb:description&gt;</span>Description<span class="w"> </span>for<span class="w"> </span>dependency.<span class="nt">&lt;/gitb:description&gt;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">&lt;gitb:uri&gt;</span>https://wiki.test.org/dep1<span class="nt">&lt;/gitb:uri&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;/gitb:dependency&gt;</span>
+</span><span class="hll"><span class="w">  </span><span class="nt">&lt;/gitb:dependencies&gt;</span>
+</span><span class="nt">&lt;/metadata&gt;</span>
+</pre></div>
+</div>
+<p>Dependency metadata is not currently leveraged in the Test Bed, and is only recorded as metadata in the test suite descriptor.</p>
+</section>
+<section id="documentation">
+<span id="test-suite-metadata-documentation"></span><span id="index-19"></span><span id="index-18"></span><span id="index-17"></span><span id="index-16"></span><h4>documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">documentation</span></code> element complements the test suite’s <code class="docutils literal notranslate"><span class="pre">description</span></code> by allowing the test suite’s author to include extended rich text documentation as HTML. The structure of this element is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>encoding</p></th>
+<td><p>no</p></td>
+<td><p>In case an <code class="docutils literal notranslate"><span class="pre">import</span></code> reference is defined this can be used to specify the file’s encoding. If not provided <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> is considered.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>from</p></th>
+<td><p>no</p></td>
+<td><p>The identifier of a test suite from which the <code class="docutils literal notranslate"><span class="pre">import</span></code> file will be loaded. If unspecified the current test suite is assumed.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>import</p></th>
+<td><p>no</p></td>
+<td><p>A reference to a separate file within the test suite archive that defines the documentation content.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Using the above attributes to specify a reference to a separate file is not mandatory. The documentation’s content can also be provided as the element’s text content,
+typically enclosed within a CDATA section if this includes HTML elements (in which case the <code class="docutils literal notranslate"><span class="pre">from</span></code>, <code class="docutils literal notranslate"><span class="pre">import</span></code> and <code class="docutils literal notranslate"><span class="pre">encoding</span></code> attributes are omitted).
+When loading documentation from a separate file, it is also possible to lookup this file from another test suite. This is
+done by specifying as the value of the <code class="docutils literal notranslate"><span class="pre">from</span></code> attribute the <code class="docutils literal notranslate"><span class="pre">id</span></code> of the target test suite. This is used to lookup the
+target test suite as follows:</p>
+<ol class="arabic simple">
+<li><p>Look for the test suite in the same <strong>specification</strong> as the current test case.</p></li>
+<li><p>If not found in the same specification, look for the test suite in the other specifications of the test case’s <strong>domain</strong>.
+If across specifications multiple matching test suites are found, one of them will be arbitrarily picked. To avoid such
+a scenario it is obvious that you should ensure test suites used to load shared resources can be uniquely identified.</p></li>
+</ol>
+<p>This documentation can provide further information on the context of the test suite, diagrams or reference information that are useful to understand how it is to be completed or its purpose within the
+overall specification. The content supplied supports several HTML features:</p>
+<ul class="simple">
+<li><p>Structure elements (e.g. headings, text blocks, lists).</p></li>
+<li><p>In-line styling.</p></li>
+<li><p>Tables.</p></li>
+<li><p>Links.</p></li>
+<li><p>Images.</p></li>
+</ul>
+<p>The simplest way to provide such information is to enclose the HTML content in a CDATA section to ensure the XML remains well-formed. The
+following sample provides an example of this approach:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testsuite</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;TS1&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>TS1<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:description&gt;</span>A<span class="w"> </span>short<span class="w"> </span>description<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>test<span class="w"> </span>suite<span class="w"> </span>to<span class="w"> </span>offer<span class="w"> </span>a<span class="w"> </span>short<span class="w"> </span>summary<span class="w"> </span>of<span class="w"> </span>its<span class="w"> </span>purpose.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:documentation&gt;</span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">            &lt;p&gt;Extended documentation for test suite &lt;b&gt;TS1&lt;/b&gt;&lt;/p&gt;</span>
+<span class="cp">            &lt;p&gt;This is an example to support the &lt;a href=&quot;https://www.itb.ec.europa.eu/docs/tdl/latest&quot;&gt;GITB TDL docs&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="cp">        ]]&gt;</span><span class="nt">&lt;/gitb:documentation&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/testsuite&gt;</span>
+</pre></div>
+</div>
+<p>Note that documentation such as this is also supported for:</p>
+<ul class="simple">
+<li><p>The <a class="reference internal" href="../testcase/index.html#test-case-metadata"><span class="std std-ref">test cases</span></a> included in the test suite.</p></li>
+<li><p>Individual <a class="reference internal" href="../constructs/index.html#tdl-steps-common-documentation"><span class="std std-ref">test case steps</span></a>.</p></li>
+</ul>
+</section>
+<section id="scopes">
+<span id="test-suite-metadata-scopes"></span><span id="index-24"></span><span id="index-23"></span><span id="index-22"></span><span id="index-21"></span><span id="index-20"></span><h4>scopes<a class="headerlink" href="#scopes" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">scopes</span></code> element serves to include metadata on the test suite’s scope, such as functional coverage or legal articles.
+It contains one or more <code class="docutils literal notranslate"><span class="pre">scope</span></code> elements with the following structure:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>description</p></th>
+<td><p>no</p></td>
+<td><p>A free text describing the covered scope.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>identifier</p></th>
+<td><p>no</p></td>
+<td><p>A unique identifier for the scope (if applicable).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>uri</p></th>
+<td><p>no</p></td>
+<td><p>A remote URI reference with further information on the covered scope.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following example illustrates how scope metadata could be included in a test suite:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">  </span><span class="nt">&lt;gitb:name&gt;</span>Test<span class="w"> </span>suite<span class="w"> </span>1<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;gitb:description&gt;</span>Test<span class="w"> </span>suite<span class="w"> </span>description.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="hll"><span class="w">  </span><span class="nt">&lt;gitb:scopes&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;gitb:scope&gt;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">&lt;gitb:identifier&gt;</span>Invoicing<span class="nt">&lt;/gitb:identifier&gt;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">&lt;gitb:description&gt;</span>Description<span class="w"> </span>for<span class="w"> </span>this<span class="w"> </span>scope.<span class="nt">&lt;/gitb:description&gt;</span>
+</span><span class="hll"><span class="w">      </span><span class="nt">&lt;gitb:uri&gt;</span>https://wiki.test.org/invoicing<span class="nt">&lt;/gitb:uri&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;/gitb:scope&gt;</span>
+</span><span class="hll"><span class="w">  </span><span class="nt">&lt;/gitb:scopes&gt;</span>
+</span><span class="nt">&lt;/metadata&gt;</span>
+</pre></div>
+</div>
+<p>Scope metadata is not currently leveraged in the Test Bed, and is only recorded as metadata in the test suite descriptor.</p>
+</section>
+<section id="update">
+<span id="test-suite-metadata-update"></span><span id="index-27"></span><span id="index-26"></span><span id="index-25"></span><h4>update<a class="headerlink" href="#update" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">update</span></code> element allows the test suite’s developer to prescribe what should happen when this test suite is being uploaded and
+an existing test suite with the same identifier is found. Through this you can define if the test suite’s existing metadata
+(e.g. name, description and documentation) and the existing specification actors should be updated to match the definitions from
+the new archive. Note that these choices represent the default selected options during the test suite upload, and can always be verified
+and replaced by the Test Bed’s operator.</p>
+<p>It could be interesting to use the <code class="docutils literal notranslate"><span class="pre">update</span></code> element if the test developer is not the one performing the test suite upload. Doing so,
+avoids providing detailed instruction to operations staff, by already encoding the relevant choices within the test suite archive itself.</p>
+<p>The structure of the <code class="docutils literal notranslate"><span class="pre">update</span></code> element is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;updateMetadata</p></th>
+<td><p>no</p></td>
+<td><p>A boolean value determining whether the existing test suite’s metadata should be updated based on the new archive (default is “false”).</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;updateSpecification</p></th>
+<td><p>no</p></td>
+<td><p>A boolean value determining whether the existing test suite’s actor information should be updated based on the new archive (default is “false”).</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following example shows how you can specify that the test suite’s metadata should be updated to reflect the new values in the archive
+(see attribute <code class="docutils literal notranslate"><span class="pre">updateMetadata</span></code>). Any existing definitions of actors are left unchanged (see attribute <code class="docutils literal notranslate"><span class="pre">updateSpecification</span></code>).</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testsuite</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;TS1&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>TS1<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:description&gt;</span>A<span class="w"> </span>short<span class="w"> </span>description<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>test<span class="w"> </span>suite<span class="w"> </span>to<span class="w"> </span>offer<span class="w"> </span>a<span class="w"> </span>short<span class="w"> </span>summary<span class="w"> </span>of<span class="w"> </span>its<span class="w"> </span>purpose.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="hll"><span class="w">        </span><span class="nt">&lt;gitb:update</span><span class="w"> </span><span class="na">updateMetadata=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">updateSpecification=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/testsuite&gt;</span>
+</pre></div>
+</div>
+<p>Relevant options to manage updates for existing test cases are possible through a similar <code class="docutils literal notranslate"><span class="pre">update</span></code> element of the <a class="reference internal" href="../testcase/index.html#test-case-metadata-update"><span class="std std-ref">test case</span></a> definitions.</p>
+</section>
+<section id="specification">
+<span id="test-suite-metadata-specification"></span><span id="index-31"></span><span id="index-30"></span><span id="index-29"></span><span id="index-28"></span><h4>specification<a class="headerlink" href="#specification" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">specification</span></code> element is an optional part of a test suite’s metadata, that allows you to record in a structured manner a normative specification
+reference for the test suite. Besides being present in the test suite definition, this information will also be rendered appropriately in the test suite’s
+on-screen display and in reports.</p>
+<p>The structure of the <code class="docutils literal notranslate"><span class="pre">specification</span></code> element is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>description</p></th>
+<td><p>no</p></td>
+<td><p>A text describing the referred specification.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>link</p></th>
+<td><p>no</p></td>
+<td><p>A link to allow navigation to the referred specification’s online documentation.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>reference</p></th>
+<td><p>no</p></td>
+<td><p>The reference identifier or code.</p></td>
+</tr>
+</tbody>
+</table>
+<p>All the above elements are optional, meaning that you can choose to provide any documentation you see fit for the specification. Depending on what is provided,
+this information will be displayed accordingly, presenting for example the reference as a link if both are provided, or presenting only a link icon if only the
+link is present.</p>
+<p>The following example illustrates how this metadata could be used to identify the specification section relevant to the test suite and point to its online
+documentation.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testsuite</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;TS1&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>TS1<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:description&gt;</span>A<span class="w"> </span>short<span class="w"> </span>description<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>test<span class="w"> </span>suite<span class="w"> </span>to<span class="w"> </span>offer<span class="w"> </span>a<span class="w"> </span>short<span class="w"> </span>summary<span class="w"> </span>of<span class="w"> </span>its<span class="w"> </span>purpose.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="hll"><span class="w">        </span><span class="nt">&lt;gitb:specification&gt;</span>
+</span><span class="hll"><span class="w">            </span><span class="nt">&lt;gitb:reference&gt;</span>Section-1.2.A<span class="nt">&lt;/gitb:reference&gt;</span>
+</span><span class="hll"><span class="w">            </span><span class="nt">&lt;gitb:description&gt;</span>Security<span class="w"> </span>requirements<span class="nt">&lt;/gitb:description&gt;</span>
+</span><span class="hll"><span class="w">            </span><span class="nt">&lt;gitb:link&gt;</span>https://my.spec.wiki.org<span class="nt">&lt;/gitb:link&gt;</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&lt;/gitb:specification&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/testsuite&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Similar specification reference information can also be added to individual <a class="reference internal" href="../testcase/index.html#test-case-metadata-specification"><span class="std std-ref">test cases</span></a>.</p>
+</div>
+</section>
+</section>
+<section id="actors">
+<span id="test-suite-actors"></span><span id="index-39"></span><span id="index-38"></span><span id="index-37"></span><span id="index-36"></span><span id="index-35"></span><span id="index-34"></span><span id="index-33"></span><span id="index-32"></span><h3>Actors<a class="headerlink" href="#actors" title="Link to this heading"></a></h3>
+<p>In the <code class="docutils literal notranslate"><span class="pre">actors</span></code> element we identify the actors that will be involved in the test suite’s test cases. These actors may either be ones that will be tested
+as systems under test (i.e. the focus of test cases) or be simulated by the Test Bed. At least one actor needs to be defined here. The <code class="docutils literal notranslate"><span class="pre">actors</span></code> element
+contains one or more <code class="docutils literal notranslate"><span class="pre">actor</span></code> elements with structure as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;id</p></th>
+<td><p>yes</p></td>
+<td><p>The unique identifier for the actor.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;default</p></th>
+<td><p>no</p></td>
+<td><p>Whether or not the actor is to be considered as the specification’s default actor (“false” by default).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;displayOrder</p></th>
+<td><p>no</p></td>
+<td><p>A number indicating the relative positioning that needs to be respected when displaying the actor in test execution diagrams.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;hidden</p></th>
+<td><p>no</p></td>
+<td><p>Whether or not the actor will be unavailable for use in conformance statements (“false” by default).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>desc</p></th>
+<td><p>no</p></td>
+<td><p>A description to provide additional information on the purpose of this actor in the specification.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>endpoint</p></th>
+<td><p>no</p></td>
+<td><p>Zero or more <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> elements that capture an actor’s configuration.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>name</p></th>
+<td><p>yes</p></td>
+<td><p>A user-friendly name for the actor.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The value for the <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute is very important as it is used internally to link the test suite and its test cases to the relevant actor in the specification.
+The <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">desc</span></code> elements are present as metadata when displaying a test case to a user but are not important with respect to test case steps and logic.
+The <code class="docutils literal notranslate"><span class="pre">default</span></code> attribute can be useful in cases where a specification defines multiple actors but only one is ever expected to be used as the SUT. Setting this to
+“true” indicates that this actor should be preselected when creating new conformance statements.</p>
+<p>Another means of managing the actors that are to be used in
+conformance statements is the <code class="docutils literal notranslate"><span class="pre">hidden</span></code> attribute which, if set to “true”, will remove the actor from the ones available to create a conformance statement. This
+can useful when certain actors are not meant to be selected for testing (but there is no single default actor to otherwise set), or if an actor has been in use
+but should now be deprecated. Setting an actor as <code class="docutils literal notranslate"><span class="pre">hidden</span></code> will not affect previous testing history but will make it unavailable for future conformance
+statements.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">displayOrder</span></code> attribute provides an indication on how the actor should be positioned in test execution diagrams relevant to other actors. This could be useful
+to set if you want an actor to always appear first in diagrams regardless of the TDL steps that a test case defines (e.g. to always show the SUT first). When the
+<code class="docutils literal notranslate"><span class="pre">displayOrder</span></code> attribute for an actor is smaller relevant to others, or if no <code class="docutils literal notranslate"><span class="pre">displayOrder</span></code> is specified for other actors, the actor will appear first. Note that
+this ordering applies to actors defined in the specification, not special-purpose actor lifelines that could signify the Test Bed or the user. Finally, note that any
+setting that is made for an actor at test suite level is considered as a default and can be overridden at test case level (see <a class="reference internal" href="../testcase/index.html#test-case-actors"><span class="std std-ref">Actors</span></a>).</p>
+<p>Besides defining the roles of parties in a specification, actors can also have <strong>configuration properties</strong>. The purpose of these properties is to record
+information about a system under test (SUT) that are specific to conformance statements for this actor. They are the most fine-grained level of
+configuration you can use, complementing configuration at <a class="reference internal" href="../expressions/index.html#test-case-expressions-domain"><span class="std std-ref">domain</span></a>, <a class="reference internal" href="../expressions/index.html#test-case-expressions-organisation"><span class="std std-ref">organisation</span></a>
+and <a class="reference internal" href="../expressions/index.html#test-case-expressions-system"><span class="std std-ref">system</span></a> levels. Actor-level configuration is most appropriate for information that, considering the same system,
+differs depending on the selected specification actor. An example of this would be an endpoint address for a “receiver” actor to expect incoming messages,
+that would not be needed for a “sender” actor.</p>
+<p>Similar to <a class="reference internal" href="../expressions/index.html#test-case-configuration"><span class="std std-ref">other types of configuration</span></a>, any <strong>required properties</strong> for an actor corresponding to the system under test (SUT)
+must be provided before executing tests. In addition, properties that are set to be <strong>included in tests</strong> will be added to the session’s context and made available
+for use in <a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">expressions</span></a> during test execution.</p>
+<p id="index-43"><span id="index-42"></span><span id="index-41"></span><span id="index-40"></span>Actor configuration is captured in configuration sets named “endpoints” with each one defining key-value pair configuration properties named
+“parameters”. In terms of their XML representation, an endpoint is defined using the <code class="docutils literal notranslate"><span class="pre">endpoint</span></code> element as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;desc</p></th>
+<td><p>no</p></td>
+<td><p>A description to explain the purpose of this endpoint.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;name</p></th>
+<td><p>yes</p></td>
+<td><p>The name of the endpoint that must be unique for the actor.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>config</p></th>
+<td><p>yes</p></td>
+<td><p>One or more elements to define each of the endpoint’s parameters.</p></td>
+</tr>
+</tbody>
+</table>
+<p id="index-56"><span id="index-55"></span><span id="index-54"></span><span id="index-53"></span><span id="index-52"></span><span id="index-51"></span><span id="index-50"></span><span id="index-49"></span><span id="index-48"></span><span id="index-47"></span><span id="index-46"></span><span id="index-45"></span><span id="index-44"></span>The <code class="docutils literal notranslate"><span class="pre">config</span></code> elements defining an endpoint’s parameters are structured as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;adminOnly</p></th>
+<td><p>no</p></td>
+<td><p>A boolean value (by default “false”) indicating whether this parameter can only be edited by administrators.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;allowedValues</p></th>
+<td><p>no</p></td>
+<td><p>A comma-separated list of values that are allowed for this parameter.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;allowedValueLabels</p></th>
+<td><p>no</p></td>
+<td><p>In case <code class="docutils literal notranslate"><span class="pre">allowedValues</span></code> is defined, this is a comma-separated list of labels for the provided values (their number must match the values). If not provided, the values themselves are used as labels.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;defaultValue</p></th>
+<td><p>no</p></td>
+<td><p>An optional default value to set for new instances of this parameter (ignored if parameter is not of “SIMPLE” kind).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;dependsOn</p></th>
+<td><p>no</p></td>
+<td><p>A string indicating the name of another parameter within the endpoint that is a prerequisite for the current one.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;dependsOnValue</p></th>
+<td><p>no</p></td>
+<td><p>In case <code class="docutils literal notranslate"><span class="pre">dependsOn</span></code> is defined, this is the value that the prerequisite property should have in order for the current one to be enabled.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;desc</p></th>
+<td><p>no</p></td>
+<td><p>A description to explain the purpose of this parameter.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;hidden</p></th>
+<td><p>no</p></td>
+<td><p>A boolean value (by default “false”) indicating whether this parameter can only be viewed by administrators.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;kind</p></th>
+<td><p>no</p></td>
+<td><p>Whether this is a simple text (value “SIMPLE” - the default), file (value “BINARY”) or a secret value (value “SECRET”).</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;label</p></th>
+<td><p>no</p></td>
+<td><p>A user friendly name to display for the parameter. If not set this will be set to the value of the <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;name</p></th>
+<td><p>yes</p></td>
+<td><p>The name of the parameter that must be unique for the endpoint.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;notForTests</p></th>
+<td><p>no</p></td>
+<td><p>A boolean value (by default “false”) indicating whether this parameter is included as a test session context variable.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>&#64;use</p></th>
+<td><p>no</p></td>
+<td><p>Whether this is a required (value “R” - the default) or optional (“O”) parameter.</p></td>
+</tr>
+</tbody>
+</table>
+<p>In terms of the <code class="docutils literal notranslate"><span class="pre">kind</span></code> attribute, the values “SIMPLE” and “SECRET” both represent text values. The difference is that ones
+defined as “SECRET” are never presented to users nor are they ever transferred to client software. The two attributes <code class="docutils literal notranslate"><span class="pre">adminOnly</span></code>
+and <code class="docutils literal notranslate"><span class="pre">notForTests</span></code> are used to increase the options available in defining a flexible and complete conformance testing strategy.</p>
+<p>Setting the <code class="docutils literal notranslate"><span class="pre">adminOnly</span></code> flag to “true” would typically be used for required parameters (i.e. <code class="docutils literal notranslate"><span class="pre">use</span></code> set to “R”) as
+doing so allows community or Test Bed administrators to verify and adapt a system’s setup before allowing it to
+execute tests. This could either be done as a simple eligibility check or to actually provide required information
+that is needed for the tests (e.g. a generated identifier or certificate). If a required parameter that is set as
+<code class="docutils literal notranslate"><span class="pre">adminOnly</span></code> is not configured, the system in question is prevented from executing tests. Furthermore, such a parameter
+could be also set as <code class="docutils literal notranslate"><span class="pre">hidden</span></code> meaning that it is only visible to administrators.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">notForTests</span></code> flag on the other hand would be set to “true” for information that is strictly administrative
+in nature and is not actually needed during test sessions. An example of this would be to record a flag set by administrators that, if
+missing, would prevent test sessions to be started (i.e. combined with the <code class="docutils literal notranslate"><span class="pre">adminOnly</span></code> flag as explained above).
+Otherwise such attributes could also be used to enable general data collection for testing organisations pertinent
+to specific conformance statements.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">dependsOn</span></code> attribute can be used to define prerequisites between parameters. Parameters whose prerequisites are not met are
+considered as disabled. Consider for example a parameter named “size” that can set with values “large” or “small”. In case “large”
+is selected, a second parameter named “capacity” becomes applicable. These two concepts (providing a set of expected values and
+defining prerequisites) can be achieved as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;system&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:name&gt;</span>System<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:endpoint</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;systemInfo&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Define the allowed values and provide user-friendly labels. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:config</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;size&quot;</span><span class="w"> </span><span class="na">label=</span><span class="s">&quot;Size&quot;</span><span class="w"> </span><span class="na">kind=</span><span class="s">&quot;SIMPLE&quot;</span><span class="w"> </span><span class="na">use=</span><span class="s">&quot;R&quot;</span><span class="w"> </span><span class="na">allowedValues=</span><span class="s">&quot;l,s&quot;</span><span class="w"> </span><span class="na">allowedValueLabels=</span><span class="s">&quot;Large,Small&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Enable this parameter if &quot;size&quot; is set as &quot;l&quot;. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:config</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;capacity&quot;</span><span class="w"> </span><span class="na">label=</span><span class="s">&quot;Capacity&quot;</span><span class="w"> </span><span class="na">kind=</span><span class="s">&quot;SIMPLE&quot;</span><span class="w"> </span><span class="na">use=</span><span class="s">&quot;R&quot;</span><span class="w"> </span><span class="na">dependsOn=</span><span class="s">&quot;size&quot;</span><span class="w"> </span><span class="na">dependsOnValue=</span><span class="s">&quot;l&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/gitb:endpoint&gt;</span>
+<span class="nt">&lt;/gitb:actor&gt;</span>
+</pre></div>
+</div>
+<p>Note that a parameter whose prerequisite condition is not met is considered as inactive, even if set as required (i.e. <code class="docutils literal notranslate"><span class="pre">use=&quot;R&quot;</span></code>).
+Such inactive parameters are not requested as input and are not included in test sessions as variables. Prerequisites can
+also be chained, meaning that parameter A can depend on B that can depend on C. Even if a parameter’s direct prerequisite is met,
+it will still be considered as inactive if any prerequisites further up in its hierarchy are not.</p>
+<p>Endpoints and their parameters are used in two main scenarios:</p>
+<ul class="simple">
+<li><p>As simple sets of configuration values.</p></li>
+<li><p>As placeholders for SUT actors to hold simulated actor configuration (provided via their messaging handlers).</p></li>
+</ul>
+<p>These two scenarios are explained in the following sections.</p>
+<section id="endpoints-for-simple-configuration-values">
+<span id="index-57"></span><h4>Endpoints for simple configuration values<a class="headerlink" href="#endpoints-for-simple-configuration-values" title="Link to this heading"></a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also define configuration at <a class="reference internal" href="../expressions/index.html#test-case-expressions-domain"><span class="std std-ref">domain</span></a>, <a class="reference internal" href="../expressions/index.html#test-case-expressions-organisation"><span class="std std-ref">organisation</span></a>
+and <a class="reference internal" href="../expressions/index.html#test-case-expressions-system"><span class="std std-ref">system</span></a> levels. Actor configuration is best suited for information that differs across actors (conformance statements).</p>
+</div>
+<p>For the most part you will be using endpoints to simply have users configure one or more parameters for an actor that
+you can then use in a test case. An example of this would be a “person” actor defined with required “firstName” and “lastName” properties:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;person&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:name&gt;</span>person<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:endpoint</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;personInfo&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:config</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;firstName&quot;</span><span class="w"> </span><span class="na">kind=</span><span class="s">&quot;SIMPLE&quot;</span><span class="w"> </span><span class="na">use=</span><span class="s">&quot;R&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:config</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lastName&quot;</span><span class="w"> </span><span class="na">kind=</span><span class="s">&quot;SIMPLE&quot;</span><span class="w"> </span><span class="na">use=</span><span class="s">&quot;R&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/gitb:endpoint&gt;</span>
+<span class="nt">&lt;/gitb:actor&gt;</span>
+</pre></div>
+</div>
+<p>This means that before running a test case that has the “person” actor with role SUT, the values for “firstName” and “lastName” would
+have to be provided. With these values in place, the test case could then refer to them using the expressions
+<code class="docutils literal notranslate"><span class="pre">$person{firstName}</span></code> and <code class="docutils literal notranslate"><span class="pre">$person{lastName}</span></code>. As you see, in this scenario the actual name of the endpoint (“personInfo” in this case)
+never actually figures when referencing the values. Given this you might wonder why the endpoint name is important to provide. The answer is to
+cover the more complex scenario discussed next.</p>
+</section>
+<section id="endpoints-for-dynamic-configuration-values">
+<span id="test-suite-actors-endpoints-simulated"></span><span id="index-58"></span><h4>Endpoints for dynamic configuration values<a class="headerlink" href="#endpoints-for-dynamic-configuration-values" title="Link to this heading"></a></h4>
+<p>The endpoint concept becomes more meaningful when certain configuration values need to be generated at runtime, and specifically before the test session begins.
+An example of this is generating a unique endpoint address for a simulated “receiver” actor, that will be used by the “sender” actor as the SUT.
+This takes place as part of the setup of <a class="reference internal" href="../constructs/index.html#tdl-messaging-steps"><span class="std std-ref">messaging exchanges</span></a> when using a <a class="reference internal" href="../handlers/index.html#handlers-custom-handlers"><span class="std std-ref">custom messaging handler</span></a>.</p>
+<p>Before a test session starts, custom messaging services receive an <strong>initiate</strong> call for the simulated actors they cover. This call includes the actors’
+predefined configuration values, as well as those configured for the SUT. The messaging handler now has the opportunity to return a set of values per
+simulated actor that can differ based on the received inputs. These different sets of configuration are mapped on the basis of their <code class="docutils literal notranslate"><span class="pre">endpoint</span></code>.</p>
+<p>To better illustrate this, consider a sender and receiver example, defined in a test suite as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;sender&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:name&gt;</span>sender<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:endpoint</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;expectedConfig&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/gitb:actor&gt;</span>
+<span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;receiver&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:name&gt;</span>sender<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="nt">&lt;/gitb:actor&gt;</span>
+</pre></div>
+</div>
+<p>These actors can then be used in a test case by defining “sender” as the SUT and “receiver” as simulated.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;actors&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;sender&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sender&quot;</span><span class="w"> </span><span class="na">role=</span><span class="s">&quot;SUT&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;receiver&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;receiver&quot;</span><span class="w"> </span><span class="na">role=</span><span class="s">&quot;SIMULATED&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/actors&gt;</span>
+<span class="nt">&lt;steps&gt;</span>
+<span class="w">    </span><span class="nt">&lt;btxn</span><span class="w"> </span><span class="na">from=</span><span class="s">&quot;sender&quot;</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;receiver&quot;</span><span class="w"> </span><span class="na">txnId=</span><span class="s">&quot;t1&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;$DOMAIN{messagingServiceAddress}&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;send</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Call receiver&quot;</span><span class="w"> </span><span class="na">from=</span><span class="s">&quot;sender&quot;</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;receiver&quot;</span><span class="w"> </span><span class="na">txnId=</span><span class="s">&quot;t1&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;anInputValue&quot;</span><span class="nt">&gt;</span>$sender{receiver}{configuredValue}<span class="nt">&lt;/input&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/send&gt;</span>
+<span class="w">    </span><span class="nt">&lt;etxn</span><span class="w"> </span><span class="na">txnId=</span><span class="s">&quot;t1&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/steps&gt;</span>
+</pre></div>
+</div>
+<p>The key point to note is the reference to the “configuredValue” parameter in <code class="docutils literal notranslate"><span class="pre">$sender{receiver}{configuredValue}</span></code>. To be able to do this the following has happened:</p>
+<ol class="arabic simple">
+<li><p>The sender SUT actor defined an endpoint named “expectedConfig”.</p></li>
+<li><p>The receiver simulated actor, due to its presence in a messaging transaction (see the <code class="docutils literal notranslate"><span class="pre">btxn</span></code> element), was included in the <code class="docutils literal notranslate"><span class="pre">initiate</span></code> call to
+the messaging service listening at <code class="docutils literal notranslate"><span class="pre">$DOMAIN{messagingServiceAddress}</span></code>.</p></li>
+<li><p>The service responded by providing a configuration for endpoint “expectedConfig” with a parameter named “configuredValue”.</p></li>
+<li><p>The returned configuration was matched to the sender’s “expectedConfig” endpoint and copied under the sender actor for this endpoint.</p></li>
+<li><p>The returned parameter can now be referenced as <code class="docutils literal notranslate"><span class="pre">$sender{receiver}{configuredValue}</span></code> (i.e. <code class="docutils literal notranslate"><span class="pre">$SUT_ACTOR_ID{SIMULATED_ACTOR_ID}{PARAMETER_NAME}</span></code>).</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>GITB software support:</strong> Only a single endpoint can currently be configured for an actor. Additional endpoints will be recorded for the actor but will be
+ignored during test execution.</p>
+</div>
+</section>
+</section>
+<section id="test-case-groups">
+<span id="test-suite-groups"></span><span id="index-63"></span><span id="index-62"></span><span id="index-61"></span><span id="index-60"></span><span id="index-59"></span><h3>Test case groups<a class="headerlink" href="#test-case-groups" title="Link to this heading"></a></h3>
+<p>Test case groups allow defining a set of test cases, of which only a single successful result is needed to consider the entire group
+as successful. In such a case, any failures or incomplete test cases are ignored for the overall conformance status. The group is considered
+to be failed if there is at least one failure and no successful tests. Note that in terms of display and execution sequence, all test cases
+in a group are considered sequentially.</p>
+<p>To use test case groups two steps are needed:</p>
+<ul class="simple">
+<li><p>Define the groups as part of the test suite using the <code class="docutils literal notranslate"><span class="pre">groups</span></code> element.</p></li>
+<li><p>Reference the groups when listing test cases using the <code class="docutils literal notranslate"><span class="pre">testcase</span></code> element(s).</p></li>
+</ul>
+<p>The optional <code class="docutils literal notranslate"><span class="pre">groups</span></code> element, used to define the groups you will refer to, contains one or more <code class="docutils literal notranslate"><span class="pre">group</span></code> elements for each of the
+test case groups. The structure of each <code class="docutils literal notranslate"><span class="pre">group</span></code> is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;id</p></th>
+<td><p>yes</p></td>
+<td><p>The ID of the group. This must be unique and is used to refer to the group from its test cases (see <a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test cases</span></a>).</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>desc</p></th>
+<td><p>no</p></td>
+<td><p>A description for the group that will be presented as additional information when viewing the group’s details.</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>name</p></th>
+<td><p>no</p></td>
+<td><p>A short name for the group to be presented as a label when listing the group’s test cases.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following example shows the definition of three groups, the first one with only an identifier, the second one with a name, and the third one with a
+name and a description. These groups are then referred to by their respective test cases.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;testsuite</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;invoiceValidation&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span>...
+<span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="w">    </span><span class="nt">&lt;actors&gt;</span>
+<span class="w">        </span>...
+<span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groups&gt;</span>
+<span class="w">        </span><span class="nt">&lt;group</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;group1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;group</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;group2&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;name&gt;</span>Security<span class="w"> </span>tests<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/group&gt;</span>
+<span class="w">        </span><span class="nt">&lt;group</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;group3&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;name&gt;</span>Connection<span class="w"> </span>options<span class="nt">&lt;/name&gt;</span>
+<span class="w">            </span><span class="nt">&lt;desc&gt;</span>Test<span class="w"> </span>cases<span class="w"> </span>covering<span class="w"> </span>alternative<span class="w"> </span>connection<span class="w"> </span>options<span class="nt">&lt;/desc&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/group&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/groups&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase1a&quot;</span><span class="w"> </span><span class="na">group=</span><span class="s">&quot;group1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase1b&quot;</span><span class="w"> </span><span class="na">group=</span><span class="s">&quot;group1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase1c&quot;</span><span class="w"> </span><span class="na">group=</span><span class="s">&quot;group1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase3a&quot;</span><span class="w"> </span><span class="na">group=</span><span class="s">&quot;group2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase3b&quot;</span><span class="w"> </span><span class="na">group=</span><span class="s">&quot;group2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase2&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase4a&quot;</span><span class="w"> </span><span class="na">group=</span><span class="s">&quot;group3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase4b&quot;</span><span class="w"> </span><span class="na">group=</span><span class="s">&quot;group3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase4c&quot;</span><span class="w"> </span><span class="na">group=</span><span class="s">&quot;group3&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase5&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase6&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/testsuite&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="test-cases">
+<span id="test-suite-test-cases"></span><span id="index-69"></span><span id="index-68"></span><span id="index-67"></span><span id="index-66"></span><span id="index-65"></span><span id="index-64"></span><h3>Test cases<a class="headerlink" href="#test-cases" title="Link to this heading"></a></h3>
+<p>This section is used to reference the test cases contained in the test suite. One or more test case entries must be defined using the
+<code class="docutils literal notranslate"><span class="pre">testcase</span></code> element whose structure is as follows:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Name</p></th>
+<th class="head"><p>Required?</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>&#64;group</p></th>
+<td><p>no</p></td>
+<td><p>The ID of the group to which this test case belongs (see <a class="reference internal" href="#test-suite-groups"><span class="std std-ref">Test case groups</span></a>).</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>&#64;id</p></th>
+<td><p>yes</p></td>
+<td><p>The ID of the test case. This needs to match one defined in the test case’s XML file (see <a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test cases</span></a>).</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>option</p></th>
+<td><p>no</p></td>
+<td><p>Zero or more elements each defining as text content string values that match an option defined for the actor in the specification.</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>prequisite</p></th>
+<td><p>no</p></td>
+<td><p>Zero or more elements each defining as text content a test case ID that should be considered as a prerequisite before running this one.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The order with which the test case entries are defined is important as it defines their <strong>execution order</strong>. This ordering would apply when multiple test
+cases are selected for execution at once, which typically occurs when launching a complete test suite as opposed to an individual test case. Executing a
+complete test suite can be done in two ways:</p>
+<ul class="simple">
+<li><p><strong>Interactively</strong>, by presenting to the tester all test cases and launching each one in sequence while interacting with the tester and updating
+the test session diagram and log.</p></li>
+<li><p><strong>In the background</strong>, by launching all test cases as a batch, allowing also the tester to choose whether tests are executed in parallel or in
+sequence. Note that test cases that do not <a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">support parallel execution</span></a> can be configured as such so that they are always executed
+in isolation (for a given SUT).</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>GITB software support:</strong> The <code class="docutils literal notranslate"><span class="pre">prequisite</span></code> and <code class="docutils literal notranslate"><span class="pre">option</span></code> values are currently ignored.</p>
+</div>
+</section>
+</section>
+<section id="test-suite-organisation-and-deployment">
+<span id="test-suite-deploying"></span><h2>Test suite organisation and deployment<a class="headerlink" href="#test-suite-organisation-and-deployment" title="Link to this heading"></a></h2>
+<p>A test suite is packaged as a <strong>compressed ZIP archive</strong> that contains:</p>
+<ul class="simple">
+<li><p>A single test suite file defining common information and test cases.</p></li>
+<li><p>One or more <a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">test case files</span></a> for the scenarios to cover (unless this is a <a class="reference internal" href="#test-suite-sharing-empty"><span class="std std-ref">shared resource holder</span></a>).</p></li>
+<li><p>Zero or more <a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">scriptlet files</span></a> with common testing blocks reused across test cases.</p></li>
+<li><p>Any number of arbitrary files used as resources within test cases.</p></li>
+<li><p>Documentation files referred to by the test suite, test cases and test steps.</p></li>
+</ul>
+<p>The names of the archive, the test suite and the test case files are not important, neither is the archive’s folder structure.
+Nonetheless, the following structure represents a <strong>best practice</strong> that achieves clarity and good organisation:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;archive root&gt;
+├── docs
+│   └── &lt;HTML files containing documentation for the test suite and its test cases&gt;
+├── resources
+│   └── &lt;Arbitrary files (nested as you please) used as imports in test cases and scriptlets&gt;
+├── scriptlets
+│   └── &lt;Scriptlet files (reusable test step blocks) to use across test cases&gt;
+├── testCases
+│   └── &lt;Test case files&gt;
+└── testSuite.xml
+</pre></div>
+</div>
+<p>Notice how the archive <strong>does not include a top-level folder</strong>. Considering that resource references are relative to the
+archive root, having a root folder would repeat in all path references. In terms of file naming the advised approach is to use
+<strong>Camel Case</strong> (e.g. “testCase1.xml” as opposed to “test-case-1.xml” or “test_case_1.xml”), at least for the files under
+your control (as opposed to e.g. sets of schema files that you copy into the test suite).</p>
+<p>When the test suite is deployed to GITB Test Bed software is will be validated in depth to ensure its overall correctness.
+Deploying a test suite can be achieved in two ways:</p>
+<ul class="simple">
+<li><p>Using the <a class="reference external" href="https://www.itb.ec.europa.eu/docs/itb-ta/latest/domainDashboard/index.html#upload-test-suite">user interface</a>.</p></li>
+<li><p>Using the <a class="reference external" href="https://www.itb.ec.europa.eu/docs/itb-ta/latest/api/index.html#deploy">REST API</a> (if enabled).</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Deploying test suites during development:</strong> When deploying test suites to a development Test Bed instance, the fastest way
+is to use the Test Bed’s <a class="reference external" href="https://www.itb.ec.europa.eu/docs/itb-ta/latest/api/index.html#deploy">REST API</a>. You can find
+instructions <a class="reference external" href="https://www.itb.ec.europa.eu/docs/guides/latest/developingComplexTests/index.html#step-3-prepare-your-workspace">here</a>
+on enabling the API and creating a script to automate its use.</p>
+</div>
+<p>Deploying a test suite has the following results:</p>
+<ul class="simple">
+<li><p>If it doesn’t previously exist, the test suite is recorded along with its test cases and linked to the appropriate specification actors.</p></li>
+<li><p>If the test suite does exist, the user selects whether this new version should invalidate previous conformance testing sessions (if the
+change is significant) or not. Choosing to replace the test suite results in the test suite being updated and its test cases being replaced
+with the ones contained in the new version. Matching of the test suite with an existing one is on the basis of their ID within the specification.</p></li>
+<li><p>The actors that are defined in the test suite are created if they don’t already exist along with their endpoints and endpoint parameters.</p></li>
+<li><p>If the user chooses to, actors that already exist in the specification are updated based on the latest provided information. In this case new endpoints and parameters are added
+and existing ones are updated. Note that actors, endpoints and parameters that are not defined in the new test suite are not removed. The matching of
+actors is on the basis of their ID, whereas for endpoints and parameters their name is used.</p></li>
+<li><p>If the test suite does not include any test cases it is marked as hidden (See <a class="reference internal" href="#test-suite-sharing-empty"><span class="std std-ref">Test suites as shared resource holders</span></a>).</p></li>
+</ul>
+<p>As previously discussed, the <a class="reference internal" href="#test-suite-actors"><span class="std std-ref">Actors</span></a> section serves to define which actors are used within the test suite and to provide their details (their name, endpoints
+and endpoint parameters). An alternative approach to avoid defining the complete actor details in the test suite is to simply refer to the actors used
+in its test cases without providing their information. Referring to actors is on the basis of their ID and referred actors are assumed and required to be present in the
+target specification (resulting in an upload error otherwise).</p>
+<p>The following example shows a test suite in which a “User” actor is referred to.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;testsuite</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;UBL_invoice_validation&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><span class="w"> </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/ ../gitb_tdl.xsd&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>UBL_invoice_validation<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:version&gt;</span>0.2<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="hll"><span class="w">    </span><span class="nt">&lt;actors&gt;</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;User&quot;</span><span class="nt">/&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;UBL_invoice_validation_test_1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;UBL_invoice_validation_test_2&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/testsuite&gt;</span>
+</pre></div>
+</div>
+<p>Specifying a test suite’s actors in this way could be interesting if you want to manage their information fully through the GITB software’s
+user interface. The only thing to ensure is that the specification’s actors are already defined before uploading test suites and that their
+IDs are correctly referenced.</p>
+</section>
+<section id="sharing-resources-across-test-suites">
+<span id="test-suite-sharing"></span><h2>Sharing resources across test suites<a class="headerlink" href="#sharing-resources-across-test-suites" title="Link to this heading"></a></h2>
+<p>Test suites, and in particular the <a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">test cases</span></a> they include, may rely on additional file resources for
+their documentation and test content. Such files may be made available to test suites in one of two ways:</p>
+<ul class="simple">
+<li><p>As binary <a class="reference internal" href="../expressions/index.html#test-case-configuration"><span class="std std-ref">external configuration properties</span></a></p></li>
+<li><p>As files included in test suite archives.</p></li>
+</ul>
+<p>When provided through configuration properties, files will be available in the test sessions’ context from which they
+can be used as <code class="docutils literal notranslate"><span class="pre">binary</span></code> variables. Although this approach is flexible, it does not cover all cases, cannot support
+large files, and is not well adapted for resources with dependencies (e.g. an XML schema with imports). The approach of
+providing files within test suite archives is an effective way of addressing such limitations.</p>
+<p>The files included within test suites, apart from the test suite and test case definition files, can be:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">Scriptlets</span></a>, XML files containing blocks of test steps to be used across multiple test cases.</p></li>
+<li><p>Arbitrary files used as imports in <a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">test cases</span></a> and <a class="reference internal" href="../scriptlets/index.html#scriptlets-elements-imports"><span class="std std-ref">scriptlets</span></a>.</p></li>
+<li><p>Documentation files, containing HTML content that is used to provide extended documentation for <a class="reference internal" href="#test-suite-metadata"><span class="std std-ref">test suites</span></a>,
+<a class="reference internal" href="../testcase/index.html#test-case-metadata"><span class="std std-ref">test cases</span></a>, and individual <a class="reference internal" href="../constructs/index.html#tdl-steps-common-documentation"><span class="std std-ref">test steps</span></a>.</p></li>
+</ul>
+<p>Once such files are included in a test suite they can be used within itself but also shared with other test suites. The
+approach to share files uses the test suites’ <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute to identify the test suite from which a resource will be
+loaded. The constructs that support this all foresee a <code class="docutils literal notranslate"><span class="pre">from</span></code> attribute that is set with the target test suite <code class="docutils literal notranslate"><span class="pre">id</span></code>,
+defaulting to the current test suite if missing. Specifically:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">call</span></code> step to <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call a scriptlet</span></a>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">artifact</span></code> element of a test case or scriptlet’s <a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">imports</span></a> block.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">documentation</span></code> element for <a class="reference internal" href="#test-suite-metadata"><span class="std std-ref">test suites</span></a>, <a class="reference internal" href="../testcase/index.html#test-case-metadata"><span class="std std-ref">test cases</span></a> and
+<a class="reference internal" href="../constructs/index.html#tdl-steps-common-documentation"><span class="std std-ref">test steps</span></a>.</p></li>
+</ul>
+<p>The approach to lookup a test suite using the identifier specified in the <code class="docutils literal notranslate"><span class="pre">from</span></code> attribute is as follows:</p>
+<ol class="arabic simple">
+<li><p>Look for the test suite in the same <strong>specification</strong>.</p></li>
+<li><p>If not found, look for the test suite in the other specifications of the <strong>domain</strong>.
+If across specifications multiple matching test suites are found, one of them will be arbitrarily picked. To avoid such
+a scenario it is obvious that you should ensure test suites used to load shared resources can be uniquely identified.</p></li>
+</ol>
+<p>Once the target test suite has been located, the specific file is loaded using a file path relative to the test suite’s
+root. The approach to provide this path depends on the test construct in question:</p>
+<ul class="simple">
+<li><p>For <code class="docutils literal notranslate"><span class="pre">call</span></code> steps this is the value of the <code class="docutils literal notranslate"><span class="pre">path</span></code> attribute.</p></li>
+<li><p>For <code class="docutils literal notranslate"><span class="pre">artifact</span></code> import elements this is the element’s value.</p></li>
+<li><p>For <code class="docutils literal notranslate"><span class="pre">documentation</span></code> elements this is the value of the <code class="docutils literal notranslate"><span class="pre">import</span></code> attribute.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Resources with dependencies:</strong> When resources such as XML schemas and Schematrons are imported from other test suites,
+resolution of dependent files (e.g. imported schemas) is carried out as expected based on the loaded file’s location.</p>
+</div>
+<section id="test-suites-as-shared-resource-holders">
+<span id="test-suite-sharing-empty"></span><h3>Test suites as shared resource holders<a class="headerlink" href="#test-suites-as-shared-resource-holders" title="Link to this heading"></a></h3>
+<p>It is also possible to define a test suite as a pure resource holder for commonly used files (scriptlets, imports and
+documentation). Such test suites can omit the definition of <a class="reference internal" href="#test-suite-actors"><span class="std std-ref">actors</span></a> and
+<a class="reference internal" href="#test-suite-test-cases"><span class="std std-ref">test cases</span></a>, including only a <a class="reference internal" href="#test-suite-metadata"><span class="std std-ref">metadata</span></a> block to provide, at least,
+the test suite’s name and version.</p>
+<p>Test suites that do not include test cases are considered as <strong>hidden</strong> in the GITB software and are not visible to testers.
+They are visible to administrators for their management and can only be used by other test suites to load common resources.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../helloWorld/index.html" class="btn btn-neutral float-left" title="Hello world" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../testcase/index.html" class="btn btn-neutral float-right" title="Test cases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, European Commission, DIGIT.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

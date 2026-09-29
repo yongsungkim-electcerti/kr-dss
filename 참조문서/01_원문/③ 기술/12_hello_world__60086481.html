@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello world &mdash; GITB TDL Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.css" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d4340937"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Test suites" href="../testsuite/index.html" />
+    <link rel="prev" title="Introduction" href="../introduction/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GITB TDL Documentation
+              <img src="../_static/logo_itb.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                GITB TDL version 1.30.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hello world</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-hello-world-test-case">The hello world test case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-test-suite-definition">The test suite definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#packaging-the-test-suite">Packaging the test suite</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../testsuite/index.html">Test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testcase/index.html">Test cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptlets/index.html">Scriptlets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/index.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../expressions/index.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constructs/index.html">Test steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handlers/index.html">Test step handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Example test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Release history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GITB TDL Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Hello world</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hello-world">
+<span id="helloworld"></span><h1>Hello world<a class="headerlink" href="#hello-world" title="Link to this heading"></a></h1>
+<p>The first step in understanding a new language or framework is typically going through a simple <strong>hello world</strong> example. This
+remains as simple as possible while still being valid and showcasing some fundamental concepts in action.</p>
+<p>In the GITD TDL, you express the scenarios to test as <a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">test cases</span></a>, with each one defining the steps to
+execute. These <a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">test steps</span></a> can vary greatly from one test case to another, ranging from user interactions,
+to message exchanges between systems, with verifications along the way to check that each step is successfully passed.</p>
+<p>To allow test cases to be executed, they are bundled in a <strong>test suite archive</strong>, a ZIP archive basically, which
+includes also a <a class="reference internal" href="../testsuite/index.html#test-suite"><span class="std std-ref">test suite</span></a> definition. Besides things like names and descriptions, this test suite
+also lists the contained test cases as well as the specification actors (consider them as roles) that are considered.</p>
+<p>In the sections that follow we will consider a <strong>GITB TDL hello world example</strong>, by going over its <a class="reference internal" href="#helloworld-testcase"><span class="std std-ref">test case</span></a>,
+<a class="reference internal" href="#helloworld-testsuite"><span class="std std-ref">test suite</span></a>, and <a class="reference internal" href="#helloworld-packaging"><span class="std std-ref">packaging</span></a> before running on the Test Bed.</p>
+<section id="the-hello-world-test-case">
+<span id="helloworld-testcase"></span><h2>The hello world test case<a class="headerlink" href="#the-hello-world-test-case" title="Link to this heading"></a></h2>
+<p>Our hello world test will ask the user for her name and then use it to display a greeting.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase1&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>1:<span class="w"> </span>Hello<span class="w"> </span>world<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:description&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>that<span class="w"> </span>asks<span class="w"> </span>for<span class="w"> </span>the<span class="w"> </span>user&#39;s<span class="w"> </span>name<span class="w"> </span>and<span class="w"> </span>responds<span class="w"> </span>by<span class="w"> </span>saying<span class="w"> </span>hello.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="w">    </span><span class="nt">&lt;actors&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Define which test suite actor is the System Under Test (SUT). --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;User&quot;</span><span class="w"> </span><span class="na">role=</span><span class="s">&quot;SUT&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Present a popup requesting the user&#39;s name as a required input. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;interact</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;input&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Tell me your name&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;request</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;What&#39;s your name?&quot;</span><span class="w"> </span><span class="na">required=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/interact&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Present a second popup (but hide it on the test execution diagram) to respond. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;interact</span><span class="w"> </span><span class="na">hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- Construct the greeting message based on the user&#39;s input. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Greeting&quot;</span><span class="nt">&gt;</span>&quot;Hello<span class="w"> </span>&quot;<span class="w"> </span>||<span class="w"> </span>$input{name}<span class="w"> </span>||<span class="w"> </span>&quot;!&quot;<span class="nt">&lt;/instruct&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/interact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Show a user-friendly message once the test session completes successfully. --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;output&gt;</span>
+<span class="w">        </span><span class="nt">&lt;success&gt;</span>
+<span class="w">            </span><span class="nt">&lt;default&gt;</span>&quot;Test<span class="w"> </span>session<span class="w"> </span>completed<span class="w"> </span>successfully.&quot;<span class="nt">&lt;/default&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/success&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/output&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>Let’s break this down to understand each part. The first point to cover is the test case <strong>root element</strong>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase1&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>This defines the namespaces needed for the GITB TDL, but more interestingly the <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute with the test case’s
+identifier. This will be used in the <a class="reference internal" href="#helloworld-testsuite"><span class="std std-ref">test suite</span></a> to include the test case. Next up is
+the <code class="docutils literal notranslate"><span class="pre">metadata</span></code> section:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:name&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>1:<span class="w"> </span>Hello<span class="w"> </span>world<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:description&gt;</span>Test<span class="w"> </span>case<span class="w"> </span>that<span class="w"> </span>asks<span class="w"> </span>for<span class="w"> </span>the<span class="w"> </span>user&#39;s<span class="w"> </span>name<span class="w"> </span>and<span class="w"> </span>responds<span class="w"> </span>by<span class="w"> </span>saying<span class="w"> </span>hello.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="nt">&lt;/metadata&gt;</span>
+</pre></div>
+</div>
+<p>This section does not affect the test’s execution but defines a name, version number and description that will be used when presenting
+the test case. Following this is the <code class="docutils literal notranslate"><span class="pre">actors</span></code> element:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;actors&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Define which test suite actor is the System Under Test (SUT). --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;User&quot;</span><span class="w"> </span><span class="na">role=</span><span class="s">&quot;SUT&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/actors&gt;</span>
+</pre></div>
+</div>
+<p>Every test case needs this element to at least reference one actor (to be defined in the <a class="reference internal" href="#helloworld-testsuite"><span class="std std-ref">test suite</span></a>),
+as the <code class="docutils literal notranslate"><span class="pre">SUT</span></code> (System Under Test). When testing on the Test Bed you are doing so to prove you pass the tests for a given
+specification actor. The Test Bed identifies these tests by collecting the test cases referring to the actor as their <code class="docutils literal notranslate"><span class="pre">SUT</span></code>.</p>
+<p>The following <code class="docutils literal notranslate"><span class="pre">steps</span></code> element is the core of the test case. It lists test steps as child elements, specifying the actions to take place.
+In our case these are two <a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact steps</span></a> for user interactions:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;steps&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Present a popup requesting the user&#39;s name as a required input. --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;interact</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;input&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Tell me your name&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;request</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;What&#39;s your name?&quot;</span><span class="w"> </span><span class="na">required=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/interact&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Present a second popup (but hide it on the test execution diagram) to respond. --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;interact</span><span class="w"> </span><span class="na">hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Construct the greeting message based on the user&#39;s input. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Greeting&quot;</span><span class="nt">&gt;</span>&quot;Hello<span class="w"> </span>&quot;<span class="w"> </span>||<span class="w"> </span>$input{name}<span class="w"> </span>||<span class="w"> </span>&quot;!&quot;<span class="nt">&lt;/instruct&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/interact&gt;</span>
+<span class="nt">&lt;/steps&gt;</span>
+</pre></div>
+</div>
+<p>The first <code class="docutils literal notranslate"><span class="pre">interact</span></code> step shows a popup to the user asking her to provide her name (a required input). Once completed
+and the name is provided, the second <code class="docutils literal notranslate"><span class="pre">interact</span></code> step is used to display another popup with a greeting message
+based on the provided name. Notice in this second case how we set the step as <code class="docutils literal notranslate"><span class="pre">hidden</span></code> to not display it on the
+execution diagram. In addition, the greeting message is built as an <a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">expression</span></a>, using string
+concatenation.</p>
+<p>The final <code class="docutils literal notranslate"><span class="pre">output</span></code> element is used to present a user-friendly message once the test completes:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;output&gt;</span>
+<span class="w">    </span><span class="nt">&lt;success&gt;</span>
+<span class="w">        </span><span class="nt">&lt;default&gt;</span>&quot;Test<span class="w"> </span>session<span class="w"> </span>completed<span class="w"> </span>successfully.&quot;<span class="nt">&lt;/default&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/success&gt;</span>
+<span class="nt">&lt;/output&gt;</span>
+</pre></div>
+</div>
+<p>This section runs after the test session has completed. It is not strictly required but in practice all test cases should include
+such a section with user-friendly success and failure messages as an overview of the result.</p>
+</section>
+<section id="the-test-suite-definition">
+<span id="helloworld-testsuite"></span><h2>The test suite definition<a class="headerlink" href="#the-test-suite-definition" title="Link to this heading"></a></h2>
+<p>To make test cases available to the Test Bed they must be wrapped as a <strong>test suite</strong>. A test suite descriptor is needed for this
+which in our case will be defined as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;testsuite</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;helloWorld&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>Hello<span class="w"> </span>world<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:description&gt;</span>Example<span class="w"> </span>acting<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>hello<span class="w"> </span>world<span class="w"> </span>for<span class="w"> </span>the<span class="w"> </span>GITB<span class="w"> </span>TDL.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/metadata&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
+<span class="cm">        Define the actors involved in the test suite. The test cases referencing an actor with the role of SUT (System Under Test)</span>
+<span class="cm">        must be passed to complete conformance testing.</span>
+
+<span class="cm">        Depending on options selected during the test suite&#39;s upload, the actor definitions will be created or updated in the target specification.</span>
+<span class="cm">    --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;actors&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;User&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;gitb:name&gt;</span>User<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">            </span><span class="nt">&lt;gitb:desc&gt;</span>The<span class="w"> </span>user<span class="w"> </span>that<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>requested<span class="w"> </span>to<span class="w"> </span>perform<span class="w"> </span>tasks<span class="w"> </span>during<span class="w"> </span>tests.<span class="nt">&lt;/gitb:desc&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/gitb:actor&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
+<span class="cm">        The list of included test cases (referenced by ID). The ordering of the test cases here defines their execution</span>
+<span class="cm">        order when running the test suite.</span>
+<span class="cm">    --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase1&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/testsuite&gt;</span>
+</pre></div>
+</div>
+<p>The test suite’s <strong>root element</strong> serves a similar purpose as the one of the test case:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testsuite</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;helloWorld&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.gitb.com/tdl/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:gitb=</span><span class="s">&quot;http://www.gitb.com/core/v1/&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/testsuite&gt;</span>
+</pre></div>
+</div>
+<p>The element specifies the namespaces we need, as well as the <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute with the test suite’s identifier. The identifier serves
+to uniquely identify the test suite in the Test Bed, and is used to match an existing test suite when making an update. Next is the
+<code class="docutils literal notranslate"><span class="pre">metadata</span></code> element that is defined as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;metadata&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:name&gt;</span>Hello<span class="w"> </span>world<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:description&gt;</span>Example<span class="w"> </span>acting<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>hello<span class="w"> </span>world<span class="w"> </span>for<span class="w"> </span>the<span class="w"> </span>GITB<span class="w"> </span>TDL.<span class="nt">&lt;/gitb:description&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:version&gt;</span>1.0<span class="nt">&lt;/gitb:version&gt;</span>
+<span class="nt">&lt;/metadata&gt;</span>
+</pre></div>
+</div>
+<p>As in the similarly named test case element, this is used to specify a name, description and version that are used when presenting the
+test suite in the Test Bed. Next up is the <code class="docutils literal notranslate"><span class="pre">actors</span></code> element:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;actors&gt;</span>
+<span class="w">    </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;User&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:name&gt;</span>User<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:desc&gt;</span>The<span class="w"> </span>user<span class="w"> </span>that<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>requested<span class="w"> </span>to<span class="w"> </span>perform<span class="w"> </span>tasks<span class="w"> </span>during<span class="w"> </span>tests.<span class="nt">&lt;/gitb:desc&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/gitb:actor&gt;</span>
+<span class="nt">&lt;/actors&gt;</span>
+</pre></div>
+</div>
+<p>This element is needed to define the specification actors referenced by the test suite’s test cases. Besides the <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute
+used by test cases to refer to actors, each actor defines its name and description used for presentation on the Test Bed. The
+final point to cover is the <code class="docutils literal notranslate"><span class="pre">testcase</span></code> element:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;testCase1&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>This is used to refer to our test case, based on the test case’s <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute, so that it is included in the test suite.
+Although in our case we have a single <code class="docutils literal notranslate"><span class="pre">testcase</span></code> element, this is in fact <strong>repeated</strong> for as many different test cases we want
+to include.</p>
+</section>
+<section id="packaging-the-test-suite">
+<span id="helloworld-packaging"></span><h2>Packaging the test suite<a class="headerlink" href="#packaging-the-test-suite" title="Link to this heading"></a></h2>
+<p>Up to now we have seen the definitions for our <a class="reference internal" href="#helloworld-testcase"><span class="std std-ref">test case</span></a> and <a class="reference internal" href="#helloworld-testsuite"><span class="std std-ref">test suite</span></a>.
+Before we can run the test case we will need to create the test suite archive to deploy to the Test Bed. The resulting archive’s
+structure will be as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;archive root&gt;
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+</pre></div>
+</div>
+<p>Note that the placement of the <code class="docutils literal notranslate"><span class="pre">testSuite.xml</span></code> and <code class="docutils literal notranslate"><span class="pre">testCase1.xml</span></code> files does not have to follow this structure. They can be placed
+anywhere in the ZIP archive, however the approach above matches the <a class="reference internal" href="../testsuite/index.html#test-suite-deploying"><span class="std std-ref">proposed best practice</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The hello world test suite is also available as part of the published <a class="reference external" href="https://github.com/ISAITB/sample-test-suites">sample test suites</a>
+on GitHub. Click to <a class="reference external" href="https://github.com/ISAITB/sample-test-suites/tree/master/testSuites/helloWorld">view the test suite</a> or
+<a class="reference external" href="https://github.com/ISAITB/sample-test-suites/raw/refs/heads/master/testSuites/helloWorld/testSuite.zip">download its archive</a>.</p>
+</div>
+<p>With the test suite archive ready you can proceed to <a class="reference internal" href="../testsuite/index.html#test-suite-deploying"><span class="std std-ref">deploy and use it on the Test Bed</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../introduction/index.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../testsuite/index.html" class="btn btn-neutral float-right" title="Test suites" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, European Commission, DIGIT.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

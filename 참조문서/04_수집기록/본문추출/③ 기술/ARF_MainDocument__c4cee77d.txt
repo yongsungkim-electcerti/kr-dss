@@ -1,0 +1,4 @@
+Architecture and Reference Framework
+The Architecture and Reference Framework main document has moved to
+one page per chapter
+.

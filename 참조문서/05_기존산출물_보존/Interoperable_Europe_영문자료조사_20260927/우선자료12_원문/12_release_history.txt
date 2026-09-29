@@ -1,0 +1,1451 @@
+Release history — GITB TDL Documentation
+Release history
+Release history
+
+The current section provides an overview of the changes in each GITB TDL release.
+Release numbers follow
+global numbering
+covering all Test Bed components, meaning that certain releases may have not
+actually introduced changes to the GITB TDL. The current page lists only the releases that introduced changes, whereas
+those not included are global maintenance releases that made no changes to the GITB TDL.
+The latest GITB TDL release is
+1.30.0
+.
+Release 1.30.0 - 21/09/2026
+
+Description of changes
+Relevant sections
+New
+result
+element for the
+receive
+step to adapt the step’s report before completion and, for the
+HttpMessagingV2
+and
+SoapMessagingV2
+handlers, dynamically generate the returned response.
+Adapting the step’s result and generating responses
+,
+HttpMessagingV2
+,
+SoapMessagingV2
+Unmatched incoming calls to the
+HttpMessagingV2
+and
+SoapMessagingV2
+handlers are now automatically parked and retried, reducing the need for a custom messaging service to handle simple race conditions.
+receive
+New
+handlerApiType
+attribute to select the REST or SOAP API style used to call an external test service handler.
+Selecting the API style for external service handlers
+New built-in
+PdfValidator
+handler to validate PDF documents, including conformance to PDF/A and PDF/UA profiles.
+PdfValidator
+New
+TextProcessor
+built-in handler with operations for encoding and decoding text.
+TextProcessor
+New
+replace
+operation for the
+RegExpProcessor
+handler to perform text replacements based on regular expressions.
+RegExpProcessor - replace
+Support for CTA (Complex Type Alternative) XPath checking in XML Schema 1.1 for the
+XmlValidator
+and
+XsdValidator
+handlers.
+XmlValidator
+,
+XsdValidator
+The
+TemplateProcessor
+now processes any parameter values as long as they can be represented as primitive values.
+TemplateProcessor
+New
+scope
+attribute for the
+exit
+step to stop the execution of a step sequence, loop, flow or scriptlet without terminating the test session.
+Stopping execution without ending the test session
+New
+hiddenContainer
+attribute for the
+flow
+step to hide its boundary in the test execution diagram.
+flow
+New
+ACTOR
+alias to more easily refer to the SUT actor’s own configuration properties in test cases.
+Actor configuration parameters
+New
+dependsOn
+,
+dependsOnValue
+and
+included
+attributes for
+instruct
+and
+request
+elements of
+interact
+steps, to conditionally display or include them based on other provided inputs.
+Conditionally including and depending on interaction elements
+Support for rich text (HTML) content in
+instruct
+elements via a
+mimeType
+of
+text/html
+.
+Displaying data using instruct elements
+The
+desc
+attribute of
+instruct
+elements is now optional, to simplify displaying instructions without titles.
+Displaying data using instruct elements
+The
+interact
+step’s
+request
+elements now allow multiple values for a single
+UPLOAD
+input via the
+multiple
+attribute.
+Providing multiple values for a single input
+The test suite and test case
+lastModified
+timestamp values are now displayed toi administrators.
+Metadata (test case)
+,
+Metadata (test suite)
+Release 1.29.0 - 27/03/2026
+
+Description of changes
+Relevant sections
+New
+DomibusMessaging
+built-in handler to allow sending and receiving messages, and also acknowledgment checks, through a Domibus eDelivery Access Point.
+DomibusMessaging
+New
+ZipProcessor
+built-in handler to allow processing of ZIP archives.
+ZipProcessor
+New
+order
+attribute for test suites to define their relative ordering in displays, reports and during test execution.
+Test suites
+Extend the
+DisplayProcessor
+handler to enable displaying a detailed validation report, created manually or by aggregating other step reports.
+DisplayProcessor
+Extend the
+SimulatedMessaging
+handler to enable displaying a detailed validation report, created manually or by aggregating other step reports.
+SimulatedMessaging
+New
+showControls
+attribute for
+instruct
+elements of
+interact
+steps, to hide user interface controls for the instruction.
+Displaying data using instruct elements
+New
+level
+attribute for
+instruct
+elements of
+interact
+steps, to present messages as stylised severity or status feedback.
+Displaying data using instruct elements
+New
+report
+attribute for
+instruct
+elements of
+interact
+steps, to include them in reports.
+Displaying data using instruct elements
+New
+size
+attribute for
+request
+elements of
+interact
+steps, to control the height of text areas and editors, and the number of presented items in multiple selection lists.
+Requesting inputs using request elements
+New
+accept
+attribute for
+request
+elements of
+interact
+steps, to limit the accepted file types for file uploads.
+Requesting inputs using request elements
+New
+default
+attribute for
+request
+elements of
+interact
+steps, to set a default value for input controls.
+Requesting inputs using request elements
+When looking up test suite resources (e.g., in
+imports
+), fall back to considering paths as relative to the test suite definition file if not found under the test suite root.
+Imports
+,
+call
+,
+Rich documentation per step
+Support XML Schema 1.1 in the
+XmlValidator
+and
+XsdValidator
+, and support the
+schemaVersion
+attribute to specify the version to use.
+XmlValidator
+,
+XsdValidator
+Consider REST API inputs when evaluating expressions at test case load time (e.g.,
+if
+steps marked as
+static
+).
+Displaying contained steps without a boundary
+Step reports for steps lacking a description now use their title if applicable and present.
+Test steps
+Support for adapting the name and relative display order of predefined actors (user, administrator and test engine).
+Actors
+New
+actor
+attribute for
+verify
+,
+process
+and
+interact
+steps, to select the actor under which to display the step.
+Display steps under specific actors
+Release 1.28.0 - 10/10/2025
+
+Description of changes
+Relevant sections
+New
+version
+input for the
+HttpMessagingV2
+handler to control the HTTP protocol version used when naming requests.
+HttpMessagingV2
+Automated configuration of test service handler authentication via the Test Bed’s UI and REST API.
+Authenticate calls to external handlers
+Test suite and test case metadata includes new
+dependencies
+and
+scopes
+sections.
+dependencies
+,
+scopes
+,
+dependencies
+,
+scopes
+The
+from
+and
+to
+actors of the
+btxn
+step are now optional, delegating to the relevant
+send
+or
+receive
+step actors.
+btxn
+Support for managing timeouts to external test service handlers used in test steps.
+Timeouts for external service handlers
+New
+JsonPathProcessor
+to process JSON content using JSONPath expressions (supporting
+process
+,
+exists
+and
+count
+operations).
+JsonPathProcessor
+Support for YAML input and output when using the
+JsonPointerProcessor
+and
+JsonPathProcessor
+.
+JsonPointerProcessor
+JsonPathProcessor
+New
+CollectionUtils
+map operations to extract
+keys
+,
+values
+and
+entries
+.
+CollectionUtils
+New
+YamlConverter
+processor with operations to convert JSON to YAML (
+jsonToYaml
+), and YAML to JSON (
+yamltoJson
+).
+YamlConverter
+New iterator-style looping for the
+foreach
+step using the new
+item
+and
+of
+attributes.
+foreach
+Release 1.27.0 - 24/06/2025
+
+Description of changes
+Relevant sections
+New inputs for the
+HttpMessagingV2
+handler to control the display of information in step reports.
+HttpMessagingV2
+,
+Tuning reported data
+New inputs for the
+SoapMessagingV2
+handler to control the display of information in step reports.
+SoapMessagingV2
+,
+Tuning reported data
+New
+showLocationPaths
+input for the
+XmlValidator
+and
+SchematronValidator
+handlers to show reported item’s location paths.
+XmlValidator
+SchematronValidator
+Release 1.26.0 - 12/06/2025
+
+The documentation for GITB TDL release 1.26.0 is available
+here
+.
+Description of changes
+Relevant sections
+New
+JsonValidator
+handler for
+verify
+steps to validate JSON against JSON Schema.
+JsonValidator
+New
+ShaclValidator
+handler for
+verify
+steps to validate RDF models against SHACL shapes.
+ShaclValidator
+New
+YamlValidator
+handler for
+verify
+steps to validate YAML against JSON Schema.
+YamlValidator
+Support the delegation of an
+interact
+step to an external handler service instead of the default UI-based approach, that will be conditionally triggered to complete the interaction.
+Delegating to external handler services
+Extend all test steps with a
+skipped
+attribute to allow them being conditionally skipped during test execution.
+Skip test steps
+Introduce a
+RdfUtils
+handler for
+process
+steps to manipulate (
+merge
+,
+convert
+) and query (
+ask
+,
+construct
+,
+select
+) RDF models.
+RdfUtils
+Add a
+find
+operation to
+CollectionUtils
+to support searching for and returning a value from a
+list
+or
+map
+(with case-sensitive matching or not).
+CollectionUtils - find
+Extend the
+contains
+operation of
+CollectionUtils
+to support lookups that ignore casing.
+CollectionUtils - contains
+Extend the
+append
+operation of
+CollectionUtils
+to support appending only missing items (case-sensitive or not) to the target
+map
+or
+list
+.
+CollectionUtils - append
+Support the generation of multiple test case
+output
+messages based on condition matching logic defined by the
+match
+attribute (set as
+first
+,
+all
+or
+cascade
+).
+Output
+Consider the type of test case and scriptlet
+imports
+optional, with
+binary
+as the default.
+Imports
+Extended the
+StringValidator
+,
+NumberValidator
+,
+ExpressionValidator
+,
+RegExpValidator
+and
+XPathValidator
+with optional
+successMessage
+and
+failureMessage
+inputs to add user-friendly messages in the resulting report.
+StringValidator
+,
+NumberValidator
+,
+ExpressionValidator
+,
+RegExpValidator
+,
+XPathValidator
+Applied consistent naming (with backwards compatibility through aliases) for the
+NumberValidator
+,
+StringValidator
+,
+XPathValidator
+,
+XsdValidator
+,
+SchematronValidator
+,
+XsltProcessor
+and
+JsonPointerProcessor
+built-in step handlers.
+Built-in handlers
+Allow
+scriptlet inputs
+for flags used at test case load time to refer to
+configuration properties
+.
+Dynamic presentation in scriptlets
+,
+Dynamic steps in scriptlets
+Extend the
+interact
+step with a
+blocking
+attribute (by default “false”) to automatically proceed to the next step in case only
+instruct
+elements are defined.
+Displaying data using instruct elements
+Extend the
+request
+elements of
+interact
+steps to allow specifying inputs as
+required
+(optional remaining the default).
+Requesting inputs using request elements
+Consider as optional the
+from
+and
+to
+of
+receive
+steps defaulting, respectively, to the SUT and non-SUT actors.
+Explicitly specifying from and to actors
+Consider as optional the
+from
+and
+to
+of
+send
+steps defaulting, respectively, to the non-SUT and SUT actors.
+Explicitly specifying from and to actors
+Extend the
+assign
+step with the
+byValue
+attribute to allow choosing by-value or by-reference assignment for maps and lists.
+Assignment by-reference and by-value
+Remove the
+scope isolation
+requirement for remotely loaded
+scriptlets
+, making them identical behaviour-wise to local ones.
+Scriptlets
+Release 1.25.0 - 31/01/2025
+
+The documentation for GITB TDL release 1.25.0 is available
+here
+.
+Description of changes
+Relevant sections
+Support
+test case groups
+within which only a single successful result is needed to ensure conformance.
+Test case groups
+Allow the
+send
+,
+receive
+and
+process
+steps to be configured with their severity level in case of failures via the
+level
+attribute.
+receive
+,
+send
+,
+process
+Allow the
+send
+,
+receive
+,
+process
+and
+verify
+steps to have their outcome inverted via the
+invert
+attribute.
+receive
+,
+send
+,
+process
+,
+verify
+The
+DisplayProcessor
+can now be used without parameters to only display an overall result.
+DisplayProcessor
+Support
+test case output messages
+also for undefined outcomes.
+Output
+Optionally record the original file name for files uploaded via
+interact
+steps.
+interact
+Support
+exit
+steps terminating test sessions with an undefined outcome.
+exit
+Steps defining children support the
+stopOnChildError
+flag to stop processing upon child error but not terminate the test session.
+Skip child steps in case of error
+The
+group
+step’s boundary can now be hidden by means of the
+hiddenContainer
+flag.
+group
+New
+XPathProcessor
+processing handler to extract content from XML using XPath.
+XPathProcessor
+Release 1.24.0 - 15/10/2024
+
+The documentation for GITB TDL release 1.24.0 is available
+here
+.
+Description of changes
+Relevant sections
+Support for optional scriptlet parameters and parameters set as empty by default.
+Params
+New
+VariableUtils
+built-in processor for common operations (
+exists
+,
+type
+) on variables.
+VariableUtils
+New operation for the
+CollectionUtils
+built-in processor to append collections.
+CollectionUtils
+New inputs for the
+HttpMessagingV2
+built-in messaging handler to set maximum timeouts (connection and request) when calling a remote service.
+Use in send steps
+Release 1.23.0 - 20/06/2024
+
+The documentation for GITB TDL release 1.23.0 is available
+here
+.
+Description of changes
+Relevant sections
+New
+HttpMessagingV2
+handler for HTTP messaging, replacing and improving upon the deprecated
+HttpMessaging
+and
+HttpsMessaging
+.
+HttpMessagingV2
+New
+SoapMessagingV2
+handler for SOAP messaging, replacing and improving upon the deprecated
+SoapMessaging
+.
+SoapMessagingV2
+New
+$SYSTEM{apiKey}
+variable available in test sessions with the unique API key of the system under test.
+System configuration parameters
+The
+HttpMessaging
+,
+HttpsMessaging
+and
+SoapMessaging
+handlers now return a
+http_status
+entry in the
+receive
+step’s report.
+HttpMessaging
+,
+HttpsMessaging
+,
+SoapMessaging
+Test session logging level set to
+INFO
+by default.
+Test case logging
+Release 1.22.0 - 08/04/2024
+
+The documentation for GITB TDL release 1.22.0 is available
+here
+.
+Description of changes
+Relevant sections
+Interaction steps now support the
+admin
+attribute to specify that they should be completed by an administrator.
+interact
+Interaction steps now support the
+timeout
+attribute to automatically complete them after the timeout period.
+interact
+Interaction steps can now be minimised and also completed asynchronously.
+interact
+The interaction step’s
+mimeType
+attribute can now be set via variable reference.
+interact
+Test suites and test cases support the definition of structured normative reference information.
+reference (test suite)
+,
+reference (test case)
+,
+The
+DisplayProcessor
+can now be set with a configurable result to mark its report as a success, failure or warning.
+DisplayProcessor
+The documentation on service handlers for test steps was extended to list
+reusable external services
+available to test developers.
+Reusable external handlers
+Release 1.21.0 - 06/10/2023
+
+The documentation for GITB TDL release 1.21.0 is available
+here
+.
+Description of changes
+Relevant sections
+Interaction steps now support the
+forceDisplay
+attribute to ensure an inline display of their content.
+interact
+The
+TokenGenerator
+now allows the generation of random numbers via the new
+random
+operation.
+TokenGenerator
+New
+DelayProcessor
+to make it simpler to pause test sessions for a given duration.
+DelayProcessor
+New
+JSONPointerProcessor
+to extract data from JSON content using JSON Pointer expressions.
+JsonPointerProcessor
+Test cases can now be defined as
+optional
+and
+disabled
+restricting whether they can be executed and how their results are considered.
+Test cases
+Test suite and test case definitions now support an
+update
+metadata element to define how to carry out the update of existing test suites and test cases.
+update (test suite)
+,
+update (test case)
+Test cases can now define
+tags
+as part of their metadata to classify them and visually distinguish them for users.
+tags
+Release 1.19.0 - 17/03/2023
+
+The documentation for GITB TDL release 1.19.0 is available
+here
+.
+Description of changes
+Relevant sections
+Extensions to step status checks (
+STEP_SUCCESS
+,
+STEP_STATUS
+) to uniquely refer to steps within scriptlets.
+Status checks for scriptlet steps
+New operations (
+contains
+,
+randomKey
+,
+randomValue
+,
+remove
+) for the
+CollectionUtils
+processor.
+CollectionUtils
+Release 1.18.0 - 17/10/2022
+
+The documentation for GITB TDL release 1.18.0 is available
+here
+.
+Description of changes
+Relevant sections
+New
+XmlValidator
+validation handler to validate XML against both XSDs and Schematrons.
+XmlValidator
+New
+ExpressionValidator
+validation handler to check arbitrary expressions.
+ExpressionValidator
+The
+TokenGenerator
+now accepts an optional prefix and postfix to add to generated UUIDs.
+TokenGenerator
+The
+SimulatedMessaging
+and
+DisplayProcessor
+handlers can now also specify the content types of data in their reports.
+SimulatedMessaging
+,
+DisplayProcessor
+The
+reply
+attribute of messaging steps can now be set dynamically within scriptlets.
+Dynamic presentation in scriptlets
+The
+call
+step can now also be set as
+hidden
+to hide all steps of the referenced scriptlet.
+call
+The
+SchematronValidator
+can now show the assertions made for each finding.
+SchematronValidator
+The
+XSDValidator
+and
+SchematronValidator
+can now present findings sorted by their severity.
+XsdValidator
+,
+SchematronValidator
+The
+XSDValidator
+and
+SchematronValidator
+can now hide from their report the XSD or Schematron used for the validation.
+XsdValidator
+,
+SchematronValidator
+Scriptlet parameters can now be set with default values.
+Params
+flow
+steps can now have individually hidden
+thread
+blocks.
+flow
+Steps’
+hidden
+attribute can now be set in scriptlets via variable reference.
+Dynamic steps in scriptlets
+if
+steps can be set as
+static
+for dynamic inclusion of steps within scriptlets.
+Displaying contained steps without a boundary
+,
+Dynamic steps in scriptlets
+if
+steps can now be set as
+hidden
+with visible child steps.
+Displaying contained steps without a boundary
+New
+SESSION
+map allowing access to test session metadata (session identifier, test case identifier, TDL version).
+Accessing test session metadata
+Actor configuration (endpoint) parameters can now be set with default values and user friendly names.
+Actors
+Using a
+process
+step via its simplified syntax now supports mapping of the input to a parameter based on the defined types.
+Simplified processing steps
+Allow the
+assign
+step to create on-the-fly maps and lists at any nesting level.
+assign
+New
+TestCaseOverviewReport
+root element of type
+TestCaseOverviewReportType
+in the
+gitb_tr.xsd
+for an XML test case overview report.
+Specification links
+Release 1.17.0 - 20/07/2022
+
+The documentation for GITB TDL release 1.17.0 is available
+here
+.
+Description of changes
+Relevant sections
+Steps’
+desc
+,
+from
+,
+to
+,
+title
+and
+inputTitle
+values can be set as constant variable references when used within scriptlets.
+Dynamic presentation in scriptlets
+New
+TemplateProcessor
+embedded processing handler for complex generation of data based on templates.
+TemplateProcessor
+New
+XSLTProcessor
+embedded processing handler for XSLT transformations of XML content.
+XsltProcessor
+New
+DisplayProcessor
+embedded processing handler for displaying arbitrary content to users in a non-obtrusive manner.
+DisplayProcessor
+New
+SimulatedMessaging
+embedded messaging handler to add simulated message exchanges between actors.
+SimulatedMessaging
+Messaging transactions (defined via
+btxn
+) are no longer mandatory for
+send
+and
+receive
+messaging steps.
+send
+,
+receive
+Non-transactional, non-embedded (external)
+process
+,
+send
+and
+receive
+steps can now also specify authentication properties for the handler service call.
+Authenticate calls to external handlers
+The GITB TDL’s expression language is now upgraded from XPath 1.0 to XPath 3.0.
+Expressions
+Release 1.16.0 - 18/03/2022
+
+The documentation for GITB TDL release 1.16.0 is available
+here
+.
+Description of changes
+Relevant sections
+Namespaces can now be defined to simplify XPath expressions in GITB TDL steps and the XPathValidator.
+Namespaces
+Actors defined in test cases are considered by default as SIMULATED.
+Actors
+Introduction of the
+STEP_STATUS
+variable to record and query the specific status of each step.
+Checking the status of a specific step
+Reuse of steps’
+desc
+attribute to identify them in the test session log to make log entries more meaningful.
+Test steps
+Support for test session log contributions from custom test services used as remote service handlers.
+log
+Support for the parallel or sequential execution of a test suite’s test cases when a test suite is executed in the background.
+Test cases
+Test cases now feature the
+supportsParallelExecution
+attribute that can be used to enforce a test case’s execution in isolation.
+Test cases
+Release 1.15.0 - 29/11/2021
+
+The documentation for GITB TDL release 1.15.0 is available
+here
+.
+Description of changes
+Relevant sections
+Messaging steps now support the
+reply
+attribute to indicate that they should be presented as reply messages.
+send
+,
+receive
+,
+listen
+Support for automatically converting non-list values to lists (as single-item lists containing the value).
+Type conversions
+Support for automatically converting lists and maps to strings.
+Type conversions
+The
+log
+step now supports a
+level
+attribute to define the message’s severity level.
+log
+Test cases now support the
+logLevel
+attribute to control which messages are included in test session logs.
+Steps
+The severity level of
+verify
+steps can be now be provided dynamically via variable reference.
+verify
+The
+process
+step now enables simplified usage through the
+input
+,
+operation
+and
+output
+attributes.
+Simplified processing steps
+The
+call
+step now enables simplified usage through the
+input
+and
+output
+attributes.
+Simplified call steps
+Release 1.14.0 - 17/08/2021
+
+The documentation for GITB TDL release 1.14.0 is available
+here
+.
+Description of changes
+Relevant sections
+The
+receive
+elements of
+interact
+steps support the
+inputType
+and
+mimeType
+attributes to determine the type of input control to use.
+interact
+The
+instruct
+elements of
+interact
+steps support the
+mimeType
+attribute to determine downloaded file extensions and editor syntax highlighting.
+interact
+Release 1.13.0 - 01/07/2021
+
+The documentation for GITB TDL release 1.13.0 is available
+here
+.
+Description of changes
+Relevant sections
+The
+process
+step can now be displayed in the test case’s presentation.
+process
+Support for the
+hidden
+attribute to define steps that are not included in the test case’s presentation.
+Hide test steps
+Support for the
+collapsed
+attribute on group steps to have them displayed as initially collapsed.
+Collapse sets of test steps
+Extended
+group
+steps to allow them to be included in the test case’s presentation.
+group
+Release 1.12.0 - 03/03/2021
+
+The documentation for GITB TDL release 1.12.0 is available
+here
+.
+Description of changes
+Relevant sections
+Support for test suites without actor definitions nor test cases, as shared resource holders.
+Test suites as shared resource holders
+Support for sharing resources (scriptlets, artifacts, documentation) across test suites.
+Sharing resources across test suites
+Support for sharing scriptlets across test cases, scriptlet output expressions, optional parameters, variables and outputs.
+Scriptlets (standalone)
+,
+Scriptlets (test case)
+,
+call
+New embedded processing handler
+RegExpProcessor
+to process texts using regular expressions.
+RegExpProcessor
+New embedded processing handler
+CollectionUtils
+providing utility functions for maps and lists.
+CollectionUtils
+The
+TokenGenerator
+processing handler now allows manipulation of dates based on existing, formatted, date values.
+TokenGenerator
+The
+SchematronValidator
+validation handler now supports defining the Schematron file type (XSLT or SCH) as an input.
+SchematronValidator
+Release 1.11.1 - 11/12/2020
+
+The documentation for GITB TDL release 1.11.1 is available
+here
+.
+Description of changes
+Relevant sections
+Referencing a missing variable evaluates as an empty string.
+Missing variables
+Release 1.11.0 - 13/11/2020
+
+The documentation for GITB TDL release 1.11.0 is available
+here
+.
+Description of changes
+Relevant sections
+Support for stopping a test session immediately upon a step’s failure.
+Stop the test session in case of error
+,
+Steps
+Support for custom output messages as the overall result of a test session’s execution.
+Output
+Allow a
+verify
+step to optionally store its report’s context data.
+verify
+New
+TEST_SUCCESS
+variable used to track the overall status of the test session at any point.
+Checking the result of test steps
+Support for custom titles for the user input popups linked to the
+interact
+step.
+interact
+Release 1.10.0 - 07/09/2020
+
+The documentation for GITB TDL release 1.10.0 is available
+here
+.
+Description of changes
+Relevant sections
+Test case imports can now be defined dynamically using variable references.
+Imports
+,
+Where can expressions be used?
+Support for a custom
+title
+for
+if
+,
+interact
+,
+while
+,
+repuntil
+,
+foreach
+and
+flow
+steps.
+if
+,
+interact
+,
+while
+,
+repuntil
+,
+foreach
+,
+flow
+Actors’ endpoint parameters can now be defined as
+hidden
+to have them visible only to administrators.
+Actors
+Actors’ endpoint parameters now support the definition of allowed values with optional labels (
+allowedValues
+and
+allowedValueLabels
+).
+Actors
+Actors’ endpoint parameters now support defining other parameters as prerequisites (
+dependsOn
+and
+dependsOnValue
+).
+Actors
+New
+log
+step to add arbitrary information to the test session’s log output.
+log
+The
+documentation
+content for test suites, test cases and test steps can now be provided via imported resource.
+Metadata
+,
+Metadata
+,
+Rich documentation per step
+The ID of test suites and test cases is now considered in the GITB software for referencing and matching.
+Test suites
+,
+Test cases
+Release 1.9.0 - 30/04/2020
+
+The documentation for GITB TDL release 1.9.0 is available
+here
+.
+Description of changes
+Relevant sections
+Rich text documentation can now also be set for test suites via the
+documentation
+element.
+Metadata
+Rich text documentation can now also be set for test cases via the
+documentation
+element.
+Metadata
+Assign
+steps can now automatically create variables to store expression output.
+assign
+,
+Variables
+,
+Defining variables from expressions
+New
+Base64Processor
+for the handling of Base64 and data URL encoding in test cases.
+Base64Processor
+Release 1.8.0 - 20/01/2020
+
+The documentation for GITB TDL release 1.8.0 is available
+here
+.
+Description of changes
+Relevant sections
+Actors can now be set as
+hidden
+to prevent them from being used in new conformance statements.
+Actors
+Support for different severity levels for the validation carried out by
+verify
+steps.
+verify
+Rich text documentation can now be set for test steps via the
+documentation
+element to provide further information or instructions.
+Test steps
+,
+Rich documentation per step
+Release 1.7.2 - 11/12/2019
+
+The documentation for GITB TDL release 1.7.2 is available
+here
+.
+Description of changes
+Relevant sections
+Any expression can now be set with
+asTemplate
+to be used as a template for placeholder replacement.
+Expressions and templates
+Release 1.7.0 - 07/10/2019
+
+The documentation for GITB TDL release 1.7.0 is available
+here
+.
+Description of changes
+Relevant sections
+Support for organisation and system level configuration parameters.
+Referring to configuration parameters
+Support for
+binary
+values in all levels of configuration parameters.
+Referring to configuration parameters
+Support for endpoint configuration parameters to be defined as editable only by administrators (
+adminOnly
+) and make their inclusion in test sessions optional (
+notForTests
+).
+Actors
+Endpoint configuration parameters can now have secret values.
+Actors
+Release 1.6.1 - 14/06/2019
+
+The documentation for GITB TDL release 1.6.1 is available
+here
+.
+Description of changes
+Relevant sections
+Additional documentation for the use of templates.
+Expressions and templates
+Extensions to the
+TokenGenerator
+handler to fine-tune timestamp generation.
+TokenGenerator
+Release 1.6.0 - 29/05/2019
+
+The documentation for GITB TDL release 1.6.0 is available
+here
+.
+Description of changes
+Relevant sections
+Documented the embedded
+UDPMessaging
+messaging handler.
+UDPMessaging
+Introduced a new
+STEP_SUCCESS
+map
+variable to record the status of executed steps.
+Checking whether a specific step succeeded
+Step attributes now allow definition of text values including spaces, and numbers that are signed or floating point.
+Test steps
+Support for single and multiple selection lists to receive input in user interaction steps.
+interact
+Processing transactions are now optional allowing for simpler use of stateless processing steps.
+bptxn
+,
+process
+New embedded
+TokenGenerator
+processing handler to generate text tokens.
+TokenGenerator
+New embedded
+XmlMatchValidator
+validation handler for template-based matching of XML documents.
+XmlMatchValidator
+Test case variable values now correctly allow the definition only of a type and name.
+Variables
+Release 1.5.0 - 06/11/2018
+
+The documentation for GITB TDL release 1.5.0 is available
+here
+.
+Description of changes
+Relevant sections
+The
+XPathValidator
+is now updated to support XPath 3.0 expressions (from the previous limitation to XPath 1.0)
+XPathValidator
+Support for any type of input that can be converted to
+string``s
+can
+now
+be
+passed
+to
+the
+``XPathValidator
+and
+StringValidator
+XPathValidator
+,
+StringValidator
+Added a new
+RegExpValidator
+to test text against a regular expression
+RegExpValidator
+Improved default handling of the
+with
+,
+type
+and
+contentType
+properties linked to user interactions
+interact
+,
+Preliminary
+Allowed user interactions to present binary content for download
+interact
+,
+Preliminary
+The test suite name can now be ommitted in the value provided for test case
+import
+elements
+Imports
+It is now possible to define an actor as the specification’s default to have it automatically selected for new conformance statements
+Actors
+The display order of actors in test execution diagrams can now be set at test suite and test case level
+Actors
+(test suite),
+Actors
+(test case)
+The
+exit
+step is now correctly reflected on the user interface and can be set to be either a success or a failure
+exit
+The
+if
+step now considers the
+else
+block as optional
+if
+Release 1.4.1 - 28/09/2018
+
+The documentation for GITB TDL release 1.4.1 is available
+here
+.
+Description of changes
+Relevant sections
+The
+HttpMessaging
+handler now supports HTTPS via configuration as well as handling of multipart forms
+HttpMessaging
+Release 1.3.0 - 25/05/2018
+
+The documentation for GITB TDL release 1.3.0 is available
+here
+.
+Description of changes
+Relevant sections
+Transactions (messaging and processing) now support
+config
+elements to customise transaction creation
+btxn
+,
+bptxn
+Configuration elements (
+config
+) now support variable references
+btxn
+,
+send
+,
+receive
+,
+listen
+,
+bptxn
+,
+verify
+User instructions now consider “string” as the default type and can be fully empty in case of simple messages
+interact
+User requests now consider “STRING” as the default content type
+interact
+The
+foreach
+step now allows its boundaries (start and end) to be set using variable references
+foreach
+Actors can now be defined in test suites without endpoints
+Actors
+Service handler implementations can now be specified with variable references
+Specifying the handler implementation
+The
+receive
+step now allows a timeout to be specified
+receive
+Communication with service handlers now supports authentication (HTTP Basic and UsernameToken)
+Specifying the handler implementation
+The
+SoapMessaging
+embedded messaging handler now supports HTTPS
+SoapMessaging
+Value ‘CONFORMANCE’ is now correctly considered as the default test case type
+Metadata
+The actor name defined in a test case does not have to match the actor ID
+Actors
+Domain-level configuration parameters can now be used in expressions
+Domain configuration parameters
+Release 1.2.0 - 18/03/2018
+
+Initial release of the documentation for the GITB TDL (release 1.2.0), available
+here
+.

@@ -1,0 +1,98 @@
+UK digital verification services trust framework data schema (1.0) - GOV.UK
+Cookies on GOV.UK
+We use some essential cookies to make this website work.
+We’d like to set additional cookies to understand how you use GOV.UK, remember your settings and improve government services.
+We also use cookies set by other sites to help us deliver content from their services.
+You have accepted additional cookies.
+You can
+change your cookie settings
+at any time.
+You have rejected additional cookies.
+You can
+change your cookie settings
+at any time.
+Accept additional cookies
+Reject additional cookies
+View cookies
+Hide cookie message
+Skip to main content
+Guidance
+UK digital verification services trust framework data schema (1.0)
+A specification to help DVS and relying parties organise and exchange information in a consistent way to enable interoperability
+From:
+Office for Digital Identities and Attributes
+,
+Department for Science, Innovation and Technology
+and
+Department for Digital, Culture, Media and Sport
+Published:
+3 March 2026
+Last updated:
+13 April 2026
+            —
+See all updates
+Get emails about this page
+Documents
+Data taxonomy, data model and data dictionary for GPG 45
+HTML
+Data taxonomy, data model and data dictionary for GPG 44
+HTML
+Details
+This data schema helps
+DVS
+and relying parties organise and exchange information in a consistent way to enable interoperability.
+This is the 1.0 version of the data schema. It has been published to coincide with the publication of the pre-release of
+the 1.0 UK
+DVS
+trust framework
+alongside pre-releases of the other
+trust framework supporting documents
+.
+The data schema describes a data taxonomy, data model and data dictionary for two other supporting documents:
+How to check someone’s identity
+, also known as Good Practice Guide (GPG) 45; and
+How to use authenticators to protect an online service
+, also known as Good Practice Guide (GPG) 44.
+As use of the data schema is optional for services certified against current versions of the trust framework, and will be optional once certifications begin against the 1.0 version, you can start to make use of this data schema whenever and however you would like, though it has been designed to map onto the 1.0 publications of
+GPG 45
+and
+GPG 44
+.
+We may publish new explanations or alternative presentations of the data schema documents over time and before a new version of the trust framework is published. We will publish these, or point out to them, on this page.
+Updates to this page
+Published 3 March 2026
+Last updated 13 April 2026
+—
+Show all updates
+13 April 2026
+corrected a typo where an instance of 'content_format' incorrectly read as 'content_type'.
+6 March 2026
+Fixing and adding links, and rectifying formatting issues.
+3 March 2026
+First published.
+Sign up for emails or print this page
+Get emails about this page
+Print this page
+Related content
+Is this page useful?
+Maybe
+Yes
+this page is useful
+No
+this page is not useful
+Thank you for your feedback
+Report a problem with this page
+Help us improve GOV.UK
+Do not include personal or financial information like your National Insurance number or credit card details.
+This field is for robots only. Please leave blank
+What were you doing?
+What went wrong?
+Send
+Cancel
+Help us improve GOV.UK
+To help us improve GOV.UK, we’d like to know more about your visit today.
+Please fill in this survey (opens in a new tab
+and requires JavaScript
+)
+.
+Cancel

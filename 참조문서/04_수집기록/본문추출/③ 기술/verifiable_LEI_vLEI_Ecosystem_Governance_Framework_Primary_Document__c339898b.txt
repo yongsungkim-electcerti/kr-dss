@@ -1,0 +1,532 @@
+            
+                   
+                   
+                      Primary Document 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Public 
+Document Version 1.2 
+2026-03-25 
+verifiable LEI (vLEI) 
+Ecosystem Governance Framework v4.0 
+ 
+ 
+ 
+ 
+
+ 
+ 
+verifiable LEI (vLEI) Ecosystem Governance Framework v4.0 
+Page 2 of 13 
+Public 
+2026-03-25_vLEI-EGF-v4.0-Primary-Document _v1.2_Final 
+Document Version 1.2 
+2026-03-25 
+ 
+ 
+Version 
+1.2 
+Date of version 
+2026-03-25 
+Document Name 
+verifiable LEI (vLEI) Ecosystem Governance Framework Primary Document 
+Document DID URL 
+did:keri:EINmHd5g7iV-UldkkkKyBIH052bIyxZNBn9pqzNrYoS?service=vlei-
+documents&relativeRef=/egf/docs/2026-03-25_vLEI-EGF-v4.0-Primary-
+Document_v1.2_Final.pdf 
+Governing Authority 
+Global Legal Entity Identifier Foundation (GLEIF) 
+Copyright 
+The verifiable LEI (vLEI) Ecosystem Governance Framework is published on 
+the GLEIF website. All documents published on the GLEIF website are 
+published under the Creative Commons Attribution license. 
+ 
+  
+Change History 
+This section records the history of all changes to this document.    
+EGF Version 
+Document Version 
+Date 
+Description of Change 
+1.0 
+1.1 
+August 30, 2023 
+Updated GLEIF’s postal address;  
+corrected typos and references 
+4.0 
+1.2 
+March 25, 2026 
+Updated in section 12, Extensions, the 
+name and description of Authorization 
+vLEI Credential Framework; 
+ 
+updates for consistency and clarification. 
+ 
+ 
+ 
+
+ 
+ 
+verifiable LEI (vLEI) Ecosystem Governance Framework v4.0 
+Page 3 of 13 
+Public 
+2026-03-25_vLEI-EGF-v4.0-Primary-Document _v1.2_Final 
+Document Version 1.2 
+2026-03-25 
+ 
+1 Introduction 
+The verifiable LEI (vLEI) Ecosystem Governance Framework is a Layer Four Ecosystem 
+Governance Framework of the Trust over IP Foundation (ToIP). The Legal Entity Identifier 
+(LEI) is used as a key component in building a trust layer for identification and verification of 
+organizational identity that can be used in any other Governance Frameworks that require 
+organizational identity. 
+The LEI had its beginnings in the aftermath of the global financial crisis responding initially to 
+a call by global regulators to establish a standard international identifier and related 
+reference data that could be accessed and used in regulatory frameworks and supervision. 
+The LEI and the Global LEI System were envisioned from the start as a public-private 
+partnership that should bring transparency and benefits to both the public and the private 
+sectors. And although the LEI was used initially to identify legal entities in financial services, 
+the need for identification of legal entities is not limited to the financial services domain. 
+Now, years after the Global LEI System was established, which the Global Legal Entity 
+Identifier Foundation (GLEIF) operates and maintains, this Governance Framework 
+establishes GLEIF’s role in digital identity and Authentic Chained Data Container (ACDC) 
+Credentials to add trust to interactions in the global digital economy. 
+2 Terminology 
+ToIP Governance Requirements Glossary 
+• Requirements include any combination of Machine-Testable Requirements and Human- 
+Auditable Requirements. Unless otherwise stated, all Requirements MUST be expressed 
+as defined in RFC 2119. 
+• Mandates are Requirements that use a MUST, MUST NOT, SHALL, SHALL NOT or 
+REQUIRED keyword. 
+• Recommendations are Requirements that use a SHOULD, SHOULD NOT, or 
+RECOMMENDED keyword. 
+• Options are Requirements that use a MAY or OPTIONAL keyword. 
+• Machine-Testable Requirements are those with which compliance can be verified using 
+an automated test suite and appropriate scripting or testing software. 
+• Rules are Machine-Testable Requirements that are written in a 
+Machine-Readable language and can be processed by a Rules 
+Engine. They are expressed in a structured rules language as 
+
+ 
+ 
+verifiable LEI (vLEI) Ecosystem Governance Framework v4.0 
+Page 4 of 13 
+Public 
+2026-03-25_vLEI-EGF-v4.0-Primary-Document _v1.2_Final 
+Document Version 1.2 
+2026-03-25 
+ 
+specified by the Governance Framework. 
+• Human-Auditable Requirements are those with which compliance can only be verified by 
+an audit of people, processes, and procedures. 
+• Policies are Human-Auditable Requirements written using 
+standard conformance terminology. The Policies used in the 
+Governance Framework will use the standard terminology 
+detailed in RFC 2119 keywords. Note that all RFC 2119 keywords 
+have weight from an auditing perspective. An implementer MUST 
+explain why a SHOULD or RECOMMENDED requirement was not 
+implemented and SHOULD explain why a MAY requirement was 
+implemented. 
+• Specifications are documents containing any combination of Machine-Testable 
+Requirements and Human-Auditable Requirements needed to produce technical 
+interoperability. 
+3 Localization 
+1. The official language of the vLEI Ecosystem Governance Framework SHALL be American 
+English. 
+2. The Governance Framework Website SHALL include introductory remarks in the 
+languages of the G20 countries. 
+3. For situations in which the vLEI Ecosystem Governance Framework MAY be needed in 
+another language, GLEIF will consider these on a case-by-case basis. 
+4  Governing Authority 
+1. The Global Legal Entity Identifier Foundation (GLEIF), as Governing Authority, is 
+responsible for the vLEI Ecosystem Governance Framework. 
+2. The LEI of GLEIF is 506700GE1G29325QX363. 
+3. The contact information for GLEIF is: 
+St. Alban-Vorstadt 12, PO Box, 4002 Basel, Switzerland 
+Contact: Karla McKenna, Head of Standards Karla.McKenna@gleif.org 
+5 Administering Authority 
+The Global Legal Entity Identifier Foundation (GLEIF) also is the Administering Authority for 
+the vLEI Ecosystem Governance Framework. 
+
+ 
+ 
+verifiable LEI (vLEI) Ecosystem Governance Framework v4.0 
+Page 5 of 13 
+Public 
+2026-03-25_vLEI-EGF-v4.0-Primary-Document _v1.2_Final 
+Document Version 1.2 
+2026-03-25 
+ 
+6 Purpose 
+The purpose of the verifiable LEI (vLEI) Ecosystem Governance Framework is to deliver a 
+global infrastructure that enables decentralized verifiable digital identity of legal entities in 
+all use cases where it is required and can enable industry and participant benefits. 
+7 Scope 
+The following entities are stakeholders in the Trust Community: 
+• GLEIF – Global Legal Entity Identifier Foundation operates and manages the Global LEI 
+System (GLEIS).  LEI Issuer – An organization accredited by GLEIF to validate legal 
+entity information and register new LEIs and reference data which are sent to GLEIF 
+for inclusion in the GLEIS; 
+• Qualified vLEI Issuer (QVI) – An organization qualified by GLEIF to issue Legal Entity 
+vLEI Credentials, Legal Entity Official Organizational Role vLEI Credentials (OOR vLEI 
+Credentials) and Legal Entity Engagement Context Role vLEI Credentials (ECR vLEI 
+Credentials) 
+• Legal Entity – a legal person or structure that is organized under the laws of any 
+jurisdiction that meets the eligibility criteria for registering for a LEI; 
+• Official Organizational Role Persons (OOR Persons) – Persons who represent Legal 
+Entities in official roles; 
+• Engagement Context Role Persons (ECR Persons) – Persons who represent Legal 
+Entities in functional roles; 
+• vLEI User – any user of vLEI credentials in any applicable use case. 
+ 
+The scope of the vLEI Ecosystem Governance Framework is to enable these stakeholders to 
+issue, hold and verify vLEI Credentials using the GLEIF Controller Network and to ensure that 
+these activities take place in compliance with the vLEI Ecosystem Governance Framework. 
+Out of scope for the vLEI Ecosystem Governance Framework are the LEI governance 
+processes and rules which are managed separately by GLEIF with its own specification and 
+documents. In addition, although GLEIF encourages other governance frameworks to make 
+use of the vLEI Ecosystem Governance Framework and the vLEI Credentials, these 
+governance frameworks also are out of scope. 
+ 
+
+ 
+ 
+verifiable LEI (vLEI) Ecosystem Governance Framework v4.0 
+Page 6 of 13 
+Public 
+2026-03-25_vLEI-EGF-v4.0-Primary-Document _v1.2_Final 
+Document Version 1.2 
+2026-03-25 
+ 
+8 Objectives 
+The objectives of the vLEI Ecosystem Governance Framework for a global infrastructure for 
+organizational digital identity based on the LEI are: 
+Drive LEI Adoption 
+• Expand the value LEIs can bring to the global economy by enabling cryptographically 
+verifiable vLEIs; 
+• Make it easy and profitable for a wide range of QVIs to begin issuing vLEIs; 
+• Attract developers to build vLEIs into applications that depend on digital trust; 
+• Assist regulators in understanding and incorporating LEIs and vLEIs so that they are 
+integrated into numerous critical business processes and workflows. 
+• Establish GLEIF as a Global Root of Trust for Organizational Identity and Organizational 
+Credentials 
+• Position vLEIs as the simplest, strongest solution for any use case requiring digital 
+verification of the attributes, transactions, or attestations of a legal entity or its 
+official persons or persons in other functions; 
+• Enable a vLEI chain of trust: GLEIF, QVIs, Legal Entities, OOR Persons, ECR Persons;  
+• Support unlimited levels of delegated identifiers and associated Authentic Chained 
+Data Container (ACDC) Credentials to provide both horizontal and vertical scalability. 
+Enable New Uses for LEIs 
+A list of use-cases, including those identified through vLEI research, includes:  
+Verifiable corporate documentation and communications 
+• Company and signatory-specific documents and reports; 
+• Regulatory filing and reporting by a third-party filer on behalf of the filer/reporting 
+entity or by an auditor; 
+• Contracts and legal agreements; 
+• Private, secure, peer-to-peer communication with customers, employees, and other 
+stakeholders. 
+Counterparty verification supporting digital business interaction/automation 
+• Client/counterparty due diligence and Know Your Customer (KYC) compliance; 
+• Import/export, supply chain, customs/border control, payment for goods (e-invoicing); 
+
+ 
+ 
+verifiable LEI (vLEI) Ecosystem Governance Framework v4.0 
+Page 7 of 13 
+Public 
+2026-03-25_vLEI-EGF-v4.0-Primary-Document _v1.2_Final 
+Document Version 1.2 
+2026-03-25 
+ 
+• Authorized signatory verification; 
+• e-invoice and e-payment instruction validation. 
+Licensing and corporate registration 
+• Trusted supplier/provider network membership and registration; 
+• Payment systems membership and registration; 
+• Business entity registration and licenses; 
+• Educational institutions - qualification certification and verification.  
+Other use cases 
+• Digital wallets, digital asset management, and decentralized finance; 
+• Verification of transacting parties; 
+• Employee and authorized agent ID for any organizational use-case.  
+Enhance Security, Reduce Fraud and Simplify Compliance 
+• Enhance security of Autonomic Identifiers (AIDs) and vLEI credentials by replacing an 
+administrative root of trust with a cryptographic root of trust; 
+• Ensure complete, cryptographically verifiable auditability of transactions and other 
+interactions involving vLEIs and sub-identifiers; 
+• Resist quantum computer attacks; 
+• Combine with other verifiable factors to further increase security, such as: 
+a. identity / biometrics 
+b. delegated multi-signature capabilities 
+ 
+Enhance Independent Control, Efficiency, Scalability and Sustainability 
+• Eliminate dependence on any single SSI utility network by delivering the vLEI 
+infrastructure using an interoperable and technology agnostic approach; 
+• Reduce dependence on SSI utility network governance structures beyond the control 
+of GLEIF; 
+• Ensure highly performant global scalability; 
+• Establish global best practices for key management; 
+• Aid the development of a competitive market for all the software, tools, and services 
+necessary to implement vLEIs; 
+
+ 
+ 
+verifiable LEI (vLEI) Ecosystem Governance Framework v4.0 
+Page 8 of 13 
+Public 
+2026-03-25_vLEI-EGF-v4.0-Primary-Document _v1.2_Final 
+Document Version 1.2 
+2026-03-25 
+ 
+• Work with QVIs to ensure a sustainable commercial model for vLEIs for GLEIF, QVIs, 
+and Legal Entities and other vLEI Ecosystem stakeholders. 
+9 Principles 
+1. The vLEI Ecosystem Governance Framework MUST enable GLEIF’s role to support and 
+contribute to unique global persistent organizational identity as a public good. 
+2. The vLEI Ecosystem Governance Framework MUST deliver on GLEIF’s vision that every 
+legal entity be able to be identified uniquely, having only one global identity and this 
+identity should include a digital identity. 
+3. The vLEI Ecosystem Governance Framework MUST leverage the principle of free and 
+open access and use of the data in the Global LEI System regarding legal entities and 
+their entity- level and relationships. 
+4. The vLEI Ecosystem Governance Framework MUST support GLEIF’s intention to deliver 
+the vLEI infrastructure using a technology agnostic approach and to use open source 
+whenever possible. 
+5. The vLEI Ecosystem Governance Framework MUST support GLEIF’s use of open 
+standards. 
+6. The vLEI Ecosystem Governance Framework MUST fulfil GLEIF’s intention to make the 
+vLEI infrastructure widely available as broadly useful as possible. 
+7. The vLEI Ecosystem Governance Framework MUST enable interoperability, for the digital 
+identity data of an entity to be represented, exchanged, secured, protected, and verified 
+interoperability using open, public, and royalty-free standards, as well as portability, the 
+ability of identity rights holders to move or transfer a copy of their digital identity data to 
+the agents or systems of their choice. 
+8. The vLEI Ecosystem Governance Framework MUST empower vLEI Holders to secure their 
+digital identity data at rest and in motion, to control their own identifiers and encryption 
+keys, and to employ end-to-end encryption for all interactions and to protect the privacy 
+of their digital identity data when applicable. 
+9. The vLEI Ecosystem Governance Framework MUST ensure verifiability and authenticity 
+by empowering vLEI Holders to provide verifiable proof of the authenticity of their digital 
+identity data. 
+10. The vLEI Ecosystem Governance Framework MUST allow vLEI Ecosystem stakeholders to 
+be accountable to each other for conformance to the purpose, principles, and policies of 
+the vLEI Ecosystem Governance Framework. All vLEI Ecosystem stakeholders MUST be 
+responsible and be able to demonstrate compliance with any other requirements of 
+applicable law. Nothing in the vLEI Ecosystem Governance Framework SHOULD require 
+
+ 
+ 
+verifiable LEI (vLEI) Ecosystem Governance Framework v4.0 
+Page 9 of 13 
+Public 
+2026-03-25_vLEI-EGF-v4.0-Primary-Document _v1.2_Final 
+Document Version 1.2 
+2026-03-25 
+ 
+vLEI Ecosystem stakeholder to breach applicable law in order to perform its obligations 
+under the vLEI Ecosystem Governance Framework. 
+10 General Requirements 
+1. All LEIs contained in vLEIs MUST maintain a LEI Entity Status of Active and a LEI 
+Registration Status of Issued, Pending Transfer or Pending Archival in the Global LEI 
+System. 
+2. All Issuers of vLEIs MUST verify that a Holder’s Autonomic Identifier (AID) is controlled by 
+the Holder. 
+3. All QVIs MUST have executed a vLEI Issuer Qualification Agreement. 
+4. All QVIs MUST successfully complete Annual vLEI Issuer Qualification. 
+5. GLEIF MUST publish the vLEI Ecosystem Governance Framework on gleif.org and follow 
+the policies in the Revisions section for all revisions of the vLEI Ecosystem Governance 
+Framework. 
+6. vLEIs MUST be revocable following the policies specified in vLEI Ecosystem Governance 
+Framework. 
+7. QVIs MUST ensure that third party service providers comply with the vLEI Ecosystem 
+Governance Framework when providing vLEI services to a QVI. 
+11 Revisions 
+1. At a minimum, the vLEI Ecosystem Governance Framework MUST be reviewed annually. 
+2. Interim revisions to the vLEI Ecosystem Governance Framework to reflect necessary 
+technical changes or updates also MAY be considered. 
+a. These revisions MAY be triggered by changes to vLEI Ecosystem 
+services, processes, operations, technical architecture and 
+infrastructure, Identifier or Credential Governance Frameworks. 
+3. Revisions to the Primary Document are subject to the following policies: 
+a. All revisions to the Primary Document MUST be identified with a 
+revision number that is a sequential integer. 
+b. Revisions to the Primary Document SHALL be subject to public 
+review which will be conducted as community reviews by 
+members of the Trust over IP Foundation for a period of at least 
+15 days. 
+4. Revisions to the Controlled Documents are subject to the following policies: 
+
+ 
+ 
+verifiable LEI (vLEI) Ecosystem Governance Framework v4.0 
+Page 10 of 13 
+Public 
+2026-03-25_vLEI-EGF-v4.0-Primary-Document _v1.2_Final 
+Document Version 1.2 
+2026-03-25 
+ 
+a. All revisions to Controlled Documents MUST be identified with a 
+revision number that is a sequential integer. 
+b. Revisions to the vLEI Issuer Qualification Agreement, including all 
+of its appendices, SHALL NOT be subject to public review and will 
+be reviewed and approved by GLEIF only. 
+c. All other Controlled Documents SHALL be subject to public review 
+which will be conducted as community reviews by members of the 
+Trust over IP Foundation for a period of at least 15 days. 
+5. All revisions to the vLEI Ecosystem Governance Framework MUST be approved by GLEIF 
+using its Change Management Process. 
+12 Extensions 
+1. GLEIF welcomes other Governance Frameworks to leverage the vLEI Ecosystem 
+Governance Framework but does not anticipate the need at this time to specify formal 
+extensions from other external Governance Frameworks that will leverage the vLEI 
+Ecosystem Framework. 
+2. The vLEI Ecosystem Governance Framework is extended by the following internal 
+governance frameworks: GLEIF Identifier Governance Framework, Qualified vLEI Issuer 
+Identifier and vLEI Credential Framework and 4 Credential Frameworks. 
+GLEIF Identifier Governance Framework 
+A document that details the purpose, principles, policies, and specifications that apply to the 
+use of the GLEIF Root Autonomic Identifier (AID) and its GLEIF Delegated AIDs in the vLEI 
+Ecosystem. 
+Qualified vLEI Issuer Identifier Governance Framework and vLEI Credential Framework 
+A document that details the requirements to enable the Delegated AIDs and the vLEI to be 
+issued by GLEIF to QVIs which allows the QVIs to issue, verify and revoke Legal Entity vLEI 
+Credentials, Legal Entity Official Organizational Role vLEI Credentials and Legal Entity 
+Engagement Context Role vLEI Credentials. 
+Authorization vLEI Credential Framework 
+The purpose of the AUTH vLEI Credential is to enable simple, safe, secure instruction and 
+authorization by a Legal Entity Authorized Representative (LAR) sent to a Qualified vLEI 
+Issuer (QVI)  for the issuance and revocation of Official Organizational Role vLEI Role 
+Credentials (OOR vLEI Credentials) or Engagement Context Role vLEI Credentials (ECR vLEI 
+Credentials), or to its LARs for the issuance and revocation of ECR vLEI Credentials directly by 
+the Legal Entity. 
+The AUTH vLEI Credentials will become part of the chain of the vLEI Role Credentials. 
+
+ 
+ 
+verifiable LEI (vLEI) Ecosystem Governance Framework v4.0 
+Page 11 of 13 
+Public 
+2026-03-25_vLEI-EGF-v4.0-Primary-Document _v1.2_Final 
+Document Version 1.2 
+2026-03-25 
+ 
+Legal Entity vLEI Credential Framework 
+A document that details the requirements for a vLEI as the entity level credential issued by a 
+QVI to a Legal Entity. 
+Legal Entity Official Organizational Role vLEI Credential Framework 
+A document that details the requirements for vLEI Role Credentials issued by a QVI to official 
+representatives of a Legal Entity. 
+Legal Entity Engagement Context Role vLEI Credential Framework 
+A document that details the requirements for vLEI Role Credentials issued to representatives 
+of a Legal Entity in other than official roles but in functional or other context of engagement. 
+13 Schedule of Controlled Documents 
+The vLEI Ecosystem Governance Framework can be viewed at: 
+https://www.gleif.org/en/vlei/introducing-the-vlei-ecosystem-governance-framework 
+Glossary 
+verifiable LEI (vLEI) Ecosystem Governance Framework Glossary 
+A document that lists all defined terms have been referenced in the vLEI EGF documents. 
+Risk Assessment 
+verifiable LEI (vLEI) Ecosystem Governance Framework Risk Assessment 
+A spreadsheet that assesses certain risk categories regarding the operation of the vLEI 
+Ecosystem and Infrastructure. 
+Trust Assurance and Certification 
+verifiable LEI (vLEI) Ecosystem Governance Framework Trust Assurance Framework 
+This spreadsheet focuses on the ‘MUST’ statements within the other vLEI EGF documents 
+and specifies the services/processes that will be used to evaluate compliance with these 
+statements. 
+Governance Requirements 
+verifiable LEI (vLEI) Ecosystem Governance Framework Governance Requirements 
+This document specifies the governance of GLEIF in its role in the Global LEI System including 
+the regulatory oversight of GLEIF by the Regulatory Oversight Committee. Every LEI must be 
+managed according to this governance which places GLEIF in the management role for the 
+Global LEI System. 
+ 
+
+ 
+ 
+verifiable LEI (vLEI) Ecosystem Governance Framework v4.0 
+Page 12 of 13 
+Public 
+2026-03-25_vLEI-EGF-v4.0-Primary-Document _v1.2_Final 
+Document Version 1.2 
+2026-03-25 
+ 
+Business Requirements 
+verifiable LEI (vLEI) Ecosystem Governance Framework Business Requirements 
+This document specifies certain business requirements for the vLEI services of GLEIF and 
+Qualified vLEI Issuers (QVIs). 
+Technical Requirements 
+verifiable LEI (vLEI) Ecosystem Governance Framework 
+Technical Requirements Part 1: KERI Infrastructure 
+verifiable LEI (vLEI) Ecosystem Governance Framework 
+Technical Requirements Part 2: vLEI Credentials 
+verifiable LEI (vLEI) Ecosystem Governance Framework 
+Technical Requirements Part 3: Credential Schema Registry 
+Information Trust Requirements 
+verifiable LEI (vLEI) Ecosystem Governance Framework Information Trust Policies 
+A document that defines the information security, privacy, availability, confidentiality, and 
+processing integrity policies that apply to vLEI Ecosystem stakeholders. 
+Legal Agreements 
+vLEI Issuer Qualification Agreement 
+An agreement between GLEIF and an organization that has been qualified by 
+GLEIF to operate as a Qualified vLEI Issuer (QVI). The vLEI Issuer Qualification 
+Agreement will be the same for all QVIs. 
+Appendices to vLEI Issuer Qualification Agreement 
+Appendix 1: Non-Disclosure Agreement (NDA) 
+An agreement that outlines requirements for handling confidential information. 
+Appendix 2: vLEI Issuer Qualification Program Manual  
+The document that describes the Qualification program. 
+Appendix 3: vLEI Issuer Qualification Program Checklist 
+The document that details the control and process requirements for Qualification. 
+Appendix 4: vLEI Issuer Contact Details 
+A list of contact details of GLEIF and the Candidate vLEI Issuer during Qualification and of 
+GLEIF and the QVI during ongoing operations. 
+
+ 
+ 
+verifiable LEI (vLEI) Ecosystem Governance Framework v4.0 
+Page 13 of 13 
+Public 
+2026-03-25_vLEI-EGF-v4.0-Primary-Document _v1.2_Final 
+Document Version 1.2 
+2026-03-25 
+ 
+Appendix 5: Qualified vLEI Issuer Service Level Agreement (SLA) 
+A document that details the services to be provided by GLEIF and Qualified vLEI Issuers. 
+Appendix 6: Qualified vLEI Issuer TrustMark Terms of Use 
+A document that details the terms of use of the TrustMark by a QVI. 
+Appendix 7: Qualified vLEI Issuer-Legal Entity Required Contract Terms 
+A document that specifies the contract terms that must be included in the agreement 
+between a QVI and a Legal Entity for vLEI services. 
+Identifier and Credential Governance Frameworks 
+GLEIF Identifier Governance Framework 
+A document that details the purpose, principles, policies, and specifications that apply to the 
+use of the GLEIF Root Autonomic Identifier (AID) and its GLEIF Delegated AIDs in the vLEI 
+Ecosystem. 
+Qualified vLEI Issuer Identifier Governance Framework and vLEI Credential Framework 
+A document that details the requirements to enable the Delegated AIDs and the vLEI to be 
+issued by GLEIF to QVIs which allows the QVIs to issue, verify and revoke Legal Entity vLEI 
+Credentials, Legal Entity Official Organizational Role vLEI Credentials and Legal Entity 
+Engagement Context Role vLEI Credentials. 
+Authorization vLEI Credential Framework 
+The purpose of the AUTH vLEI Credential is to enable simple, safe, secure instruction and 
+authorization by a Legal Entity Authorized Representative (LAR) sent to a Qualified vLEI 
+Issuer (QVI)  for the issuance and revocation of Official Organizational Role vLEI Role 
+Credentials (OOR vLEI Credentials) or Engagement Context Role vLEI Credentials (ECR vLEI 
+Credentials), or to its LARs for the issuance and revocation of ECR vLEI Credentials directly by 
+the Legal Entity. 
+The AUTH vLEI Credentials will become part of the chain of the vLEI Role Credentials. 
+Legal Entity vLEI Credential Framework 
+A document that details the requirements for a vLEI as the entity level credential issued by a 
+QVI to a Legal Entity. 
+Legal Entity Official Organizational Role vLEI Credential Framework 
+A document that details the requirements for vLEI Role Credentials issued to by a QVI to 
+official representatives of a Legal Entity. 
+Legal Entity Engagement Context Role vLEI Credential Framework 
+A document that details the requirements for vLEI Role Credentials issued to representatives 
+of a Legal Entity in other than official roles but in functional or other context of engagement. 

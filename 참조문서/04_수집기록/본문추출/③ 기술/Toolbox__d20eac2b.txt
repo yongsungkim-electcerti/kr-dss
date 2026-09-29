@@ -1,0 +1,66 @@
+EU Digital Identity Wallet Toolbox process | Shaping Europe’s digital future
+Skip to main content
+EU Digital Identity Wallet Toolbox process
+Member State Experts are working the EU Digital Identity Toolbox which further secures digital identity and establishes trust in online transactions.
+In June 2021, the Commission
+adopted a Recommendation
+calling on Member States to work towards the development of a Toolbox including a technical Architecture and Reference Framework (ARF), a set of common standards and technical specifications and a set of common guidelines and best practice.
+The Recommendation specifies that toolbox serves as a basis for the implementation of the
+European Digital Identity Framework Regulation (EUDI)
+which entered into force in may 2024.
+The Toolbox complements the EUDI regulation and is a crucial first step enabling the creation of a robust framework for digital identification and authentication based on common standards across the EU. The toolbox aims to ensure a high level of trust in digital transactions in Europe. Member States are working closely with the Commission to continuously update the Toolbox.
+EU Digital Identity Wallets
+EU Digital Identity Wallets will provide a secure and convenient way for European citizens and businesses to share identity data needed for accessing digital services such as checking in at the airport, renting a car, opening a bank account, or when logging in to their accounts on large online platforms.
+With a click of a button on their phone they will be able to securely share information stored in digital versions of their driving licence, professional or educational credentials, and medical prescriptions.
+Blueprint for an age verification solution
+In July 2025, the Commission released an EU white-label age-verification blueprint. This pilot will help online platforms implement a privacy-preserving age verification method across Member States. This solution is designed to be interoperable with future European Digital Identity Wallets.
+The Blueprint for an age verification solution will allow users to confirm they are over 18 to access age restricted content without revealing additional personal details. While the method itself processes detailed personal data for onboarding, online services only receive a simple confirmation of age, ensuring privacy. This solution is based on the same technical specifications as the European Digital Identity Wallets, serving as an early implementation before their full rollout by the end of 2026.
+Several Member States, including Denmark, France, Greece, Italy, and Spain, are expected to integrate this technical solution into their national digital wallets or will develop customised age verification applications.
+The Toolbox
+The first version of a common Toolbox to implement the EU Digital Identity Wallet was published by the Commission on 10 February 2023. This document, again developed by Member States in close collaboration with the Commission, serves as the technical backbone of all future EU Digital Identity wallets, ensuring their safety, interoperability, and user friendliness. It has been consistently updated in the following years.
+The toolbox consists of:
+The Architecture and Reference Framework (ARF): set out the common architecture of the ecosystem and specify the standards, protocols, and formats of information exchange between issuers, wallets, and service providers.
+The Reference Implementation: demo EUDI software, which consists of open-source code libraries, modular components, and a fully functioning reference application based on the ARF.
+Developed technical standards: Enabling faster deployment and adoption of European Digital Identity Wallets.
+The European Digital Identity Architecture and Reference Framework
+On 22 February 2022,
+the eIDAS expert group adopted an outline of an Architecture and Reference Framework (ARF)
+for a future EU Digital Identity Wallet (EUDI). It has been updated numerous times. The current version of the ARF is based on the adopted EUDI regulation, as well as all the currently adopted implementing regulations.
+The EU Digital Identity Wallet Pilot Process
+The Toolbox is also the basis to engineer a prototype EU Digital Identity Wallets that are tested in a number of
+large-scale pilots (LSPs)
+. These LSPs are funded under the Digital Europe Programme to address high-priority wallet use-cases, including the Mobile Driving Licence, eHealth, payments, and education/professional qualifications.
+Quick Links
+European Digital Identity (EUDI) Regulation
+EU Digital Identity Recommendation
+EU Digital Identity Wallet Pilot implementation
+EU Digital Identity Wallet - technical specifications
+EUDI Wallet Reference implementation - Github space
+DIGITAL success stories – EU Digital Identity Wallet Pilots (fact page)
+Follow us
+EU Digital Identity Wallet on X
+Latest News
+News article
+24 April 2026
+European Cybersecurity Certification Week 2026: Advancing EU Cybersecurity in Cyprus
+The European Cybersecurity Certification Week, hosted by the Cyprus Presidency of the Council of the EU, took place from 14 to 17 April in Ayia Napa.
+Digibyte
+19 November 2025
+Commission proposes European Business Wallets to simplify business operations and enhance competitiveness across the EU
+In a significant move towards simplifying business operations across EU, the Commission has proposed a regulation to establish European Business Wallets.
+Digibyte
+06 October 2025
+Digital Europe Programme amended to accelerate the Commission’s digital ambitions
+The European Commission has made the first amendment to the Digital Europe (DIGITAL) Work Programme 2025-2027 ensuring EU resources continue to support the Commission’s ambitions on developing and deploying critical technologies in Europe.
+News article
+24 September 2024
+The EU boosts the certification of the EU Digital Identity Wallets
+The European Commission has requested ENISA, the EU Agency for Cybersecurity, to provide support for the certification of European Digital Identity Wallets.
+Browse Trust services and eIdentification
+Related Content
+Big Picture
+Electronic identification - eID
+Electronic identification (eID) is one of the tools to ensure secure access to online services and to carry out electronic transactions in a safer way.
+Last update
+22 June 2026
+Print as PDF

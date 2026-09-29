@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Release history &mdash; GITB TDL Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.css" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d4340937"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Index" href="../genindex.html" />
+    <link rel="prev" title="Example test suites" href="../examples/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GITB TDL Documentation
+              <img src="../_static/logo_itb.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                GITB TDL version 1.30.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helloWorld/index.html">Hello world</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testsuite/index.html">Test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testcase/index.html">Test cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptlets/index.html">Scriptlets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/index.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../expressions/index.html">Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../constructs/index.html">Test steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handlers/index.html">Test step handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Example test suites</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Release history</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-30-0-21-09-2026">Release 1.30.0 - 21/09/2026</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-29-0-27-03-2026">Release 1.29.0 - 27/03/2026</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-28-0-10-10-2025">Release 1.28.0 - 10/10/2025</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-27-0-24-06-2025">Release 1.27.0 - 24/06/2025</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-26-0-12-06-2025">Release 1.26.0 - 12/06/2025</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-25-0-31-01-2025">Release 1.25.0 - 31/01/2025</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-24-0-15-10-2024">Release 1.24.0 - 15/10/2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-23-0-20-06-2024">Release 1.23.0 - 20/06/2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-22-0-08-04-2024">Release 1.22.0 - 08/04/2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-21-0-06-10-2023">Release 1.21.0 - 06/10/2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-19-0-17-03-2023">Release 1.19.0 - 17/03/2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-18-0-17-10-2022">Release 1.18.0 - 17/10/2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-17-0-20-07-2022">Release 1.17.0 - 20/07/2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-16-0-18-03-2022">Release 1.16.0 - 18/03/2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-15-0-29-11-2021">Release 1.15.0 - 29/11/2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-14-0-17-08-2021">Release 1.14.0 - 17/08/2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-13-0-01-07-2021">Release 1.13.0 - 01/07/2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-12-0-03-03-2021">Release 1.12.0 - 03/03/2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-11-1-11-12-2020">Release 1.11.1 - 11/12/2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-11-0-13-11-2020">Release 1.11.0 - 13/11/2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-10-0-07-09-2020">Release 1.10.0 - 07/09/2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-9-0-30-04-2020">Release 1.9.0 - 30/04/2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-8-0-20-01-2020">Release 1.8.0 - 20/01/2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-7-2-11-12-2019">Release 1.7.2 - 11/12/2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-7-0-07-10-2019">Release 1.7.0 - 07/10/2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-6-1-14-06-2019">Release 1.6.1 - 14/06/2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-6-0-29-05-2019">Release 1.6.0 - 29/05/2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-5-0-06-11-2018">Release 1.5.0 - 06/11/2018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-4-1-28-09-2018">Release 1.4.1 - 28/09/2018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-3-0-25-05-2018">Release 1.3.0 - 25/05/2018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-1-2-0-18-03-2018">Release 1.2.0 - 18/03/2018</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GITB TDL Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Release history</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="release-history">
+<span id="changelog"></span><span id="index-0"></span><h1>Release history<a class="headerlink" href="#release-history" title="Link to this heading"></a></h1>
+<p>The current section provides an overview of the changes in each GITB TDL release.</p>
+<p>Release numbers follow <strong>global numbering</strong> covering all Test Bed components, meaning that certain releases may have not
+actually introduced changes to the GITB TDL. The current page lists only the releases that introduced changes, whereas
+those not included are global maintenance releases that made no changes to the GITB TDL.</p>
+<p>The latest GITB TDL release is <strong>1.30.0</strong>.</p>
+<section id="release-1-30-0-21-09-2026">
+<h2>Release 1.30.0 - 21/09/2026<a class="headerlink" href="#release-1-30-0-21-09-2026" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">result</span></code> element for the <code class="docutils literal notranslate"><span class="pre">receive</span></code> step to adapt the step’s report before completion and, for the <code class="docutils literal notranslate"><span class="pre">HttpMessagingV2</span></code> and <code class="docutils literal notranslate"><span class="pre">SoapMessagingV2</span></code> handlers, dynamically generate the returned response.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-receive-result"><span class="std std-ref">Adapting the step’s result and generating responses</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-httpmessagingv2"><span class="std std-ref">HttpMessagingV2</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-soapmessagingv2"><span class="std std-ref">SoapMessagingV2</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Unmatched incoming calls to the <code class="docutils literal notranslate"><span class="pre">HttpMessagingV2</span></code> and <code class="docutils literal notranslate"><span class="pre">SoapMessagingV2</span></code> handlers are now automatically parked and retried, reducing the need for a custom messaging service to handle simple race conditions.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">handlerApiType</span></code> attribute to select the REST or SOAP API style used to call an external test service handler.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-handlerapitype"><span class="std std-ref">Selecting the API style for external service handlers</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New built-in <code class="docutils literal notranslate"><span class="pre">PdfValidator</span></code> handler to validate PDF documents, including conformance to PDF/A and PDF/UA profiles.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-pdfvalidator"><span class="std std-ref">PdfValidator</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">TextProcessor</span></code> built-in handler with operations for encoding and decoding text.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-textprocessor"><span class="std std-ref">TextProcessor</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">replace</span></code> operation for the <code class="docutils literal notranslate"><span class="pre">RegExpProcessor</span></code> handler to perform text replacements based on regular expressions.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-regexpprocessor-replace"><span class="std std-ref">RegExpProcessor - replace</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support for CTA (Complex Type Alternative) XPath checking in XML Schema 1.1 for the <code class="docutils literal notranslate"><span class="pre">XmlValidator</span></code> and <code class="docutils literal notranslate"><span class="pre">XsdValidator</span></code> handlers.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-xmlvalidator"><span class="std std-ref">XmlValidator</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-xsdvalidator"><span class="std std-ref">XsdValidator</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">TemplateProcessor</span></code> now processes any parameter values as long as they can be represented as primitive values.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-templateprocessor"><span class="std std-ref">TemplateProcessor</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">scope</span></code> attribute for the <code class="docutils literal notranslate"><span class="pre">exit</span></code> step to stop the execution of a step sequence, loop, flow or scriptlet without terminating the test session.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-exit-scope"><span class="std std-ref">Stopping execution without ending the test session</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">hiddenContainer</span></code> attribute for the <code class="docutils literal notranslate"><span class="pre">flow</span></code> step to hide its boundary in the test execution diagram.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-flow"><span class="std std-ref">flow</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">ACTOR</span></code> alias to more easily refer to the SUT actor’s own configuration properties in test cases.</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions-actor"><span class="std std-ref">Actor configuration parameters</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">dependsOn</span></code>, <code class="docutils literal notranslate"><span class="pre">dependsOnValue</span></code> and <code class="docutils literal notranslate"><span class="pre">included</span></code> attributes for <code class="docutils literal notranslate"><span class="pre">instruct</span></code> and <code class="docutils literal notranslate"><span class="pre">request</span></code> elements of <code class="docutils literal notranslate"><span class="pre">interact</span></code> steps, to conditionally display or include them based on other provided inputs.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-conditional"><span class="std std-ref">Conditionally including and depending on interaction elements</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support for rich text (HTML) content in <code class="docutils literal notranslate"><span class="pre">instruct</span></code> elements via a <code class="docutils literal notranslate"><span class="pre">mimeType</span></code> of <code class="docutils literal notranslate"><span class="pre">text/html</span></code>.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-instruct-presentation"><span class="std std-ref">Displaying data using instruct elements</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">desc</span></code> attribute of <code class="docutils literal notranslate"><span class="pre">instruct</span></code> elements is now optional, to simplify displaying instructions without titles.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-instruct-presentation"><span class="std std-ref">Displaying data using instruct elements</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">interact</span></code> step’s <code class="docutils literal notranslate"><span class="pre">request</span></code> elements now allow multiple values for a single <code class="docutils literal notranslate"><span class="pre">UPLOAD</span></code> input via the <code class="docutils literal notranslate"><span class="pre">multiple</span></code> attribute.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-multiple-uploads"><span class="std std-ref">Providing multiple values for a single input</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The test suite and test case <code class="docutils literal notranslate"><span class="pre">lastModified</span></code> timestamp values are now displayed toi administrators.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-metadata"><span class="std std-ref">Metadata (test case)</span></a>, <a class="reference internal" href="../testsuite/index.html#test-suite-metadata"><span class="std std-ref">Metadata (test suite)</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-29-0-27-03-2026">
+<h2>Release 1.29.0 - 27/03/2026<a class="headerlink" href="#release-1-29-0-27-03-2026" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">DomibusMessaging</span></code> built-in handler to allow sending and receiving messages, and also acknowledgment checks, through a Domibus eDelivery Access Point.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-domibusmessaging"><span class="std std-ref">DomibusMessaging</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">ZipProcessor</span></code> built-in handler to allow processing of ZIP archives.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-zipprocessor"><span class="std std-ref">ZipProcessor</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">order</span></code> attribute for test suites to define their relative ordering in displays, reports and during test execution.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite"><span class="std std-ref">Test suites</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Extend the <code class="docutils literal notranslate"><span class="pre">DisplayProcessor</span></code> handler to enable displaying a detailed validation report, created manually or by aggregating other step reports.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-displayprocessor"><span class="std std-ref">DisplayProcessor</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Extend the <code class="docutils literal notranslate"><span class="pre">SimulatedMessaging</span></code> handler to enable displaying a detailed validation report, created manually or by aggregating other step reports.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-simulatedmessaging"><span class="std std-ref">SimulatedMessaging</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">showControls</span></code> attribute for <code class="docutils literal notranslate"><span class="pre">instruct</span></code> elements of <code class="docutils literal notranslate"><span class="pre">interact</span></code> steps, to hide user interface controls for the instruction.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-instruct-presentation"><span class="std std-ref">Displaying data using instruct elements</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">level</span></code> attribute for <code class="docutils literal notranslate"><span class="pre">instruct</span></code> elements of <code class="docutils literal notranslate"><span class="pre">interact</span></code> steps, to present messages as stylised severity or status feedback.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-instruct-presentation"><span class="std std-ref">Displaying data using instruct elements</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">report</span></code> attribute for <code class="docutils literal notranslate"><span class="pre">instruct</span></code> elements of <code class="docutils literal notranslate"><span class="pre">interact</span></code> steps, to include them in reports.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-instruct-presentation"><span class="std std-ref">Displaying data using instruct elements</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">size</span></code> attribute for <code class="docutils literal notranslate"><span class="pre">request</span></code> elements of <code class="docutils literal notranslate"><span class="pre">interact</span></code> steps, to control the height of text areas and editors, and the number of presented items in multiple selection lists.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-form-inputs"><span class="std std-ref">Requesting inputs using request elements</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">accept</span></code> attribute for <code class="docutils literal notranslate"><span class="pre">request</span></code> elements of <code class="docutils literal notranslate"><span class="pre">interact</span></code> steps, to limit the accepted file types for file uploads.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-form-inputs"><span class="std std-ref">Requesting inputs using request elements</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">default</span></code> attribute for <code class="docutils literal notranslate"><span class="pre">request</span></code> elements of <code class="docutils literal notranslate"><span class="pre">interact</span></code> steps, to set a default value for input controls.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-form-inputs"><span class="std std-ref">Requesting inputs using request elements</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>When looking up test suite resources (e.g., in <code class="docutils literal notranslate"><span class="pre">imports</span></code>), fall back to considering paths as relative to the test suite definition file if not found under the test suite root.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">Imports</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-steps-common-documentation"><span class="std std-ref">Rich documentation per step</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support XML Schema 1.1 in the <code class="docutils literal notranslate"><span class="pre">XmlValidator</span></code> and <code class="docutils literal notranslate"><span class="pre">XsdValidator</span></code>, and support the <code class="docutils literal notranslate"><span class="pre">schemaVersion</span></code> attribute to specify the version to use.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-xmlvalidator"><span class="std std-ref">XmlValidator</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-xsdvalidator"><span class="std std-ref">XsdValidator</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Consider REST API inputs when evaluating expressions at test case load time (e.g., <code class="docutils literal notranslate"><span class="pre">if</span></code> steps marked as <code class="docutils literal notranslate"><span class="pre">static</span></code>).</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-if-hide-boundary"><span class="std std-ref">Displaying contained steps without a boundary</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Step reports for steps lacking a description now use their title if applicable and present.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test steps</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support for adapting the name and relative display order of predefined actors (user, administrator and test engine).</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-actors"><span class="std std-ref">Actors</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">actor</span></code> attribute for <code class="docutils literal notranslate"><span class="pre">verify</span></code>, <code class="docutils literal notranslate"><span class="pre">process</span></code> and <code class="docutils literal notranslate"><span class="pre">interact</span></code> steps, to select the actor under which to display the step.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-step-actor"><span class="std std-ref">Display steps under specific actors</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-28-0-10-10-2025">
+<h2>Release 1.28.0 - 10/10/2025<a class="headerlink" href="#release-1-28-0-10-10-2025" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">version</span></code> input for the <code class="docutils literal notranslate"><span class="pre">HttpMessagingV2</span></code> handler to control the HTTP protocol version used when naming requests.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-httpmessagingv2"><span class="std std-ref">HttpMessagingV2</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Automated configuration of test service handler authentication via the Test Bed’s UI and REST API.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-authentication"><span class="std std-ref">Authenticate calls to external handlers</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Test suite and test case metadata includes new <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> and <code class="docutils literal notranslate"><span class="pre">scopes</span></code> sections.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-metadata-dependencies"><span class="std std-ref">dependencies</span></a>, <a class="reference internal" href="../testsuite/index.html#test-suite-metadata-scopes"><span class="std std-ref">scopes</span></a>, <a class="reference internal" href="../testcase/index.html#test-case-metadata-dependencies"><span class="std std-ref">dependencies</span></a>, <a class="reference internal" href="../testcase/index.html#test-case-metadata-scopes"><span class="std std-ref">scopes</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">from</span></code> and <code class="docutils literal notranslate"><span class="pre">to</span></code> actors of the <code class="docutils literal notranslate"><span class="pre">btxn</span></code> step are now optional, delegating to the relevant <code class="docutils literal notranslate"><span class="pre">send</span></code> or <code class="docutils literal notranslate"><span class="pre">receive</span></code> step actors.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-btxn"><span class="std std-ref">btxn</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support for managing timeouts to external test service handlers used in test steps.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-handlertimeouts"><span class="std std-ref">Timeouts for external service handlers</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">JsonPathProcessor</span></code> to process JSON content using JSONPath expressions (supporting <code class="docutils literal notranslate"><span class="pre">process</span></code>, <code class="docutils literal notranslate"><span class="pre">exists</span></code> and <code class="docutils literal notranslate"><span class="pre">count</span></code> operations).</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-jsonpathprocessor"><span class="std std-ref">JsonPathProcessor</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support for YAML input and output when using the <code class="docutils literal notranslate"><span class="pre">JsonPointerProcessor</span></code> and <code class="docutils literal notranslate"><span class="pre">JsonPathProcessor</span></code>.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-jsonpointerprocessor"><span class="std std-ref">JsonPointerProcessor</span></a> <a class="reference internal" href="../handlers/index.html#handlers-jsonpathprocessor"><span class="std std-ref">JsonPathProcessor</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">CollectionUtils</span></code> map operations to extract <code class="docutils literal notranslate"><span class="pre">keys</span></code>, <code class="docutils literal notranslate"><span class="pre">values</span></code> and <code class="docutils literal notranslate"><span class="pre">entries</span></code>.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-collectionutils"><span class="std std-ref">CollectionUtils</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">YamlConverter</span></code> processor with operations to convert JSON to YAML (<code class="docutils literal notranslate"><span class="pre">jsonToYaml</span></code>), and YAML to JSON (<code class="docutils literal notranslate"><span class="pre">yamltoJson</span></code>).</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-yamlconverter"><span class="std std-ref">YamlConverter</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New iterator-style looping for the <code class="docutils literal notranslate"><span class="pre">foreach</span></code> step using the new <code class="docutils literal notranslate"><span class="pre">item</span></code> and <code class="docutils literal notranslate"><span class="pre">of</span></code> attributes.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-foreach"><span class="std std-ref">foreach</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-27-0-24-06-2025">
+<h2>Release 1.27.0 - 24/06/2025<a class="headerlink" href="#release-1-27-0-24-06-2025" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>New inputs for the <code class="docutils literal notranslate"><span class="pre">HttpMessagingV2</span></code> handler to control the display of information in step reports.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-httpmessagingv2"><span class="std std-ref">HttpMessagingV2</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-httpmessagingv2-reportdisplay"><span class="std std-ref">Tuning reported data</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New inputs for the <code class="docutils literal notranslate"><span class="pre">SoapMessagingV2</span></code> handler to control the display of information in step reports.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-soapmessagingv2"><span class="std std-ref">SoapMessagingV2</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-soapmessagingv2-reportdisplay"><span class="std std-ref">Tuning reported data</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">showLocationPaths</span></code> input for the <code class="docutils literal notranslate"><span class="pre">XmlValidator</span></code> and <code class="docutils literal notranslate"><span class="pre">SchematronValidator</span></code> handlers to show reported item’s location paths.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-xmlvalidator"><span class="std std-ref">XmlValidator</span></a> <a class="reference internal" href="../handlers/index.html#handlers-schematronvalidator"><span class="std std-ref">SchematronValidator</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-26-0-12-06-2025">
+<h2>Release 1.26.0 - 12/06/2025<a class="headerlink" href="#release-1-26-0-12-06-2025" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.26.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.26.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">JsonValidator</span></code> handler for <code class="docutils literal notranslate"><span class="pre">verify</span></code> steps to validate JSON against JSON Schema.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-jsonvalidator"><span class="std std-ref">JsonValidator</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">ShaclValidator</span></code> handler for <code class="docutils literal notranslate"><span class="pre">verify</span></code> steps to validate RDF models against SHACL shapes.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-shaclvalidator"><span class="std std-ref">ShaclValidator</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">YamlValidator</span></code> handler for <code class="docutils literal notranslate"><span class="pre">verify</span></code> steps to validate YAML against JSON Schema.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-yamlvalidator"><span class="std std-ref">YamlValidator</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support the delegation of an <code class="docutils literal notranslate"><span class="pre">interact</span></code> step to an external handler service instead of the default UI-based approach, that will be conditionally triggered to complete the interaction.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-handler"><span class="std std-ref">Delegating to external handler services</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Extend all test steps with a <code class="docutils literal notranslate"><span class="pre">skipped</span></code> attribute to allow them being conditionally skipped during test execution.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-skipped"><span class="std std-ref">Skip test steps</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Introduce a <code class="docutils literal notranslate"><span class="pre">RdfUtils</span></code> handler for <code class="docutils literal notranslate"><span class="pre">process</span></code> steps to manipulate (<code class="docutils literal notranslate"><span class="pre">merge</span></code>, <code class="docutils literal notranslate"><span class="pre">convert</span></code>) and query (<code class="docutils literal notranslate"><span class="pre">ask</span></code>, <code class="docutils literal notranslate"><span class="pre">construct</span></code>, <code class="docutils literal notranslate"><span class="pre">select</span></code>) RDF models.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-rdfutils"><span class="std std-ref">RdfUtils</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Add a <code class="docutils literal notranslate"><span class="pre">find</span></code> operation to <code class="docutils literal notranslate"><span class="pre">CollectionUtils</span></code> to support searching for and returning a value from a <code class="docutils literal notranslate"><span class="pre">list</span></code> or <code class="docutils literal notranslate"><span class="pre">map</span></code> (with case-sensitive matching or not).</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-collectionutils-find"><span class="std std-ref">CollectionUtils - find</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Extend the <code class="docutils literal notranslate"><span class="pre">contains</span></code> operation of <code class="docutils literal notranslate"><span class="pre">CollectionUtils</span></code> to support lookups that ignore casing.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-collectionutils-contains"><span class="std std-ref">CollectionUtils - contains</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Extend the <code class="docutils literal notranslate"><span class="pre">append</span></code> operation of <code class="docutils literal notranslate"><span class="pre">CollectionUtils</span></code> to support appending only missing items (case-sensitive or not) to the target <code class="docutils literal notranslate"><span class="pre">map</span></code> or <code class="docutils literal notranslate"><span class="pre">list</span></code>.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-collectionutils-append"><span class="std std-ref">CollectionUtils - append</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support the generation of multiple test case <code class="docutils literal notranslate"><span class="pre">output</span></code> messages based on condition matching logic defined by the <code class="docutils literal notranslate"><span class="pre">match</span></code> attribute (set as <code class="docutils literal notranslate"><span class="pre">first</span></code>, <code class="docutils literal notranslate"><span class="pre">all</span></code> or <code class="docutils literal notranslate"><span class="pre">cascade</span></code>).</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">Output</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Consider the type of test case and scriptlet <code class="docutils literal notranslate"><span class="pre">imports</span></code> optional, with <code class="docutils literal notranslate"><span class="pre">binary</span></code> as the default.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">Imports</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Extended the <code class="docutils literal notranslate"><span class="pre">StringValidator</span></code>, <code class="docutils literal notranslate"><span class="pre">NumberValidator</span></code>, <code class="docutils literal notranslate"><span class="pre">ExpressionValidator</span></code>, <code class="docutils literal notranslate"><span class="pre">RegExpValidator</span></code> and <code class="docutils literal notranslate"><span class="pre">XPathValidator</span></code> with optional <code class="docutils literal notranslate"><span class="pre">successMessage</span></code> and <code class="docutils literal notranslate"><span class="pre">failureMessage</span></code> inputs to add user-friendly messages in the resulting report.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-stringvalidator"><span class="std std-ref">StringValidator</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-numbervalidator"><span class="std std-ref">NumberValidator</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-expressionvalidator"><span class="std std-ref">ExpressionValidator</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-regexpvalidator"><span class="std std-ref">RegExpValidator</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-xpathvalidator"><span class="std std-ref">XPathValidator</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Applied consistent naming (with backwards compatibility through aliases) for the <code class="docutils literal notranslate"><span class="pre">NumberValidator</span></code>, <code class="docutils literal notranslate"><span class="pre">StringValidator</span></code>, <code class="docutils literal notranslate"><span class="pre">XPathValidator</span></code>, <code class="docutils literal notranslate"><span class="pre">XsdValidator</span></code>, <code class="docutils literal notranslate"><span class="pre">SchematronValidator</span></code>, <code class="docutils literal notranslate"><span class="pre">XsltProcessor</span></code> and <code class="docutils literal notranslate"><span class="pre">JsonPointerProcessor</span></code> built-in step handlers.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-predefined-handlers"><span class="std std-ref">Built-in handlers</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Allow <strong>scriptlet inputs</strong> for flags used at test case load time to refer to <strong>configuration properties</strong>.</p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets-dynamic-references"><span class="std std-ref">Dynamic presentation in scriptlets</span></a>, <a class="reference internal" href="../scriptlets/index.html#scriptlets-dynamic-steps"><span class="std std-ref">Dynamic steps in scriptlets</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Extend the <code class="docutils literal notranslate"><span class="pre">interact</span></code> step with a <code class="docutils literal notranslate"><span class="pre">blocking</span></code> attribute (by default “false”) to automatically proceed to the next step in case only <code class="docutils literal notranslate"><span class="pre">instruct</span></code> elements are defined.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-instruct-presentation"><span class="std std-ref">Displaying data using instruct elements</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Extend the <code class="docutils literal notranslate"><span class="pre">request</span></code> elements of <code class="docutils literal notranslate"><span class="pre">interact</span></code> steps to allow specifying inputs as <code class="docutils literal notranslate"><span class="pre">required</span></code> (optional remaining the default).</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact-form-inputs"><span class="std std-ref">Requesting inputs using request elements</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Consider as optional the <code class="docutils literal notranslate"><span class="pre">from</span></code> and <code class="docutils literal notranslate"><span class="pre">to</span></code> of <code class="docutils literal notranslate"><span class="pre">receive</span></code> steps defaulting, respectively, to the SUT and non-SUT actors.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-receive-actors"><span class="std std-ref">Explicitly specifying from and to actors</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Consider as optional the <code class="docutils literal notranslate"><span class="pre">from</span></code> and <code class="docutils literal notranslate"><span class="pre">to</span></code> of <code class="docutils literal notranslate"><span class="pre">send</span></code> steps defaulting, respectively, to the non-SUT and SUT actors.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-send-actors"><span class="std std-ref">Explicitly specifying from and to actors</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Extend the <code class="docutils literal notranslate"><span class="pre">assign</span></code> step with the <code class="docutils literal notranslate"><span class="pre">byValue</span></code> attribute to allow choosing by-value or by-reference assignment for maps and lists.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-assign-by-value"><span class="std std-ref">Assignment by-reference and by-value</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Remove the <strong>scope isolation</strong> requirement for remotely loaded <strong>scriptlets</strong>, making them identical behaviour-wise to local ones.</p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">Scriptlets</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-25-0-31-01-2025">
+<h2>Release 1.25.0 - 31/01/2025<a class="headerlink" href="#release-1-25-0-31-01-2025" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.25.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.25.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Support <strong>test case groups</strong> within which only a single successful result is needed to ensure conformance.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-groups"><span class="std std-ref">Test case groups</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Allow the <code class="docutils literal notranslate"><span class="pre">send</span></code>, <code class="docutils literal notranslate"><span class="pre">receive</span></code> and <code class="docutils literal notranslate"><span class="pre">process</span></code> steps to be configured with their severity level in case of failures via the <code class="docutils literal notranslate"><span class="pre">level</span></code> attribute.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Allow the <code class="docutils literal notranslate"><span class="pre">send</span></code>, <code class="docutils literal notranslate"><span class="pre">receive</span></code>, <code class="docutils literal notranslate"><span class="pre">process</span></code> and <code class="docutils literal notranslate"><span class="pre">verify</span></code> steps to have their outcome inverted via the <code class="docutils literal notranslate"><span class="pre">invert</span></code> attribute.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">DisplayProcessor</span></code> can now be used without parameters to only display an overall result.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-displayprocessor"><span class="std std-ref">DisplayProcessor</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support <strong>test case output messages</strong> also for undefined outcomes.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">Output</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Optionally record the original file name for files uploaded via <code class="docutils literal notranslate"><span class="pre">interact</span></code> steps.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support <code class="docutils literal notranslate"><span class="pre">exit</span></code> steps terminating test sessions with an undefined outcome.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-exit"><span class="std std-ref">exit</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Steps defining children support the <code class="docutils literal notranslate"><span class="pre">stopOnChildError</span></code> flag to stop processing upon child error but not terminate the test session.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-stoponchilderror"><span class="std std-ref">Skip child steps in case of error</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">group</span></code> step’s boundary can now be hidden by means of the <code class="docutils literal notranslate"><span class="pre">hiddenContainer</span></code> flag.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-group"><span class="std std-ref">group</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">XPathProcessor</span></code> processing handler to extract content from XML using XPath.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-xpathprocessor"><span class="std std-ref">XPathProcessor</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-24-0-15-10-2024">
+<h2>Release 1.24.0 - 15/10/2024<a class="headerlink" href="#release-1-24-0-15-10-2024" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.24.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.24.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Support for optional scriptlet parameters and parameters set as empty by default.</p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets-elements-params"><span class="std std-ref">Params</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">VariableUtils</span></code> built-in processor for common operations (<code class="docutils literal notranslate"><span class="pre">exists</span></code>, <code class="docutils literal notranslate"><span class="pre">type</span></code>) on variables.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-variableutils"><span class="std std-ref">VariableUtils</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New operation for the <code class="docutils literal notranslate"><span class="pre">CollectionUtils</span></code> built-in processor to append collections.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-collectionutils"><span class="std std-ref">CollectionUtils</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New inputs for the <code class="docutils literal notranslate"><span class="pre">HttpMessagingV2</span></code> built-in messaging handler to set maximum timeouts (connection and request) when calling a remote service.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-httpmessagingv2-send"><span class="std std-ref">Use in send steps</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-23-0-20-06-2024">
+<h2>Release 1.23.0 - 20/06/2024<a class="headerlink" href="#release-1-23-0-20-06-2024" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.23.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.23.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">HttpMessagingV2</span></code> handler for HTTP messaging, replacing and improving upon the deprecated <code class="docutils literal notranslate"><span class="pre">HttpMessaging</span></code> and <code class="docutils literal notranslate"><span class="pre">HttpsMessaging</span></code>.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-httpmessagingv2"><span class="std std-ref">HttpMessagingV2</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">SoapMessagingV2</span></code> handler for SOAP messaging, replacing and improving upon the deprecated <code class="docutils literal notranslate"><span class="pre">SoapMessaging</span></code>.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-soapmessagingv2"><span class="std std-ref">SoapMessagingV2</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">$SYSTEM{apiKey}</span></code> variable available in test sessions with the unique API key of the system under test.</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions-system"><span class="std std-ref">System configuration parameters</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">HttpMessaging</span></code>, <code class="docutils literal notranslate"><span class="pre">HttpsMessaging</span></code> and <code class="docutils literal notranslate"><span class="pre">SoapMessaging</span></code> handlers now return a <code class="docutils literal notranslate"><span class="pre">http_status</span></code> entry in the <code class="docutils literal notranslate"><span class="pre">receive</span></code> step’s report.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-httpmessaging"><span class="std std-ref">HttpMessaging</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-httpsmessaging"><span class="std std-ref">HttpsMessaging</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-soapmessaging"><span class="std std-ref">SoapMessaging</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Test session logging level set to <code class="docutils literal notranslate"><span class="pre">INFO</span></code> by default.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-steps-logging"><span class="std std-ref">Test case logging</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-22-0-08-04-2024">
+<h2>Release 1.22.0 - 08/04/2024<a class="headerlink" href="#release-1-22-0-08-04-2024" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.22.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.22.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Interaction steps now support the <code class="docutils literal notranslate"><span class="pre">admin</span></code> attribute to specify that they should be completed by an administrator.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Interaction steps now support the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> attribute to automatically complete them after the timeout period.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Interaction steps can now be minimised and also completed asynchronously.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The interaction step’s <code class="docutils literal notranslate"><span class="pre">mimeType</span></code> attribute can now be set via variable reference.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Test suites and test cases support the definition of structured normative reference information.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-metadata-specification"><span class="std std-ref">reference (test suite)</span></a>, <a class="reference internal" href="../testcase/index.html#test-case-metadata-specification"><span class="std std-ref">reference (test case)</span></a>,</p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">DisplayProcessor</span></code> can now be set with a configurable result to mark its report as a success, failure or warning.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-displayprocessor"><span class="std std-ref">DisplayProcessor</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>The documentation on service handlers for test steps was extended to list <strong>reusable external services</strong> available to test developers.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-reusable-handlers"><span class="std std-ref">Reusable external handlers</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-21-0-06-10-2023">
+<h2>Release 1.21.0 - 06/10/2023<a class="headerlink" href="#release-1-21-0-06-10-2023" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.21.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.21.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Interaction steps now support the <code class="docutils literal notranslate"><span class="pre">forceDisplay</span></code> attribute to ensure an inline display of their content.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">TokenGenerator</span></code> now allows the generation of random numbers via the new <code class="docutils literal notranslate"><span class="pre">random</span></code> operation.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-tokengenerator"><span class="std std-ref">TokenGenerator</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">DelayProcessor</span></code> to make it simpler to pause test sessions for a given duration.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-delayprocessor"><span class="std std-ref">DelayProcessor</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">JSONPointerProcessor</span></code> to extract data from JSON content using JSON Pointer expressions.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-jsonpointerprocessor"><span class="std std-ref">JsonPointerProcessor</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Test cases can now be defined as <code class="docutils literal notranslate"><span class="pre">optional</span></code> and <code class="docutils literal notranslate"><span class="pre">disabled</span></code> restricting whether they can be executed and how their results are considered.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test cases</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Test suite and test case definitions now support an <code class="docutils literal notranslate"><span class="pre">update</span></code> metadata element to define how to carry out the update of existing test suites and test cases.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-metadata-update"><span class="std std-ref">update (test suite)</span></a>, <a class="reference internal" href="../testcase/index.html#test-case-metadata-update"><span class="std std-ref">update (test case)</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Test cases can now define <code class="docutils literal notranslate"><span class="pre">tags</span></code> as part of their metadata to classify them and visually distinguish them for users.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-metadata-tags"><span class="std std-ref">tags</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-19-0-17-03-2023">
+<h2>Release 1.19.0 - 17/03/2023<a class="headerlink" href="#release-1-19-0-17-03-2023" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.19.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.19.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Extensions to step status checks (<code class="docutils literal notranslate"><span class="pre">STEP_SUCCESS</span></code>, <code class="docutils literal notranslate"><span class="pre">STEP_STATUS</span></code>) to uniquely refer to steps within scriptlets.</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions-step-status-scriptlets"><span class="std std-ref">Status checks for scriptlet steps</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New operations (<code class="docutils literal notranslate"><span class="pre">contains</span></code>, <code class="docutils literal notranslate"><span class="pre">randomKey</span></code>, <code class="docutils literal notranslate"><span class="pre">randomValue</span></code>, <code class="docutils literal notranslate"><span class="pre">remove</span></code>) for the <code class="docutils literal notranslate"><span class="pre">CollectionUtils</span></code> processor.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-collectionutils"><span class="std std-ref">CollectionUtils</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-18-0-17-10-2022">
+<h2>Release 1.18.0 - 17/10/2022<a class="headerlink" href="#release-1-18-0-17-10-2022" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.18.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.18.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">XmlValidator</span></code> validation handler to validate XML against both XSDs and Schematrons.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-xmlvalidator"><span class="std std-ref">XmlValidator</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">ExpressionValidator</span></code> validation handler to check arbitrary expressions.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-expressionvalidator"><span class="std std-ref">ExpressionValidator</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">TokenGenerator</span></code> now accepts an optional prefix and postfix to add to generated UUIDs.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-tokengenerator"><span class="std std-ref">TokenGenerator</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">SimulatedMessaging</span></code> and <code class="docutils literal notranslate"><span class="pre">DisplayProcessor</span></code> handlers can now also specify the content types of data in their reports.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-simulatedmessaging"><span class="std std-ref">SimulatedMessaging</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-displayprocessor"><span class="std std-ref">DisplayProcessor</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">reply</span></code> attribute of messaging steps can now be set dynamically within scriptlets.</p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets-dynamic-references"><span class="std std-ref">Dynamic presentation in scriptlets</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">call</span></code> step can now also be set as <code class="docutils literal notranslate"><span class="pre">hidden</span></code> to hide all steps of the referenced scriptlet.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">SchematronValidator</span></code> can now show the assertions made for each finding.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-schematronvalidator"><span class="std std-ref">SchematronValidator</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">XSDValidator</span></code> and <code class="docutils literal notranslate"><span class="pre">SchematronValidator</span></code> can now present findings sorted by their severity.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-xsdvalidator"><span class="std std-ref">XsdValidator</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-schematronvalidator"><span class="std std-ref">SchematronValidator</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">XSDValidator</span></code> and <code class="docutils literal notranslate"><span class="pre">SchematronValidator</span></code> can now hide from their report the XSD or Schematron used for the validation.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-xsdvalidator"><span class="std std-ref">XsdValidator</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-schematronvalidator"><span class="std std-ref">SchematronValidator</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Scriptlet parameters can now be set with default values.</p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets-elements-params"><span class="std std-ref">Params</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">flow</span></code> steps can now have individually hidden <code class="docutils literal notranslate"><span class="pre">thread</span></code> blocks.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-flow"><span class="std std-ref">flow</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Steps’ <code class="docutils literal notranslate"><span class="pre">hidden</span></code> attribute can now be set in scriptlets via variable reference.</p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets-dynamic-steps"><span class="std std-ref">Dynamic steps in scriptlets</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">if</span></code> steps can be set as <code class="docutils literal notranslate"><span class="pre">static</span></code> for dynamic inclusion of steps within scriptlets.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-if-hide-boundary"><span class="std std-ref">Displaying contained steps without a boundary</span></a>, <a class="reference internal" href="../scriptlets/index.html#scriptlets-dynamic-steps"><span class="std std-ref">Dynamic steps in scriptlets</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">if</span></code> steps can now be set as <code class="docutils literal notranslate"><span class="pre">hidden</span></code> with visible child steps.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-if-hide-boundary"><span class="std std-ref">Displaying contained steps without a boundary</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">SESSION</span></code> map allowing access to test session metadata (session identifier, test case identifier, TDL version).</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions-session-metadata"><span class="std std-ref">Accessing test session metadata</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Actor configuration (endpoint) parameters can now be set with default values and user friendly names.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">Actors</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Using a <code class="docutils literal notranslate"><span class="pre">process</span></code> step via its simplified syntax now supports mapping of the input to a parameter based on the defined types.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-process-simplified"><span class="std std-ref">Simplified processing steps</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Allow the <code class="docutils literal notranslate"><span class="pre">assign</span></code> step to create on-the-fly maps and lists at any nesting level.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">TestCaseOverviewReport</span></code> root element of type <code class="docutils literal notranslate"><span class="pre">TestCaseOverviewReportType</span></code> in the <code class="docutils literal notranslate"><span class="pre">gitb_tr.xsd</span></code> for an XML test case overview report.</p></td>
+<td><p><a class="reference internal" href="../introduction/index.html#introduction-spec-links"><span class="std std-ref">Specification links</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-17-0-20-07-2022">
+<h2>Release 1.17.0 - 20/07/2022<a class="headerlink" href="#release-1-17-0-20-07-2022" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.17.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.17.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Steps’ <code class="docutils literal notranslate"><span class="pre">desc</span></code>, <code class="docutils literal notranslate"><span class="pre">from</span></code>, <code class="docutils literal notranslate"><span class="pre">to</span></code>, <code class="docutils literal notranslate"><span class="pre">title</span></code> and <code class="docutils literal notranslate"><span class="pre">inputTitle</span></code> values can be set as constant variable references when used within scriptlets.</p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets-dynamic-references"><span class="std std-ref">Dynamic presentation in scriptlets</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">TemplateProcessor</span></code> embedded processing handler for complex generation of data based on templates.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-templateprocessor"><span class="std std-ref">TemplateProcessor</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">XSLTProcessor</span></code> embedded processing handler for XSLT transformations of XML content.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-xsltprocessor"><span class="std std-ref">XsltProcessor</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">DisplayProcessor</span></code> embedded processing handler for displaying arbitrary content to users in a non-obtrusive manner.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-displayprocessor"><span class="std std-ref">DisplayProcessor</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New <code class="docutils literal notranslate"><span class="pre">SimulatedMessaging</span></code> embedded messaging handler to add simulated message exchanges between actors.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-simulatedmessaging"><span class="std std-ref">SimulatedMessaging</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Messaging transactions (defined via <code class="docutils literal notranslate"><span class="pre">btxn</span></code>) are no longer mandatory for <code class="docutils literal notranslate"><span class="pre">send</span></code> and <code class="docutils literal notranslate"><span class="pre">receive</span></code> messaging steps.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Non-transactional, non-embedded (external) <code class="docutils literal notranslate"><span class="pre">process</span></code>, <code class="docutils literal notranslate"><span class="pre">send</span></code> and <code class="docutils literal notranslate"><span class="pre">receive</span></code> steps can now also specify authentication properties for the handler service call.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-authentication"><span class="std std-ref">Authenticate calls to external handlers</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The GITB TDL’s expression language is now upgraded from XPath 1.0 to XPath 3.0.</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions"><span class="std std-ref">Expressions</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-16-0-18-03-2022">
+<h2>Release 1.16.0 - 18/03/2022<a class="headerlink" href="#release-1-16-0-18-03-2022" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.16.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.16.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Namespaces can now be defined to simplify XPath expressions in GITB TDL steps and the XPathValidator.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-namespaces"><span class="std std-ref">Namespaces</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Actors defined in test cases are considered by default as SIMULATED.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-actors"><span class="std std-ref">Actors</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Introduction of the <code class="docutils literal notranslate"><span class="pre">STEP_STATUS</span></code> variable to record and query the specific status of each step.</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions-step-status"><span class="std std-ref">Checking the status of a specific step</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Reuse of steps’ <code class="docutils literal notranslate"><span class="pre">desc</span></code> attribute to identify them in the test session log to make log entries more meaningful.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test steps</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support for test session log contributions from custom test services used as remote service handlers.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support for the parallel or sequential execution of a test suite’s test cases when a test suite is executed in the background.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-test-cases"><span class="std std-ref">Test cases</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Test cases now feature the <code class="docutils literal notranslate"><span class="pre">supportsParallelExecution</span></code> attribute that can be used to enforce a test case’s execution in isolation.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test cases</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-15-0-29-11-2021">
+<h2>Release 1.15.0 - 29/11/2021<a class="headerlink" href="#release-1-15-0-29-11-2021" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.15.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.15.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Messaging steps now support the <code class="docutils literal notranslate"><span class="pre">reply</span></code> attribute to indicate that they should be presented as reply messages.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-listen"><span class="std std-ref">listen</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support for automatically converting non-list values to lists (as single-item lists containing the value).</p></td>
+<td><p><a class="reference internal" href="../types/index.html#test-case-types-type-conversions"><span class="std std-ref">Type conversions</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support for automatically converting lists and maps to strings.</p></td>
+<td><p><a class="reference internal" href="../types/index.html#test-case-types-type-conversions"><span class="std std-ref">Type conversions</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">log</span></code> step now supports a <code class="docutils literal notranslate"><span class="pre">level</span></code> attribute to define the message’s severity level.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Test cases now support the <code class="docutils literal notranslate"><span class="pre">logLevel</span></code> attribute to control which messages are included in test session logs.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-steps"><span class="std std-ref">Steps</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The severity level of <code class="docutils literal notranslate"><span class="pre">verify</span></code> steps can be now be provided dynamically via variable reference.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">process</span></code> step now enables simplified usage through the <code class="docutils literal notranslate"><span class="pre">input</span></code>, <code class="docutils literal notranslate"><span class="pre">operation</span></code> and <code class="docutils literal notranslate"><span class="pre">output</span></code> attributes.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-process-simplified"><span class="std std-ref">Simplified processing steps</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">call</span></code> step now enables simplified usage through the <code class="docutils literal notranslate"><span class="pre">input</span></code> and <code class="docutils literal notranslate"><span class="pre">output</span></code> attributes.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-call-simplified"><span class="std std-ref">Simplified call steps</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-14-0-17-08-2021">
+<h2>Release 1.14.0 - 17/08/2021<a class="headerlink" href="#release-1-14-0-17-08-2021" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.14.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.14.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">receive</span></code> elements of <code class="docutils literal notranslate"><span class="pre">interact</span></code> steps support the <code class="docutils literal notranslate"><span class="pre">inputType</span></code> and <code class="docutils literal notranslate"><span class="pre">mimeType</span></code> attributes to determine the type of input control to use.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">instruct</span></code> elements of <code class="docutils literal notranslate"><span class="pre">interact</span></code> steps support the <code class="docutils literal notranslate"><span class="pre">mimeType</span></code> attribute to determine downloaded file extensions and editor syntax highlighting.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-13-0-01-07-2021">
+<h2>Release 1.13.0 - 01/07/2021<a class="headerlink" href="#release-1-13-0-01-07-2021" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.13.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.13.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">process</span></code> step can now be displayed in the test case’s presentation.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support for the <code class="docutils literal notranslate"><span class="pre">hidden</span></code> attribute to define steps that are not included in the test case’s presentation.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-hidesteps"><span class="std std-ref">Hide test steps</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support for the <code class="docutils literal notranslate"><span class="pre">collapsed</span></code> attribute on group steps to have them displayed as initially collapsed.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-collapsed"><span class="std std-ref">Collapse sets of test steps</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Extended <code class="docutils literal notranslate"><span class="pre">group</span></code> steps to allow them to be included in the test case’s presentation.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-group"><span class="std std-ref">group</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-12-0-03-03-2021">
+<h2>Release 1.12.0 - 03/03/2021<a class="headerlink" href="#release-1-12-0-03-03-2021" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.12.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.12.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Support for test suites without actor definitions nor test cases, as shared resource holders.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-sharing-empty"><span class="std std-ref">Test suites as shared resource holders</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support for sharing resources (scriptlets, artifacts, documentation) across test suites.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-sharing"><span class="std std-ref">Sharing resources across test suites</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support for sharing scriptlets across test cases, scriptlet output expressions, optional parameters, variables and outputs.</p></td>
+<td><p><a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">Scriptlets (standalone)</span></a>, <a class="reference internal" href="../testcase/index.html#test-case-scriptlets"><span class="std std-ref">Scriptlets (test case)</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New embedded processing handler <code class="docutils literal notranslate"><span class="pre">RegExpProcessor</span></code> to process texts using regular expressions.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-regexpprocessor"><span class="std std-ref">RegExpProcessor</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New embedded processing handler <code class="docutils literal notranslate"><span class="pre">CollectionUtils</span></code> providing utility functions for maps and lists.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-collectionutils"><span class="std std-ref">CollectionUtils</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">TokenGenerator</span></code> processing handler now allows manipulation of dates based on existing, formatted, date values.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-tokengenerator"><span class="std std-ref">TokenGenerator</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">SchematronValidator</span></code> validation handler now supports defining the Schematron file type (XSLT or SCH) as an input.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-schematronvalidator"><span class="std std-ref">SchematronValidator</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-11-1-11-12-2020">
+<h2>Release 1.11.1 - 11/12/2020<a class="headerlink" href="#release-1-11-1-11-12-2020" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.11.1 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.11.1/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Referencing a missing variable evaluates as an empty string.</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-referring-to-variables-missing"><span class="std std-ref">Missing variables</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-11-0-13-11-2020">
+<h2>Release 1.11.0 - 13/11/2020<a class="headerlink" href="#release-1-11-0-13-11-2020" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.11.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.11.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Support for stopping a test session immediately upon a step’s failure.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps-common-stoponerror"><span class="std std-ref">Stop the test session in case of error</span></a>, <a class="reference internal" href="../testcase/index.html#test-case-steps"><span class="std std-ref">Steps</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support for custom output messages as the overall result of a test session’s execution.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">Output</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Allow a <code class="docutils literal notranslate"><span class="pre">verify</span></code> step to optionally store its report’s context data.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">TEST_SUCCESS</span></code> variable used to track the overall status of the test session at any point.</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions-step-results"><span class="std std-ref">Checking the result of test steps</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support for custom titles for the user input popups linked to the <code class="docutils literal notranslate"><span class="pre">interact</span></code> step.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-10-0-07-09-2020">
+<h2>Release 1.10.0 - 07/09/2020<a class="headerlink" href="#release-1-10-0-07-09-2020" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.10.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.10.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Test case imports can now be defined dynamically using variable references.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">Imports</span></a>, <a class="reference internal" href="../expressions/index.html#test-case-expressions-where"><span class="std std-ref">Where can expressions be used?</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support for a custom <code class="docutils literal notranslate"><span class="pre">title</span></code> for <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">interact</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span></code>, <code class="docutils literal notranslate"><span class="pre">repuntil</span></code>, <code class="docutils literal notranslate"><span class="pre">foreach</span></code> and <code class="docutils literal notranslate"><span class="pre">flow</span></code> steps.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-while"><span class="std std-ref">while</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-repuntil"><span class="std std-ref">repuntil</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-foreach"><span class="std std-ref">foreach</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-flow"><span class="std std-ref">flow</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Actors’ endpoint parameters can now be defined as <code class="docutils literal notranslate"><span class="pre">hidden</span></code> to have them visible only to administrators.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">Actors</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Actors’ endpoint parameters now support the definition of allowed values with optional labels (<code class="docutils literal notranslate"><span class="pre">allowedValues</span></code> and <code class="docutils literal notranslate"><span class="pre">allowedValueLabels</span></code>).</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">Actors</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Actors’ endpoint parameters now support defining other parameters as prerequisites (<code class="docutils literal notranslate"><span class="pre">dependsOn</span></code> and <code class="docutils literal notranslate"><span class="pre">dependsOnValue</span></code>).</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">Actors</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">log</span></code> step to add arbitrary information to the test session’s log output.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">documentation</span></code> content for test suites, test cases and test steps can now be provided via imported resource.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-metadata"><span class="std std-ref">Metadata</span></a>, <a class="reference internal" href="../testcase/index.html#test-case-metadata"><span class="std std-ref">Metadata</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-steps-common-documentation"><span class="std std-ref">Rich documentation per step</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The ID of test suites and test cases is now considered in the GITB software for referencing and matching.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite"><span class="std std-ref">Test suites</span></a>, <a class="reference internal" href="../testcase/index.html#test-case"><span class="std std-ref">Test cases</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-9-0-30-04-2020">
+<h2>Release 1.9.0 - 30/04/2020<a class="headerlink" href="#release-1-9-0-30-04-2020" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.9.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.9.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Rich text documentation can now also be set for test suites via the <code class="docutils literal notranslate"><span class="pre">documentation</span></code> element.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-metadata"><span class="std std-ref">Metadata</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Rich text documentation can now also be set for test cases via the <code class="docutils literal notranslate"><span class="pre">documentation</span></code> element.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-metadata"><span class="std std-ref">Metadata</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Assign</span></code> steps can now automatically create variables to store expression output.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a>, <a class="reference internal" href="../testcase/index.html#test-case-variables"><span class="std std-ref">Variables</span></a>, <a class="reference internal" href="../expressions/index.html#test-case-variables-from-expression-output"><span class="std std-ref">Defining variables from expressions</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New <code class="docutils literal notranslate"><span class="pre">Base64Processor</span></code> for the handling of Base64 and data URL encoding in test cases.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-base64processor"><span class="std std-ref">Base64Processor</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-8-0-20-01-2020">
+<h2>Release 1.8.0 - 20/01/2020<a class="headerlink" href="#release-1-8-0-20-01-2020" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.8.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.8.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Actors can now be set as <code class="docutils literal notranslate"><span class="pre">hidden</span></code> to prevent them from being used in new conformance statements.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">Actors</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support for different severity levels for the validation carried out by <code class="docutils literal notranslate"><span class="pre">verify</span></code> steps.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Rich text documentation can now be set for test steps via the <code class="docutils literal notranslate"><span class="pre">documentation</span></code> element to provide further information or instructions.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test steps</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-steps-common-documentation"><span class="std std-ref">Rich documentation per step</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-7-2-11-12-2019">
+<h2>Release 1.7.2 - 11/12/2019<a class="headerlink" href="#release-1-7-2-11-12-2019" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.7.2 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.7.2/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Any expression can now be set with <code class="docutils literal notranslate"><span class="pre">asTemplate</span></code> to be used as a template for placeholder replacement.</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions-template-files"><span class="std std-ref">Expressions and templates</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-7-0-07-10-2019">
+<h2>Release 1.7.0 - 07/10/2019<a class="headerlink" href="#release-1-7-0-07-10-2019" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.7.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.7.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Support for organisation and system level configuration parameters.</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-configuration"><span class="std std-ref">Referring to configuration parameters</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support for <code class="docutils literal notranslate"><span class="pre">binary</span></code> values in all levels of configuration parameters.</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-configuration"><span class="std std-ref">Referring to configuration parameters</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Support for endpoint configuration parameters to be defined as editable only by administrators (<code class="docutils literal notranslate"><span class="pre">adminOnly</span></code>) and make their inclusion in test sessions optional (<code class="docutils literal notranslate"><span class="pre">notForTests</span></code>).</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">Actors</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Endpoint configuration parameters can now have secret values.</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">Actors</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-6-1-14-06-2019">
+<h2>Release 1.6.1 - 14/06/2019<a class="headerlink" href="#release-1-6-1-14-06-2019" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.6.1 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.6.1/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Additional documentation for the use of templates.</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions-template-files"><span class="std std-ref">Expressions and templates</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Extensions to the <code class="docutils literal notranslate"><span class="pre">TokenGenerator</span></code> handler to fine-tune timestamp generation.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-tokengenerator"><span class="std std-ref">TokenGenerator</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-6-0-29-05-2019">
+<h2>Release 1.6.0 - 29/05/2019<a class="headerlink" href="#release-1-6-0-29-05-2019" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.6.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.6.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Documented the embedded <code class="docutils literal notranslate"><span class="pre">UDPMessaging</span></code> messaging handler.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-udpmessaging"><span class="std std-ref">UDPMessaging</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Introduced a new <code class="docutils literal notranslate"><span class="pre">STEP_SUCCESS</span></code> <code class="docutils literal notranslate"><span class="pre">map</span></code> variable to record the status of executed steps.</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions-step-success"><span class="std std-ref">Checking whether a specific step succeeded</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Step attributes now allow definition of text values including spaces, and numbers that are signed or floating point.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-steps"><span class="std std-ref">Test steps</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support for single and multiple selection lists to receive input in user interaction steps.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Processing transactions are now optional allowing for simpler use of stateless processing steps.</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-bptxn"><span class="std std-ref">bptxn</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>New embedded <code class="docutils literal notranslate"><span class="pre">TokenGenerator</span></code> processing handler to generate text tokens.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-tokengenerator"><span class="std std-ref">TokenGenerator</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>New embedded <code class="docutils literal notranslate"><span class="pre">XmlMatchValidator</span></code> validation handler for template-based matching of XML documents.</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-xmlmatchvalidator"><span class="std std-ref">XmlMatchValidator</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Test case variable values now correctly allow the definition only of a type and name.</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-variables"><span class="std std-ref">Variables</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-5-0-06-11-2018">
+<h2>Release 1.5.0 - 06/11/2018<a class="headerlink" href="#release-1-5-0-06-11-2018" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.5.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.5.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">XPathValidator</span></code> is now updated to support XPath 3.0 expressions (from the previous limitation to XPath 1.0)</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-xpathvalidator"><span class="std std-ref">XPathValidator</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Support for any type of input that can be converted to <code class="docutils literal notranslate"><span class="pre">string``s</span> <span class="pre">can</span> <span class="pre">now</span> <span class="pre">be</span> <span class="pre">passed</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">``XPathValidator</span></code> and <code class="docutils literal notranslate"><span class="pre">StringValidator</span></code></p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-xpathvalidator"><span class="std std-ref">XPathValidator</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-stringvalidator"><span class="std std-ref">StringValidator</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Added a new <code class="docutils literal notranslate"><span class="pre">RegExpValidator</span></code> to test text against a regular expression</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-regexpvalidator"><span class="std std-ref">RegExpValidator</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Improved default handling of the <code class="docutils literal notranslate"><span class="pre">with</span></code>, <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">contentType</span></code> properties linked to user interactions</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a>, <a class="reference internal" href="../testcase/index.html#test-case-preliminary"><span class="std std-ref">Preliminary</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Allowed user interactions to present binary content for download</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a>, <a class="reference internal" href="../testcase/index.html#test-case-preliminary"><span class="std std-ref">Preliminary</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The test suite name can now be ommitted in the value provided for test case <code class="docutils literal notranslate"><span class="pre">import</span></code> elements</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">Imports</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>It is now possible to define an actor as the specification’s default to have it automatically selected for new conformance statements</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">Actors</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The display order of actors in test execution diagrams can now be set at test suite and test case level</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">Actors</span></a> (test suite), <a class="reference internal" href="../testcase/index.html#test-case-actors"><span class="std std-ref">Actors</span></a> (test case)</p></td>
+</tr>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">exit</span></code> step is now correctly reflected on the user interface and can be set to be either a success or a failure</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-exit"><span class="std std-ref">exit</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">if</span></code> step now considers the <code class="docutils literal notranslate"><span class="pre">else</span></code> block as optional</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-4-1-28-09-2018">
+<h2>Release 1.4.1 - 28/09/2018<a class="headerlink" href="#release-1-4-1-28-09-2018" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.4.1 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.4.1/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">HttpMessaging</span></code> handler now supports HTTPS via configuration as well as handling of multipart forms</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-httpmessaging"><span class="std std-ref">HttpMessaging</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-3-0-25-05-2018">
+<h2>Release 1.3.0 - 25/05/2018<a class="headerlink" href="#release-1-3-0-25-05-2018" title="Link to this heading"></a></h2>
+<p>The documentation for GITB TDL release 1.3.0 is available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.3.0/">here</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Description of changes</p></th>
+<th class="head"><p>Relevant sections</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Transactions (messaging and processing) now support <code class="docutils literal notranslate"><span class="pre">config</span></code> elements to customise transaction creation</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-btxn"><span class="std std-ref">btxn</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-bptxn"><span class="std std-ref">bptxn</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Configuration elements (<code class="docutils literal notranslate"><span class="pre">config</span></code>) now support variable references</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-btxn"><span class="std std-ref">btxn</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-listen"><span class="std std-ref">listen</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-bptxn"><span class="std std-ref">bptxn</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>User instructions now consider “string” as the default type and can be fully empty in case of simple messages</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>User requests now consider “STRING” as the default content type</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>The <code class="docutils literal notranslate"><span class="pre">foreach</span></code> step now allows its boundaries (start and end) to be set using variable references</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-foreach"><span class="std std-ref">foreach</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Actors can now be defined in test suites without endpoints</p></td>
+<td><p><a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">Actors</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Service handler implementations can now be specified with variable references</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-implementation"><span class="std std-ref">Specifying the handler implementation</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">receive</span></code> step now allows a timeout to be specified</p></td>
+<td><p><a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Communication with service handlers now supports authentication (HTTP Basic and UsernameToken)</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-implementation"><span class="std std-ref">Specifying the handler implementation</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The <code class="docutils literal notranslate"><span class="pre">SoapMessaging</span></code> embedded messaging handler now supports HTTPS</p></td>
+<td><p><a class="reference internal" href="../handlers/index.html#handlers-soapmessaging"><span class="std std-ref">SoapMessaging</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Value ‘CONFORMANCE’ is now correctly considered as the default test case type</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-metadata"><span class="std std-ref">Metadata</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>The actor name defined in a test case does not have to match the actor ID</p></td>
+<td><p><a class="reference internal" href="../testcase/index.html#test-case-actors"><span class="std std-ref">Actors</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Domain-level configuration parameters can now be used in expressions</p></td>
+<td><p><a class="reference internal" href="../expressions/index.html#test-case-expressions-domain"><span class="std std-ref">Domain configuration parameters</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="release-1-2-0-18-03-2018">
+<h2>Release 1.2.0 - 18/03/2018<a class="headerlink" href="#release-1-2-0-18-03-2018" title="Link to this heading"></a></h2>
+<p>Initial release of the documentation for the GITB TDL (release 1.2.0), available <a class="reference external" href="https://www.itb.ec.europa.eu/docs/tdl/1.2.0/">here</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../examples/index.html" class="btn btn-neutral float-left" title="Example test suites" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../genindex.html" class="btn btn-neutral float-right" title="Index" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, European Commission, DIGIT.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

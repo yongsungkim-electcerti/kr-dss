@@ -1,0 +1,1038 @@
+[
+  {
+    "url": "https://openid.net/openid-foundation-launches-eudiw-resource-hub/#content",
+    "text": "Skip to content"
+  },
+  {
+    "url": "https://openid.net",
+    "text": ""
+  },
+  {
+    "url": "https://openid.net/foundation/",
+    "text": "FOUNDATION"
+  },
+  {
+    "url": "https://openid.net/foundation/benefits-members/",
+    "text": "Join the OpenID Foundation"
+  },
+  {
+    "url": "https://openid.net/foundation/board/",
+    "text": "Board of Directors"
+  },
+  {
+    "url": "https://openid.net/foundation/sponsoring-members/",
+    "text": "Sponsoring Members"
+  },
+  {
+    "url": "https://openid.net/foundation/leadership/",
+    "text": "Foundation Leadership"
+  },
+  {
+    "url": "https://openid.net/foundation/oidf-liaisons/",
+    "text": "OIDF Liaisons & Partnerships"
+  },
+  {
+    "url": "https://openid.net/intellectual-property/",
+    "text": "Intellectual Property"
+  },
+  {
+    "url": "https://openid.net/intellectual-property/openid-foundation-contribution-agreements/",
+    "text": "OpenID Foundation Contribution Agreements"
+  },
+  {
+    "url": "https://openid.net/intellectual-property/contribution-license-agreement/",
+    "text": "Software Grant and Contribution License Agreements"
+  },
+  {
+    "url": "https://openid.net/policies/",
+    "text": "Organizational Documents and Policies"
+  },
+  {
+    "url": "https://openid.net/developers/specs/",
+    "text": "SPECIFICATIONS"
+  },
+  {
+    "url": "https://openid.net/developers/specs/",
+    "text": "Explore All Specifications"
+  },
+  {
+    "url": "https://openid.net/foundation/developing-openid-standards/",
+    "text": "Developing an OpenID Standard"
+  },
+  {
+    "url": "https://openid.net/developers/security-analysis/",
+    "text": "Security Analysis"
+  },
+  {
+    "url": "https://openid.net/developers/discover-openid-and-openid-connect/",
+    "text": "Discover OpenID and OpenID Connect"
+  },
+  {
+    "url": "https://openid.net/developers/how-connect-works/",
+    "text": "How OpenID Connect Works"
+  },
+  {
+    "url": "https://openid.net/developers/jwt-jws-jwe-jwk-and-jwa-implementations/",
+    "text": "JWT, JWS, JWE, JWK, and JWA Implementations"
+  },
+  {
+    "url": "https://openid.net/certification/certified-openid-connect-implementations/",
+    "text": "Certified OpenID Connect Implementations"
+  },
+  {
+    "url": "https://openid.net/developers/uncertified-openid-connect-implementations/",
+    "text": "Uncertified OpenID Connect Implementations"
+  },
+  {
+    "url": "https://openid.net/developers/openid-federation-implementations/",
+    "text": "OpenID Federation Implementations"
+  },
+  {
+    "url": "https://openid.net/certification/",
+    "text": "TESTING"
+  },
+  {
+    "url": "https://openid.net/certification/",
+    "text": "Conformance & Certification"
+  },
+  {
+    "url": "https://openid.net/certification/how-to-submit-your-certification-request/",
+    "text": "How to Self-Certify"
+  },
+  {
+    "url": "https://openid.net/certification/how-to-certify-your-implementation/",
+    "text": "Developer Guidance"
+  },
+  {
+    "url": "https://openid.net/certification/certified-openid-connect-implementations/",
+    "text": "Featured Implementations"
+  },
+  {
+    "url": "https://openid.net/certification/fees/",
+    "text": "Self-Certification Fees"
+  },
+  {
+    "url": "https://openid.net/openid-foundation-launches-eudiw-resource-hub/",
+    "text": "Certification Program Policies"
+  },
+  {
+    "url": "https://openid.net/certification/certification-conformance-testing-disclosure-and-reporting-policy/",
+    "text": "Certification Conformance Testing Disclosure and Reporting Policy"
+  },
+  {
+    "url": "https://openid.net/certification/open-source-project-certification-policy/",
+    "text": "Open-Source Project Certification Policy"
+  },
+  {
+    "url": "https://openid.net/certification/third-party-support-certification-policy/",
+    "text": "Third-Party Support Certification Policy"
+  },
+  {
+    "url": "https://openid.net/certification/mark/",
+    "text": "About the OpenID Certified Mark"
+  },
+  {
+    "url": "https://openid.net/certification/what-is-self-certification-faq/",
+    "text": "OpenID Certification Frequently Asked Questions"
+  },
+  {
+    "url": "https://openid.net/wg/",
+    "text": "GROUPS"
+  },
+  {
+    "url": "https://openid.net/wg/",
+    "text": "Working Groups"
+  },
+  {
+    "url": "https://openid.net/wg/connect/",
+    "text": "AB/Connect Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/connect/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/connect/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/connect/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://openid.net/wg/connect/repositories/",
+    "text": "Repositories"
+  },
+  {
+    "url": "https://openid.net/wg/authzen/",
+    "text": "AuthZEN Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/authzen/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/authzen/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/authzen/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://github.com/openid/authzen",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-harmonized-presentation-working-group/",
+    "text": "Digital Credentials Harmonized Presentation (DCHP) Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-harmonized-presentation-working-group/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-harmonized-presentation-working-group/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-harmonized-presentation-working-group/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://github.com/openid/dchp",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-protocols/",
+    "text": "Digital Credentials Protocols (DCP) Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-protocols/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-protocols/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-protocols/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-protocols/repository/",
+    "text": "Repositories"
+  },
+  {
+    "url": "https://openid.net/wg/ekyc-ida/",
+    "text": "eKYC & IDA Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/ekyc-ida/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/ekyc-ida/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/ekyc-ida/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://bitbucket.org/openid/ekyc-ida/",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/fapi/",
+    "text": "FAPI Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/fapi/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/fapi/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/fapi/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://bitbucket.org/openid/fapi/",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/igov/",
+    "text": "iGov Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/igov/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/igov/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/igov/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://bitbucket.org/openid/igov/",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/ipsie/",
+    "text": "IPSIE Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/ipsie/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/ipsie/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/ipsie/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://github.com/openid/ipsie",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/modrna/",
+    "text": "MODRNA Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/modrna/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/modrna/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/modrna/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://bitbucket.org/openid/mobile/src/master/",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/rande/",
+    "text": "R&E Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/rande/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/rande/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/rande/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://openid.net/wg/sharedsignals/",
+    "text": "Shared Signals Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/sharedsignals/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/sharedsignals/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/sharedsignals/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://github.com/openid/sse",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/cg/",
+    "text": "Community Groups"
+  },
+  {
+    "url": "https://openid.net/cg/artificial-intelligence-identity-management-community-group/",
+    "text": "Artificial Intelligence Identity Management Community Group"
+  },
+  {
+    "url": "https://openid.net/cg/australian-digital-trust-community-group/",
+    "text": "Australian Digital Trust Community Group"
+  },
+  {
+    "url": "https://openid.net/cg/death-and-the-digital-estate/",
+    "text": "Death and the Digital Estate Community Group"
+  },
+  {
+    "url": "https://openid.net/cg/ecosystem-support-community-group/",
+    "text": "Ecosystem Support Community Group"
+  },
+  {
+    "url": "https://openid.net/wg/archived-groups/",
+    "text": "Archived Groups"
+  },
+  {
+    "url": "https://openid.net/wg/eap/",
+    "text": "EAP Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/fastfed/",
+    "text": "FastFed Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/heart/",
+    "text": "HEART Working Group"
+  },
+  {
+    "url": "https://openid.net/cg/gain-poc/",
+    "text": "GAIN POC Community Group"
+  },
+  {
+    "url": "https://openid.net/wg/resources/",
+    "text": "Working Group Resources"
+  },
+  {
+    "url": "https://openid.net/calendar/",
+    "text": "CALENDAR"
+  },
+  {
+    "url": "https://openid.net/foundation/",
+    "text": "FOUNDATION"
+  },
+  {
+    "url": "https://openid.net/foundation/benefits-members/",
+    "text": "Join the OpenID Foundation"
+  },
+  {
+    "url": "https://openid.net/foundation/board/",
+    "text": "Board of Directors"
+  },
+  {
+    "url": "https://openid.net/foundation/sponsoring-members/",
+    "text": "Sponsoring Members"
+  },
+  {
+    "url": "https://openid.net/foundation/leadership/",
+    "text": "Foundation Leadership"
+  },
+  {
+    "url": "https://openid.net/foundation/oidf-liaisons/",
+    "text": "OIDF Liaisons & Partnerships"
+  },
+  {
+    "url": "https://openid.net/intellectual-property/",
+    "text": "Intellectual Property"
+  },
+  {
+    "url": "https://openid.net/intellectual-property/openid-foundation-contribution-agreements/",
+    "text": "OpenID Foundation Contribution Agreements"
+  },
+  {
+    "url": "https://openid.net/intellectual-property/contribution-license-agreement/",
+    "text": "Software Grant and Contribution License Agreements"
+  },
+  {
+    "url": "https://openid.net/policies/",
+    "text": "Organizational Documents and Policies"
+  },
+  {
+    "url": "https://openid.net/developers/specs/",
+    "text": "SPECIFICATIONS"
+  },
+  {
+    "url": "https://openid.net/developers/specs/",
+    "text": "Explore All Specifications"
+  },
+  {
+    "url": "https://openid.net/foundation/developing-openid-standards/",
+    "text": "Developing an OpenID Standard"
+  },
+  {
+    "url": "https://openid.net/developers/security-analysis/",
+    "text": "Security Analysis"
+  },
+  {
+    "url": "https://openid.net/developers/discover-openid-and-openid-connect/",
+    "text": "Discover OpenID and OpenID Connect"
+  },
+  {
+    "url": "https://openid.net/developers/how-connect-works/",
+    "text": "How OpenID Connect Works"
+  },
+  {
+    "url": "https://openid.net/developers/jwt-jws-jwe-jwk-and-jwa-implementations/",
+    "text": "JWT, JWS, JWE, JWK, and JWA Implementations"
+  },
+  {
+    "url": "https://openid.net/certification/certified-openid-connect-implementations/",
+    "text": "Certified OpenID Connect Implementations"
+  },
+  {
+    "url": "https://openid.net/developers/uncertified-openid-connect-implementations/",
+    "text": "Uncertified OpenID Connect Implementations"
+  },
+  {
+    "url": "https://openid.net/developers/openid-federation-implementations/",
+    "text": "OpenID Federation Implementations"
+  },
+  {
+    "url": "https://openid.net/certification/",
+    "text": "TESTING"
+  },
+  {
+    "url": "https://openid.net/certification/",
+    "text": "Conformance & Certification"
+  },
+  {
+    "url": "https://openid.net/certification/how-to-submit-your-certification-request/",
+    "text": "How to Self-Certify"
+  },
+  {
+    "url": "https://openid.net/certification/how-to-certify-your-implementation/",
+    "text": "Developer Guidance"
+  },
+  {
+    "url": "https://openid.net/certification/certified-openid-connect-implementations/",
+    "text": "Featured Implementations"
+  },
+  {
+    "url": "https://openid.net/certification/fees/",
+    "text": "Self-Certification Fees"
+  },
+  {
+    "url": "https://openid.net/openid-foundation-launches-eudiw-resource-hub/",
+    "text": "Certification Program Policies"
+  },
+  {
+    "url": "https://openid.net/certification/certification-conformance-testing-disclosure-and-reporting-policy/",
+    "text": "Certification Conformance Testing Disclosure and Reporting Policy"
+  },
+  {
+    "url": "https://openid.net/certification/open-source-project-certification-policy/",
+    "text": "Open-Source Project Certification Policy"
+  },
+  {
+    "url": "https://openid.net/certification/third-party-support-certification-policy/",
+    "text": "Third-Party Support Certification Policy"
+  },
+  {
+    "url": "https://openid.net/certification/mark/",
+    "text": "About the OpenID Certified Mark"
+  },
+  {
+    "url": "https://openid.net/certification/what-is-self-certification-faq/",
+    "text": "OpenID Certification Frequently Asked Questions"
+  },
+  {
+    "url": "https://openid.net/wg/",
+    "text": "GROUPS"
+  },
+  {
+    "url": "https://openid.net/wg/",
+    "text": "Working Groups"
+  },
+  {
+    "url": "https://openid.net/wg/connect/",
+    "text": "AB/Connect Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/connect/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/connect/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/connect/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://openid.net/wg/connect/repositories/",
+    "text": "Repositories"
+  },
+  {
+    "url": "https://openid.net/wg/authzen/",
+    "text": "AuthZEN Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/authzen/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/authzen/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/authzen/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://github.com/openid/authzen",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-harmonized-presentation-working-group/",
+    "text": "Digital Credentials Harmonized Presentation (DCHP) Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-harmonized-presentation-working-group/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-harmonized-presentation-working-group/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-harmonized-presentation-working-group/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://github.com/openid/dchp",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-protocols/",
+    "text": "Digital Credentials Protocols (DCP) Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-protocols/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-protocols/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-protocols/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-protocols/repository/",
+    "text": "Repositories"
+  },
+  {
+    "url": "https://openid.net/wg/ekyc-ida/",
+    "text": "eKYC & IDA Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/ekyc-ida/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/ekyc-ida/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/ekyc-ida/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://bitbucket.org/openid/ekyc-ida/",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/fapi/",
+    "text": "FAPI Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/fapi/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/fapi/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/fapi/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://bitbucket.org/openid/fapi/",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/igov/",
+    "text": "iGov Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/igov/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/igov/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/igov/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://bitbucket.org/openid/igov/",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/ipsie/",
+    "text": "IPSIE Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/ipsie/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/ipsie/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/ipsie/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://github.com/openid/ipsie",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/modrna/",
+    "text": "MODRNA Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/modrna/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/modrna/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/modrna/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://bitbucket.org/openid/mobile/src/master/",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/wg/rande/",
+    "text": "R&E Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/rande/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/rande/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/rande/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://openid.net/wg/sharedsignals/",
+    "text": "Shared Signals Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/sharedsignals/",
+    "text": "Overview"
+  },
+  {
+    "url": "https://openid.net/wg/sharedsignals/charter/",
+    "text": "Charter"
+  },
+  {
+    "url": "https://openid.net/wg/sharedsignals/specifications/",
+    "text": "Specifications"
+  },
+  {
+    "url": "https://github.com/openid/sse",
+    "text": "Repository"
+  },
+  {
+    "url": "https://openid.net/cg/",
+    "text": "Community Groups"
+  },
+  {
+    "url": "https://openid.net/cg/artificial-intelligence-identity-management-community-group/",
+    "text": "Artificial Intelligence Identity Management Community Group"
+  },
+  {
+    "url": "https://openid.net/cg/australian-digital-trust-community-group/",
+    "text": "Australian Digital Trust Community Group"
+  },
+  {
+    "url": "https://openid.net/cg/death-and-the-digital-estate/",
+    "text": "Death and the Digital Estate Community Group"
+  },
+  {
+    "url": "https://openid.net/cg/ecosystem-support-community-group/",
+    "text": "Ecosystem Support Community Group"
+  },
+  {
+    "url": "https://openid.net/wg/archived-groups/",
+    "text": "Archived Groups"
+  },
+  {
+    "url": "https://openid.net/wg/eap/",
+    "text": "EAP Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/fastfed/",
+    "text": "FastFed Working Group"
+  },
+  {
+    "url": "https://openid.net/wg/heart/",
+    "text": "HEART Working Group"
+  },
+  {
+    "url": "https://openid.net/cg/gain-poc/",
+    "text": "GAIN POC Community Group"
+  },
+  {
+    "url": "https://openid.net/wg/resources/",
+    "text": "Working Group Resources"
+  },
+  {
+    "url": "https://openid.net/calendar/",
+    "text": "CALENDAR"
+  },
+  {
+    "url": "https://openid.net/foundation/members/members",
+    "text": "Sign-In"
+  },
+  {
+    "url": "https://openid.net",
+    "text": "OpenID Foundation"
+  },
+  {
+    "url": "https://openid.net/category/blogs/",
+    "text": "Blogs"
+  },
+  {
+    "url": "https://openid.net/openid-foundation-launches-eudiw-resource-hub/",
+    "text": "OpenID Foundation launches EUDIW resource hub"
+  },
+  {
+    "url": "https://openid.net/eudiw_community_page/",
+    "text": "resource hub"
+  },
+  {
+    "url": "https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/694487738/EU+Digital+Identity+Wallet+Home",
+    "text": "European Digital Identity Wallet (EUDIW)"
+  },
+  {
+    "url": "https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-architecture-and-reference-framework-outline",
+    "text": "EIDAS 2.0 Architecture Reference Framework"
+  },
+  {
+    "url": "https://openid.net/specs/openid-4-verifiable-presentations-1_0.html",
+    "text": "OpenID for Verifiable Presentations (OpenID4VP) 1.0 Final"
+  },
+  {
+    "url": "https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html",
+    "text": "OpenID for Verifiable Credential Issuance (OpenID4VCI) 1.0 Final"
+  },
+  {
+    "url": "https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-1_0.html",
+    "text": "High Assurance Interoperability Profile (HAIP) 1.0"
+  },
+  {
+    "url": "https://openid.net/openid-foundation-demonstrates-real-world-interoperabiity-of-new-digital-identity-standards/",
+    "text": "May"
+  },
+  {
+    "url": "https://openid.net/oidf-demonstrates-interoperability-of-new-digital-identity-issuance-standards/",
+    "text": "July"
+  },
+  {
+    "url": "https://openid.net/haip-1-0-openid4vp-1-0-achieve-98-in-oidf-interop-testing/",
+    "text": "November"
+  },
+  {
+    "url": "https://openid.net/wg/digital-credentials-protocols/",
+    "text": "Digital Credentials Protocols Working Group"
+  },
+  {
+    "url": "https://openid.net/cg/ecosystem-support-community-group/",
+    "text": "Ecosystem Support Community Group"
+  },
+  {
+    "url": "https://www.etsi.org/",
+    "text": "European Telecommunications Standards Institute (ETSI)"
+  },
+  {
+    "url": "https://commission.europa.eu/index_en",
+    "text": "European Commission (EC)"
+  },
+  {
+    "url": "https://lists.openid.net/mailman/listinfo/openid-specs-digital-credentials-protocols?_ga=2.163004348.1612626832.1765188519-1612702976.1761817524",
+    "text": "mailing list"
+  },
+  {
+    "url": "https://openid.net/eudiw_community_page/",
+    "text": "EUDIW resource hub"
+  },
+  {
+    "url": "http://www.openid.net/",
+    "text": "openid.net"
+  },
+  {
+    "url": "https://openid.net/tag/digital-identity/",
+    "text": "Digital Identity"
+  },
+  {
+    "url": "https://openid.net/tag/digital-wallets/",
+    "text": "digital wallets"
+  },
+  {
+    "url": "https://openid.net/tag/eidas-2-0/",
+    "text": "eIDAS 2.0"
+  },
+  {
+    "url": "https://openid.net/tag/eudiw/",
+    "text": "EUDIW"
+  },
+  {
+    "url": "https://openid.net/tag/european-digital-identity-wallet/",
+    "text": "European Digital Identity Wallet"
+  },
+  {
+    "url": "https://openid.net/tag/haip/",
+    "text": "HAIP"
+  },
+  {
+    "url": "https://openid.net/tag/identity-standards/",
+    "text": "Identity Standards"
+  },
+  {
+    "url": "https://openid.net/tag/interoperability/",
+    "text": "Interoperability"
+  },
+  {
+    "url": "https://openid.net/tag/openid-foundation/",
+    "text": "OpenID Foundation"
+  },
+  {
+    "url": "https://openid.net/tag/openid4vci/",
+    "text": "OpenID4VCI"
+  },
+  {
+    "url": "https://openid.net/tag/openid4vp/",
+    "text": "openid4vp"
+  },
+  {
+    "url": "https://openid.net/tag/verifiable-credentials/",
+    "text": "Verifiable Credentials"
+  },
+  {
+    "url": "http://openid.net/feed/",
+    "text": "Rss"
+  },
+  {
+    "url": "https://twitter.com/openid/",
+    "text": "Twitter"
+  },
+  {
+    "url": "https://www.linkedin.com/company/openid-foundation/",
+    "text": "Linkedin"
+  },
+  {
+    "url": "https://www.youtube.com/@openid",
+    "text": "Youtube"
+  },
+  {
+    "url": "https://openid.net/foundation/",
+    "text": "About the Foundation"
+  },
+  {
+    "url": "https://openid.net/foundation/board/",
+    "text": "Board of Directors"
+  },
+  {
+    "url": "https://openid.net/intellectual-property/policies/",
+    "text": "Policies and Guidelines"
+  },
+  {
+    "url": "https://openid.net/wp-content/uploads/2025/07/OIDF_Privacy-Policy_Final_2025-07-17.pdf",
+    "text": "Privacy Policy"
+  },
+  {
+    "url": "https://openid.net/foundation/benefits-members/",
+    "text": "Member Benefits, Why Join?"
+  },
+  {
+    "url": "https://openid.net/foundation/",
+    "text": "What is OpenID and OpenID Connect?"
+  },
+  {
+    "url": "https://openid.net/wg/connect/",
+    "text": "How does OpenID Connect Work?"
+  },
+  {
+    "url": "https://openid.net/wg/",
+    "text": "How do Working Groups Work?"
+  },
+  {
+    "url": "https://openid.net/developers/what-is-self-certification-faq/",
+    "text": "What is Self-certification?"
+  },
+  {
+    "url": "https://openid.net/papers/",
+    "text": "Download a Whitepaper"
+  },
+  {
+    "url": "https://openid.net/presentations-media/",
+    "text": "View a Presentation"
+  },
+  {
+    "url": "https://openid.net/news-archive/",
+    "text": "OpenID News Archive"
+  },
+  {
+    "url": "https://openid.net/policies/",
+    "text": "Privacy Policy"
+  },
+  {
+    "url": "https://openid.net/openid-foundation-launches-eudiw-resource-hub/",
+    "text": "Manage options"
+  },
+  {
+    "url": "https://openid.net/openid-foundation-launches-eudiw-resource-hub/",
+    "text": "Manage services"
+  },
+  {
+    "url": "https://openid.net/openid-foundation-launches-eudiw-resource-hub/",
+    "text": "Manage {vendor_count} vendors"
+  },
+  {
+    "url": "https://cookiedatabase.org/tcf/purposes/",
+    "text": "Read more about these purposes"
+  },
+  {
+    "url": "https://openid.net/openid-foundation-launches-eudiw-resource-hub/",
+    "text": "View preferences"
+  },
+  {
+    "url": "https://openid.net/openid-foundation-launches-eudiw-resource-hub/",
+    "text": "{title}"
+  },
+  {
+    "url": "https://openid.net/openid-foundation-launches-eudiw-resource-hub/",
+    "text": "{title}"
+  },
+  {
+    "url": "https://openid.net/openid-foundation-launches-eudiw-resource-hub/",
+    "text": "{title}"
+  }
+]

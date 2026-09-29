@@ -1,0 +1,729 @@
+{
+  "range": "'1. 자료목록(260917)'!A1:H90",
+  "majorDimension": "ROWS",
+  "values": [
+    [
+      null,
+      null,
+      "★~★★★",
+      "참고하면 좋을 자료 (표시)"
+    ],
+    [
+      null,
+      "분류",
+      "중요도",
+      "자료명",
+      "포함 내용",
+      "출처"
+    ],
+    [
+      null,
+      "① 학술연구",
+      "★★☆",
+      "Elsevier_Privacy evaluation of the EUDI Wallet's ARF (2026)",
+      "EUDI Wallet ARF에서 개인정보 보호 요구사항을 어떻게 다루는지 검토",
+      "https://doi.org/10.1016/j.cose.2025.104707"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "Elsevier_Safe and inclusive or unsafe and discriminatory (2026)",
+      "EUDI Wallet의 이용자 통제, 포용성 및 차별 위험을 논의",
+      "https://doi.org/10.1016/j.clsr.2025.106235"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "Electronic Markets_Self-sovereign identity A conceptual framework and research agenda (2025)",
+      "자기주권신원 개념, 생태계와 후속 연구과제를 체계화",
+      "https://doi.org/10.1007/s12525-025-00867-8"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "arXiv_SoK_Trusting_SSI (2024)",
+      "SSI의 신뢰 가정, 위협과 보안 쟁점을 종합",
+      "https://arxiv.org/abs/2404.06729"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "arXiv_Towards_Trustful_Digital_World (2021)",
+      "SSI와 VC를 활용한 신뢰 가능한 디지털 환경의 구성요소를 제안",
+      "https://arxiv.org/abs/2105.15131"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "한국IT정책경영학회_분산신원 기반의 자기주권신원모델모바일 운전면허증에 관한 연구(2023)",
+      "분산신원·자기주권신원 모델을 모바일 운전면허증에 적용하는 방안을 연구",
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10747509"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)",
+      null,
+      "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002890824"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "한국신용카드학회_전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구(2019)",
+      "전자문서지갑·전자증명서와 비대면 주택담보대출 절차의 연계를 검토",
+      "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002548388"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서",
+      "K-BTF의 범위, 추진체계, 신뢰 프레임워크와 중장기 방향을 검토",
+      "https://www.kisa.kr/201/form?lang_type=KO&page=&postSeq=12075"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서",
+      "Trusted Web의 기술·보안·서비스 설계와 추진방향을 연구",
+      "https://www.kisa.kr/201/form?postSeq=12078"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서",
+      "DID 문서의 직접 해석, DID Method 및 문서 구조를 검토",
+      "https://www.kisa.kr/201/form?page=1&postSeq=12082"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "EUDI Wallet: A New Human Right Unlocked? (2025)",
+      "유료 / EUDI Wallet을 권리와 법적 보호의 관점에서 검토",
+      "https://doi.org/10.1080/18918131.2025.2551458",
+      "미확보"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "eIDAS 2 Digital Wallet and post-quantum encryption (2024)",
+      "유료 / eIDAS 2 기반 지갑과 양자내성 암호 논점을 다룸",
+      "https://doi.org/10.1016/j.clsr.2024.106022"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "Digital identity and academic attributes through European eID (2019)",
+      "유료 / 유럽 eID를 이용한 학력·속성 증명의 활용을 분석",
+      "https://doi.org/10.1002/spe.2738"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "Mobile App Diffusion of Innovations model (2022)",
+      "유료 / 모바일 앱·지갑 서비스의 수용과 확산을 설명하는 모형을 제시",
+      "https://www.sciencedirect.com/science/article/abs/pii/S0969698921003349?via%3Dihub"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "모바일 신분증 등 모방 앱의 문제점과 대처 방안 (2024)",
+      "유료 / 모바일 신분증 모방 앱의 위험과 대응 방안을 검토",
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11926337"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "모바일 기기에서 공개 API를 통한 신원 증명 서비스의 문제점 분석(2021)",
+      "유료 / 모바일 기기와 공개 API를 이용한 신원 증명 서비스의 문제를 분석",
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10547672"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "DID 기술에 기반 한 분산 신원 인증 시스템 (2023)",
+      "유료 / DID 기반 분산 신원 인증 시스템의 구성과 동작을 설명",
+      "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12221102"
+    ],
+    [
+      null,
+      "② 법·제도",
+      "★★★",
+      "EU_202401183_Regulation (EU) 2024_1183",
+      "eIDAS를 개정하여 유럽 디지털 신원 프레임워크와 EUDI Wallet의 법적 기반을 규정",
+      "https://eur-lex.europa.eu/eli/reg/2024/1183/oj/eng",
+      "EU"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "EU_2024903_Regulation_Interoperable Europe Act",
+      "EU 공공부문의 국경 간 상호운용을 위한 거버넌스 체계, 상호운용성 평가 및 공통 솔루션·지원체계의 법적 기반",
+      "https://eur-lex.europa.eu/eli/reg/2024/903/oj/eng"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "EU_202412_EUDI Wallet Implementing Regulations",
+      "Wallet의 integrity와 core functionalities를 직접 규정하고, 현재 2026년 개정본에는 Wallet Trust Mark 및 certified wallet 목록과 연결되는 내용 포함",
+      "https://eur-lex.europa.eu/eli/reg_impl/2024/2979/oj/eng"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "NIST_2025_SP800-63-4",
+      "디지털 신원의 신원확인, 인증, 연합을 위한 지침 체계를 제시",
+      "https://www.nist.gov/identity-access-management/projects/nist-special-publication-800-63-digital-identity-guidelines",
+      "미국"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "NIST_2025_SP800-63B-4",
+      "인증자, 인증 절차와 수명주기 관리 요구사항을 규정",
+      "https://doi.org/10.6028/NIST.SP.800-63B-4"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "UK DVS Trust Framework collection",
+      "영국 디지털 검증 서비스 신뢰 프레임워크와 인증 관련 문서를 모아 제공",
+      "https://www.gov.uk/government/collections/uk-digital-verification-services-trust-framework",
+      "영국"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "Using GOV.UK Wallet in digital identity sector",
+      "영국 디지털 신원 분야에서 GOV.UK Wallet을 사용하는 조건과 안내를 설명",
+      "https://www.gov.uk/guidance/using-govuk-wallet-in-the-digital-identity-sector"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "UK Digital Identity and Attributes Trust Framework beta 0.3 (2023)",
+      "영국 디지털 신원·속성 신뢰 프레임워크의 초기 버전으로, 속성·동의 관련 원칙을 담음",
+      "https://www.gov.uk/government/publications/uk-digital-identity-and-attributes-trust-framework-beta-version/uk-digital-identity-and-attributes-trust-framework-beta-version"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "NZ_2024_Digital Identity Services Trust Framework Regulations ",
+      "뉴질랜드 디지털 신원서비스 신뢰 프레임워크의 시행규정으로, 서비스 유형과 제공자·서비스 인증(Accreditation), 독립평가, 평가기준 및 운영·보고 요건 규정",
+      "https://www.legislation.govt.nz/secondary-legislation/pco-drafted/2024/197/en/latest/#LMS989612",
+      "뉴질랜드"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "Japan Digital Agency Trust",
+      "일본의 디지털 신뢰 정책과 VC·디지털 신원 지갑 관련 자료",
+      "https://www.digital.go.jp/en/policies/trust",
+      "일본"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "Japan Digital qualification certificates",
+      "일본의 디지털 자격증명·정부 인증서 관련 정책과 서비스 안내자료",
+      "https://www.digital.go.jp/policies/government-certification"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "Trusted access to digital services",
+      "캐나다의 디지털 자격증명, 로그인 및 발급·검증 정책자료",
+      "https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/digital-credentials.html",
+      "캐나다"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "모바일 신분증 공식 안내",
+      "국내 모바일 신분증의 발급, 이용 및 검증 관련 공식 안내",
+      "https://www.mois.go.kr/frt/sub/a06/b04/mobileId/screen.do",
+      "대한민국"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "전자증명서 발급업무 처리지침",
+      "전자증명서의 발급·유통·진본확인 업무 기준을 규정",
+      "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2100000213310"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "전자서명법",
+      "전자서명과 전자서명인증사업자 제도의 법적 기반을 규정",
+      "https://law.go.kr/lsInfoP.do?ancYnChk=0&lsId=009413"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "전자문서 및 전자거래 기본법",
+      "전자문서와 전자거래의 효력 및 제도적 기반을 규정",
+      "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=236053"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "모바일 신분증 법적 인정 관련 조문",
+      "모바일 신분증의 법적 인정과 관련된 조문",
+      "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0011&lsiSeq=287265&urlMode=lsScJoRltInfoR"
+    ],
+    [
+      null,
+      "③ 기술",
+      "★★★",
+      "EUDI Wallet Architecture and Reference Framework v3.0.0",
+      "EUDI Wallet의 참여주체, 기능, 아키텍처, 신뢰모델과 발급·제시 구조를 정의",
+      "https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "GOV.UK Wallet technical documentation",
+      "발급자·보유자·검증자 관점에서 GOV.UK Wallet의 기술 문서를 제공",
+      "https://docs.wallet.service.gov.uk/"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "KISA_[제17호] 가상자산 디지털지갑의 진화와 발전방향 (2025)",
+      "가상자산 디지털지갑의 기술·산업 동향과 발전방향을 정리",
+      "https://blockchain.kisa.or.kr/"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "KISA_[제6호] 유럽 디지털 신원 지갑 시스템의 아키텍처 및 프레임워크 이해 (2025)",
+      "EUDI Wallet 생태계, 기능·인터페이스, 인증·위험관리와 국내 제도적 시사점 포함",
+      "https://blockchain.kisa.or.kr/"
+    ],
+    [
+      null,
+      "④ 표준",
+      "★★★",
+      "W3C Verifiable Credentials Data Model v2.0 (2025)",
+      "검증가능한 자격증명과 검증가능한 제시의 데이터 모델을 규격화",
+      "https://www.w3.org/TR/vc-data-model/"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "OpenID4VP 1.0 (2025)",
+      "Wallet이 검증자에게 자격증명을 제시하는 프로토콜과 메시지 흐름을 정의",
+      "https://openid.net/specs/openid-4-verifiable-presentations-1_0.html"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "OpenID for Verifiable Credential Issuance 1.0 (OpenID4VCI 1.0) (2025)",
+      "검증가능한 자격증명을 Wallet에 발급하기 위한 프로토콜과 메시지 흐름을 정의",
+      "https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "OpenID4VC High Assurance Interoperability Profile 1.0 (HAIP 1.0) (2025)",
+      "고보증 VC 상호운용을 위한 프로파일과 요구사항을 제시",
+      "https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-1_0.html"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "OpenID SIOPv2 (2023)",
+      "자기발행 OpenID Provider를 통한 신원 제시 방식을 정의",
+      "https://openid.net/specs/openid-connect-self-issued-v2-1_0.html"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "IETF SD-JWT RFC 9901 (2025)",
+      "선택적 공개를 지원하는 JSON Web Token 형식을 RFC로 규정",
+      "https://www.rfc-editor.org/rfc/rfc9901.html"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "IETF SD-JWT VC draft (2026)",
+      "SD-JWT 기반 검증가능한 디지털 자격증명의 형식을 정의하는 Internet-Draft",
+      "https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "ISO/IEC 18013-5:2021",
+      "유료 / 모바일 운전면허증의 인터페이스와 데이터 교환을 규정",
+      "https://www.iso.org/standard/69084.html",
+      "미확보"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "ISO/IEC 18013-7:2025",
+      "유료 / 모바일 신원문서(mdoc)를 인터넷을 통해 온라인 검증자에게 제시하기 위한 인터페이스와 데이터 교환 방식을 규정",
+      "https://www.iso.org/standard/91154.html "
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "ISO/IEC 23220-1:2023",
+      "유료 / 모바일 신원관리의 구조와 상호운용 개요를 규정",
+      "https://www.iso.org/standard/74910.html"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "ISO/IEC TS 18013-6:2025",
+      "유료 / 모바일 운전면허증 적합성 시험과 상호운용 세부사항을 다룸",
+      "https://www.iso.org/standard/91153.html"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "W3C Digital Credentials API (2026)",
+      "브라우저·운영체제와 Wallet 사이의 디지털 자격증명 호출 인터페이스를 제안",
+      "https://wicg.github.io/digital-credentials/"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "OpenID Federation 1.0 (2026)",
+      "OpenID 생태계의 신뢰체인과 메타데이터 배포 방식을 정의",
+      "https://openid.net/specs/openid-federation-1_0.html"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "ETSI TS 119 612 Trusted Lists (2025)",
+      "전자서명·신뢰서비스 제공자 정보를 담는 Trusted List의 형식과 관리 방식을 규정",
+      "https://www.etsi.org/deliver/etsi_ts/119600_119699/119612/02.04.01_60/ts_119612v020401p.pdf"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "ETSI EN 319 411-1 v1.4.1 (2023)",
+      "인증서 발급을 포함한 신뢰서비스 제공자의 일반 정책 요구사항을 규정",
+      "https://www.etsi.org/deliver/etsi_en/319400_319499/31941101/01.04.01_60/en_31941101v010401p.pdf"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "TTAK_블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터 (2022)",
+      "선원자격증명 서비스에서 사용할 VC 데이터 형식을 단체표준으로 제시",
+      "https://committee.tta.or.kr/data/standard_view.jsp?by=asc&commit_code=PG1006&firstDepthCode=TC010&order=t.standard_no&pk_num=TTAK.KO-10.1415&secondDepthCode=PG1006"
+    ],
+    [
+      null,
+      "⑤ 서비스",
+      "★★☆",
+      "GOV.UK Wallet",
+      "영국 정부 Wallet 서비스의 기능과 이용 범위를 소개",
+      "https://www.gov.uk/wallet"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "행안부_전자증명서·전자문서지갑 구축 청사진 (2019)",
+      "전자증명서 발급·제출과 전자문서지갑 구축 방향 안내자료",
+      "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=68400"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "Q-Net 인정 신분증·모바일 국가기술자격증 (2024)",
+      "국가기술자격증 확인에 인정되는 모바일 신분증과 자격증 이용 방식 안내자료",
+      "https://mo.q-net.or.kr/rcv002.do?gSite=Q&id=rcv002_identi&rcvPFlag=Y"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "정부24 전자증명서·전자문서지갑 서비스",
+      "정부24의 전자증명서와 전자문서지갑 이용 서비스 안내자료",
+      "https://m.gov.kr/portal/main"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "삼성월렛 모바일 주민등록증 서비스",
+      "삼성월렛을 통한 모바일 주민등록증 발급·이용 서비스",
+      "https://www.samsung.com/sec/business/insights/news/news_250414_07/"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "PASS 인증서·전자서명 서비스",
+      "PASS 인증서와 전자서명 서비스를 안내",
+      "https://www.passauth.co.kr/main"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "네이버 자격증 모바일 국가자격증 연계",
+      "네이버 자격증에서 모바일 국가자격증을 연계하는 서비스",
+      "https://www.navercorp.com/media/pressReleasesDetail?seq=30420"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "KISA_블록체인 솔루션 및 기업 현황(2023)",
+      "국내 블록체인 솔루션·기업 현황 가운데 DID 기반 데이터 플랫폼 사례를 수록",
+      "https://blockchain.kisa.or.kr/file/2023_%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8_%EC%86%94%EB%A3%A8%EC%85%98_%EA%B8%B0%EC%97%85_%ED%8E%B8%EB%9E%8C.pdf"
+    ],
+    [
+      null,
+      "⑥ 해외사례",
+      "★★☆",
+      "OECD_G7 Mapping Exercise of Digital Identity Approaches (2024)",
+      "G7 국가의 디지털 신원 접근방식과 상호운용 관련 요소를 비교",
+      "https://www.oecd.org/en/publications/g7-mapping-exercise-of-digital-identity-approaches_56fd4e94-en.html"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "OECD_G20_Digital_Identity_Practices(2021)",
+      "G20 국가의 디지털 신원 정책과 운영사례를 수집·비교",
+      "https://www.oecd.org/content/dam/oecd/en/publications/reports/2021/08/g20-collection-of-digital-identity-practices_51e4a5b9/75223806-en.pdf"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "Japan_DIW_Advisory_Board_Report (2025)",
+      "일본 디지털 신원 지갑 추진과 거버넌스 논의를 담은 자문기구 보고서",
+      "https://www.digital.go.jp/en/policies/trust"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "Japan_EU_Japan_Digital_Identity_Pilot (2026)",
+      "EU와 일본 간 디지털 신원 상호운용 실증의 결과를 정리한 자료",
+      "https://www.digital.go.jp/en/policies/trust"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "EIRA v7.0.0 (2026)",
+      "EU의 공공서비스 상호운용 참조 아키텍처로, 상호운용 시스템 구축에 필요한 Architecture Building Block과 공통 용어·아키텍처 모델 제공",
+      "https://interoperable-europe.ec.europa.eu/collection/interoperability-architecture-solutions/solution/eira/release/700",
+      null,
+      "유럽 상호운용성 참조 아키텍처(EIRA),\n유럽 전자정부 참조 아키텍처(eGovERA)\nhttps://cartool-ec.github.io/online-documentation/index.html"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "EUDI Wallet/LSP",
+      "EUDI Wallet과 대규모 실증사업(LSP)의 추진현황",
+      "https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/694487808/What+are+the+Large+Scale+Pilot+Projects"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "Poland mObywatel-EUDI Wallet Case Study(2026)",
+      "폴란드 mObywatel의 EUDI Wallet 전환 과정과 법·조직·의미·기술적 상호운용, 인증·온보딩 및 기존 시스템 연계 과제",
+      "https://interoperable-europe.ec.europa.eu/collection/guidelines-sharing-interoperability-solutions/document/case-study-adapting-polands-mobywatel-ecosystem-european-digital-identity-wallet?utm_source=chatgpt.com"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "NZ Digital Identity Services Trust Framework Rules 2024 v2",
+      "뉴질랜드의 디지털 신원서비스 신뢰 프레임워크 운영규칙으로, 공인 서비스 제공자 요건과 자격증명 관리·폐지 및 상호운용 요구사항 규정",
+      "https://standards.digital.govt.nz/nz/dia-distfr/2/en/"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "Japan My Number smartphone/card substitute",
+      "마이넘버카드의 스마트폰 탑재와 모바일 신원증명 이용 방식을 소개하는 사이트",
+      "https://www.digital.go.jp/en/policies/mynumber/mynumbercard-mdoc"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "Canada GC Issue and Verify / GC Digital Wallet",
+      "캐나다의 디지털 자격증명 발급·검증 및 정부 Wallet 관련 정책·서비스 사이트",
+      "https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/digital-credentials.html"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "DIACC PCTF Digital Wallet (2023)",
+      "캐나다 DIACC의 Pan-Canadian Trust Framework 중 디지털 지갑 구성요소로, Wallet Provider의 역할과 자격증명 저장·관리·제시 및 신뢰요건 정의",
+      "https://diacc.ca/wp-content/uploads/2024/10/PCTF-Digital-Wallet_Final-Rec-V1.0_Compressed_ENG.pdf"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "DIACC PCTF Trust Registries (2023)",
+      "캐나다 DIACC의 Pan-Canadian Trust Framework 중 Trust Registry 구성요소로, 생태계 참여자 등록·검증·상태관리 및 신뢰정보 제공 구조 정의",
+      "https://diacc.ca/wp-content/uploads/2023/11/PCTF-Trust-Registries-Component-Overview-Final-Recommendation-V1.0.pdf"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "Singpass/Digital IC",
+      "Singpass와 Digital IC를 통한 국가 디지털 신원·모바일 문서에 대한 공식 안내 사이트",
+      "https://www.digitalforlife.gov.sg/-/media/seniors-go-digital/pdf/pdf9/singpass_english"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "Canada GC Issue and Verify Privacy Impact Assessment",
+      "캐나다 GC Issue and Verify의 개인정보 영향평가 자료",
+      "https://www.canada.ca/en/employment-social-development/corporate/transparency/access-information/reports/pia/2025-2026.html"
+    ],
+    [
+      null,
+      "⑦ 정책·산업자료",
+      "★★★",
+      "WorldBank_2026_Digital_Wallet",
+      "디지털 지갑의 개념, 생태계, 정책·기술 쟁점과 국가 사례를 종합적으로 정리한 보고서",
+      "https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099051126133542746",
+      null,
+      "전체 보고서 구성 참고"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "OECD Digital Identity Governance Recommendation (2023)",
+      "OECD의 디지털 신원 거버넌스 권고로, 신원 생태계의 공공·민간 역할, 신뢰·책임체계 및 국가 간 상호운용 방향 제시",
+      "https://one.oecd.org/document/C/MIN(2023)8/FINAL/en/pdf"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "ENISA_Digital_Identity_Standard(2023)",
+      "디지털 신원 관련 표준의 범위와 적용 동향을 정리한 자료",
+      "https://www.enisa.europa.eu/publications/digital-identity-standards"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "ENISA secure move to cloud of eIDAS ecosystem",
+      "eIDAS 생태계의 클라우드 이전과 원격 신원확인·신뢰서비스 이슈를 다룸",
+      "https://www.enisa.europa.eu/news/trust-services-digital-wallets-moving-to-the-cloud-and-remote-identity-proofing"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "OpenID EUDIW resource hub (2025)",
+      "보도자료(블로그) / EUDI Wallet 관련 OpenID 자원과 상호운용 정보를 안내",
+      "https://openid.net/openid-foundation-launches-eudiw-resource-hub/"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "OpenID conformance testing news (2026)",
+      "보도자료(블로그) / OpenID4VP·OpenID4VCI 적합성 시험의 공개·자체인증 정보",
+      "https://openid.net/openid4vp-and-openid4vci-conformance-tests-are-complete-and-open-for-self-certification/"
+    ],
+    [
+      null,
+      null,
+      "★★★",
+      "EU_European Interoperability Framework(EIF) (2017)",
+      "유럽 공공서비스의 상호운용 원칙과 Legal·Organizational·Semantic·Technical 상호운용 계층 및 거버넌스 체계",
+      "https://interoperable-europe.ec.europa.eu/collection/iopeu-monitoring/european-interoperability-framework"
+    ],
+    [
+      null,
+      null,
+      "★★☆",
+      "EIF_Next_Generation_Blueprint_Draft_0.2 (2025)",
+      "차세대 유럽 상호운용 프레임워크의 발전방향과 연합·신뢰·거버넌스·공통 서비스 및 상호운용 관련 권고사항",
+      "https://www.varam.gov.lv/lv/media/48782/download?attachment"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "행안부_2026 디지털서비스 개방 참여기업 공모",
+      "공공 디지털서비스 개방 참여기업 모집을 안내",
+      "https://mois.go.kr/frt/bbs/type013/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000006&nttId=126769"
+    ],
+    [
+      null,
+      null,
+      "★☆☆",
+      "KISA_블록체인 기술 확산 전략(2020)",
+      "블록체인 기술 확산 전략 안에서 DID 관련 정책 방향과 원칙을 제시",
+      "https://blockchain.kisa.or.kr/file/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%EA%B8%B0%EC%88%A0%ED%99%95%EC%82%B0%EC%A0%84%EB%9E%B5.pdf"
+    ]
+  ]
+}

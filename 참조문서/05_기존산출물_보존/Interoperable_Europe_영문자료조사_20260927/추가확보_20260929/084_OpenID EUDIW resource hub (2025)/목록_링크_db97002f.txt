@@ -1,0 +1,101 @@
+OpenID Foundation launches EUDIW resource hub
+Skip to content
+OpenID Foundation
+>
+Blogs
+>
+OpenID Foundation launches EUDIW resource hub
+OpenID Foundation launches EUDIW resource hub
+Published December 11, 2025
+The OpenID Foundation has launched a dedicated
+resource hub
+to support organisations implementing the
+European Digital Identity Wallet (EUDIW)
+, providing centralised access to specifications, testing tools, and implementation guidance.
+The new resource hub consolidates essential materials for implementers working with the three core specifications selected for the
+EIDAS 2.0 Architecture Reference Framework
+: the
+OpenID for Verifiable Presentations (OpenID4VP) 1.0 Final
+, the
+OpenID for Verifiable Credential Issuance (OpenID4VCI) 1.0 Final
+, and the
+High Assurance Interoperability Profile (HAIP) 1.0
+(targeted for final release this month  December 2025).
+Proven specifications backed by extensive testing
+The specifications have been rigorously validated through 11 interoperability events conducted throughout 2025, with major milestones achieved in
+May
+,
+July
+, and
+November
+. These events proved out the specs and testing protocols before the specifications advanced to final status.
+"The EUDIW resource hub brings together everything implementers need in one place," said Gail Hodges, Executive Director of the OpenID Foundation. "As deliverables continue rolling out, we'll keep the page updated so implementers always have access to the latest resources and timelines."
+Free testing tools available now
+Implementers can immediately access open source tests for both OpenID for Verifiable Presentation 1.0 with HAIP 1.0 (supporting SD-JWT and mdoc formats) and OpenID for Verifiable Credential Issuance 1.0 with HAIP 1.0 (SD-JWT support, with mdoc coming soon). These tests can be downloaded to run locally or accessed through the OpenID Foundation server at no cost.
+Self-certification services are expected to launch by February 2026, allowing implementers to publicly demonstrate conformance to the specifications. Pricing is anticipated at $700 per implementation per specification for OIDF members and $3,500 for non-members.
+Growing global adoption
+Worldwide, 38 jurisdictions have selected the OpenID4VP/VCI/HAIP specifications for their digital wallet and verifiable credential programmes, demonstrating significant momentum beyond the European Union.
+The Foundation's
+Digital Credentials Protocols Working Group
+(DCP WG) continues advancing these specifications, with another interoperability event under consideration for late January or early February 2026 to validate OpenID4VP 1.1 and OpenID4VCI 1.0 with HAIP 1.1, including new functionality whilst maintaining backward compatibility.
+Supporting the broader ecosystem
+The new resource hub for organisations implementing the EUDIW will highlight the
+Ecosystem Support Community Group
+(ES CG), which is developing a Digital Wallet Reference Technical Architecture and Best Practices document. This resource aims to benefit jurisdictions seeking to interoperate with the EU region and other OIDF implementers.
+In partnership with the
+European Telecommunications Standards Institute (ETSI)
+and the
+European Commission (EC)
+, the DCP WG is developing test requirement draft specifications expected by the end of February, aligning with EC conformance programme timelines.
+Anyone can contribute to the DCP WG at no cost by signing a contribution agreement, with membership optional for those seeking voting rights and certification discounts. To stay informed on specification updates, security analysis, and interoperability events, implementers can join the DCP WG
+mailing list
+.
+The
+EUDIW resource hub
+will be maintained and updated regularly as new deliverables and information become available.
+About the OpenID Foundation
+The OpenID Foundation (OIDF) is a global open standards body committed to helping people assert their identity wherever they choose. Founded in 2007, we are a community of technical experts leading the creation of open identity standards that are secure, interoperable, and privacy preserving. The Foundation’s OpenID Connect standard is now used by billions of people across millions of applications. In the last five years, the Financial Grade API has become the standard of choice for Open Banking and Open Data implementations, allowing people to access and share data across entities. Today, the OpenID Foundation’s standards are the connective tissue to enable people to assert their identity and access their data at scale, the scale of the internet, enabling “networks of networks” to interoperate globally. Individuals, companies, governments and non-profits are encouraged to join or participate. Find out more at
+openid.net
+.
+Tagged
+Digital Identity
+digital wallets
+eIDAS 2.0
+EUDIW
+European Digital Identity Wallet
+HAIP
+Identity Standards
+Interoperability
+OpenID Foundation
+OpenID4VCI
+openid4vp
+Verifiable Credentials
+Manage Cookie Consent
+To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions.
+Functional
+Functional
+Always active
+The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.
+Preferences
+Preferences
+The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user.
+Statistics
+Statistics
+The technical storage or access that is used exclusively for statistical purposes.
+The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.
+Marketing
+Marketing
+The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.
+Manage options
+Manage services
+Manage {vendor_count} vendors
+Read more about these purposes
+Accept
+Deny
+View preferences
+Save preferences
+View preferences
+{title}
+{title}
+{title}
+Manage consent

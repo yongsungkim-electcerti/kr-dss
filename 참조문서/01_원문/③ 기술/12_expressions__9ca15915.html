@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expressions &mdash; GITB TDL Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.css" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=d4340937"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://www.itb.ec.europa.eu/files/docs-static/custom.latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Test steps" href="../constructs/index.html" />
+    <link rel="prev" title="Types" href="../types/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GITB TDL Documentation
+              <img src="../_static/logo_itb.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                GITB TDL version 1.30.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../helloWorld/index.html">Hello world</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testsuite/index.html">Test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testcase/index.html">Test cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scriptlets/index.html">Scriptlets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/index.html">Types</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Expressions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#escaping-xml-in-expressions">Escaping XML in expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#referring-to-variables">Referring to variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#map-elements">Map elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#list-variable-elements">List variable elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#missing-variables">Missing variables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-variables-from-expressions">Defining variables from expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#referring-to-configuration-parameters">Referring to configuration parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#domain-configuration-parameters">Domain configuration parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#organisation-configuration-parameters">Organisation configuration parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-configuration-parameters">System configuration parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#actor-configuration-parameters">Actor configuration parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-test-session-metadata">Accessing test session metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#checking-the-result-of-test-steps">Checking the result of test steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#checking-whether-a-specific-step-succeeded">Checking whether a specific step succeeded</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#checking-the-current-result-of-a-test-session">Checking the current result of a test session</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#checking-the-status-of-a-specific-step">Checking the status of a specific step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#status-checks-for-scriptlet-steps">Status checks for scriptlet steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#expressions-and-templates">Expressions and templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#where-can-expressions-be-used">Where can expressions be used?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../constructs/index.html">Test steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../handlers/index.html">Test step handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Example test suites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog/index.html">Release history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GITB TDL Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Expressions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="expressions">
+<span id="test-case-expressions"></span><span id="index-0"></span><h1>Expressions<a class="headerlink" href="#expressions" title="Link to this heading"></a></h1>
+<p>Expressions are used in GITB TDL to perform arbitrary operations on context variables and to provide more control over the input and
+output of specific steps. The expression language assumed by GITB TDL is <strong>XPath 3.0</strong> given that processing XML constructs is one of the more
+frequent needs when conformance testing for content specifications. However, the use of XPath does not restrict us to using XML documents as variables;
+XPath provides sufficient expressiveness to define most operation you would need to support (albeit not always in the most intuitive way).</p>
+<p>The following <code class="docutils literal notranslate"><span class="pre">assign</span></code> operations illustrate some interesting examples:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!--</span>
+<span class="cm">    Assign text to a string variable.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myString&quot;</span><span class="nt">&gt;</span>&quot;aText&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Assign a number to a number variable.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myNumber&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Assign a value to a boolean variable. Considering the assign step&#39;s content is an XPath expression, this would</span>
+<span class="cm">    be achieved using the true() or false() functions.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myBoolean&quot;</span><span class="nt">&gt;</span>true()<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    From an object variable fileContent (i.e. an XML document), extract part matching</span>
+<span class="cm">    /testcase/steps into another object variable named targetElement.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;targetElement&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$fileContent&quot;</span><span class="nt">&gt;</span>/*[local-name()<span class="w"> </span>=<span class="w"> </span>&#39;testcase&#39;]/*[local-name()<span class="w"> </span>=<span class="w"> </span>&#39;steps&#39;]<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    From an object variable fooContent (i.e. an XML document), extract part matching</span>
+<span class="cm">    /ns1:foo/ns2:bar into another object variable named barElement. Using &quot;ns1&quot; and &quot;ns2&quot; in the</span>
+<span class="cm">    expression assumes they are defined in the test case&#39;s &quot;namespaces&quot; section.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;barElement&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$fooContent&quot;</span><span class="nt">&gt;</span>/ns1:foo/ns2:bar<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Assign to a number variable named result the result of adding 1 to another number</span>
+<span class="cm">    variable named counter.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;result&quot;</span><span class="nt">&gt;</span>$counter<span class="w"> </span>+<span class="w"> </span>1<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Create a custom XML fragment from a string variable named value and assign it to</span>
+<span class="cm">    the tempXml string variable</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;tempXml&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[&#39;&lt;temp&gt;&#39; || $value || &#39;&lt;/temp&gt;&#39;]]&gt;</span><span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Assign to the boolean result variable the result of checking that a string variable</span>
+<span class="cm">    named input has at least 10 characters (expression wrapped in CDATA block to use &#39;&gt;&#39;</span>
+<span class="cm">    character without escaping it</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;result&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[string-length($input) &gt;= 10]]&gt;</span><span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Assign to string variable result the value &quot;result1&quot; if the number var is 1, or</span>
+<span class="cm">    &quot;result2&quot; otherwise</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;result&quot;</span><span class="nt">&gt;</span>if<span class="w"> </span>($var<span class="w"> </span>=<span class="w"> </span>1)<span class="w"> </span>then<span class="w"> </span>&quot;result1&quot;<span class="w"> </span>else<span class="w"> </span>&quot;result2&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Create a map with two entries set to strings.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myMap{key1}&quot;</span><span class="nt">&gt;</span>&quot;Value<span class="w"> </span>1&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myMap{key2}&quot;</span><span class="nt">&gt;</span>&quot;Value<span class="w"> </span>2&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Create a list with two strings (note the use of &#39;append&#39;).</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myList&quot;</span><span class="w"> </span><span class="na">append=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>&quot;Value<span class="w"> </span>1&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myList&quot;</span><span class="w"> </span><span class="na">append=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>&quot;Value<span class="w"> </span>2&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Create a map containing another map and a list.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myMap{myInnerMap}{value1}&quot;</span><span class="nt">&gt;</span>&quot;Value<span class="w"> </span>1&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myMap{myInnerMap}{value2}&quot;</span><span class="nt">&gt;</span>&quot;Value<span class="w"> </span>2&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myMap{myInnerList}&quot;</span><span class="w"> </span><span class="na">append=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>&quot;Value<span class="w"> </span>1&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myMap{myInnerList}&quot;</span><span class="w"> </span><span class="na">append=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>&quot;Value<span class="w"> </span>2&quot;<span class="nt">&lt;/assign&gt;</span>
+</pre></div>
+</div>
+<p>As you can see the expressions you can use are limited only to the functions available in XPath 3.0. Using these there is typically always
+a way to express what is needed, potentially by first wrapping one or more values in a custom XML wrapper and then using XPath functions
+on that:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!--</span>
+<span class="cm">    Store custom text content as an XML object in the string tempXml.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;tempXml&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[&#39;&lt;toc&gt;&#39; || $toc{tocEntries} || &#39;&lt;/toc&gt;&#39;]]&gt;</span><span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Use object tempXml to evaluate an XPath expression and store the result in a boolean result.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;result&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$tempXml&quot;</span><span class="nt">&gt;</span>contains(/toc/text(),<span class="w"> </span>&#39;file.xml&#39;)<span class="nt">&lt;/assign&gt;</span>
+</pre></div>
+</div>
+<p>In the above example, we are using the value contained in a <code class="docutils literal notranslate"><span class="pre">map</span></code> variable named “toc” to construct a temporary XML content.
+We can then use the “tempXml” variable for any XPath manipulation that requires a source document.</p>
+<p>When manipulating XML content through expressions we most likely want to use <strong>namespaces</strong> to ensure we correctly identify our target elements.
+To directly use namespaces in XPath expressions via their declared prefixes we need to first define them in the test case’s <a class="reference internal" href="../testcase/index.html#test-case-namespaces"><span class="std std-ref">namespaces section</span></a>.</p>
+<section id="escaping-xml-in-expressions">
+<h2>Escaping XML in expressions<a class="headerlink" href="#escaping-xml-in-expressions" title="Link to this heading"></a></h2>
+<p>You need to always keep in mind that when you are writing an expression you are doing so within an XML document (the test case’s). This means that
+special characters such as <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> need to be escaped. There are two ways to handle this, matching how you would do this
+in any XML document.</p>
+<p><strong>Approach 1: Escape entities</strong></p>
+<p>Special XML characters can always be escaped using their corresponding entities. In the following example we use the <code class="docutils literal notranslate"><span class="pre">&amp;gt;</span></code>
+entity to escape the <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> character:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;result&quot;</span><span class="nt">&gt;</span>string-length($input)<span class="w"> </span><span class="ni">&amp;gt;</span>=<span class="w"> </span>10<span class="nt">&lt;/assign&gt;</span>
+</pre></div>
+</div>
+<p>A similar approach can be taken to replace any other special character such as <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> (replaced by <code class="docutils literal notranslate"><span class="pre">&amp;quot;</span></code>) or <code class="docutils literal notranslate"><span class="pre">'</span></code>
+(replaced by <code class="docutils literal notranslate"><span class="pre">&amp;apos;</span></code>).</p>
+<p><strong>Approach 2: CDATA block</strong></p>
+<p>Using XML escape entities can result in expressions that are hard to read. In addition, they are insufficient when the text we
+are using in the expression is unknown and may give unexpected results. In these cases you can use a <code class="docutils literal notranslate"><span class="pre">CDATA</span></code> block:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;result&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[string-length($input) &gt;= 10]]&gt;</span><span class="nt">&lt;/assign&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="referring-to-variables">
+<span id="test-case-referring-to-variables"></span><h2>Referring to variables<a class="headerlink" href="#referring-to-variables" title="Link to this heading"></a></h2>
+<p>As you have seen in the previous examples, referring to variables is a very common use case in GITB TDL expressions. Variable
+references are done as <code class="docutils literal notranslate"><span class="pre">$VARIABLE</span></code>, i.e. using the <code class="docutils literal notranslate"><span class="pre">$</span></code> character, followed by the variable’s name. Furthermore, when
+an expression consists only of a variable reference without other XPath elements it is referred to as a <strong>pure variable reference</strong>.
+As we have discussed in <a class="reference internal" href="../types/index.html#test-case-types-type-conversions"><span class="std std-ref">Type conversions</span></a>, pure variable references are important when we need to convert
+variables from one type to another in <code class="docutils literal notranslate"><span class="pre">assign</span></code> steps.</p>
+<p>The following examples show several variable reference cases used for illustration in a <a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log step</span></a>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!--</span>
+<span class="cm">    Reference a simple variable from the current scope.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;log&gt;</span>$myVariable<span class="nt">&lt;/log&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Reference a map&#39;s entry from the current scope.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;log&gt;</span>$myMap{key1}<span class="nt">&lt;/log&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Reference a list&#39;s item from the current scope.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;log&gt;</span>$myList{0}<span class="nt">&lt;/log&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Reference a configuration properties at domain, organisation, system and statement (actor) level.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;log&gt;</span>$DOMAIN{myDomainParameter}<span class="nt">&lt;/log&gt;</span>
+<span class="nt">&lt;log&gt;</span>$ORGANISATION{myOrganisationParameter}<span class="nt">&lt;/log&gt;</span>
+<span class="nt">&lt;log&gt;</span>$SYSTEM{mySystemParameter}<span class="nt">&lt;/log&gt;</span>
+<span class="nt">&lt;log&gt;</span>$MyActor{myStatementParameter}<span class="nt">&lt;/log&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Reference build-in test status information.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;log&gt;</span>$STEP_STATUS{myStep}<span class="nt">&lt;/log&gt;</span>
+<span class="nt">&lt;log&gt;</span>$STEP_SUCCESS{myStep}<span class="nt">&lt;/log&gt;</span>
+<span class="nt">&lt;log&gt;</span>$TEST_SUCCESS<span class="nt">&lt;/log&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Reference build-in test session metadata.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;log&gt;</span>$SESSION{sessionId}<span class="nt">&lt;/log&gt;</span>
+<span class="nt">&lt;log&gt;</span>$SESSION{testCaseId}<span class="nt">&lt;/log&gt;</span>
+<span class="nt">&lt;log&gt;</span>$SESSION{testEngineVersion}<span class="nt">&lt;/log&gt;</span>
+</pre></div>
+</div>
+<section id="map-elements">
+<span id="test-case-referring-to-variables-map"></span><h3>Map elements<a class="headerlink" href="#map-elements" title="Link to this heading"></a></h3>
+<p>Variables of type <code class="docutils literal notranslate"><span class="pre">map</span></code> represent special cases as they can contain additional variables and even additional <code class="docutils literal notranslate"><span class="pre">map</span></code> s. Referring to
+<code class="docutils literal notranslate"><span class="pre">map</span></code> variables themselves is done as with any other variable (i.e. <code class="docutils literal notranslate"><span class="pre">$myMap</span></code>), but referring to entries in the <code class="docutils literal notranslate"><span class="pre">map</span></code> are done
+by specifying the key in curly brackets (i.e. <code class="docutils literal notranslate"><span class="pre">$myMap{myKey}</span></code>). In the case a <code class="docutils literal notranslate"><span class="pre">map</span></code> contains a nested <code class="docutils literal notranslate"><span class="pre">map</span></code> its inner values
+can be referenced by appending to the expression an additional set of curly braces with the inner <code class="docutils literal notranslate"><span class="pre">map</span></code>’s key. There is no limit to
+the nesting that is possible in a <code class="docutils literal notranslate"><span class="pre">map</span></code>. In addition note that when specifying the keys you may also use variable references
+if the key is to be determined dynamically.</p>
+<p>Assigning values to a <code class="docutils literal notranslate"><span class="pre">map</span></code> variable is achieved using the <code class="docutils literal notranslate"><span class="pre">assign</span></code> step (see <a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a>) or as part of the variable’s
+declaration in the test case (see <a class="reference internal" href="../testcase/index.html#test-case-variables"><span class="std std-ref">Variables</span></a>). Using this we can either assign values to the <code class="docutils literal notranslate"><span class="pre">map</span></code>
+itself (i.e. point it to another <code class="docutils literal notranslate"><span class="pre">map</span></code>) or one of its keys. Moreover, assignment to a <code class="docutils literal notranslate"><span class="pre">map</span></code> key may be done to an existing
+entry or by defining a new one. Note that when assigning a new <code class="docutils literal notranslate"><span class="pre">map</span></code> entry you also need to specify the <code class="docutils literal notranslate"><span class="pre">type</span></code> of this entry.
+The following examples illustrate <code class="docutils literal notranslate"><span class="pre">assign</span></code> steps that showcase the possible assignment and reference scenarios:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!--</span>
+<span class="cm">    Assign map &quot;myMap&quot; to another map named &quot;anotherMap&quot;.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myMap&quot;</span><span class="nt">&gt;</span>$anotherMap<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Assign the entry of &quot;myMap&quot; named &quot;myKey&quot; to the string &quot;A value&quot;.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myMap{myKey}&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>&quot;A<span class="w"> </span>value&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Assign the entry of &quot;myMap&quot; named &quot;myOtherKey&quot; to an entry of &quot;anotherMap&quot;</span>
+<span class="cm">    named &quot;anotherKey&quot; as a string.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myMap{myOtherKey}&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>$anotherMap{anotherKey}<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Assign value &quot;key1&quot; to the string variable &quot;k1&quot;.</span>
+<span class="cm">    Then use the &quot;k1&quot; variable to pick the target entry of &quot;myMap&quot;</span>
+<span class="cm">    to set as the string &quot;A value&quot;.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;k1&quot;</span><span class="nt">&gt;</span>&quot;key1&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myMap{k1}&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>&quot;A<span class="w"> </span>value&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Assign value &quot;key1&quot; to the string variable &quot;k1&quot;.</span>
+<span class="cm">    Assign value &quot;key2&quot; to the string variable &quot;k2&quot;.</span>
+<span class="cm">    Then use the &quot;k1&quot; variable to pick the target entry of &quot;myMap&quot; to set as a string matching</span>
+<span class="cm">    the entry of &quot;anotherMap&quot; for the key matching the value of &quot;k2&quot;.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;k1&quot;</span><span class="nt">&gt;</span>&quot;key1&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;k2&quot;</span><span class="nt">&gt;</span>&quot;key2&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myMap{k1}&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>$anotherMap{$k2}<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Assume that &quot;myMap&quot; is a map that contains a nested map named &quot;myNestedMap&quot; that itself</span>
+<span class="cm">    contains a nested map named &quot;myFurtherNestedMap&quot;. Set key &quot;myKey&quot; of &quot;myFurtherNestedMap&quot;</span>
+<span class="cm">    a the string &quot;A value&quot;.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myMap{myNestedMap}{myFurtherNestedMap}{myKey}&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>&quot;A<span class="w"> </span>value&quot;<span class="nt">&lt;/assign&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="list-variable-elements">
+<span id="test-case-referring-to-variables-list"></span><h3>List variable elements<a class="headerlink" href="#list-variable-elements" title="Link to this heading"></a></h3>
+<p>Variables of type <code class="docutils literal notranslate"><span class="pre">list</span></code> contain a sequence of elements of a specific type. Given that their type is defined when they are declared
+(see <a class="reference internal" href="../testcase/index.html#test-case-variables"><span class="std std-ref">Variables</span></a>) you don’t need to specify the <code class="docutils literal notranslate"><span class="pre">type</span></code> attribute when assigning values to them (in <code class="docutils literal notranslate"><span class="pre">assign</span></code> steps). Referencing a <code class="docutils literal notranslate"><span class="pre">list</span></code>
+element is done using its index which is 0-based. Adding values to a <code class="docutils literal notranslate"><span class="pre">list</span></code> is achieved using the <code class="docutils literal notranslate"><span class="pre">assign</span></code> step and can either
+target an existing list element (identified by its index) or be appended to the list. The following examples illustrate how you can reference
+and assign list values:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!--</span>
+<span class="cm">    Assign list &quot;myList&quot; to another list named &quot;anotherList&quot;.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myList&quot;</span><span class="nt">&gt;</span>$anotherList<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Append an item to &quot;myList&quot; (declared as a list of strings).</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myList&quot;</span><span class="w"> </span><span class="na">append=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>&quot;Value<span class="w"> </span>1&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Append another item to &quot;myList&quot;.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myList&quot;</span><span class="w"> </span><span class="na">append=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>&quot;Value<span class="w"> </span>2&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Replace the first item of &quot;myList&quot; with &quot;Value 3&quot;.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myList{0}&quot;</span><span class="nt">&gt;</span>&quot;Value<span class="w"> </span>3&quot;<span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    Assign to the number variables &quot;index1&quot; and &quot;index2&quot; values 1 and 2 respectivelly.</span>
+<span class="cm">    Replace the item matching &quot;index1&quot; of &quot;myList&quot; with the item matching &quot;index2&quot; of &quot;anotherList&quot;.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;index1&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/assign&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;index2&quot;</span><span class="nt">&gt;</span>2<span class="nt">&lt;/assign&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;myList{$index1}&quot;</span><span class="nt">&gt;</span>$anotherList{$index2}<span class="nt">&lt;/assign&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="missing-variables">
+<span id="test-case-referring-to-variables-missing"></span><h3>Missing variables<a class="headerlink" href="#missing-variables" title="Link to this heading"></a></h3>
+<p>During a test session is it possible that you refer to a variable that is not defined. Doing so is not always an error
+given that variables may be contributed to the session via external configuration or data received from messaging, processing
+or validation steps. When an expression refers to a missing variable, the value that is assigned is an <strong>empty string</strong>.</p>
+<p>A typical scenario where you may want to use this is when you check configuration or data for certain input and, if missing,
+set a default value through the test case. This is illustrated in the following test case snippet:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;if</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Determine validation type&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- If &quot;$SYSTEM{validationType}&quot; cannot be determined it is considered as being an empty string. --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;cond&gt;</span>string-length($SYSTEM{validationType})<span class="w"> </span>=<span class="w"> </span>0<span class="nt">&lt;/cond&gt;</span>
+<span class="w">    </span><span class="nt">&lt;then&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- No value found - set a default. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;typeToUse&quot;</span><span class="nt">&gt;</span>&#39;defaultValidationType&#39;<span class="nt">&lt;/assign&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/then&gt;</span>
+<span class="w">    </span><span class="nt">&lt;else&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Value found - use it. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;typeToUse&quot;</span><span class="nt">&gt;</span>$SYSTEM{validationType}<span class="nt">&lt;/assign&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/else&gt;</span>
+<span class="nt">&lt;/if&gt;</span>
+<span class="nt">&lt;log&gt;</span>&#39;Using<span class="w"> </span>validation<span class="w"> </span>type:<span class="w"> </span>&#39;<span class="w"> </span>||<span class="w"> </span>$typeToUse<span class="nt">&lt;/log&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To check more explicitly whether a given variable is defined you can also use the <a class="reference internal" href="../handlers/index.html#handlers-variableutils-exists"><span class="std std-ref">VariableUtils</span></a> <code class="docutils literal notranslate"><span class="pre">exists</span></code> operation.</p>
+</div>
+</section>
+</section>
+<section id="defining-variables-from-expressions">
+<span id="test-case-variables-from-expression-output"></span><h2>Defining variables from expressions<a class="headerlink" href="#defining-variables-from-expressions" title="Link to this heading"></a></h2>
+<p>When using <a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a> steps the goal is to use an expression to produce an output value. This value
+will be stored as a variable in the test session context and used in subsequent steps. The variables to hold such values
+can either be predetermined in the test case’s <a class="reference internal" href="../testcase/index.html#test-case-variables"><span class="std std-ref">variables</span></a> section, or can be defined dynamically
+during the test session execution. In the latter case, the type of the variable is determined from the output of the
+expression.</p>
+<p>As examples consider the following cases, where determining the output of expressions result in corresponding variables:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!--</span>
+<span class="cm">    This results in a variable of type number named &quot;result1&quot;.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;result1&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[string-length($input)]]&gt;</span><span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    This results in a variable of type string named &quot;result2&quot;.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;result2&quot;</span><span class="nt">&gt;</span>&#39;This<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>text<span class="w"> </span>value&#39;<span class="nt">&lt;/assign&gt;</span>
+</pre></div>
+</div>
+<p>Automatic creation of variables also applies for container types (<code class="docutils literal notranslate"><span class="pre">map</span></code> and <code class="docutils literal notranslate"><span class="pre">list</span></code>) based on the target variable
+expressions and additional TDL constructs that are used:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!--</span>
+<span class="cm">    In this case the expression&#39;s result is a number, however the expression provided in the</span>
+<span class="cm">    assign step&#39;s &quot;to&quot; indicates that this is the value &quot;aKey&quot; of a map named &quot;result3&quot;. Both the</span>
+<span class="cm">    key and the map will be automatically created if not already defined.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;result3{aKey}&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[string-length($input)]]&gt;</span><span class="nt">&lt;/assign&gt;</span>
+<span class="cm">&lt;!--</span>
+<span class="cm">    In this case the expression results in a string that will be stored in a list named &quot;result4&quot;.</span>
+<span class="cm">    The fact that this is a list is determined from the &quot;append&quot; attribute that is used to signal that</span>
+<span class="cm">    the value is to be added to a list. If the &quot;result4&quot; list is missing it will be created as a result</span>
+<span class="cm">    of this step.</span>
+<span class="cm">--&gt;</span>
+<span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;result4&quot;</span><span class="w"> </span><span class="na">append=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>&#39;This<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>text<span class="w"> </span>value&#39;<span class="nt">&lt;/assign&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="referring-to-configuration-parameters">
+<span id="test-case-configuration"></span><h2>Referring to configuration parameters<a class="headerlink" href="#referring-to-configuration-parameters" title="Link to this heading"></a></h2>
+<p>Test cases can leverage externally provided configuration parameters as part of the test session scope. Doing so
+adds a level of customisation and parameterisation that can accommodate various external input at different levels.
+Such input is typically provided by testers but can also be supplied by administrators or externally scripted
+tooling.</p>
+<p>GITB TDL, as implemented in the GITB Test Bed software, offers four levels of such configuration, with a
+progressively narrower scope to address all potential needs:</p>
+<figure class="align-center">
+<img alt="../_images/configuration_scopes.png" src="../_images/configuration_scopes.png" />
+</figure>
+<p>The following table provides a summary overview of the available configuration levels.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Level</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Provided by</p></th>
+<th class="head"><p>Map variable name</p></th>
+<th class="head"><p>Predefined map entries</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p><a class="reference internal" href="#test-case-expressions-domain"><span class="std std-ref">Domain</span></a></p></th>
+<td><p>Relates to a complete domain and applies to any and all test cases. Such values are typically treated as high-level constant configuration values to ensure portable test cases.</p></td>
+<td><p>Administrators.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">DOMAIN</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p><a class="reference internal" href="#test-case-expressions-organisation"><span class="std std-ref">Organisation</span></a></p></th>
+<td><p>Relates to an organisation as a whole and applies to all its systems and their conformance statements.</p></td>
+<td><p>Users and administrators.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ORGANISATION</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">shortName</span></code>, <code class="docutils literal notranslate"><span class="pre">fullName</span></code></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p><a class="reference internal" href="#test-case-expressions-system"><span class="std std-ref">System</span></a></p></th>
+<td><p>Relates to a system as a whole and applies to all test cases defined for it in its linked conformance statements.</p></td>
+<td><p>Users and administrators.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">shortName</span></code>, <code class="docutils literal notranslate"><span class="pre">fullName</span></code>, <code class="docutils literal notranslate"><span class="pre">version</span></code></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p><a class="reference internal" href="#test-case-expressions-actor"><span class="std std-ref">Actor</span></a></p></th>
+<td><p>Relates to a specific conformance statement, i.e. a specific system testing as an actor of a selected specification. This is most fine-grained level of configuration.</p></td>
+<td><p>Users and administrators.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ACTOR</span></code> (for the SUT actor) or the relevant actor ID</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The type of value defined by each parameter, regardless of its level, can be:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Simple texts as <code class="docutils literal notranslate"><span class="pre">string</span></code> values.</p></li>
+<li><p>Secret texts as <code class="docutils literal notranslate"><span class="pre">string</span></code> values (not communicated to users or client systems).</p></li>
+<li><p>Files as <code class="docutils literal notranslate"><span class="pre">binary</span></code> values.</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Administrator-provided values:</strong> Configuration parameters can also be set to be editable only by administrators
+by defining them as “admin only”. In the case of actor-level configuration this is done via the <code class="docutils literal notranslate"><span class="pre">adminOnly</span></code> attribute
+(see <a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">here</span></a> for details).</p>
+</div>
+<section id="domain-configuration-parameters">
+<span id="test-case-expressions-domain"></span><span id="index-1"></span><h3>Domain configuration parameters<a class="headerlink" href="#domain-configuration-parameters" title="Link to this heading"></a></h3>
+<p>Domain configuration parameters apply to all its specifications and actors, as well as the organisations and their systems that define
+relevant conformance statements. Such parameters typically relate to cross-cutting values or configuration of a much more technical
+nature. As an example consider a <a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a> step that makes use of an external validation service (see <a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handlers</span></a>)
+to validate content. It could be interesting to define the address of the validation service endpoint in configuration rather than
+in each test case. This approach allows for more flexibility in terms of:</p>
+<ul class="simple">
+<li><p><strong>Portability:</strong> Allowing test cases to automatically switch from local development settings to production settings or to point to a different
+service instance.</p></li>
+<li><p><strong>Implementation flexibility:</strong> Allowing the actual implementation of a service handler to change without impacting test cases.</p></li>
+<li><p><strong>Maintainability:</strong> Specifying and reusing values that can be changed transparently to test cases.</p></li>
+<li><p><strong>Sensitivity:</strong> Allowing sensitive properties such as passwords to be used without including them in the GITB TDL content.</p></li>
+</ul>
+<p>Using such domain-level configuration properties finds an obvious use case in service handler definitions but is not
+restricted to that. Such configuration can be used anywhere a value needs to be used that is common across all test cases.</p>
+<p>Domain-level configuration properties are made available to test sessions in a <code class="docutils literal notranslate"><span class="pre">map</span></code> named <code class="docutils literal notranslate"><span class="pre">DOMAIN</span></code> that contains key-value pairs matching
+the configured parameters. This <code class="docutils literal notranslate"><span class="pre">map</span></code> can be used in expressions in exactly the same way other variables and configuration entries are used
+as illustrated in the following examples:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Validation service URL configured at domain level as &quot;handlerURL&quot;. --&gt;</span>
+<span class="hll"><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate content&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;$DOMAIN{handlerURL}&quot;</span><span class="nt">&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>$theContentToValidate<span class="nt">&lt;/input&gt;</span>
+<span class="nt">&lt;/verify&gt;</span>
+<span class="cm">&lt;!-- Use the &quot;domainLevelValue&quot; constant configured at domain level in calculations. --&gt;</span>
+<span class="hll"><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;result&quot;</span><span class="nt">&gt;</span>$aValue<span class="w"> </span>+<span class="w"> </span>$DOMAIN{domainLevelValue}<span class="nt">&lt;/assign&gt;</span>
+</span></pre></div>
+</div>
+</section>
+<section id="organisation-configuration-parameters">
+<span id="test-case-expressions-organisation"></span><span id="index-4"></span><span id="index-3"></span><span id="index-2"></span><h3>Organisation configuration parameters<a class="headerlink" href="#organisation-configuration-parameters" title="Link to this heading"></a></h3>
+<p>Organisation parameters relate to an organisation as a whole and apply to all its systems and their configured conformance statements.
+An example case of using such a parameter would be to define a Member State ISO country code in a community where its participating
+organisations are the individual EU Member States. To avoid specifying this in each test case an organisation-level configuration
+parameter could be defined to provide this only once.</p>
+<p>Organisation parameters are made accessible in test cases through a <code class="docutils literal notranslate"><span class="pre">map</span></code> named <code class="docutils literal notranslate"><span class="pre">ORGANISATION</span></code>. This contains key-value pairs for
+each configured parameter that can be used in expressions in exactly the same way other variables and configuration entries are used.</p>
+<p>Apart from custom properties, the <code class="docutils literal notranslate"><span class="pre">ORGANISATION</span></code> map also contains certain predefined values, specifically:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">shortName</span></code>: The <code class="docutils literal notranslate"><span class="pre">string</span></code> value of the organisation’s name (short form).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fullName</span></code>: The <code class="docutils literal notranslate"><span class="pre">string</span></code> value of the organisation’s name (full form).</p></li>
+</ul>
+</div></blockquote>
+<p>The following example illustrates use of this map to pass a Member State country code (key <code class="docutils literal notranslate"><span class="pre">msCode</span></code>) to a validator to apply
+country-specific validation rules:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Validation service URL configured at domain level as &quot;handlerURL&quot;. --&gt;</span>
+<span class="nt">&lt;verify</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Validate content&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;$DOMAIN{handlerURL}&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Country code retrieved from organisation-level as &quot;msCode&quot;. --&gt;</span>
+<span class="hll"><span class="w">    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;country&quot;</span><span class="nt">&gt;</span>$ORGANISATION{msCode}<span class="nt">&lt;/input&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>$theContentToValidate<span class="nt">&lt;/input&gt;</span>
+<span class="nt">&lt;/verify&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="system-configuration-parameters">
+<span id="test-case-expressions-system"></span><span id="index-9"></span><span id="index-8"></span><span id="index-7"></span><span id="index-6"></span><span id="index-5"></span><h3>System configuration parameters<a class="headerlink" href="#system-configuration-parameters" title="Link to this heading"></a></h3>
+<p>System parameters relate to a system and apply to all test cases defined in its linked conformance statements. An example case
+of a system parameter would be one where an organisation’s systems are mapped to distinct IT services that are expected to be individually tested.
+Each such service may have an API endpoint address that would be used within all test cases to make API calls. Defining such a
+configuration property at this level avoids repeating and redefining it in every linked conformance statement.</p>
+<p>System parameters are made accessible in test cases through a <code class="docutils literal notranslate"><span class="pre">map</span></code> named <code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code>. This contains key-value pairs for
+each configured parameter that can be used in expressions in exactly the same way other variables and configuration entries are used.</p>
+<p>Apart from custom properties, the <code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code> map also contains certain predefined values, specifically:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">shortName</span></code>: The <code class="docutils literal notranslate"><span class="pre">string</span></code> value of the system’s name (short form).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fullName</span></code>: The <code class="docutils literal notranslate"><span class="pre">string</span></code> value of the system’s name (full form).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code>: The <code class="docutils literal notranslate"><span class="pre">string</span></code> value of the system’s version.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apiKey</span></code>: The <code class="docutils literal notranslate"><span class="pre">string</span></code> value of the system’s unique API key.</p></li>
+</ul>
+</div></blockquote>
+<p>The following example illustrates use of this map to pass a API endpoint address (key <code class="docutils literal notranslate"><span class="pre">endpointAddress</span></code>), specific to the system,
+as part of a messaging step (see <a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">Test step handlers</span></a> and <a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a>). This can then be used by the messaging service to define the destination of its outgoing calls:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Messaging service URL configured at domain level as &quot;handlerURL&quot;. --&gt;</span>
+<span class="nt">&lt;send</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;sendStep&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Send message&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;$DOMAIN{handlerURL}&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Endpoint address retrieved from system-level as &quot;endpointAddress&quot;. --&gt;</span>
+<span class="hll"><span class="w">    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;destination&quot;</span><span class="nt">&gt;</span>$SYSTEM{endpointAddress}<span class="nt">&lt;/input&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>$theContentToSend<span class="nt">&lt;/input&gt;</span>
+<span class="nt">&lt;/send&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="actor-configuration-parameters">
+<span id="test-case-expressions-actor"></span><span id="index-11"></span><span id="index-10"></span><h3>Actor configuration parameters<a class="headerlink" href="#actor-configuration-parameters" title="Link to this heading"></a></h3>
+<p>Actor configuration parameters can be thought of more simply as configuration that applies for a specific conformance statement.
+They are the finest level of configuration supported by the GITB TDL considering that a system
+(the <a class="reference internal" href="#test-case-expressions-system"><span class="std std-ref">immediately broader configuration level</span></a>) can have several conformance
+statements.</p>
+<p>Actors are defined either <a class="reference internal" href="../testsuite/index.html#test-suite-actors"><span class="std std-ref">within the test suite</span></a> or externally on the Test Bed and referenced
+by their ID. Using actor configuration properties in test steps is done by means of this ID, which points to a <code class="docutils literal notranslate"><span class="pre">map</span></code>
+that includes its configuration properties as entries. Considering that the most common scenario is to refer to
+configuration properties of the SUT actor, the GITB TDL foresees an <code class="docutils literal notranslate"><span class="pre">ACTOR</span></code> alias that can be used in place of the
+actor’s actual ID.</p>
+<p>As an example, consider the following test suite definition. It defines two actors - a <code class="docutils literal notranslate"><span class="pre">Sender</span></code> and a <code class="docutils literal notranslate"><span class="pre">Receiver</span></code> -
+of which the <code class="docutils literal notranslate"><span class="pre">Sender</span></code> includes an endpoint with a <code class="docutils literal notranslate"><span class="pre">dataVersion</span></code> configuration property:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testsuite&gt;</span>
+<span class="w">    </span><span class="nt">&lt;actors&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Sender&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;gitb:name&gt;</span>Sender<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">            </span><span class="nt">&lt;gitb:endpoint</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;info&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;gitb:config</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;dataVersion&quot;</span><span class="w"> </span><span class="na">kind=</span><span class="s">&quot;SIMPLE&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/gitb:endpoint&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/gitb:actor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Receiver&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;gitb:name&gt;</span>Receiver<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/gitb:actor&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;config_test_1&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/testsuite&gt;</span>
+</pre></div>
+</div>
+<p>Considering the above, test cases that would focus on the <code class="docutils literal notranslate"><span class="pre">Sender</span></code> actor as their SUT would define their actors as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;config_test_1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;actors&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Sender&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Sender&quot;</span><span class="w"> </span><span class="na">role=</span><span class="s">&quot;SUT&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Receiver&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Receiver&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Lookup the &quot;dataVersion&quot; property configured for the &quot;Sender&quot;.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;temp&quot;</span><span class="nt">&gt;</span>$Sender{dataVersion}<span class="nt">&lt;/assign&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Given that the &quot;Sender&quot; is also the SUT actor you can use the &quot;ACTOR&quot; alias.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;temp&quot;</span><span class="nt">&gt;</span>$ACTOR{dataVersion}<span class="nt">&lt;/assign&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Actors in scriptlets:</strong> The <code class="docutils literal notranslate"><span class="pre">ACTOR</span></code> alias for the SUT actor is particularly useful in <a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">scriptlets</span></a>
+if the actor identifiers can vary.</p>
+</div>
+<p>Configuration properties can also be defined by administrators through the Test Bed. With respect to providing values for
+these, and regardless of where they were defined, this will be done before test execution where, additionally, required
+properties will be flagged for completion before tests can be executed.</p>
+<p>Beyond the typical scenario of using configuration properties for the SUT actor, the GITB TDL also supports configuration
+properties for <strong>simulated actors</strong>. These represent variable settings that may either differ per test case, or need to be
+generated on the fly before a test starts.</p>
+<p>Configuration properties for simulated actors are defined in two ways:</p>
+<ul class="simple">
+<li><p><strong>Dynamically:</strong> Simulated actors participating in messaging transactions with SUTs have their messaging handlers
+<a class="reference internal" href="../testsuite/index.html#test-suite-actors-endpoints-simulated"><span class="std std-ref">called during test suite initiation</span></a> to return values on the fly.</p></li>
+<li><p><strong>Statically:</strong> Simulated actors participating in messaging transactions with SUTs can define values as fixed values
+in the test case.</p></li>
+</ul>
+<p>In these cases configured parameters are recorded under the SUT actor by matching the SUT endpoint name against the
+endpoint name of the simulated actor. The simulated actor’s properties are recorded as a <code class="docutils literal notranslate"><span class="pre">map</span></code>, placed as a
+separate entry under the SUT actor’s map and named using the simulated actor’s ID.</p>
+<p>As this no doubt sounds complex, lets illustrate by using the test suite definition we saw earlier:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testsuite&gt;</span>
+<span class="w">    </span><span class="nt">&lt;actors&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Sender&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;gitb:name&gt;</span>Sender<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">            </span><span class="nt">&lt;gitb:endpoint</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;info&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;gitb:config</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;dataVersion&quot;</span><span class="w"> </span><span class="na">kind=</span><span class="s">&quot;SIMPLE&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/gitb:endpoint&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/gitb:actor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Receiver&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;gitb:name&gt;</span>Receiver<span class="nt">&lt;/gitb:name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/gitb:actor&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;config_test_1&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/testsuite&gt;</span>
+</pre></div>
+</div>
+<p>Note here that we have two actors - <code class="docutils literal notranslate"><span class="pre">Sender</span></code> and <code class="docutils literal notranslate"><span class="pre">Receiver</span></code> - with an endpoint under the <code class="docutils literal notranslate"><span class="pre">Sender</span></code> actor named
+<code class="docutils literal notranslate"><span class="pre">info</span></code>. We can now include configuration per test case for the simulated <code class="docutils literal notranslate"><span class="pre">Receiver</span></code> actor by matching the same
+endpoint name:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;config_test_1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;actors&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Sender&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Sender&quot;</span><span class="w"> </span><span class="na">role=</span><span class="s">&quot;SUT&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;gitb:actor</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Receiver&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Receiver&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;gitb:endpoint</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;info&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;gitb:config</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;specVersion&quot;</span><span class="w"> </span><span class="na">kind=</span><span class="s">&quot;SIMPLE&quot;</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/gitb:config&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/gitb:endpoint&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/gitb:actor&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/actors&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Lookup the &quot;dataVersion&quot; property configured for the &quot;Sender&quot;.</span>
+<span class="cm">            We could have also used the &quot;ACTOR&quot; alias instead of &quot;Sender&quot;.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;temp&quot;</span><span class="nt">&gt;</span>$Sender{dataVersion}<span class="nt">&lt;/assign&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Lookup the &quot;address&quot; property configured by the simulated &quot;Receiver&quot; for the &quot;Sender&quot;.</span>
+<span class="cm">            This is available as &quot;$SUT_ACTOR{SIMULATED_ACTOR}{PROPERTY_NAME}&quot;.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;temp&quot;</span><span class="nt">&gt;</span>$Sender{Receiver}{address}<span class="nt">&lt;/assign&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>The above example illustrates a simple case where a configuration value is set in a fixed manner within the test case.
+The same exact approach can also take place <strong>dynamically</strong> if the actors in question are part of a <strong>messaging exchange</strong>.
+In this case the messaging service receives the SUT actor configuration upon test initialisation, and has the possibility
+to return configuration values for the actor it is simulating (similarly under an endpoint with a matching name).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ACTOR</span></code> alias only ever refers to the <strong>SUT actor’s own</strong> configuration. Configuration for non-SUT (simulated) actors, and
+configuration set by a simulated actor on behalf of the SUT actor (e.g. <code class="docutils literal notranslate"><span class="pre">$Sender{Receiver}{address}</span></code> in the earlier example),
+continue to be addressed through the relevant actor’s own ID as before.</p>
+</div>
+</section>
+</section>
+<section id="accessing-test-session-metadata">
+<span id="test-case-expressions-session-metadata"></span><span id="index-15"></span><span id="index-14"></span><span id="index-13"></span><span id="index-12"></span><h2>Accessing test session metadata<a class="headerlink" href="#accessing-test-session-metadata" title="Link to this heading"></a></h2>
+<p>The test engine automatically makes available <strong>metadata</strong> to your test cases relevant to the <strong>ongoing test session</strong>. This is
+information that does not necessarily need to be used but could prove useful for <a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">logging purposes</span></a> or as input to
+<a class="reference internal" href="../handlers/index.html#handlers"><span class="std std-ref">external test service</span></a> calls.</p>
+<p>Test session metadata are included in a special purpose <code class="docutils literal notranslate"><span class="pre">map</span></code> named <code class="docutils literal notranslate"><span class="pre">SESSION</span></code> that is automatically included in the test
+session’s context. This map contains child items for each metadata item of type <code class="docutils literal notranslate"><span class="pre">string</span></code>, specifically:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sessionId</span></code>: The unique identifier assigned to the test session.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">testCaseId</span></code>: The identifier of the test session’s test case.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">testEngineVersion</span></code>: The version of the test engine, matching also the version of the GITB TDL.</p></li>
+</ul>
+<p>Through this map, these metadata elements can be accessed as any other information recorded in the test session context, and in
+any scenario where TDL expressions can be used. The following example illustrates logging of metadata, as well as
+using it as input to a <a class="reference external" href="https://www.itb.ec.europa.eu/docs/services/latest/validation/index.html">remote validator</a> via
+the <a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a> step:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;log&gt;</span>&#39;Launched<span class="w"> </span>session<span class="w"> </span>&#39;||$SESSION{sessionId}||&#39;<span class="w"> </span>(TDL<span class="w"> </span>version:<span class="w"> </span>&#39;||$SESSION{testEngineVersion}||&#39;)&#39;<span class="nt">&lt;/log&gt;</span>
+
+<span class="nt">&lt;verify</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;validateData&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;$DOMAIN{validatorAddress}&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;testCase&quot;</span><span class="nt">&gt;</span>$SESSION{testCaseId}<span class="nt">&lt;/input&gt;</span>
+<span class="nt">&lt;/verify&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="checking-the-result-of-test-steps">
+<span id="test-case-expressions-step-results"></span><h2>Checking the result of test steps<a class="headerlink" href="#checking-the-result-of-test-steps" title="Link to this heading"></a></h2>
+<p>During the course of a test session you may want to check the result of previous steps. This could be used to determine the flow of execution,
+adapt processing, <a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">display custom messages to users</span></a>, or determine the <a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">overall output message</span></a> of the test session.</p>
+<p>For this purpose you have three special variables maintained in the test session context:</p>
+<ul class="simple">
+<li><p><strong>STEP_SUCCESS</strong> to check whether specific steps have succeeded.</p></li>
+<li><p><strong>TEST_SUCCESS</strong> to check the overall test session result.</p></li>
+<li><p><strong>STEP_STATUS</strong> to check specific steps’ status.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Stopping on failures:</strong> Although its possible to use these variables in combination with <a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if</span></a> and <a class="reference internal" href="../constructs/index.html#tdl-step-exit"><span class="std std-ref">exit</span></a> steps to conditionally stop test sessions,
+it is not the simplest way to do so. If this is your need it is much simpler to use a step’s (or sequence of steps) <a class="reference internal" href="../constructs/index.html#tdl-steps-common-stoponerror"><span class="std std-ref">stopOnError</span></a> flag.</p>
+</div>
+<section id="checking-whether-a-specific-step-succeeded">
+<span id="test-case-expressions-step-success"></span><span id="index-16"></span><h3>Checking whether a specific step succeeded<a class="headerlink" href="#checking-whether-a-specific-step-succeeded" title="Link to this heading"></a></h3>
+<p>A typical scenario where you would want to check the result of a specific step would be to avoid showing
+an information popup to the user in case a previous step failed (e.g. via a <a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a> step). Whether or not a step has
+succeeded is recorded in a special purpose <code class="docutils literal notranslate"><span class="pre">map</span></code> named <strong>STEP_SUCCESS</strong> that contains one key per step identifier mapping to a <code class="docutils literal notranslate"><span class="pre">boolean</span></code>
+value. This value is initially set to “false” and, if the step completes successfully, is set to “true”.</p>
+<p>The following example illustrates use of this feature to conditionally present a message if a <code class="docutils literal notranslate"><span class="pre">receive</span></code> (see <a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a>) step has succeeded:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Receive a request in step &quot;dataReceive&quot;. --&gt;</span>
+<span class="nt">&lt;receive</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;dataReceive&quot;</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Receive data&quot;</span><span class="w"> </span><span class="na">from=</span><span class="s">&quot;Actor2&quot;</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;Actor1&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;HttpMessagingV2&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/receive&gt;</span>
+<span class="cm">&lt;!-- Check the step result before showing an information message. --&gt;</span>
+<span class="nt">&lt;if</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Check success&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;cond&gt;</span>$STEP_SUCCESS{dataReceive}<span class="nt">&lt;/cond&gt;</span>
+<span class="w">    </span><span class="nt">&lt;then&gt;</span>
+<span class="hll"><span class="w">        </span><span class="nt">&lt;interact</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Show success message&quot;</span><span class="nt">&gt;</span>
+</span><span class="w">            </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Messaging was completed successfully!&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/interact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/then&gt;</span>
+<span class="nt">&lt;/if&gt;</span>
+</pre></div>
+</div>
+<p>In case the step you want to check is contained within a <a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">scriptlet</span></a>, the step’s identifier is prefixed by the identifier from the
+scriptlet’s <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call step</span></a>. For more information on this specific case <a class="reference internal" href="#test-case-expressions-step-status-scriptlets"><span class="std std-ref">check here</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">verify</span></code> steps (see <a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a>) the step ID is directly set in the test session context with a <code class="docutils literal notranslate"><span class="pre">boolean</span></code> flag to match the validation result. The
+<strong>STEP_SUCCESS</strong> <code class="docutils literal notranslate"><span class="pre">map</span></code> makes this possible for any other step as well (including <code class="docutils literal notranslate"><span class="pre">verify</span></code> steps).</p>
+</div>
+</section>
+<section id="checking-the-current-result-of-a-test-session">
+<span id="test-case-expressions-test-success"></span><span id="index-17"></span><h3>Checking the current result of a test session<a class="headerlink" href="#checking-the-current-result-of-a-test-session" title="Link to this heading"></a></h3>
+<p>As a complement to the <strong>STEP_SUCCESS</strong> variable, used to check a specific step’s result, the <strong>TEST_SUCCESS</strong> variable can be used to check the overall result of the test
+session at any given point. This variable is similarly a <code class="docutils literal notranslate"><span class="pre">boolean</span></code> flag that you can check in any constructs that support expressions. Revisiting the example of
+conditionally displaying a user interaction popup, we could use the <strong>TEST_SUCCESS</strong> variable as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Check the step result before showing an information message. --&gt;</span>
+<span class="nt">&lt;if</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Check success&quot;</span><span class="nt">&gt;</span>
+<span class="hll"><span class="w">    </span><span class="nt">&lt;cond&gt;</span>$TEST_SUCCESS<span class="nt">&lt;/cond&gt;</span>
+</span><span class="w">    </span><span class="nt">&lt;then&gt;</span>
+<span class="w">        </span><span class="nt">&lt;interact</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Show success message&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Messaging was completed successfully!&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/interact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/then&gt;</span>
+<span class="nt">&lt;/if&gt;</span>
+</pre></div>
+</div>
+<p>Using this variable provides an efficient shorthand in place of separately checking each step’s outcome. In addition, it is a useful
+abstraction given that it allows you to ignore steps that were skipped.</p>
+</section>
+<section id="checking-the-status-of-a-specific-step">
+<span id="test-case-expressions-step-status"></span><span id="index-18"></span><h3>Checking the status of a specific step<a class="headerlink" href="#checking-the-status-of-a-specific-step" title="Link to this heading"></a></h3>
+<p>Complementing the <strong>STEP_SUCCESS</strong> and <strong>TEST_SUCCESS</strong> variables you may also make use of the <strong>STEP_STATUS</strong> variable that records the
+specific status of each step. This can be used for more advanced checks that <strong>STEP_SUCCESS</strong> cannot cover, especially when it is interesting
+to know if a step was successful, skipped or failed. A typical case where this is important is when we want to calculate an <a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">output message</span></a>
+explaining the result of a test session. Using <strong>STEP_SUCCESS</strong> for this is not ideal as we need to be able to distinguish failed steps from
+steps that were skipped.</p>
+<p>The <strong>STEP_STATUS</strong> variable is recorded as a <code class="docutils literal notranslate"><span class="pre">map</span></code> that maintains for each step (identified by its ID) the latest applicable status. The status
+is recorded as a <code class="docutils literal notranslate"><span class="pre">string</span></code> that takes the following values:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>“COMPLETED”, for steps having succeeded.</p></li>
+<li><p>“WARNING”, for steps having succeeded with warnings.</p></li>
+<li><p>“ERROR”, for steps having failed.</p></li>
+<li><p>“SKIPPED”, for steps that were skipped.</p></li>
+<li><p>Empty, for steps that are currently pending.</p></li>
+</ul>
+</div></blockquote>
+<p>Note that in case an unknown step ID is looked up the result is an empty string, similar to the case of pending steps. In case the step you want to check
+is contained within a <a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">scriptlet</span></a>, the step’s identifier is prefixed by the identifier from the scriptlet’s <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call step</span></a>.
+For more information on this specific case <a class="reference internal" href="#test-case-expressions-step-status-scriptlets"><span class="std std-ref">check here</span></a>.</p>
+<p>The following example illustrates use of the <strong>STEP_STATUS</strong> variable to determine a test session’s output message by checking specific steps for failures:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;output&gt;</span>
+<span class="w">    </span><span class="nt">&lt;success&gt;</span>
+<span class="w">        </span><span class="nt">&lt;default&gt;</span>&quot;The<span class="w"> </span>test<span class="w"> </span>session<span class="w"> </span>completed<span class="w"> </span>successfully.&quot;<span class="nt">&lt;/default&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/success&gt;</span>
+<span class="w">    </span><span class="nt">&lt;failure&gt;</span>
+<span class="w">        </span><span class="nt">&lt;case&gt;</span>
+<span class="w">            </span><span class="nt">&lt;cond&gt;</span>$STEP_STATUS{verifyType}<span class="w"> </span>=<span class="w"> </span>&#39;ERROR&#39;<span class="nt">&lt;/cond&gt;</span>
+<span class="w">            </span><span class="nt">&lt;message&gt;</span>&quot;The<span class="w"> </span>provided<span class="w"> </span>type<span class="w"> </span>was<span class="w"> </span>invalid.&quot;<span class="nt">&lt;/message&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/case&gt;</span>
+<span class="w">        </span><span class="nt">&lt;case&gt;</span>
+<span class="w">            </span><span class="nt">&lt;cond&gt;</span>$STEP_STATUS{verifyContent}<span class="w"> </span>=<span class="w"> </span>&#39;ERROR&#39;<span class="nt">&lt;/cond&gt;</span>
+<span class="w">            </span><span class="nt">&lt;message&gt;</span>&quot;The<span class="w"> </span>provided<span class="w"> </span>content<span class="w"> </span>was<span class="w"> </span>invalid.&quot;<span class="nt">&lt;/message&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/case&gt;</span>
+<span class="w">        </span><span class="nt">&lt;default&gt;</span>&quot;The<span class="w"> </span>test<span class="w"> </span>session<span class="w"> </span>resulted<span class="w"> </span>in<span class="w"> </span>a<span class="w"> </span>failure.<span class="w"> </span>Please<span class="w"> </span>check<span class="w"> </span>the<span class="w"> </span>validation<span class="w"> </span>reports<span class="w"> </span>and<span class="w"> </span>apply<span class="w"> </span>required<span class="w"> </span>corrections.&quot;<span class="nt">&lt;/default&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/failure&gt;</span>
+<span class="nt">&lt;/output&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="status-checks-for-scriptlet-steps">
+<span id="test-case-expressions-step-status-scriptlets"></span><h3>Status checks for scriptlet steps<a class="headerlink" href="#status-checks-for-scriptlet-steps" title="Link to this heading"></a></h3>
+<p>When you need to refer to steps within <a class="reference internal" href="../scriptlets/index.html#scriptlets"><span class="std std-ref">scriptlets</span></a>, the steps’ identifiers need to be prefixed with the identifier of the scriptlet’s
+<a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call step</span></a> followed by an underscore. This is done to make sure we can distinguish a scriptlet’s steps from other scriptlets and
+from the top-level test case, as well as across different calls of the same scriptlet. In case scriptlets are in turn used within scriptlets, each call step’s identifier is
+additionally prefixed to produce the final one. Nonetheless, the identifier used for the step status lookup is always considered relative to the current
+scope.</p>
+<p>To illustrate how this works, consider the following example. We define a scriptlet that contains a <a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify step</span></a> with
+identifier “validateData”.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;scriptlet&gt;</span>
+<span class="w">    </span>...
+<span class="w">    </span><span class="nt">&lt;verify</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;validateData&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;$DOMAIN{validatorAddress}&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;data&quot;</span><span class="nt">&gt;</span>$data<span class="nt">&lt;/input&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/verify&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/scriptlet&gt;</span>
+</pre></div>
+</div>
+<p>Let’s now use this scriptlet within a test case and call it twice via two separate <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call steps</span></a>. In this case if we
+want to check the status of the <code class="docutils literal notranslate"><span class="pre">verify</span></code> step, we will prefix its identifier with the relevant <code class="docutils literal notranslate"><span class="pre">call</span></code> steps’ identifiers.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span>...
+<span class="w">    </span><span class="nt">&lt;call</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;call1&quot;</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;scriptlets/scriptlet.xml&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;call</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;call2&quot;</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;scriptlets/scriptlet.xml&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span>...
+<span class="w">    </span><span class="cm">&lt;!-- Log steps&#39; status --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;log&gt;</span>$STEP_STATUS{call1_validateData}<span class="nt">&lt;/log&gt;</span>
+<span class="w">    </span><span class="nt">&lt;log&gt;</span>$STEP_STATUS{call2_validateData}<span class="nt">&lt;/log&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- Applies also to STEP_SUCCESS --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;log&gt;</span>$STEP_SUCCESS{call1_validateData}<span class="nt">&lt;/log&gt;</span>
+<span class="w">    </span><span class="nt">&lt;log&gt;</span>$STEP_SUCCESS{call2_validateData}<span class="nt">&lt;/log&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>Now let’s consider that we have an additional scriptlet that in turn calls the initial one that contains the <code class="docutils literal notranslate"><span class="pre">verify</span></code> step. Within this scriptlet
+we refer to the <code class="docutils literal notranslate"><span class="pre">verify</span></code> step in a relative manner as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;scriptlet&gt;</span>
+<span class="w">    </span>...
+<span class="w">    </span><span class="nt">&lt;call</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;validate&quot;</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;scriptlets/scriptlet.xml&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;log&gt;</span>$STEP_STATUS{validate_validateData}<span class="nt">&lt;/log&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/scriptlet&gt;</span>
+</pre></div>
+</div>
+<p>In the test case, to refer to the <code class="docutils literal notranslate"><span class="pre">verify</span></code> step we would use its identifier prefixed by the identifiers of all intermediate <code class="docutils literal notranslate"><span class="pre">call</span></code> steps:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span>...
+<span class="w">    </span><span class="nt">&lt;call</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;call&quot;</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;scriptlets/otherScriptlet.xml&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!--</span>
+<span class="cm">        The step identifier used for the lookup consists of:</span>
+<span class="cm">        1. The call step id for the top level scriptlet call (&quot;call&quot;).</span>
+<span class="cm">        2. The call step id for the internal scriptlet call (&quot;validate&quot;).</span>
+<span class="cm">        3. The verify step id (&quot;validateData&quot;).</span>
+<span class="cm">    --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;log&gt;</span>$STEP_SUCCESS{call_validate_validateData}<span class="nt">&lt;/log&gt;</span>
+<span class="w">    </span>...
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="expressions-and-templates">
+<span id="test-case-expressions-template-files"></span><span id="index-20"></span><span id="index-19"></span><h2>Expressions and templates<a class="headerlink" href="#expressions-and-templates" title="Link to this heading"></a></h2>
+<p>Expression processing handles input expressions using the GITB expression processor. This processor is capable of detecting
+variable references in expressions so that it can proceed with appropriate variable lookup and their replacement in
+the resulting output. In simple terms this means that if the input to an expression includes variable references, these will be replaced
+if they match variables already present in the test session context at the time of the expression’s evaluation. Using this feature,
+text content (either imported as an artefact, received from a service call or constructed in the test case itself) can act as a template
+that is instantiated with specific values when needed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Using templates to generate complex data:</strong> The templating approach listed here as well as subsequent examples assume basic templating needs
+based on simple placeholder replacements. If your templates need to be more complex, for example including loops and conditional blocks, the advised
+approach is to use the <a class="reference internal" href="../handlers/index.html#handlers-templateprocessor"><span class="std std-ref">TemplateProcessor</span></a> with <a class="reference external" href="https://freemarker.apache.org/">FreeMarker templates</a>.</p>
+</div>
+<p>As an example consider the following scenario. A XML file is provided in the test suite as an artefact named “metadata-template.xml” that
+serves as a template for metadata responses to be provided by the Test Bed. This file contains variable references as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;test:metadata</span><span class="w"> </span><span class="na">xmlns:test=</span><span class="s">&quot;http://test.org/metadata/1.0/&quot;</span><span class="nt">&gt;</span>
+<span class="hll"><span class="w">    </span><span class="nt">&lt;test:identifier&gt;</span>${identifier}<span class="nt">&lt;/test:identifier&gt;</span>
+</span><span class="hll"><span class="w">    </span><span class="nt">&lt;test:address&gt;</span>${address}<span class="nt">&lt;/test:address&gt;</span>
+</span><span class="nt">&lt;/test:metadata&gt;</span>
+</pre></div>
+</div>
+<p>The highlighted lines above show use of variables that are expected to be replaced during test execution. In the test case this
+replacement occurs as follows:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;imports&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Import the metadata template.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifact</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;metadataTemplate&quot;</span><span class="nt">&gt;</span>artifacts/metadata-template.xml<span class="nt">&lt;/artifact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/imports&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Use a system-level custom property as the &quot;address&quot; placeholder.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;address&quot;</span><span class="nt">&gt;</span>$SYSTEM{endpointAddress}<span class="nt">&lt;/assign&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Generate a UUID for the &quot;identifier&quot; placeholder.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;process</span><span class="w"> </span><span class="na">output=</span><span class="s">&quot;identifier&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;TokenGenerator&quot;</span><span class="w"> </span><span class="na">operation=</span><span class="s">&quot;uuid&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Using the template here triggers the replacement of the placeholders based on the</span>
+<span class="cm">            existing session context variables. Note here how we set &quot;asTemplate&quot; to true so</span>
+<span class="cm">            that the assign step processes the result of its expression as a template before</span>
+<span class="cm">            this is set to its target variable.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;bodyToUse&quot;</span><span class="w"> </span><span class="na">asTemplate=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>$metadataTemplate<span class="nt">&lt;/assign&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">            Send the metadata via HTTP POST to a configured registry service.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;send</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Send system metadata&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;HttpMessagingV2&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;uri&quot;</span><span class="nt">&gt;</span>$DOMAIN{registryAddress}<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;method&quot;</span><span class="nt">&gt;</span>&quot;POST&quot;<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;body&quot;</span><span class="nt">&gt;</span>$bodyToUse<span class="nt">&lt;/input&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/send&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>The above example considers a template as a static resource that is bundled within the test suite archive and imported in the test case. As mentioned earlier,
+templates don’t need to be static files included in the test suite. Any text or text-based file that is recorded in the test session’s context can also be used.
+Examples of such cases could be (full listing <a class="reference internal" href="#test-case-expressions-where"><span class="std std-ref">here</span></a>):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Variables created, populated and/or modified during the course of the test session.</p></li>
+<li><p>Values received from <a class="reference internal" href="../constructs/index.html#tdl-processing-steps"><span class="std std-ref">processing steps</span></a> or <a class="reference internal" href="../constructs/index.html#tdl-messaging-steps"><span class="std std-ref">messaging steps</span></a>.</p></li>
+<li><p>External configuration properties (<a class="reference internal" href="#test-case-expressions-domain"><span class="std std-ref">domain parameters</span></a>,
+<a class="reference internal" href="#test-case-expressions-organisation"><span class="std std-ref">organisation properties</span></a>, <a class="reference internal" href="#test-case-expressions-system"><span class="std std-ref">system properties</span></a>
+or <a class="reference internal" href="#test-case-expressions-actor"><span class="std std-ref">actor configuration</span></a>).</p></li>
+</ul>
+</div></blockquote>
+<p>Processing of a variable as a template (i.e. checking it for placeholders and populating them from the context to produce the result) can take place wherever
+expressions are supported. This includes <a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assignments</span></a>, <a class="reference internal" href="../handlers/index.html#handlers-inputs-outputs"><span class="std std-ref">providing inputs</span></a>, <a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">conditions</span></a>
+and receiving or providing information through <a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">user interactions</span></a>. By default expressions don’t perform template processing (i.e. the
+expression’s result is returned as-is). To make an expression treat its result as a template for placeholder replacement you need to specify the <code class="docutils literal notranslate"><span class="pre">asTemplate</span></code>
+attribute with a value of “true” as we saw in the earlier example. The following examples illustrate use of templates within various expressions:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Define a template text. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;templateContent&quot;</span><span class="nt">&gt;</span>&#39;The<span class="w"> </span>value<span class="w"> </span>is<span class="w"> </span>${placeholderValue}&#39;<span class="nt">&lt;/assign&gt;</span>
+
+<span class="w">        </span><span class="cm">&lt;!-- Set the value to replace the placeholder. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;placeholderValue&quot;</span><span class="nt">&gt;</span>&#39;REPLACED&#39;<span class="nt">&lt;/assign&gt;</span>
+
+<span class="w">        </span><span class="cm">&lt;!-- Log the placeholder value where the log expression is itself considered as a template. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;log</span><span class="w"> </span><span class="na">asTemplate=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>&#39;The<span class="w"> </span>placeholder<span class="w"> </span>value<span class="w"> </span>is<span class="w"> </span>${placeholderValue}&#39;<span class="nt">&lt;/log&gt;</span>
+
+<span class="w">        </span><span class="cm">&lt;!-- Process $templateContent as a template. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;output1&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$templateContent&quot;</span><span class="w"> </span><span class="na">asTemplate=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Process $templateContent as-is. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;output2&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$templateContent&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">        </span><span class="nt">&lt;interact</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Resulting values&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- Displays &quot;The value is REPLACED&quot;. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Output1&quot;</span><span class="nt">&gt;</span>$output1<span class="nt">&lt;/instruct&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- Displays &quot;The value is ${placeholderValue}&quot;. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Output2&quot;</span><span class="nt">&gt;</span>$templateContent<span class="nt">&lt;/instruct&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- Displays &quot;The value is REPLACED&quot;. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Output3&quot;</span><span class="w"> </span><span class="na">asTemplate=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>$templateContent<span class="nt">&lt;/instruct&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- Displays &quot;The value is ${placeholderValue}&quot;. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Output4&quot;</span><span class="nt">&gt;</span>$output2<span class="nt">&lt;/instruct&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- Displays &quot;The value is REPLACED&quot;. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Output5&quot;</span><span class="w"> </span><span class="na">asTemplate=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>$output2<span class="nt">&lt;/instruct&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/interact&gt;</span>
+
+<span class="w">        </span><span class="cm">&lt;!-- Input &quot;body&quot; is set using a template from an organisation property. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;send</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Call service&quot;</span><span class="w"> </span><span class="na">handler=</span><span class="s">&quot;HttpMessagingV2&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;uri&quot;</span><span class="nt">&gt;</span>$SYSTEM{endpoint}<span class="nt">&lt;/input&gt;</span>
+<span class="w">            </span><span class="nt">&lt;input</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;body&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$ORGANISATION{template}&quot;</span><span class="w"> </span><span class="na">asTemplate=</span><span class="s">&quot;true&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/send&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>Template processing in expressions is done over the result of the expression. This means that both the expression’s content and <code class="docutils literal notranslate"><span class="pre">source</span></code> attribute are
+considered to produce the result, which is then processed as a template if <code class="docutils literal notranslate"><span class="pre">asTemplate</span></code> is set to “true”. This is illustrated in the following example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;testcase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;steps&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Define a XML template (this would usually be imported or provided however). --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;templateXML&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;![CDATA[&#39;&lt;root&gt;&lt;element&gt;${placeholderValue}&lt;/element&gt;&lt;/root&gt;&#39;]]&gt;</span><span class="nt">&lt;/assign&gt;</span>
+
+<span class="w">        </span><span class="cm">&lt;!-- Set the value to replace the placeholder. --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;placeholderValue&quot;</span><span class="nt">&gt;</span>&#39;REPLACED&#39;<span class="nt">&lt;/assign&gt;</span>
+
+<span class="w">        </span><span class="cm">&lt;!--</span>
+<span class="cm">           Process templateXML as a template and use also an XPath expression:</span>
+<span class="cm">           1. The content from &quot;templateXML&quot; is considered as the source.</span>
+<span class="cm">           2. Upon the content of &quot;templateXML&quot; we apply the provided XPath expression.</span>
+<span class="cm">           3. The result of the XPath expression (&quot;${placeholderValue}&quot;) is then further processed as a template.</span>
+<span class="cm">        --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;assign</span><span class="w"> </span><span class="na">to=</span><span class="s">&quot;output1&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;templateXML&quot;</span><span class="w"> </span><span class="na">asTemplate=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>//*[local-name()<span class="w"> </span>=<span class="w"> </span>&#39;element&#39;]/text()<span class="nt">&lt;/assign&gt;</span>
+
+<span class="w">        </span><span class="nt">&lt;interact</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Resulting values&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- Displays &quot;REPLACED&quot;. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Output1&quot;</span><span class="nt">&gt;</span>$output1<span class="nt">&lt;/instruct&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- Displays &quot;&lt;root&gt;&lt;element&gt;${placeholderValue}&lt;/element&gt;&lt;/root&gt;&quot;. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Output2&quot;</span><span class="nt">&gt;</span>$templateXML<span class="nt">&lt;/instruct&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- Displays &quot;&lt;root&gt;&lt;element&gt;REPLACED&lt;/element&gt;&lt;/root&gt;&quot;. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Output3&quot;</span><span class="w"> </span><span class="na">asTemplate=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>$templateXML<span class="nt">&lt;/instruct&gt;</span>
+<span class="w">            </span><span class="cm">&lt;!-- Displays &quot;REPLACED&quot;. --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;instruct</span><span class="w"> </span><span class="na">desc=</span><span class="s">&quot;Output4&quot;</span><span class="w"> </span><span class="na">asTemplate=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">source=</span><span class="s">&quot;$templateXML&quot;</span><span class="nt">&gt;</span>//*[local-name()<span class="w"> </span>=<span class="w"> </span>&#39;element&#39;]/text()<span class="nt">&lt;/instruct&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/interact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/steps&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</pre></div>
+</div>
+<p>In terms of the placeholders used within templates, you are not limited to using simple variables. You can provide any valid variable reference expression, for example:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Variables of type <code class="docutils literal notranslate"><span class="pre">map</span></code> or <code class="docutils literal notranslate"><span class="pre">list</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">&lt;val&gt;${myMap{myMapKey}}&lt;/val&gt;</span></code>).</p></li>
+<li><p><a class="reference internal" href="#test-case-expressions-domain"><span class="std std-ref">Domain parameters</span></a> (e.g. <code class="docutils literal notranslate"><span class="pre">&lt;val&gt;${DOMAIN{myParameter}}&lt;/val&gt;</span></code>).</p></li>
+<li><p><a class="reference internal" href="#test-case-expressions-organisation"><span class="std std-ref">Organisation properties</span></a> (e.g. <code class="docutils literal notranslate"><span class="pre">&lt;val&gt;${ORGANISATION{myParameter}}&lt;/val&gt;</span></code>).</p></li>
+<li><p><a class="reference internal" href="#test-case-expressions-system"><span class="std std-ref">System properties</span></a> (e.g. <code class="docutils literal notranslate"><span class="pre">&lt;val&gt;${SYSTEM{myParameter}}&lt;/val&gt;</span></code>).</p></li>
+<li><p><a class="reference internal" href="#test-case-expressions-actor"><span class="std std-ref">Actor configuration</span></a> (e.g. <code class="docutils literal notranslate"><span class="pre">&lt;val&gt;${myActor{aValue}}&lt;/val&gt;</span></code>).</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Parameter placeholders in templates:</strong> In the examples presented you may have noticed that a template parameter placeholder is contained
+within a <code class="docutils literal notranslate"><span class="pre">${...}</span></code> construct. Within this you are expected to provide a variable expression but <strong>without</strong> the leading <code class="docutils literal notranslate"><span class="pre">$</span></code> sign.</p>
+<p>For example, to use variable <code class="docutils literal notranslate"><span class="pre">$map{key}</span></code> in a template you would define the placeholder as <code class="docutils literal notranslate"><span class="pre">${map{key}}</span></code>. Apart from the initial <code class="docutils literal notranslate"><span class="pre">$</span></code> sign
+in the expression you should still define any further ones as usual (e.g. if the map’s key is also a variable reference such as <code class="docutils literal notranslate"><span class="pre">${map{$dynamicKeyValue}}</span></code>.</p>
+</div>
+</section>
+<section id="where-can-expressions-be-used">
+<span id="test-case-expressions-where"></span><h2>Where can expressions be used?<a class="headerlink" href="#where-can-expressions-be-used" title="Link to this heading"></a></h2>
+<p>The following table provides an overview of the places where expressions can be used:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Use</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Section <a class="reference internal" href="../testcase/index.html#test-case-imports"><span class="std std-ref">Imports</span></a></p></td>
+<td><p>Used for the paths to import artifacts from as an alternative to providing fixed path references.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Section <a class="reference internal" href="../testcase/index.html#test-case-steps"><span class="std std-ref">Steps</span></a></p></td>
+<td><p>Optionally a variable reference can be used to define the minimum test case log level.</p></td>
+</tr>
+<tr class="row-even"><td><p>Section <a class="reference internal" href="../testcase/index.html#test-case-output"><span class="std std-ref">Output</span></a></p></td>
+<td><p>Used to evaluate message match conditions and produce the resulting message texts.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Section <a class="reference internal" href="../scriptlets/index.html#scriptlets-elements-output"><span class="std std-ref">Output</span></a></p></td>
+<td><p>Used to evaluate scriptlet output values.</p></td>
+</tr>
+<tr class="row-even"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-btxn"><span class="std std-ref">btxn</span></a></p></td>
+<td><p>Variable references can be used to set <code class="docutils literal notranslate"><span class="pre">config</span></code> element values.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-bptxn"><span class="std std-ref">bptxn</span></a></p></td>
+<td><p>Variable references can be used to set <code class="docutils literal notranslate"><span class="pre">config</span></code> element values.</p></td>
+</tr>
+<tr class="row-even"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-send"><span class="std std-ref">send</span></a></p></td>
+<td><p>Used to determine <code class="docutils literal notranslate"><span class="pre">input</span></code> values. Variable references can be used to set <code class="docutils literal notranslate"><span class="pre">config</span></code> element values.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-receive"><span class="std std-ref">receive</span></a></p></td>
+<td><p>Used to determine <code class="docutils literal notranslate"><span class="pre">input</span></code> values. Variable references can be used to set <code class="docutils literal notranslate"><span class="pre">config</span></code> element values.</p></td>
+</tr>
+<tr class="row-even"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-listen"><span class="std std-ref">listen</span></a></p></td>
+<td><p>Used to determine <code class="docutils literal notranslate"><span class="pre">input</span></code> values. Variable references can be used to set <code class="docutils literal notranslate"><span class="pre">config</span></code> element values.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-process"><span class="std std-ref">process</span></a></p></td>
+<td><p>Used to determine <code class="docutils literal notranslate"><span class="pre">input</span></code> values.</p></td>
+</tr>
+<tr class="row-even"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-if"><span class="std std-ref">if</span></a></p></td>
+<td><p>Used to define and evaluate the if condition (<code class="docutils literal notranslate"><span class="pre">cond</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-while"><span class="std std-ref">while</span></a></p></td>
+<td><p>Used to define and evaluate the loop condition (<code class="docutils literal notranslate"><span class="pre">cond</span></code>).</p></td>
+</tr>
+<tr class="row-even"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-repuntil"><span class="std std-ref">repuntil</span></a></p></td>
+<td><p>Used to define and evaluate the repeat condition (<code class="docutils literal notranslate"><span class="pre">cond</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-foreach"><span class="std std-ref">foreach</span></a></p></td>
+<td><p>Variable references can be used to evaluate the loop boundaries (<code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code>).</p></td>
+</tr>
+<tr class="row-even"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-assign"><span class="std std-ref">assign</span></a></p></td>
+<td><p>Used as the expression to apply. Also a pure variable reference is used in the <code class="docutils literal notranslate"><span class="pre">to</span></code> and <code class="docutils literal notranslate"><span class="pre">source</span></code> elements.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-log"><span class="std std-ref">log</span></a></p></td>
+<td><p>Used as the expression to apply when calculating the log output. Also a variable reference is used in the <code class="docutils literal notranslate"><span class="pre">source</span></code> element and optionally to set the log level.</p></td>
+</tr>
+<tr class="row-even"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-verify"><span class="std std-ref">verify</span></a></p></td>
+<td><p>Used to determine <code class="docutils literal notranslate"><span class="pre">input</span></code> values. Variable references can also be used to set <code class="docutils literal notranslate"><span class="pre">config</span></code> element values and the error level.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-call"><span class="std std-ref">call</span></a></p></td>
+<td><p>Used to determine <code class="docutils literal notranslate"><span class="pre">input</span></code> values.</p></td>
+</tr>
+<tr class="row-even"><td><p>Step <a class="reference internal" href="../constructs/index.html#tdl-step-interact"><span class="std std-ref">interact</span></a></p></td>
+<td><p>Used in the values displayed to (<code class="docutils literal notranslate"><span class="pre">instruct</span></code>) or requested from (<code class="docutils literal notranslate"><span class="pre">request</span></code>) users.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../types/index.html" class="btn btn-neutral float-left" title="Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../constructs/index.html" class="btn btn-neutral float-right" title="Test steps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, European Commission, DIGIT.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

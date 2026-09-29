@@ -1,0 +1,464 @@
+Hello world — GITB TDL Documentation
+Hello world
+Hello world
+
+The first step in understanding a new language or framework is typically going through a simple
+hello world
+example. This
+remains as simple as possible while still being valid and showcasing some fundamental concepts in action.
+In the GITD TDL, you express the scenarios to test as
+test cases
+, with each one defining the steps to
+execute. These
+test steps
+can vary greatly from one test case to another, ranging from user interactions,
+to message exchanges between systems, with verifications along the way to check that each step is successfully passed.
+To allow test cases to be executed, they are bundled in a
+test suite archive
+, a ZIP archive basically, which
+includes also a
+test suite
+definition. Besides things like names and descriptions, this test suite
+also lists the contained test cases as well as the specification actors (consider them as roles) that are considered.
+In the sections that follow we will consider a
+GITB TDL hello world example
+, by going over its
+test case
+,
+test suite
+, and
+packaging
+before running on the Test Bed.
+The hello world test case
+
+Our hello world test will ask the user for her name and then use it to display a greeting.
+<?xml version="1.0" encoding="UTF-8"?>
+<testcase
+id=
+"testCase1"
+xmlns=
+"http://www.gitb.com/tdl/v1/"
+xmlns:gitb=
+"http://www.gitb.com/core/v1/"
+>
+<metadata>
+<gitb:name>
+Test
+case
+1:
+Hello
+world
+</gitb:name>
+<gitb:description>
+Test
+case
+that
+asks
+for
+the
+user's
+name
+and
+responds
+by
+saying
+hello.
+</gitb:description>
+<gitb:version>
+1.0
+</gitb:version>
+</metadata>
+<actors>
+<!-- Define which test suite actor is the System Under Test (SUT). -->
+<gitb:actor
+id=
+"User"
+role=
+"SUT"
+/>
+</actors>
+<steps>
+<!-- Present a popup requesting the user's name as a required input. -->
+<interact
+id=
+"input"
+desc=
+"Tell me your name"
+>
+<request
+name=
+"name"
+desc=
+"What's your name?"
+required=
+"true"
+/>
+</interact>
+<!-- Present a second popup (but hide it on the test execution diagram) to respond. -->
+<interact
+hidden=
+"true"
+>
+<!-- Construct the greeting message based on the user's input. -->
+<instruct
+desc=
+"Greeting"
+>
+"Hello
+"
+||
+$input{name}
+||
+"!"
+</instruct>
+</interact>
+</steps>
+<!-- Show a user-friendly message once the test session completes successfully. -->
+<output>
+<success>
+<default>
+"Test
+session
+completed
+successfully."
+</default>
+</success>
+</output>
+</testcase>
+Let’s break this down to understand each part. The first point to cover is the test case
+root element
+:
+<testcase
+id=
+"testCase1"
+xmlns=
+"http://www.gitb.com/tdl/v1/"
+xmlns:gitb=
+"http://www.gitb.com/core/v1/"
+>
+...
+</testcase>
+This defines the namespaces needed for the GITB TDL, but more interestingly the
+id
+attribute with the test case’s
+identifier. This will be used in the
+test suite
+to include the test case. Next up is
+the
+metadata
+section:
+<metadata>
+<gitb:name>
+Test
+case
+1:
+Hello
+world
+</gitb:name>
+<gitb:description>
+Test
+case
+that
+asks
+for
+the
+user's
+name
+and
+responds
+by
+saying
+hello.
+</gitb:description>
+<gitb:version>
+1.0
+</gitb:version>
+</metadata>
+This section does not affect the test’s execution but defines a name, version number and description that will be used when presenting
+the test case. Following this is the
+actors
+element:
+<actors>
+<!-- Define which test suite actor is the System Under Test (SUT). -->
+<gitb:actor
+id=
+"User"
+role=
+"SUT"
+/>
+</actors>
+Every test case needs this element to at least reference one actor (to be defined in the
+test suite
+),
+as the
+SUT
+(System Under Test). When testing on the Test Bed you are doing so to prove you pass the tests for a given
+specification actor. The Test Bed identifies these tests by collecting the test cases referring to the actor as their
+SUT
+.
+The following
+steps
+element is the core of the test case. It lists test steps as child elements, specifying the actions to take place.
+In our case these are two
+interact steps
+for user interactions:
+<steps>
+<!-- Present a popup requesting the user's name as a required input. -->
+<interact
+id=
+"input"
+desc=
+"Tell me your name"
+>
+<request
+name=
+"name"
+desc=
+"What's your name?"
+required=
+"true"
+/>
+</interact>
+<!-- Present a second popup (but hide it on the test execution diagram) to respond. -->
+<interact
+hidden=
+"true"
+>
+<!-- Construct the greeting message based on the user's input. -->
+<instruct
+desc=
+"Greeting"
+>
+"Hello
+"
+||
+$input{name}
+||
+"!"
+</instruct>
+</interact>
+</steps>
+The first
+interact
+step shows a popup to the user asking her to provide her name (a required input). Once completed
+and the name is provided, the second
+interact
+step is used to display another popup with a greeting message
+based on the provided name. Notice in this second case how we set the step as
+hidden
+to not display it on the
+execution diagram. In addition, the greeting message is built as an
+expression
+, using string
+concatenation.
+The final
+output
+element is used to present a user-friendly message once the test completes:
+<output>
+<success>
+<default>
+"Test
+session
+completed
+successfully."
+</default>
+</success>
+</output>
+This section runs after the test session has completed. It is not strictly required but in practice all test cases should include
+such a section with user-friendly success and failure messages as an overview of the result.
+The test suite definition
+
+To make test cases available to the Test Bed they must be wrapped as a
+test suite
+. A test suite descriptor is needed for this
+which in our case will be defined as follows:
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+id=
+"helloWorld"
+xmlns=
+"http://www.gitb.com/tdl/v1/"
+xmlns:gitb=
+"http://www.gitb.com/core/v1/"
+xmlns:xsi=
+"http://www.w3.org/2001/XMLSchema-instance"
+>
+<metadata>
+<gitb:name>
+Hello
+world
+</gitb:name>
+<gitb:description>
+Example
+acting
+as
+a
+hello
+world
+for
+the
+GITB
+TDL.
+</gitb:description>
+<gitb:version>
+1.0
+</gitb:version>
+</metadata>
+<!--
+Define the actors involved in the test suite. The test cases referencing an actor with the role of SUT (System Under Test)
+must be passed to complete conformance testing.
+Depending on options selected during the test suite's upload, the actor definitions will be created or updated in the target specification.
+-->
+<actors>
+<gitb:actor
+id=
+"User"
+>
+<gitb:name>
+User
+</gitb:name>
+<gitb:desc>
+The
+user
+that
+will
+be
+requested
+to
+perform
+tasks
+during
+tests.
+</gitb:desc>
+</gitb:actor>
+</actors>
+<!--
+The list of included test cases (referenced by ID). The ordering of the test cases here defines their execution
+order when running the test suite.
+-->
+<testcase
+id=
+"testCase1"
+/>
+</testsuite>
+The test suite’s
+root element
+serves a similar purpose as the one of the test case:
+<testsuite
+id=
+"helloWorld"
+xmlns=
+"http://www.gitb.com/tdl/v1/"
+xmlns:gitb=
+"http://www.gitb.com/core/v1/"
+xmlns:xsi=
+"http://www.w3.org/2001/XMLSchema-instance"
+>
+...
+</testsuite>
+The element specifies the namespaces we need, as well as the
+id
+attribute with the test suite’s identifier. The identifier serves
+to uniquely identify the test suite in the Test Bed, and is used to match an existing test suite when making an update. Next is the
+metadata
+element that is defined as follows:
+<metadata>
+<gitb:name>
+Hello
+world
+</gitb:name>
+<gitb:description>
+Example
+acting
+as
+a
+hello
+world
+for
+the
+GITB
+TDL.
+</gitb:description>
+<gitb:version>
+1.0
+</gitb:version>
+</metadata>
+As in the similarly named test case element, this is used to specify a name, description and version that are used when presenting the
+test suite in the Test Bed. Next up is the
+actors
+element:
+<actors>
+<gitb:actor
+id=
+"User"
+>
+<gitb:name>
+User
+</gitb:name>
+<gitb:desc>
+The
+user
+that
+will
+be
+requested
+to
+perform
+tasks
+during
+tests.
+</gitb:desc>
+</gitb:actor>
+</actors>
+This element is needed to define the specification actors referenced by the test suite’s test cases. Besides the
+id
+attribute
+used by test cases to refer to actors, each actor defines its name and description used for presentation on the Test Bed. The
+final point to cover is the
+testcase
+element:
+<testcase
+id=
+"testCase1"
+/>
+This is used to refer to our test case, based on the test case’s
+id
+attribute, so that it is included in the test suite.
+Although in our case we have a single
+testcase
+element, this is in fact
+repeated
+for as many different test cases we want
+to include.
+Packaging the test suite
+
+Up to now we have seen the definitions for our
+test case
+and
+test suite
+.
+Before we can run the test case we will need to create the test suite archive to deploy to the Test Bed. The resulting archive’s
+structure will be as follows:
+<archive root>
+├── testCases
+│   └── testCase1.xml
+└── testSuite.xml
+Note that the placement of the
+testSuite.xml
+and
+testCase1.xml
+files does not have to follow this structure. They can be placed
+anywhere in the ZIP archive, however the approach above matches the
+proposed best practice
+.
+Note
+The hello world test suite is also available as part of the published
+sample test suites
+on GitHub. Click to
+view the test suite
+or
+download its archive
+.
+With the test suite archive ready you can proceed to
+deploy and use it on the Test Bed
+.

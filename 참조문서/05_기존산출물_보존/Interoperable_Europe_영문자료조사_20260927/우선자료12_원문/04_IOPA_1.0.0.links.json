@@ -1,0 +1,1270 @@
+[
+  {
+    "title": "SEMIC Style Guide",
+    "url": "https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification"
+  },
+  {
+    "title": "Assessment",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Assessment"
+  },
+  {
+    "title": "Binding Requirement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement"
+  },
+  {
+    "title": "Legal Expression",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#LegalExpression"
+  },
+  {
+    "title": "Statement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement"
+  },
+  {
+    "title": "Agent",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Agent"
+  },
+  {
+    "title": "Asset",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset"
+  },
+  {
+    "title": "Document",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Document"
+  },
+  {
+    "title": "Expression",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Expression"
+  },
+  {
+    "title": "Identifier",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Identifier"
+  },
+  {
+    "title": "Location",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Location"
+  },
+  {
+    "title": "Participation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation"
+  },
+  {
+    "title": "Public Organisation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation"
+  },
+  {
+    "title": "Public Service",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService"
+  },
+  {
+    "title": "Resource",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Resource"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Code"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Literal"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "URI",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#URI"
+  },
+  {
+    "title": "",
+    "url": "https://semiceu.github.io/uri.semic.eu-generated/IOPA/releases/1.0.0/html/overview.jpg"
+  },
+  {
+    "title": "Assessment",
+    "url": "http://data.europa.eu/2sa/cav#Assessment"
+  },
+  {
+    "title": "assesses",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Assessment.assesses"
+  },
+  {
+    "title": "is provided by",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Assessment.isprovidedby"
+  },
+  {
+    "title": "results in",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Assessment.resultsin"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20assesses%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Assessment.assesses"
+  },
+  {
+    "title": "assesses",
+    "url": "http://data.europa.eu/2sa/cav#assesses"
+  },
+  {
+    "title": "Binding Requirement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20is provided by%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Assessment.isprovidedby"
+  },
+  {
+    "title": "is provided by",
+    "url": "http://data.europa.eu/m8g/isProvidedBy"
+  },
+  {
+    "title": "Public Organisation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20results in%20in%20Assessment&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Assessment.resultsin"
+  },
+  {
+    "title": "results in",
+    "url": "http://data.europa.eu/2sa/cav#resultsIn"
+  },
+  {
+    "title": "Statement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement"
+  },
+  {
+    "title": "Binding Requirement",
+    "url": "http://data.europa.eu/2qy/iopa#BindingRequirement"
+  },
+  {
+    "title": "affects",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.affects"
+  },
+  {
+    "title": "documented in",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.documentedin"
+  },
+  {
+    "title": "has participation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.hasparticipation"
+  },
+  {
+    "title": "is part of",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.ispartof"
+  },
+  {
+    "title": "is part of",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.ispartof"
+  },
+  {
+    "title": "page",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.page"
+  },
+  {
+    "title": "references",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.references"
+  },
+  {
+    "title": "relation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.relation"
+  },
+  {
+    "title": "value description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.valuedescription"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20affects%20in%20Binding Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23BindingRequirement.affects"
+  },
+  {
+    "title": "affects",
+    "url": "http://data.europa.eu/2qy/iopa#affects"
+  },
+  {
+    "title": "Public Service",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20documented in%20in%20Binding Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23BindingRequirement.documentedin"
+  },
+  {
+    "title": "documented in",
+    "url": "http://data.europa.eu/2sa/cav#documentedIn"
+  },
+  {
+    "title": "URI",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#URI"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20has participation%20in%20Binding Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23BindingRequirement.hasparticipation"
+  },
+  {
+    "title": "has participation",
+    "url": "http://data.europa.eu/m8g/hasParticipation"
+  },
+  {
+    "title": "Participation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20is part of%20in%20Binding Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23BindingRequirement.ispartof"
+  },
+  {
+    "title": "is part of",
+    "url": "http://purl.org/dc/terms/isPartOf"
+  },
+  {
+    "title": "Expression",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Expression"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20is part of%20in%20Binding Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23BindingRequirement.ispartof"
+  },
+  {
+    "title": "is part of",
+    "url": "http://purl.org/dc/terms/isPartOf"
+  },
+  {
+    "title": "Legal Expression",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#LegalExpression"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20page%20in%20Binding Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23BindingRequirement.page"
+  },
+  {
+    "title": "page",
+    "url": "http://xmlns.com/foaf/0.1/page"
+  },
+  {
+    "title": "Document",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Document"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20references%20in%20Binding Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23BindingRequirement.references"
+  },
+  {
+    "title": "references",
+    "url": "http://purl.org/dc/terms/references"
+  },
+  {
+    "title": "Resource",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Resource"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20relation%20in%20Binding Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23BindingRequirement.relation"
+  },
+  {
+    "title": "relation",
+    "url": "http://purl.org/dc/terms/relation"
+  },
+  {
+    "title": "Asset",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20value description%20in%20Binding Requirement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23BindingRequirement.valuedescription"
+  },
+  {
+    "title": "value description",
+    "url": "http://data.europa.eu/2sa/cav#valueDescription"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "Legal Expression",
+    "url": "http://data.europa.eu/eli/ontology#LegalExpression"
+  },
+  {
+    "title": "Statement",
+    "url": "http://data.europa.eu/2sa/cav#Statement"
+  },
+  {
+    "title": "has related service",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement.hasrelatedservice"
+  },
+  {
+    "title": "interpretation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement.interpretation"
+  },
+  {
+    "title": "judgement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement.judgement"
+  },
+  {
+    "title": "page",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement.page"
+  },
+  {
+    "title": "type",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement.type"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20has related service%20in%20Statement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Statement.hasrelatedservice"
+  },
+  {
+    "title": "has related service",
+    "url": "http://data.europa.eu/m8g/hasRelatedService"
+  },
+  {
+    "title": "Public Service",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20interpretation%20in%20Statement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Statement.interpretation"
+  },
+  {
+    "title": "interpretation",
+    "url": "http://data.europa.eu/2sa/cav#interpretation"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Code"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20judgement%20in%20Statement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Statement.judgement"
+  },
+  {
+    "title": "judgement",
+    "url": "http://data.europa.eu/2sa/cav#judgement"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20page%20in%20Statement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Statement.page"
+  },
+  {
+    "title": "page",
+    "url": "http://xmlns.com/foaf/0.1/page"
+  },
+  {
+    "title": "Document",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Document"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20type%20in%20Statement&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Statement.type"
+  },
+  {
+    "title": "type",
+    "url": "http://data.europa.eu/2sa/cav#type"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Code"
+  },
+  {
+    "title": "Agent",
+    "url": "http://xmlns.com/foaf/0.1/Agent"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Agent.name"
+  },
+  {
+    "title": "type",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Agent.type"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20name%20in%20Agent&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Agent.name"
+  },
+  {
+    "title": "name",
+    "url": "http://purl.org/dc/terms/title"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20type%20in%20Agent&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Agent.type"
+  },
+  {
+    "title": "type",
+    "url": "http://purl.org/dc/terms/type"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Code"
+  },
+  {
+    "title": "Asset",
+    "url": "http://www.w3.org/ns/adms#Asset"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset.description"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset.identifier"
+  },
+  {
+    "title": "landing page",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset.landingpage"
+  },
+  {
+    "title": "title",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset.title"
+  },
+  {
+    "title": "type",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset.type"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20description%20in%20Asset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Asset.description"
+  },
+  {
+    "title": "description",
+    "url": "http://purl.org/dc/terms/description"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20identifier%20in%20Asset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Asset.identifier"
+  },
+  {
+    "title": "identifier",
+    "url": "http://www.w3.org/ns/adms#identifier"
+  },
+  {
+    "title": "Identifier",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Identifier"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20landing page%20in%20Asset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Asset.landingpage"
+  },
+  {
+    "title": "landing page",
+    "url": "http://www.w3.org/ns/dcat#landingPage"
+  },
+  {
+    "title": "Document",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Document"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20title%20in%20Asset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Asset.title"
+  },
+  {
+    "title": "title",
+    "url": "http://purl.org/dc/terms/title"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20type%20in%20Asset&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Asset.type"
+  },
+  {
+    "title": "type",
+    "url": "http://purl.org/dc/terms/type"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Code"
+  },
+  {
+    "title": "Document",
+    "url": "http://xmlns.com/foaf/0.1/Document"
+  },
+  {
+    "title": "Expression",
+    "url": "http://purl.org/vocab/frbr/core#Expression"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Expression.description"
+  },
+  {
+    "title": "documented in",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Expression.documentedin"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Expression.name"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20description%20in%20Expression&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Expression.description"
+  },
+  {
+    "title": "description",
+    "url": "http://purl.org/dc/terms/description"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20documented in%20in%20Expression&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Expression.documentedin"
+  },
+  {
+    "title": "documented in",
+    "url": "http://data.europa.eu/2sa/cav#documentedIn"
+  },
+  {
+    "title": "URI",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#URI"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20name%20in%20Expression&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Expression.name"
+  },
+  {
+    "title": "name",
+    "url": "http://purl.org/dc/terms/title"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "Identifier",
+    "url": "http://www.w3.org/ns/adms#Identifier"
+  },
+  {
+    "title": "Location",
+    "url": "http://purl.org/dc/terms/Location"
+  },
+  {
+    "title": "Administrative territorial unit",
+    "url": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu"
+  },
+  {
+    "title": "geographic identifier",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Location.geographicidentifier"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20geographic identifier%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Location.geographicidentifier"
+  },
+  {
+    "title": "geographic identifier",
+    "url": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+  },
+  {
+    "title": "URI",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#URI"
+  },
+  {
+    "title": "Participation",
+    "url": "http://data.europa.eu/m8g/Participation"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation.description"
+  },
+  {
+    "title": "has participation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation.hasparticipation"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation.identifier"
+  },
+  {
+    "title": "role",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation.role"
+  },
+  {
+    "title": "type",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation.type"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20description%20in%20Participation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Participation.description"
+  },
+  {
+    "title": "description",
+    "url": "http://purl.org/dc/terms/description"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20has participation%20in%20Participation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Participation.hasparticipation"
+  },
+  {
+    "title": "has participation",
+    "url": "http://data.europa.eu/m8g/hasParticipant"
+  },
+  {
+    "title": "Agent",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Agent"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20identifier%20in%20Participation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Participation.identifier"
+  },
+  {
+    "title": "identifier",
+    "url": "http://purl.org/dc/terms/identifier"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Literal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20role%20in%20Participation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Participation.role"
+  },
+  {
+    "title": "role",
+    "url": "http://data.europa.eu/m8g/role"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Code"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20type%20in%20Participation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Participation.type"
+  },
+  {
+    "title": "type",
+    "url": "http://purl.org/dc/terms/type"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Code"
+  },
+  {
+    "title": "Public Organisation",
+    "url": "http://data.europa.eu/m8g/PublicOrganisation"
+  },
+  {
+    "title": "classification",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation.classification"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation.description"
+  },
+  {
+    "title": "preferred label",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation.preferredlabel"
+  },
+  {
+    "title": "spatial",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation.spatial"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20classification%20in%20Public Organisation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23PublicOrganisation.classification"
+  },
+  {
+    "title": "classification",
+    "url": "http://www.w3.org/ns/org#classification"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Code"
+  },
+  {
+    "title": "Organization Types",
+    "url": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/organization-type"
+  },
+  {
+    "title": "Administrative territorial unit type?",
+    "url": "https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/atu-type"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20description%20in%20Public Organisation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23PublicOrganisation.description"
+  },
+  {
+    "title": "description",
+    "url": "http://purl.org/dc/terms/description"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20preferred label%20in%20Public Organisation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23PublicOrganisation.preferredlabel"
+  },
+  {
+    "title": "preferred label",
+    "url": "http://www.w3.org/2004/02/skos/core#prefLabel"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20spatial%20in%20Public Organisation&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23PublicOrganisation.spatial"
+  },
+  {
+    "title": "spatial",
+    "url": "http://purl.org/dc/terms/spatial"
+  },
+  {
+    "title": "Location",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Location"
+  },
+  {
+    "title": "Public Service",
+    "url": "http://purl.org/vocab/cpsv#PublicService"
+  },
+  {
+    "title": "the European Interoperability Framework",
+    "url": "https://ec.europa.eu/isa2/eif_en/"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService.description"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService.identifier"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService.name"
+  },
+  {
+    "title": "spatial",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService.spatial"
+  },
+  {
+    "title": "thematic area",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService.thematicarea"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20description%20in%20Public Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23PublicService.description"
+  },
+  {
+    "title": "description",
+    "url": "http://purl.org/dc/terms/description"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20identifier%20in%20Public Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23PublicService.identifier"
+  },
+  {
+    "title": "identifier",
+    "url": "http://purl.org/dc/terms/identifier"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Literal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20name%20in%20Public Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23PublicService.name"
+  },
+  {
+    "title": "name",
+    "url": "http://purl.org/dc/terms/title"
+  },
+  {
+    "title": "Text",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Text"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20spatial%20in%20Public Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23PublicService.spatial"
+  },
+  {
+    "title": "spatial",
+    "url": "http://purl.org/dc/terms/spatial"
+  },
+  {
+    "title": "Location",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Location"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20thematic area%20in%20Public Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23PublicService.thematicarea"
+  },
+  {
+    "title": "thematic area",
+    "url": "http://data.europa.eu/m8g/thematicArea"
+  },
+  {
+    "title": "Code",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Code"
+  },
+  {
+    "title": "Resource",
+    "url": "http://www.w3.org/ns/dcat#Resource"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Resource.description"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20description%20in%20Resource&body=Explain%20your%20issue%20for%20https://semiceu.github.io/IOPA/releases/1.0.0%23Resource.description"
+  },
+  {
+    "title": "description",
+    "url": "http://purl.org/dc/terms/description"
+  },
+  {
+    "title": "Literal",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Literal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20Code&body=Explain%20your%20issue"
+  },
+  {
+    "title": "Code",
+    "url": "http://www.w3.org/2004/02/skos/core#Concept"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20Literal&body=Explain%20your%20issue"
+  },
+  {
+    "title": "Literal",
+    "url": "http://www.w3.org/2000/01/rdf-schema#Literal"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20Text&body=Explain%20your%20issue"
+  },
+  {
+    "title": "Text",
+    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+  },
+  {
+    "title": "",
+    "url": "https://github.com/SEMICeu/IOPA/issues/new?title=Issue%20for%20Uri&body=Explain%20your%20issue"
+  },
+  {
+    "title": "URI",
+    "url": "http://www.w3.org/2001/XMLSchema#anyURI"
+  },
+  {
+    "title": "JSON-LD context file",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/context/iopa.jsonld"
+  },
+  {
+    "title": "here",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/context/iopa.jsonld"
+  },
+  {
+    "title": "here",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/shacl/iopa-SHACL.ttl"
+  },
+  {
+    "title": "validation service",
+    "url": "https://www.itb.ec.europa.eu/shacl/any/upload"
+  },
+  {
+    "title": "ITB REST API",
+    "url": "https://www.itb.ec.europa.eu/shacl/swagger-ui/index.html"
+  },
+  {
+    "title": "here",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/UML/IOPA.eap"
+  },
+  {
+    "title": "PC-R3",
+    "url": "https://semiceu.github.io/style-guide/1.0.0/gc-publication-conventions.html#sec:pc-r3"
+  },
+  {
+    "title": "status",
+    "url": "http://publications.europa.eu/resource/authority/concept-status/DEPRECATED"
+  },
+  {
+    "title": "GC-R2",
+    "url": "https://semiceu.github.io/style-guide/1.0.0/gc-general-conventions.html#sec:gc-r2"
+  },
+  {
+    "title": "SC-R3",
+    "url": "https://semiceu.github.io/style-guide/1.0.0/gc-semantic-conventions.html#sec:sc-r3"
+  },
+  {
+    "title": "Agent",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Agent"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Agent.name"
+  },
+  {
+    "title": "Agent",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Agent"
+  },
+  {
+    "title": "type",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Agent.type"
+  },
+  {
+    "title": "Assessment",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Assessment"
+  },
+  {
+    "title": "assesses",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Assessment.assesses"
+  },
+  {
+    "title": "Assessment",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Assessment"
+  },
+  {
+    "title": "is provided by",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Assessment.isprovidedby"
+  },
+  {
+    "title": "Assessment",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Assessment"
+  },
+  {
+    "title": "results in",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Assessment.resultsin"
+  },
+  {
+    "title": "Asset",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset.description"
+  },
+  {
+    "title": "Asset",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset.identifier"
+  },
+  {
+    "title": "Asset",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset"
+  },
+  {
+    "title": "title",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset.title"
+  },
+  {
+    "title": "Asset",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset"
+  },
+  {
+    "title": "type",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset.type"
+  },
+  {
+    "title": "Asset",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset"
+  },
+  {
+    "title": "landing page",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Asset.landingpage"
+  },
+  {
+    "title": "Binding Requirement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement"
+  },
+  {
+    "title": "affects",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.affects"
+  },
+  {
+    "title": "Binding Requirement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement"
+  },
+  {
+    "title": "value description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.valuedescription"
+  },
+  {
+    "title": "Binding Requirement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement"
+  },
+  {
+    "title": "documented in",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.documentedin"
+  },
+  {
+    "title": "Binding Requirement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement"
+  },
+  {
+    "title": "has participation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.hasparticipation"
+  },
+  {
+    "title": "Binding Requirement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement"
+  },
+  {
+    "title": "is part of",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.ispartof"
+  },
+  {
+    "title": "Binding Requirement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement"
+  },
+  {
+    "title": "is part of",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.ispartof"
+  },
+  {
+    "title": "Binding Requirement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement"
+  },
+  {
+    "title": "page",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.page"
+  },
+  {
+    "title": "Binding Requirement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement"
+  },
+  {
+    "title": "references",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.references"
+  },
+  {
+    "title": "Binding Requirement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement"
+  },
+  {
+    "title": "relation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#BindingRequirement.relation"
+  },
+  {
+    "title": "Document",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Document"
+  },
+  {
+    "title": "Expression",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Expression"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Expression.description"
+  },
+  {
+    "title": "Expression",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Expression"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Expression.name"
+  },
+  {
+    "title": "Expression",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Expression"
+  },
+  {
+    "title": "documented in",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Expression.documentedin"
+  },
+  {
+    "title": "Identifier",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Identifier"
+  },
+  {
+    "title": "Legal Expression",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#LegalExpression"
+  },
+  {
+    "title": "Location",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Location"
+  },
+  {
+    "title": "geographic identifier",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Location.geographicidentifier"
+  },
+  {
+    "title": "Participation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation.description"
+  },
+  {
+    "title": "Participation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation.identifier"
+  },
+  {
+    "title": "Participation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation"
+  },
+  {
+    "title": "role",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation.role"
+  },
+  {
+    "title": "Participation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation"
+  },
+  {
+    "title": "type",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation.type"
+  },
+  {
+    "title": "Participation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation"
+  },
+  {
+    "title": "has participation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Participation.hasparticipation"
+  },
+  {
+    "title": "Public Organisation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation.description"
+  },
+  {
+    "title": "Public Organisation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation"
+  },
+  {
+    "title": "preferred label",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation.preferredlabel"
+  },
+  {
+    "title": "Public Organisation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation"
+  },
+  {
+    "title": "classification",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation.classification"
+  },
+  {
+    "title": "Public Organisation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation"
+  },
+  {
+    "title": "spatial",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicOrganisation.spatial"
+  },
+  {
+    "title": "Public Service",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService.description"
+  },
+  {
+    "title": "Public Service",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService"
+  },
+  {
+    "title": "identifier",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService.identifier"
+  },
+  {
+    "title": "Public Service",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService"
+  },
+  {
+    "title": "name",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService.name"
+  },
+  {
+    "title": "Public Service",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService"
+  },
+  {
+    "title": "spatial",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService.spatial"
+  },
+  {
+    "title": "Public Service",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService"
+  },
+  {
+    "title": "thematic area",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#PublicService.thematicarea"
+  },
+  {
+    "title": "Resource",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Resource"
+  },
+  {
+    "title": "description",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Resource.description"
+  },
+  {
+    "title": "Statement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement"
+  },
+  {
+    "title": "interpretation",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement.interpretation"
+  },
+  {
+    "title": "Statement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement"
+  },
+  {
+    "title": "judgement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement.judgement"
+  },
+  {
+    "title": "Statement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement"
+  },
+  {
+    "title": "type",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement.type"
+  },
+  {
+    "title": "Statement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement"
+  },
+  {
+    "title": "has related service",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement.hasrelatedservice"
+  },
+  {
+    "title": "Statement",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement"
+  },
+  {
+    "title": "page",
+    "url": "https://semiceu.github.io/IOPA/releases/1.0.0/#Statement.page"
+  }
+]
