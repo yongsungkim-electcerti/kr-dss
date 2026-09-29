@@ -1,0 +1,196 @@
+1  
+ 
+ 
+ 
+ 
+ 
+DIACC-CP-05-01 Independent Review Committee Charter 
+ 
+ 
+ 
+Version:  3.0 
+ 
+Reference: DIACC-CP-05-01 
+Date: 2024-02-27 
+Status: Final  
+ 
+Editor: Certification Program Management Office 
+IPR: DIACC Intellectual Property Rights V1.0 
+
+2  
+1. Purpose and Mandate 
+ 
+This Charter establishes the DIACC Certification Program Independent Review Committee (IRC) 
+based on ISO standards and industry best practices. 
+2. Overview 
+The IRC has delegated authority from the DIACC Board of Directors (BOD) to review Audit 
+Reports for quality assurance, as specified in the applicable Certification Program guidance and 
+process documents. 
+ 
+3. Composition 
+IRC representatives are nominated by DIACC top management and Certification Program 
+leadership and appointed by the DIACC BOD. IRC members may include subject matter 
+experts from the information security management, audit, cybersecurity, digital identity, and 
+standardization domains. 
+ 
+4. Leadership 
+ 
+The IRC shall have a Chair and, ideally, a Vice Chair. The Chair shall serve for a one-year 
+term. There is no limit to the number of terms an individual may serve. If an IRC leadership 
+seat becomes vacant, the IRC shall designate an interim Chair. 
+ 
+5. Responsibilities 
+ 
+The IRC is responsible for: 
+a. Accept terms and conditions stipulated by the IRC member agreement, including: 
+o Perform its role in an impartial and confidential manner and comply with the 
+applicable NDA. 
+o Disclosure of Conflict of Interest and duty to abstain. 
+b. Conducting a quality review of the audit findings reported by the DIACC-accredited 
+auditor.  
+ 
+6. Resources and Support 
+The IRC requires: 
+a. Collaboration with the DIACC top management and Certification Program staff to support 
+the program. 
+b. Development and maintenance of contracts and agreements. 
+c. Secure information management system. 
+d. Program management to act as secretariat.  
+ 
+The Certification Program Management Office provides support to the IRC.  
+ 
+7. Compensation 
+Participation is on a volunteer basis, and representatives are not reimbursed for any costs that 
+may result from IRC activities. 
+3  
+ 
+8. Quorum 
+a. Quorum shall be the participation of at least 50% of the non-recused IRC members. 
+b. Quorum required for IRC decisions, including: 
+(i) Decisions to affirm that quality assurance is appropriately performed. 
+(iii) Quorum shall be the participation of at least 50% of the non-recused IRC 
+members. 
+(iv)  Decisions require an ordinary resolution with at least 50% +1 votes recorded in 
+favour for a motion to carry. 
+ 
+9. Performance Indicators 
+Performance indicators to measure IRC success include: 
+a. Demand and acceptance of the certification. 
+b. Timely resolution of issues. 
+ 
+ 
+10. Liaison Officers 
+ 
+10.1 Trust Framework Expert Committee (TFEC): 
+a. The DIACC Trust Framework Expert Committee (TFEC) should appoint two 
+representatives to serve as Technical Liaison Officers to the IRC. 
+b. The purpose of the TFEC Technical Liaison Officers is to connect the IRC with 
+appropriate sources of technical advice on specific matters pertinent to the DIACC 
+PCTF. 
+c. The TFEC Technical Liaison Officers should be able to assist the IRC with questions or 
+requests for clarification regarding implementation of DIACC PCTF conformance criteria. 
+d. The IRC will confer with the TFEC Technical Liaison Officers as needed and may invite 
+them to ad-hoc meetings. 
+e. The discussions with the IRC will be strictly related to the DIACC PCTF conformance 
+criteria implementation. 
+f. The TFEC Technical Liaison Officers will not have access to applicant submissions 
+due to confidentiality reasons. Only the IRC members and Certification Program staff 
+subject to the NDA and conflict of interest policies will have access to the applicant 
+submissions and related information. 
+ 
+10.2 Other Technical Bodies 
+The IRC may require technical guidance from other technical bodies when other schemes or 
+frameworks are added to the Certification Program. Other potential liaisons shall be invited 
+based on approval by the DIACC Board of Directors. 
+4 
+ 
+ 
+11. Reference Documents 
+a. Independent Review Committee Member Agreement. 
+b. DIACC-CP-02-01 Certification process of services. 
+c. DIACC-CP-03-01 Guidance for audits of services against PCTF. 
+d. DIACC-CP-06-01Certification Program Manual. 
+e. DIACC-CP-07-01 Quality Management Process.  
+f. ISO/IEC 17021 Conformity assessment —Requirements for bodies providing audit and 
+certification of management systems. 
+g. ISO/IEC 19011 Guidelines for auditing management systems. 
+h. ISO/IEC 27006 Information technology — Security techniques — Requirements for 
+bodies providing audit and certification of information security management systems. 
+i. ISO/IEC 29115 Information technology — Security techniques — Entity authentication 
+assurance framework. 
+j. ISO/IEC 17065:2012 “Conformity assessment – Requirements for bodies certifying 
+products, processes and services”. 
+k. ISO/IEC 17020:2012 “Conformity assessment — Requirements for the operation of 
+various types of bodies performing” inspection”. 
+l. ISO/IEC 17025:2017 “General requirements for the competence of testing and 
+calibration laboratories”. 
+m. ISO/IEC 17030:2021 “Conformity assessment — General requirements for third-party 
+marks of conformity”. 
+n. NIST 800-63-3 Conformance Criteria (63A, 63B and 63C). 
+o. DIACC PCTF Components. 
+p. Other documents that the Certification Program Management Office and DIACC top management 
+may identify.  
+ 
+ 
+Note: DIACC PCTF Assessment Component (DIACC PCTF09) was deprecated. 
+ 
+ 
+Revision History 
+ 
+ 
+Release Date Version Changes Status 
+2024-02-27 3.0 Further alignment with 
+ISO 17065 
+Approved by 
+DIACC 
+Board of 
+Directors on 
+2024-04-09 
+2022-11-21 2.0 Scope 
+Duties and alignment 
+of language with the 
+rest of the document 
+suite. 
+Approved by 
+DIACC 
+Board of 
+Directors on 
+2023-02-02 
+5 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Definitions 
+ 
+Term Meaning 
+Audit Evaluation, assessment, and examination by 
+a DIACC-accredited Auditor to determine 
+conformity against the applicable PCTF 
+Component conformance criteria.  
+ 
+Audit Report Report provided by the DIACC-accredited 
+Auditor, which informs conformity in relation 
+to the applicable DIACC PCTF Component 
+conformance criteria. 
+Auditor DIACC- accredited Auditor that conducts 
+third-party evaluation against the PCTF 
+Components. 
+DIACC PCTF Components DIACC Pan-Canadian Trust 
+Framework Components are available 
+at https://diacc.ca/trust-framework/ 
+Certification Program  A third-party conformity assessment 
+program designed around ISO/IEC 
+17065 and 17021 to determine 
+compliance with the PCTF and 
+indicate that specific requirements are 
+met. 
+ 
+2022-02-28 1.7 New document Approved by 
+DIACC Board 
+of Directors on 
+2022- 
+03-08 

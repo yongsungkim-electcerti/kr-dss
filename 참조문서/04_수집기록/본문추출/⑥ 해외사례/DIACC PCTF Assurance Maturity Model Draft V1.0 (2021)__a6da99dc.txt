@@ -1,0 +1,2067 @@
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+1 
+ 1 
+PCTF Assurance Maturity Model Draft 2 
+Recommendation V1.0 3 
+This Draft Recommendation has been developed by the Digital ID & Authentication 4 
+Council of Canada (DIACC) Trust Framework Expert Committee (TFEC). The TFEC 5 
+operates under the controlling policies of the DIACC. Comments submitted by the public 6 
+are subject to the DIACC Contributor Agreement. 7 
+DIACC expects to modify and improve this Draft Recommendation based upon public 8 
+comments. The purpose of the open commentary is to ensure transparency in 9 
+development and diversity of truly Pan-Canadian input. Comments made during the 10 
+review will be considered for incorporation to the next draft. DIACC will prepare a 11 
+disposition of comments to provide transparency with regard to how each comment was 12 
+handled. 13 
+Forthcoming PCTF releases will expand, clarify, and refine the content of this 14 
+document. 15 
+ 16 
+ 17 
+ 18 
+ 19 
+ 20 
+ 21 
+ 22 
+ 23 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+2 
+Table of Contents 24 
+1. Document Conventions 25 
+2. Introduction  26 
+2.1. The Traditional Approach  27 
+2.1.1. The Whistleblower: An Illustrative Use Case 28 
+2.1.2. The need for an evolutionary approach 29 
+3. The Pan-Canadian Trust Framework Assurance Maturity Model  30 
+3.1. Model 1: Traditional Levels of Assurance (Traditional LoA)  31 
+3.1.1. Traditional Levels of Assurance and the Whistleblower Example 32 
+3.2. Model 2: Discrete Levels of Assurance (Discrete LoA)  33 
+3.2.1. Discrete Levels of Assurance and the Whistleblower Example 34 
+3.3. Model 3: Vectors of Trust (VoT)  35 
+3.3.1. Vectors of Trust and the Whistleblower Example 36 
+3.3.2. Interoperability with Model 1 and 2 implementations: PCTF Component 37 
+Vectors of Trust 38 
+3.3.3. PCTF Component Vectors of Trust Explained  39 
+3.3.3.1. Authentication (“T”) 40 
+3.3.3.2. Verified Person (“H”) 41 
+3.3.3.3. Verified Organization (“O”) 42 
+3.3.3.4. Credentials (Relationships & Attributes) (“R”) 43 
+3.3.3.5. Privacy (“V”) 44 
+3.3.3.6. Notice & Consent (“N”) 45 
+3.3.3.7. Infrastructure (Technology & Operations) (“S”) 46 
+3.3.4. PCTF Component Vectors of Trust and the Whistleblower Example 47 
+4. Concurrent Support for all Maturity Models 48 
+5. Mapping the Three Models  49 
+5.1. PCTF Component Maps  50 
+5.1.1. Authentication Map 51 
+5.1.2. Verified Person Map 52 
+5.1.3. Verified Organization Map 53 
+5.1.4. Credential (Relationships & Attributes) Map 54 
+5.1.5. Privacy Map 55 
+5.1.6. Notice & Consent Map 56 
+5.1.7. Infrastructure (Technology & Operations) Map 57 
+5.2. New Vectors of Trust Maps  58 
+5.2.1. Identity Assurance 59 
+5.2.2. Identity Assurance Map 60 
+5.2.3. Primary Credential Usage 61 
+5.2.4. Primary Credential Usage Map 62 
+5.2.5. Primary Credential Management 63 
+5.2.6. Credential Management Map 64 
+5.2.7. Assertion Presentation 65 
+5.2.8. Presentation Assurance Map 66 
+6. Risk Evaluation 67 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+3 
+7. References 68 
+8. PCTF Vectors of Trust Standard Specification  69 
+8.1. Trustmark URL 70 
+8.2. Vectors of Trust Component Registry 71 
+9. Revision History 72 
+1. Document Conventions 73 
+In this document, terms that are capitalized and presented in italics are terms (e.g. 74 
+Credential) that are defined by the PCTF Glossary V1.0.  75 
+2. Introduction 76 
+It is essential that Participants in a digital ecosystem have a way to evaluate the 77 
+robustness and trustworthiness of transactions within that ecosystem. In order to do so, 78 
+Participants must share a common vocabulary that describes the level of confidence 79 
+they can associate with an Entity or transaction, as well as a common way in which to 80 
+determine that level of confidence. 81 
+In the Pan-Canadian Trust Framework™ (PCTF), a Level of Assurance (LoA) 82 
+represents the level of confidence an Entity may place in the processes and other 83 
+conformance criteria defined in any given component of the PCTF. Levels of Assurance 84 
+are elemental in creating networks of trust. Levels of Assurance models only work if all 85 
+Participants in a digital ecosystem are able to interpret them consistently. It is therefore 86 
+critical that all Participants in an ecosystem agree upon a minimum set of criteria for 87 
+each Level of Assurance. Only then will a Relying Party in that ecosystem be able to 88 
+properly evaluate the risks inherent in a relationship or transaction, and the Level of 89 
+Assurance that can be placed in Participants, Credentials, and those transactions. The 90 
+components of the PCTF describe the detailed conformance criteria that should be used 91 
+to evaluate such Levels of Assurance in the context of a given PCTF component. This 92 
+document provides guidance regarding how to use those criteria in order to properly 93 
+classify Levels of Assurance. 94 
+2.1 The Traditional Approach 95 
+When the PCTF was introduced, the most broadly accepted approach to Levels of 96 
+Assurance was as depicted in Figure 1. 97 
+ 98 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+4 
+ 99 
+Figure 1: Traditional Levels of Assurance Model 100 
+(Note: The number appearing below each component's name in Figure 1 indicates the 101 
+number of Trusted Processes described in that component as of PCTF Version 1.0) 102 
+This approach follows a simple, 3-step process to determine a transaction's Level of 103 
+Assurance: 104 
+1. Relevant conformance criteria in each component are evaluated to determine 105 
+which LoA has been achieved for each criterion. 106 
+2. The Level of Assurance for a specific component is equal to the lowest LoA 107 
+assessed across all of the relevant criteria for that PCTF component. 108 
+3. The overall Level of Assurance is equal to the lowest LoA assessed across all of 109 
+the PCTF components. 110 
+This is a weakest link scheme. That is, the highest Level of Assurance that can be 111 
+achieved is that of the weakest of the criteria. 112 
+For example, consider a scenario where the relevant criteria are as follows: 113 
+• Authentication criteria assessment: Criterion 1: LoA 3; Criterion 2: 114 
+LoA 3; Criterion 3: LoA 3; Criterion 4: LoA 3 115 
+• Verified Person criteria assessment: Criterion 1: LoA 3; Criterion 2: 116 
+LoA 3; Criterion 3: LoA 2; Criterion 4: LoA 3 117 
+• Verified Organization criteria assessment: Criterion 1: LoA 3; Criterion 2: LoA 118 
+3; Criterion 3: LoA 3; Criterion 4: LoA 3 119 
+• Credentials criteria assessment: Criterion 1: LoA 3; Criterion 2: LoA 3; Criterion 120 
+3: LoA 1; Criterion 4: LoA 3 121 
+
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+5 
+ 122 
+Figure 2: Sample evaluation using the PCTF's inaugural conformance criteria 123 
+As shown in Figure 2, given these conditions the Level of Assurance associated with 124 
+the scenario would be LoA 1, which is the level associated with the criterion or criteria 125 
+that are weakest. 126 
+Though this is a weakest link scheme, this approach does not necessitate that the 127 
+weakest link(s) are identified to the Relying Party. Nor are the strongest links identified. 128 
+This can present challenges to Relying Parties attempting to implement a risk-based 129 
+approach to assurance, as it cannot sufficiently deal with many use cases. 130 
+2.1.1 The Whistleblower: An Illustrative Use Case 131 
+Consider, for example, the case of a fictitious whistleblower. In our example someone 132 
+has learned that a group they are a member of is engaging in unlawful, immoral, or 133 
+even a life-endangering activity. They need to make this activity known in order to 134 
+preserve the integrity of the group and protect the lives of those impacted. They must 135 
+remain anonymous. Exposing their identity might result in their dismissal from the 136 
+group, removing their ability to surface the wrongdoing and, more importantly, 137 
+preventing them from mitigating the harm it causes. In addition, exposure of their 138 
+identity may cause irreparable damage to their career or ability to earn income. In 139 
+extreme cases it might also put their lives, or the lives of their friends and family, in 140 
+danger. 141 
+In a typical digital transaction, a key question is, "Do I know this person (or Entity) and 142 
+are they whom they claim to be?". However, in this case our Subject will never divulge 143 
+their true identity. Thus, once they have made initial contact and proven their validity as 144 
+an insider (e.g., by providing verifiable information that proves their provenance) that 145 
+
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+6 
+question becomes, "Is this the person with whom I have been dealing with previously?". 146 
+Once we trust them, we need to ensure we can trust things such as whether their 147 
+account has been compromised, that nobody has assumed their identity, that they are 148 
+using strong cryptographic authentication, and that the digital activity is not vulnerable to 149 
+a person-in-the-middle attack. 150 
+A digital transaction of this nature might possess the following attributes: 151 
+• Identity: 152 
+o Self-asserted, consistent over time 153 
+• Credentials: 154 
+o Session cookies 155 
+o Known Device 156 
+o Shared secret 157 
+o Cryptographic asymmetric key 158 
+o Sealed hardware token 159 
+o Full proofing required for every issuance or rotation, revoked when 160 
+suspicious activity detected 161 
+• Assertion Presentation: 162 
+o Signed verifiable assertion, passed through a back channel 163 
+o Assertion encrypted in the Relying Party’s key 164 
+Even though a transaction with these characteristics is likely sufficiently robust for this 165 
+whistleblower case, the fact that it uses a self-asserted identity – which the criteria 166 
+classify as an LoA 1-level identity – will cause the entire transaction to be evaluated as 167 
+LoA 1 under this assurance scheme. Thus, it would likely be assessed by a Relying 168 
+Party as untrustworthy. Since this scheme delivers a single Level of Assurance, the 169 
+Relying Party would have no way of knowing that it is sufficiently robust for the use 170 
+case, nor would they know why it was assessed as LoA1. They would be unaware that 171 
+the transaction was authenticated at LoA 3, and it was evaluated overall at LoA 1 solely 172 
+due to the fact the identity was self-asserted. 173 
+2.1.2 The need for an evolutionary approach 174 
+There are many use cases where a weakest-link scheme such as this is insufficient. 175 
+However, weakest-link schemes such as these have been widely adopted and cannot 176 
+be ignored. Thus, it is clear the PCTF requires an evolutionary approach that offers 177 
+Relying Parties a range of assurance options that enable them to begin with today's 178 
+widely used models and evolve as needed to address their own risks and requirements. 179 
+3. The Pan-Canadian Trust Framework 180 
+Assurance Maturity Model 181 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+7 
+The Pan-Canadian Trust Framework Assurance Maturity Model consists of three, 182 
+interoperable models of maturity: 183 
+1. Traditional Levels of Assurance. 184 
+2. Discrete Levels of Assurance. 185 
+3. Vectors of Trust. 186 
+While this represents an evolutionary model, it should be noted that there is no 187 
+requirement for practitioners to adopt any of the models. Practitioners may begin at any 188 
+point in the model, may move directly to any other model, and need not have previously 189 
+adopted any other model. 190 
+3.1 Model 1: Traditional Levels of Assurance 191 
+(Traditional LoA) 192 
+The Traditional Levels of Assurance model originally described earlier becomes the 193 
+basis for maturity Model 1. This represents the most broadly implemented assurance 194 
+scheme at the time of this writing and provides an on-ramp to the PCTF for those who 195 
+have currently implemented this scheme. 196 
+ 197 
+Figure 3: Traditional Levels of Assurance 198 
+In this model, Levels of Assurance range from "LoA 1", which is least trustworthy, to 199 
+"LoA 4", which is most trustworthy. LoA 4 typically addresses very high security use 200 
+cases and is used primarily by public sector practitioners. Most PCTF Version 1 201 
+Conformance Profiles do not define conformance criteria for LoA 4. Each Level of 202 
+Assurance is typically subsumptive, and includes most, or all, of the criteria for all of the 203 
+levels below it (i.e.: those with smaller numbers). In a Traditional LoA scheme, 204 
+assurance levels are typically broadly characterized as outlined in Figure 4. 205 
+
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+8 
+Assurance 
+Level 
+ 
+Description 
+ 
+Level 1 
+• Satisfies all Level 1 Conformance Criteria for the appropriate 
+PCTF component 
+• Little or no confidence required 
+• Little confidence required that an Entity has maintained control 
+over a Credential that has been entrusted to them and that the 
+Credential has not been compromised 
+ 
+Level 2 
+• Satisfies all Level 2 Conformance Criteria for the appropriate 
+PCTF component 
+• Some confidence required 
+• Some confidence required that an Entity has maintained control 
+over a Credential that has been entrusted to them and that the 
+Credential has not been compromised 
+ 
+Level 3 
+• Satisfies all Level 3 Conformance Criteria for the appropriate 
+PCTF component 
+• High degree of confidence required 
+• High confidence required that an Entity has maintained control 
+over a Credential that has been entrusted to them and that the 
+Credential has not been compromised 
+ 
+Level 4 
+• Satisfies all Level 4 Conformance Criteria for the appropriate 
+PCTF component 
+• Very high degree of confidence required 
+• Very high confidence required that an Entity has maintained 
+control over a Credential that has been entrusted to them and that 
+the Credential has not been compromised 
+• Note: Most PCTF Version 1 Conformance Profiles do not define 
+criteria for LoA 4. 
+Figure 4. Assurance Levels (Illustrative) 206 
+(Note: The examples in Figure 4 are illustrative. Please consult the PCTF components' 207 
+Conformance Criteria for the latest information.) 208 
+Evaluation of Traditional Levels of Assurance follows a 3-step process: 209 
+1. Relevant conformance criteria in each component are evaluated to determine 210 
+which LoA has been achieved for each criterion. 211 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+9 
+2. The Level of Assurance for a specific component is equal to the lowest LoA 212 
+assessed across all of the relevant criteria for that PCTF component. 213 
+3. The overall Level of Assurance is equal to the lowest LoA assessed across all of 214 
+the PCTF components. 215 
+This is a weakest link scheme. That is, the highest Level of Assurance that can be 216 
+achieved is that of the weakest of the criteria. 217 
+3.1.1 Traditional Levels of Assurance and the Whistleblower Example 218 
+If we carry forward the parameters discussed in our earlier whistleblower example, the 219 
+fact that the whistleblower presented a self-asserted identity – which meets the criteria 220 
+for LoA 1 – will result in this entire transaction being assessed at LoA 1. 221 
+ 222 
+Figure 5: Whistleblower example and Traditional Levels of Assurance (Illustrative) 223 
+As demonstrated in the application of the Traditional Levels of Assurance to the 224 
+whistleblower example, the challenge of a Traditional Levels of Assurance scheme is 225 
+that it can be difficult, usually impossible, for the Relying Party to determine where the 226 
+weakest link lies, or where there are strengths. Relying Parties need a way to 227 
+independently assess the many different threats present in a Digital Ecosystem such as: 228 
+• Whether the Identity of a Subject is consistent over time. 229 
+• Whether it is likely that an imposter is using the Identity. 230 
+• Whether the Credentials in use are robust or vulnerable. 231 
+• Whether the Credentials in use are well managed and best practices for 232 
+Credential hygiene are in use. 233 
+• Whether the transaction was transmitted robustly and was unlikely subject to 234 
+spoofing or unintended information disclosure. 235 
+The second model of the PCTF Assurance Maturity Model begins to address that. 236 
+
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+10 
+3.2 Model 2: Discrete Levels of Assurance (Discrete 237 
+LoA) 238 
+Model 2 of the maturity model introduces Discrete Levels of Assurance. Discrete LoA 239 
+breaks the bonds between the individual components of the assurance scheme and 240 
+enables independent evaluation of authentication assurance levels (AAL), identity 241 
+assurance levels (IAL), and credential assurance levels (CAL). It places more emphasis 242 
+on the Relying Party's requirements through increased attention to threat-risk analysis. 243 
+It also aligns the conformance criteria with the Relying Party's identified risks and 244 
+ensures they are evaluated in a manner commensurate with those risks. 245 
+ 246 
+Figure 6: Discrete Levels of Assurance 247 
+Evaluation of Discrete Levels of Assurance is as follows: 248 
+1. Relevant conformance criteria in each component are evaluated to determine 249 
+which LoA has been achieved for each criterion. 250 
+2. The Level of Assurance for a specific component is equal to the lowest LoA 251 
+assessed across all of the relevant criteria for that PCTF component. 252 
+3. The Level of Assurance for each component is reported independently. 253 
+Characterization of Discrete Levels of Assurance remains consistent with the 254 
+characteristics outlined in Figure 4, though each individual component is characterized 255 
+independently of the others. Though it may appear in Figure 6 that assessment of a 256 
+Verified Person and Verified Organization are combined in the assessment of an IAL, 257 
+an Entity would be either a Verified Person or a Verified Organization, though not both. 258 
+Thus, only one of those would be applicable to an Entity and would be considered 259 
+during evaluation of its IAL. 260 
+
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+11 
+Note: Most PCTF Version 1 Conformance Profiles do not provide conformance criteria 261 
+for assurance at level 4. 262 
+The Discrete LoA approach is very similar to the Traditional LoA approach, though 263 
+possesses some important advantages. It removes the weakest-link approach to Levels 264 
+of Assurance found in the Traditional approach and enables Relying Parties to consider 265 
+the strength and robustness of each component of a digital transaction independently. It 266 
+also places emphasis on the evaluation of risks in the context of each individual Relying 267 
+Party. To illustrate the differences, let's revisit the whistleblower example. 268 
+3.2.1 Discrete Levels of Assurance and the Whistleblower Example 269 
+ 270 
+Figure 7: Whistleblower example and Discrete Levels of Assurance (Illustrative) 271 
+Using the Discrete LoA approach to evaluate these parameters, the Relying Party is 272 
+now able to understand that, though the identity proofing was evaluated at the lowest 273 
+Level of Assurance (IAL 1), the whistleblower is using a very strong credential (CAL 3) 274 
+with strong authentication (AAL 3). This provides them with key information to help them 275 
+to answer the question posed earlier, "Is this the same person I have been transacting 276 
+with?". 277 
+A key advantage of the Discrete LoA approach is that it can be implemented through 278 
+the assessment of existing PCTF Conformance Criteria. In a sense, it provides better 279 
+acuity by removing a step from the Traditional LoA approach (i.e.: component 280 
+aggregation and minimization). 281 
+3.3 Model 3: Vectors of Trust (VoT) 282 
+Though the Discrete LoA approach provides much more acuity and flexibility than a 283 
+Traditional LoA approach, like the Traditional LoA scheme it is an aggregate approach 284 
+that does not specifically identify the rationale for an assigned Level of Assurance, the 285 
+weakest link, nor the specific strengths. For example, even though in our whistleblower 286 
+
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+12 
+example it provides better information in that the Relying Party knows that the AAL and 287 
+CAL are strong, and that the weakest component is identity, it does not inform the 288 
+Relying Party what aspect of identity is weak. The Relying Party may be unaware that 289 
+the identity is consistent over time, which is an important consideration in the example, 290 
+and key to answering the question "Is this the person with whom I have been dealing in 291 
+the past?". 292 
+This is just one example of a scenario that illustrates the immediate need for the ability 293 
+to evaluate different threats independently. The PCTF Assurance Maturity Model 294 
+addresses this need in its third model of maturity, Vectors of Trust. 295 
+The Vectors of Trust approach to assurance provides detailed information regarding 296 
+each of a transaction's potential threat vectors. This provides the Relying Party with 297 
+information that enables them to better evaluate the risk associated with the transaction, 298 
+and that is much more actionable. 299 
+ 300 
+Figure 8: Vectors of Trust Assurance Model 301 
+The PCTF Vectors of Trust scheme includes details for four new vector components, as 302 
+outlined in Figure 9. 303 
+
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+13 
+ 304 
+Figure 9: PCTF Vectors of Trust (New) 305 
+The Vectors of Trust approach to assurance: 306 
+• Enables the Relying Party to assess risk with better acuity than Traditional LoA 307 
+and Discrete LoA schemes. 308 
+• Enables Relying Parties to decide which components are relevant to their risks or 309 
+request only the components they need. 310 
+• Is flexible in its implementation. 311 
+• Can be mapped to Traditional LoA and Discrete LoA schemes for interoperability. 312 
+• Is not subject to inconsistencies in evaluation of LoA levels or to LoA level drift. 313 
+• Does not require recalibration to account for new technologies and best 314 
+practices. 315 
+• Provides insight into a transaction's specific strengths and weaknesses. 316 
+• Is extensible as the PCTF grows. 317 
+• Is designed to evolve with new technologies and best practices. 318 
+While the PCTF provides a set of baseline vectors and attributes, Relying Parties and 319 
+Participants can negotiate specific attributes that best meet their needs and address 320 
+their specific risks. This may include additional vector components, and some, all, or 321 
+none of the baseline vector components. 322 
+3.3.1 Vectors of Trust and the Whistleblower Example 323 
+The Vectors of Trust approach expresses assurance in a much different way that the 324 
+Traditional LoA and Discrete LoA approaches. Rather than provide a single, composite 325 
+
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+14 
+LoA measure as in the case of a Traditional LoA scheme, or four composite LoA 326 
+measures in the case of a Discrete LoA scheme, a Vectors of Trust scheme provides a 327 
+single vector that contains an expression of every component that is relevant to the 328 
+transaction. To demonstrate how this works, let's return to our whistleblower example. 329 
+ 330 
+Figure 10: Whistleblower example and Vectors of Trust (Illustrative) 331 
+Using a Vectors of Trust approach, the Relying Party is provided with the vector 332 
+"Ac.Ad.I1.Ca.Cb.Cc.Ce.Cf.Mc". This vector is interpreted using the scheme outlined in 333 
+Figure 10, as follows: 334 
+• Authentication: 335 
+o Ac: Signed verifiable assertion, passed through a back channel 336 
+o Ad: Assertion encrypted in the Relying Party’s key 337 
+• Identity: 338 
+o I1: Self-asserted, consistent over time 339 
+• Credential Usage: 340 
+o Ca: Session cookies 341 
+o Cb: Known Device 342 
+o Cc: Shared secret 343 
+o Ce: Cryptographic asymmetric key 344 
+o Cf: Sealed hardware token 345 
+• Credential Management: 346 
+o Mc: Full proofing required for every issuance or rotation, revoked when 347 
+suspicious activity detected 348 
+With this level of detail, the Relying Party can clearly determine, based upon their own 349 
+priorities and risk tolerances, whether they can trust this transaction. Thus, they can 350 
+definitively answer the question, "Is this likely to be the person with whom I have been 351 
+previously transacting?". 352 
+3.3.2 Interoperability with Model 1 and 2 implementations: PCTF 353 
+Component Vectors of Trust 354 
+
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+15 
+At the time this document was created Traditional LoA and Discrete LoA were the most 355 
+commonly implemented assurance schemes, with Traditional LoA being the most 356 
+commonly encountered model. Since an objective of this maturity model is to enable 357 
+Entities working with all three schemes to collaborate, there is a need for interoperability 358 
+between those models and PCTF Vectors of Trust. To address this, the PCTF Vectors 359 
+of Trust scheme also includes seven specific dimensions, each aligned to a component 360 
+of the PCTF (Table 1). 361 
+PCTF Component 
+Name 
+Demarcator 
+Symbol 
+Defined 
+Values Notes 
+Authentication T 0, 1, 2, 3, 4 
+Numeric value corresponds to 
+LoA Achieved via Model 1 or 
+Model 2 
+Verified Person H 0, 1, 2, 3, 4 
+Numeric value corresponds to 
+LoA Achieved via Model 1 or 
+Model 2 
+Verified Organization O 0, 1, 2, 3, 4 
+Numeric value corresponds to 
+LoA Achieved via Model 1 or 
+Model 2 
+Credential 
+(Relationships & 
+Attributes) 
+R 0, 1, 2, 3, 4 
+Numeric value corresponds to 
+LoA Achieved via Model 1 or 
+Model 2 
+Privacy V 0, 1 0 = Not conformant; 1 = 
+Conformant 
+Notice & Consent N 0, 1 0 = Not conformant; 1 = 
+Conformant 
+Infrastructure 
+(Technology & 
+Operations) 
+S 0, 1 0 = Not conformant; 1 = 
+Conformant 
+Figure 11: PCTF Component Vectors of Trust Dimensions and Defined Values 362 
+Use of the PCTF Component Vectors of Trust enable Entitles and Relying Parties using 363 
+Model 1 or Model 2 to continue to evaluate and assess risk without modification while 364 
+providing an additional level of acuity to those using Model 3. 365 
+3.3.3 PCTF Component Vectors of Trust Explained 366 
+3.3.3.1 Authentication (“T”) 367 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+16 
+The Authentication dimension of the PCTF Vectors of Trust should express the single 368 
+value of the lowest LOA assessed against the PCTF Authentication component’s 369 
+conformance criteria. For example, a conformance assessment of LOA 2 against 370 
+Authentication conformance criteria would be expressed as “T2”. The value “T0” may be 371 
+used to document an assessment that found no conformance with any LOA defined by 372 
+the Authentication component. If an assessment of conformance against the 373 
+Authentication component has not been performed, a “T” component must not be 374 
+included in a vector. 375 
+3.3.3.2 Verified Person (“H”) 376 
+The Verified Person dimension of the PCTF Vectors of Trust should express the single 377 
+value of the lowest LOA assessed against the PCTF Verified Person conformance 378 
+criteria. For example, a conformance assessment of LOA 2 against Verified Person 379 
+conformance criteria would be expressed as “H2”. The value “H0” may be used to 380 
+document an assessment that found no conformance with any LOA defined by the 381 
+Verified Person component. If an assessment of conformance against the Verified 382 
+Person component has not been performed, an “H” component must not be included in 383 
+a vector. 384 
+3.3.3.3 Verified Organization (“O”) 385 
+The Verified Organization dimension of the PCTF Vectors of Trust should express the 386 
+single value of the lowest LOA assessed against the PCTF Verified Organization 387 
+conformance criteria. For example, a conformance assessment of LOA 2 against 388 
+Verified Organization conformance criteria would be expressed as “O2”. The value “O0” 389 
+may be used to document an assessment that found no conformance with any LOA 390 
+defined by the Verified Organization component. If an assessment of conformance 391 
+against the Verified Organization component has not been performed, an “O” 392 
+component must not be included in a vector. 393 
+3.3.3.4 Credentials (Relationships & Attributes) (“R”) 394 
+The Credentials (Relationships & Attributes) dimension of the PCTF Vectors of Trust 395 
+should express the single value of the lowest LOA assessed against the PCTF 396 
+Credentials (Relationships & Attributes) conformance criteria. For example, a 397 
+conformance assessment of CAL 2 against Credentials (Relationships & Attributes) 398 
+conformance criteria would be expressed as “R2”. The value “R0” may be used to 399 
+document an assessment that found no conformance with any LOA defined by the 400 
+Credentials (Relationships & Attributes) component. If an assessment of conformance 401 
+against the Credentials (Relationships & Attributes) component has not been 402 
+performed, a “R” component must not be included in a vector. 403 
+3.3.3.5 Privacy (“V”) 404 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+17 
+The Privacy dimension of the PCTF Vectors of Trust should express that conformance 405 
+has been assessed against the criteria for the PCTF Privacy component. For example, 406 
+an assessment of “conforming” would be expressed as “V1”. The value “V0” may be 407 
+used to document an assessment of “not conforming” to the Privacy component. If an 408 
+assessment of conformance against the Privacy component has not been performed, a 409 
+“V” component must not be included in a vector. 410 
+3.3.3.6 Notice & Consent (“N”) 411 
+The Notice & Consent dimension of the PCTF Vectors of Trust should express that 412 
+conformance has been assessed against the criteria for the PCTF Notice & Consent 413 
+component. For example, an assessment of “conforming” would be expressed as “N1”. 414 
+The value “N0” may be used to document an assessment of “not conforming” to the 415 
+Notice & Consent component. If an assessment of conformance against the Notice & 416 
+Consent component has not been performed, a “N” component must not be included in 417 
+a vector. 418 
+3.3.3.7 Infrastructure (Technology & Operations) (“S”) 419 
+The Infrastructure (Technology & Operations) dimension of the PCTF Vectors of Trust 420 
+should express that conformance has been assessed against the criteria for the PCTF 421 
+Infrastructure (Technology & Operations) component. For example, an assessment of 422 
+“conforming” would be expressed as “S1”. The value “S0” may be used to document an 423 
+assessment of “not conforming” to the Infrastructure (Technology & Operations) 424 
+component. If an assessment of conformance against the Privacy component has not 425 
+been performed, a “S” component must not be included in a vector. 426 
+3.3.4 PCTF Component Vectors of Trust and the Whistleblower Example 427 
+Returning to our whistleblower example, the PCTF Component Vectors of Trust would 428 
+be evaluated as depicted in Figure 12. 429 
+ 430 
+Figure 12: Whistleblower example and Component Vectors of Trust (Illustrative) 431 
+
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+18 
+Using a Vectors of Trust approach, the Relying Party is provided with the vector 432 
+“T3.H1.R3”. This vector is interpreted using the scheme outlined in Figure 12, as 433 
+follows: 434 
+• Authentication: 435 
+o T3: Assessed at PCTF LOA 3 or AAL3 – the system has used strong 436 
+authentication processes 437 
+• Verified Person: 438 
+o H1: Assessed at PCTF LOA 1 or IAL 1 – the system does not know the 439 
+identity of the person, though assesses it is the same person that was 440 
+previously transacted with 441 
+• Verified Organization: 442 
+o Since there is no organization involved, conformance with Verified 443 
+Organization was not assessed and was not included 444 
+• Credentials (Relationships & Attributes): 445 
+o R3: Assessed at PCTF LOA 3 or CAL 3 – the system has used strong 446 
+processes to document an attribute (e.g. characteristic or qualifier) of the 447 
+person 448 
+• Privacy: 449 
+o Conformance was not assessed 450 
+• Notice & Consent: 451 
+o Conformance was not assessed 452 
+• Infrastructure (Technology & Operations): 453 
+o Conformance was not assessed 454 
+With this level of detail the Relying Party can clearly determine, based upon their own 455 
+priorities and risk tolerances, whether they can trust this transaction. Thus, they can 456 
+definitively answer the question, "Is this likely to be the person with whom I have been 457 
+previously transacting?". 458 
+4. Concurrent Support for all Maturity 459 
+Models 460 
+Our ability to carry the whistleblower example through all three models of maturity, 461 
+albeit with steadily improving results, foreshadows the PCTF's ability to support all three 462 
+models of maturity concurrently. 463 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+19 
+ 464 
+Figure 13: All three models of the PCTF Assurance Maturity Model and the 465 
+whistleblower example (Illustrative) 466 
+The scheme depicted in Figure 13 gives Participants the flexibility to use any one of the 467 
+three models described in this document. In addition, Participants in an Ecosystem can 468 
+agree to present and/or receive a hybrid vector which will enable other Participants to 469 
+evaluate the assurance level of a transaction using any of the three models. For 470 
+example, the hybrid vector presented in Figure 13 can be interpreted in the following 471 
+three ways: 472 
+1. Traditional LOA (Model 1): LOA 1 = Min[T3 (Authentication LOA 3), H1 (Identity 473 
+LOA 1), R3 (Credential LOA 3)] 474 
+2. Discrete LOA (Model 2): AAL 3; IAL 1; CAL 3 = T3(AAL 3).H1(IAL 1).R3(CAL 475 
+3) 476 
+3. Vectors of Trust (Model 3): Ac.Ad.I1.Ca.Cb.Cc.Ce.Cf.Mc = T, H, and R PCTF 477 
+Component elements ignored 478 
+5. Mapping the Three Models 479 
+For further clarification a mapping of the three models of maturity follows. Though this 480 
+mapping will help practitioners to work together, it is ultimately the Relying Party who 481 
+
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+20 
+assesses their own level of risk and who makes the ultimate decision regarding whether 482 
+they can, or should, trust a transaction. 483 
+Note: These mappings are meant as illustrative examples and are not intended to 484 
+define strict equivalences. The results of any assessment in the context of PCTF should 485 
+be documented according to the PCTF Assessment Component and may include an 486 
+expression of assurance according to one or more of the assurance models presented 487 
+here. 488 
+In the tables to follow: 489 
+• “Traditional Assurance Model” provides the highest possible assurance level that 490 
+corresponds to the “Characteristics to Consider”. 491 
+• “Discrete Assurance Model” provides the highest possible assurance level that 492 
+corresponds to the “Characteristics to Consider”. 493 
+• “Vector Component” provides the PCTF Component Vector that corresponds to 494 
+the “Characteristics to Consider”. 495 
+• “Characteristics to Consider” documents significant characteristics of the system 496 
+or transaction that correspond to the values suggested in the other columns of 497 
+the same row. 498 
+As in the example above and in the section describing Model 1, the overall Traditional 499 
+LoA is calculated by taking the lowest Traditional LoA level evaluated for all assessed 500 
+components. 501 
+Note: Though all of the maps below include a mapping to Traditional LoA 4, not all 502 
+PCTF components include LoA 4 conformance criteria. Though the result is that it is 503 
+currently not possible for assessment of a Traditional LoA higher than 3 in those cases, 504 
+LoA 4 mappings were included to account for future enhancement of those 505 
+components. 506 
+5.1 PCTF Component Maps 507 
+5.1.1 Authentication Map 508 
+Traditional 
+Assurance 
+Model 
+Discrete 
+Assurance 
+Model 
+Vector 
+Component Characteristics to Consider 
+None 
+Specified 
+None 
+Specified 
+None 
+Specified 
+• No assessment of 
+conformance to the PCTF 
+Authentication conformance 
+criteria has been made 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+21 
+None 
+Specified 
+None 
+Specified T0 
+• No authentication has been 
+performed that conforms to any 
+PCTF Authentication-defined 
+LoA 
+LoA 1 AAL 1 T1 
+• Authentication has been 
+performed that conforms to 
+PCTF Authentication LoA 1 
+conformance criteria 
+LoA 2 AAL 2 T2 
+• Authentication has been 
+performed that conforms to 
+PCTF Authentication LoA 2 
+conformance criteria 
+LoA 3 AAL 3 T3 
+• Authentication has been 
+performed that conforms to 
+PCTF Authentication LoA 3 
+conformance criteria 
+LoA 4 AAL 4 T4 
+• Authentication has been 
+performed that conforms to 
+PCTF Authentication LoA 4 
+conformance criteria 
+• Note: PCTF Authentication 
+Conformance Profile V1.0 does 
+not define conformance criteria 
+for LoA 4. 
+Figure 14: Authentication Map 509 
+5.1.2 Verified Person Map 510 
+Traditional 
+Assurance 
+Model 
+Discrete 
+Assurance 
+Model 
+Vector 
+Component Characteristics to Consider 
+None Specified None 
+Specified 
+None 
+Specified 
+• No PCTF Verified Person 
+conformance criteria 
+assessment was performed 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+22 
+None Specified None 
+Specified H0 
+• No Identity Proofing conforms 
+to any PCTF Verified Person 
+criteria 
+LoA 1 IAL 1 H1 
+• Conforms to PCTF Verified 
+Person LoA 1 conformance 
+criteria 
+LoA 2 IAL 2 H2 
+• Conforms to PCTF Verified 
+Person LoA 2 conformance 
+criteria 
+LoA 3 IAL 3 H3 
+• Conforms to PCTF Verified 
+Person LoA 3 conformance 
+criteria 
+LoA 4 IAL 4 H4 
+• Conforms to PCTF Verified 
+Person LoA 4 conformance 
+criteria 
+• Note: PCTF Verified Person 
+Conformance Profile V1.0 
+does not define conformance 
+criteria for LoA 4. 
+Figure 15: Verified Person Map 511 
+5.1.3 Verified Organization Map 512 
+Traditional 
+Assurance 
+Model 
+Discrete 
+Assurance 
+Model 
+Vector 
+Component Characteristics to Consider 
+None 
+Specified 
+None 
+Specified 
+None 
+Specified 
+• No PCTF Verified Organization 
+conformance criteria 
+assessment was performed 
+None 
+Specified 
+None 
+Specified O0 
+• No Identity Proofing conforms 
+to any PCTF Verified 
+Organization criteria 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+23 
+LoA 1 IAL1 O1 
+• Conforms to PCTF Verified 
+Organization LoA 1 
+conformance criteria 
+LoA 2 IAL2 O2 
+• Conforms to PCTF Verified 
+Organization LoA 2 
+conformance criteria 
+LoA 3 IAL3 O3 
+• Conforms to PCTF Verified 
+Organization LoA 3 
+conformance criteria 
+LoA 4 IAL4 O4 
+• Conforms to PCTF Verified 
+Organization LoA 4 
+conformance criteria 
+• Note: PCTF Verified 
+Organization Conformance 
+Profile V1.0 does not define 
+conformance criteria for LoA 4. 
+Figure 16: Verified Organization Map 513 
+ 514 
+ 515 
+ 516 
+5.1.4 Credential (Relationships & Attributes) Map 517 
+Traditional 
+Assurance 
+Model 
+Discrete 
+Assurance 
+Model 
+Vector 
+Component Characteristics to Consider 
+None 
+Specified 
+None 
+Specified 
+None 
+Specified 
+• No assessment of conformance 
+to the PCTF Credential 
+(Relationships & Attributes) 
+conformance criteria has been 
+made 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+24 
+None 
+Specified 
+None 
+Specified R0 
+• No trusted processes conform 
+to any PCTF Credential 
+(Relationships & Attributes) CAL 
+LoA 1 CAL1 R1 
+• Trusted processes conform to 
+PCTF PCTF Credential 
+(Relationships & Attributes) 
+CAL1 
+LoA 2 CAL2 R2 
+• Trusted processes conform to 
+PCTF PCTF Credential 
+(Relationships & Attributes) 
+CAL2 
+LoA 3 CAL3 R3 
+• Trusted processes conform to 
+PCTF PCTF Credential 
+(Relationships & Attributes) 
+CAL3 
+LoA 4 CAL4 R4 
+• Trusted processes conform to 
+PCTF PCTF Credential 
+(Relationships & Attributes) 
+CAL4 
+Figure 17: Credential (Relationships & Attributes) Map 518 
+ 519 
+5.1.5 Privacy Map 520 
+Traditional 
+Assurance 
+Model 
+Discrete 
+Assurance 
+Model 
+Vector 
+Component Characteristics to Consider 
+None Specified None 
+Specified 
+None 
+Specified 
+• No assessment of 
+conformance to the PCTF 
+Privacy conformance criteria 
+has been made 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+25 
+None Specified None 
+Specified V0 
+• The system does not conform 
+to the PCTF Privacy 
+conformance criteria 
+LoA3 AAL3, IAL3, 
+CAL4 V1 
+• The system does conform to 
+the PCTF Privacy 
+conformance criteria 
+Figure 18: Privacy Map 521 
+Note: PCTF Privacy does not define levels of assurance. When Privacy is considered in 522 
+an assessment, a system that does not conform cannot document a conforming level of 523 
+assurance using the Traditional Assurance Model or the Discrete Assurance Model.  524 
+5.1.6 Notice & Consent Map 525 
+Traditional 
+Assurance 
+Model 
+Discrete 
+Assurance 
+Model 
+Vector 
+Component Characteristics to Consider 
+None Specified None 
+Specified 
+None 
+Specified 
+• No assessment of 
+conformance to the PCTF 
+Notice & Consent 
+conformance criteria has been 
+made 
+None Specified None 
+Specified N0 
+• The system does not conform 
+to the PCTF Notice & Consent 
+conformance criteria 
+LoA3 AAL3, IAL3, 
+CAL4 N1 
+• The system does conform to 
+the PCTF Notice & Consent 
+conformance criteria 
+Figure 19: Notice & Consent Map 526 
+Note: PCTF Notice & Consent does not define levels of assurance. When Notice & 527 
+Consent is considered in an assessment, a system that does not conform cannot 528 
+document a conforming level of assurance using the Traditional Assurance Model or the 529 
+Discrete Assurance Model.  530 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+26 
+5.1.7 Infrastructure (Technology & Operations) Map 531 
+Traditional 
+Assurance 
+Model 
+Discrete 
+Assurance 
+Model 
+Vector 
+Component Characteristics to Consider 
+None 
+Specified 
+None 
+Specified 
+None 
+Specified 
+• No assessment of conformance 
+to the PCTF Infrastructure 
+(Technology & Operations) 
+conformance criteria has been 
+made 
+None 
+Specified 
+None 
+Specified S0 
+• The system does not conform to 
+the PCTF Infrastructure 
+(Technology & Operations) 
+conformance criteria 
+LoA3 AAL3, IAL3, 
+CAL4 S1 
+• The system does conform to the 
+PCTF Infrastructure 
+(Technology & Operations) 
+conformance criteria 
+Figure 20: Infrastructure (Technology & Operations) Map 532 
+Note: PCTF Infrastructure (Technology & Operations) does not define levels of 533 
+assurance. When Infrastructure (Technology & Operations) is considered in an 534 
+assessment, a system that does not conform cannot document a conforming level of 535 
+assurance using the Traditional Assurance Model or the Discrete Assurance Model. 536 
+5.2 New Vectors of Trust Maps 537 
+Note: Whereas Traditional LOA and Discrete LOA assurance levels are subsumptive 538 
+(i.e., higher levels are inherently stronger than lower levels and conform to all of the 539 
+lower levels' criteria), Vectors of Trust are not inherently subsumptive. Thus, higher 540 
+numeric designators or alphabetically-subsequent alpha designators should not, on their 541 
+own, be interpreted as an indication of the strength of the element. 542 
+5.2.1 Identity Assurance 543 
+The primary identity assurance component of this vector definition represents the 544 
+results of assessment against the Verified Person, Verified Organization, or the lesser 545 
+LOA of the assessment of both those components. Only one distinct value from this 546 
+category may be used in a single transaction. This component is intended to align with 547 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+27 
+the Vectors of Trust Default Component Value Definitions specified in Appendix A, 548 
+section A.1 of RFC8485. This component may not be included in a vector if no 549 
+assessment has been done with the PCTF Verified Person or Verified Organization 550 
+components, or such an assessment has found that no defined Level of Assurance has 551 
+been met (a condition that should be documented as “I0”). 552 
+5.2.2 Identity Assurance Map 553 
+Traditional 
+Assurance 
+Level 
+Discrete 
+Assurance 
+Level 
+Vector 
+ID Common Characteristics Vector ID Defining 
+Characteristics 
+N/A N/A I0  No proofing; No 
+persistent session 
+data 
+LoA 1 IAL 1 I1 
+Satisfies all Level 1 
+Conformance Criteria of 
+Verified Person, Verified 
+Organization, or – if both 
+are assessed – both such 
+components. 
+•Little or no confidence 
+required 
+Attributes are self-
+asserted but consistent 
+over time 
+Potentially pseudonymous 
+Self-asserted, 
+consistent over time 
+LoA 2 IAL 2 I2 
+Satisfies all Level 2 
+Conformance Criteria of 
+Verified Person, Verified 
+Organization, or – if both 
+are assessed – both such 
+components. 
+•Some confidence 
+required 
+Identity has been proofed 
+either in person or 
+remotely using trusted 
+mechanisms 
+Identity proofed in 
+person or remotely 
+via a trusted 
+mechanism 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+28 
+LoA 3 IAL 3 I3 
+Satisfies all Level 3 
+Conformance Criteria of 
+Verified Person, Verified 
+Organization, or – if both 
+are assessed – both such 
+components. 
+•High confidence required 
+There is a binding 
+relationship between the 
+identity provider and the 
+identified party 
+Binding relationship 
+between the identity 
+provider and the 
+party 
+Figure 21: Identity Assurance Map 554 
+5.2.3 Primary Credential Usage 555 
+The primary credential usage component of this vector definition represents distinct 556 
+categories of primary credential that may be used together in a single transaction. When 557 
+appropriate, multiple distinct values from this category may be used in a single 558 
+transaction. This component is intended to align with the Vectors of Trust Default 559 
+Component Value Definitions specified in Appendix A, section A.2 of RFC8485. This 560 
+component may not be included in a vector if no assessment has been done with the 561 
+PCTF Authentication component, or such an assessment has found that no defined 562 
+Level of Assurance has been met (a condition that should be documented as “T0”). 563 
+5.2.4 Primary Credential Usage Map 564 
+Traditional 
+Assurance 
+Level 
+Discrete 
+Assurance 
+Level 
+Corresponding 
+Vector ID 
+Common 
+Characteristics 
+Vector ID 
+Defining 
+Characteristics 
+N/A N/A C0  No credential is 
+used; anonymous 
+public service 
+LoA 1 AAL 1 Ca Satisfies all Level 1 
+Authentication 
+Simple session 
+HTTP cookies 
+(with nothing else) 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+29 
+LoA 1 AAL 1 Cb 
+Conformance 
+Criteria 
+Little confidence 
+required that an 
+Entity has 
+maintained control 
+over Authenticator 
+Validation Data that 
+has been entrusted 
+to them and that the 
+data has not been 
+compromised 
+Known device, 
+such as those 
+indicated through 
+device posture or 
+device 
+management 
+systems 
+LoA 2 AAL 2 Cc 
+•Satisfies all Level 2 
+Authentication 
+Conformance 
+Criteria 
+•Some confidence 
+required that an 
+Entity has 
+maintained control 
+over Authenticator 
+Validation Data that 
+has been entrusted 
+to them and that the 
+data has not been 
+compromised 
+Shared secret, 
+such as a 
+username and 
+password 
+combination 
+LoA 2 AAL 2 Cd 
+Cryptographic 
+proof of key 
+possession using 
+shared key 
+LoA 3 AAL 3 Ce 
+•Satisfies all Level 3 
+Authentication 
+Conformance 
+Criteria 
+•High confidence 
+required that an 
+Entity has 
+maintained control 
+over Authenticator 
+Validation Data that 
+has been entrusted 
+to them and that the 
+data has not been 
+compromised 
+Cryptographic 
+proof of key 
+possession using 
+asymmetric key 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+30 
+LoA 4 AAL 4 Cf 
+•Satisfies all Level 4 
+Authentication 
+Conformance 
+Criteria 
+•Very high 
+confidence required 
+that an Entity has 
+maintained control 
+over Authenticator 
+Validation Data that 
+has been entrusted 
+to them and that the 
+data has not been 
+compromised 
+Sealed hardware 
+token / keys 
+stored in a trusted 
+platform module 
+LoA 4 AAL 4 Cg Locally verified 
+biometric 
+Figure 22: Credential Assurance Map 565 
+5.2.5 Primary Credential Management 566 
+The primary credential management component of this vector definition represents 567 
+distinct categories of management that may be considered separately or together in a 568 
+single transaction. When appropriate, multiple distinct values from this category may be 569 
+used in a single transaction. This component is intended to align with the Vectors of 570 
+Trust Default Component Value Definitions specified in Appendix A, section A.3 of 571 
+RFC8485. This component may not be included in a vector if no assessment has been 572 
+done with the PCTF Authentication component, or such an assessment has found that 573 
+no defined Level of Assurance has been met (a condition that should be documented as 574 
+“T0”). The Level of Assurance resulting from the Authentication assessment should be 575 
+expressed in the same vector with a “T” component. 576 
+5.2.6 Credential Management Map 577 
+Traditional 
+Assurance 
+Level 
+Discrete 
+Assurance 
+Level 
+Corresponding 
+Vector ID 
+Common 
+Characteristics 
+Vector ID 
+Defining 
+Characteristics 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+31 
+LoA 1 CAL 1 Ma 
+Satisfies all Level 
+1 Authentication or 
+Credentials 
+(Relationships and 
+Attributes) Conformance 
+Criteria 
+Little confidence 
+required that an Entity 
+has maintained control 
+over Authenticator 
+Validation Data that has 
+been entrusted to them 
+and that the Credential 
+has not been 
+compromised 
+Self-asserted 
+primary 
+Authenticator 
+(user chooses 
+their own 
+credentials and 
+must rotate or 
+revoke them 
+manually); no 
+additional 
+verification for 
+primary 
+credential 
+issuance or 
+rotation 
+LoA 2 CAL 2 Mb 
+Satisfies all Level 
+2 Authentication or 
+Credentials 
+(Relationships and 
+Attributes) Conformance 
+Criteria 
+Some confidence 
+required that an Entity 
+has maintained control 
+over a Authenticator 
+Validation Data that has 
+been entrusted to them 
+and that the Credential 
+has not been 
+compromised 
+Remote 
+issuance and 
+rotation; use of 
+backup recover 
+credentials 
+(such as email 
+verification); 
+deletion on user 
+request 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+32 
+LoA 3 CAL 3 Mc 
+Satisfies all Level 
+3 Authentication or 
+Credentials 
+(Relationships and 
+Attributes) Conformance 
+Criteria 
+High confidence 
+required that an Entity 
+has maintained control 
+over a Authenticator 
+Validation Data that has 
+been entrusted to them 
+and that the Credential 
+has not been 
+compromised 
+Full proofing 
+required for 
+each issuance 
+and rotation; 
+revocation upon 
+suspicious 
+activity 
+detection 
+Figure 23: Credential Usage Map 578 
+5.2.7 Assertion Presentation 579 
+The assertion presentation component of this vector definition represents distinct 580 
+categories of assertion that are recommended to be used in a subsumptive manner but 581 
+may be used together. When appropriate, multiple distinct values from this category 582 
+may be used in a single transaction. This component is intended to align with the 583 
+Vectors of Trust Default Component Value Definitions specified in Appendix A, section 584 
+A.4 of RFC8485. This component may not be included in a vector if no assessment has 585 
+been done with the PCTF Authentication component, or such an assessment has found 586 
+that no defined Level of Assurance has been met (a condition that should be 587 
+documented as “T0”). The Level of Assurance resulting from the Authentication 588 
+assessment should be expressed in the same vector with a “T” component. 589 
+Note: The PCTF does not currently provide conformance criteria to guide the selection 590 
+of appropriate values to include for the Assertion Presentation component. An assessor 591 
+may rely on the set of information security guidelines and controls identified for 592 
+conformance with BASE 6 and/or BASE 7 in the Authentication Conformance Profile. 593 
+5.2.8 Presentation Assurance Map 594 
+Traditional 
+Assurance 
+Level 
+Discrete 
+Assurance 
+Level 
+Corresponding Vector 
+ID 
+Common 
+Characteristics 
+Vector 
+ID Defining 
+Characteristics 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+33 
+LoA 1 
+PAL 1 
+FAL 1 
+(NIST) 
+Aa 
+Satisfies the 
+criteria in BASE 
+6 of the 
+Authentication 
+conformance 
+criteria 
+No protection; 
+unsigned bearer 
+identifier (e.g., 
+HTTP session 
+cookie in a web 
+browser) 
+LoA 2 
+PAL 2 
+FAL 2 
+(NIST) 
+Ab 
+Satisfies the 
+criteria in BASE 
+7 of the 
+Authentication 
+conformance 
+criteria 
+Signed and 
+verifiable 
+assertion, 
+passed through 
+the user agent 
+(web browser) 
+LoA 2 
+PAL 2 
+FAL 2 
+(NIST 
+Ac 
+Satisfies the 
+criteria in BASE 
+7 of the 
+Authentication 
+conformance 
+criteria 
+Signed and 
+verifiable 
+assertion; 
+passed through 
+a back channel 
+LoA 2 
+PAL 2 
+FAL 2 
+(NIST) 
+Ad 
+Satisfies the 
+criteria in BASE 
+7 of the 
+Authentication 
+conformance 
+criteria 
+Assertion 
+encrypted to the 
+Relying Party’s 
+key 
+Figure 24: Presentation Assurance Map 595 
+6. Risk Evaluation 596 
+Figure 25 contains an enumeration of risks commonly used to assess the Level of 597 
+Assurance required for a specific digital interaction. It should be noted that this table is 598 
+meant to be illustrative in nature. It is not intended to be exhaustive, nor is it meant to be 599 
+directive. Accordingly, this table is not presenting additional conformance criteria and 600 
+does not have to be used as part of an assessment. Relying Parties must evaluate the 601 
+potential risks and harms they are likely to face, and assess the levels of risk they are 602 
+willing to accept for a specific transaction within their operational context. As such, 603 
+some of the illustrative criteria uses terminology that is subject to interpretation (e.g., 604 
+“high”, “medium”, “low”). This enables practitioners to establish a risk profile that is 605 
+commensurate with their ministry, department, or type of business. For example, a large 606 
+financial institution may consider the risk of losing $100,000 as “limited” or “low” 607 
+whereas a risk of that size may be “severe” or “high” for a small business, startup, or 608 
+individual. 609 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+34 
+Since the risk levels are a function of a Relying Party’s unique circumstances and any 610 
+policy, legislation, and/or regulation they are subject to, it is incumbent upon the Relying 611 
+Party to explicitly document their risk tolerance. This will ensure that risk controls are 612 
+consistently implemented and that they are neither too lenient, nor too stringent 613 
+regardless of the persons who implement them. It will also ensure the controls are fairly 614 
+assessed when audited. These risks should also be documented so they are evident to, 615 
+and clearly understandable by, Entities with whom they interact. 616 
+Figure 25 contains an illustrative table risks to help Relying Parties understand how they 617 
+can evaluate their own risks and make a determination of the LoA they require. 618 
+Impact 
+Category 
+Assurance Level Required 
+LoA 1 or 
+equivalent  
+LoA 2 or 
+equivalent  
+LoA 3 or 
+equivalent  
+LoA 4 or 
+equivalent  
+Inconvenience
+, distress, 
+damage to 
+standing or 
+reputation 
+At worst, 
+limited, short-
+term 
+inconvenience
+, distress, 
+embarrassme
+nt or damage 
+to the 
+standing or 
+reputation of 
+any party 
+At worst, 
+serious short-
+term or limited 
+long-
+term inconveni
+ence, distress 
+or damage to 
+the standing or 
+reputation of 
+any party 
+Severe 
+or serious long-
+term inconvenie
+nce, distress or 
+damage to the 
+standing or 
+reputation of 
+any party 
+(ordinarily 
+reserved for 
+situations with 
+severe effects 
+or which affect 
+many 
+individuals) 
+A severe and 
+permanent  
+inconvenience, 
+distress or 
+damage to the 
+standing or 
+reputation of any 
+party 
+Financial loss 
+At worst, an 
+insignificant or 
+inconsequenti
+al financial 
+loss to any 
+party, or at 
+worst an 
+inconsequenti
+al liability 
+At worst, a 
+serious financi
+al loss to any 
+party, or a 
+serious liability 
+A severe 
+financial loss to 
+any party, or a 
+severe liability 
+A catastrophic  
+financial loss to 
+any party, or a 
+catastrophic 
+liability 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+35 
+Harm to a 
+program or 
+public interest 
+At worst, a 
+limited 
+adverse effect 
+on 
+organizational 
+operations or 
+assets or 
+government 
+organization, 
+program, 
+asset or the 
+public interest 
+(e.g., mission 
+capability 
+degradation to 
+the extent and 
+duration that 
+the 
+organization is 
+able to 
+perform its 
+primary 
+functions with 
+noticeably 
+reduced 
+effectiveness; 
+minor damage 
+to 
+organizational 
+assets or 
+public 
+interests) 
+At worst, a 
+serious 
+adverse effect 
+on 
+organizational 
+operations or 
+assets or 
+government 
+organization, 
+program, asset 
+or the public 
+interest 
+(e.g., significan
+t mission 
+capability 
+degradation to 
+the extent and 
+duration that 
+the 
+organization is 
+able to perform 
+its primary 
+functions with 
+significantly 
+reduced 
+effectiveness; 
+significant 
+damage to 
+organizational 
+assets or 
+public 
+interests) 
+A severe 
+adverse effect 
+on 
+organizational 
+operations or 
+assets or 
+government 
+organization, 
+program, asset 
+or the public 
+interest 
+(e.g., severe 
+mission 
+capability 
+degradation or 
+loss of to the 
+extent and 
+duration that the 
+organization is 
+unable to 
+perform one or 
+more of its 
+primary 
+functions; major 
+damage to 
+organizational 
+assets or public 
+interests) 
+A catastrophic ad
+verse effect on 
+organizational 
+operations or 
+assets or 
+government 
+organization, 
+program, asset or 
+the public interest 
+(e.g., catastrophic 
+mission capability 
+degradation or 
+loss of to the 
+extent and 
+duration that the 
+organization is 
+unable to perform 
+its primary 
+functions; 
+catastrophic dama
+ge to 
+organizational 
+assets or public 
+interests) 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+36 
+Unauthorized 
+release of 
+sensitive 
+personal or 
+commercial 
+information 
+At worst, a 
+limited release 
+of personal 
+information or 
+commercially 
+sensitive 
+information to 
+unauthorized 
+parties, or 
+breach of 
+privacy, 
+resulting in a 
+loss of 
+confidentiality 
+with a low 
+impact 
+At worst, a 
+release of 
+personal 
+information or 
+commercially 
+sensitive 
+information to 
+unauthorized 
+parties, or 
+breach of 
+privacy, 
+resulting in a 
+moderate 
+impact 
+A release of 
+personal 
+information or 
+commercially 
+sensitive 
+information to 
+unauthorized 
+parties, or 
+breach of 
+privacy, 
+resulting in a 
+serious impact 
+A release of 
+personal 
+information or 
+commercially 
+sensitive 
+information to 
+unauthorized 
+parties, or breach 
+of privacy, 
+resulting in a 
+catastrophic 
+impact 
+Unauthorized 
+release of 
+sensitive 
+government 
+information 
+A loss of 
+confidentiality 
+with a low 
+impact 
+A limited 
+adverse 
+effect on 
+organizational 
+operations and 
+assets due to 
+a loss of 
+confidentiality 
+resulting from 
+the release of 
+sensitive 
+government 
+information to 
+unauthorized 
+parties 
+A serious 
+adverse 
+effect on 
+organizational 
+operations and 
+assets due to a 
+loss of 
+confidentiality 
+resulting from 
+the release of 
+sensitive 
+government 
+information to 
+unauthorized 
+parties 
+A catastrophic 
+effect on 
+organizational 
+operations and 
+assets due to a 
+loss of 
+confidentiality 
+resulting from the 
+release of 
+sensitive 
+government 
+information to 
+unauthorized 
+parties 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+37 
+Civil or 
+criminal 
+violations 
+Private sector: 
+At worst, a 
+risk of civil or 
+criminal 
+violations of a 
+nature that 
+would not 
+ordinarily be 
+subject to 
+enforcement 
+efforts 
+Public sector: 
+Any 
+compromise 
+involving a 
+legal violation 
+is assessed at 
+a minimum of 
+Level 2 
+A civil or 
+criminal violati
+on that may 
+have minor 
+consequences 
+and that may 
+be subject to 
+enforcement 
+efforts 
+A civil or 
+criminal violatio
+n that may have 
+serious 
+consequences t
+hat are of 
+importance to 
+enforcement 
+programs 
+A violation that 
+may 
+have exceptionall
+y grave 
+consequences tha
+t are of special 
+importance to 
+enforcement 
+programs 
+Personal 
+health and 
+safety 
+Private sector: 
+At worst, 
+minor injury 
+not requiring 
+medical 
+treatment 
+Public sector: 
+Any 
+compromise 
+health and 
+safety is 
+assessed at 
+minimum of 
+Level 2 
+Private 
+sector: At 
+worst, 
+moderate risk 
+of minor injury 
+or limited risk 
+of injury 
+requiring 
+medical 
+treatment 
+Public sector: 
+A minor perso
+nal injury not 
+requiring 
+medical 
+attention 
+Private sector: 
+At worst, a 
+low risk of 
+serious injury or 
+death 
+Public sector: A 
+personal 
+injury requiring 
+medical 
+attention 
+Risk 
+of serious person
+al injury or death 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+38 
+National 
+interest 
+(Any 
+compromise 
+involving the 
+national 
+interest is 
+assessed at a 
+minimum of 
+Level 2) 
+A disadvantag
+e to the 
+national 
+interest 
+An injury to the 
+national interest 
+A serious or 
+exceptionally 
+grave injury to the 
+national interest 
+Figure 25: Risk Evaluation (Illustrative) 619 
+7. References 620 
+This section lists key external standards, guidelines, and other documents referenced in 621 
+creation of this PCTF module. 622 
+Note 623 
+• Where applicable, only the version or release number specified herein applies. 624 
+This component of the PCTF leverages the skills, experience, and lessons learned of 625 
+other organizations working to improve this domain, and has taken into consideration 626 
+material from the following sources: 627 
+• Internet Engineering Task Force (IETF): Request for Comments 8485, Vectors of 628 
+Trust <https://www.rfc-editor.org/info/rfc8485> 629 
+• U.S. Department of Commerce, National Institute of Standards and Technology: 630 
+NIST Special Publication 800-63-3 Digital Identity Guidelines 631 
+<https://pages.nist.gov/800-63-3/sp800-63-3.html> 632 
+• Government of Canada, Treasury Board of Canada Secretariat: Public Sector 633 
+Profile of the Pan-Canadian Trust Framework Version 1.1 634 
+<https://canada-ca.github.io/PCTF-CCP/> 635 
+• TBS Guidelines on Identity Assurance 636 
+• World Wide Web Consortium (W3C): Verifiable Credentials Data Model 1.0 637 
+<https://www.w3.org/TR/vc-data-model/> 638 
+8. PCTF Vectors of Trust Standard 639 
+Specification 640 
+8.1 Trustmark URL 641 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+39 
+The URL for the DIACC PCTF Vectors of Trust Trustmark is <to be determined>. The 642 
+value of the vtm field shall be <the same to be determined value>. 643 
+8.2 Vectors of Trust Component Registry  644 
+This specification adds the following values to the "Vector of Trust Components" registry 645 
+established by [RFC8485] for use with the DIACC PCTF Vectors of Trust Trustmark. 646 
+• Demarcator Symbol: I 647 
+• Description: Identity Proofing 648 
+• Change Controller: DIACC 649 
+• Specification document(s): [PCTF Assurance Maturity Model] 650 
+• Demarcator Symbol: C 651 
+• Description: Credential Usage 652 
+• Change Controller: DIACC 653 
+• Specification document(s): [PCTF Assurance Maturity Model] 654 
+• Demarcator Symbol: M 655 
+• Description: Credential Management 656 
+• Change Controller: DIACC 657 
+• Specification document(s): [PCTF Assurance Maturity Model] 658 
+• Demarcator Symbol: A 659 
+• Description: Presentation 660 
+• Change Controller: DIACC 661 
+• Specification document(s): [PCTF Assurance Maturity Model] 662 
+• Demarcator Symbol: T 663 
+• Description: Authentication 664 
+• Change Controller: DIACC 665 
+• Specification document(s): [Authentication Component Overview] and 666 
+[Authentication Conformance Profile] 667 
+• Demarcator Symbol: P 668 
+• Description: Verified Person 669 
+• Change Controller: DIACC 670 
+• Specification document(s): [Verified Person Component Overview] and [Verified 671 
+Person Conformance Profile] 672 
+• Demarcator Symbol: O 673 
+• Description: Verified Organization 674 
+• Change Controller: DIACC 675 
+• Specification document(s): [Verified Organization Component Overview] and 676 
+[Verified Organization Conformance Profile] 677 
+• Demarcator Symbol: R 678 
+• Description: Credentials (Relationships & Attributes) 679 
+• Change Controller: DIACC 680 
+ 
+Status: DIACC Draft Recommendation 
+This Draft Recommendation has been prepared for community input and is approved by the DIACC Trust Framework Expert 
+Committee. For more information, please contact review@diacc.ca. 
+ 
+40 
+• Specification document(s): [Credentials (Relationships & Attributes) Component 681 
+Overview] and [Credentials (Relationships & Attributes) Conformance Profile] 682 
+• Demarcator Symbol: V 683 
+• Description: Privacy 684 
+• Change Controller: DIACC 685 
+• Specification document(s): [Privacy Component Overview] and [Privacy 686 
+Conformance Profile] 687 
+• Demarcator Symbol: N 688 
+• Description: Notice & Consent 689 
+• Change Controller: DIACC 690 
+• Specification document(s): [Notice & Consent Component Overview] and [Notice 691 
+& Consent Conformance Profile] 692 
+• Demarcator Symbol: S 693 
+• Description: Infrastructure (Technology & Operations) 694 
+• Change Controller: DIACC 695 
+• Specification document(s): [Infrastructure (Technology & Operations) Component 696 
+Overview] and [Infrastructure (Technology & Operations) Conformance Profile] 697 
+9. Revision History 698 
+Version Date Author Comment 
+0.01 2020-09-29  PCTF Editing 
+Team Initial draft 
+0.02 2021-01-29 Design Team Address comments received from initial 
+TFEC review 
+0.03 2021-05-17 Design Team 
+Align Vectors of Trust section with current 
+PCTF components and additional updates 
+from Design Team review 
+1.0 2021-06-09 Design Team Approved by the TFEC as a Draft 
+Recommendation V1.0 
+ 699 

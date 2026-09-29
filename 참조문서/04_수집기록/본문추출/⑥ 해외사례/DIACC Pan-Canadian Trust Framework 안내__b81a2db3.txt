@@ -1,0 +1,153 @@
+Trust Framework | Digital ID & Authentication Council of Canada
+Trust Framework | Digital ID & Authentication Council of Canada
+ Member Login 
+ Become a Member 
+ Home 
+ About DIACC 
+ Board of Directors 
+ Principles 
+ Committees 
+ Policy & Positions 
+ Contact Us 
+ Membership 
+ Become a Member 
+ DIACC Members 
+ Member Impact & Spotlights 
+ Member Login 
+ Benefits 
+ PCTF & Certification 
+ Overview 
+ Trust Framework 
+ Certification Program 
+ Trusted List of Certified Providers 
+ Learning Centre 
+ Use Cases 
+ User Stories 
+ Adoption Dashboard 
+ Building Public Trust 
+ Privacy-In-Practice 
+ Publications & Research 
+ Podcasts 
+ Videos 
+ News 
+ Frequently Asked Questions 
+ Solutions & Sectors 
+ Trusted List of Certified Providers 
+ Member Services Directory 
+ Law Societies 
+ Auto Dealers 
+ FR 
+ About DIACC 
+ Directors 
+ Principles 
+ Committees 
+ Policy & Positions 
+ Contact Us 
+ Membership 
+ Become a Member 
+ DIACC Members 
+ Member Spotlights 
+ Member Login 
+ PCTF & Certification 
+ Overview 
+ Trust Framework 
+ Certification Program 
+ Trusted List of Certified Providers 
+ Learning Centre 
+ Use Cases 
+ User Stories 
+ Adoption Dashboard 
+ Perspectives Research 
+ Building Public Trust 
+ Publications & Research 
+ Podcasts 
+ Videos 
+ News 
+ Frequently Asked Questions 
+ Solutions & Sectors 
+ Trusted List of Certified Providers 
+ Member Services Directory 
+ Law Societies 
+ Auto Dealers 
+ FR 
+ Trust Framework
+ The Pan-Canadian Trust Framework™ (PCTF) addresses current and future Canadian digital identity ecosystem innovation needs by verifying the trust of services and networks. 
+ PCTF documents and artifacts help to secure the interoperability of public and private sector identity capabilities while prioritizing user-centred design, privacy, security, and convenience of use. 
+ PCTF is an open public resource. It will always be freely available to the public for review and adoption. Drafts are made available for public review and input. PCTF develops under DIACC’s neutral good governance policies and procedures. 
+ Quick Links 
+ Overview 
+ Certification Program 
+ Trusted List of Certified Providers 
+ One Framework, Many Partners 
+ Benefits from the inputs of Canada’s federal, provincial, and territorial representatives within the Joint Councils (a multi-jurisdictional collaborative body supported by the Institute for Citizen-Centred Services), the Canadian public sector, international stakeholders, and the broad economic sector. 
+ PCTF Documents 
+ To respond to the complexities that digital identity and trust entail, the PCTF has a modular approach, which provides a comprehensive set of documents aligned to the various functionalities and core aspects of identity management services. 
+ Title Status Scope Notice Number Type Ready for Certification 
+ Overview Final Explaining the Pan-Canadian Trust Framework background, scope, relevance, value proposition, applicability, target audience, development and maintenance process, relationship with other frameworks and third-party conformity assessment. 2023-10-30 DIACC PCTF00 Informative Not Applicable 
+ Glossary Final Recommendation V1.1 Outlining terms and definitions used by DIACC across the PCTF to ensure all stakeholders have a shared and consistent understanding of terms used in the context of the framework. 2025-05-20 DIACC PCTF10 Informative Not Applicable 
+ Authentication Final Recommendation V1.2 Describes how verifying identity allows access to digital systems. Defines the trusted processes (Credential Issuance, Authentication, Session Initiation/Termination, Credential Suspension/Recovery/Maintenance/Revocation), roles (Authentication and Credential Service Providers), risks and proposed safeguards, use cases (e.g., verifiable credentials in mobile digital wallets; biometric authenticators, etc.) and conformance requirements to specific levels of confidence. It ensures consistent login processes across platforms, enhancing security and usability, and assures that identified users can securely engage in authorized interactions with remote systems. 2024-08-09 DIACC PCTF03 Normative Yes 
+ Verified Person Final Recommendation V1.2 Errata Describes identity proofing, which involves linking a subject accessing online services to a real-life person. Addresses techniques for verifying a person is a real, unique, and identifiable human being and trusted processes (establishing sources of identity evidence, identity resolution, identity establishment, validating identity information, identity verification, evidence validation, identity presentation and identity maintenance ), roles, and conformance requirements according to the levels of assurance needed. 2022-03-31 DIACC PCTF05 Normative Yes 
+ Privacy Final Recommendation V1.2 Describes requirements for handling personal information associated with digital identity, designed to demonstrate that participants (Disclosing Organizations, Requesting Organizations, Notice and Consent Processors, Network Facilitators) are handling digital identity information in alignment with the ten Principles defined in Canada’s Personal Information Protection and Electronic Documents Act (PIPEDA) legislation. 2022-03-31 DIACC PCTF04 Normative Yes 
+ Infrastructure (Technology & Operations) Final Recommendation V1.2 Describes the capabilities required to operate a trusted infrastructure as a platform for delivering digital identity-related services, including policies and plans, technology and operations related to information security management and technical security controls, risk and fraud management, information and integrity management, and incident response, among others. 2023-04-25 DIACC PCTF08 Normative Yes 
+ Digital Wallet Final Recommendation V1.0 Describes an approach to assess the degree to which a digital wallet that contains digital identities and related assets accomplishes specific goals, including privacy preservation, consent-driven interactions, interoperability, increased protection against cyber threats and creating a trusted environment for wallet holders to interact with its ecosystem participants. It addresses trust relationships (applicant- issuer-holder-verifier-repository); trusted processes (Wallet Instantiation and Security, Credential Management and Use, Consent Management), roles, risk repository and mitigation strategies, and conformance requirements. 2023-04-25 DIACC PCTF12 Normative Yes 
+ Trust Registries Final Recommendation V1.0 Describes the means for participants of a digital identity ecosystem to verify that other ecosystem participants are trustworthy. Participants registered in the Trust Registry include Issuers, Verifiers, and Wallet Providers. Providing conformance requirements concerning the trust registry’s governance, operations, registration, and certification management. 2023-11-10 DIACC PCTF13 Normative Yes 
+ Credentials (Relationships & Attributes) Final Recommendation V1.0 Establishes requirements for the conformity of credential lifecycle management at determined levels of assurance, including trusted relationships processes (define, declare, endorse, validate, disclaim) and trusted attributes processes (define, bind, maintain, revoke) and risk evaluation. It emphasizes trust beyond technical data, focusing on transparency, reliability, and secure connections between entities, enabling the routine acceptance of digital credentials. 2020-06-01 DIACC PCTF07 Normative No 
+ Verified Organization Final Recommendation V1.0 Defining processes and specifying conformance criteria for establishing and verifying an organization’s identity, including processes to ensure that an organization has been adequately verified and creating a trusted digital representation for an organization. 2020-02-17 DIACC PCTF06 Normative No 
+ Notice & Consent Final Recommendation V1.0 Defines criteria used to formulate a statement about the collection, use and disclosure of personal information, and to obtain a consent decision on that statement from a person authorized to do so. 2019-04-03 DIACC PCTF02 Normative No 
+ Legal Professionals Profile Final Recommendation V1.1 The PCTF Legal Professionals Profile is the first industry-focused profile of the PCTF and is intended to help regulated lawyers make informed decisions on how best to adopt digital trust services and solutions for things like remote client verification and fraud reduction. 2025-09-22 DIACC PCTF14 Normative Yes 
+ Assurance Maturity Model Draft Recommendation V1.0 Provides guidance regarding how to use PCTF conformance criteria in order to properly classify Levels of Assurance. 2021-06-28 DIACC PCTF11 Informative Not Applicable 
+ Automotive Identity Profile Final Recommendation V1.0 Defines auditable identity assurance criteria for vehicle purchasing and financing to meet Canadian bank expectations and reduce fraud. 2026-09-15 DIACC PCTF 15 Normative Yes 
+ Development & Maintenance 
+ The PCTF is developed and maintained through an open and collaborative process defined in the DIACC Operating Procedures. The DIACC’s Trust Framework Expert Committee (TFEC) is the working group responsible for developing and maintaining the PCTF. The TFEC consists of members from the public and private sectors who work collaboratively through a Peer-Review and Development Process to maintain the PCTF, ensuring it’s up to date with evolving ecosystems. 
+ The TFEC defines the PCTF’s informative and normative documents, adhering to DIACC’s Operating Procedures , and describes the applicable value propositions across Canada’s public and private sectors. The TFEC ensures audibility, suitability, and consistency of its defined conformance criteria operationalized in the DIACC’s Certification Program. 
+ PCTF Conformance Criteria Development Process 
+ The PCTF requirements are developed following an open and standardized process as specified in the following graphic. These include initial draft development, committee review, DIACC Board approval for public input, revisions to incorporate public feedback, and approval from DIACC membership for final publication. 
+ As specified in the Operating Procedures, reviewing the informative and normative documents is a public and open process where any interested party can participate and provide feedback. The public Call for Comments & IPR Review period is vital to the DIACC multistakeholder model. It provides a mechanism to ensure a balanced representation of interested parties’ opinions, views, and suggestions. 
+ In addition to the public comment review periods, DIACC offers an ongoing channel for anyone interested in providing feedback using the PCTF Out of Band Feedback form . 
+ This form collects PCTF public community feedback outside the prescribed public review & comment periods. The DIACC team monitors this form’s responses every quarter. The DIACC’s TFEC will consider comments for inclusion. 
+ Stay Up to Date
+ Sign up for our newsletter to receive monthly updates from DIACC.
+ Name 
+ Email 
+ About DIACC 
+ Board of Directors 
+ Principles 
+ Committees 
+ Policy & Positions 
+ Contact Us 
+ Membership 
+ Become a Member 
+ DIACC Members 
+ Member Impact & Spotlights 
+ Member Login 
+ Benefits 
+ PCTF & Certification 
+ Overview 
+ Trust Framework 
+ Certification Program 
+ Trusted List of Certified Providers 
+ Learning Centre 
+ Use Cases 
+ User Stories 
+ Adoption Dashboard 
+ Perspectives Research 
+ Building Public Trust 
+ Privacy-In-Practice 
+ Publications & Research 
+ Podcasts 
+ Videos 
+ News 
+ Frequently Asked Questions 
+ Solutions & Sectors 
+ Trusted List of Certified Providers 
+ Member Services Directory 
+ Law Societies 
+ Auto Dealers 
+ Address
+ 720 King Street West, Suite 302
+Toronto, ON M5V3S5
+ Get in Touch
+ Contact Us 
+ © 2026 Digital ID & Authentication Council of Canada 
+ Member Login 
+ Become a Member

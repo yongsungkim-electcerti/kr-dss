@@ -1,0 +1,705 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DIACC-CP-03-01 MANDATORY APPROACH FOR AUDITS AGAINST PCTF 
+ 
+ 
+ 
+Version 2.4 
+Reference: DIACC-CP-03-01 
+Status: Final version 
+Date: 2026-04-15 
+Editor: DIACC Certification Program Management Office (CPMO) 
+ 
+ 
+ 
+ 
+This document describes the Audit approach to determine conformity of services against DIACC 
+Pan-Canadian Trust Framework (PCTF). It is based on ISO standards (ISO/IEC 17021; ISO/IEC 
+17065; ISO/IEC 19011, ISO/IEC 27001, ISO/ IEC 27006, ISO/IEC 29115) and industry best 
+practices. 
+ 
+IPR: DIACC Intellectual Property Rights V1.0 
+
+2  
+ 
+DIACC-CP-03-01 MANDATORY APPROACH FOR AUDITS AGAINST PCTF...................................................... 1 
+Mandatory approach for audits against PCTF ......................................................................................................... 3 
+1. Introduction ................................................................................................................................................... 3 
+2. Audit Overview .............................................................................................................................................. 3 
+3. Networks ....................................................................................................................................................... 3 
+3.1 A self-governed Network .............................................................................................................................. 4 
+3.1.1 Responsibilities ............................................................................................................................................. 4 
+3.2 A regulated Network ..................................................................................................................................... 4 
+3.2.1 Responsibilities ............................................................................................................................................. 5 
+4. Key aspects of the Audit ............................................................................................................................... 5 
+5. Audit activities ............................................................................................................................................... 5 
+6. Considerations for Operators........................................................................................................................ 6 
+7. Considerations for Auditors .......................................................................................................................... 7 
+8. Types of Audits during the Certification Trustmark cycle ............................................................................. 7 
+8.1.1 Initial Audit .................................................................................................................................................... 7 
+8.1.2 Annual surveillance audits ............................................................................................................................ 7 
+8.1.3 Unscheduled audits ...................................................................................................................................... 8 
+8.1.4 Recertification Audit ...................................................................................................................................... 8 
+8.1.5 Changes to the PCTF ................................................................................................................................... 8 
+9. Profiles .......................................................................................................................................................... 8 
+10. Planning the audit ......................................................................................................................................... 8 
+11. Performing audits during the three-year cycle of Certification Trustmark .................................................... 9 
+11.1 Initial Audit activities ..................................................................................................................................... 9 
+11.2.   Annual surveillance audit activities .............................................................................................................. 10 
+11.3. Recertification Audit activities ..................................................................................................................... 11 
+12. Finding of non-conformity ........................................................................................................................... 11 
+12.1 Minor non-conformity .................................................................................................................................. 11 
+12.2 Reporting minor non-conformities............................................................................................................... 12 
+12.3 Major non-conformity .................................................................................................................................. 12 
+13. Audit Report ................................................................................................................................................ 12 
+14. References ................................................................................................................................................. 13 
+Revision history ...................................................................................................................................................... 14 
+Exhibit A – Definitions ............................................................................................................................................. 15 
+Exhibit B - Conflicts of Interest Policy (COI Policy) regarding a Service to be audited. ......................................... 18 
+3  
+Mandatory approach for audits against PCTF 
+ 
+1. Introduction 
+ 
+The DIACC Certification provides assurance that Services conform to specified requirements in the 
+DIACC Pan-Canadian Trust Framework (PCTF). 
+ 
+The DIACC Certification is based on a third-party conformity assessment performed by DIACC Auditors 
+and with an independent quality assurance review by the Independent Review Committee (IRC). 
+ 
+This document provides guidance on performing audits of services against PCTF. 
+The definitions used in this document are available in Exhibit A. 
+ 
+2. Audit Overview 
+ 
+The DIACC Certification Trustmark is granted to Operators whose Service demonstrates conformity 
+against the PCTF. 
+ 
+The DIACC Certification Trustmark has a three-year cycle (except for the silver tier of PCTF profiles)  
+and is subject to annual audits, except for the silver tier of profiles . Unscheduled audits may apply if 
+necessary; for additional information, see Section 8.1.3 Unscheduled Audits. 
+ 
+ 
+3. Networks 
+Network and Network Elements can be granted the Certification Trustmark as a specific type of service 
+as defined in Exhibit A, see definition of Network. 
+An Operator providing a Network or Network Element is audited as a Service according to this guidance, 
+but with a specified scope and responsibilities for the audited entity. 
+The scope of the Audit for a Network will depend on the architecture of the Network, as well as the 
+responsibility of the Network operator and the entities that jointly deliver, integrate, and contribute to 
+the Network. 
+For a Network to be assessed there needs to be a designated authoritative entity for the Network. The 
+authoritative entity is responsible for the governance of the Network. Depending on the setup of the 
+Network and its architecture the Audit of the Network will differ. The following is a non-exhaustive list of 
+models that can be audited. 
+ 
+4  
+3.1 A self-governed Network 
+ 
+For this type of Network there is a governance framework for the Network that one entity (the Network 
+operator) is responsible for, and that the entity enforces. 
+This Network type is defined and assessed as follows: 
+● The scope and applicability of PCTF conformance criteria are defined by the Network 
+operator. 
+● The scope as well as the applicability is validated for completeness by the Auditor. 
+● The controls that support and deliver the PCTF-oriented service, including all 3rd/ external 
+parties that directly support the Service provided by the Network. 
+The Network operator can then be audited with the following scope: 
+1. All processes and technology provided by the Network operator. 
+2. Fulfillment of all governance requirements and processes defined in the Network 
+architecture. 
+3. The governance processes performed by the Network operator. 
+4. The controls used by 3rd/ external parties that directly support the PCTF-oriented service 
+provided by the Network operator. 
+5. All applicable PCTF conformance criteria. 
+Each Network Element is audited with the following scope: 
+1. All governance requirements and processes for a Network Element defined by the 
+Network operator. 
+2. All applicable PCTF conformance criteria. 
+ 
+3.1.1 Responsibilities 
+● Network Operator: Entity responsible for the governance of the network and 
+conformance against PCTF criteria for the services the Operator provides. 
+● Network Elements: Entities responsible for conformance against PCTF criteria for the 
+Network Element as well as governance as part of the Network Element. 
+● Auditor: Entity that performs validation of applicability and completeness of PCTF  criteria 
+defined by the Network Operator and Elements, as well as validation of governance 
+requirements and processes defined in the Network architecture. 
+Example of Networks of this type would be a federated identity service with a defined federation 
+operator. A specific example would be Incommon Federation (https://incommon.org/federation/). 
+ 
+3.2 A regulated Network 
+For this type of Network there is a, for the Network, externally defined governance framework or a 
+regulation for the Network that is enforced jointly by the different parties in the Network. 
+This Network is audited as follows: 
+1. All Network Elements are audited separately with the following scope: 
+5  
+a. Fulfillment of all governance requirements and processes defined in the Network 
+architecture 
+b. The governance processes performed by the specific Network Element. 
+2. The scope and applicability of PCTF conformance criteria is defined by the Network 
+Element. 
+3. The scope as well as the applicability is validated for completeness by the Auditor. 
+4. All applicable PCTF and respective conformance criteria 
+ 
+3.2.1 Responsibilities 
+● Network Elements: Responsible for conformance against PCTF criteria for the Network 
+Element as well as governance as part of the Network Element as required in the externally 
+defined framework or regulation. 
+● Auditor: Validation of applicability and completeness of PCTF criteria for the Network 
+Elements as well as validation of fulfillment of governance requirements and processes 
+defined in the Network architecture. 
+Example of Networks of this type would be a regulated Identity Wallet framework with entities 
+providing identity services, attribute services, wallet applications or relying parties 
+ 
+ 
+4. Key aspects of the Audit 
+ 
+a. The Audit must be performed on an operational Service, with at least three (3) months of 
+operational records. 
+b. The conformance criteria must be used as a reference when conformity is determined and must 
+include the normative requirements of the applicable PCTF documents. Please see the available 
+conformance criteria at https://diacc.ca/trust-framework/ 
+c. The Audit must follow the approach of an information security audit or similar, such as using 
+ISO/IEC 19011 Auditing Management Systems for auditing of Information Security Management 
+Systems. 
+d. The Audit is technically a Point in Time audit, which means that the Auditor conducts an Audit once 
+per year, which provides assurance of the service operations over the upcoming one-year period. 
+e. The DIACC Certification Trustmark is granted for a three-year cycle and is subject to annual audits 
+(except for the silver tier of PCTF profiles) and, if necessary, unscheduled audits. 
+f. Annual surveillance audits are required to maintain the DIACC Certification Trustmark. 
+g. Unscheduled audits must be required if Significant Changes 1 have been implemented to the 
+Certified Service. 
+ 
+5. Audit activities 
+ 
+During the audit, information relevant to the Service objectives, scope and criteria must be obtained by 
+appropriate sampling and Certified by the Auditor to become Audit evidence. In this regard, the Audit 
+6  
+must entail the examination and evaluation of the Operator's information technology infrastructure, 
+systems, policies, and operations related to the provision of a Service that seeks conformity against 
+PCTF. 
+ 
+Methods to obtain information must include, but are not limited to: 
+a. Inspect policies, procedures, logs, records, documentation, etc. including but not 
+limited to: 
+ 
+• Documentation reviews relevant to the scope of the Audit and application for 
+Certification against the applicable PCTF documents. 
+• Review of organisational policies and practices. 
+• Review records, systems logs. 
+• Examination and test of the system that is the object of the audit, including 
+system documentation, system functionality. 
+b. Observe control activities including: 
+• Service processes and activities. 
+• The DIACC Accredited Auditor must determine and document in their working papers 
+a remote technological equivalent to an on 
+•  visit. 
+c. Inquire of management personnel; technical or managerial personnel; trained personnel. 
+6. Considerations for Operators 
+The Operator of the Service must: 
+ 
+a. Be aware that the Audit must be performed to operational Services that have been operational 
+(in live production) for at least three (3) months before undergoing the audit. Management and 
+operation must clearly communicate the status of the service offering to be audited. 
+b. Provide unrestricted access to those parts of its business, premises, systems, records, and 
+supporting documents, covered by the scope of audit. 
+c. Demonstrate that the Service meets the applicable PCTF conformance criteria, by providing the 
+necessary evidence. 
+d. Ensure that the External Providers integrated into its Service are in scope of the audit, by for 
+example having in place appropriate processes and contractual arrangements with the external 
+providers that are integrated with its Service, which must enforce the external providers to follow 
+the specific requirements and provide the necessary evidence for the audit; and/ or by having audit 
+report/s that include all applicable services and aspects used by the PCTF-oriented service.. 
+e. For a Network Operator, ensure that all Network Elements that integrated to the Network are in 
+scope of the audit, by for example having in place appropriate processes, governance framework, 
+and contractual arrangements with the Network Element, which must enforce the Network 
+elements to follow the specific requirements and provide the necessary evidence for the audit. 
+f. Consider that the Auditor is required to keep the Audit Records for three years. 
+7  
+7. Considerations for Auditors 
+ 
+The Auditor must: 
+ 
+a. Follow this document as the primary guidance for the PCTF-supported Audit. 
+b. Follow the Conflict of Interest policy as specified in the DIACC-CP-01-01 Eligibility criteria 
+for auditors, also available at the Exhibit B of this document. 
+c. Confirm that the Service to be audited is operational for at least three (3) months. 
+d. Create an audit plan based on the agreed scope. 
+e. Determine whether the claims provided during the application are materially correct and conform 
+with the specified requirements addressed in the applicable PCTF conformance criteria. Through 
+the validation of the claims, the Auditor will determine conformi ty against the applicable PCTF 
+conformance criteria and confirmation of truthfulness of the Service object of Certification. 
+ 
+8. Types of Audits during the Certification Trustmark cycle 
+ 
+8.1. Overview 
+The DIACC Certification Trustmark has a three-year cycle (except for the silver tier of PCTF profiles) in 
+which the Operator of the Service must go through different types of audits: 
+ 
+● Year 1 - Initial Audit before the Certification is granted and the applicable DIACC 
+Certification Trustmark is issued. 
+● Year 2 and 3 - Annual surveillance Audits to maintain the DIACC Certification Trustmark. 
+● Unscheduled audits due to Significant Changes1 to the Service. 
+ 
+ 
+ 
+8.1.1 Initial Audit 
+ 
+The initial Audit is a full Audit that must be performed against 100% of the applicable criteria. 
+ 
+ 
+8.1.2 Annual surveillance audits 
+ 
+Annual surveillance audits must be conducted by the Auditor in the first and second years following 
+the DIACC Certification Trustmark issuance. 
+ 
+Year 2 - Annual surveillance Audit against 50% of the applicable criteria, including consideration of risks 
+and changes to the service. 
+ 
+Year 3 - Annual surveillance audits against the other 50% of the applicable criteria, including 
+consideration of risks and changes to the service. 
+8  
+8.1.3 Unscheduled audits 
+ 
+The Service Operator is obliged by the Certification Agreement to notify the DIACC Certification 
+Program Management Office (CPMO) of any changes to the Certified Service. 
+ 
+The Auditor and CPMO will evaluate if the changes apply as Significant Changes2 and if so, it will 
+determine if there is a need for an unscheduled audit. 
+ 
+In the event, it is more than six months away from the annual surveillance Audit an unscheduled Audit 
+must be required. 
+ 
+ 
+8.1.4 Recertification Audit 
+ 
+At the end of the third year, prior to the expiration of the Certification Trustmark, a full Audit must be 
+conducted. 
+ 
+8.1.5 Changes to the PCTF  
+The CPMO will notify the Service Operator of any changes to the PCTF conformance criteria applicable 
+to the Certification Trustmark. 
+ 
+If the changes are material, the implementation of the new requirements and applicable Audit must 
+take place within 15 months after the date of DIACC TFEC notification of the new release. 
+ 
+To avoid the possible requirement of unscheduled audits, it is suggested that the implementation of 
+the new requirements and related audits are aligned with the annual schedules of the granted 
+Trustmark. 
+ 
+9. Profiles  
+ 
+The profiles have two options: 
+• Gold, which is the approach specified in this document, including a three-year cycle Trustmark, 
+annual audits, and Independent Review Committee quality review of audit findings.  
+ 
+• Silver requires third-party oversight (qualified auditor), which will include auditor documentation 
+review and testing. It does not include the Independent Review Committee quality 
+assurance.  Validity: 2-year term. Subject to the commitment of the provider to inform of any 
+material changes and the self-assessment checklist.  
+ 
+ 
+10. Planning the audit 
+The audit must follow a documented and approved Audit plan. The Audit plan must be appropriate to 
+the objectives and the scope of the audit, it must include the following: 
+ 
+a. The Audit objectives; 
+9  
+b. The Audit criteria; 
+c. The Audit scope, including identification of the organisational and functional units, 
+processes, systems and network elements to be audited; 
+d. The dates when Audit activities will be conducted; 
+e. The roles and responsibilities of the Audit team members. 
+f. List all 3rd/ external parties encompassed by the audit and the expected method(s) the 
+Auditor will use to assess each listed 3rd/ external party’s support for/ to the Service. 
+g. A Section discussing What Could Go Wrong considerations from the Auditor viewpoint. 
+ 
+ 
+Considerations must include at least 3 of the following: 
+• Less than 3 months of operational logs; 
+• Changes to management or top-level operations prior to or during fieldwork; 
+• Changes to 3rd party/ external vendors and/ or suppliers prior to or during fieldwork 
+• Changes to the audit team prior to or during fieldwork; 
+• Prior non-conformities that were not addressed timely and that jeopardize the 
+Service; 
+• And/ or other considerations that in the Auditor’s judgment merit documented 
+discussion. 
+ 
+ 
+The Audit objectives must describe what is to be accomplished and must include: 
+ 
+a. Determination of the conformity of the service, or parts of it, with PCTF 
+conformance criteria. 
+b. Determination of the effectiveness of the service systems to ensure that they are 
+achieving specified objectives. 
+c. as applicable, identification of areas for potential improvement of the service. 
+d. For Networks and Network elements, scope and applicability to be validated for 
+completeness. 
+ 
+ 
+The Audit scope must describe the extent and boundaries of the audit. 
+ 
+ 
+11. Performing audits during the three-year cycle of Certification Trustmark 
+11.1 Initial Audit activities 
+ 
+The purpose of the initial Audit is to evaluate the implementation, including the effectiveness of the 
+service systems and processes, in relation to the applicable PCTF conformance criteria being audited. 
+ 
+The initial Audit is a full audit that must be performed against 100% of the applicable criteria. The DIACC 
+Accredited Auditor must determine and document in their working papers a remote technological 
+equivalent to an onsite visit. 
+ 
+ 
+The initial Audit must include the Audit of the following: 
+a. Document the Information and evidence received and determine the conformity to 
+10  
+all requirements of the applicable PCTF criteria. 
+b. Performance monitoring, measuring, reporting, and reviewing against key performance 
+objectives and targets consistent with the expectations in the applicable PCTF criteria. 
+c. The service systems ability and its performance regarding meeting of applicable PCTF 
+conformance criteria. 
+d. Operational control of the service Operator processes. 
+e. Internal quality assurance and management review. 
+f. Service operator policies. 
+g. Assessment of 3rd/ external party elements and their operational effectiveness to the Service 
+and/ or Network. 
+ 
+ 
+11.2.   Annual surveillance audit activities 
+ 
+The aim of the annual surveillance audits is to maintain confidence that the Certified Service continues 
+to fulfil PCTF requirements between recertification audits. Not applicable to silver tier of profiles.  
+ 
+Year 2 - Annual surveillance - After testing for proofing, issuance and revocation, audit against 50% of 
+the applicable criteria, including consideration of risks and changes to the service and addressing minor 
+non-conformities if applicable. 
+ 
+Year 3 - Annual surveillance - After testing for proofing, issuance and revocation, audit against the other 
+50% of the applicable criteria, including consideration of risks and changes to the service if applicable. 
+These actions shall be implemented and Certified prior to the expiration of Certification Trustmark. 
+Annual surveillance audits include activities so that representative areas and functions covered by the 
+scope of the service are monitored on an annual basis and take into account changes to the Certified 
+Service and performance of its related systems. 
+ 
+Each annual surveillance Audit includes the following activities, if applicable: 
+ 
+h. Review of remedial actions taken on minor non-conformities identified during the previous 
+audit. 
+i. Effectiveness of Service with regard to achieving the Certification objectives. 
+j. Progress of planned activities aimed at continual improvement. 
+k. Continuing operational control at the documented level/s. 
+l. Review of any organizational, operational, security, or other Service changes (e.g., change in 
+3rd/ external party for similar service element(s)). 
+m. Risk-based approach. 
+ 
+The auditor must determine and document in their working papers a remote technological equivalent to 
+on-site visits. 
+ 
+At the end of Year 3 of the Trustmark, the Service is expected to undergo a new initial audit, essentially 
+a full Audit to start a new cycle. 
+11  
+11.3. Recertification Audit activities 
+At the end of the third year, prior to the expiration of the Certification Trustmark, a full Audit must be 
+conducted. 
+ 
+The recertification Audit is a full Audit that must be performed against 100% of the applicable criteria. 
+ 
+The Auditor must determine and document in their working papers a remote technological equivalent 
+to an onsite visit. 
+ 
+The recertification Audit includes the following activities, if applicable: 
+ 
+• A review of remedial actions taken on minor non-conformities identified during the previous 
+audit. 
+• Effectiveness of Service with regard to achieving the Certification objectives and its continued 
+relevance and applicability to the scope of Certification. 
+• Progress of planned activities aimed at continual improvement and enhancement of 
+overall performance. 
+• Continuing operational control. 
+• Review of any changes. 
+• Risk-based approach 
+ 
+ 
+ 
+12. Finding of non-conformity 
+12.1 Minor non-conformity 
+ 
+A minor non -conformity means a single identified gap or a concern in meeting a requirement of the 
+conformance criteria in scope, which, in the Auditor’s judgment, would not in itself raise significant doubt 
+as to the capability of the Service Operator to achieve its objectives. 
+ 
+In order to mitigate the risk of the minor non-conformity found during the audit, the Auditor and Applicant 
+must agree on a clear remediation plan with specific corrective actions and specific deadlines for 
+completion. Minor non-conformities must be remediated before the next annual surveillance Audit. 
+ 
+In the case the operator has not remediated the minor non-conformities by the next surveillance audit, 
+it must provide a written justification on how they are addressing the issue and the revised date of 
+completion. 
+ 
+Corrective actions must be appropriate to the impact of the problems encountered. 
+ 
+During the audit, the Auditor must document the following in their working papers and in the final report: 
+a. Identify non-conformities. 
+b. Determine the causes of non-conformity. 
+c. Propose correcting non-conformities. 
+12  
+d. Evaluate the need for actions to ensure that non-conformities do not recur. 
+ 
+At the end of the audit, the Auditor must present to the Applicant a full report on all agreed-upon and cited 
+Non-conformities and Recommendations for Mitigation. The Applicant must provide a written response 
+including: 
+e. Document and schedule the resources and timeline to remediate the non-conformities. 
+f. Record the results of remedial actions taken. 
+g. Review the effectiveness of corrective actions. 
+After the DIACC Certification Trustmark is granted to a Service, the CPMO will follow up with the 
+Operator to make sure it takes the necessary actions and measures to remediate the identified minor 
+non-conformities. 
+ 
+ 
+12.2 Reporting minor non-conformities 
+ 
+12.2.1 The Auditor’s report of the initial Audit must include all minor non-conformities found 
+and the prescribed corrective actions with corresponding deadlines for completion. 
+12.2.2 In the annual surveillance audits, the Auditor must include the updated remediation 
+report for the minor non-conformities. 
+ 
+12.3 Major non-conformity 
+ 
+A major non -conformity is an absence of, or the repeated failure to implement and maintain, one or 
+more of the required applicable conformance criteria, or a situation that would, on the basis of objective 
+evidence, raise objective concerns related to the integrity of the Service/ Network. 
+A major non-conformity must be addressed before an Audit can be completed and the application will 
+be paused until the major non-conformity is fully remediated as assessed by the Auditor’s 
+conformance testing. 
+ 
+The Applicant has a period of 12 months to maintain the application. Within that time frame, the 
+Applicant must address the major non -conformity issues and demonstrate that it has completed 
+the remediation plan to which they and the Auditor agreed. 
+ 
+ 
+13. Audit Report 
+ 
+ 
+The work carried out by the Auditor must be covered by a comprehensive Audit Report and Auditor 
+Validation Sheet, using the DIACC provided templates. 
+ 
+The Audit Report must include at least the following elements: 
+13  
+a. The name of the Service Operator. For a Network: the role of the audited entity in the 
+Network, i.e., Network operator, Network Element, or other roles depending on Network 
+architecture. 
+b. The name of the Service, Network or Network Element. 
+c. Scope of the audit. 
+• For a Network, the validated applicable requirements for the audited entity. 
+• For a Network, the Network architecture, and the roles of all the Network elements. 
+• If applicable, reference to any externally defined or regulated Network or Network 
+element. 
+d. The date of receipt of the evidence provided by the applicant. 
+e. Period of time (dates) of performance of the audit. The duration of the Audit must be 
+recorded in the Audit report. 
+f. The date of issue of the report. 
+g. Names of the audit team members who have performed the audit, clearly identifying who 
+was the Lead Auditor. 
+h. Information on environmental conditions during the audit, such as [include example/s here] if 
+relevant. 
+i. Clear determination whether there is conformity or not against the applicable PCTF and 
+specific Level of Assurance. This must include a statement on the conformity  and the 
+effectiveness of the Service conforming its capability to meet applicable requirements and 
+expected outcomes. 
+j. Audit methods, procedures used, and standards followed to perform the audit. 
+k. Minor non-conformities as applicable. 
+l. Remedial actions and timeline to mitigate the minor non-conformities found. 
+m. Recommendation to confirm the Certification of a Service and its corresponding 
+issuance of Trustmark. 
+n. Signature of Lead Auditor that supervised the audit on the final version of the Audit Report. 
+o. Signature of the client on the final version of the Audit Report. 
+ 
+ 
+14. References 
+ 
+a. ISO/IEC 17021 Conformity Audit—Requirements for bodies providing audit and 
+certification of management systems. 
+b. ISO/IEC 19011 Guidelines for auditing management systems. 
+c. ISO/IEC 27006 Information technology — Security techniques — Requirements for 
+bodies providing audit and certification of information security management systems. 
+d. ISO/IEC 29115 Information technology — Security techniques — Entity authentication 
+assurance framework. 
+e. NIST 800-63-3 Conformance Criteria (63A, 63B and 63C) 
+https://www.nist.gov/system/files/documents/2020/07/02/80 
+0- 63A%20Conformance%20Criteria_0620.pdf 
+https://www.nist.gov/system/files/documents/2021/04/27/80 
+0- 63C%20Conformance%20Criteria_042621.pdf 
+14  
+f. TDIF annual Audit requirements 
+https://www.digitalidentity.gov.au/sites/default/files/2021-06/tdif-07-
+annual- assessment- release-4-v1.1.pdf 
+ 
+ 
+Revision history 
+ 
+Version Release Date Changes 
+2.4.  2026-04-15 Profiles 
+2.3 2026-01-15 Mandatory policy and 
+technological equivalent of 
+onsite visit 
+2.2 2025-10-02 IRC additions 
+2.1 2024-01-02 Adjustments in terminology 
+2.0 2022-11-16 Incorporated audit of  Networks 
+Adjustments to fulfill ISO 17065 
+requirements 
+1.0 2022-03-14 New Document 
+15  
+Exhibit A – Definitions 
+ 
+ 
+Term Meaning 
+Applicant Operator seeking Certification of its Service 
+against applicable PCTF conformance 
+criteria. 
+Audit Third-party assessment or inspection or 
+examination, of an organisation, and/or a 
+process and/or a system, to ensure 
+compliance with PCTF  
+requirements. 
+Audit Records Evidence of the Audit reports and other 
+technical information created and/or 
+obtained by a DIACC Auditor in relation to 
+the DIACC PCTF audits/assessments. 
+Audit Report Report provided by the Auditor, which 
+informs conformity of a Service against the 
+applicable DIACC PCTF conformance 
+criteria. 
+Auditor DIACC-accredited Auditor qualified to 
+perform audits against PCTF conformance 
+criteria. 
+Certification Demonstration that specified requirements 
+from DIACC PCTF relating to a Service are 
+fulfilled. The DIACC Certification process 
+includes a third-party Audit against the 
+applicable DIACC PCTF documents, 
+conducted by a DIACC Accredited Auditor. 
+DIACC Certification Program (DCP) A DIACC run program that verifies Services 
+and Networks against the Pan-Canadian 
+Trust Framework (PCTF), indicating that 
+specific assurance requirements and best 
+practices are met. 
+DIACC PCTF  DIACC Pan-Canadian Trust 
+Framework Documents are available 
+at https://diacc.ca/trust-framework/ 
+16  
+Independent Review Committee (IRC) The IRC has delegated authority from the 
+DIACC Board of Directors (BOD) to perform 
+a quality review of the audit findings. 
+Term Meaning 
+Network A Network is an identity solution that is 
+dependent on elements and services 
+provided by different entities. 
+A Network will consist of governance, 
+processes and technologies across the 
+different entities that jointly deliver and 
+integrate with the Network. 
+There are different network architectures, 
+such as federations, wallet solutions, 
+proxies, agents, and brokers, not excluding 
+other architectures. 
+Network Element A Network Element or just Element is a 
+separate part or separate service in a 
+Network. A Network element that is provided 
+by a separate entity can be separately 
+audited against the PCTF. 
+Examples of Network elements are 
+federation operators, issuers, attribute 
+providers, wallet providers or relying 
+parties. 
+Service Identity solution that supports identity 
+proofing, authentication and/or 
+credential management and/or other 
+related functionalities. 
+ 
+A Service, in the context of the PCTF, 
+requires a User to be authenticated to 
+access the Service. 
+Examples: applying for 
+employment insurance; registering 
+a business; applying for a loan; 
+making online purchases. 
+ 
+Services applicable for Audit against the 
+PCTF, include Networks and Network 
+Elements. 
+17  
+Significant Changes Significant Changes to the Certified Service 
+must include: 
+1. Changes relating to the legal, 
+commercial, organisational status or 
+ownership. 
+2. Changes relating to the scope of 
+operations under the Certified 
+Term Meaning 
+ Service. 
+3. Major changes to the Certified 
+Service management system and 
+processes. 
+4. Change of external providers 
+(external service components; 
+subcontracted services). 
+5. Change of type of authenticator. 
+6. Access control change. 
+7. Privacy policy change. 
+8. Addition of new functionalities. 
+9. Other changes as applicable. 
+Trustmark Any sign or mark of conformity that an entity 
+has fulfilled the applicable requirements, 
+including DIACC trademarks, trade names, 
+symbols, logos, which DIACC grants the 
+right to use to identify the Certification of a 
+Service. 
+18  
+Exhibit B - Conflicts of Interest Policy (COI Policy) regarding a Service to be audited. 
+1. Purpose 
+DIACC Auditors are expected to conduct their services with objectivity and impartiality. The 
+Auditor team members are obligated to disclose ethical, legal, financial and other conflicts of 
+interest involving the Operators of the Service (s) to be audited. 
+ 
+The purpose of this Conflicts of Interest Policy (COI Policy) is to prevent any conflict of interest or 
+the appearance of a conflict of interest from affecting any decision -making involving the audit of a 
+Service. 
+The Auditor must adopt this COI Policy. 
+ 
+2. Potential Conflicts 
+ 
+A conflict of interest must include any of the following situations: 
+ 
+a. Financial conflict; 
+b. Direct or indirect gain (of any sort) arising from access to confidential information; 
+c. Family/personal relationships and bias; 
+d. Contractual or affiliation relationships; 
+e. Be the designer, implementer, developer, operator or maintainer of the Service to be 
+audited. This does not preclude the possibility of exchange of information (e.g., explanations 
+of findings or clarifying requirements) between the Auditor and its clients. 
+f. Provide consultancy regarding the Service to be audited, including: 
+• Recommendations, readiness, gap analysis of a Service to be audited; 
+• Participate in the designing, development, installing, maintaining of a Service to be audited. 
+g. State or imply that Audit performance would be simpler, easier, faster or less expensive if a 
+specified consultancy entity were used. 
+ 
+ 
+3. Duty to disclose 
+ 
+The Auditor must disclose any matter that could reasonably affect the outcome of the Audit and 
+decision-making process, any conflict or potential conflict, to the applicable clients and the DIACC. 
+ 
+ 
+4. Cooling period 
+The conflict of interest cooling period shall be two years from the conclusion of all related consultancy 
+performed to the Service to be audited (as specified in item 2 above). 
+To ensure that the cooling period is complied, the organisation that has provided consultancy to the 
+Service to be audited, shall not perform an Audit to that Service within two years following the end of 
+the consultancy. 

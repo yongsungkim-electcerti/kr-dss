@@ -1,0 +1,365 @@
+1  
+ 
+ 
+ 
+ 
+DIACC-CP-02-01 Certification process of services 
+ 
+ 
+ 
+Version 2.4 
+Reference: DIACC-CP-02-01 
+Status: Final Date: 2026-05-15 
+Editor: DIACC Certification Program Management Office (CPMO) 
+ 
+ 
+ 
+ 
+ 
+This document describes the DIACC’s Certification Program  process and procedures to certify services 
+against the applicable Pan -Canadian Trust Framework (PCTF) conformance criteria . In addition, it 
+defines the requirements to obtain  the Certification Trustmark by fulfilling the applicable conformance 
+criteria. The Certification process is based on ISO standards (ISO/IEC 17065; ISO/IEC 17021; ISO/IEC 
+17030) and industry best practices. 
+ 
+ 
+IPR: DIACC Intellectual Property Rights V1.0 
+
+2  
+DIACC-CP-02-01 Certification process of services ................................................................................................. 1 
+I. SCOPE ..................................................................................................................................................... 3 
+II. INTRODUCTION ...................................................................................................................................... 4 
+Getting ready .................................................................................................................................................... 4 
+III. CERTIFICATION PROCESS AND STAGES ............................................................................................ 4 
+1. Application ................................................................................................................................................... 4 
+2. Audit .......................................................................................................................................................... 4 
+3. Final Review ............................................................................................................................................. 5 
+4. Certification Documentation ...................................................................................................................... 5 
+5. Public Trusted List ..................................................................................................................................... 5 
+6. Surveillance Audits ................................................................................................................................... 5 
+7. Conditions of Continued Certification ........................................................................................................ 6 
+8. Conditions on termination, suspension, withdrawal of certification or reducing scope of certification ...... 6 
+9. Appeal procedure ...................................................................................................................................... 7 
+References ....................................................................................................................................................... 8 
+Exhibit A – Definitions ....................................................................................................................................... 9 
+Exhibit B - Conflicts of Interest Policy (COI Policy) regarding appeal procedure ........................................... 11 
+ 
+3  
+CERTIFICATION PROCESS OF SERVICES 
+ 
+I. SCOPE 
+ 
+This document provides the process for a Service to get certified against the applicable Pan - Canadian 
+Trust Framework (PCTF) conformance criteria. 
+ 
+It applies to Service operators of an identity solution for identity proofing, authentication, credential 
+management, and/or other related functionalities concerning the establishment and maintenance of 
+online trust. 
+ 
+By offering a third -party assessment, DIACC’s Certification Program will provide added value to the 
+Canadian community and digital economy by enhancing the degree of confidence as well as trust on the 
+services and solutions that are vetted in an impartial and competent manner. 
+The conformity assessment benefits are: 
+a. Provides confidence to consumers that a service will perform as expected. 
+b. Grants assurance to service operators that what they offer meets the specifications and deliver 
+on customer expectations or, fulfills market requirements. 
+c. Provides regulators and relying parties with confidence that the specified requirements have been 
+met. 
+ 
+Capitalized terms used have the meanings set forth in Exhibit A of this document. 
+4  
+II. INTRODUCTION 
+ 
+ 
+To get certified against the PCTF conformance criteria , the Applicant’s Service must demonstrate 
+conformity against the applicable PCTF documents and follow the process and procedures as specified 
+in this document. 
+Only legal entities are allowed to apply for Certification of a Service. 
+ 
+The certification process is a demonstration that specified requirements from PCTF relating to a Service 
+are fulfilled. 
+ 
+ 
+Getting ready 
+ 
+Before submitting the application, applicants should: 
+a. Contact the CPMO at voila@diacc.ca to get the agreement and application materials. 
+b. Read the Certification process rules as detailed in this document. 
+c. Understand the applicable DIACC PCTF conformance criteria. 
+ 
+ 
+ 
+III. CERTIFICATION PROCESS AND STAGES 
+ 
+The DIACC’s Certification entails the following phases. 
+ 
+After acceptance of the proposal and signature of the Certification Agreement, the applicant should 
+complete the application form and should be submitted to voila@diacc.ca. 
+The objectives of this phase include gathering the necessary information to complete the certification 
+process and determine the scope of the certification that the applicant is pursuing. 
+The necessary information may include: 
+a. Identification of the service to be certified. 
+b. The PCTF conformance criteria for which the applicant is seeking certification. 
+c. Organizational information. 
+d. Information on outsourced processes or services, e.g., external providers, that are 
+integrated into the service supply chain. 
+ 
+1. Application  
+After signing the agreement and paying 50% of the audit and certification fee, the applicant completes the 
+application form. After a completeness check, the audit can begin.  
+ 
+2. Audit 
+ 
+5  
+The Auditor performs an audit to validate the applicability and conformance of the service to the PCTF 
+requirements. 
+Prior to starting the audit activities, an audit plan is provided to the applicant, including a schedule of 
+the audit phases and key activities to be performed. 
+The Auditor must conduct the audit following the required methodology on the DIACC -CP-03-01 
+Mandatory approach for audits of services against PCTF to determine conformity. 
+ 
+The Auditor must collect the necessary evidence, review documentation, observe and inspect 
+processes and procedures, including but not limited to: 
+a. Documentation reviews relevant to the scope of the assessment and application for 
+Certification against the applicable PCTF conformance criteria. 
+b. Review of organisational policies and practices. 
+c. Review records, systems logs. 
+d. Examination and test of the identity system that is the object of the assessment, including 
+system documentation, system functionality. 
+e. Observation of processes and activities. 
+f. Interview management personnel; technical or managerial personnel; trained personnel. 
+ 
+The audit findings are recorded in the Audit Report and validation sheet, including any minor-
+nonconformities identified during the audit. 
+ 
+ 
+3. Final Review 
+ 
+The Independent Review Committee (IRC) performs a quality review of the Audit Report and evaluates if 
+the audit was conducted as specified in the DIACC-CP-03-01 Mandatory approach for audits of services 
+against PCTF. 
+ 
+4. Certification Documentation 
+ 
+If the applicant successfully completes the certification process, DIACC grants the certification to the 
+applicable Service and provides the applicant with formal certification documentation and an applicable 
+Trustmark. The remaining 50% of the audit and certification fee is charged.  
+ 
+5. Public Trusted List 
+The Certificate and Trustmark logo are published on the Trusted List, DIACC’s authoritative list of certified 
+service providers against its framework. 
+All usage of the Certification Trustmark must be in accordance with the Trustmark Guidelines specified 
+in the Certification Agreement. 
+ 
+6. Surveillance Audits 
+ 
+Surveillance audits must be carried out annually to maintain the Certification ( with the exception of a 
+silver tier of a profile). The continuance of Certification is dependent upon the  outcome of annual 
+surveillance of the Service, to  assure that all the applicable requirements continue to be met by the 
+6  
+operator of the Service. 
+ 
+7. Conditions of Continued Certification 
+ 
+The Certification term is a three -year cycle, subject to annual surveillance audits ( with the exception of 
+a silver tier of a profile). The Applicant must follow the provisions regarding the required audit. 
+ 
+A certified Service will be eligible for continued Certification subject to: 
+a. Timely payment. 
+b. Notification to CPMO of any changes implemented to the certified Service. 
+c. Compliance with the requirements of the Certification. 
+d. Conformity against the applicable PCTF conformance criteria. 
+e. Notification to CPMO without delay of the occurrence of a serious incident breach of 
+conformance criteria and any other related requirement. 
+f. Other conditions as applicable. 
+ 
+8. Conditions on termination, suspension, withdrawal of certification or reducing scope 
+of certification 
+ 
+When a non-conformity with certification requirements is substantiated, either as a result of surveillance 
+or otherwise, DIACC shall consider and decide to take appropriate action, including: 
+ 
+a. Continuation of certification under conditions specified by the certification body (e.g., 
+increased surveillance); 
+b. Reduction in the scope of certification to remove nonconforming service variants. 
+c. Suspension of the certification pending remedial action by the operator of the certified 
+service. 
+d. Withdrawal of the certification. 
+ 
+DIACC will suspend certification in cases when, for example the certified service operator: 
+a. Has persistently or seriously failed to meet certification requirements, including requirements 
+for the effectiveness of the identity system, which is indicated in the report following a 
+surveillance audit or recertification audit. 
+b. Does not allow surveillance or recertification audits to be conducted at the required 
+frequencies, or 
+c. Has voluntarily requested a suspension. 
+ 
+If the certification is terminated, suspended or withdrawn, DIACC will make all the necessary 
+modifications to formal certification documents, Trusted List, rights to use the Trustmark(s) to avoid 
+confusion that the service continues to be certified. 
+If the certification is suspended, DIACC will notify the operator the actions needed to end suspension and 
+reinstate the certification. In the case of reinstatement of certification, DIACC will make the necessary 
+modifications to the documentation and public information to indicate that the certification is valid. 
+7  
+ 
+9. Appeal procedure 
+ 
+This section speaks to the appeal procedure regarding the DIACC Certification applications. 
+The CPMO will notify the Applicant of the final decision. 
+If the Applicant disagrees with the DIACC decision, the Applicant has 14 days to lodge an appeal.  The 
+Applicant must notify the CPMO in writing of the grounds of the disputed decision. The application is 
+pending for as long as the consideration of the appeal is in progress. 
+ 
+The CPMO will form an ad-hoc appeal committee. The appeal committee must be composed of not less 
+than three persons nominated by non-conflicted Directors on the DIACC Board of Directors (BOD). 
+The BOD will be subject to the Conflicts of Interest Policy specified in Exhibit B. 
+ 
+Members of the appeal committee must not have any commercial or vested interest in the matter under 
+consideration. Moreover, Members of the appeal committee must not be personnel of DIACC, the Service 
+operator in scope of the appeal. 
+The appeal committee will be subject to the Conflicts of Interest Policy specified in Exhibit B. 
+ 
+The Applicant has the right to raise an objection to the composition of the appeal committee, which must 
+notify the CPMO in writing within 14 days after the formation and composition of the committee was 
+communicated. If the objection is accepted by the CPMO, a new nomination process will be initiated by 
+the BOD. 
+ 
+The decision of the appeal committee must be taken within 90 days after the appeal was lodged, and it 
+will be binding to the CPMO and the Appellant. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8  
+References 
+ 
+1. ISO/IEC 17021 Conformity assessment —Requirements for bodies providing audit and 
+certification of management systems. 
+2. ISO/IEC 17030 Conformity assessment — General requirements for third-party marks 
+of conformity. 
+3. ISO/IEC 17065 Conformity assessment – Requirements for bodies certifying 
+products, processes and services. 
+ 
+ 
+ 
+Revision history 
+ 
+Version Release Date Changes 
+2.4 2026-05-15 Consistency with changes on the 
+model 
+2.3 2024-01-02 Adjustments in terminology. 
+2.2 2023-08-20 Renamed Directory with Trusted List. 
+2.1 2022-11-20 Minor editorial changes. 
+2.0 2022-09-12 Changes to address ISO/IEC 17065 
+Requirements 
+1.0 2022-03-15 New document 
+9  
+Exhibit A – Definitions 
+ 
+ 
+Term Meaning 
+Appellant Applicant that files an appeal on the 
+DIACC decision regarding its Certification 
+application. 
+Applicant Operator seeking Certification of its Service 
+against applicable PCTF conformance 
+criteria. 
+Auditor DIACC Accredited Auditor that performs 
+audits against the PCTF conformance 
+criteria. 
+Audit Report Report of the audit findings, which informs 
+conformity of a Service against the 
+applicable DIACC PCTFconformance 
+criteria, provided by a DIACC 
+Accredited Auditor 
+DIACC PCTF  DIACC Pan-Canadian Trust 
+Framework is available at 
+https://diacc.ca/trust-framework/ 
+Certification Agreement Legally enforceable commitment that 
+contemplates all parties’ responsibilities 
+regarding Certification, including use of the 
+applicable Trustmark. 
+Certification Demonstration that specified requirements 
+from DIACC PCTF relating to a Service are 
+fulfilled. The DIACC certification process 
+includes third-party assessment against the 
+applicable DIACC PCTF conformance 
+criteria. 
+Service Identity solution, including identity network, 
+that supports identity proofing, authentication 
+and/or credential management and/or other 
+related functionalities. 
+10  
+Trustmark Any sign or mark of conformity that an entity 
+has fulfilled the applicable requirements, 
+including DIACC trademarks, trade names, 
+symbols, logos, which DIACC grants the 
+right to use to identify the Certification of a 
+Service. 
+Independent Review Committee (IRC) The IRC is an independent committee that 
+has delegated authority from the DIACC 
+Board of Directors (BOD) to perform a 
+quality review of the audit findings. 
+DIACC Certification Program A third-party conformity assessment 
+program designed around ISO/IEC 17065 
+and 17021 to determine compliance with 
+the PCTF and indicate that specific 
+requirements are met. 
+Trusted List Certified service providers are displayed on 
+the Trusted List. 
+11  
+ 
+Exhibit B - Conflicts of Interest Policy (COI Policy) regarding appeal procedure 
+ 
+1. Purpose 
+For the nomination of an ad-hoc appeal committee, DIACC Board of Directors (BOD) members are 
+obligated to disclose ethical, legal, financial and other conflicts of interest involving the appellant. 
+ 
+The ad-hoc appeal committee members are obligated to disclose ethical, legal, financial and other 
+conflicts of interest involving the Appellant. 
+ 
+The purpose of this Conflicts of Interest Policy (COI Policy) is to prevent any conflict of interest or 
+the appearance of a conflict of interest from affecting any decision - making involving the Appeal 
+procedure. 
+The DIACC BOD and the ad-hoc appeal committee members must adopt this COI Policy. 
+ 
+2. Potential Conflicts 
+A conflict of interest may include any of the following situations: 
+ 
+a. Financial conflict; 
+b. Direct or indirect gain (of any sort) arising from access to 
+confidential information; 
+c. Family/personal relationships and bias; 
+d. Contractual or affiliation relationships; 
+e. Being the designer, implementer, developer, or maintainer of the 
+Appellant’s 
+operations. 
+f. Provide consultancy to the Appellant's Entity. 
+3. Duty to Disclose and Abstain from Voting 
+ 
+The DIACC BOD and the ad -hoc appeal committee members must disclose any matter that could 
+reasonably affect the outcome of the appeal procedure and decision -making process, any conflict 
+or potential conflict to the CPMO. 
+Those Directors and ad -hoc appeal committee members who have been identified as conflicted 
+must abstain from voting. 
+ 
+ 
+ 
