@@ -1,0 +1,1150 @@
+Prepared by the Office of Parliamentary Counsel, Canberra
+Digital ID Rules 2024
+made under section 168 of the
+Digital ID Act 2024
+Compilation No. 1
+Compilation date:19 November 2025
+Includes amendments:F2025L01393
+Authorised Version F2025C01220 registered 16/12/2025
+About this compilation
+This compilation
+This is a compilation of the Digital ID Rules 2024 that shows the text of the law 
+as amended and in force on 19 November 2025 (the compilation date).
+The notes at the end of this compilation (the endnotes) include information 
+about amending laws and the amendment history of provisions of the compiled 
+law.
+Uncommenced amendments
+The effect of uncommenced amendments is not shown in the text of the 
+compiled law. The details of amendments made up to, but not commenced at, 
+the compilation date are underlined in the endnotes. Any uncommenced 
+amendments affecting the law are accessible on the Register 
+(www.legislation.gov.au).
+Application, saving and transitional provisions
+If the operation of a provision or amendment of the compiled law is affected by 
+an application, saving or transitional provision that is not included in this 
+compilation, details are included in the endnotes.
+Editorial changes
+For more information about any editorial changes made in this compilation, see 
+the endnotes.
+Presentational changes
+The Legislation Act 2003 provides for First Parliamentary Counsel to make 
+presentational changes to a compilation. Presentational changes are applied to 
+give a more consistent look and feel to legislation published on the Register, 
+and enable the user to more easily navigate those documents.
+Modifications
+If the compiled law is modified by another law, the compiled law operates as 
+modified but the modification does not amend the text of the law. Accordingly, 
+this compilation does not show the text of the compiled law as modified. Any 
+modifications affecting the law are accessible on the Register.
+Self-repealing provisions
+If a provision of the compiled law has been repealed in accordance with a 
+provision of the law, details are included in the endnotes.
+  
+  
+  
+Authorised Version F2025C01220 registered 16/12/2025
+Digital ID Rules 2024 i
+Compilation No. 1 Compilation date: 19/11/2025
+Contents
+Chapter 1—Preliminary 1
+1.1 Name ............................................................................................................................. 1
+1.3 Authority ....................................................................................................................... 1
+1.4 Definitions..................................................................................................................... 1
+1.5 Meaning of streamlined application............................................................................. 3
+Chapter 2—Fit and proper person considerations 4
+2.1 Application of this Chapter ........................................................................................... 4
+2.2 Mandatory relevant matters........................................................................................... 4
+2.3 Mandatory relevant matters—government entities affected by a machinery of 
+government change .......................................................................................................5
+Chapter 3—Participation in the Australian Government Digital 
+ID System 6
+Part 1—Applications for approval to participate 6
+3.1 Application of this Part ................................................................................................. 6
+3.2 Applications for approval to participate—all entities ................................................... 6
+3.3 Applications for approval to participate—relying parties............................................. 6
+Part 2—Approval to participate 8
+3.4 Conditions on approval to participate ........................................................................... 8
+Chapter 4—Reportable incidents 10
+4.1 Application of this Chapter ......................................................................................... 10
+4.2 Cyber security incidents and digital ID fraud incidents.............................................. 10
+4.3 Other incidents ............................................................................................................ 12
+4.4 Other digital ID systems.............................................................................................. 13
+4.5 System Administrator may give information.............................................................. 14
+Chapter 4A—Redress framework 15
+Part 1—Preliminary 15
+4A.1 Application of this Chapter ......................................................................................... 15
+Part 2—Notifying affected individuals of incidents 16
+4A.2 Notifying affected individuals of incidents................................................................. 16
+Part 3—Referring unresolved technical issues to the System Administrator 17
+4A.3 Unresolved technical issues must be referred to the System Administrator ............... 17
+4A.4 System Administrator may recommend a resolution .................................................. 17
+Part 4—Providing information, support and assistance to individuals 
+affected by incidents 18
+4A.5 Providing information, support and assistance to individuals affected by 
+incidents ......................................................................................................................18
+Part 5—Policies relating to incidents and complaints 19
+4A.6 Application of this Part ............................................................................................... 19
+4A.7 Policies relating to the identification etc. of incidents ................................................ 19
+4A.8 Policies relating to complaints by individuals............................................................. 19
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 5—Trustmarks 20
+5.1 Application of this Chapter ......................................................................................... 20
+5.2 Digital ID trustmark .................................................................................................... 20
+5.3 Use or display of digital ID trustmark—accredited entities........................................ 20
+5.4 Use or display of digital ID trustmark—authorised entities ....................................... 21
+Chapter 6—Record-keeping 22
+6.1 Application of this Chapter ......................................................................................... 22
+6.2 Record keeping requirements...................................................................................... 22
+Chapter 7—Application, saving and transitional provisions 24
+7.1 Application of amendments made by the Digital ID Amendment (Redress 
+Framework and Other Measures) Rules 2025............................................................ 24
+Schedule 1—Digital ID trustmark 25
+Endnotes 26
+Endnote 1—About the endnotes 26
+Endnote 2—Abbreviation key 27
+Endnote 3—Legislation history 28
+Endnote 4—Amendment history 29
+Authorised Version F2025C01220 registered 16/12/2025
+Preliminary  Chapter 1
+  
+  
+Rule 1.1
+Digital ID Rules 2024 1
+Compilation No. 1 Compilation date: 19/11/2025
+Chapter 1—Preliminary
+     
+1.1  Name
+These rules are the Digital ID Rules 2024.
+1.3  Authority
+These rules are made under section 168 of the Digital ID Act 2024 for the 
+purposes of the provisions in the Act in which the term ‘Digital ID Rules’ 
+occurs.
+1.4  Definitions
+Note 1: A number of expressions used in these rules are defined in section 9 of the Act, 
+including the following:
+(a) accredited entity;
+(b) accredited service;
+(c) cyber security incident;
+(d) digital ID;
+(e) digital ID fraud incident;
+(f) participating relying party.
+Note 2: A number of expressions used in these rules are defined in rule 1.4 of the Accreditation 
+Rules, including the following:
+(a) DI data environment;
+(b) identity proofing level;
+(c) public-facing accredited services;
+(d) public-facing information related to accredited services.
+(1) Unless otherwise specified, expressions defined in the Accreditation Rules have 
+the same meaning in these rules.
+(2) In these rules:
+Accreditation Data Standards means the Digital ID (Accreditation) Data 
+Standards 2024.
+Accreditation Rules means the Digital ID (Accreditation) Rules 2024.
+Act means the Digital ID Act 2024.
+AGDIS Data Standards means the Digital ID (AGDIS) Data Standards 2024.
+associated person, of an entity, means any of the following:
+(a) a person who makes, or participates in making, decisions that affect:
+(i) the entity’s management of its DI data environment; or
+(ii) for a participating relying party—the performance of the entity’s 
+functions when operating in the Australian Government Digital ID 
+System; or
+(b) a person who has the capacity to significantly affect:
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 1  Preliminary
+  
+  
+Rule 1.4
+2 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+(i) the entity’s management of its DI data environment; or
+(ii) for a participating relying party—the performance of the entity’s 
+functions when operating in the Australian Government Digital ID 
+System; or
+(c) a person who would be a person mentioned in paragraphs (a) or (b) if the 
+entity was an accredited entity or a participating relying party; or
+(d) if the entity is a body corporate—a person who:
+(i) is an associate (within the meaning of the Corporations Act) of the 
+entity; or
+(ii) is an associated entity (within the meaning of the Corporations Act) of 
+the entity.
+authentication level has the same meaning as in the Accreditation Data 
+Standards.
+Corporations Act means the Corporations Act 2001.
+IXP means an accredited identity exchange provider.
+material change has its ordinary meaning.
+Note: The definition of ‘material change’ in these rules is different to the definition of the 
+same expression in the Accreditation Rules.
+material effect, in relation to the operation of the Australian Government Digital 
+ID System, includes:
+(a) any degradation or loss of functionality within the Australian Government 
+Digital ID System; and
+(b) any detrimental effect on the ability of an entity that participates in the 
+Australian Government Digital ID System to access the System.
+pairwise identifier, in relation to an individual, means an identifier that:
+(a) identifies the individual to an accredited entity or a participating relying 
+party; and
+(b) cannot be correlated with:
+(i) the individual’s identifier used by a different accredited entity or 
+participating relying party; or
+(ii) another individual’s identifier.
+participating entity means an entity that holds an approval to participate in the 
+Australian Government Digital ID System.
+Privacy Act means the Privacy Act 1988.
+receiving entity: see rule 1.5.
+reportable incident requirement means a requirement in these rules in respect of 
+an incident specified in Chapter 4.
+streamlined application: see rule 1.5.
+transferring entity: see rule 1.5.
+Authorised Version F2025C01220 registered 16/12/2025
+Preliminary  Chapter 1
+  
+  
+Rule 1.5
+Digital ID Rules 2024 3
+Compilation No. 1 Compilation date: 19/11/2025
+1.5  Meaning of streamlined application
+In these rules, streamlined application means an application under section 61 of 
+the Act made by an entity (the receiving entity) where:
+(a) the receiving entity is of a kind mentioned in paragraph (c), (d), (e), (f) or 
+(g) of the definition of entity in the Act; and
+(b) a participating relying party (the transferring entity) that is an entity of a 
+kind mentioned in one of those paragraphs is approved to provide, or to 
+provide access to, one or more services within the Australian Government 
+Digital ID System (the approved services); and
+(c) a function of the transferring entity that includes the provision of the 
+approved services is, or is reasonably expected to be, transferred to the 
+receiving entity as a result of a machinery of government change; and
+(d) the application is for an approval to provide, or to provide access to, one or 
+more of the approved services.
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 2  Fit and proper person considerations
+  
+  
+Rule 2.1
+4 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+Chapter 2—Fit and proper person considerations
+     
+2.1  Application of this Chapter
+(1) For the purposes of paragraph 12(a) of the Act, this Chapter specifies the matters 
+to which the Digital ID Regulator must have regard when considering whether 
+the person is a fit and proper person for the purposes of the Act, these rules, the 
+Accreditation Rules, the Accreditation Data Standards and the AGDIS Data 
+Standards.
+Note: In deciding whether to accredit an entity, suspend or revoke the accreditation of an 
+entity, approve an entity to participate in the Australian Government Digital ID 
+System, or suspend or revoke the approval of an entity to participate in the Australian 
+Government Digital ID System, the Digital ID Regulator may have regard to whether 
+the entity is a fit and proper person (see subsections 15(5), 25(4), 26(3), 62(2), 71(3) 
+and 72(3) of the Act).
+(2) For the avoidance of doubt, this Chapter does not limit the matters to which the 
+Digital ID Regulator may have regard when considering whether the person is a 
+fit and proper person for the purposes of the Act, these rules, the Accreditation 
+Rules, the Accreditation Data Standards and the AGDIS Data Standards.
+2.2  Mandatory relevant matters
+(1A) This rule does not apply in relation to a streamlined application.
+(1) In having regard to whether an entity is a fit and proper person, the Digital ID 
+Regulator must have regard to the following matters:
+(a) whether the entity, or an associated person of the entity, has, within the 
+previous 10 years, been convicted or found guilty of:
+(i) a serious criminal offence; or
+(ii) an offence of dishonesty;
+against any law of the Commonwealth or of a State or Territory, or a law of 
+a foreign jurisdiction;
+(b) whether the entity, or an associated person of the entity, has been found to 
+have contravened:
+(i) a law relevant to the management of its DI data environment; or
+(ii) a similar law of a foreign jurisdiction;
+(c) whether the entity, or an associated person of the entity, has been the 
+subject of:
+(i) a determination under paragraph 52(1)(b), or any of 
+paragraphs 52(1A)(a) to (d), of the Privacy Act; or
+(ii) a finding or determination of a similar nature under a similar law of a 
+State or Territory or a foreign jurisdiction;
+(d) if the entity is a body corporate—whether any of the directors of the entity, 
+or of an associated person of the entity:
+(i) has been disqualified from managing corporations; or
+(ii) is subject to a banning order;
+Authorised Version F2025C01220 registered 16/12/2025
+Fit and proper person considerations  Chapter 2
+  
+  
+Rule 2.3
+Digital ID Rules 2024 5
+Compilation No. 1 Compilation date: 19/11/2025
+(e) whether the entity, or an associated person of the entity, has a history of 
+insolvency or bankruptcy;
+(f) whether the entity, or an associated person of the entity, has been the 
+subject of a determination made under an external dispute resolution 
+scheme that:
+(i) included a requirement to pay compensation; and
+(ii) was, at the time the determination was made:
+(A) recognised under section 35A of the Privacy Act; or
+(B) recognised under section 56DA of the Competition and 
+Consumer Act 2010;
+(g) if the entity has made an application under section 14 of the Act for 
+accreditation as an accredited entity—whether the entity’s application was 
+refused;
+(h) if the entity has made an application under section 61 of the Act for 
+approval to participate in the Australian Government Digital ID System—
+whether the entity’s application was refused;
+(i) if the entity is or has been an accredited entity—whether the entity’s 
+accreditation is or has been suspended or revoked;
+(j) if the entity is or has been approved to participate in the Australian 
+Government Digital ID System—whether the entity’s approval is or has 
+been suspended or revoked.
+(2) Subrule (1) does not affect the operation of Part VIIC of the Crimes Act 1914 or 
+a corresponding provision of an Australian or a law of a foreign country.
+Note: Part VIIC of the Crimes Act 1914 includes provisions that, in certain circumstances, 
+relieve persons from the requirement to disclose spent convictions and require persons 
+aware of such convictions to disregard them.
+(3) In this rule:
+banning order has the same meaning as in the Corporations Act.
+director has the same meaning as in the Corporations Act.
+serious criminal offence means an offence for which, if the act or omission had 
+taken place in the Jervis Bay Territory, a person would have been liable, on first 
+conviction, to imprisonment for a period of not less than 5 years.
+Note: The Jervis Bay Territory is mentioned because it is a jurisdiction in which the 
+Commonwealth has control over the criminal law.
+2.3  Mandatory relevant matters—government entities affected by a machinery 
+of government change
+(1) This rule applies in relation to a streamlined application.
+(2) In considering whether the receiving entity is a fit and proper person, the Digital 
+ID Regulator must have regard to whether the approval of the corresponding 
+transferring entity to provide, or to provide access to, services within the 
+Australian Government Digital ID System, has ever been suspended or revoked.
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 3  Participation in the Australian Government Digital ID System
+Part 1  Applications for approval to participate
+  
+Rule 3.1
+6 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+Chapter 3—Participation in the Australian 
+Government Digital ID System
+Part 1—Applications for approval to participate
+   
+3.1  Application of this Part
+(1) This Part does not apply in relation to a streamlined application.
+(2) For the purposes of paragraph 62(1)(f) of the Act, this Part prescribes additional 
+requirements that must be met before the Digital ID Regulator may approve an 
+entity to participate in the Australian Government Digital ID System.
+Note: An application for approval to participate in the Australian Government Digital ID 
+System made under section 61 of the Act must be accompanied by any information or 
+documents required by this Part (see paragraph 141(1)(c) of the Act). The Digital ID 
+Regulator is not required to make a decision on the application until the information or 
+documents are provided (see subsection 143(2) of the Act).
+3.2  Applications for approval to participate—all entities
+Before approving an application for approval to participate in the Australian 
+Government Digital ID System, the Digital ID Regulator must be satisfied that 
+the entity has in place effective written procedures to notify the System 
+Administrator as soon as practicable of:
+(a) any proposed change to the entity’s information technology system that 
+interacts with the Australian Government Digital ID System, if the change 
+will, or could reasonably be expected to, have a material effect on the 
+operation of the Australian Government Digital ID System; and
+(b) any planned or unplanned outage or downtime affecting the entity’s 
+information technology system, if the outage or downtime will, or could 
+reasonably be expected to, have a material effect on the operation of the 
+Australian Government Digital ID System.
+3.3  Applications for approval to participate—relying parties
+(1) Before a relying party applies for approval to participate in the Australian 
+Government Digital ID System, the entity must conduct a risk assessment to 
+identify, evaluate and manage the risks of:
+(a) a cyber security incident; and
+(b) a digital ID fraud incident;
+occurring in connection with a service that the entity intends to provide, or 
+provide access to, within the Australian Government Digital ID System.
+(2) A relying party that has made an application for approval to participate in the 
+Australian Government Digital ID System must, at the time it makes the 
+application, have all of the following:
+Authorised Version F2025C01220 registered 16/12/2025
+Participation in the Australian Government Digital ID System  Chapter 3
+Applications for approval to participate  Part 1
+  
+Rule 3.3
+Digital ID Rules 2024 7
+Compilation No. 1 Compilation date: 19/11/2025
+(a) a written cyber security plan approved by the entity’s governing body that 
+addresses at least the following:
+(i) management of any risks identified when conducting the risk 
+assessment referred to at paragraph (1)(a);
+(ii) prevention, identification, investigation and management of cyber 
+security incidents, including incidents notified to the entity by the 
+System Administrator, if the entity is approved to participate in the 
+Australian Government Digital ID System; and
+(iii) the frequency with which the entity will review the plan, being at least 
+once per year; and
+(b) a written digital ID fraud management plan approved by the entity’s 
+governing body that addresses at least the following:
+(i) management of any risks identified when conducting the risk 
+assessment referred to at paragraph (1)(b);
+(ii) prevention, identification, investigation and management of digital ID 
+fraud incidents, including incidents notified to the entity by the 
+System Administrator, if the entity is approved to participate in the 
+Australian Government Digital ID System; and
+(iii) the frequency with which the entity will review the plan, being at least 
+once per year; and
+(c) a written disaster recovery and business continuity plan approved by the 
+entity’s governing body that addresses at least the following:
+(i) disaster recovery procedures for critical functions of the entity’s 
+information technology system within the Australian Government 
+Digital ID System; and
+(ii) the frequency with which the entity will review the plan, being at least 
+once per year.
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 3  Participation in the Australian Government Digital ID System
+Part 2  Approval to participate
+  
+Rule 3.4
+8 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+Part 2—Approval to participate
+   
+3.4  Conditions on approval to participate
+(1) For the purposes of subsection 64(5) of the Act, the approval of an entity 
+described in column 1 of an item of the following table is subject to the 
+conditions specified in column 2 of the item.
+Participation conditions
+Item Column 1 Column 2
+Entity Condition
+1 Participating relying party The entity must notify the Digital ID Regulator of a 
+proposed change to its contact details no later than 7 days 
+after the change takes effect.
+2 Participating relying party (a) The entity must notify the System Administrator, in 
+accordance with subrule (2), of the following 
+incidents that have occurred, or are reasonably 
+suspected of having occurred:
+(i) any proposed change to the entity’s information 
+technology system that interacts with the 
+Australian Government Digital ID System, if the 
+change will, or could reasonably be expected to, 
+have a material effect on the operation of the 
+Australian Government Digital ID System; and
+(ii) any planned or unplanned outage or downtime 
+affecting the entity’s information technology 
+system, if the outage or downtime will, or could 
+reasonably be expected to, have a material effect 
+on the operation of the Australian Government 
+Digital ID System.
+(b) The notification must be made no later than 
+5 business days after the earliest of the following:
+(i) the entity becomes aware that the incident has 
+occurred; or 
+(ii) the entity reasonably suspects that the incident 
+has occurred.
+3 Participating relying party The entity must collect and store the pairwise identifier 
+issued to the relying party in relation to each individual to 
+enable the entity to comply with the reportable incident 
+requirement mentioned in paragraph 4.2(3)(k).
+(2) The notification must include the following information:
+(a) the entity’s name;
+(b) the contact details for the entity;
+Authorised Version F2025C01220 registered 16/12/2025
+Participation in the Australian Government Digital ID System  Chapter 3
+Approval to participate  Part 2
+  
+Rule 3.4
+Digital ID Rules 2024 9
+Compilation No. 1 Compilation date: 19/11/2025
+(c) if the incident relates to an associated person of the entity—the name and 
+contact details of the associated person; and
+(d) a description of the incident;
+(e) the following details of the incident:
+(i) the date and time of the incident; and
+(ii) the date on which the entity became aware of the incident.
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 4  Reportable incidents
+  
+  
+Rule 4.1
+10 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+Chapter 4—Reportable incidents
+     
+4.1  Application of this Chapter
+For the purposes of subsection 78(1) of the Act, this Chapter prescribes 
+arrangements relating to the notification and management of incidents that have 
+occurred, or are reasonably suspected of having occurred, in relation to the 
+Australian Government Digital ID System.
+Note: An entity is liable to a civil penalty if the entity is subject to a requirement under rules 
+made for the purposes of subsection 78(1) and the entity fails to comply with the 
+requirement (see subsection 78(4) of the Act).
+4.2  Cyber security incidents and digital ID fraud incidents
+(1) This rule applies to:
+(a) a participating entity;
+(b) an entity whose approval to participate is suspended; and
+(c) an entity whose approval to participate has been revoked, but only in 
+respect of incidents that have occurred, or are reasonably suspected of 
+having occurred, while the entity was participating in the Australian 
+Government Digital ID System.
+(2) The entity must notify the System Administrator, in accordance with this rule, of 
+any of the following:
+(a) a cyber security incident; or
+(b) a digital ID fraud incident;
+if the incident occurred, or is reasonably suspected of having occurred, in 
+relation to any accredited services:
+(c) for an accredited entity—provided by the entity within the Australian 
+Government Digital ID System; or
+(d) for a participating relying party—received by the entity within the 
+Australian Government Digital ID System.
+(3) The notification must include the following information:
+(a) the entity’s name;
+(b) the contact details of the entity;
+(c) the services affected by the incident;
+(d) a description of the incident;
+(e) the following details of the incident, so far as they are known to the entity:
+(i) the date and time of the incident;
+(ii) the date on which the entity became aware of the incident;
+(iii) the method or source of detection of the incident;
+(iv) the severity of the incident;
+(v) whether the incident has been resolved; and
+(vi) if the incident has been resolved—how it was resolved and how long 
+the entity took to resolve it;
+Authorised Version F2025C01220 registered 16/12/2025
+Reportable incidents  Chapter 4
+  
+  
+Rule 4.2
+Digital ID Rules 2024 11
+Compilation No. 1 Compilation date: 19/11/2025
+(f) each digital ID affected by the incident;
+(g) for each individual whose digital ID is affected by the incident:
+(i) if the individual has been informed of the incident—when the 
+individual was informed of the incident; and
+(ii) if the individual has not been informed of the incident—why the 
+individual has not been informed of the incident;
+(h) any relevant identity proofing level and authentication level and, if an 
+individual’s digital ID has been re-proofed because of the incident, the date 
+that occurred;
+(i) the measures that the entity has taken and plans to take to deal with the 
+incident, including any action the entity has taken or will take to reduce the 
+risk to the accredited services the entity provides or receives within the 
+Australian Government Digital ID System;
+(j) whether the incident has been referred to an enforcement body or law 
+enforcement agency and, if so, the body or agency to which the incident 
+was referred and the date and time of that referral; and
+(k) if the entity is a participating relying party—the pairwise identifier issued 
+to the relying party in relation to each individual associated with the 
+incident.
+(4) The notification must be made as soon as practicable after, and in any event no 
+later than 1 business day after, the entity becomes aware that an incident has 
+occurred or reasonably suspects an incident has occurred.
+(5) The notification may be given orally. However, if it is given orally, a written 
+notification must be given no later than 3 business days after the oral 
+notification.
+(6) If it is not reasonably practicable for the entity to provide some or all of the 
+information required by subrule (3) (required information) within the period 
+specified in subrule (4) or (5), the entity is taken to comply with subrule (3) if the 
+entity:
+(a) provides an interim notification by the time required by subrule (4) or (5) 
+that includes as much of the required information as is reasonably available 
+to the entity at the time the interim notification is given; 
+(b) takes reasonable steps to obtain the outstanding required information as 
+soon as reasonably practicable; and
+(c) provides any outstanding information as soon as reasonably practicable, 
+and in any event within 48 hours of the outstanding information becoming 
+available to the entity.
+(7) If the System Administrator receives a notification under subrule (2), the System 
+Administrator may direct any entity of a kind mentioned in subrule (1) who has 
+interacted with a digital ID affected by the incident to conduct an investigation 
+into the incident.
+(8) If the System Administrator directs an entity to conduct an investigation into an 
+incident under subrule (7), that entity must: 
+(a) begin conducting the investigation as soon as reasonably practicable; and
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 4  Reportable incidents
+  
+  
+Rule 4.3
+12 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+(b) provide the System Administrator with a summary of the findings of the 
+investigation as soon as reasonably practicable after the investigation is 
+complete.
+(9) However, if an investigation under subrule (7) is not completed within the period 
+of 28 days beginning on the day the System Administrator directs the entity to 
+conduct the investigation, the entity must update the System Administrator on 
+the progress of the investigation:
+(a) immediately after the end of that period; and
+(b) at least once after the end of any subsequent period of 28 days until the 
+investigation is complete.
+4.3  Other incidents
+(1) This rule applies to:
+(a) a participating entity; and
+(b) an entity whose approval to participate is suspended;
+in respect of incidents that have occurred, or are reasonably suspected of having 
+occurred, while the entity was participating in the Australian Government Digital 
+ID System.
+(2) The entity must notify the Digital ID Regulator, in accordance with this rule, of 
+the following incidents:
+(a) any material change in the entity’s circumstances that might affect its 
+ability to comply with its obligations under the Act, these rules, the 
+Accreditation Rules, the Accreditation Data Standards and the AGDIS 
+Data Standards;
+(b) any matter that could reasonably be considered relevant to whether the 
+entity is a fit and proper person for the purposes of the Act, these rules, the 
+Accreditation Rules, the Accreditation Data Standards and the AGDIS 
+Data Standards, including matters involving an associated person of the 
+entity; and
+(c) any material change to, or error in, any of the information provided to the 
+Digital ID Regulator.
+(3) If the entity is an accredited entity—the entity must notify the System 
+Administrator, in accordance with this rule, of the following incidents:
+(a) any proposed change to the entity’s information technology system that 
+interacts with the Australian Government Digital ID System, where the 
+change will, or could reasonably be expected to, have a material effect on 
+the operation of the Australian Government Digital ID System; and
+(b) any planned or unplanned outage or downtime affecting the entity’s 
+information technology system, where the outage or downtime will, or 
+could reasonably be expected to, have a material effect on the operation of 
+the Australian Government Digital ID System.
+(4) The notification must include the following information:
+(a) the entity’s name;
+Authorised Version F2025C01220 registered 16/12/2025
+Reportable incidents  Chapter 4
+  
+  
+Rule 4.4
+Digital ID Rules 2024 13
+Compilation No. 1 Compilation date: 19/11/2025
+(b) the contact details for the entity;
+(c) if the incident relates to an associated person of the entity—the name and 
+contact details of the associated person;
+(d) a description of the incident; and
+(e) the following details of the incident:
+(i) the date and time of the incident; and
+(ii) the date on which the entity became aware of the incident.
+(5) The notification must be made no later than 5 business days after the earliest of 
+the following:
+(a) the entity becomes aware that the incident has occurred; or 
+(b) the entity reasonably suspects that the incident has occurred.
+4.4  Other digital ID systems
+(1) This rule applies to:
+(a) an accredited entity that holds an approval to participate; and
+(b) an accredited entity whose approval to participate is suspended.
+(2) The entity must notify the Digital ID Regulator, in accordance with this rule, if:
+(a) the entity uses an information technology system to provide services within 
+the Australian Government Digital ID System; and
+(b) the entity proposes to use that information technology system to provide or 
+receive services within a digital ID system other than the Australian 
+Government Digital ID System (other digital ID system).
+(3) The notification must include the following information:
+(a) the entity’s name;
+(b) the contact details for the entity;
+(c) a description of:
+(i) the services to be provided or received by the entity within the other 
+digital ID system; and
+(ii) any accredited services provided by the entity that are the same as or 
+similar to the services to be provided or received by the entity within 
+the other digital ID system;
+(d) details of the entity providing or managing the other digital ID system;
+(e) the nature of the proposed use of the other digital ID system;
+(f) the likely effect of the entity’s use of the other digital ID system on the 
+levels of the entity’s risk of:
+(i) a cyber security incident; and 
+(ii) a digital ID fraud incident; and
+(g) details of how the entity:
+(i) will clearly distinguish information flows within the Australian 
+Government Digital ID System from information flows within the 
+other digital ID system; 
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 4  Reportable incidents
+  
+  
+Rule 4.5
+14 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+(ii) will clearly distinguish between accredited services provided in the 
+Australian Government Digital ID System and services provided 
+within the other digital ID system; 
+(iii) will ensure that information held by the entity for the purposes of the 
+Australian Government Digital ID System is able to be located and 
+distinguished from information held by the entity for the purposes of 
+the other digital ID system; and
+(iv) will meet its obligations under the Act, these rules, the Accreditation 
+Rules, the Accreditation Data Standards and the AGDIS Data 
+Standards in respect of its accredited services.
+Example: For subparagraphs (g)(i) and (ii), an information barrier.
+(4) The notification must be made no later than 28 days before the proposed use of 
+the other digital ID system.
+(5) In this rule:
+other digital ID system has the meaning given in paragraph (2)(b).
+4.5  System Administrator may give information
+(1) The System Administrator may give information notified to it under rule 4.2 or 
+subrule 4.3(3) to the Digital ID Regulator, the Minister or to a participating 
+entity.
+Note: These notifications relate to cyber security incidents and digital ID fraud incidents, 
+proposed changes to the entity’s information technology system and planned or 
+unplanned outages or downtime affecting the entity’s information technology system.
+(2) If the System Administrator acquires information about a cyber security incident 
+or a digital ID fraud incident otherwise than by a notification under rule 4.2 or 
+subrule 4.3(3), the System Administrator may give the information to a 
+participating entity.
+(3) The System Administrator may only give information under this rule if it 
+considers it appropriate to do so to protect the security, integrity or performance 
+of the Australian Government Digital ID System.
+Note: This subrule does not limit the functions of the System Administrator under the Act, 
+which include sharing information with the Minister, the Digital ID Regulator, the 
+Digital ID Data Standards Chair and the Information Commissioner to assist them to 
+exercise their powers or perform their functions under the Act (see subsection 95(i) of 
+the Act).
+(4) For the purposes of paragraph 78(2)(g) of the Act, a person or body to whom the 
+System Administrator may give information under this rule is authorised to 
+collect the information.
+Note: This rule does not limit the functions of the Digital ID Regulator under the Act, which 
+include sharing information with the Minister, the System Administrator, the Digital ID 
+Data Standards Chair and the Information Commissioner to assist them to exercise 
+their powers or perform their functions under the Act (see subsection 91(f) of the Act).
+Authorised Version F2025C01220 registered 16/12/2025
+Redress framework  Chapter 4A
+Preliminary  Part 1
+  
+Rule 4A.1
+Digital ID Rules 2024 15
+Compilation No. 1 Compilation date: 19/11/2025
+Chapter 4A—Redress framework
+Part 1—Preliminary
+  
+4A.1  Application of this Chapter
+(1) For the purposes of subsection 88(1) of the Act, this Chapter provides for a 
+redress framework for incidents that occur in relation to accredited services of 
+accredited entities that are provided within the Australian Government Digital ID 
+System.
+(2) This Chapter applies to an ASP or an ISP that is one of the following:
+(a) a participating entity;
+(b) an entity whose approval to participate is suspended;
+(c) an entity whose approval to participate has been revoked.
+Note 1: This Chapter deals with cyber security incidents and digital ID fraud incidents that 
+occur in certain circumstances. Rule 4.2 (Cyber security incidents and digital ID fraud 
+incidents) of these rules and rules 4.11 (Support to individuals), 4.30 (Support to 
+individuals) and 5.8 (Digital IDs affected by a fraud or cyber security incident) of the 
+Accreditation Rules also deal with cyber security incidents and digital ID fraud 
+incidents.
+Note 2: Part 5 of this Chapter does not apply to an ASP or an ISP whose approval to participate 
+is suspended or has been revoked (see rule 4A.6).
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 4A  Redress framework
+Part 2  Notifying affected individuals of incidents
+  
+Rule 4A.2
+16 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+Part 2—Notifying affected individuals of incidents
+  
+4A.2  Notifying affected individuals of incidents
+(1) This rule applies if a cyber security incident or a digital ID fraud incident occurs, 
+or is reasonably suspected of having occurred, in relation to an accredited service 
+provided by an entity to which this Chapter applies within the Australian 
+Government Digital ID System.
+(2) The entity must make reasonable attempts to notify each individual affected by 
+the incident.
+(3) Subrule (2) does not apply if the entity is satisfied that:
+(a) there is a likelihood of the individual suffering an adverse outcome as a 
+result of the entity attempting to notify the individual of the incident; or
+(b) notifying the individual will, or could reasonably be expected to, have a 
+material effect on the operation of the Australian Government Digital ID 
+System.
+Note 1: If an entity notifies an individual under subrule (2), the entity must also provide certain 
+information, support and assistance to the individual (see rule 4A.5).
+Note 2:Material effect, in relation to the operation of the Australian Government Digital ID 
+System, is defined in subrule 1.4(2).
+Authorised Version F2025C01220 registered 16/12/2025
+Redress framework  Chapter 4A
+Referring unresolved technical issues to the System Administrator  Part 3
+  
+Rule 4A.3
+Digital ID Rules 2024 17
+Compilation No. 1 Compilation date: 19/11/2025
+Part 3—Referring unresolved technical issues to the System 
+Administrator
+  
+4A.3  Unresolved technical issues must be referred to the System Administrator
+(1) This rule applies if:
+(a) a cyber security incident or a digital ID fraud incident occurs, or is 
+reasonably suspected of having occurred, in relation to an accredited 
+service provided by an entity to which this Chapter applies within the 
+Australian Government Digital ID System; and
+(b) as a result of the incident, an individual is unable to use their digital ID due 
+to a technical issue with the entity’s service that is within the control of the 
+entity or another entity to which this Chapter applies.
+(2) The entity must refer the technical issue to the System Administrator:
+(a) as soon as reasonably practicable after the entity becomes aware of the 
+issue; and
+(b) if the entity became aware of the issue because of a complaint made by the 
+individual—in any case within 28 days after the complaint is made.
+(3) However, the entity must refer the issue to the System Administrator under 
+subrule (2) only if:
+(a) the entity is reasonably satisfied that the technical issue cannot be resolved 
+without referring it to the System Administrator; and
+(b) the entity has complied with rule 4A.5 (if applicable) in relation to the 
+incident.
+Note: Rule 4A.5 is applicable if the entity became aware of the issue because of a complaint 
+made by the individual (see paragraph 4A.5(1)(b)).
+4A.4  System Administrator may recommend a resolution
+(1) If the System Administrator receives a referral from an entity under rule 4A.3, 
+the System Administrator may recommend a course of action to the entity to 
+resolve the technical issue.
+(2) Without limiting subrule (1), a course of action recommended by the System 
+Administrator may include that the entity do any of the following:
+(a) provide the individual an explanation of the circumstances giving rise to 
+the technical issue;
+(b) issue an apology to the individual.
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 4A  Redress framework
+Part 4  Providing information, support and assistance to individuals affected by incidents
+  
+Rule 4A.5
+18 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+Part 4—Providing information, support and assistance to 
+individuals affected by incidents
+  
+4A.5  Providing information, support and assistance to individuals affected by 
+incidents
+(1) This rule applies if:
+(a) an entity notifies an individual about an incident under subrule 4A.2(2); or
+(b) an entity becomes aware of a technical issue mentioned in rule 4A.3 
+because of a complaint made by an individual.
+(2) The entity must:
+(a) direct the individual to any relevant public resources, including the 
+information published by the entity on the resolution of incidents and the 
+entity’s complaints processes; and
+(b) if the individual is unable to use their digital ID due to a technical issue 
+with the entity’s service that is within the control of another entity to which 
+this Chapter applies—provide reasonable assistance to help the individual 
+identify that other entity and its contact details.
+Authorised Version F2025C01220 registered 16/12/2025
+Redress framework  Chapter 4A
+Policies relating to incidents and complaints  Part 5
+  
+Rule 4A.6
+Digital ID Rules 2024 19
+Compilation No. 1 Compilation date: 19/11/2025
+Part 5—Policies relating to incidents and complaints
+  
+4A.6  Application of this Part
+Despite subrule 4A.1(2), this Part does not apply to an ASP or an ISP that is one 
+of the following:
+(a) an entity whose approval to participate is suspended;
+(b) an entity whose approval to participate has been revoked.
+4A.7  Policies relating to the identification etc. of incidents
+An entity to which this Part applies must develop and publish policies relating to 
+the identification, management and resolution of cyber security incidents and 
+digital ID fraud incidents that occur, or are reasonably suspected of having 
+occurred, in relation to the accredited services provided by the entity within the 
+Australian Government Digital ID System.
+4A.8  Policies relating to complaints by individuals
+(1) An entity to which this Part applies must develop and publish policies relating to 
+complaints by individuals relating to cyber security incidents and digital ID fraud 
+incidents that occur, or are reasonably suspected of having occurred, in relation 
+to the accredited services provided by the entity within the Australian 
+Government Digital ID System.
+(2) Without limiting subrule (1), the policies must deal with the following matters:
+(a) the process by which an individual may make a complaint to the entity, 
+including the contact details that an individual may use for that purpose;
+(b) procedures for dealing with complaints made by individuals and a 
+simplified outline of those procedures;
+(c) timeframes for resolving complaints made by individuals.
+(3) An entity may comply with subrule (1) by developing and publishing a policy 
+relating to complaints by individuals:
+(a) generally; or
+(b) in relation to other matters as well as the matters mentioned in subrules (1) 
+and (2).
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 5  Trustmarks
+  
+  
+Rule 5.1
+20 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+Chapter 5—Trustmarks
+     
+5.1  Application of this Chapter
+(1) For the purposes of subsection 117(1) of the Act, this Chapter specifies the 
+digital ID trustmark that may be used by an accredited entity and the conditions 
+and requirements in relation to the use or display of that digital ID trustmark.
+(2) For the purposes of paragraph 168(1)(b) of the Act, this Chapter also specifies 
+the digital ID trustmark that may be used by an entity specified in rule 5.4 
+(authorised entity) and the conditions in relation to the use or display of that 
+digital ID trustmark.
+Note: An entity is liable to a civil penalty if:
+(a) an entity uses a digital ID trustmark, but the entity is not authorised by 
+subsection 118(1) of the Act to use the digital ID trustmark (see subsection 118(2) 
+of the Act); or
+(b) an entity is required by these rules to display a digital ID trustmark in 
+circumstances specified in these rules and the entity fails to comply with the 
+requirement (see section 119 of the Act).
+(3) To avoid doubt, this Chapter does not affect or limit a right or remedy provided 
+by any other law of the Commonwealth or a law of a State or Territory.
+(4) In this Chapter:
+authorised entity has the meaning given by subrule 5.1(2).
+Digital ID Accreditation Trustmark has the meaning given by rule 5.2.
+5.2  Digital ID trustmark
+The digital ID trustmark (Digital ID Accreditation Trustmark) specified in 
+item 1 of Schedule 1 may be used by an accredited entity and an authorised 
+entity.
+5.3  Use or display of digital ID trustmark—accredited entities
+(1) This rule prescribes the conditions and requirements in relation to the use or 
+display of the Digital ID Accreditation Trustmark by an accredited entity.
+Accredited identity exchange providers
+(2) The Digital ID Accreditation Trustmark may only be used or displayed by an 
+IXP:
+(a) on public-facing accredited services of the IXP; 
+(b) on any document that contains public-facing information related to 
+accredited services concerning: 
+(i) the accredited services of the IXP; or
+Authorised Version F2025C01220 registered 16/12/2025
+Trustmarks  Chapter 5
+  
+  
+Rule 5.4
+Digital ID Rules 2024 21
+Compilation No. 1 Compilation date: 19/11/2025
+(ii) the accredited services of another accredited entity that is operating 
+within the same digital ID system as the accredited services of the 
+IXP.
+Example: Subparagraph (2)(b)(ii) allows an IXP to publish a list of its service providers and 
+identify which of those providers are accredited entities by using the Digital ID 
+Accreditation Trustmark.
+Accredited entities
+(3) If an accredited entity uses or displays the Digital ID Accreditation Trustmark, 
+the accredited entity must also:
+(a) use and display a hyperlink to the Digital ID Accredited Entities Register 
+near the Digital ID Accreditation Trustmark;
+(b) if a document on which the Digital ID Accreditation Trustmark is or can be 
+printed—use and display the internet address of the Digital ID Accredited 
+Entities Register near the Digital ID Accreditation Trustmark; and
+(c) if the accredited entity also provides a service that is not an accredited 
+service—take reasonable steps to ensure when using or displaying the 
+Digital ID Accreditation Trustmark that it is clear which service is an 
+accredited service and which service is not an accredited service.
+(4) An entity ceases to be permitted to use or display the Digital ID Accreditation 
+Trustmark within 7 days of the entity’s accreditation being suspended or 
+revoked.
+5.4  Use or display of digital ID trustmark—authorised entities
+(1) This rule prescribes the conditions in relation to the use or display of the Digital 
+ID Accreditation Trustmark by an authorised entity.
+(2) For the purposes of this rule, the following entities are authorised entities:
+(a) the Digital ID Regulator;
+(b) the System Administrator;
+(c) the Information Commissioner;
+(d) the Secretary;
+(e) the Digital ID Data Standards Chair.
+(3) The Digital ID Accreditation Trustmark may only be used or displayed by an 
+authorised entity for the following purposes:
+(a) the performance of functions under or in relation to the Act;
+(b) education in relation to ‘this Act’ (as defined in section 9 of the Act);
+(c) promotion of the objects of ‘this Act’ (as defined in section 9 of the Act).
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 6  Record-keeping
+  
+  
+Rule 6.1
+22 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+Chapter 6—Record-keeping
+     
+6.1  Application of this Chapter
+(1) For the purposes of subsection 135(3) of the Act, an entity specified in 
+subrule (2) must keep records of the kind, for the period and in the manner 
+prescribed by this Chapter.
+(2) Subject to subrule (3), this Chapter applies to:
+(a) an entity that holds an approval to participate in the Australian Government 
+Digital ID System;
+(b) an entity whose approval to participate in the Australian Government 
+Digital ID System is suspended; and
+(c) an entity whose approval to participate in the Australian Government 
+Digital ID System has been revoked.
+(3) This Chapter does not apply to a relying party.
+(4) For the avoidance of doubt, if the accreditation of an entity is suspended or 
+revoked, this Chapter continues to apply to the entity after its accreditation has 
+been suspended or revoked.
+6.2  Record keeping requirements
+(1) An entity must keep a prescribed record for whichever of the following periods 
+ends later:
+(a) the period of 3 years that starts on the day the record was created;
+(b) the period of 3 years that starts on the day the record was last used by the 
+entity for the purpose of providing a service that the entity is or was 
+accredited to provide.
+(2) An entity must not destroy or de-identify information contained in a prescribed 
+record if:
+(a) the information is personal information; and
+(b) the information is not biometric information; and
+(c) the information was obtained by the entity in the course of providing 
+accredited services; and
+(d) the entity is required or authorised to retain the information by or under:
+(i) the Act, these rules or the Accreditation Rules;
+(ii) a direction issued by the Digital ID Regulator under section 127 of the 
+Act; or
+(iii) a court/tribunal order (within the meaning of the Privacy Act); and
+(e) the information relates to: 
+(i) any current or anticipated legal proceedings; or 
+(ii) any dispute resolution proceedings; or
+(iii) a current compliance or enforcement investigation under ‘this Act’ (as 
+defined in section 9 of the Act);
+Authorised Version F2025C01220 registered 16/12/2025
+Record-keeping  Chapter 6
+  
+  
+Rule 6.2
+Digital ID Rules 2024 23
+Compilation No. 1 Compilation date: 19/11/2025
+to which the entity is a party.
+(3) In this rule:
+prescribed record, in relation to an entity, means a record that:
+(a) is a log required by subrule 4.20(7) of the Accreditation Rules; and
+(b) contains personal information.
+Authorised Version F2025C01220 registered 16/12/2025
+Chapter 7  Application, saving and transitional provisions
+  
+  
+Rule 7.1
+24 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+Chapter 7—Application, saving and transitional 
+provisions
+  
+7.1  Application of amendments made by the Digital ID Amendment (Redress 
+Framework and Other Measures) Rules 2025
+(1) In this rule:
+amending Rules means the Digital ID Amendment (Redress Framework and 
+Other Measures) Rules 2025.
+commencement day means the day on which the amending Rules commence.
+(2) Subrules 4.2(7), (8) and (9), as added by the amending Rules, apply in relation to 
+notifications received on or after the commencement day.
+(3) Rules 4A.2 and 4A.3, as inserted by the amending Rules, apply in relation to 
+incidents that occur, or are reasonably suspected of having occurred, on or after 
+the commencement day.
+(4) Rules 4A.7 and 4A.8, as inserted by the amending Rules, apply to entities to 
+which Part 5 of Chapter 4A applies on and after 1 July 2026.
+Authorised Version F2025C01220 registered 16/12/2025
+Digital ID trustmark  Schedule 1
+  
+Digital ID Rules 2024 25
+Compilation No. 1 Compilation date: 19/11/2025
+Schedule 1—Digital ID trustmark
+     
+1  Digital ID trustmark for accredited entities
+The following digital ID trustmark is specified for the purpose of subrule 5.2.
+Authorised Version F2025C01220 registered 16/12/2025
+Endnotes
+Endnote 1—About the endnotes
+26 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+Endnotes
+Endnote 1—About the endnotes
+The endnotes provide information about this compilation and the compiled law.
+The following endnotes are included in every compilation:
+Endnote 1—About the endnotes
+Endnote 2—Abbreviation key
+Endnote 3—Legislation history
+Endnote 4—Amendment history
+Abbreviation key—Endnote 2
+The abbreviation key sets out abbreviations that may be used in the endnotes.
+Legislation history and amendment history—Endnotes 3 and 4
+Amending laws are annotated in the legislation history and amendment history.
+The legislation history in endnote 3 provides information about each law that has amended (or 
+will amend) the compiled law. The information includes commencement details for amending 
+laws and details of any application, saving or transitional provisions that are not included in 
+this compilation.
+The amendment history in endnote 4 provides information about amendments at the provision 
+(generally section or equivalent) level. It also includes information about any provision of the 
+compiled law that has been repealed in accordance with a provision of the law.
+Editorial changes
+The Legislation Act 2003 authorises First Parliamentary Counsel to make editorial and 
+presentational changes to a compiled law in preparing a compilation of the law for 
+registration. The changes must not change the effect of the law. Editorial changes take effect 
+from the compilation registration date.
+If the compilation includes editorial changes, the endnotes include a brief outline of the 
+changes in general terms. Full details of any changes can be obtained from the Office of 
+Parliamentary Counsel.
+Misdescribed amendments
+A misdescribed amendment is an amendment that does not accurately describe how an 
+amendment is to be made. If, despite the misdescription, the amendment can be given effect 
+as intended, then the misdescribed amendment can be incorporated through an editorial 
+change made under section 15V of the Legislation Act 2003.
+If a misdescribed amendment cannot be given effect as intended, the amendment is not 
+incorporated and “(md not incorp)” is added to the amendment history.
+Authorised Version F2025C01220 registered 16/12/2025
+Endnotes
+Endnote 2—Abbreviation key
+Digital ID Rules 2024 27
+Compilation No. 1 Compilation date: 19/11/2025
+Endnote 2—Abbreviation key
+ad = added or inserted orig = original
+am = amended p = page(s)
+amdt = amendment para = paragraph(s)/subparagraph(s)
+C[x] = Compilation No. x /sub-subparagraph(s)
+ch = Chapter(s) pres = present
+cl = clause(s) prev = previous
+cont. = continued (prev…) = previously
+def = definition(s) pt = Part(s)
+Dict = Dictionary r = regulation(s)/Court rule(s)
+disallowed = disallowed by Parliament reloc = relocated
+div = Division(s) renum = renumbered
+ed = editorial change rep = repealed
+exp = expires/expired or ceases/ceased to have rs = repealed and substituted
+effect s = section(s)/subsection(s)
+gaz = gazette /rule(s)/subrule(s)/order(s)/suborder(s)
+LA = Legislation Act 2003 sch = Schedule(s)
+LIA = Legislative Instruments Act 2003 SLI = Select Legislative Instrument
+(md) = misdescribed amendment can be given SR = Statutory Rules
+effect sub ch = Sub-Chapter(s)
+(md not incorp) = misdescribed amendment sub div = Subdivision(s)
+cannot be given effect sub pt = Subpart(s)
+mod = modified/modification underlining = whole or part not
+No. = Number(s) commenced or to be commenced
+Ord = Ordinance
+Authorised Version F2025C01220 registered 16/12/2025
+Endnotes
+Endnote 3—Legislation history
+28 Digital ID Rules 2024
+Compilation No. 1 Compilation date: 19/11/2025
+Endnote 3—Legislation history
+Name Registration Commencement Application, saving and 
+transitional provisions
+Digital ID Rules 2024 11 Nov 2024 (F2024L01430) 30 Nov 2024 (s 1.2)
+Digital ID Amendment 
+(Redress Framework and 
+Other Measures) Rules 2025
+18 Nov 2025 (F2025L01393) 19 Nov 2025 (s 2(1) item 1) —
+Authorised Version F2025C01220 registered 16/12/2025
+Endnotes
+Endnote 4—Amendment history
+Digital ID Rules 2024 29
+Compilation No. 1 Compilation date: 19/11/2025
+Endnote 4—Amendment history
+Provision affected How affected
+Chapter 1
+s 1.2................................................. rep LA s 48D
+s 1.4................................................. am F2025L01393
+s 1.5................................................. ad F2025L01393
+Chapter 2
+s 2.2................................................. am F2025L01393
+s 2.3................................................. ad F2025L01393
+Chapter 3
+s 3.1................................................. am F2025L01393
+Chapter 4
+s 4.2................................................. am F2025L01393
+Chapter 4A
+Chapter 4A...................................... ad F2025L01393
+Part 1
+s 4A.1.............................................. ad F2025L01393
+Part 2
+s 4A.2.............................................. ad F2025L01393
+Part 3
+s 4A.3.............................................. ad F2025L01393
+s 4A.4.............................................. ad F2025L01393
+Part 4
+s 4A.5.............................................. ad F2025L01393
+Part 5
+s 4A.6.............................................. ad F2025L01393
+s 4A.7.............................................. ad F2025L01393
+s 4A.8.............................................. ad F2025L01393
+Chapter 5
+s 5.4................................................. am F2025L01393
+Chapter 7
+Chapter 7......................................... ad F2025L01393
+s 7.1................................................. ad F2025L01393
+Authorised Version F2025C01220 registered 16/12/2025
