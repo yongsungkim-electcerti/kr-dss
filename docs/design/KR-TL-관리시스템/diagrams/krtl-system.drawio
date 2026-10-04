@@ -1,111 +1,119 @@
 <mxfile host="drawio" agent="claude-code">
   <diagram id="krtl-system" name="KR-TL 시스템 구성도">
-    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1220" math="0" shadow="0">
+    <mxGraphModel dx="1840" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="860" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
 
-        <mxCell id="title" value="KR-TL 신뢰목록 관리 체계 — 시스템 구성도" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="40" y="10" width="700" height="40" as="geometry"/>
+        <mxCell id="title" value="KR-TL 시스템 구성도" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="500" height="40" as="geometry"/>
         </mxCell>
 
         <!-- ===== Zones ===== -->
         <mxCell id="z_tsp" value="인증사업자" style="rounded=1;arcSize=4;dashed=1;fillColor=#eef7ee;strokeColor=#3c8d40;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="40" y="130" width="250" height="160" as="geometry"/>
+          <mxGeometry x="40" y="130" width="250" height="130" as="geometry"/>
         </mxCell>
-        <mxCell id="z_user" value="사용자 (서명자)" style="rounded=1;arcSize=4;dashed=1;fillColor=#fef9e7;strokeColor=#b7950b;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="40" y="340" width="250" height="160" as="geometry"/>
+        <mxCell id="z_user" value="사용자" style="rounded=1;arcSize=4;dashed=1;fillColor=#fef9e7;strokeColor=#b7950b;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="40" y="310" width="250" height="120" as="geometry"/>
         </mxCell>
-        <mxCell id="z_mgmt" value="① 관리 시스템 (폐쇄망)" style="rounded=1;arcSize=2;fillColor=#fdecea;strokeColor=#c0392b;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="z_mgmt" value="관리 시스템 (폐쇄망)" style="rounded=1;arcSize=2;fillColor=#fdecea;strokeColor=#c0392b;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="340" y="130" width="620" height="560" as="geometry"/>
         </mxCell>
-        <mxCell id="z_dist" value="② 배포 시스템" style="rounded=1;arcSize=2;fillColor=#eaf2fb;strokeColor=#2e75b6;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="z_dist" value="배포 시스템" style="rounded=1;arcSize=2;fillColor=#eaf2fb;strokeColor=#2e75b6;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="1000" y="130" width="340" height="560" as="geometry"/>
         </mxCell>
         <mxCell id="z_dmz" value="DMZ" style="rounded=1;arcSize=4;dashed=1;fillColor=#fff4e0;strokeColor=#d68910;verticalAlign=top;align=left;spacingLeft=8;spacingTop=2;fontStyle=1;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="1030" y="170" width="280" height="110" as="geometry"/>
         </mxCell>
-        <mxCell id="z_rp" value="이용자 (검증)" style="rounded=1;arcSize=3;dashed=1;fillColor=#f3eefa;strokeColor=#7d5ba6;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="1400" y="130" width="400" height="300" as="geometry"/>
+        <mxCell id="z_rp" value="이용자" style="rounded=1;arcSize=3;dashed=1;fillColor=#f3eefa;strokeColor=#7d5ba6;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="130" width="400" height="280" as="geometry"/>
         </mxCell>
 
-        <!-- ===== Actors / external ===== -->
-        <mxCell id="tsp" value="&lt;b&gt;인증사업자 시스템&lt;/b&gt;&lt;br&gt;CA · OCSP · TSA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3c8d40;" vertex="1" parent="1">
-          <mxGeometry x="75" y="180" width="180" height="70" as="geometry"/>
+        <!-- ===== External ===== -->
+        <mxCell id="ca" value="CA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3c8d40;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="55" y="180" width="70" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="user" value="&lt;b&gt;사용자&lt;/b&gt;&lt;br&gt;인증서 보유 · 문서 전자서명&lt;br&gt;(KR-AdES)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b7950b;" vertex="1" parent="1">
-          <mxGeometry x="75" y="390" width="180" height="70" as="geometry"/>
+        <mxCell id="ocsp" value="OCSP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3c8d40;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="135" y="180" width="70" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="admin" value="&lt;b&gt;관리자 (KISA)&lt;/b&gt; 운영 · 심사 · 승인 · 감사" style="shape=umlActor;verticalLabelPosition=middle;labelPosition=right;align=left;spacingLeft=8;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="640" y="55" width="30" height="55" as="geometry"/>
+        <mxCell id="tsa" value="TSA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3c8d40;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="215" y="180" width="70" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="user" value="사용자" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b7950b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="355" width="210" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin" value="&lt;b&gt;관리자&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=middle;labelPosition=right;align=left;spacingLeft=8;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#c0392b;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="645" y="55" width="30" height="55" as="geometry"/>
         </mxCell>
 
         <!-- ===== Management ===== -->
-        <mxCell id="con" value="&lt;b&gt;관리 콘솔&lt;/b&gt;&lt;br&gt;화면 · 권한(RBAC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="560" y="170" width="200" height="60" as="geometry"/>
+        <mxCell id="con" value="관리 콘솔" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="175" width="200" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="pgw" value="&lt;b&gt;사업자 연계&lt;/b&gt;&lt;br&gt;제출 접수 · 자동 수집" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="370" y="290" width="170" height="70" as="geometry"/>
+        <mxCell id="pgw" value="사업자 연계 서버" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="295" width="170" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="reg" value="&lt;b&gt;신뢰정보 관리&lt;/b&gt;&lt;br&gt;사업자 · 서비스 · 인증서&lt;br&gt;상태 이력 · 심사" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="580" y="290" width="170" height="70" as="geometry"/>
+        <mxCell id="reg" value="신뢰정보 관리 서버" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="295" width="170" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="pub" value="&lt;b&gt;TL 발행&lt;/b&gt;&lt;br&gt;편성 · 승인 · 서명&lt;br&gt;배포 패키지" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="780" y="290" width="150" height="70" as="geometry"/>
+        <mxCell id="pub" value="TL 발행 서버" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="295" width="150" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="aud" value="감사로그&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;모든 변경·승인·서명&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fillColor=#ffffff;strokeColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="390" y="430" width="130" height="70" as="geometry"/>
+        <mxCell id="aud" value="감사로그 DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fillColor=#ffffff;strokeColor=#c0392b;" vertex="1" parent="1">
+          <mxGeometry x="395" y="430" width="120" height="65" as="geometry"/>
         </mxCell>
-        <mxCell id="mdb" value="관리 DB&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;신뢰정보 원천 · TL 버전&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fillColor=#ffffff;strokeColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="590" y="430" width="150" height="70" as="geometry"/>
+        <mxCell id="mdb" value="관리 DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fillColor=#ffffff;strokeColor=#c0392b;" vertex="1" parent="1">
+          <mxGeometry x="605" y="430" width="120" height="65" as="geometry"/>
         </mxCell>
-        <mxCell id="hsm" value="&lt;b&gt;HSM&lt;/b&gt;&lt;br&gt;TL 서명키" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="795" y="430" width="120" height="60" as="geometry"/>
+        <mxCell id="hsm" value="HSM" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="795" y="435" width="120" height="55" as="geometry"/>
         </mxCell>
-        <mxCell id="stat" value="&lt;b&gt;통계관리&lt;/b&gt;&lt;br&gt;기관별 수신 현황" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="590" y="570" width="150" height="60" as="geometry"/>
+        <mxCell id="sdb" value="통계 DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fillColor=#ffffff;strokeColor=#c0392b;" vertex="1" parent="1">
+          <mxGeometry x="395" y="565" width="120" height="65" as="geometry"/>
         </mxCell>
-        <mxCell id="link" value="&lt;b&gt;연계&lt;/b&gt;&lt;br&gt;반출 · 회수" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;" vertex="1" parent="1">
-          <mxGeometry x="780" y="570" width="150" height="60" as="geometry"/>
+        <mxCell id="stat" value="통계 서버" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="570" width="150" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="link" value="연계 서버" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="570" width="150" height="55" as="geometry"/>
         </mxCell>
 
         <!-- ===== Distribution ===== -->
-        <mxCell id="web" value="&lt;b&gt;배포 WEB&lt;/b&gt;&lt;br&gt;TLS · 프록시" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d68910;" vertex="1" parent="1">
-          <mxGeometry x="1080" y="200" width="180" height="60" as="geometry"/>
+        <mxCell id="web" value="배포 WEB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d68910;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="205" width="180" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="dwas" value="&lt;b&gt;배포 WAS&lt;/b&gt;&lt;br&gt;TL 배포 · 버전 확인&lt;br&gt;접속 통계 수집 · 패키지 게시" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e75b6;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="330" width="220" height="80" as="geometry"/>
+        <mxCell id="dwas" value="배포 WAS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e75b6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="340" width="220" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="repo" value="배포 저장소&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;서명된 TL · 이력&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fillColor=#ffffff;strokeColor=#2e75b6;" vertex="1" parent="1">
-          <mxGeometry x="1040" y="480" width="120" height="70" as="geometry"/>
+        <mxCell id="repo" value="배포 저장소" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fillColor=#ffffff;strokeColor=#2e75b6;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="480" width="120" height="65" as="geometry"/>
         </mxCell>
-        <mxCell id="ddb" value="배포 DB&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;배포 이력 · 접속 기록&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fillColor=#ffffff;strokeColor=#2e75b6;" vertex="1" parent="1">
-          <mxGeometry x="1190" y="480" width="120" height="70" as="geometry"/>
+        <mxCell id="ddb" value="배포 DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fillColor=#ffffff;strokeColor=#2e75b6;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="480" width="120" height="65" as="geometry"/>
         </mxCell>
 
         <!-- ===== Relying party ===== -->
-        <mxCell id="ba" value="&lt;b&gt;브라우저 에이전트&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d5ba6;" vertex="1" parent="1">
-          <mxGeometry x="1430" y="175" width="160" height="50" as="geometry"/>
+        <mxCell id="ba" value="브라우저 에이전트" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d5ba6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="180" width="200" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="vr" value="&lt;b&gt;검증 결과&lt;/b&gt;&lt;br&gt;PASSED · FAILED · INDETERMINATE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d5ba6;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1610" y="175" width="170" height="50" as="geometry"/>
-        </mxCell>
-        <mxCell id="rp" value="&lt;b&gt;이용기관 서비스 (KR-DSS SDK)&lt;/b&gt;&lt;br&gt;TL 동기화 · TL 서명 검증 · 캐시&lt;br&gt;전자서명 검증 (TL 대조 · 시점별 상태)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d5ba6;" vertex="1" parent="1">
-          <mxGeometry x="1430" y="300" width="350" height="90" as="geometry"/>
+        <mxCell id="rp" value="이용기관 시스템 (KR-DSS SDK)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d5ba6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="315" width="340" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- ===== Edges: external ===== -->
-        <mxCell id="if01" value="IF-01 제출 · IF-02 자동 수집" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3c8d40;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;startArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="tsp" target="pgw">
+        <!-- ===== Edges ===== -->
+        <mxCell id="if01" value="IF-01 · IF-02" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3c8d40;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;startArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="z_tsp" target="pgw">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="if03" value="IF-03" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="admin" target="con">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="if12" value="IF-12 인증서 발급" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3c8d40;strokeWidth=2;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="tsp" target="user">
+        <mxCell id="if12" value="IF-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3c8d40;strokeWidth=2;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.8;exitY=1;entryX=0.24;entryY=0;" edge="1" parent="1" source="ca" target="user">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="if15" value="IF-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3c8d40;strokeWidth=2;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.85;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="user" target="tsa">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- ===== Edges: management internal ===== -->
         <mxCell id="e_con_reg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;dashed=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="con" target="reg">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
@@ -121,23 +129,33 @@
         <mxCell id="e_reg_mdb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="reg" target="mdb">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
+        <mxCell id="e_reg_aud" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;exitX=0.2;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="reg" target="aud">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="614" y="395"/>
+              <mxPoint x="455" y="395"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="if06" value="IF-06" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b7950b;strokeWidth=2;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;startArrow=classic;" edge="1" parent="1" source="pub" target="hsm">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="if07" value="IF-07" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;strokeWidth=2;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=1;exitY=0.8;entryX=1;entryY=0.5;" edge="1" parent="1" source="pub" target="link">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="945" y="346"/>
-              <mxPoint x="945" y="600"/>
+              <mxPoint x="945" y="343"/>
+              <mxPoint x="945" y="597"/>
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="if10" value="IF-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;strokeWidth=2;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="link" target="stat">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
+        <mxCell id="e_stat_sdb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;exitX=0;exitY=0.5;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="stat" target="sdb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
 
-        <!-- ===== Edges: management <-> distribution ===== -->
-        <mxCell id="if08" value="IF-08 반출 · IF-09 회수&lt;br&gt;(관리 → 배포 단일 채널)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;strokeWidth=4;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="link" target="dwas">
+        <mxCell id="if08" value="IF-08 · IF-09" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;strokeWidth=4;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="link" target="dwas">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="855" y="665"/>
@@ -147,7 +165,6 @@
           </mxGeometry>
         </mxCell>
 
-        <!-- ===== Edges: distribution internal ===== -->
         <mxCell id="e_web_dwas" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2e75b6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="web" target="dwas">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
@@ -158,45 +175,34 @@
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- ===== Edges: relying party ===== -->
         <mxCell id="if11a" value="IF-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7d5ba6;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=1;entryY=0.3;" edge="1" parent="1" source="ba" target="web">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="if11b" value="IF-11 TL 조회·다운로드" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7d5ba6;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=1;entryY=0.7;" edge="1" parent="1" source="rp" target="web">
+        <mxCell id="if11b" value="IF-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7d5ba6;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=1;entryY=0.7;" edge="1" parent="1" source="rp" target="web">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1370" y="345"/>
-              <mxPoint x="1370" y="242"/>
+              <mxPoint x="1370" y="240"/>
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_rp_vr" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7d5ba6;exitX=0.75;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="rp" target="vr">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="if13" value="IF-13 전자서명 문서 제출" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b7950b;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.35;entryY=1;" edge="1" parent="1" source="user" target="rp">
+        <mxCell id="if13" value="IF-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b7950b;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.35;entryY=1;" edge="1" parent="1" source="user" target="rp">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="165" y="740"/>
-              <mxPoint x="1552" y="740"/>
+              <mxPoint x="1549" y="740"/>
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="if14" value="IF-14 인증서 상태 확인 (OCSP · CRL) · 타임스탬프" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3c8d40;strokeWidth=2;dashed=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.8;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="rp" target="tsp">
+        <mxCell id="if14" value="IF-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3c8d40;strokeWidth=2;dashed=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.8;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="rp" target="ocsp">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1710" y="790"/>
+              <mxPoint x="1702" y="790"/>
               <mxPoint x="20" y="790"/>
-              <mxPoint x="20" y="215"/>
+              <mxPoint x="20" y="105"/>
+              <mxPoint x="170" y="105"/>
             </Array>
           </mxGeometry>
-        </mxCell>
-
-        <!-- ===== Legend ===== -->
-        <mxCell id="legend" value="&lt;table style=&quot;border-collapse:collapse;font-size:12px&quot; cellpadding=&quot;3&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;b&gt;인터페이스와 데이터&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-01&lt;/b&gt;&lt;/td&gt;&lt;td&gt;인증사업자 → 사업자 연계&lt;/td&gt;&lt;td&gt;신뢰정보 제출 · 상태 변경 신고 (서명된 제출서)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-02&lt;/b&gt;&lt;/td&gt;&lt;td&gt;사업자 연계 → 인증사업자&lt;/td&gt;&lt;td&gt;서비스 인증서 · 상태 자동 수집&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-03&lt;/b&gt;&lt;/td&gt;&lt;td&gt;관리자 → 관리 콘솔&lt;/td&gt;&lt;td&gt;심사 · 상태 변경 · 발행 승인 · 통계/감사 조회&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-04&lt;/b&gt;&lt;/td&gt;&lt;td&gt;사업자 연계 → 신뢰정보 관리&lt;/td&gt;&lt;td&gt;제출 건 · 변경 후보 (심사 대기)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-05&lt;/b&gt;&lt;/td&gt;&lt;td&gt;신뢰정보 관리 → TL 발행&lt;/td&gt;&lt;td&gt;승인된 신뢰정보 스냅숏&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-06&lt;/b&gt;&lt;/td&gt;&lt;td&gt;TL 발행 ↔ HSM&lt;/td&gt;&lt;td&gt;서명 대상 해시 → 서명값&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-07&lt;/b&gt;&lt;/td&gt;&lt;td&gt;TL 발행 → 연계&lt;/td&gt;&lt;td&gt;배포 패키지 (서명 TL · 매니페스트)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#ffffff;strokeColor=#bfbfbf;" vertex="1" parent="1">
-          <mxGeometry x="40" y="830" width="860" height="250" as="geometry"/>
-        </mxCell>
-        <mxCell id="legend2" value="&lt;table style=&quot;border-collapse:collapse;font-size:12px&quot; cellpadding=&quot;3&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;3&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-08&lt;/b&gt;&lt;/td&gt;&lt;td&gt;연계 → 배포 WAS&lt;/td&gt;&lt;td&gt;배포 패키지 반출 (push)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-09&lt;/b&gt;&lt;/td&gt;&lt;td&gt;연계 → 배포 WAS&lt;/td&gt;&lt;td&gt;배포 결과 · 접속 기록 회수 (pull)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-10&lt;/b&gt;&lt;/td&gt;&lt;td&gt;연계 → 통계관리&lt;/td&gt;&lt;td&gt;접속 기록 적재&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-11&lt;/b&gt;&lt;/td&gt;&lt;td&gt;이용자 → 배포 시스템&lt;/td&gt;&lt;td&gt;TL 버전 확인 · 다운로드 (서명된 TL)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-12&lt;/b&gt;&lt;/td&gt;&lt;td&gt;인증사업자 → 사용자&lt;/td&gt;&lt;td&gt;인증서 발급 (기존 체계)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-13&lt;/b&gt;&lt;/td&gt;&lt;td&gt;사용자 → 이용자&lt;/td&gt;&lt;td&gt;전자서명 문서 (KR-AdES)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;IF-14&lt;/b&gt;&lt;/td&gt;&lt;td&gt;이용자 → 인증사업자&lt;/td&gt;&lt;td&gt;OCSP · CRL · 타임스탬프 (기존 체계)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;br&gt;&lt;b&gt;원칙&lt;/b&gt; ① TL 서명은 관리 시스템 HSM에서만 ② 관리 ↔ 배포는 채널 하나, 관리 쪽에서만 연결 ③ DMZ에는 WEB만" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#ffffff;strokeColor=#bfbfbf;" vertex="1" parent="1">
-          <mxGeometry x="920" y="830" width="880" height="250" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
