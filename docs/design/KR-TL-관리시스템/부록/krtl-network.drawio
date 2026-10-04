@@ -13,7 +13,7 @@
         <mxCell id="z_net" value="인터넷" style="rounded=1;arcSize=3;dashed=1;fillColor=#f5f5f5;strokeColor=#7f7f7f;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="20" y="70" width="240" height="380" as="geometry"/>
         </mxCell>
-        <mxCell id="z_dmz" value="DMZ" style="rounded=1;arcSize=3;dashed=1;fillColor=#fff4e0;strokeColor=#d68910;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+        <mxCell id="z_dmz" value="외부 구역" style="rounded=1;arcSize=3;dashed=1;fillColor=#fff4e0;strokeColor=#d68910;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
           <mxGeometry x="290" y="70" width="230" height="420" as="geometry"/>
         </mxCell>
         <mxCell id="z_dist" value="배포 내부존 (배포 시스템)" style="rounded=1;arcSize=3;dashed=1;fillColor=#eaf2fb;strokeColor=#2e75b6;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
@@ -37,7 +37,7 @@
           <mxGeometry x="60" y="300" width="160" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- DMZ -->
+        <!-- 외부 구역 -->
         <mxCell id="web" value="&lt;b&gt;배포 WEB&lt;/b&gt;&lt;br&gt;TLS 종단 · WAF&lt;br&gt;리버스 프록시 (데이터 없음)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d68910;" vertex="1" parent="1">
           <mxGeometry x="325" y="215" width="160" height="80" as="geometry"/>
         </mxCell>
@@ -177,7 +177,7 @@
         </mxCell>
 
         <!-- Legend -->
-        <mxCell id="legend" value="&lt;b&gt;채널&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#d68910&quot;&gt;■&lt;/font&gt; CH-1 배포 채널: 인터넷 → DMZ WEB → 배포 WAS (443)&lt;br&gt;&lt;font color=&quot;#7d5ba6&quot;&gt;■&lt;/font&gt; CH-2 관리자 접근 채널: 전용 단말 → 접근통제(MFA) → 관리 콘솔·통계&lt;br&gt;&lt;font color=&quot;#3c8d40&quot;&gt;■&lt;/font&gt; CH-3 사업자 연계 채널: 인정사업자 → 기존 VPN → 사업자 연계 서버&lt;br&gt;&lt;font color=&quot;#c0392b&quot;&gt;■&lt;/font&gt; CH-4 관리↔배포 단일 연계 채널: 방화벽(FW-3) 통제, 세션은 관리망에서만 시작&lt;br&gt;&lt;br&gt;&lt;b&gt;원칙&lt;/b&gt;: DMZ에는 WEB만 둔다(WAS·데이터 없음). TL 서명은 관리망 HSM에서만. 배포 시스템은 서명된 패키지를 검증·게시·전송만 한다." style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontSize=12;fillColor=#ffffff;strokeColor=#bfbfbf;" vertex="1" parent="1">
+        <mxCell id="legend" value="&lt;b&gt;채널&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#d68910&quot;&gt;■&lt;/font&gt; CH-1 배포 채널: 인터넷 → 배포 WEB → 배포 WAS (443)&lt;br&gt;&lt;font color=&quot;#7d5ba6&quot;&gt;■&lt;/font&gt; CH-2 관리자 접근 채널: 전용 단말 → 접근통제(MFA) → 관리 콘솔·통계&lt;br&gt;&lt;font color=&quot;#3c8d40&quot;&gt;■&lt;/font&gt; CH-3 사업자 연계 채널: 인정사업자 → 기존 VPN → 사업자 연계 서버&lt;br&gt;&lt;font color=&quot;#c0392b&quot;&gt;■&lt;/font&gt; CH-4 관리↔배포 단일 연계 채널: 방화벽(FW-3) 통제, 세션은 관리망에서만 시작&lt;br&gt;&lt;br&gt;&lt;b&gt;원칙&lt;/b&gt;: 외부 구역에는 WEB만 둔다(WAS·데이터 없음). TL 서명은 관리망 HSM에서만. 배포 시스템은 서명된 패키지를 검증·게시·전송만 한다." style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontSize=12;fillColor=#ffffff;strokeColor=#bfbfbf;" vertex="1" parent="1">
           <mxGeometry x="20" y="560" width="860" height="160" as="geometry"/>
         </mxCell>
       </root>
