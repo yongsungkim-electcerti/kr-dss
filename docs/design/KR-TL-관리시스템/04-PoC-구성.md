@@ -14,9 +14,10 @@
 | KISA Root CA · KISA CA | `krdss-cli cert`로 생성한 Root·하위 CA 키스토어 | 오프라인 Root → 파일 키스토어. 기존 New-KISA RootCA 키스토어 재사용 검토 |
 | TL 서명 인증서 | KISA CA가 발급 (`krdss-cli cert`) | — |
 | HSM | PKCS#12 소프트 키스토어 (옵션: `poc-hsm` :8092) | 서명 경로는 인터페이스 하나로 감춰 교체 가능 |
-| 관리 DB · 감사로그 DB | H2 (파일 모드) | — |
 | 배포 시스템 (배포 WEB · 배포 WAS) | `poc-krtl-dist` (:8083, 신규). 수신 현황 화면 포함 | DMZ WEB 생략. 연계 API는 별도 포트(:9443)로 분리 |
-| 배포 저장소 · 배포 DB | `output/krtl-dist/` + H2 | — |
+| 배포 저장소 | `output/krtl-dist/` | — |
+
+> 서버 내부 데이터 저장은 각 모듈의 H2(파일 모드)를 쓴다. 구성도에는 그리지 않는다.
 | CA · OCSP · TSA | `poc-tsp-sim` (:8082) | CA·OCSP 있음. TSA·제출 기능 추가 |
 | 가입자 | `krdss-cli` 또는 `poc-relying-party` 서명 화면 | 타임스탬프 포함/미포함 서명 생성 |
 | 이용자 시스템 (KR-DSS SDK) | `poc-relying-party` (:8080) + `kr-tl-client` | 검증 결과 화면에 **사용한 TL 버전** 표시 |
