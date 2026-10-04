@@ -1,197 +1,51 @@
-<mxfile host="drawio" agent="claude-code">
-  <diagram id="krtl-system" name="KR-TL 시스템 구성도">
-    <mxGraphModel dx="2140" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2170" pageHeight="740" math="0" shadow="0">
-      <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-
-        <mxCell id="title" value="KR-TL 시스템 구성도" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="40" y="10" width="500" height="40" as="geometry"/>
-        </mxCell>
-
-        <!-- ===== Groups ===== -->
-        <mxCell id="g_trust" value="신뢰체계 관리 시스템 (KISA · 신뢰앵커)" style="rounded=1;arcSize=2;fillColor=none;strokeColor=#404040;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=bottom;align=center;spacingBottom=6;fontStyle=1;fontSize=17;" vertex="1" parent="1">
-          <mxGeometry x="322" y="120" width="1296" height="570" as="geometry"/>
-        </mxCell>
-        <mxCell id="g_env" value="이용환경" style="rounded=1;arcSize=2;fillColor=none;strokeColor=#404040;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=bottom;align=center;spacingBottom=6;fontStyle=1;fontSize=17;" vertex="1" parent="1">
-          <mxGeometry x="1645" y="120" width="430" height="440" as="geometry"/>
-        </mxCell>
-        <mxCell id="t11" value="IF-11 전자서명 제출" style="text;html=1;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;rotation=90;" vertex="1" parent="1">
-          <mxGeometry x="2035" y="400" width="130" height="20" as="geometry"/>
-        </mxCell>
-
-        <!-- ===== Zones ===== -->
-        <mxCell id="z_tsp" value="인증사업자" style="rounded=1;arcSize=4;dashed=1;fillColor=#eef7ee;strokeColor=#3c8d40;verticalAlign=bottom;spacingBottom=4;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="40" y="130" width="250" height="130" as="geometry"/>
-        </mxCell>
-        <mxCell id="z_mgmt" value="관리 시스템 (폐쇄망)" style="rounded=1;arcSize=2;fillColor=#fdecea;strokeColor=#c0392b;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="340" y="130" width="875" height="500" as="geometry"/>
-        </mxCell>
-        <mxCell id="z_dist" value="배포 시스템" style="rounded=1;arcSize=2;fillColor=#eaf2fb;strokeColor=#2e75b6;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="1260" y="130" width="340" height="500" as="geometry"/>
-        </mxCell>
-        <mxCell id="z_dmz" value="DMZ" style="rounded=1;arcSize=4;dashed=1;fillColor=#fff4e0;strokeColor=#d68910;verticalAlign=top;align=left;spacingLeft=8;spacingTop=2;fontStyle=1;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1290" y="170" width="280" height="110" as="geometry"/>
-        </mxCell>
-        <mxCell id="z_br" value="브라우저" style="rounded=1;arcSize=4;dashed=1;fillColor=#e8f6f8;strokeColor=#1a8a9a;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="1660" y="270" width="400" height="100" as="geometry"/>
-        </mxCell>
-        <mxCell id="z_rp" value="이용자" style="rounded=1;arcSize=4;dashed=1;fillColor=#f3eefa;strokeColor=#7d5ba6;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="1660" y="410" width="400" height="110" as="geometry"/>
-        </mxCell>
-
-        <!-- ===== External ===== -->
-        <mxCell id="ca" value="CA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3c8d40;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="55" y="180" width="70" height="50" as="geometry"/>
-        </mxCell>
-        <mxCell id="ocsp" value="OCSP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3c8d40;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="135" y="180" width="70" height="50" as="geometry"/>
-        </mxCell>
-        <mxCell id="tsa" value="TSA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3c8d40;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="215" y="180" width="70" height="50" as="geometry"/>
-        </mxCell>
-        <mxCell id="admin" value="&lt;b&gt;관리자&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=middle;labelPosition=right;align=left;spacingLeft=8;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#c0392b;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="685" y="12" width="30" height="55" as="geometry"/>
-        </mxCell>
-
-        <!-- ===== Management ===== -->
-        <mxCell id="con" value="관리 콘솔" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="600" y="175" width="200" height="50" as="geometry"/>
-        </mxCell>
-        <mxCell id="pgw" value="사업자 연계 서버" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="295" width="150" height="60" as="geometry"/>
-        </mxCell>
-        <mxCell id="reg" value="신뢰정보 관리 서버" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="615" y="295" width="160" height="60" as="geometry"/>
-        </mxCell>
-        <mxCell id="pub" value="TL 발행 서버" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="865" y="295" width="150" height="60" as="geometry"/>
-        </mxCell>
-
-
-        <!-- ===== KISA PKI ===== -->
-        <mxCell id="z_pki" value="KISA 인증체계" style="rounded=1;arcSize=4;dashed=1;fillColor=#fffaf0;strokeColor=#b7950b;verticalAlign=top;align=left;spacingLeft=8;spacingTop=2;fontStyle=1;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1045" y="165" width="155" height="390" as="geometry"/>
-        </mxCell>
-        <mxCell id="root" value="KISA Root CA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1062" y="195" width="120" height="45" as="geometry"/>
-        </mxCell>
-        <mxCell id="kca" value="KISA CA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1062" y="295" width="120" height="45" as="geometry"/>
-        </mxCell>
-        <mxCell id="tlc" value="TL 서명 인증서" style="shape=note;size=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b7950b;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1062" y="395" width="120" height="45" as="geometry"/>
-        </mxCell>
-        <mxCell id="hsm" value="HSM" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1062" y="480" width="120" height="50" as="geometry"/>
-        </mxCell>
-        <mxCell id="if17" value="IF-14&lt;br&gt;CA 인증서 발급" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b7950b;strokeWidth=2;fontSize=11;fontStyle=1;labelBackgroundColor=#fffaf0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="root" target="kca">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="if18" value="IF-15&lt;br&gt;TL 서명 인증서 발급" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b7950b;strokeWidth=2;fontSize=11;fontStyle=1;labelBackgroundColor=#fffaf0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="kca" target="tlc">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e_tlc_hsm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b7950b;strokeWidth=2;endArrow=none;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="tlc" target="hsm">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="if06" value="IF-06&lt;br&gt;TL 서명" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b7950b;strokeWidth=2;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;startArrow=classic;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="pub" target="hsm">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="980" y="505"/>
-            </Array>
-          </mxGeometry>
-        </mxCell>
-
-
-        <mxCell id="if07" value="IF-07 패키지 반출" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;strokeWidth=4;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.3;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="pub" target="dwas">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="910" y="590"/>
-              <mxPoint x="1240" y="590"/>
-              <mxPoint x="1240" y="370"/>
-            </Array>
-          </mxGeometry>
-        </mxCell>
-
-
-        <mxCell id="z_sub" value="가입자" style="rounded=1;arcSize=4;dashed=1;fillColor=#fef9e7;strokeColor=#b7950b;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=15;" vertex="1" parent="1">
-          <mxGeometry x="1660" y="130" width="400" height="100" as="geometry"/>
-        </mxCell>
-        <mxCell id="sub" value="가입자" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b7950b;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1690" y="170" width="340" height="45" as="geometry"/>
-        </mxCell>
-        <mxCell id="e09" value="IF-09 인증서 발급" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#3c8d40;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.2;entryY=0;" edge="1" parent="1" source="ca" target="sub">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="90" y="88"/><mxPoint x="1758" y="88"/></Array></mxGeometry>
-        </mxCell>
-        <mxCell id="e10" value="IF-10 타임스탬프 발급" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#3c8d40;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.765;entryY=0;" edge="1" parent="1" source="tsa" target="sub">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="250" y="104"/><mxPoint x="1950" y="104"/></Array></mxGeometry>
-        </mxCell>
-        <mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#b7950b;strokeWidth=3;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="sub" target="rp">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="2090" y="192"/><mxPoint x="2090" y="475"/></Array></mxGeometry>
-        </mxCell>
-        <mxCell id="e12" value="IF-12 서명 결과 제공" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#7d5ba6;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="rp" target="wh">
-          <mxGeometry relative="1" as="geometry"></mxGeometry>
-        </mxCell>
-        <mxCell id="e08a" value="IF-08 TL 수신" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#1a8a9a;strokeWidth=3;exitX=0;exitY=0.5;entryX=1;entryY=0.3;" edge="1" parent="1" source="wh" target="web">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1630" y="332"/><mxPoint x="1630" y="220"/></Array></mxGeometry>
-        </mxCell>
-        <mxCell id="e08b" value="IF-08 TL 수신" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#7d5ba6;strokeWidth=3;exitX=0;exitY=0.5;entryX=1;entryY=0.7;" edge="1" parent="1" source="rp" target="web">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1610" y="475"/><mxPoint x="1610" y="240"/></Array></mxGeometry>
-        </mxCell>
-        <mxCell id="e13a" value="IF-13 인증서 상태 확인" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#3c8d40;strokeWidth=2;dashed=1;exitX=0.85;exitY=1;entryX=0.5;entryY=1;" edge="1" parent="1" source="rp" target="ocsp">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1979" y="715"/><mxPoint x="170" y="715"/></Array></mxGeometry>
-        </mxCell>
-        <mxCell id="e13b" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#3c8d40;strokeWidth=2;dashed=1;exitX=1;exitY=0.5;entryX=0.5;entryY=1;" edge="1" parent="1" source="wh" target="ocsp">
-          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="2135" y="332"/><mxPoint x="2135" y="715"/><mxPoint x="170" y="715"/></Array></mxGeometry>
-        </mxCell>
-
-        <!-- ===== Distribution ===== -->
-        <mxCell id="web" value="배포 WEB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d68910;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1340" y="205" width="180" height="50" as="geometry"/>
-        </mxCell>
-        <mxCell id="dwas" value="배포 WAS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e75b6;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1320" y="340" width="220" height="60" as="geometry"/>
-        </mxCell>
-        <mxCell id="repo" value="배포 저장소" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fillColor=#ffffff;strokeColor=#2e75b6;" vertex="1" parent="1">
-          <mxGeometry x="1370" y="480" width="120" height="65" as="geometry"/>
-        </mxCell>
-
-        <!-- ===== Browser / Relying party ===== -->
-        <mxCell id="wh" value="웨일 브라우저" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1a8a9a;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1690" y="310" width="340" height="45" as="geometry"/>
-        </mxCell>
-        <mxCell id="rp" value="이용자 시스템 (KR-DSS SDK)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d5ba6;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1690" y="450" width="340" height="50" as="geometry"/>
-        </mxCell>
-
-        <!-- ===== Edges ===== -->
-        <mxCell id="if01" value="IF-01 신뢰정보 제출&lt;br&gt;IF-02 신뢰정보 수집" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3c8d40;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;startArrow=classic;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="z_tsp" target="pgw">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="if03" value="IF-03 관리 접속" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="admin" target="con">
-          <mxGeometry x="0.6" relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e_con_reg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;dashed=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="con" target="reg">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e_con_pub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;dashed=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="con" target="pub">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="if04" value="IF-04&lt;br&gt;심사 요청" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;strokeWidth=2;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="pgw" target="reg">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="if05" value="IF-05&lt;br&gt;발행 대상 전달" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;strokeWidth=2;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="reg" target="pub">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <mxCell id="e_web_dwas" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2e75b6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="web" target="dwas">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e_dwas_repo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2e75b6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dwas" target="repo">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
+<mxfile host="drawio" agent="claude-code"><diagram id="krtl-system" name="KR-TL 시스템 구성도"><mxGraphModel dx="1980" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1980" pageHeight="680" math="0" shadow="0"><root><mxCell id="0"/><mxCell id="1" parent="0"/>
+<mxCell id="title" value="KR-TL 시스템 구성도" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="10" width="400" height="40" as="geometry"/></mxCell>
+<mxCell id="g_trust" value="신뢰체계 관리 시스템 (KISA · 신뢰앵커)" style="rounded=1;arcSize=3;dashed=1;dashPattern=8 4;fillColor=none;strokeColor=#404040;strokeWidth=2;fontStyle=1;verticalAlign=bottom;align=center;spacingBottom=6;fontSize=17;" vertex="1" parent="1"><mxGeometry x="322" y="120" width="1110" height="480" as="geometry"/></mxCell>
+<mxCell id="g_env" value="이용환경" style="rounded=1;arcSize=3;dashed=1;dashPattern=8 4;fillColor=none;strokeColor=#404040;strokeWidth=2;fontStyle=1;verticalAlign=bottom;align=center;spacingBottom=6;fontSize=17;" vertex="1" parent="1"><mxGeometry x="1450" y="120" width="430" height="440" as="geometry"/></mxCell>
+<mxCell id="z_tsp" value="인증사업자" style="rounded=1;arcSize=3;dashed=1;fillColor=#eef7ee;strokeColor=#3c8d40;strokeWidth=1;fontStyle=1;verticalAlign=bottom;align=left;spacingLeft=10;spacingBottom=4;fontSize=15;" vertex="1" parent="1"><mxGeometry x="40" y="130" width="250" height="130" as="geometry"/></mxCell>
+<mxCell id="z_mgmt" value="관리 시스템 (폐쇄망)" style="rounded=1;arcSize=3;fillColor=#fdecea;strokeColor=#c0392b;strokeWidth=2;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=15;" vertex="1" parent="1"><mxGeometry x="340" y="130" width="740" height="420" as="geometry"/></mxCell>
+<mxCell id="z_pki" value="KISA 인증체계" style="rounded=1;arcSize=3;dashed=1;fillColor=#fffaf0;strokeColor=#b7950b;strokeWidth=1;fontStyle=1;verticalAlign=top;align=left;spacingLeft=8;spacingTop=2;fontSize=12;" vertex="1" parent="1"><mxGeometry x="365" y="405" width="700" height="125" as="geometry"/></mxCell>
+<mxCell id="z_dist" value="배포 시스템" style="rounded=1;arcSize=3;fillColor=#eaf2fb;strokeColor=#2e75b6;strokeWidth=2;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=15;" vertex="1" parent="1"><mxGeometry x="1110" y="130" width="300" height="420" as="geometry"/></mxCell>
+<mxCell id="z_dmz" value="DMZ" style="rounded=1;arcSize=3;dashed=1;fillColor=#fff4e0;strokeColor=#d68910;strokeWidth=1;fontStyle=1;verticalAlign=top;align=left;spacingLeft=8;spacingTop=2;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1140" y="165" width="240" height="85" as="geometry"/></mxCell>
+<mxCell id="z_sub" value="가입자" style="rounded=1;arcSize=3;dashed=1;fillColor=#fef9e7;strokeColor=#b7950b;strokeWidth=1;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=15;" vertex="1" parent="1"><mxGeometry x="1465" y="130" width="400" height="100" as="geometry"/></mxCell>
+<mxCell id="z_br" value="브라우저" style="rounded=1;arcSize=3;dashed=1;fillColor=#e8f6f8;strokeColor=#1a8a9a;strokeWidth=1;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=15;" vertex="1" parent="1"><mxGeometry x="1465" y="270" width="400" height="100" as="geometry"/></mxCell>
+<mxCell id="z_rp" value="이용자" style="rounded=1;arcSize=3;dashed=1;fillColor=#f3eefa;strokeColor=#7d5ba6;strokeWidth=1;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=15;" vertex="1" parent="1"><mxGeometry x="1465" y="410" width="400" height="110" as="geometry"/></mxCell>
+<mxCell id="ca" value="CA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3c8d40;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="55" y="180" width="70" height="50" as="geometry"/></mxCell>
+<mxCell id="ocsp" value="OCSP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3c8d40;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="135" y="180" width="70" height="50" as="geometry"/></mxCell>
+<mxCell id="tsa" value="TSA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#3c8d40;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="215" y="180" width="70" height="50" as="geometry"/></mxCell>
+<mxCell id="admin" value="&lt;b&gt;관리자&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=middle;labelPosition=right;align=left;spacingLeft=8;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#c0392b;fontSize=13;" vertex="1" parent="1"><mxGeometry x="830" y="12" width="30" height="55" as="geometry"/></mxCell>
+<mxCell id="con" value="관리 콘솔" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="640" y="175" width="410" height="45" as="geometry"/></mxCell>
+<mxCell id="pgw" value="사업자 연계 서버" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="380" y="275" width="150" height="55" as="geometry"/></mxCell>
+<mxCell id="reg" value="신뢰정보 관리 서버" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="640" y="275" width="150" height="55" as="geometry"/></mxCell>
+<mxCell id="pub" value="TL 발행 서버" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#c0392b;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="900" y="275" width="150" height="55" as="geometry"/></mxCell>
+<mxCell id="root" value="KISA Root CA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="380" y="445" width="100" height="45" as="geometry"/></mxCell>
+<mxCell id="kca" value="KISA CA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="560" y="445" width="100" height="45" as="geometry"/></mxCell>
+<mxCell id="tlc" value="TL 서명 인증서" style="shape=note;size=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b7950b;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="790" y="445" width="110" height="45" as="geometry"/></mxCell>
+<mxCell id="hsm" value="HSM" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="925" y="445" width="100" height="45" as="geometry"/></mxCell>
+<mxCell id="web" value="배포 WEB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d68910;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1180" y="185" width="180" height="45" as="geometry"/></mxCell>
+<mxCell id="dwas" value="배포 WAS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e75b6;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1180" y="275" width="180" height="55" as="geometry"/></mxCell>
+<mxCell id="sub" value="가입자" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b7950b;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1495" y="170" width="340" height="45" as="geometry"/></mxCell>
+<mxCell id="wh" value="웨일 브라우저" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1a8a9a;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1495" y="310" width="340" height="45" as="geometry"/></mxCell>
+<mxCell id="rp" value="이용자 시스템 (KR-DSS SDK)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7d5ba6;strokeWidth=1;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1495" y="450" width="340" height="50" as="geometry"/></mxCell>
+<mxCell id="if01" value="IF-01 신뢰정보 제출&lt;br&gt;IF-02 신뢰정보 수집" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#3c8d40;strokeWidth=3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=classic;" edge="1" parent="1" source="z_tsp" target="pgw"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="335" y="195"/><mxPoint x="335" y="302"/></Array></mxGeometry></mxCell>
+<mxCell id="if03" value="IF-03 관리 접속" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#c0392b;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="admin" target="con"><mxGeometry x="0.5" relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="e_con_reg" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#c0392b;strokeWidth=1;exitX=0.183;exitY=1;entryX=0.5;entryY=0;dashed=1;" edge="1" parent="1" source="con" target="reg"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="e_con_pub" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#c0392b;strokeWidth=1;exitX=0.817;exitY=1;entryX=0.5;entryY=0;dashed=1;" edge="1" parent="1" source="con" target="pub"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="if04" value="IF-04&lt;br&gt;심사 요청" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#c0392b;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="pgw" target="reg"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="if05" value="IF-05&lt;br&gt;발행 대상 전달" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#c0392b;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="reg" target="pub"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="if06" value="IF-06 TL 서명" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#b7950b;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;startArrow=classic;" edge="1" parent="1" source="pub" target="hsm"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="if14" value="IF-14&lt;br&gt;CA 인증서 발급" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#b7950b;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="root" target="kca"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="if15" value="IF-15&lt;br&gt;TL 서명 인증서 발급" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#b7950b;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="kca" target="tlc"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="e_tlc_hsm" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#b7950b;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;endArrow=none;" edge="1" parent="1" source="tlc" target="hsm"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="if07" value="IF-07 패키지 반출" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#c0392b;strokeWidth=4;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="pub" target="dwas"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="e_web_dwas" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#2e75b6;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="web" target="dwas"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="e08a" value="IF-08 TL 수신" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#1a8a9a;strokeWidth=3;exitX=0;exitY=0.5;entryX=1;entryY=0.33;" edge="1" parent="1" source="wh" target="web"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1440" y="332"/><mxPoint x="1440" y="200"/></Array></mxGeometry></mxCell>
+<mxCell id="e08b" value="IF-08 TL 수신" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#7d5ba6;strokeWidth=3;exitX=0;exitY=0.5;entryX=1;entryY=0.67;" edge="1" parent="1" source="rp" target="web"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1425" y="475"/><mxPoint x="1425" y="215"/></Array></mxGeometry></mxCell>
+<mxCell id="e09" value="IF-09 인증서 발급" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#3c8d40;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.2;entryY=0;" edge="1" parent="1" source="ca" target="sub"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="90" y="88"/><mxPoint x="1563" y="88"/></Array></mxGeometry></mxCell>
+<mxCell id="e10" value="IF-10 타임스탬프 발급" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#3c8d40;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.765;entryY=0;" edge="1" parent="1" source="tsa" target="sub"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="250" y="104"/><mxPoint x="1755" y="104"/></Array></mxGeometry></mxCell>
+<mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#b7950b;strokeWidth=3;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="sub" target="rp"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1895" y="192"/><mxPoint x="1895" y="475"/></Array></mxGeometry></mxCell>
+<mxCell id="t11" value="IF-11 전자서명 제출" style="text;html=1;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;rotation=90;" vertex="1" parent="1"><mxGeometry x="1845" y="400" width="130" height="20" as="geometry"/></mxCell>
+<mxCell id="e12" value="IF-12 서명 결과 제공" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#7d5ba6;strokeWidth=2;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="rp" target="wh"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+<mxCell id="e13a" value="IF-13 인증서 상태 확인" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#3c8d40;strokeWidth=2;exitX=0.85;exitY=1;entryX=0.5;entryY=1;dashed=1;" edge="1" parent="1" source="rp" target="ocsp"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1784" y="630"/><mxPoint x="170" y="630"/></Array></mxGeometry></mxCell>
+<mxCell id="e13b" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#3c8d40;strokeWidth=2;exitX=1;exitY=0.5;entryX=0.5;entryY=1;dashed=1;" edge="1" parent="1" source="wh" target="ocsp"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1935" y="332"/><mxPoint x="1935" y="630"/><mxPoint x="170" y="630"/></Array></mxGeometry></mxCell>
+</root></mxGraphModel></diagram></mxfile>
