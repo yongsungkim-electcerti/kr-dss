@@ -48,8 +48,8 @@ flowchart LR
     RP -- "IF-08 TL 수신" --> DL
     WH -- "IF-08 TL 수신" --> DL
     TSP -. "인증서 발급 · 타임스탬프" .-> USR
-    USR -- "IF-09 전자서명 제출" --> RP
-    RP -- "IF-10 서명 결과 제공" --> WH
+    USR -. "전자서명 제출" .-> RP
+    RP -- "IF-09 서명 결과 제공" --> WH
     RP -. "OCSP" .-> TSP
     WH -. "OCSP" .-> TSP
 ```
