@@ -11,9 +11,9 @@
 | 관리 콘솔 | `poc-kisa-tl` 정적 화면 | MFA·접근통제 → 역할 선택 로그인 |
 | 사업자 연계 서버 | `poc-kisa-tl` `provider` 패키지 | VPN → 생략, 클라이언트 인증서로 사업자 식별 |
 | 신뢰정보 관리 서버 · TL 발행 서버 | `poc-kisa-tl` `registry`, `publish` 패키지 + `kr-tl-builder` | — |
-| KISA Root CA · KISA CA | `krdss-cli cert`로 생성한 Root·하위 CA 키스토어 | 오프라인 Root → 파일 키스토어. 기존 New-KISA RootCA 키스토어 재사용 검토 |
+| KISA TL RootCA · KISA TL CA | `krdss-cli cert`로 생성, `pki/tl-signer/` 폴더 | 오프라인 Root → 폴더의 PEM 파일. 키스토어·트러스트 스토어 쓰지 않음 ([07](07-인증체계-설계.md) §8) |
 | TL 서명 인증서 | KISA CA가 발급 (`krdss-cli cert`) | — |
-| HSM | PKCS#12 소프트 키스토어 (옵션: `poc-hsm` :8092) | 서명 경로는 인터페이스 하나로 감춰 교체 가능 |
+| HSM | 폴더의 TL 서명키 파일 = 모의 HSM (옵션: `poc-hsm` :8092) | 서명 경로는 인터페이스 하나로 감춰 교체 가능 |
 | 배포 시스템 (배포 WEB · 배포 WAS) | `poc-krtl-dist` (:8083, 신규). 수신 현황 화면 포함 | 배포 WEB 생략. 연계 API는 별도 포트(:9443)로 분리 |
 
 > 서버 내부 데이터 저장은 각 모듈의 H2(파일 모드)를 쓴다. 구성도에는 그리지 않는다.
