@@ -42,15 +42,15 @@ flowchart LR
         DL["배포 :8083"]
         RCV["연계 :9443"]
     end
-    TSP -- "IF-01·02" --> PRV --> REG --> PUB
+    TSP -- "IF-01 신뢰정보 제출" --> PRV --> REG --> PUB
     CON --> REG & PUB
-    PUB -- "IF-07 패키지 반출" --> RCV
-    RP -- "IF-08 TL 수신" --> DL
-    WH -- "IF-08 TL 수신" --> DL
+    PUB -- "IF-06 패키지 반출" --> RCV
+    RP -- "IF-07 TL 수신" --> DL
+    WH -- "IF-07 TL 수신" --> DL
     TSP -. "인증서 발급 · 타임스탬프" .-> USR
     USR -. "전자서명 제출" .-> RP
-    RP -- "IF-09 서명 결과 제공" --> WH
-    USR -- "IF-10 서명 결과 검증" --> WH
+    RP -- "IF-08 서명 결과 제공" --> WH
+    USR -- "IF-09 서명 결과 검증" --> WH
     RP -. "OCSP" .-> TSP
     WH -. "OCSP" .-> TSP
 ```
