@@ -47,12 +47,11 @@ flowchart LR
     PUB -- "IF-07 패키지 반출" --> RCV
     RP -- "IF-08 TL 수신" --> DL
     WH -- "IF-08 TL 수신" --> DL
-    TSP -- "IF-09 인증서 발급" --> USR
-    TSP -- "IF-10 타임스탬프 발급" --> USR
-    USR -- "IF-11 전자서명 제출" --> RP
-    RP -- "IF-12 서명 결과 제공" --> WH
-    RP -- "IF-13 인증서 상태 확인" --> TSP
-    WH -- "IF-13" --> TSP
+    TSP -. "인증서 발급 · 타임스탬프" .-> USR
+    USR -- "IF-09 전자서명 제출" --> RP
+    RP -- "IF-10 서명 결과 제공" --> WH
+    RP -. "OCSP" .-> TSP
+    WH -. "OCSP" .-> TSP
 ```
 
 ## 3. 시나리오 실행 순서 (1차)
