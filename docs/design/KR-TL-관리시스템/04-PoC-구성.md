@@ -50,6 +50,7 @@ flowchart LR
     TSP -. "인증서 발급 · 타임스탬프" .-> USR
     USR -. "전자서명 제출" .-> RP
     RP -- "IF-09 서명 결과 제공" --> WH
+    USR -- "IF-10 서명 결과 검증" --> WH
     RP -. "OCSP" .-> TSP
     WH -. "OCSP" .-> TSP
 ```
