@@ -38,12 +38,12 @@
         </mxCell>
 
         <!-- DMZ -->
-        <mxCell id="web" value="&lt;b&gt;배포 WEB&lt;/b&gt;&lt;br&gt;TLS 종단 · WAF&lt;br&gt;파일 전송" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d68910;" vertex="1" parent="1">
+        <mxCell id="web" value="&lt;b&gt;배포 WEB&lt;/b&gt;&lt;br&gt;TLS 종단 · WAF&lt;br&gt;리버스 프록시 (데이터 없음)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d68910;" vertex="1" parent="1">
           <mxGeometry x="325" y="215" width="160" height="80" as="geometry"/>
         </mxCell>
 
         <!-- Distribution internal -->
-        <mxCell id="dwas" value="&lt;b&gt;배포 WAS&lt;/b&gt;&lt;br&gt;다운로드 처리 · 이용기관 API&lt;br&gt;접속 통계 수집 · 연계 API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e75b6;" vertex="1" parent="1">
+        <mxCell id="dwas" value="&lt;b&gt;배포 WAS&lt;/b&gt;&lt;br&gt;다운로드 처리 · 이용기관 API&lt;br&gt;접속 통계 수집 · 연계 API&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;(다운로드 :8443 / 연계 :9443 분리)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e75b6;" vertex="1" parent="1">
           <mxGeometry x="620" y="210" width="210" height="90" as="geometry"/>
         </mxCell>
         <mxCell id="drepo" value="배포 저장소&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;TL · 서명인증서 · 모듈&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;size=10;fillColor=#ffffff;strokeColor=#2e75b6;" vertex="1" parent="1">
@@ -94,16 +94,13 @@
         </mxCell>
 
         <!-- CH-1 -->
-        <mxCell id="e_rp_web" value="CH-1 HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#d68910;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.3;" edge="1" parent="1" source="rp" target="web">
+        <mxCell id="e_rp_web" value="CH-1 · FW-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#d68910;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.3;" edge="1" parent="1" source="rp" target="web">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e_ba_web" value="CH-1 HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#d68910;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.7;" edge="1" parent="1" source="ba" target="web">
+        <mxCell id="e_ba_web" value="CH-1 · FW-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#d68910;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.7;" edge="1" parent="1" source="ba" target="web">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e_web_dwas" value="요청 위임" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2e75b6;fontSize=10;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="web" target="dwas">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="e_web_repo" value="파일 읽기" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2e75b6;fontSize=10;labelBackgroundColor=#ffffff;dashed=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="web" target="drepo">
+        <mxCell id="e_web_dwas" value="FW-2 프록시" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2e75b6;fontSize=10;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="web" target="dwas">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
         <mxCell id="e_dwas_repo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2e75b6;exitX=0.2;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dwas" target="drepo">
@@ -114,10 +111,10 @@
         </mxCell>
 
         <!-- CH-4 -->
-        <mxCell id="e_link_dwas" value="CH-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="link" target="dwas">
+        <mxCell id="e_link_dwas" value="CH-4 · FW-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#c0392b;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="link" target="dwas">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="ch4_note" value="&lt;b&gt;CH-4 단일 연계 채널&lt;/b&gt;&lt;br&gt;관리망 → 배포 (발신 전용)&lt;br&gt;반출 push · 통계 pull" style="text;html=1;fontSize=11;fontColor=#c0392b;align=center;verticalAlign=top;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+        <mxCell id="ch4_note" value="&lt;b&gt;CH-4 단일 연계 채널&lt;/b&gt;&lt;br&gt;방화벽 통제 · 관리망 → 배포 (발신 전용)&lt;br&gt;반출 push · 통계 pull" style="text;html=1;fontSize=11;fontColor=#c0392b;align=center;verticalAlign=top;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="820" y="290" width="150" height="60" as="geometry"/>
         </mxCell>
         <mxCell id="block_note" value="배포 → 관리 인바운드 전면 차단" style="text;html=1;fontSize=11;fontColor=#c0392b;fontStyle=2;align=center;verticalAlign=middle;" vertex="1" parent="1">
@@ -172,15 +169,15 @@
         </mxCell>
 
         <!-- CH-3 / CH-2 -->
-        <mxCell id="e_tsp_vpn" value="CH-3 기존 VPN" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3c8d40;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;startArrow=classic;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="tsp" target="vpngw">
+        <mxCell id="e_tsp_vpn" value="CH-3 VPN · FW-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#3c8d40;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;startArrow=classic;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="tsp" target="vpngw">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="e_adm_iag" value="CH-2 관리자 접근" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7d5ba6;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.7;entryY=1;" edge="1" parent="1" source="adm" target="iag">
+        <mxCell id="e_adm_iag" value="CH-2 · FW-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7d5ba6;strokeWidth=3;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.7;entryY=1;" edge="1" parent="1" source="adm" target="iag">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
         <!-- Legend -->
-        <mxCell id="legend" value="&lt;b&gt;채널&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#d68910&quot;&gt;■&lt;/font&gt; CH-1 배포 채널: 인터넷 → DMZ WEB → 배포 WAS (443)&lt;br&gt;&lt;font color=&quot;#7d5ba6&quot;&gt;■&lt;/font&gt; CH-2 관리자 접근 채널: 전용 단말 → 접근통제(MFA) → 관리 콘솔·통계&lt;br&gt;&lt;font color=&quot;#3c8d40&quot;&gt;■&lt;/font&gt; CH-3 사업자 연계 채널: 인정사업자 → 기존 VPN → 사업자 연계 서버&lt;br&gt;&lt;font color=&quot;#c0392b&quot;&gt;■&lt;/font&gt; CH-4 관리↔배포 단일 연계 채널: 세션은 관리망에서만 시작&lt;br&gt;&lt;br&gt;&lt;b&gt;원칙&lt;/b&gt;: TL 서명은 관리망 HSM에서만. 배포 시스템은 서명된 패키지를 검증·게시·전송만 한다." style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontSize=12;fillColor=#ffffff;strokeColor=#bfbfbf;" vertex="1" parent="1">
+        <mxCell id="legend" value="&lt;b&gt;채널&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#d68910&quot;&gt;■&lt;/font&gt; CH-1 배포 채널: 인터넷 → DMZ WEB → 배포 WAS (443)&lt;br&gt;&lt;font color=&quot;#7d5ba6&quot;&gt;■&lt;/font&gt; CH-2 관리자 접근 채널: 전용 단말 → 접근통제(MFA) → 관리 콘솔·통계&lt;br&gt;&lt;font color=&quot;#3c8d40&quot;&gt;■&lt;/font&gt; CH-3 사업자 연계 채널: 인정사업자 → 기존 VPN → 사업자 연계 서버&lt;br&gt;&lt;font color=&quot;#c0392b&quot;&gt;■&lt;/font&gt; CH-4 관리↔배포 단일 연계 채널: 방화벽(FW-3) 통제, 세션은 관리망에서만 시작&lt;br&gt;&lt;br&gt;&lt;b&gt;원칙&lt;/b&gt;: DMZ에는 WEB만 둔다(WAS·데이터 없음). TL 서명은 관리망 HSM에서만. 배포 시스템은 서명된 패키지를 검증·게시·전송만 한다." style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontSize=12;fillColor=#ffffff;strokeColor=#bfbfbf;" vertex="1" parent="1">
           <mxGeometry x="20" y="560" width="860" height="160" as="geometry"/>
         </mxCell>
       </root>
