@@ -17,7 +17,7 @@
 | 배포 시스템 (배포 WEB · 배포 WAS) | `poc-krtl-dist` (:8083, 신규). 수신 현황 화면 포함 | 배포 WEB 생략. 연계 API는 별도 포트(:9443)로 분리 |
 
 > 서버 내부 데이터 저장은 각 모듈의 H2(파일 모드)를 쓴다. 구성도에는 그리지 않는다.
-| CA · OCSP · TSA | `poc-tsp-sim` (:8082) | CA·OCSP 있음. TSA·제출 기능 추가 |
+| CA · OCSP · TSA | `poc-tsp-sim` (:8082) | CA·OCSP 있음. 제출(IF-01) 기능 추가. TSA 미사용 |
 | 가입자 | `krdss-cli` 또는 `poc-relying-party` 서명 화면 | 서명 시각이 다른 서명 표본 생성 ([18](18-신뢰경로-판정표.md) §4). TSA 미사용 |
 | 이용자 시스템 (KR-DSS SDK) | `poc-relying-party` (:8080) + `kr-tl-client` | 검증 결과 화면에 **사용한 TL 버전** 표시 |
 | 웨일 브라우저 | 웨일 검증 모듈 (또는 브라우저 JS 검증 페이지) | TL 수신·서명된 결과 검증. 접속 시 `X-KRTL-Client` 헤더로 유형 구분 |
