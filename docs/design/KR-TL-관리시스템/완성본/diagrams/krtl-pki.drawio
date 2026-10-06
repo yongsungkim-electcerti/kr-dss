@@ -1,69 +1,187 @@
-<?xml version='1.0' encoding='utf-8'?>
-<mxfile host="drawio" agent="claude-code"><diagram id="krtl-pki" name="KR-TL 인증체계"><mxGraphModel dx="1820" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1820" pageHeight="740" math="0" shadow="0"><root><mxCell id="0" /><mxCell id="1" parent="0" />
-<mxCell id="title" value="KR-TL 인증체계 — 인증 체인과 신뢰목록" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="10" width="700" height="40" as="geometry" /></mxCell>
-<mxCell id="z_tls" value="TL 서명 체계 (KISA)" style="rounded=1;arcSize=3;dashed=1;fillColor=#fffaf0;strokeColor=#b7950b;strokeWidth=1;fontStyle=1;fontSize=14;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;" vertex="1" parent="1"><mxGeometry x="40" y="70" width="220" height="420" as="geometry" /></mxCell>
-<mxCell id="tlroot" value="KISA TL RootCA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="65" y="115" width="170" height="45" as="geometry" /></mxCell>
-<mxCell id="tlca" value="KISA TL CA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="75" y="215" width="150" height="45" as="geometry" /></mxCell>
-<mxCell id="tlsig" value="TL 서명 인증서" style="shape=note;size=12;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="75" y="315" width="150" height="45" as="geometry" /></mxCell>
-<mxCell id="e_tlr_ca" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="tlroot" target="tlca"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="e_tlca_sig" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="tlca" target="tlsig"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="z_joint" value="공동인증 체계" style="rounded=1;arcSize=3;dashed=1;fillColor=#fafafa;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=14;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;" vertex="1" parent="1"><mxGeometry x="290" y="70" width="700" height="420" as="geometry" /></mxCell>
-<mxCell id="kroot" value="KISA RootCA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="550" y="105" width="180" height="45" as="geometry" /></mxCell>
-<mxCell id="g_ja" value="가상공동인증A" style="rounded=1;arcSize=3;dashed=1;dashPattern=6 3;fillColor=none;strokeColor=#404040;strokeWidth=1;fontStyle=1;fontSize=13;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;verticalAlign=bottom;align=center;spacingBottom=4;" vertex="1" parent="1"><mxGeometry x="305" y="185" width="270" height="230" as="geometry" /></mxCell>
-<mxCell id="ja_ca" value="가상공동인증A CA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="365" y="205" width="150" height="45" as="geometry" /></mxCell>
-<mxCell id="e_ja_pc" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.2;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="kroot" target="ja_ca"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="ja_ocsp" value="OCSP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="315" y="305" width="78" height="40" as="geometry" /></mxCell>
-<mxCell id="e_ja_ocsp" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="ja_ca" target="ja_ocsp"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="ja_tsa" value="TSA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="401" y="305" width="78" height="40" as="geometry" /></mxCell>
-<mxCell id="e_ja_tsa" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="ja_ca" target="ja_tsa"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="ja_ee" value="가입자" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="487" y="305" width="78" height="40" as="geometry" /></mxCell>
-<mxCell id="e_ja_ee" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="ja_ca" target="ja_ee"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="g_jb" value="가상공동인증B" style="rounded=1;arcSize=3;dashed=1;dashPattern=6 3;fillColor=none;strokeColor=#404040;strokeWidth=1;fontStyle=1;fontSize=13;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;verticalAlign=bottom;align=center;spacingBottom=4;" vertex="1" parent="1"><mxGeometry x="705" y="185" width="270" height="230" as="geometry" /></mxCell>
-<mxCell id="jb_ca" value="가상공동인증B CA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="765" y="205" width="150" height="45" as="geometry" /></mxCell>
-<mxCell id="e_jb_pc" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.8;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="kroot" target="jb_ca"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="jb_ocsp" value="OCSP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="715" y="305" width="78" height="40" as="geometry" /></mxCell>
-<mxCell id="e_jb_ocsp" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="jb_ca" target="jb_ocsp"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="jb_tsa" value="TSA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="801" y="305" width="78" height="40" as="geometry" /></mxCell>
-<mxCell id="e_jb_tsa" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="jb_ca" target="jb_tsa"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="jb_ee" value="가입자" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="887" y="305" width="78" height="40" as="geometry" /></mxCell>
-<mxCell id="e_jb_ee" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="jb_ca" target="jb_ee"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="z_sa" value="간편인증 체계 A" style="rounded=1;arcSize=3;dashed=1;fillColor=#fafafa;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=14;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;" vertex="1" parent="1"><mxGeometry x="1020" y="70" width="300" height="420" as="geometry" /></mxCell>
-<mxCell id="g_sa" value="가상간편인증A" style="rounded=1;arcSize=3;dashed=1;dashPattern=6 3;fillColor=none;strokeColor=#404040;strokeWidth=1;fontStyle=1;fontSize=13;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;verticalAlign=bottom;align=center;spacingBottom=4;" vertex="1" parent="1"><mxGeometry x="1030" y="105" width="280" height="330" as="geometry" /></mxCell>
-<mxCell id="sa_root" value="가상간편인증A RootCA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1080" y="120" width="180" height="45" as="geometry" /></mxCell>
-<mxCell id="sa_ca" value="가상간편인증A CA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1095" y="220" width="150" height="45" as="geometry" /></mxCell>
-<mxCell id="e_sa_rc" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="sa_root" target="sa_ca"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="sa_ocsp" value="OCSP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1045" y="320" width="78" height="40" as="geometry" /></mxCell>
-<mxCell id="e_sa_ocsp" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="sa_ca" target="sa_ocsp"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="sa_tsa" value="TSA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1131" y="320" width="78" height="40" as="geometry" /></mxCell>
-<mxCell id="e_sa_tsa" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="sa_ca" target="sa_tsa"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="sa_ee" value="가입자" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1217" y="320" width="78" height="40" as="geometry" /></mxCell>
-<mxCell id="e_sa_ee" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="sa_ca" target="sa_ee"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="z_sb" value="간편인증 체계 B" style="rounded=1;arcSize=3;dashed=1;fillColor=#fafafa;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=14;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;" vertex="1" parent="1"><mxGeometry x="1350" y="70" width="300" height="420" as="geometry" /></mxCell>
-<mxCell id="g_sb" value="가상간편인증B" style="rounded=1;arcSize=3;dashed=1;dashPattern=6 3;fillColor=none;strokeColor=#404040;strokeWidth=1;fontStyle=1;fontSize=13;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;verticalAlign=bottom;align=center;spacingBottom=4;" vertex="1" parent="1"><mxGeometry x="1360" y="105" width="280" height="330" as="geometry" /></mxCell>
-<mxCell id="sb_root" value="가상간편인증B RootCA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1410" y="120" width="180" height="45" as="geometry" /></mxCell>
-<mxCell id="sb_ca" value="가상간편인증B CA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1425" y="220" width="150" height="45" as="geometry" /></mxCell>
-<mxCell id="e_sb_rc" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="sb_root" target="sb_ca"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="sb_ocsp" value="OCSP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1375" y="320" width="78" height="40" as="geometry" /></mxCell>
-<mxCell id="e_sb_ocsp" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="sb_ca" target="sb_ocsp"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="sb_tsa" value="TSA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1461" y="320" width="78" height="40" as="geometry" /></mxCell>
-<mxCell id="e_sb_tsa" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="sb_ca" target="sb_tsa"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="sb_ee" value="가입자" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1547" y="320" width="78" height="40" as="geometry" /></mxCell>
-<mxCell id="e_sb_ee" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="sb_ca" target="sb_ee"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="t_x0" value="연결&lt;br&gt;없음" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#c0392b;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="255" y="250" width="40" height="40" as="geometry" /></mxCell>
-<mxCell id="t_x1" value="연결&lt;br&gt;없음" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#c0392b;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="985" y="250" width="40" height="40" as="geometry" /></mxCell>
-<mxCell id="t_x2" value="연결&lt;br&gt;없음" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#c0392b;align=center;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1"><mxGeometry x="1315" y="250" width="40" height="40" as="geometry" /></mxCell>
-<mxCell id="z_tl" value="KR-TL 신뢰목록" style="rounded=1;arcSize=3;fillColor=#eaf2fb;strokeColor=#2e75b6;strokeWidth=2;fontStyle=1;fontSize=15;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;align=right;spacingRight=14;" vertex="1" parent="1"><mxGeometry x="40" y="560" width="1610" height="150" as="geometry" /></mxCell>
-<mxCell id="tl_sig" value="TL 서명" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="75" y="610" width="150" height="70" as="geometry" /></mxCell>
-<mxCell id="tl_ja" value="가상공동인증A&lt;br&gt;CA · OCSP · TSA (레벨 1)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="315" y="610" width="250" height="70" as="geometry" /></mxCell>
-<mxCell id="reg_ja" value="등재" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#2e7d32;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="g_ja" target="tl_ja"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="tl_jb" value="가상공동인증B&lt;br&gt;CA · OCSP · TSA (레벨 1)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="715" y="610" width="250" height="70" as="geometry" /></mxCell>
-<mxCell id="reg_jb" value="등재" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#2e7d32;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="g_jb" target="tl_jb"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="tl_sa" value="가상간편인증A&lt;br&gt;RootCA (레벨 0)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1045" y="610" width="250" height="70" as="geometry" /></mxCell>
-<mxCell id="reg_sa" value="등재" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#2e7d32;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="g_sa" target="tl_sa"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="tl_sb" value="가상간편인증B&lt;br&gt;CA · OCSP · TSA (레벨 1)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1375" y="610" width="250" height="70" as="geometry" /></mxCell>
-<mxCell id="reg_sb" value="등재" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#2e7d32;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="g_sb" target="tl_sb"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="sig" value="서명" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#b7950b;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="z_tls" target="tl_sig"><mxGeometry relative="1" as="geometry" /></mxCell>
-<mxCell id="lg1" value="TL 등재" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1680" y="80" width="110" height="32" as="geometry" /></mxCell>
-<mxCell id="lg2" value="TL 미등재" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1680" y="120" width="110" height="32" as="geometry" /></mxCell>
-<mxCell id="lg3" value="TL 서명 체계" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=1;fontStyle=1;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1680" y="160" width="110" height="32" as="geometry" /></mxCell>
-</root></mxGraphModel></diagram></mxfile>
+<mxfile host="app.diagrams.net" agent="claude-code">
+  <diagram id="krtl-pki" name="KR-TL 인증체계">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1820" pageHeight="740" background="light-dark(#ffffff, #121212)" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z_tls" parent="1" style="rounded=1;arcSize=3;dashed=1;fillColor=#fffaf0;strokeColor=#b7950b;strokeWidth=1;fontStyle=1;fontSize=14;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;" value="TL 서명 체계 (KISA)" vertex="1">
+          <mxGeometry height="360" width="220" x="40" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tlroot" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;fontSize=12;" value="KISA TL RootCA" vertex="1">
+          <mxGeometry height="45" width="170" x="65" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="tlca" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;fontSize=12;" value="KISA TL CA" vertex="1">
+          <mxGeometry height="45" width="150" x="75" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="tlsig" parent="1" style="shape=note;size=12;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;fontSize=12;" value="TL 서명 인증서" vertex="1">
+          <mxGeometry height="45" width="150" x="75" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tlr_ca" edge="1" parent="1" source="tlroot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="tlca" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tlca_sig" edge="1" parent="1" source="tlca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="tlsig" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_joint" parent="1" style="rounded=1;arcSize=3;dashed=1;fillColor=#fafafa;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=14;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;" value="공동인증 체계" vertex="1">
+          <mxGeometry height="360" width="590" x="290" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kroot" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=2;fontStyle=1;fontSize=12;" value="KISA RootCA" vertex="1">
+          <mxGeometry height="45" width="180" x="479" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="g_ja" parent="1" style="rounded=1;arcSize=3;dashed=1;dashPattern=6 3;fillColor=none;strokeColor=#404040;strokeWidth=1;fontStyle=1;fontSize=13;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;verticalAlign=bottom;align=center;spacingBottom=4;" value="가상공동인증A" vertex="1">
+          <mxGeometry height="230" width="270" x="305" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="ja_ca" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" value="가상공동인증A CA" vertex="1">
+          <mxGeometry height="45" width="150" x="365" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ja_pc" edge="1" parent="1" source="kroot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.2;exitY=1;entryX=0.5;entryY=0;" target="ja_ca" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ja_ocsp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" value="OCSP" vertex="1">
+          <mxGeometry height="40" width="78" x="315" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ja_ocsp" edge="1" parent="1" source="ja_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="ja_ocsp" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ja_tsa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" value="TSA" vertex="1">
+          <mxGeometry height="40" width="78" x="401" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ja_tsa" edge="1" parent="1" source="ja_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="ja_tsa" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ja_ee" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" value="가입자" vertex="1">
+          <mxGeometry height="40" width="78" x="487" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ja_ee" edge="1" parent="1" source="ja_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="ja_ee" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g_jb" parent="1" style="rounded=1;arcSize=3;dashed=1;dashPattern=6 3;fillColor=none;strokeColor=#404040;strokeWidth=1;fontStyle=1;fontSize=13;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;verticalAlign=bottom;align=center;spacingBottom=4;" value="가상공동인증B" vertex="1">
+          <mxGeometry height="230" width="270" x="598" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="jb_ca" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" value="가상공동인증B CA" vertex="1">
+          <mxGeometry height="45" width="150" x="658" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="e_jb_pc" edge="1" parent="1" source="kroot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.8;exitY=1;entryX=0.5;entryY=0;" target="jb_ca" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jb_ocsp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" value="OCSP" vertex="1">
+          <mxGeometry height="40" width="78" x="608" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="e_jb_ocsp" edge="1" parent="1" source="jb_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="jb_ocsp" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jb_tsa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" value="TSA" vertex="1">
+          <mxGeometry height="40" width="78" x="694" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="e_jb_tsa" edge="1" parent="1" source="jb_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="jb_tsa" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jb_ee" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" value="가입자" vertex="1">
+          <mxGeometry height="40" width="78" x="780" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="e_jb_ee" edge="1" parent="1" source="jb_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="jb_ee" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_sa" parent="1" style="rounded=1;arcSize=3;dashed=1;fillColor=#fafafa;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=14;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;" value="간편인증 체계 A" vertex="1">
+          <mxGeometry height="310" width="270" x="305" y="774" as="geometry" />
+        </mxCell>
+        <mxCell id="sa_root" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" value="가상간편인증A RootCA" vertex="1">
+          <mxGeometry height="45" width="180" x="349" y="824" as="geometry" />
+        </mxCell>
+        <mxCell id="sa_ca" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=2;fontStyle=1;fontSize=12;" value="가상간편인증A CA" vertex="1">
+          <mxGeometry height="45" width="150" x="364" y="924" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sa_rc" edge="1" parent="1" source="sa_root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="sa_ca" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sa_ocsp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" value="OCSP" vertex="1">
+          <mxGeometry height="40" width="78" x="314" y="1024" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sa_ocsp" edge="1" parent="1" source="sa_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="sa_ocsp" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sa_tsa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" value="TSA" vertex="1">
+          <mxGeometry height="40" width="78" x="400" y="1024" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sa_tsa" edge="1" parent="1" source="sa_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="sa_tsa" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sa_ee" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" value="가입자" vertex="1">
+          <mxGeometry height="40" width="78" x="486" y="1024" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sa_ee" edge="1" parent="1" source="sa_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="sa_ee" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_sb" parent="1" style="rounded=1;arcSize=3;dashed=1;fillColor=#fafafa;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=14;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;" value="간편인증 체계 B" vertex="1">
+          <mxGeometry height="310" width="270" x="598" y="774" as="geometry" />
+        </mxCell>
+        <mxCell id="sb_root" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=2;fontStyle=1;fontSize=12;" value="가상간편인증B RootCA" vertex="1">
+          <mxGeometry height="45" width="180" x="641" y="824" as="geometry" />
+        </mxCell>
+        <mxCell id="sb_ca" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" value="가상간편인증B CA" vertex="1">
+          <mxGeometry height="45" width="150" x="656" y="924" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sb_rc" edge="1" parent="1" source="sb_root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="sb_ca" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sb_ocsp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" value="OCSP" vertex="1">
+          <mxGeometry height="40" width="78" x="606" y="1024" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sb_ocsp" edge="1" parent="1" source="sb_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="sb_ocsp" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sb_tsa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f4ea;strokeColor=#2e7d32;strokeWidth=1;fontStyle=1;fontSize=12;" value="TSA" vertex="1">
+          <mxGeometry height="40" width="78" x="692" y="1024" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sb_tsa" edge="1" parent="1" source="sb_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="sb_tsa" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sb_ee" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=12;" value="가입자" vertex="1">
+          <mxGeometry height="40" width="78" x="778" y="1024" as="geometry" />
+        </mxCell>
+        <mxCell id="e_sb_ee" edge="1" parent="1" source="sb_ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#595959;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="sb_ee" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z_tl" parent="1" style="rounded=1;arcSize=3;fillColor=#eaf2fb;strokeColor=#2e75b6;strokeWidth=2;fontStyle=1;fontSize=15;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;align=right;spacingRight=14;" value="KR-TL 신뢰목록" vertex="1">
+          <mxGeometry height="280" width="840" x="40" y="454" as="geometry" />
+        </mxCell>
+        <mxCell id="tl_sig" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b7950b;strokeWidth=2;fontStyle=1;fontSize=12;" value="TL 서명" vertex="1">
+          <mxGeometry height="70" width="150" x="75" y="504" as="geometry" />
+        </mxCell>
+        <mxCell id="tl_ja" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" value="가상공동인증A&lt;br&gt;CA · OCSP · TSA (레벨 1)" vertex="1">
+          <mxGeometry height="70" width="250" x="315" y="504" as="geometry" />
+        </mxCell>
+        <mxCell id="reg_ja" edge="1" parent="1" source="g_ja" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#2e7d32;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="tl_ja" value="등재">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tl_jb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" value="가상공동인증B&lt;br&gt;CA · OCSP · TSA (레벨 1)" vertex="1">
+          <mxGeometry height="70" width="250" x="607" y="504" as="geometry" />
+        </mxCell>
+        <mxCell id="reg_jb" edge="1" parent="1" source="g_jb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#2e7d32;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="tl_jb" value="등재">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tl_sa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" value="가상간편인증A&lt;br&gt;RootCA (레벨 0)" vertex="1">
+          <mxGeometry height="70" width="250" x="315" y="624" as="geometry" />
+        </mxCell>
+        <mxCell id="reg_sa" edge="1" parent="1" source="z_sa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#2e7d32;strokeWidth=3;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="tl_sa" value="등재">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tl_sb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;strokeWidth=2;fontStyle=1;fontSize=12;" value="가상간편인증B&lt;br&gt;CA · OCSP · TSA (레벨 1)" vertex="1">
+          <mxGeometry height="70" width="250" x="607" y="624" as="geometry" />
+        </mxCell>
+        <mxCell id="reg_sb" edge="1" parent="1" source="z_sb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#2e7d32;strokeWidth=3;exitX=0.5;exitY=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" target="tl_sb" value="등재">
+          <mxGeometry relative="1" x="0.1444" as="geometry" />
+        </mxCell>
+        <mxCell id="sig" edge="1" parent="1" source="z_tls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=1;labelBackgroundColor=#ffffff;strokeColor=#b7950b;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="tl_sig" value="서명">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RHKBkDFusElp1aSJpyD--5" edge="1" parent="1" source="RHKBkDFusElp1aSJpyD--4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;" target="tl_sa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RHKBkDFusElp1aSJpyD--4" parent="1" style="rounded=1;arcSize=3;dashed=1;fillColor=#fafafa;strokeColor=#7f7f7f;strokeWidth=1;fontStyle=1;fontSize=14;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;" value="다양한 인증 서비스&#xa;o 공인전자 문서 보관 서비스&#xa;o 모바일 신분증&#xa;o ....." vertex="1">
+          <mxGeometry height="310" width="235" x="35" y="774" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,128 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="2.2 인증 체인 구성" id="krtl-trust-connection">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1380" pageHeight="1060" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kisa" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;swimlane;startSize=50;rounded=0;container=1;pointerEvents=0;collapsible=0;fontSize=20;fontStyle=1;align=left;spacingLeft=15;fillColor=#f1f5f9;swimlaneFillColor=#ffffff;strokeColor=#64748b;" value="KISA TL 인증 체계" vertex="1">
+          <mxGeometry height="340" width="320" x="10" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tl-cert" parent="kisa" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;" value="TL 서명 인증서" vertex="1">
+          <mxGeometry height="70" width="270" x="25" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="tl-ca" parent="kisa" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;" value="KISA TL CA" vertex="1">
+          <mxGeometry height="70" width="270" x="25" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-5" edge="1" parent="kisa" source="tl-ca" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="tl-cert">
+          <mxGeometry relative="1" x="-0.2" as="geometry" />
+        </mxCell>
+        <mxCell id="distribution" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;swimlane;startSize=50;rounded=0;container=1;pointerEvents=0;collapsible=0;fontSize=20;fontStyle=1;align=left;spacingLeft=15;fillColor=#f1f5f9;swimlaneFillColor=#ffffff;strokeColor=#64748b;" value="배포 시스템" vertex="1">
+          <mxGeometry height="190" width="410" x="480" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="signed-tl" parent="distribution" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;" value="서명된 KR-TL" vertex="1">
+          <mxGeometry height="70" width="310" x="50" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-2" edge="1" parent="1" source="provider" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeColor=#FF2100;" target="distribution">
+          <mxGeometry relative="1" x="0.0115" as="geometry">
+            <Array as="points">
+              <mxPoint x="1165" y="60" />
+              <mxPoint x="685" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="provider" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;swimlane;startSize=50;rounded=0;container=1;pointerEvents=0;collapsible=0;fontSize=20;fontStyle=1;align=left;spacingLeft=15;fillColor=#f1f5f9;swimlaneFillColor=#ffffff;strokeColor=#64748b;" value="인증사업자 인증 체계" vertex="1">
+          <mxGeometry height="340" width="350" x="990" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="root-ca" parent="provider" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;" value="RootCA" vertex="1">
+          <mxGeometry height="70" width="270" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="issuing-ca" parent="provider" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;" value="CA" vertex="1">
+          <mxGeometry height="70" width="270" x="40" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="business-issue1" edge="1" parent="1" source="root-ca" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=8;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="issuing-ca" value="인증서 발급">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="signer" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;swimlane;startSize=50;rounded=0;container=1;pointerEvents=0;collapsible=0;fontSize=20;fontStyle=1;align=left;spacingLeft=15;fillColor=#f1f5f9;swimlaneFillColor=#ffffff;strokeColor=#64748b;" value="서명자 시스템" vertex="1">
+          <mxGeometry height="190" width="350" x="990" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="signer-cert" parent="signer" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;" value="서명자 인증서" vertex="1">
+          <mxGeometry height="70" width="270" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="business-issue2" edge="1" parent="1" source="issuing-ca" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=8;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="signer-cert" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verification" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;swimlane;startSize=50;rounded=0;container=1;pointerEvents=0;collapsible=0;fontSize=20;fontStyle=1;align=left;spacingLeft=15;fillColor=#f1f5f9;swimlaneFillColor=#ffffff;strokeColor=#64748b;" value="검증 시스템" vertex="1">
+          <mxGeometry height="480" width="410" x="480" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-tl" parent="verification" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;" value="TL 인증 체인·서명 검증" vertex="1">
+          <mxGeometry height="70" width="310" x="50" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="trusted-anchor" parent="verification" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;fillColor=#eaf2fb;strokeColor=#2e75b6;" value="TL 등재 서비스" vertex="1">
+          <mxGeometry height="90" width="310" x="50" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-chain" parent="verification" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;" value="서명자 인증 체인 검증" vertex="1">
+          <mxGeometry height="80" width="310" x="50" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-11" parent="verification" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=light-dark(#ff0000, #ededed);" value="" vertex="1">
+          <mxGeometry height="255" width="360" x="28" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-13" parent="verification" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Malgun Gothic&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;검증된 TL&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="100" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-14" parent="verification" style="text;whiteSpace=wrap;html=1;verticalAlign=middle;align=center;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Malgun Gothic&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;신뢰 서비스&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="120" x="200" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="tl-fetch" edge="1" parent="1" source="signed-tl" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#b85450;strokeWidth=2;endArrow=block;endSize=8;exitX=0.5;exitY=1;entryX=0.5;entryY=0;startArrow=block;fillColor=#f8cecc;" target="verify-tl" value="">
+          <mxGeometry relative="1" x="-0.1818" y="-5" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tl-cert-input" edge="1" parent="1" source="tl-cert" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" target="distribution" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verified-tl" edge="1" parent="1" source="verify-tl" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=8;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="trusted-anchor" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="anchor-reference" edge="1" parent="1" source="trusted-anchor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=8;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="verify-chain" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="signer-chain-input" edge="1" parent="1" source="signer-cert" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=16;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=8;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" target="verify-chain" value="사용자 인증서 서명">
+          <mxGeometry relative="1" x="0.2165" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1165" y="810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-4" edge="1" parent="1" source="HdXDT_8gp3fgx1Y9LctR-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="kisa">
+          <mxGeometry relative="1" x="0.4444" as="geometry">
+            <mxPoint x="170" y="580" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-3" edge="1" parent="1" source="HdXDT_8gp3fgx1Y9LctR-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.001;entryY=0.066;entryDx=0;entryDy=0;dashed=1;fillColor=#f8cecc;strokeColor=#b85450;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="verification">
+          <mxGeometry relative="1" x="-0.3415" as="geometry">
+            <mxPoint x="300" y="705" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-6" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Malgun Gothic&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;신뢰 정보 (IF-01)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="870" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-7" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Malgun Gothic&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;KISA TL RootCA&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Malgun Gothic&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;인증서 배포&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="130" x="320" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-15" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Malgun Gothic&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;인증서 발급&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="120" x="1170" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-16" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=19;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=1.5;fillColor=#eaf2fb;strokeColor=#2e75b6;" value="KISA TL RootCA&lt;br&gt;(신뢰앵커)" vertex="1">
+          <mxGeometry height="90" width="260" x="40" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-18" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Malgun Gothic&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;TL 서명 (IF-05)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="350" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="HdXDT_8gp3fgx1Y9LctR-19" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Malgun Gothic&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;TL 조회 (IF-07)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="700" y="340" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
