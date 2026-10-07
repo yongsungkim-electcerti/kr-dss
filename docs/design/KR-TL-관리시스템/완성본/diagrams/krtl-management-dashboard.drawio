@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="drawio">
+  <diagram id="krtl-management-dashboard" name="관리 대시보드">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1280" pageHeight="840">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="screen" value="" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;align=left;verticalAlign=top;spacing=18;strokeColor=#bdcad8;fillColor=#f4f7fb;fontColor=#22364b;container=1;rounded=0;">
+          <mxGeometry x="20" y="20" width="1240" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="header" value="KR-TL 관리" vertex="1" parent="screen" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;align=left;verticalAlign=top;spacing=18;strokeColor=#bdcad8;fillColor=#213b59;fontColor=#22364b;fontSize=25;fontStyle=1;fontColor=#ffffff;rounded=0;strokeColor=#213b59;">
+          <mxGeometry x="0" y="0" width="1240" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="menu" value="현황&#xA;&#xA;사업자·서비스&#xA;&#xA;접수·심사&#xA;&#xA;상태·이력&#xA;&#xA;TL 발행&#xA;&#xA;배포&#xA;&#xA;인증서·기한&#xA;&#xA;권한·감사" vertex="1" parent="screen" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;align=left;verticalAlign=top;spacing=18;strokeColor=#bdcad8;fillColor=#ffffff;fontColor=#22364b;rounded=0;fontSize=19;spacing=25;">
+          <mxGeometry x="0" y="65" width="225" height="735" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="대시보드" vertex="1" parent="screen" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;align=left;verticalAlign=top;spacing=18;strokeColor=#bdcad8;fillColor=none;fontColor=#22364b;strokeColor=none;fontStyle=1;fontSize=26;spacing=4;">
+          <mxGeometry x="250" y="85" width="940" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pending" value="처리 대기&#xA;&#xA;접수  —   심사  —&#xA;보완  —   발행  —" vertex="1" parent="screen" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;align=left;verticalAlign=top;spacing=18;strokeColor=#bdcad8;fillColor=#ffffff;fontColor=#22364b;fontSize=17;">
+          <mxGeometry x="250" y="155" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="state" value="서비스 상태&#xA;&#xA;인정  —&#xA;정지  —   철회  —" vertex="1" parent="screen" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;align=left;verticalAlign=top;spacing=18;strokeColor=#bdcad8;fillColor=#ffffff;fontColor=#22364b;fontSize=17;">
+          <mxGeometry x="490" y="155" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="issue" value="최신 TL 발행&#xA;&#xA;일련번호  —&#xA;발행 시각  —" vertex="1" parent="screen" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;align=left;verticalAlign=top;spacing=18;strokeColor=#bdcad8;fillColor=#ffffff;fontColor=#22364b;fontSize=17;">
+          <mxGeometry x="730" y="155" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="publish" value="최신 TL 게시&#xA;&#xA;게시 번호  —&#xA;제공 상태  —" vertex="1" parent="screen" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;align=left;verticalAlign=top;spacing=18;strokeColor=#bdcad8;fillColor=#ffffff;fontColor=#22364b;fontSize=17;">
+          <mxGeometry x="970" y="155" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tasks" value="처리할 업무&#xA;&#xA;업무  |  상태  |  담당자&#xA;&#xA;접수 확인  |  접수 대기  |  —&#xA;심사 자료  |  보완 대기  |  —&#xA;확정 정보  |  발행 대기  |  —" vertex="1" parent="screen" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;align=left;verticalAlign=top;spacing=18;strokeColor=#bdcad8;fillColor=#ffffff;fontColor=#22364b;fontSize=18;">
+          <mxGeometry x="250" y="335" width="570" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="deadline" value="기한·알림&#xA;&#xA;다음 발행 시기  —&#xA;TL 서명 인증서 만료  —&#xA;서비스 인증서 만료  —&#xA;배포 오류  —" vertex="1" parent="screen" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;align=left;verticalAlign=top;spacing=18;strokeColor=#bdcad8;fillColor=#fff8e8;fontColor=#22364b;fontSize=18;">
+          <mxGeometry x="840" y="335" width="370" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="history" value="최근 처리 이력&#xA;&#xA;처리 시각  |  관리 대상  |  처리 내용  |  담당자" vertex="1" parent="screen" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;align=left;verticalAlign=top;spacing=18;strokeColor=#bdcad8;fillColor=#ffffff;fontColor=#22364b;fontSize=18;">
+          <mxGeometry x="250" y="590" width="960" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="actions" value="접수 확인     |     발행 관리     |     배포 현황     |     감사 이력" vertex="1" parent="screen" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;align=left;verticalAlign=top;spacing=18;strokeColor=#bdcad8;fillColor=#eaf2fb;fontColor=#22364b;fontSize=17;align=center;verticalAlign=middle;spacing=6;">
+          <mxGeometry x="250" y="735" width="960" height="45" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
