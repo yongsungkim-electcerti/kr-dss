@@ -1,2 +1,100 @@
-<?xml version='1.0' encoding='utf-8'?>
-<mxfile host="drawio"><diagram name="발행부터 실제 적용까지의 버전 확인" id="krtl-version-flow"><mxGraphModel grid="1" gridSize="10" page="1" pageWidth="1000" pageHeight="680"><root><mxCell id="0" /><mxCell id="1" parent="0" /><mxCell id="title" value="발행부터 실제 적용까지의 버전 확인" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=17;spacing=8;strokeColor=#53667a;fillColor=#ffffff;text;align=left;fontSize=22;fontStyle=1;strokeColor=none;"><mxGeometry as="geometry" x="20" y="10" width="960" height="40" /></mxCell><mxCell id="pub" value="① 발행  관리 시스템&#10;스냅숏 → 편성 → 서명 → #3 확정" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=17;spacing=8;strokeColor=#53667a;fillColor=#eaf2fb;"><mxGeometry as="geometry" x="40" y="100" width="400" height="100" /></mxCell><mxCell id="dist" value="② 게시  배포 WAS&#10;서명·번호 확인 → 최신 #3 게시" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=17;spacing=8;strokeColor=#53667a;fillColor=#eaf2fb;"><mxGeometry as="geometry" x="550" y="100" width="400" height="100" /></mxCell><mxCell id="rp" value="③ 수신  이용기관&#10;TL #3 검증·보유 → 색인 생성" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=17;spacing=8;strokeColor=#53667a;fillColor=#eaf2fb;"><mxGeometry as="geometry" x="550" y="320" width="400" height="100" /></mxCell><mxCell id="use" value="④ 적용  검증 결과&#10;사용 TL #3 · S2 실패 · 정지 사유" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=17;spacing=8;strokeColor=#53667a;fillColor=#eaf2fb;"><mxGeometry as="geometry" x="40" y="320" width="400" height="100" /></mxCell><mxCell id="pd" value="IF-06 반출" edge="1" parent="1" source="pub" target="dist" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=14;labelBackgroundColor=#ffffff;strokeWidth=2;endArrow=block;strokeColor=#586574;exitX=1;exitY=0.5;entryX=0;entryY=0.5;"><mxGeometry as="geometry" relative="1" /></mxCell><mxCell id="dr" value="IF-07 응답" edge="1" parent="1" source="dist" target="rp" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=14;labelBackgroundColor=#ffffff;strokeWidth=2;endArrow=block;strokeColor=#586574;exitX=0.5;exitY=1;entryX=0.5;entryY=0;"><mxGeometry as="geometry" relative="1" /></mxCell><mxCell id="ru" value="검증" edge="1" parent="1" source="rp" target="use" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=14;labelBackgroundColor=#ffffff;strokeWidth=2;endArrow=block;strokeColor=#586574;exitX=0;exitY=0.5;entryX=1;entryY=0.5;"><mxGeometry as="geometry" relative="1" /></mxCell><mxCell id="br" value="동기화 전 브라우저: 보유 #2 → 같은 S2를 통과로 판정&#10;동기화 후 브라우저: 보유 #3 → 같은 S2를 실패로 판정&#10;접속 기록만으로 실제 적용을 단정하지 않는다." vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=17;spacing=8;strokeColor=#53667a;fillColor=#fff2cc;"><mxGeometry as="geometry" x="40" y="520" width="910" height="100" /></mxCell></root></mxGraphModel></diagram></mxfile>
+<mxfile host="app.diagrams.net">
+  <diagram id="krtl-version-flow" name="TL 배포 및 동기화 기준">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1020" pageHeight="1280" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="issue" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#fff2cc;spacing=8;swimlane;rounded=0;startSize=46;fontStyle=1;align=left;spacingLeft=20;container=1;collapsible=0;" value="발행 · 신뢰체계 관리 시스템" vertex="1">
+          <mxGeometry height="180" width="270" x="-30" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="pub" parent="issue" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#ffffff;spacing=8;" value="서명된 KR-TL" vertex="1">
+          <mxGeometry height="70" width="200" x="35" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="distribution" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#eaf2fb;spacing=8;swimlane;rounded=0;startSize=46;fontStyle=1;align=left;spacingLeft=20;container=1;collapsible=0;" value="배포 · 배포 시스템" vertex="1">
+          <mxGeometry height="290" width="680" x="300" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="official" parent="distribution" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#ffffff;spacing=8;" value="공식 게시본&#xa;일련번호 · 발행 시각 · NextUpdate" vertex="1">
+          <mxGeometry height="80" width="380" x="150" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="api" parent="distribution" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#ffffff;spacing=8;" value="API 조회&#xa;주기적 확인" vertex="1">
+          <mxGeometry height="65" width="270" x="40" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="download" parent="distribution" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#ffffff;spacing=8;" value="관리 서비스&#xa;파일 다운로드" vertex="1">
+          <mxGeometry height="65" width="270" x="370" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="sync" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#f1f5f9;spacing=8;swimlane;rounded=0;startSize=46;fontStyle=1;align=left;spacingLeft=20;container=1;collapsible=0;" value="동기화 · 브라우저 / 이용기관 / 제3자(해외)" vertex="1">
+          <mxGeometry height="410" width="680" x="300" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="compare" parent="sync" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#ffffff;spacing=8;" value="일련번호 비교" vertex="1">
+          <mxGeometry height="65" width="300" x="190" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="verify" parent="sync" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#ffffff;spacing=8;" value="TL 서명 · 인증 체인&#xa;사용 기한 검증" vertex="1">
+          <mxGeometry height="75" width="300" x="190" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="retained" parent="sync" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#eaf2fb;spacing=8;" value="보유본 갱신" vertex="1">
+          <mxGeometry height="65" width="300" x="190" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="anchor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#fff2cc;spacing=8;" value="KISA TL RootCA&#xa;(신뢰앵커)" vertex="1">
+          <mxGeometry height="75" width="240" x="-15" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="application" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#e8f3ec;spacing=8;swimlane;rounded=0;startSize=46;fontStyle=1;align=left;spacingLeft=20;container=1;collapsible=0;" value="적용 · 서명 검증" vertex="1">
+          <mxGeometry height="170" width="390" x="1030" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="used" parent="application" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=18;fontColor=#243447;strokeColor=#718399;strokeWidth=1.5;fillColor=#ffffff;spacing=8;" value="검증 결과&#xa;사용한 TL 일련번호" vertex="1">
+          <mxGeometry height="75" width="300" x="50" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="publish" edge="1" parent="1" source="pub" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#53667a;strokeWidth=2;fontFamily=Malgun Gothic;fontSize=15;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="official" value="발행본 전달">
+          <mxGeometry relative="1" x="-0.313" as="geometry" />
+        </mxCell>
+        <mxCell id="official-api" edge="1" parent="1" source="official" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#53667a;strokeWidth=2;fontFamily=Malgun Gothic;fontSize=15;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitX=0.15;" target="api" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="507" y="420" />
+              <mxPoint x="475" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="official-download" edge="1" parent="1" source="official" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#53667a;strokeWidth=2;fontFamily=Malgun Gothic;fontSize=15;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitX=0.85;" target="download" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="773" y="420" />
+              <mxPoint x="805" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="api-sync" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#53667a;strokeWidth=2;fontFamily=Malgun Gothic;fontSize=15;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryX=0;entryY=0.5;" target="compare" value="TL 조회(IF-07)">
+          <mxGeometry relative="1" x="0.0124" y="-50" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="475" y="575" />
+              <mxPoint x="280" y="575" />
+              <mxPoint x="280" y="707.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="download-sync" edge="1" parent="1" source="download" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#53667a;strokeWidth=2;fontFamily=Malgun Gothic;fontSize=15;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryX=1;entryY=0.5;dashed=1;" target="compare" value="파일 등록">
+          <mxGeometry relative="1" x="0.0124" y="50" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="805" y="575" />
+              <mxPoint x="1000" y="575" />
+              <mxPoint x="1000" y="707.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="compare-verify" edge="1" parent="1" source="compare" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#53667a;strokeWidth=2;fontFamily=Malgun Gothic;fontSize=15;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="verify" value="새 발행본">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="anchor-verify" edge="1" parent="1" source="anchor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#53667a;strokeWidth=2;fontFamily=Malgun Gothic;fontSize=15;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;" target="verify" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="verify-retained" edge="1" parent="1" source="verify" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#53667a;strokeWidth=2;fontFamily=Malgun Gothic;fontSize=15;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="retained" value="검증 통과">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="retained-used" edge="1" parent="1" source="retained" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#53667a;strokeWidth=2;fontFamily=Malgun Gothic;fontSize=15;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="used" value="검증에 사용">
+          <mxGeometry relative="1" x="0.011" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
