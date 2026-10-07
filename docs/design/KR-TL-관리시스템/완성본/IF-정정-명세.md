@@ -1,5 +1,7 @@
 # KR-TL 인터페이스 명세
 
+> **PoC 상세 보완(2026-10-07):** 최신 IF-01~08 번호를 유지한다. 별도 WEB은 구현하지 않고 Spring Boot WAS가 IF-07을 제공한다. 조회 Request/Response는 [28 IF-07 TL 조회 API](../28-IF07-TL-조회-API.md)를 따른다. 아래 구성도 기준의 전체 시스템 설명과 PoC 구현 범위를 구별한다.
+
 ## 기준 그림
 
 [사용자가 수정한 draw.io 원본](https://app.diagrams.net/#G1jZnZ2jLUbvmwizBDvYN0O7nXLmxlwNOz#%7B%22pageId%22%3A%229SgXNMT8XWq2FVYm6fX4%22%7D)을 [로컬 원본](diagrams/krtl-system.drawio)으로 다운로드했다. 원본의 도형·연결·문구는 수정하지 않았다.
