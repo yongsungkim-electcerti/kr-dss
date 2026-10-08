@@ -1,0 +1,3428 @@
+[
+  {
+    "original": "참조문서/01_원문/① 학술연구/DID 기술에 기반 한 분산 신원 인증 시스템 (2023)__d6399f20.html",
+    "current": "references/technical/① 학술연구/DID 기술에 기반 한 분산 신원 인증 시스템 (2023)__d6399f20.html",
+    "action": "move",
+    "sha256": "d6399f2018fe1f74d64e86a34be1eba31b8e8623ee5af5ca92b38dcaaa7812aa"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서__5b2e8b82.html",
+    "current": "references/technical/① 학술연구/KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서__5b2e8b82.html",
+    "action": "move",
+    "sha256": "5b2e8b8253830f443a27665b96c76babc13843935a780be437cfda97b2be885c"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서__8e0f8642.html",
+    "current": "references/technical/① 학술연구/KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서__8e0f8642.html",
+    "action": "move",
+    "sha256": "8e0f86426531c298e2525aa05798517fd8c4c6be09ccef3c31ab87744b61ae13"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서__777d3ae9.html",
+    "current": "references/technical/① 학술연구/KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서__777d3ae9.html",
+    "action": "move",
+    "sha256": "777d3ae91109a8ddd6cc7b79a9266e35813ab25b48192db04b1b7c9a174f0654"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/Trusted Web 구축을 위한 기술 및 보안연구__0a8ae6e5.pdf",
+    "current": "references/technical/① 학술연구/Trusted Web 구축을 위한 기술 및 보안연구__0a8ae6e5.pdf",
+    "action": "move",
+    "sha256": "0a8ae6e5db28f6569baec9c4535ec9cac734e432db452fc3b21912ccde87bc74"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/arXiv_SoK_Trusting_SSI (2024)__25386132.pdf",
+    "current": "references/technical/① 학술연구/arXiv_SoK_Trusting_SSI (2024)__25386132.pdf",
+    "action": "move",
+    "sha256": "25386132d7310c71ee606c116948f260c22ad67e8669703ad386a8ebabb7aba3"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/arXiv_SoK_Trusting_SSI (2024)__ff7b58a9.html",
+    "current": "references/technical/① 학술연구/arXiv_SoK_Trusting_SSI (2024)__ff7b58a9.html",
+    "action": "move",
+    "sha256": "ff7b58a930648dbfba0aa373d6b07dd760df859e94260e4d915a06dabc62d580"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/arXiv_Towards_Trustful_Digital_World (2021)__193e7baa.html",
+    "current": "references/technical/① 학술연구/arXiv_Towards_Trustful_Digital_World (2021)__193e7baa.html",
+    "action": "move",
+    "sha256": "193e7baa04fb8b7363e363cadf5edd787f9a50c5355b9274b82fa60fcc4c3d17"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/arXiv_Towards_Trustful_Digital_World (2021)__5a0c5d46.pdf",
+    "current": "references/technical/① 학술연구/arXiv_Towards_Trustful_Digital_World (2021)__5a0c5d46.pdf",
+    "action": "move",
+    "sha256": "5a0c5d4649072afcbf75db8b133b557220225fe15da3af0d783e5ea501999dd4"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/모바일 기기에서 공개 API를 통한 신원 증명 서비스의 문제점 분석(2021)__f51069d8.html",
+    "current": "references/technical/① 학술연구/모바일 기기에서 공개 API를 통한 신원 증명 서비스의 문제점 분석(2021)__f51069d8.html",
+    "action": "move",
+    "sha256": "f51069d8e2c31945749ee0314bd081a8b743f6ecb8b906e1ec1da2c0e89d5b58"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/모바일 신분증 등 모방 앱의 문제점과 대처 방안 (2024)__4d164ef5.html",
+    "current": "references/technical/① 학술연구/모바일 신분증 등 모방 앱의 문제점과 대처 방안 (2024)__4d164ef5.html",
+    "action": "move",
+    "sha256": "4d164ef5f1027977f8759f551ecb66a4666aa58d956e0f5821f715ba8d90d961"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/분산ID(DID) 직접 해석방안 연구__49752fdb.pdf",
+    "current": "references/technical/① 학술연구/분산ID(DID) 직접 해석방안 연구__49752fdb.pdf",
+    "action": "move",
+    "sha256": "49752fdb0eba65866315914c326ffbe50083e8db9f3d99cf9c9b5bbe9b28d9d9"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/블록체인 신뢰 프레임워크(K-BTF) 중장기계획 수립 연구__916454fe.pdf",
+    "current": "references/technical/① 학술연구/블록체인 신뢰 프레임워크(K-BTF) 중장기계획 수립 연구__916454fe.pdf",
+    "action": "move",
+    "sha256": "916454fe6ed8f74dd6038f5a0b00135a87365ee1247fec9ca6722279f02cde0b"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/한국IT정책경영학회_분산신원 기반의 자기주권신원모델모바일 운전면허증에 관한 연구(2023)__695ba052.html",
+    "current": "references/technical/① 학술연구/한국IT정책경영학회_분산신원 기반의 자기주권신원모델모바일 운전면허증에 관한 연구(2023)__695ba052.html",
+    "action": "move",
+    "sha256": "695ba0526ce84299c9640a742a1fcdd967e8f5fd8258024a0e27658c234c07cd"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/한국신용카드학회_전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구(2019)__d1b72cd3.html",
+    "current": "references/technical/① 학술연구/한국신용카드학회_전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구(2019)__d1b72cd3.html",
+    "action": "move",
+    "sha256": "d1b72cd316ab7d9ae16f3710afb9fe27e46f91a0a5425e720eabb5a9e9eadc5b"
+  },
+  {
+    "original": "참조문서/01_원문/① 학술연구/한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)__0ffc4923.html",
+    "current": "references/technical/① 학술연구/한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)__0ffc4923.html",
+    "action": "move",
+    "sha256": "0ffc492373a39553854cd2b5ddc8a6328f2ad6f01afb5b6147142513c98e001e"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/02A_Assessment_Guidelines_202412__cc37b203.pdf",
+    "current": "references/technical/② 법·제도/02A_Assessment_Guidelines_202412__cc37b203.pdf",
+    "action": "move",
+    "sha256": "cc37b2035aae486bdaa976067d852543a436553482ea50c18cff52400b1f3c73"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/02_Assessment_Guidelines__7fff32cd.html",
+    "current": "references/technical/② 법·제도/02_Assessment_Guidelines__7fff32cd.html",
+    "action": "move",
+    "sha256": "7fff32cd75939b78b0e7d621f70219f610041cc0b864fa26d2c879d8412721eb"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/EUDI_Regulation_안내__91a0a1d0.html",
+    "current": "references/technical/② 법·제도/EUDI_Regulation_안내__91a0a1d0.html",
+    "action": "move",
+    "sha256": "91a0a1d08a5e367ca9217b2c9652740ad7aa00422df728426aaece1e60c67382"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/EU_202401183_Regulation (EU) 2024_1183__a3b95f56.html",
+    "current": "references/technical/② 법·제도/EU_202401183_Regulation (EU) 2024_1183__a3b95f56.html",
+    "action": "move",
+    "sha256": "a3b95f563f90f290e317a791db45afc609227bae1dfc28412a303b75f295b9b0"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/EU_202412_EUDI Wallet Implementing Regulations__a4e6df0f.html",
+    "current": "references/technical/② 법·제도/EU_202412_EUDI Wallet Implementing Regulations__a4e6df0f.html",
+    "action": "move",
+    "sha256": "a4e6df0f3ecbb80acfd24169e33aa2990b32544d5cd4f7c6e447c6196358a93b"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/EU_2024903_Regulation_Interoperable Europe Act__f9d17d04.html",
+    "current": "references/technical/② 법·제도/EU_2024903_Regulation_Interoperable Europe Act__f9d17d04.html",
+    "action": "move",
+    "sha256": "f9d17d04a0ceb81927af8103bb4ef91f64b22448454bdb9ef0395461ede6faa2"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/Japan Digital Agency Trust__86ae1495.html",
+    "current": "references/technical/② 법·제도/Japan Digital Agency Trust__86ae1495.html",
+    "action": "move",
+    "sha256": "86ae14951b9e61d59285b051b378ef76160125e432eba24a582a28dd13a640ea"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/Japan Digital qualification certificates__da63a697.html",
+    "current": "references/technical/② 법·제도/Japan Digital qualification certificates__da63a697.html",
+    "action": "move",
+    "sha256": "da63a697df0df53b21c18d2f620b505c036153af070d05c3dd06214a02fc9e4b"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/NIST_SP800_63A_4__f8365418.pdf",
+    "current": "references/technical/② 법·제도/NIST_SP800_63A_4__f8365418.pdf",
+    "action": "move",
+    "sha256": "f83654182f0b012f17f6901e6d03e12ef2ba422b341aee875e837094f23e9ad3"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/NIST_SP800_63B_4__d9ab8957.pdf",
+    "current": "references/technical/② 법·제도/NIST_SP800_63B_4__d9ab8957.pdf",
+    "action": "move",
+    "sha256": "d9ab89576b5ae2cfb3ba37781110788dea27a85a5079496dbfc1a79834670afd"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/NIST_SP800_63C_4__dce90171.pdf",
+    "current": "references/technical/② 법·제도/NIST_SP800_63C_4__dce90171.pdf",
+    "action": "move",
+    "sha256": "dce901711d044dcdd672fe28c2b012558786db0532e634bd65fa9506f88b3cdb"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/NIST_SP800_63_4__2f5b107d.pdf",
+    "current": "references/technical/② 법·제도/NIST_SP800_63_4__2f5b107d.pdf",
+    "action": "move",
+    "sha256": "2f5b107de218a0fc3fe7f7e91b2ece5babb001eda5745b7c568a3cc876002f2d"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/NIST_최종_문서__850aeb7e.html",
+    "current": "references/technical/② 법·제도/NIST_최종_문서__850aeb7e.html",
+    "action": "move",
+    "sha256": "850aeb7edfdb382951c48a5f9047c200307e642718eef0eb4e9f0d0519017336"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/UK DVS Trust Framework collection__e51d0d8f.html",
+    "current": "references/technical/② 법·제도/UK DVS Trust Framework collection__e51d0d8f.html",
+    "action": "move",
+    "sha256": "e51d0d8f7b303d935e95b6d3d82c3317b98658684533807fbf188aadcd4f56b9"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/UK Digital Identity and Attributes Trust Framework beta 0.3 (2023)__6335fea4.html",
+    "current": "references/technical/② 법·제도/UK Digital Identity and Attributes Trust Framework beta 0.3 (2023)__6335fea4.html",
+    "action": "move",
+    "sha256": "6335fea4eb4a4311ab218ebec92333ff81e8c4f0d707ec60c7e427e87dff3046"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/UK_DVSTF_certification_scheme_requirements_for_conformity_assessment_bodies_v1.15__8120c97a.pdf",
+    "current": "references/technical/② 법·제도/UK_DVSTF_certification_scheme_requirements_for_conformity_assessment_bodies_v1.15__8120c97a.pdf",
+    "action": "move",
+    "sha256": "8120c97a0cd29fd5ebd5efa8bb33857b43bc44fbb53f5bdca752dd83e1e3c1bb"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/UK_GPG45_DataSchema__cf2017b5.html",
+    "current": "references/technical/② 법·제도/UK_GPG45_DataSchema__cf2017b5.html",
+    "action": "move",
+    "sha256": "cf2017b5d4ef97ccc32e513a90ebfe9a86c07ffac4533049f3ae42e7f738ae93"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/UK_TrustFramework_1.0_FullText__1b14fe6b.html",
+    "current": "references/technical/② 법·제도/UK_TrustFramework_1.0_FullText__1b14fe6b.html",
+    "action": "move",
+    "sha256": "1b14fe6b19344dc62365f34d7a9c568ee1ab7ff85af7daf448f696b64169b7e0"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/UNCITRAL_MLIT_Text_ExplanatoryNote__c0f18008.pdf",
+    "current": "references/technical/② 법·제도/UNCITRAL_MLIT_Text_ExplanatoryNote__c0f18008.pdf",
+    "action": "move",
+    "sha256": "c0f18008fa07874b6ee61e2c5eb101279d4b4938b35ef6d199d4279a51c0c3b8"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/UNCITRAL_공식_소개__322541a4.html",
+    "current": "references/technical/② 법·제도/UNCITRAL_공식_소개__322541a4.html",
+    "action": "move",
+    "sha256": "322541a44acce87755d92c993525c6feb8aeb594743d1a39c8995d361caf4dfd"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/Using GOV.UK Wallet in digital identity sector__7fab2876.html",
+    "current": "references/technical/② 법·제도/Using GOV.UK Wallet in digital identity sector__7fab2876.html",
+    "action": "move",
+    "sha256": "7fab28766a61bec4faab9840b87e78dcf7454127f2923cd05572df7486e1f340"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/the_1.0_UK_DVS_trust_framework__3eba0940.html",
+    "current": "references/technical/② 법·제도/the_1.0_UK_DVS_trust_framework__3eba0940.html",
+    "action": "move",
+    "sha256": "3eba09402eac5698c1bd3c454db3b292a4bbcc950f1d97c6287462fd9375b57d"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/デジタル資格者証の活用方法（PDF／1,455KB）__5491f444.pdf",
+    "current": "references/technical/② 법·제도/デジタル資格者証の活用方法（PDF／1,455KB）__5491f444.pdf",
+    "action": "move",
+    "sha256": "5491f444f215c6e6d4286cb3a242380abad369bb61f25d69836bd956053d07bd"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/国家資格オンライン化サービス紹介（PDF／1,687KB）__0031d6f7.pdf",
+    "current": "references/technical/② 법·제도/国家資格オンライン化サービス紹介（PDF／1,687KB）__0031d6f7.pdf",
+    "action": "move",
+    "sha256": "0031d6f78e34d8b22ac6f39a578db0929cd8ca9763ea0547716f725a7a55b038"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/国家資格等のオンライン・デジタル化令和8年度以降の対応スケジュール（PDF／722KB）__374f169c.pdf",
+    "current": "references/technical/② 법·제도/国家資格等のオンライン・デジタル化令和8年度以降の対応スケジュール（PDF／722KB）__374f169c.pdf",
+    "action": "move",
+    "sha256": "374f169c4e8c36e6aa7ca8c39e4525f1178740ddf0326dd8b6cf416fb0990495"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/国家資格等オンライン・デジタル化の開始について（PDF／2,745KB）__efd5c21f.pdf",
+    "current": "references/technical/② 법·제도/国家資格等オンライン・デジタル化の開始について（PDF／2,745KB）__efd5c21f.pdf",
+    "action": "move",
+    "sha256": "efd5c21fb6a2dbb42eb8fce9e51d1ed202a20a41306ee031701c7f9e2f0bd1ac"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/데이터_스키마__8ab49bf1.html",
+    "current": "references/technical/② 법·제도/데이터_스키마__8ab49bf1.html",
+    "action": "move",
+    "sha256": "8ab49bf1c27c93b776edb3ae5bbb18145014aa922db5899074c513fd1adffaa5"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/모바일 신분증 공식 안내__1a3a2131.html",
+    "current": "references/technical/② 법·제도/모바일 신분증 공식 안내__1a3a2131.html",
+    "action": "move",
+    "sha256": "1a3a2131953121f4e7133a2c41007a4d87ab0debf08d15237d0049cb25081bdc"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/모바일 신분증 법적 인정 관련 조문__32f27d44.html",
+    "current": "references/technical/② 법·제도/모바일 신분증 법적 인정 관련 조문__32f27d44.html",
+    "action": "move",
+    "sha256": "32f27d4432cd098a1ffe7390ad1c5293c1e9aa536633eaa41650cfb4b8ace82a"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/인증제도와_버전__6835fb6e.html",
+    "current": "references/technical/② 법·제도/인증제도와_버전__6835fb6e.html",
+    "action": "move",
+    "sha256": "6835fb6ea28b6c3dd84efa49394615b1501a067eab92a8e39e8617e656a14461"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/전자문서 및 전자거래 기본법__bccb7b0a.html",
+    "current": "references/technical/② 법·제도/전자문서 및 전자거래 기본법__bccb7b0a.html",
+    "action": "move",
+    "sha256": "bccb7b0aa63d40ecdb1c496bef64baa5f6b5f1f3f0c701354cc6df295c42f8bd"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/전자서명법__90eabade.html",
+    "current": "references/technical/② 법·제도/전자서명법__90eabade.html",
+    "action": "move",
+    "sha256": "90eabade3a4bc1c0fa9b10566a893c09433c6c1cf0c850b91dfd4b73dc0cbf90"
+  },
+  {
+    "original": "참조문서/01_원문/② 법·제도/전자증명서 발급업무 처리지침__78ffebdd.html",
+    "current": "references/technical/② 법·제도/전자증명서 발급업무 처리지침__78ffebdd.html",
+    "action": "move",
+    "sha256": "78ffebddad441c6378841b11976c36d142ebeeee5067870ad22b8f9865c3bf5b"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/03_Assessment_Toolbox__42ac75ae.html",
+    "current": "references/technical/③ 기술/03_Assessment_Toolbox__42ac75ae.html",
+    "action": "move",
+    "sha256": "42ac75ae79ddcfdd0751ca02a4f3b8253aefdf93c20a1d9d32c84a07574fbb34"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/11_ITB_FAQ__7d008cbb.html",
+    "current": "references/technical/③ 기술/11_ITB_FAQ__7d008cbb.html",
+    "action": "move",
+    "sha256": "7d008cbb4566743bb75574c9a4e7e7f3dea06a5e02ba11d52a9098be5a620146"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/12_GITB_TDL__57c83192.html",
+    "current": "references/technical/③ 기술/12_GITB_TDL__57c83192.html",
+    "action": "move",
+    "sha256": "57c83192fd2342aa80576ae69d022f383d3f1a10bb95b0ed548cfa9041e124df"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/12_example_test_suites__187e8c8f.html",
+    "current": "references/technical/③ 기술/12_example_test_suites__187e8c8f.html",
+    "action": "move",
+    "sha256": "187e8c8f8fec0d1b6c6ba76eba54ff84a347d15838dea84e1825596360ba8b3a"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/12_expressions__9ca15915.html",
+    "current": "references/technical/③ 기술/12_expressions__9ca15915.html",
+    "action": "move",
+    "sha256": "9ca1591548fffc35aa216015b3ac73dfdcd52f59ddcaa1ef42a5b7bcb42637fa"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/12_hello_world__60086481.html",
+    "current": "references/technical/③ 기술/12_hello_world__60086481.html",
+    "action": "move",
+    "sha256": "60086481a3cbc788c10f64cc6914362e882812a7c8fa062b994e53d59e33bc0f"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/12_introduction__2af3a50c.html",
+    "current": "references/technical/③ 기술/12_introduction__2af3a50c.html",
+    "action": "move",
+    "sha256": "2af3a50c7cc09ffea9ee9d9917d5d75fbffb6935065e0c92f5fc224055a86163"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/12_release_history__17bc2d62.html",
+    "current": "references/technical/③ 기술/12_release_history__17bc2d62.html",
+    "action": "move",
+    "sha256": "17bc2d62709cfc87232b9c467034d15331b5755928496e89a06592b5bc11fd66"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/12_scriptlets__9d4458fd.html",
+    "current": "references/technical/③ 기술/12_scriptlets__9d4458fd.html",
+    "action": "move",
+    "sha256": "9d4458fdc4d70118690e31c4e86efdad224ed7a1aad5fa640378c33b50cbd8d4"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/12_test_cases__187b12a6.html",
+    "current": "references/technical/③ 기술/12_test_cases__187b12a6.html",
+    "action": "move",
+    "sha256": "187b12a6a967189435ef0a7d4e3050318fd46e98e4eb108fe7eb94d9e2bf2332"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/12_test_step_handlers__f241eb4b.html",
+    "current": "references/technical/③ 기술/12_test_step_handlers__f241eb4b.html",
+    "action": "move",
+    "sha256": "f241eb4b766f534c1c671bde92397f290176a48ac0d06994c3e3f836e8c91c89"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/12_test_steps__7bf7a21a.html",
+    "current": "references/technical/③ 기술/12_test_steps__7bf7a21a.html",
+    "action": "move",
+    "sha256": "7bf7a21acf49469e068915eebdfb3558a0af7b05a6bf25e904f48e8bb3e0a71e"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/12_test_suites__9ff21f2f.html",
+    "current": "references/technical/③ 기술/12_test_suites__9ff21f2f.html",
+    "action": "move",
+    "sha256": "9ff21f2f8ce8932f493affc9a30e013fce614d010b393add3c28e97c43ee53d5"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/12_types__1283baa4.html",
+    "current": "references/technical/③ 기술/12_types__1283baa4.html",
+    "action": "move",
+    "sha256": "1283baa47cb1458c5018054acbb34fb65e507c72fcbd71a9ca3f2758fc55b1fb"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/ARF_MainDocument__c4cee77d.html",
+    "current": "references/technical/③ 기술/ARF_MainDocument__c4cee77d.html",
+    "action": "move",
+    "sha256": "c4cee77d56303f1c14894aa952d23027d56269bfd479f6a8c392f030e0a017f4"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/ARF_Main_Annexes_Release__4a1ed04d.pdf",
+    "current": "references/technical/③ 기술/ARF_Main_Annexes_Release__4a1ed04d.pdf",
+    "action": "move",
+    "sha256": "4a1ed04da5f36582bff0df002fa33d93f4521a13d32181efac922dae9e658f2a"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/ARF__dcd4471a.html",
+    "current": "references/technical/③ 기술/ARF__dcd4471a.html",
+    "action": "move",
+    "sha256": "dcd4471ab4045df344ca771d25862d2cc55b657000a58eee58875afda27c0b87"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/Authorization_vLEI_Credential_Framework__4372fd4a.pdf",
+    "current": "references/technical/③ 기술/Authorization_vLEI_Credential_Framework__4372fd4a.pdf",
+    "action": "move",
+    "sha256": "4372fd4a84cc90bfa2a3d82fec8958025d389e222f5f02ff44bf3b42404fe690"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/EU_LOTL_운영_안내__b3e30b16.html",
+    "current": "references/technical/③ 기술/EU_LOTL_운영_안내__b3e30b16.html",
+    "action": "move",
+    "sha256": "b3e30b164c586990bfc112b6602cf432c88649f8c8b74d780db7a1ac8eb56822"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/GLEIF_공식_프레임워크__1ecfab6f.html",
+    "current": "references/technical/③ 기술/GLEIF_공식_프레임워크__1ecfab6f.html",
+    "action": "move",
+    "sha256": "1ecfab6f0e8035ec8cc1cd96c4544ebc86da637f0d60db7b6c73d42b943cf8f8"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/GOV.UK Wallet technical documentation__6c64b8d7.html",
+    "current": "references/technical/③ 기술/GOV.UK Wallet technical documentation__6c64b8d7.html",
+    "action": "move",
+    "sha256": "6c64b8d7bfd336916747ef3d367e870ff8788b30fd32b15f6669ca3194ee4e69"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/Legal_Entity_Official_Organizational_Role_vLEI_Credential_Framework__00d2a83d.pdf",
+    "current": "references/technical/③ 기술/Legal_Entity_Official_Organizational_Role_vLEI_Credential_Framework__00d2a83d.pdf",
+    "action": "move",
+    "sha256": "00d2a83d38319421e0646e910ad4372e142a17793fd288e16ef310536025c940"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/Toolbox__d20eac2b.html",
+    "current": "references/technical/③ 기술/Toolbox__d20eac2b.html",
+    "action": "move",
+    "sha256": "d20eac2b58efa909579f70981da6d23dc0760ea5320f3ea56d21b15bb2d61ab0"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Primary_Document__c339898b.pdf",
+    "current": "references/technical/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Primary_Document__c339898b.pdf",
+    "action": "move",
+    "sha256": "c339898b59949db9ca8fe808d4b67fe6ec20b2b2aaea8061511a055f19838bcb"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Technical_Requirements_Part_2_vLEI__4815f9e2.pdf",
+    "current": "references/technical/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Technical_Requirements_Part_2_vLEI__4815f9e2.pdf",
+    "action": "move",
+    "sha256": "4815f9e22e783d47eecaafbae8e7d30c6b91df897ff8216c3b02a24eac639dd0"
+  },
+  {
+    "original": "참조문서/01_원문/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Trust_Assurance_Framework__e77f5950.pdf",
+    "current": "references/technical/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Trust_Assurance_Framework__e77f5950.pdf",
+    "action": "move",
+    "sha256": "e77f5950544f84193317071f3b6808fc966a2796417a0f1acdbc62fe5084e209"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/04_IOPA_1.0.0__84c2598d.html",
+    "current": "references/standards/04_IOPA_1.0.0__84c2598d.html",
+    "action": "move",
+    "sha256": "84c2598d91f620ce4135bc7440a000f12331a4a392d58593425cdbc2cd311c7e"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/07_SEMIC_Specifications__68a7938b.html",
+    "current": "references/standards/07_SEMIC_Specifications__68a7938b.html",
+    "action": "move",
+    "sha256": "68a7938b43b89b6842eb61467eac33c0282fe6d067d3bc8bc698e5ed9427f31e"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/08_CCCEV_2.2.0__685d2810.html",
+    "current": "references/standards/08_CCCEV_2.2.0__685d2810.html",
+    "action": "move",
+    "sha256": "685d28106e65a2ebc3fc7abafdcdaac7936f90f1dbea84177c817fbef370d4a5"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/10_ELIS_Release700__7e1e6556.html",
+    "current": "references/standards/10_ELIS_Release700__7e1e6556.html",
+    "action": "move",
+    "sha256": "7e1e655642cddb7d9107533f87504837607d78e14ad8793fd3622e946d0151f8"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/10_ELIS__73e751aa.html",
+    "current": "references/standards/10_ELIS__73e751aa.html",
+    "action": "move",
+    "sha256": "73e751aa2258c2ff4096ff4e65aebd105fde962b264f2ce0ba1e194f95dc4d4a"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/ETSI_TS119612_v2.4.1__83285a10.pdf",
+    "current": "references/standards/ETSI_TS119612_v2.4.1__83285a10.pdf",
+    "action": "move",
+    "sha256": "83285a1069e369d225cf16a0051a46b1f9d8961b6ad5d66bb7650351309a5196"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/ETSI_TS119615_v1.4.1__7e348c29.pdf",
+    "current": "references/standards/ETSI_TS119615_v1.4.1__7e348c29.pdf",
+    "action": "move",
+    "sha256": "7e348c297b273fce37e6243ba9e53490cb554c1d8bd9cb63b85259ba427ce3fa"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/ETSI_TS119615_versions__57e74925.html",
+    "current": "references/standards/ETSI_TS119615_versions__57e74925.html",
+    "action": "move",
+    "sha256": "57e749254c94970b23528b1bdefbf1de73ece8e13f74147dee5f2a61c7f77476"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/FIPS203_MLKEM__fe1f12f3.pdf",
+    "current": "references/standards/FIPS203_MLKEM__fe1f12f3.pdf",
+    "action": "move",
+    "sha256": "fe1f12f32a7e44ec9fdebbf400cda843a40b506dee676725234dc6f7923b6cac"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/FIPS204_MLDSA__57239b9f.pdf",
+    "current": "references/standards/FIPS204_MLDSA__57239b9f.pdf",
+    "action": "move",
+    "sha256": "57239b9f84c03227eda3ca0991204dc7764c79af9ce2e6824eda774918d46b6b"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/FIPS205_SLHDSA__8ef34228.pdf",
+    "current": "references/standards/FIPS205_SLHDSA__8ef34228.pdf",
+    "action": "move",
+    "sha256": "8ef34228276f3386d23cb0da8c14592b8cfb0db3358016bba64df7a004f8d13d"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/HAIP_1.0__3996e047.html",
+    "current": "references/standards/HAIP_1.0__3996e047.html",
+    "action": "move",
+    "sha256": "3996e0479d06b72d6d68668b8ae3cd39fddfc29ae9220c0c3fead7dc060ec4fb"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/ISO_5009_Official_Organizational_Roles_Code_List__9ccc94b2.html",
+    "current": "references/standards/ISO_5009_Official_Organizational_Roles_Code_List__9ccc94b2.html",
+    "action": "move",
+    "sha256": "9ccc94b22853db07dd918b90ffbe0c3aa8e8888f86975649da187da0dde8e28b"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/ISO_5009_Official_Organizational_Roles_Code_List_ed2175e1__acb57104.html",
+    "current": "references/standards/ISO_5009_Official_Organizational_Roles_Code_List_ed2175e1__acb57104.html",
+    "action": "move",
+    "sha256": "acb57104db4fbf6d2f420414422b64a9c9f86814835908c521ec5ffb42822e4e"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/OpenID Federation 1.0 (2026)__4a71afdf.html",
+    "current": "references/standards/OpenID Federation 1.0 (2026)__4a71afdf.html",
+    "action": "move",
+    "sha256": "4a71afdfbed5755d6704d6a089f450f10aa9914204b283eae5fadee2897d1911"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/OpenID SIOPv2 (2023)__713794fd.html",
+    "current": "references/standards/OpenID SIOPv2 (2023)__713794fd.html",
+    "action": "move",
+    "sha256": "713794fd9488d3e779c11d0dce39570e5f5ef581b1ecdbaab7f5ceee4541a8ca"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/OpenID4VCI_1.0__f123c317.html",
+    "current": "references/standards/OpenID4VCI_1.0__f123c317.html",
+    "action": "move",
+    "sha256": "f123c3178cacd27688b15b762098a045e9eb35eccfe2f5f18a357c3815e06ba7"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/OpenID4VP_1.0__e4f0abc6.html",
+    "current": "references/standards/OpenID4VP_1.0__e4f0abc6.html",
+    "action": "move",
+    "sha256": "e4f0abc689afd0a4f6c41b83954d7f970c5263a26143ad861216aea9918993bb"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/RFC9901__fd4cb791.txt",
+    "current": "references/standards/RFC9901__fd4cb791.txt",
+    "action": "move",
+    "sha256": "fd4cb79184162fa7ef95f4f63abab8ee6d03c9a04c19b8f83758946464b284eb"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/RFC_9901__cabbdc40.html",
+    "current": "references/standards/RFC_9901__cabbdc40.html",
+    "action": "move",
+    "sha256": "cabbdc4048c1d6dd06ebb2a64e287b55d252c5c2e1b1b9fe680441df7a35eafd"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/SD-JWT_VC_현황__db6882f2.html",
+    "current": "references/standards/SD-JWT_VC_현황__db6882f2.html",
+    "action": "move",
+    "sha256": "db6882f2e74804c1dbfbc2d27ec5d3c2815da057975e7cc86d7fdfc5f4159f04"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/SD_JWT_VC_draft19__394c4640.txt",
+    "current": "references/standards/SD_JWT_VC_draft19__394c4640.txt",
+    "action": "move",
+    "sha256": "394c4640c581c301adaf24d1d356238e2c290b5c9e8b130141ca0e28732144fb"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/TTAK_블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터 (2022)__0031b85f.html",
+    "current": "references/standards/TTAK_블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터 (2022)__0031b85f.html",
+    "action": "move",
+    "sha256": "0031b85fc65917b5eed26397f1ff034627414e07e515978c61a9d2854d498a43"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/W3C_VC_2.0__a9196a3d.html",
+    "current": "references/standards/W3C_VC_2.0__a9196a3d.html",
+    "action": "move",
+    "sha256": "a9196a3d0b6601356c4e127bad24f8c7f2c17f6ed22e41b35755a910104156f8"
+  },
+  {
+    "original": "참조문서/01_원문/④ 표준/상태목록__3cdf3358.html",
+    "current": "references/standards/상태목록__3cdf3358.html",
+    "action": "move",
+    "sha256": "3cdf3358a09f3b02f2a97e5dac13cf2b63115c2db1260bf7b7c236d8702924ec"
+  },
+  {
+    "original": "참조문서/01_원문/⑤ 서비스/GOV.UK Wallet__d0a2d96f.html",
+    "current": "references/technical/⑤ 서비스/GOV.UK Wallet__d0a2d96f.html",
+    "action": "move",
+    "sha256": "d0a2d96f72ed296bbf90e8e5d098248657e7a5da6597f0378ef0ef4c49731605"
+  },
+  {
+    "original": "참조문서/01_원문/⑤ 서비스/Q-Net 인정 신분증·모바일 국가기술자격증 (2024)__b8fcf5bd.html",
+    "current": "references/technical/⑤ 서비스/Q-Net 인정 신분증·모바일 국가기술자격증 (2024)__b8fcf5bd.html",
+    "action": "move",
+    "sha256": "b8fcf5bdf3b30a412c23e6a0c4248b15556072174e525362d63e72f3ae49c5b7"
+  },
+  {
+    "original": "참조문서/01_원문/⑤ 서비스/네이버 자격증 모바일 국가자격증 연계__e4774106.html",
+    "current": "references/technical/⑤ 서비스/네이버 자격증 모바일 국가자격증 연계__e4774106.html",
+    "action": "move",
+    "sha256": "e477410603f2099c05b920dc3c598492a40b6c054bddd75f32cc72a5aa475b77"
+  },
+  {
+    "original": "참조문서/01_원문/⑤ 서비스/행안부_전자증명서·전자문서지갑 구축 청사진 (2019)__b23bdd68.html",
+    "current": "references/technical/⑤ 서비스/행안부_전자증명서·전자문서지갑 구축 청사진 (2019)__b23bdd68.html",
+    "action": "move",
+    "sha256": "b23bdd68c9beecd851439786dcd8fded75693b3afd1f0263a008ca3c71259875"
+  },
+  {
+    "original": "참조문서/01_원문/⑤ 서비스/행정안전부 — 전자지갑 구축 보도자료 (2019-01-22)__784c789a.pdf",
+    "current": "references/technical/⑤ 서비스/행정안전부 — 전자지갑 구축 보도자료 (2019-01-22)__784c789a.pdf",
+    "action": "move",
+    "sha256": "784c789a42dab151c08eb916b69ff1a7ee4f70b147c5fe6541127608c60b8791"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/05A_eIDAS_Assessment_Batch6__ec0af4b9.html",
+    "current": "references/technical/⑥ 해외사례/05A_eIDAS_Assessment_Batch6__ec0af4b9.html",
+    "action": "move",
+    "sha256": "ec0af4b9a5293a3d24f355a0ba3d387cd221f8b712d0f5d3b37ab913af743f43"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/05_Assessment_Repository__5030e145.html",
+    "current": "references/technical/⑥ 해외사례/05_Assessment_Repository__5030e145.html",
+    "action": "move",
+    "sha256": "5030e1457d62cd932758c69d55d6dd71fc3942850d64d4d6f8620cbdffc6bccd"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/09_EIRA_Release700__b3205ee4.html",
+    "current": "references/technical/⑥ 해외사례/09_EIRA_Release700__b3205ee4.html",
+    "action": "move",
+    "sha256": "b3205ee4297c1eb262762a191dee483bc3ded4a232c0fd5532c1484943863e71"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/09_EIRA_Value_Proposition__cc157249.pdf",
+    "current": "references/technical/⑥ 해외사례/09_EIRA_Value_Proposition__cc157249.pdf",
+    "action": "move",
+    "sha256": "cc157249ca5c3e0670408adeb9209acbe071499526ab672c3dbd33220d6aa007"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/09_EIRA__e4dc0ba6.html",
+    "current": "references/technical/⑥ 해외사례/09_EIRA__e4dc0ba6.html",
+    "action": "move",
+    "sha256": "e4dc0ba6ce5b31ea3228d518538ce1c38d723753cb85f9a090981046d137e134"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/2024 DIW Advisory Board Report (PDF _ 8,301 kb)__cb354c8c.pdf",
+    "current": "references/technical/⑥ 해외사례/2024 DIW Advisory Board Report (PDF _ 8,301 kb)__cb354c8c.pdf",
+    "action": "move",
+    "sha256": "cb354c8c5e71d0bc66537ceb4dcd4210139aeffcaf48ad79810bb20d7308f824"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/2026년도_회의__5645f871.html",
+    "current": "references/technical/⑥ 해외사례/2026년도_회의__5645f871.html",
+    "action": "move",
+    "sha256": "5645f871ac5babc4fbce45b7d9eec05ceec6b056d9291ff0c30523d22def9b6d"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/Case Study — Adapting Poland’s mObywatel ecosystem to the European Digital Identity Wallet__66504eab.pdf",
+    "current": "references/technical/⑥ 해외사례/Case Study — Adapting Poland’s mObywatel ecosystem to the European Digital Identity Wallet__66504eab.pdf",
+    "action": "move",
+    "sha256": "66504eab491a3770560ec6d2e277d7c48cd0859e4a9405cdddf988fd76a2c6ad"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/DIACC PCTF Digital Wallet (2023)__57fe64c6.pdf",
+    "current": "references/technical/⑥ 해외사례/DIACC PCTF Digital Wallet (2023)__57fe64c6.pdf",
+    "action": "move",
+    "sha256": "57fe64c662a8b59384f250f49bc56f30d270269410676f795799ba608be1ec23"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/DIACC PCTF Trust Registries (2023)__a6fc22cd.pdf",
+    "current": "references/technical/⑥ 해외사례/DIACC PCTF Trust Registries (2023)__a6fc22cd.pdf",
+    "action": "move",
+    "sha256": "a6fc22cddf5f690005c40e0872c55596d2544176e14d537f95abd0aa7f918bd2"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/Digital Identity Mapping Exercise (PDF _ 1,751 kb)__9a91e916.pdf",
+    "current": "references/technical/⑥ 해외사례/Digital Identity Mapping Exercise (PDF _ 1,751 kb)__9a91e916.pdf",
+    "action": "move",
+    "sha256": "9a91e91649daef9c6739f30deaa07df83991b361969091384deb31013490d9c4"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/Digital Identity Services Trust Framework Rules 2024__66b031e9.html",
+    "current": "references/technical/⑥ 해외사례/Digital Identity Services Trust Framework Rules 2024__66b031e9.html",
+    "action": "move",
+    "sha256": "66b031e97f32f44c17f2759d801ecc033bc55c237e17b4ce75704952f7ae2910"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/Digital_Identity_Services_Trust_Framework_Amendment_Rules_2026-1_PDF_845_KB__768e48d3.pdf",
+    "current": "references/technical/⑥ 해외사례/Digital_Identity_Services_Trust_Framework_Amendment_Rules_2026-1_PDF_845_KB__768e48d3.pdf",
+    "action": "move",
+    "sha256": "768e48d3f89a84c2a82a3093cac1846231bde725b0d6f3cab53ff157304830f2"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/Digital_Identity_Services_Trust_Framework_Rules_2024_PDF_450_KB__c56b4bee.pdf",
+    "current": "references/technical/⑥ 해외사례/Digital_Identity_Services_Trust_Framework_Rules_2024_PDF_450_KB__c56b4bee.pdf",
+    "action": "move",
+    "sha256": "c56b4bee1b85b3b5f9e964b3f98d1f229055eee9972674b58e2a299c6903c072"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/EUDI Wallet_LSP__aec6fcdb.html",
+    "current": "references/technical/⑥ 해외사례/EUDI Wallet_LSP__aec6fcdb.html",
+    "action": "move",
+    "sha256": "aec6fcdba1e30049943672c3068df858c6d9a3091ebac260ec18e24a035677cc"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/JP_2026_VC_DIW_Governance_Report__ca52fea8.pdf",
+    "current": "references/technical/⑥ 해외사례/JP_2026_VC_DIW_Governance_Report__ca52fea8.pdf",
+    "action": "move",
+    "sha256": "ca52fea82fc46fd37f745f80d5c791b04060cd95c1c25d63c4b1c62dbf15d346"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/JP_Annex4_TechnicalWG__81fea349.pdf",
+    "current": "references/technical/⑥ 해외사례/JP_Annex4_TechnicalWG__81fea349.pdf",
+    "action": "move",
+    "sha256": "81fea34921c94e44391bf51e6d8711236db1de981fd5fb37e207c029f09eb04a"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/Japan My Number smartphone_card substitute__a0c0267d.html",
+    "current": "references/technical/⑥ 해외사례/Japan My Number smartphone_card substitute__a0c0267d.html",
+    "action": "move",
+    "sha256": "a0c0267d9c52fab44c8319b6581669216035facc558f9bc8d997490fc63be591"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/NZ Digital Identity Services Trust Framework Rules 2024 v2__2afcae07.html",
+    "current": "references/technical/⑥ 해외사례/NZ Digital Identity Services Trust Framework Rules 2024 v2__2afcae07.html",
+    "action": "move",
+    "sha256": "2afcae07f4acee88b919efddc3a80f22185abc9adfb82a5782e7b6af83614933"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/OECD_G20_Digital_Identity_Practices(2021)__5cdb2162.pdf",
+    "current": "references/technical/⑥ 해외사례/OECD_G20_Digital_Identity_Practices(2021)__5cdb2162.pdf",
+    "action": "move",
+    "sha256": "5cdb21624e4e9aae1a9442d5ae78b18d577961b17d713c4a1b38afdc9a59f249"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/Poland mObywatel-EUDI Wallet Case Study(2026)__c7d616d5.html",
+    "current": "references/technical/⑥ 해외사례/Poland mObywatel-EUDI Wallet Case Study(2026)__c7d616d5.html",
+    "action": "move",
+    "sha256": "c7d616d5d533baf0a1e03d0063d7a1c32ec14bfdbc38eb58a1def099fb7e38b8"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/Report of Pilot Project on Digital Identity (PDF _ 254 kb)__5024ffa3.pdf",
+    "current": "references/technical/⑥ 해외사례/Report of Pilot Project on Digital Identity (PDF _ 254 kb)__5024ffa3.pdf",
+    "action": "move",
+    "sha256": "5024ffa314668d6282b5ad06f3bcf0d0f982112d3f5d38076bbedcd0abe6b3f6"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/Smartphone installation in function, My Number Card (PDF _ 1__2c8e9832.pdf",
+    "current": "references/technical/⑥ 해외사례/Smartphone installation in function, My Number Card (PDF _ 1__2c8e9832.pdf",
+    "action": "move",
+    "sha256": "2c8e983257a16e1756fc2d70ab9faf85da57e3405356ed6057fef0de5eca1c27"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/Use Cases of Electromagnetic Records as an Alternative to Ca__23e5faa0.pdf",
+    "current": "references/technical/⑥ 해외사례/Use Cases of Electromagnetic Records as an Alternative to Ca__23e5faa0.pdf",
+    "action": "move",
+    "sha256": "23e5faa09fbf502a3c953d28f592da053bd5e377850f4f1476a6e48b8ceca91d"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/日本–EU教育クレデンシャル相互運用実証 — 実証スコープ定義書__6d275e6e.pdf",
+    "current": "references/technical/⑥ 해외사례/日本–EU教育クレデンシャル相互運用実証 — 実証スコープ定義書__6d275e6e.pdf",
+    "action": "move",
+    "sha256": "6d275e6e9d3a9ebe3e992d952f467994d9fac318c5c1ebcac55ebf8eed4b27c5"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/日本–EU教育クレデンシャル相互運用実証 — 実証結果報告書__4ab6415c.pdf",
+    "current": "references/technical/⑥ 해외사례/日本–EU教育クレデンシャル相互運用実証 — 実証結果報告書__4ab6415c.pdf",
+    "action": "move",
+    "sha256": "4ab6415ca03144018299eb0201901ca6890285b8b31d8f2bcbb44f1f3b0d2917"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/개최_개요안__e9c1c7d4.pdf",
+    "current": "references/technical/⑥ 해외사례/개최_개요안__e9c1c7d4.pdf",
+    "action": "move",
+    "sha256": "e9c1c7d487aed4b70c8102db1ca66b769c135b73bbfac1845046e312a57a5e63"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/뉴질랜드_규칙__2fa9b8d9.html",
+    "current": "references/technical/⑥ 해외사례/뉴질랜드_규칙__2fa9b8d9.html",
+    "action": "move",
+    "sha256": "2fa9b8d93873f995fa87dbbf8a751a6980a3f478194ad50879551c3ef3f4dab0"
+  },
+  {
+    "original": "참조문서/01_원문/⑥ 해외사례/별지_3__39345e78.pdf",
+    "current": "references/technical/⑥ 해외사례/별지_3__39345e78.pdf",
+    "action": "move",
+    "sha256": "39345e78442cf123ccbafea2d5006d7b45de1195ddcb472719e58ac06ee86100"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/01A_EIF_2017_Brochure__64e99921.pdf",
+    "current": "references/technical/⑦ 정책·산업자료/01A_EIF_2017_Brochure__64e99921.pdf",
+    "action": "move",
+    "sha256": "64e99921919e1e754f8a4bde0f2c15b1d7b86897803500945434eba20a07ac68"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/01_EIF__0bce73e7.html",
+    "current": "references/technical/⑦ 정책·산업자료/01_EIF__0bce73e7.html",
+    "action": "move",
+    "sha256": "0bce73e71457585ab5cef74329ae21a9594dd2afba1aa88650fbd013888d6961"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/06_Trust_Services_RP2026__a65748ee.html",
+    "current": "references/technical/⑦ 정책·산업자료/06_Trust_Services_RP2026__a65748ee.html",
+    "action": "move",
+    "sha256": "a65748eef7ef4c2573379946909efc11a590f3bb13c5b89423f27efeb0ceeefc"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/EDPS_TechDispatch_DigitalIdentityWallets__bdf0087f.pdf",
+    "current": "references/technical/⑦ 정책·산업자료/EDPS_TechDispatch_DigitalIdentityWallets__bdf0087f.pdf",
+    "action": "move",
+    "sha256": "bdf0087f0b52822cafc06b3519a1c3dd3cdcd489490b8b780fca60fd9ae0df74"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/EIF_Next_Generation_Blueprint_Draft_0_2_20251115__deae2cd7.pdf",
+    "current": "references/technical/⑦ 정책·산업자료/EIF_Next_Generation_Blueprint_Draft_0_2_20251115__deae2cd7.pdf",
+    "action": "move",
+    "sha256": "deae2cd72960559aad3b4f6c262471f3ff760885b94e29cda6ae699f533a3231"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/ENISA secure move to cloud of eIDAS ecosystem__b3723f29.html",
+    "current": "references/technical/⑦ 정책·산업자료/ENISA secure move to cloud of eIDAS ecosystem__b3723f29.html",
+    "action": "move",
+    "sha256": "b3723f29d9ec82a0aa04174602931de9421fcaccfc8c0cfd4dc4bafc45f1d9ff"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/ENISA — Digital Identity Standards (2023-07)__c5c61ce1.pdf",
+    "current": "references/technical/⑦ 정책·산업자료/ENISA — Digital Identity Standards (2023-07)__c5c61ce1.pdf",
+    "action": "move",
+    "sha256": "c5c61ce1fb05333549dd018fe2b9ec959c055fd2525d231371fa5284480053b3"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/ENISA_Digital_Identity_Standard(2023)__1ef29ce7.html",
+    "current": "references/technical/⑦ 정책·산업자료/ENISA_Digital_Identity_Standard(2023)__1ef29ce7.html",
+    "action": "move",
+    "sha256": "1ef29ce7fe60b17e6232e781e0937ecf35432746e4eb7b1521e2bb9998bc19b9"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/EU_2026_Rolling_Plan_ICT_Standardisation__a14d246d.pdf",
+    "current": "references/technical/⑦ 정책·산업자료/EU_2026_Rolling_Plan_ICT_Standardisation__a14d246d.pdf",
+    "action": "move",
+    "sha256": "a14d246d387f00569c70acaa698f40fc753a1e582ffe60ab74133fa57871b3f0"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/G20_2023_DPI_Framework__dac0e144.pdf",
+    "current": "references/technical/⑦ 정책·산업자료/G20_2023_DPI_Framework__dac0e144.pdf",
+    "action": "move",
+    "sha256": "dac0e144385f69bd88158f934560510871fcaaaddb4d05ea6b29df1609888a68"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/NIST_공식_발표__85231240.html",
+    "current": "references/technical/⑦ 정책·산업자료/NIST_공식_발표__85231240.html",
+    "action": "move",
+    "sha256": "852312405752a8db012cfcb4fd46a5ba4c4a489a44afe4b16b642a26457e8282"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/OECD_2024_Digital_Public_Infrastructure__7ad5d825.pdf",
+    "current": "references/technical/⑦ 정책·산업자료/OECD_2024_Digital_Public_Infrastructure__7ad5d825.pdf",
+    "action": "move",
+    "sha256": "7ad5d825258da02d1854363b7db8172846b335afe6987cc59af3903f662b2f99"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/OECD_DigitalGovernmentOutlook2026__b1156327.pdf",
+    "current": "references/technical/⑦ 정책·산업자료/OECD_DigitalGovernmentOutlook2026__b1156327.pdf",
+    "action": "move",
+    "sha256": "b1156327d702bc32bd14a0dd212a613619dfa399f9404460729f5ca1047b2d15"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/OpenID EUDIW resource hub (2025)__189987be.html",
+    "current": "references/technical/⑦ 정책·산업자료/OpenID EUDIW resource hub (2025)__189987be.html",
+    "action": "move",
+    "sha256": "189987bef2885621d0aebea181fa8f4100575d832c6c487376cf7fb4f0ad9dfd"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework__ea8833cc.pdf",
+    "current": "references/technical/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework__ea8833cc.pdf",
+    "action": "move",
+    "sha256": "ea8833cc832ec21edce131b8c48528ff3417ac9855767292a0b294ff5dc41842"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework_웹다운로드_20260927__da300ab9.pdf",
+    "current": "references/technical/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework_웹다운로드_20260927__da300ab9.pdf",
+    "action": "move",
+    "sha256": "da300ab958967871fb24f00febd2ca6ca681df084119fe54cefddee61d754653"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/UN_실행_평가_자료__28dc8506.html",
+    "current": "references/technical/⑦ 정책·산업자료/UN_실행_평가_자료__28dc8506.html",
+    "action": "move",
+    "sha256": "28dc85069a054959df9582746bc48f0934818c05376b9f53b499365c71ce5878"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/VCI_최종_승인__4992767b.html",
+    "current": "references/technical/⑦ 정책·산업자료/VCI_최종_승인__4992767b.html",
+    "action": "move",
+    "sha256": "4992767b9bfa846905de622bc918cb9be24f56cae238efcbdeae8d8b5ef14929"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/VP_최종_승인__8d922c67.html",
+    "current": "references/technical/⑦ 정책·산업자료/VP_최종_승인__8d922c67.html",
+    "action": "move",
+    "sha256": "8d922c674eae1dac94671e18ebfec10192a06969596936f52e02531ad35d7b41"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/WB_2026_ID4D_Digital_Wallets_Policy_Note__add051e0.pdf",
+    "current": "references/technical/⑦ 정책·산업자료/WB_2026_ID4D_Digital_Wallets_Policy_Note__add051e0.pdf",
+    "action": "move",
+    "sha256": "add051e0b78ce217dd9cfc69d1c09d17a7c33f0e3de581ac9aa7bd942f2f4741"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/공식_발표__03beba74.html",
+    "current": "references/technical/⑦ 정책·산업자료/공식_발표__03beba74.html",
+    "action": "move",
+    "sha256": "03beba749de720c83c64d38603b946f72e5beaa8c8eb364ae911e8c1e2a336a9"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/시험체계__959d9c39.html",
+    "current": "references/technical/⑦ 정책·산업자료/시험체계__959d9c39.html",
+    "action": "move",
+    "sha256": "959d9c39ab69600dacdc37996907172589a1977984ee3f3d9f4592ca8d0d718d"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/행안부_2026 디지털서비스 개방 참여기업 공모__b817cfa3.html",
+    "current": "references/technical/⑦ 정책·산업자료/행안부_2026 디지털서비스 개방 참여기업 공모__b817cfa3.html",
+    "action": "move",
+    "sha256": "b817cfa3e45c594a3c9b7dc22dadcf58132ca3700ca3d7f9c057be3788661df7"
+  },
+  {
+    "original": "참조문서/01_원문/⑦ 정책·산업자료/행정안전부 — 2026 디지털서비스 개방 참여기업 공모 공고문__172a1463.pdf",
+    "current": "references/technical/⑦ 정책·산업자료/행정안전부 — 2026 디지털서비스 개방 참여기업 공모 공고문__172a1463.pdf",
+    "action": "move",
+    "sha256": "172a1463a6e6073d6a959e0f36a1377d7dc69d7cf91cf98c8f84b9cfb6ef01e9"
+  },
+  {
+    "original": "참조문서/02_목록/스프레드시트_스냅샷.json",
+    "current": "references/catalog/스프레드시트_스냅샷.json",
+    "action": "move",
+    "sha256": "e569de81085a88ecd9994258d19a4c0cd45879ca9993c293b8eb6eb08b5f776f"
+  },
+  {
+    "original": "참조문서/02_목록/추가참조목록_확보현황.md",
+    "current": "references/catalog/추가참조목록_확보현황.md",
+    "action": "move",
+    "sha256": "9b4b028744ea46700512c4cb827f3e98c5a7ceda4c37bdfa00fcc90cb5dae260"
+  },
+  {
+    "original": "참조문서/02_목록/통합목록.json",
+    "current": "references/catalog/통합목록.json",
+    "action": "move",
+    "sha256": "dd1424d2f52f44c5af52e7f68884517a3496b0f80a77c2cb5c8c9f5891fe1446"
+  },
+  {
+    "original": "참조문서/02_목록/통합목록.md",
+    "current": "references/catalog/통합목록.md",
+    "action": "move",
+    "sha256": "516950b51d78cdfd2cc786e7dcbaa1e93518741df4acb009ce1fec3bb78fe498"
+  },
+  {
+    "original": "참조문서/03_원문요약/통합_원문요약.md",
+    "current": "docs/research/reference-summaries/통합_원문요약.md",
+    "action": "move",
+    "sha256": "5526a7281f7230e8ea71fccea7600b1e3ab48a482556de16e347732eecef80e1"
+  },
+  {
+    "original": "참조문서/04_수집기록/PDF_읽기경고.json",
+    "current": "references/catalog/collection/PDF_읽기경고.json",
+    "action": "move",
+    "sha256": "b8b81052f4a214ed0759eb932959428f4ca75dce58e4287e01cf80413c122a64"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/EIF_차세대_상호운용성/02_최종문서/EIF_한국어_번역본.md",
+    "current": "references/catalog/collection/기존목록과기록/EIF_차세대_상호운용성/02_최종문서/EIF_한국어_번역본.md",
+    "action": "move",
+    "sha256": "c72e115e3f62c51bc3e57bf0a4bb4128148be73c57cdfdf72f39ad875a514472"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/EIF_차세대_상호운용성/02_최종문서/국내_상호연동_시사점_보고서.md",
+    "current": "references/catalog/collection/기존목록과기록/EIF_차세대_상호운용성/02_최종문서/국내_상호연동_시사점_보고서.md",
+    "action": "move",
+    "sha256": "19a600c05757555edd280a6afdf49e1217e4815db0e67c1b79c2f1ee00eab14d"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/EIF_차세대_상호운용성/03_검토기록/윤문_검토기록.md",
+    "current": "references/catalog/collection/기존목록과기록/EIF_차세대_상호운용성/03_검토기록/윤문_검토기록.md",
+    "action": "move",
+    "sha256": "fa7040c84cd37a244b058faff6225dc34b9bd19a3e2b69840d5ce8882e7bdcff"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/EIF_차세대_상호운용성/04_통합문서/EIF_차세대_상호운용성_분석_국제동향포함.md",
+    "current": "references/catalog/collection/기존목록과기록/EIF_차세대_상호운용성/04_통합문서/EIF_차세대_상호운용성_분석_국제동향포함.md",
+    "action": "move",
+    "sha256": "03f9726f3a65abb01f5f117690f2c1157c8e5f8ee84a8860393cf400f980748e"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/EIF_차세대_상호운용성/04_통합문서/README.md",
+    "current": "references/catalog/collection/기존목록과기록/EIF_차세대_상호운용성/04_통합문서/README.md",
+    "action": "move",
+    "sha256": "cff7db386f82180da02399423a2f4737e763a7314910fd7ed69277138c523ccf"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/EIF_차세대_상호운용성/05_EIF_NextEIF_시사점/EIF에서_NextEIF로_변화와_시사점.md",
+    "current": "references/catalog/collection/기존목록과기록/EIF_차세대_상호운용성/05_EIF_NextEIF_시사점/EIF에서_NextEIF로_변화와_시사점.md",
+    "action": "move",
+    "sha256": "30018c4c12ebc94685ff128838822c49ec7c6b9a0cba83af5c13a587f59a873a"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/EIF_차세대_상호운용성/05_EIF_NextEIF_시사점/README.md",
+    "current": "references/catalog/collection/기존목록과기록/EIF_차세대_상호운용성/05_EIF_NextEIF_시사점/README.md",
+    "action": "move",
+    "sha256": "7dc2e211f48f106cd18297996a039b19a51746e579dc358d6731d43391439a48"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/EIF_차세대_상호운용성/05_EIF_NextEIF_시사점/원문_확인기록.json",
+    "current": "references/catalog/collection/기존목록과기록/EIF_차세대_상호운용성/05_EIF_NextEIF_시사점/원문_확인기록.json",
+    "action": "move",
+    "sha256": "558df9eec25053678e568ad27540e0ecdde9f77d97bd9704171417ce3fcfdad6"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/EIF_차세대_상호운용성/산출물_안내.md",
+    "current": "references/catalog/collection/기존목록과기록/EIF_차세대_상호운용성/산출물_안내.md",
+    "action": "move",
+    "sha256": "d28027d3216570d520e312b68d3cfeb5f35eb0d47f5e9837838b1473c1536c60"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/README.md",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/README.md",
+    "action": "move",
+    "sha256": "c6bb1d1300bdde4287cfe503483ddd2ea942c7ad983ee9ee4cbce40be03b77b3"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/reference_data.json",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/reference_data.json",
+    "action": "move",
+    "sha256": "d169eaa2501e647ec7642d8e84eba342cb27143202a0eb26d095c78fd8ba1799"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/개념_연계관계.json",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/개념_연계관계.json",
+    "action": "move",
+    "sha256": "6071a6c015eb091513690f174425659a4f98242b63cc515ea99be3215eafe52a"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/메뉴페이지_확인결과.csv",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/메뉴페이지_확인결과.csv",
+    "action": "move",
+    "sha256": "ace08ceecddddfd31009a10fc2eddfec4880307e493fb44ec92fe366869af545"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/메뉴하위_문서링크.csv",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/메뉴하위_문서링크.csv",
+    "action": "move",
+    "sha256": "a1ccb99cb416baeef01f75b5757a4fe174d2f436f6ff04119d254ff66abd3263"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/문서_연계관계.csv",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/문서_연계관계.csv",
+    "action": "move",
+    "sha256": "937325ec0a5bc5801c5c100a7a43288f0b195705d602f536411e576274cddf7b"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/문서_연계도.md",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/문서_연계도.md",
+    "action": "move",
+    "sha256": "f89ff5ccb585f884b811aaf0852ff6b92e614bc4ea02b32fde0908481ae3b828"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/문서_연계도.svg",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/문서_연계도.svg",
+    "action": "move",
+    "sha256": "ffd265078af1bdbe3f50ed7fd629125673887b0628604881e1d511291eb3da52"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/문서_직접참조_링크.csv",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/문서_직접참조_링크.csv",
+    "action": "move",
+    "sha256": "55e4c700969b51f1245594e5cc88f389663339c352cf0fd0e27edd237876ef91"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/사이트_메뉴.csv",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/사이트_메뉴.csv",
+    "action": "move",
+    "sha256": "04eeda2ec2e7d97eb1058bb2101e9cf6e049f1d99f370af56d4ee29660450ad6"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/사이트맵_분류.csv",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/사이트맵_분류.csv",
+    "action": "move",
+    "sha256": "35402471dad85a4bc1c3d938dfca444faf9b3f898f8c24de36fe4487a295cbb4"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/사이트맵_전체_URL.csv",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/사이트맵_전체_URL.csv",
+    "action": "move",
+    "sha256": "0e85c42044e7e39a48a8e9870a1f83bc1d39138f86565c4d9d1cb04601445696"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/영문_참고자료_목록.csv",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/영문_참고자료_목록.csv",
+    "action": "move",
+    "sha256": "c6832e8169aa7c4d0ae2ffb66e1388695006bd792896f3fbd75012de783b9d12"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/영문_참고자료_목록.md",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/영문_참고자료_목록.md",
+    "action": "move",
+    "sha256": "19fa43bb3aed4173585de94ee5b6c98559422fad317ada87ae623a1e43657505"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/우선자료12_내용요약보고서.md",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/우선자료12_내용요약보고서.md",
+    "action": "move",
+    "sha256": "216cbec5c42a29d889af6d8afb6c50146dbed8790e4a055922e13678452ac5f8"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/README.md",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/README.md",
+    "action": "move",
+    "sha256": "8a6c2bbbf6f8390f8ed33b6a2c8e99df1a3a7dcaa2e4d35b97d4337d35d0275c"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/다운로드_기록.json",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/다운로드_기록.json",
+    "action": "move",
+    "sha256": "2132d53af1f18d97217362f756c9291bf9db2e85ad1820edbda350f2a65a88b8"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/자료실_개별문서_후보.csv",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/자료실_개별문서_후보.csv",
+    "action": "move",
+    "sha256": "6e31ac1225478797bf23645305f4ccacbdd136848d657cfb602a5298e814d2c9"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/조사보고서.md",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/조사보고서.md",
+    "action": "move",
+    "sha256": "a4cddb86d234a45a4109dbd3573e7028cc633bbe0f3962cc718bdb56aab92d8b"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/조사통계.json",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/조사통계.json",
+    "action": "move",
+    "sha256": "8ffa293cc116eda298504a8829afcbc2fab4ac29597df7175361eeb39b8c8437"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/참조목록_대조_및_추가확보계획_20260929.md",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/참조목록_대조_및_추가확보계획_20260929.md",
+    "action": "move",
+    "sha256": "ba01903e97b9150aa7cacd210781443bce5c7ebbf4d8b7d18ed078f517627b59"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/참조목록_대조결과_20260929.json",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/참조목록_대조결과_20260929.json",
+    "action": "move",
+    "sha256": "098e66562082dee308f8675e3b59248d9940b3d1f9a627e03dd73b42043e3893"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/첨부원문_링크목록.csv",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/첨부원문_링크목록.csv",
+    "action": "move",
+    "sha256": "3ae2ffe6c4d4e27459cae958ac00ffd000ddadb47d9078af0311f27c2732e557"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/다운로드_기록.json",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/다운로드_기록.json",
+    "action": "move",
+    "sha256": "2fb48c73a22a955d7e697d9328b5eddcbc28052a219f536203a3ebbaff3c3379"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/페이지_접근결과.csv",
+    "current": "references/catalog/collection/기존목록과기록/Interoperable_Europe_영문자료조사_20260927/페이지_접근결과.csv",
+    "action": "move",
+    "sha256": "4c65f106030760b43b37c19b0edd5133f57b4742f5388084621d37b1d268d646"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/README.md",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/README.md",
+    "action": "move",
+    "sha256": "eefddd3c292d1922d7139bd6fcf364e52a08a423c8c0be21a31caa9b1c122923"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/국내시사점.md",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/국내시사점.md",
+    "action": "move",
+    "sha256": "dbcea5cbc08e80705519d69080ba2865e6978d55ecbeed2ebaa6af1344431f80"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/수집문헌_목록.csv",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/수집문헌_목록.csv",
+    "action": "move",
+    "sha256": "a59f1b5907c123f817426c68cedfac5cd24f9e7c5726e496009bd02f0f32ef09"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/수집문헌_요약_및_국제동향.md",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/수집문헌_요약_및_국제동향.md",
+    "action": "move",
+    "sha256": "b43617fd06b15418b5dc1b399cd319c60741e7142cebe1c933a939c4a0eadaa0"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/원문/00_기본문헌/README.md",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/원문/00_기본문헌/README.md",
+    "action": "move",
+    "sha256": "12c4a6162786a3f5f336f1ff921dde99f7e3b19b720fb0ffbb150297bdbf6471"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/원문/README.md",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/원문/README.md",
+    "action": "move",
+    "sha256": "e9ef0f9e486068532cf095d4ce907643d3460ed2aea8d8b4d4cdaac3f24be85b"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/12개_국제동향_요약.md",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/12개_국제동향_요약.md",
+    "action": "move",
+    "sha256": "882866e4f0062056f0f4992c1240a8c11e02aaa3242a58c509a9713142fc8d09"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/PDF_검사결과.json",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/PDF_검사결과.json",
+    "action": "move",
+    "sha256": "48b6717bb8171ee1203134d4ca9a0aa16971d03ff7081917c425cb2b4b20715c"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/README.md",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/README.md",
+    "action": "move",
+    "sha256": "0eac6956bbcb7df8e6441d8928acb75f7be7a238b609cccb6ff8fadd1af72adc"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/다운로드_목록.csv",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/다운로드_목록.csv",
+    "action": "move",
+    "sha256": "ab94bece6d097a5cb806178906c0243823cf3427fc7ab55bd2138e2b0ad5c54c"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/실제파일_색인.md",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/실제파일_색인.md",
+    "action": "move",
+    "sha256": "2825ee770483252b9e677818fdf33cd96ccf56461683d54bc6a866f661b4fb08"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/직접다운로드_결과_20260927.csv",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/직접다운로드_결과_20260927.csv",
+    "action": "move",
+    "sha256": "3992a579e290e83463a9dafca063cba11083def40ceecbca10daa8beae0f3e6b"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/직접다운로드_결과_20260927.json",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/원문/수집기록/직접다운로드_결과_20260927.json",
+    "action": "move",
+    "sha256": "ce816889d2a76b692eee1b5b726c7eaaec786343d3b5f9c1b11ac251bffd9704"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존목록과기록/디지털신뢰_국제동향_20260926/원문/원문_색인.md",
+    "current": "references/catalog/collection/기존목록과기록/디지털신뢰_국제동향_20260926/원문/원문_색인.md",
+    "action": "move",
+    "sha256": "996c7c9bc7240bd0b6eccf44f1a14cbf501c2a822098a2018db3773947dbc13d"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존폴더_삭제_재확인.json",
+    "current": "references/catalog/collection/기존폴더_삭제_재확인.json",
+    "action": "move",
+    "sha256": "8a9b3eb03e34ca34516b8cc9d944d68810d9c09f6951a05fd264c0f14052d067"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존폴더_삭제결과.json",
+    "current": "references/catalog/collection/기존폴더_삭제결과.json",
+    "action": "move",
+    "sha256": "6a1e5d75eaba49450f3c57a2553c936f18785b0f08b9ed5b40f77e0bfb6afe8d"
+  },
+  {
+    "original": "참조문서/04_수집기록/기존폴더_삭제전_보존검증.json",
+    "current": "references/catalog/collection/기존폴더_삭제전_보존검증.json",
+    "action": "move",
+    "sha256": "0bffe5c873092721983f45f6e416902e12060aec15bed23dc51467c89668645f"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/DID 기술에 기반 한 분산 신원 인증 시스템 (2023)__d6399f20.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/DID 기술에 기반 한 분산 신원 인증 시스템 (2023)__d6399f20.txt",
+    "action": "move",
+    "sha256": "fbaf5b655b6fdd2a1dd0624cead1aace22cc5128309343de759682eac8183417"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서__5b2e8b82.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서__5b2e8b82.txt",
+    "action": "move",
+    "sha256": "806ae1141390768ce13f08cbfe1e93aae6928f066857ae7faf1b2248d795c4a5"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서__8e0f8642.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서__8e0f8642.txt",
+    "action": "move",
+    "sha256": "8da533a11b9327cd519b21b4a1c1efbb59e9635dfc3aca9a88c1d830beac1045"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서__777d3ae9.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서__777d3ae9.txt",
+    "action": "move",
+    "sha256": "39eb13b1bac0d456509efced018f31ec6e4f5749e06bb370804d4d69ebdebdfa"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/Trusted Web 구축을 위한 기술 및 보안연구__0a8ae6e5.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/Trusted Web 구축을 위한 기술 및 보안연구__0a8ae6e5.txt",
+    "action": "move",
+    "sha256": "8ef6e87128a90cffc2e37dca6d7e94a420ac6bfc8acaab452e0a7c506d5fffc2"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/arXiv_SoK_Trusting_SSI (2024)__25386132.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/arXiv_SoK_Trusting_SSI (2024)__25386132.txt",
+    "action": "move",
+    "sha256": "7768332ed4750f7471349636e35d983adee8877617d1e3d1fa4a5e4733ef7c61"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/arXiv_SoK_Trusting_SSI (2024)__ff7b58a9.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/arXiv_SoK_Trusting_SSI (2024)__ff7b58a9.txt",
+    "action": "move",
+    "sha256": "1ce36aa2de6c25da3badfeb1ab5f66f2cd1b598d208eddd8daaa635dd029a796"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/arXiv_Towards_Trustful_Digital_World (2021)__193e7baa.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/arXiv_Towards_Trustful_Digital_World (2021)__193e7baa.txt",
+    "action": "move",
+    "sha256": "38b343d59795be8688a0065d0e27068c4014ad8b1f907c869387a7dce9cc5c0f"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/arXiv_Towards_Trustful_Digital_World (2021)__5a0c5d46.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/arXiv_Towards_Trustful_Digital_World (2021)__5a0c5d46.txt",
+    "action": "move",
+    "sha256": "9a0632adeb0ff7335fc32b8e16c274ef641b6152bd82eb71dd4f8ea016518e01"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/모바일 기기에서 공개 API를 통한 신원 증명 서비스의 문제점 분석(2021)__f51069d8.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/모바일 기기에서 공개 API를 통한 신원 증명 서비스의 문제점 분석(2021)__f51069d8.txt",
+    "action": "move",
+    "sha256": "844066dc10e08082ee83245f9d4cb88138c925f73f877e7ce21aea0141822a84"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/모바일 신분증 등 모방 앱의 문제점과 대처 방안 (2024)__4d164ef5.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/모바일 신분증 등 모방 앱의 문제점과 대처 방안 (2024)__4d164ef5.txt",
+    "action": "move",
+    "sha256": "6af8caf66502e00e3ad52530ba10cc0d629bfa301496f492210779bcecddf9ca"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/분산ID(DID) 직접 해석방안 연구__49752fdb.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/분산ID(DID) 직접 해석방안 연구__49752fdb.txt",
+    "action": "move",
+    "sha256": "a39e0e10df0a9b3b544dbf44d88cecdcbaac309ba91305aeea9ed82e6bedf4ea"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/블록체인 신뢰 프레임워크(K-BTF) 중장기계획 수립 연구__916454fe.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/블록체인 신뢰 프레임워크(K-BTF) 중장기계획 수립 연구__916454fe.txt",
+    "action": "move",
+    "sha256": "60ec7f7da03a4e3e66323456cdfd825e5d1b31b9de98d6c66ad1b58c348a13f6"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/한국IT정책경영학회_분산신원 기반의 자기주권신원모델모바일 운전면허증에 관한 연구(2023)__695ba052.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/한국IT정책경영학회_분산신원 기반의 자기주권신원모델모바일 운전면허증에 관한 연구(2023)__695ba052.txt",
+    "action": "move",
+    "sha256": "237b8b13fed69f9ac2c389e7587d31beac7ff504d7dcd00114467a886a40e2df"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/한국신용카드학회_전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구(2019)__d1b72cd3.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/한국신용카드학회_전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구(2019)__d1b72cd3.txt",
+    "action": "move",
+    "sha256": "11acb33fa793b29036b162f348488c3a6436693ce104529031ac344613e836fe"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/① 학술연구/한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)__0ffc4923.txt",
+    "current": "references/catalog/collection/본문추출/① 학술연구/한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)__0ffc4923.txt",
+    "action": "move",
+    "sha256": "5424e9250cf1ecf3c988683cf5f47b9e699f70001d96c5cf7674374e9653f297"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/02A_Assessment_Guidelines_202412__cc37b203.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/02A_Assessment_Guidelines_202412__cc37b203.txt",
+    "action": "move",
+    "sha256": "bd334145bb306b80f547c484c9968a7f1939d8b24c870d772cef9163488fd849"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/02_Assessment_Guidelines__7fff32cd.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/02_Assessment_Guidelines__7fff32cd.txt",
+    "action": "move",
+    "sha256": "03ffe1c764deb417930ab301c7aca34bcb5e6a291e87e42480ee8dbc1e632b00"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/EUDI_Regulation_안내__91a0a1d0.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/EUDI_Regulation_안내__91a0a1d0.txt",
+    "action": "move",
+    "sha256": "8b5e7f3d497ca81a2c3e9efd9db69123a7028810e88aaba84a5fc30532763b1c"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/EU_202401183_Regulation (EU) 2024_1183__a3b95f56.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/EU_202401183_Regulation (EU) 2024_1183__a3b95f56.txt",
+    "action": "move",
+    "sha256": "964eae16d07b7a91fe7d7230090b8cbf61fb35da9b93a8a7790962aa0054cb05"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/EU_202412_EUDI Wallet Implementing Regulations__a4e6df0f.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/EU_202412_EUDI Wallet Implementing Regulations__a4e6df0f.txt",
+    "action": "move",
+    "sha256": "4d8908b473bed180b06ebc7ad5acad4e98baca3fdc72e35bc9a9c28153a2b5f3"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/EU_2024903_Regulation_Interoperable Europe Act__f9d17d04.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/EU_2024903_Regulation_Interoperable Europe Act__f9d17d04.txt",
+    "action": "move",
+    "sha256": "d2f17fc54f394caddcfbd2cbc1ad58bf6d084815fcd42429ea47b76d87ad4e3f"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/Japan Digital Agency Trust__86ae1495.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/Japan Digital Agency Trust__86ae1495.txt",
+    "action": "move",
+    "sha256": "51e26bdfbb9d87ec9b9fcd3e87298925c84950bfa8e38d712b8f8d7bb81fd4aa"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/Japan Digital qualification certificates__da63a697.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/Japan Digital qualification certificates__da63a697.txt",
+    "action": "move",
+    "sha256": "4801a80ad5d923097dd0c88d641b18f311f102ac9d5ee2aef0861942a8562c27"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/NIST_SP800_63A_4__f8365418.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/NIST_SP800_63A_4__f8365418.txt",
+    "action": "move",
+    "sha256": "f2f2e6cf9b0e8718c6709c34a1b3c657ec40e3f37bd327a94312663a28200a6a"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/NIST_SP800_63B_4__d9ab8957.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/NIST_SP800_63B_4__d9ab8957.txt",
+    "action": "move",
+    "sha256": "9f52ffcd932699c7238f3ba8e7ae1f3f83c7cf4502aeaa18e77fd5d75b1511a4"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/NIST_SP800_63C_4__dce90171.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/NIST_SP800_63C_4__dce90171.txt",
+    "action": "move",
+    "sha256": "09790e92da49dd4cec96a40873d163e33d6f07e6c6cadd1e913f959a095e6739"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/NIST_SP800_63_4__2f5b107d.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/NIST_SP800_63_4__2f5b107d.txt",
+    "action": "move",
+    "sha256": "112739b5cfdcea225091f3d2eb7c1a3ff6f222aa7bb85f218e5f94315e0352a8"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/NIST_최종_문서__850aeb7e.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/NIST_최종_문서__850aeb7e.txt",
+    "action": "move",
+    "sha256": "8e60551be4f159c8dac4e9f61ad8223e93d6dd213477a61dccb0f8225a0645bd"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/UK DVS Trust Framework collection__e51d0d8f.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/UK DVS Trust Framework collection__e51d0d8f.txt",
+    "action": "move",
+    "sha256": "88a8fa9644007ff5639a331576714580d1506b5098bb5a20f3b653f3964f94be"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/UK Digital Identity and Attributes Trust Framework beta 0.3 (2023)__6335fea4.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/UK Digital Identity and Attributes Trust Framework beta 0.3 (2023)__6335fea4.txt",
+    "action": "move",
+    "sha256": "8d9f67a2ba0f218653948433689e42fffb89622ea065cf339512cdeec785fe5e"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/UK_DVSTF_certification_scheme_requirements_for_conformity_assessment_bodies_v1.15__8120c97a.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/UK_DVSTF_certification_scheme_requirements_for_conformity_assessment_bodies_v1.15__8120c97a.txt",
+    "action": "move",
+    "sha256": "428fd4d2cdae6b6e0f581e9c0660a2c866f672f2cefb77ff34d0b239e4f6968a"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/UK_GPG45_DataSchema__cf2017b5.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/UK_GPG45_DataSchema__cf2017b5.txt",
+    "action": "move",
+    "sha256": "59db0ee80e36aeb0f81ae5b9501858ab94047021f13093d2f4a99a0a20572fac"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/UK_TrustFramework_1.0_FullText__1b14fe6b.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/UK_TrustFramework_1.0_FullText__1b14fe6b.txt",
+    "action": "move",
+    "sha256": "029b0ff0e022409cc4f56067855c0f43c431629e06b30b95f8d399a3d51159e1"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/UNCITRAL_MLIT_Text_ExplanatoryNote__c0f18008.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/UNCITRAL_MLIT_Text_ExplanatoryNote__c0f18008.txt",
+    "action": "move",
+    "sha256": "9fb28d3f2ce7cbeef322dfa67c02e82f2c7f09d9da55637e05fea28d1e91b02d"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/UNCITRAL_공식_소개__322541a4.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/UNCITRAL_공식_소개__322541a4.txt",
+    "action": "move",
+    "sha256": "bca847ee944e2b39e3be7360e9b4706e9e5aa0a56d6553e5c221f98e3c2bb148"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/Using GOV.UK Wallet in digital identity sector__7fab2876.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/Using GOV.UK Wallet in digital identity sector__7fab2876.txt",
+    "action": "move",
+    "sha256": "6db3c9622ff8dc4c8af5dae359f73b6a65d65c37c91eb5a5a7dc9d608d245bac"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/the_1.0_UK_DVS_trust_framework__3eba0940.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/the_1.0_UK_DVS_trust_framework__3eba0940.txt",
+    "action": "move",
+    "sha256": "8919a6db24f7470a1c83e9d2a33c5ee30d69efed0e4c0fe46f482f50c065fd2e"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/デジタル資格者証の活用方法（PDF／1,455KB）__5491f444.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/デジタル資格者証の活用方法（PDF／1,455KB）__5491f444.txt",
+    "action": "move",
+    "sha256": "066298dd1fe5c7552fedfae64db208f616c127ca1df72eb80c77e33c5f7322e3"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/国家資格オンライン化サービス紹介（PDF／1,687KB）__0031d6f7.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/国家資格オンライン化サービス紹介（PDF／1,687KB）__0031d6f7.txt",
+    "action": "move",
+    "sha256": "ee842a7ea7def9433dd0d0a3aa466d34e0aafdf99637965709b42b32af66454a"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/国家資格等のオンライン・デジタル化令和8年度以降の対応スケジュール（PDF／722KB）__374f169c.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/国家資格等のオンライン・デジタル化令和8年度以降の対応スケジュール（PDF／722KB）__374f169c.txt",
+    "action": "move",
+    "sha256": "32cca870ff70d1696e39a4dcadcb50b004e587cdd829be1a8981188cfab3860e"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/国家資格等オンライン・デジタル化の開始について（PDF／2,745KB）__efd5c21f.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/国家資格等オンライン・デジタル化の開始について（PDF／2,745KB）__efd5c21f.txt",
+    "action": "move",
+    "sha256": "04487a09ebc85e49c16f1d7cf6474ce59337229bbe31714c9c7c6fed9d198531"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/데이터_스키마__8ab49bf1.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/데이터_스키마__8ab49bf1.txt",
+    "action": "move",
+    "sha256": "90c3910c381f03689ebeac1c771a96d0289b01108ce0fe297f29f922f774c6f6"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/모바일 신분증 공식 안내__1a3a2131.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/모바일 신분증 공식 안내__1a3a2131.txt",
+    "action": "move",
+    "sha256": "39db4cacdb49618db3ea6c787c597509f29971fe5bc9f815a903b26e9992a505"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/모바일 신분증 법적 인정 관련 조문__32f27d44.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/모바일 신분증 법적 인정 관련 조문__32f27d44.txt",
+    "action": "move",
+    "sha256": "2a576a4f805ca9b532140947f15f53b67a4df75a393e6b1af8f870d218963bc6"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/인증제도와_버전__6835fb6e.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/인증제도와_버전__6835fb6e.txt",
+    "action": "move",
+    "sha256": "96e9ef68434de41083fd3b5da479fe9023dd100657e42bfe7e1970ec31c829a7"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/전자문서 및 전자거래 기본법__bccb7b0a.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/전자문서 및 전자거래 기본법__bccb7b0a.txt",
+    "action": "move",
+    "sha256": "51b6a4c02b7d8380c7265fe4660da1b03e2df9eeb34c223d967efd57bb7fc934"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/전자서명법__90eabade.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/전자서명법__90eabade.txt",
+    "action": "move",
+    "sha256": "51fef84b80919809c32a6eab9fd1a51889a0d74d8413c4a5b73017977322662a"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/② 법·제도/전자증명서 발급업무 처리지침__78ffebdd.txt",
+    "current": "references/catalog/collection/본문추출/② 법·제도/전자증명서 발급업무 처리지침__78ffebdd.txt",
+    "action": "move",
+    "sha256": "970f851a1a70b6313611bbb73668d4c772cd8059763df3d21532114bc0174c49"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/03_Assessment_Toolbox__42ac75ae.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/03_Assessment_Toolbox__42ac75ae.txt",
+    "action": "move",
+    "sha256": "cdb4ff1bd1af34f44a0c57035dc095f313a73860bac8788b42eac5372b4be9a9"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/11_ITB_FAQ__7d008cbb.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/11_ITB_FAQ__7d008cbb.txt",
+    "action": "move",
+    "sha256": "bf2d51309b61ac356bec55d5329e55534e0f03f32b633e71188852812e84179b"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/12_GITB_TDL__57c83192.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/12_GITB_TDL__57c83192.txt",
+    "action": "move",
+    "sha256": "7a7825856b718ccefa0375b4f3e2991323e506e0c7516d920f47ae9dc57fd1b4"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/12_example_test_suites__187e8c8f.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/12_example_test_suites__187e8c8f.txt",
+    "action": "move",
+    "sha256": "2dc0a904b0cabe44ee420251ed754252d17a8108f1434fa3f3b9ea8447760c23"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/12_expressions__9ca15915.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/12_expressions__9ca15915.txt",
+    "action": "move",
+    "sha256": "57ca43654ffd3abd40632c0f8012af53eaa4256e2b4c1bc04d9f4fec22893a7f"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/12_hello_world__60086481.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/12_hello_world__60086481.txt",
+    "action": "move",
+    "sha256": "0f801e9f2921f7117918ad461d9a89bb1120dd2ba8974c81c5bcc60d8ac505be"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/12_introduction__2af3a50c.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/12_introduction__2af3a50c.txt",
+    "action": "move",
+    "sha256": "183a6256191055a69eba75cfcadbf68b8491806337b0ef9311f212982575f997"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/12_release_history__17bc2d62.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/12_release_history__17bc2d62.txt",
+    "action": "move",
+    "sha256": "0b0b5359efe22c252592a448d79967e120f45968139e042079db23caf3ae3861"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/12_scriptlets__9d4458fd.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/12_scriptlets__9d4458fd.txt",
+    "action": "move",
+    "sha256": "5670f17f839be0999b4d226d682f57ffee935ce0439c0c4458635b2035041249"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/12_test_cases__187b12a6.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/12_test_cases__187b12a6.txt",
+    "action": "move",
+    "sha256": "98fc6908601d5b35aa8f06dc2586bb6e49d3b3300ca3efb85c33733239f4140d"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/12_test_step_handlers__f241eb4b.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/12_test_step_handlers__f241eb4b.txt",
+    "action": "move",
+    "sha256": "d053243bb4990957852774f7b6c60189d1c0e0d635afeb8fb99c8efd5acdfad2"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/12_test_steps__7bf7a21a.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/12_test_steps__7bf7a21a.txt",
+    "action": "move",
+    "sha256": "0020c0b8c2eb5ae65a200e175c5645968499476b150d870dccea05829a7e7c34"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/12_test_suites__9ff21f2f.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/12_test_suites__9ff21f2f.txt",
+    "action": "move",
+    "sha256": "42c6d38a1ad33cc3a16d17e380d35f37e0d8b19b5c5c04cad34d44494d2333fb"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/12_types__1283baa4.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/12_types__1283baa4.txt",
+    "action": "move",
+    "sha256": "6437dacac45f2bc0a8f615de49efc58c18b42d4b93dc5ff3f2ed1a2a59aeb33f"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/ARF_MainDocument__c4cee77d.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/ARF_MainDocument__c4cee77d.txt",
+    "action": "move",
+    "sha256": "0cf100ee38f6fb5045ffdfe99b3427e92ecb261aadb17d0d1cc4670738f97ac4"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/ARF_Main_Annexes_Release__4a1ed04d.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/ARF_Main_Annexes_Release__4a1ed04d.txt",
+    "action": "move",
+    "sha256": "27f930150bc5d7f36815ef5cc8f00d30ddab2820ac356f53bdd0bb7e0eac34b0"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/ARF__dcd4471a.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/ARF__dcd4471a.txt",
+    "action": "move",
+    "sha256": "c614b6506fa2b1b145d5494daba9665f613e77e417e3b13c617990d59cfbd56a"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/Authorization_vLEI_Credential_Framework__4372fd4a.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/Authorization_vLEI_Credential_Framework__4372fd4a.txt",
+    "action": "move",
+    "sha256": "726c0844d28c09999db7efffa8de6a1bedbc12020cdf5ae842022ce723bf8330"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/EU_LOTL_운영_안내__b3e30b16.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/EU_LOTL_운영_안내__b3e30b16.txt",
+    "action": "move",
+    "sha256": "da67f8f2bd1224034a7b8c1a814494888dbbdfaa2331fae0520b2780b3f190f0"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/GLEIF_공식_프레임워크__1ecfab6f.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/GLEIF_공식_프레임워크__1ecfab6f.txt",
+    "action": "move",
+    "sha256": "9466e59c0343068c6867e3238719cf64288be55614931bd593b1227f2cceab9d"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/GOV.UK Wallet technical documentation__6c64b8d7.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/GOV.UK Wallet technical documentation__6c64b8d7.txt",
+    "action": "move",
+    "sha256": "cc54bb814c85baf7dc4dfa12b7e5bdd893b5a8204c4aed81fb02c8931a230816"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/Legal_Entity_Official_Organizational_Role_vLEI_Credential_Framework__00d2a83d.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/Legal_Entity_Official_Organizational_Role_vLEI_Credential_Framework__00d2a83d.txt",
+    "action": "move",
+    "sha256": "ef58d646a3553ae4b03ce133d54bb8e5c11e375143cdfdeadd86f6a53639f4a0"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/Toolbox__d20eac2b.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/Toolbox__d20eac2b.txt",
+    "action": "move",
+    "sha256": "84f44134fe7ad91cf993f5db926fe87009be568991a9f47a2cdbef71d6639ade"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Primary_Document__c339898b.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Primary_Document__c339898b.txt",
+    "action": "move",
+    "sha256": "2c66340beda43c6bb208b9ff7e95721fcb87fdb17d23b7e7babac44629929fca"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Technical_Requirements_Part_2_vLEI__4815f9e2.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Technical_Requirements_Part_2_vLEI__4815f9e2.txt",
+    "action": "move",
+    "sha256": "53ecc5fb191938c17d29812c1b224638d5f4267cb18e6099049f43ea32d21072"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Trust_Assurance_Framework__e77f5950.txt",
+    "current": "references/catalog/collection/본문추출/③ 기술/verifiable_LEI_vLEI_Ecosystem_Governance_Framework_Trust_Assurance_Framework__e77f5950.txt",
+    "action": "move",
+    "sha256": "8757a6d7554c6114fbdf7d1de06cd939b30508ae2e94a16995f7cc5b5edcf7f9"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/04_IOPA_1.0.0__84c2598d.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/04_IOPA_1.0.0__84c2598d.txt",
+    "action": "move",
+    "sha256": "8505af51d32a987be6fbf5f532aa6e1813187e5405b275d1e12ec0a309645df3"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/07_SEMIC_Specifications__68a7938b.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/07_SEMIC_Specifications__68a7938b.txt",
+    "action": "move",
+    "sha256": "778ba40e77f842b97d6b2b3abf9bea69f042e1f981fa389be6058a417c6b8bae"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/08_CCCEV_2.2.0__685d2810.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/08_CCCEV_2.2.0__685d2810.txt",
+    "action": "move",
+    "sha256": "207a0f605acda4d7600c06c30ca3845706fd6f9518c6bb53c7e471ded8c19ac0"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/10_ELIS_Release700__7e1e6556.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/10_ELIS_Release700__7e1e6556.txt",
+    "action": "move",
+    "sha256": "48cd5de9a6cf8cd94a21cc1a9ea1b68123f735b3bb99ba0e6e6c2a1fc6a544b5"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/10_ELIS__73e751aa.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/10_ELIS__73e751aa.txt",
+    "action": "move",
+    "sha256": "34757bc4563d091cf5c4631d420ef84ad7e63e96f1fd5e4f596eab631b79adfe"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/ETSI_TS119612_v2.4.1__83285a10.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/ETSI_TS119612_v2.4.1__83285a10.txt",
+    "action": "move",
+    "sha256": "1f524c4c25c5e23078603fa687bdea2d35e2fb22fab8884d6f642e6fa9441137"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/ETSI_TS119615_v1.4.1__7e348c29.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/ETSI_TS119615_v1.4.1__7e348c29.txt",
+    "action": "move",
+    "sha256": "2ed41b53e1fe842a69e1bcef784e620813d620b92395020904ec93aaf3310a06"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/ETSI_TS119615_versions__57e74925.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/ETSI_TS119615_versions__57e74925.txt",
+    "action": "move",
+    "sha256": "e9d20ca49d8dc6d863ca7f1980f61e1474a48f9451825d9f16dc7d531a9cc06c"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/FIPS203_MLKEM__fe1f12f3.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/FIPS203_MLKEM__fe1f12f3.txt",
+    "action": "move",
+    "sha256": "0ab16bc418eb4b88ccce5ffaba72037419df0a4be78bba4abc2ca5e882760418"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/FIPS204_MLDSA__57239b9f.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/FIPS204_MLDSA__57239b9f.txt",
+    "action": "move",
+    "sha256": "f1d8359733bb0301db0e5915b0f4e802bd7a09a5aaa2e752ca1a6c5804337453"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/FIPS205_SLHDSA__8ef34228.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/FIPS205_SLHDSA__8ef34228.txt",
+    "action": "move",
+    "sha256": "c62b23d77c59ca108c5e6af203d7e321d8adf98d6a3123dd56645dd5325747ce"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/HAIP_1.0__3996e047.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/HAIP_1.0__3996e047.txt",
+    "action": "move",
+    "sha256": "324ec34ca1ca423c4546385c1e7264af1bbd51d654f3e7da4c8b0c40cd1b9af5"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/ISO_5009_Official_Organizational_Roles_Code_List__9ccc94b2.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/ISO_5009_Official_Organizational_Roles_Code_List__9ccc94b2.txt",
+    "action": "move",
+    "sha256": "33094d5e7dbc2309d61f7597b1ff99f646a8547a574e5a2d34240d3198f9b63a"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/ISO_5009_Official_Organizational_Roles_Code_List_ed2175e1__acb57104.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/ISO_5009_Official_Organizational_Roles_Code_List_ed2175e1__acb57104.txt",
+    "action": "move",
+    "sha256": "33094d5e7dbc2309d61f7597b1ff99f646a8547a574e5a2d34240d3198f9b63a"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/OpenID Federation 1.0 (2026)__4a71afdf.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/OpenID Federation 1.0 (2026)__4a71afdf.txt",
+    "action": "move",
+    "sha256": "149a315b778c636d17e3fadeb883a45a0953f9a9ba6df9859002b56b5fbd9225"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/OpenID SIOPv2 (2023)__713794fd.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/OpenID SIOPv2 (2023)__713794fd.txt",
+    "action": "move",
+    "sha256": "17389ecc8499abf6c066c36132472e6987a4801b43fbce8478f0e956a4364ad1"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/OpenID4VCI_1.0__f123c317.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/OpenID4VCI_1.0__f123c317.txt",
+    "action": "move",
+    "sha256": "2bee4a82dcb11d913f055f9ce4c24af2620a8ff3163a67170d7f3b91df73b437"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/OpenID4VP_1.0__e4f0abc6.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/OpenID4VP_1.0__e4f0abc6.txt",
+    "action": "move",
+    "sha256": "9d0984fd69b42d22bda896b862d94abfc554dc7e076ec7a0f26d88c7a6dd005b"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/RFC9901__fd4cb791.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/RFC9901__fd4cb791.txt",
+    "action": "move",
+    "sha256": "fd4cb79184162fa7ef95f4f63abab8ee6d03c9a04c19b8f83758946464b284eb"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/RFC_9901__cabbdc40.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/RFC_9901__cabbdc40.txt",
+    "action": "move",
+    "sha256": "7d31ca52ccd6056f5ae20d617b61b8669291462cc61c535cc4ed9a92a05a8800"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/SD-JWT_VC_현황__db6882f2.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/SD-JWT_VC_현황__db6882f2.txt",
+    "action": "move",
+    "sha256": "a9777dba5e69c788622232e909053968a3e88055b2d760b0c0b6723194a31102"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/SD_JWT_VC_draft19__394c4640.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/SD_JWT_VC_draft19__394c4640.txt",
+    "action": "move",
+    "sha256": "394c4640c581c301adaf24d1d356238e2c290b5c9e8b130141ca0e28732144fb"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/TTAK_블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터 (2022)__0031b85f.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/TTAK_블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터 (2022)__0031b85f.txt",
+    "action": "move",
+    "sha256": "2bdbffb5e409c1f1a11fa72e34f25a6ec30edfffaff3ca0a524b202c23a23450"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/W3C_VC_2.0__a9196a3d.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/W3C_VC_2.0__a9196a3d.txt",
+    "action": "move",
+    "sha256": "88b862160307a9f5fce43c6cf2d9c3f06bb488fd52de3947fd26f30dd9da088e"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/④ 표준/상태목록__3cdf3358.txt",
+    "current": "references/catalog/collection/본문추출/④ 표준/상태목록__3cdf3358.txt",
+    "action": "move",
+    "sha256": "8fc5d14303fba6f65608165a52cea841987ece4ec106d056942fb9037124356f"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑤ 서비스/190122 (행정정보공유과) 연말부터 등초본 등 각종증명서 담는 전자지갑 만든다(외부).pdf_________784c789a.txt",
+    "current": "references/catalog/collection/본문추출/⑤ 서비스/190122 (행정정보공유과) 연말부터 등초본 등 각종증명서 담는 전자지갑 만든다(외부).pdf_________784c789a.txt",
+    "action": "move",
+    "sha256": "433c8e2a1bca94deb3bd4ec12bf71cc54971ca170d395e9be22bcd1b6ca161ee"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑤ 서비스/GOV.UK Wallet__d0a2d96f.txt",
+    "current": "references/catalog/collection/본문추출/⑤ 서비스/GOV.UK Wallet__d0a2d96f.txt",
+    "action": "move",
+    "sha256": "69f2cd1fb776f632187bd3f27cc6d689dada55c959895a05da5677012ae2ec21"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑤ 서비스/Q-Net 인정 신분증·모바일 국가기술자격증 (2024)__b8fcf5bd.txt",
+    "current": "references/catalog/collection/본문추출/⑤ 서비스/Q-Net 인정 신분증·모바일 국가기술자격증 (2024)__b8fcf5bd.txt",
+    "action": "move",
+    "sha256": "aff9a376fad39adf59df5d69d42442b7b452dda137e43c67a8bcac91f062abe6"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑤ 서비스/네이버 자격증 모바일 국가자격증 연계__e4774106.txt",
+    "current": "references/catalog/collection/본문추출/⑤ 서비스/네이버 자격증 모바일 국가자격증 연계__e4774106.txt",
+    "action": "move",
+    "sha256": "ad746ba6fd44c5e48af1d25da030ed1f3adb2a8d2a1fe08d501320c673457931"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑤ 서비스/행안부_전자증명서·전자문서지갑 구축 청사진 (2019)__b23bdd68.txt",
+    "current": "references/catalog/collection/본문추출/⑤ 서비스/행안부_전자증명서·전자문서지갑 구축 청사진 (2019)__b23bdd68.txt",
+    "action": "move",
+    "sha256": "e0bf1ae62302a4661b81a362efe2a6a86a0ab4c916c685806937fb7e71e9b090"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/05A_eIDAS_Assessment_Batch6__ec0af4b9.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/05A_eIDAS_Assessment_Batch6__ec0af4b9.txt",
+    "action": "move",
+    "sha256": "e3b825a3752f2b4761906f57424d2ea35ba128e0eaff1232d211541b8a8adc7d"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/05_Assessment_Repository__5030e145.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/05_Assessment_Repository__5030e145.txt",
+    "action": "move",
+    "sha256": "b8ec3a54dcddf66a1d301220a825c5c25ca29ed3b967bd5a62d3cabdf71f69ed"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/09_EIRA_Release700__b3205ee4.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/09_EIRA_Release700__b3205ee4.txt",
+    "action": "move",
+    "sha256": "6a8b65abe0fe40f3478ed6a68a7df1ea6c04c1a913791ea3cdb40bff8d879f88"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/09_EIRA_Value_Proposition__cc157249.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/09_EIRA_Value_Proposition__cc157249.txt",
+    "action": "move",
+    "sha256": "dc16bf8389c45d21d1bd895553d83f255e18835597c5adeb6049898dcc62f839"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/09_EIRA__e4dc0ba6.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/09_EIRA__e4dc0ba6.txt",
+    "action": "move",
+    "sha256": "691321fd316ea8ec0496871f4ad557dd0fa73605a45248813a67941246c0c441"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/2024 DIW Advisory Board Report (PDF _ 8,301 kb)__cb354c8c.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/2024 DIW Advisory Board Report (PDF _ 8,301 kb)__cb354c8c.txt",
+    "action": "move",
+    "sha256": "fa0a8e732b029803d66d4f9b1d8d2cf8371933f59a99c293850068ce259132ba"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/2026년도_회의__5645f871.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/2026년도_회의__5645f871.txt",
+    "action": "move",
+    "sha256": "4d45b8ef55a430e409734a4adb3c51765bde6001f545d4396e4b4c56e91ed195"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/Case Study - EUDI Wallet__66504eab.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/Case Study - EUDI Wallet__66504eab.txt",
+    "action": "move",
+    "sha256": "e50c1c27358996528cf833ef07d983486e0c47e02d57ef0320d61f436218f964"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/DIACC PCTF Digital Wallet (2023)__57fe64c6.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/DIACC PCTF Digital Wallet (2023)__57fe64c6.txt",
+    "action": "move",
+    "sha256": "51bf0f167d5e07b942b0bd157f468295a54758b1991e000e2d377bba7f01d138"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/DIACC PCTF Trust Registries (2023)__a6fc22cd.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/DIACC PCTF Trust Registries (2023)__a6fc22cd.txt",
+    "action": "move",
+    "sha256": "46b2edc97fc066c26b2721b63ea7b5b61591f13d5238284bf9197327cdee788f"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/Digital Identity Mapping Exercise (PDF _ 1,751 kb)__9a91e916.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/Digital Identity Mapping Exercise (PDF _ 1,751 kb)__9a91e916.txt",
+    "action": "move",
+    "sha256": "414b6e395780c81a76da73c74f71272cf79a8bff91d33608111b402b24ad2ad7"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/Digital Identity Services Trust Framework Rules 2024__66b031e9.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/Digital Identity Services Trust Framework Rules 2024__66b031e9.txt",
+    "action": "move",
+    "sha256": "09c13870d349bc1110067bcdff3a1f20cc6ae0dc712a0338071477f30b68f8cd"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/Digital_Identity_Services_Trust_Framework_Amendment_Rules_2026-1_PDF_845_KB__768e48d3.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/Digital_Identity_Services_Trust_Framework_Amendment_Rules_2026-1_PDF_845_KB__768e48d3.txt",
+    "action": "move",
+    "sha256": "e876130438718939bbf39a21a48f1441c2f37cf34dd6e9f04b07031143785088"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/Digital_Identity_Services_Trust_Framework_Rules_2024_PDF_450_KB__c56b4bee.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/Digital_Identity_Services_Trust_Framework_Rules_2024_PDF_450_KB__c56b4bee.txt",
+    "action": "move",
+    "sha256": "ed2436b7303b8ab105a75315e29d56fe1574a00f8ecc25d209aba595f30955f3"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/EUDI Wallet_LSP__aec6fcdb.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/EUDI Wallet_LSP__aec6fcdb.txt",
+    "action": "move",
+    "sha256": "7bf6e8860a35871000749481a96b0539be5b32bffede0d11d9a214d6dcb784ad"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/FY 2025 Demonstrative Research on Interoperability of Educat__6d275e6e.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/FY 2025 Demonstrative Research on Interoperability of Educat__6d275e6e.txt",
+    "action": "move",
+    "sha256": "dc8c250b5696f179de781ae13b32bc1432c2992e35f2f8f61b44569e9a49295a"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/JP_2026_VC_DIW_Governance_Report__ca52fea8.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/JP_2026_VC_DIW_Governance_Report__ca52fea8.txt",
+    "action": "move",
+    "sha256": "de39654b94ab0621391c099116335dc5abcf1e95b95349205f6369c60a3f96a0"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/JP_Annex4_TechnicalWG__81fea349.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/JP_Annex4_TechnicalWG__81fea349.txt",
+    "action": "move",
+    "sha256": "47f538087f405b020d1114814a7777b3a156fbb085798f9f6abce8a8f34dba6d"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/Japan My Number smartphone_card substitute__a0c0267d.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/Japan My Number smartphone_card substitute__a0c0267d.txt",
+    "action": "move",
+    "sha256": "48dcff67402896b4c6de73364574f954fcbf0449b0988c7c87e7785172463e57"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/NZ Digital Identity Services Trust Framework Rules 2024 v2__2afcae07.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/NZ Digital Identity Services Trust Framework Rules 2024 v2__2afcae07.txt",
+    "action": "move",
+    "sha256": "e068aeb84bd78dc31dd9223a7c25544baf48918a59783fda38e89a273d8c2752"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/OECD_G20_Digital_Identity_Practices(2021)__5cdb2162.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/OECD_G20_Digital_Identity_Practices(2021)__5cdb2162.txt",
+    "action": "move",
+    "sha256": "d3c0ed8c6c3117a88e194887213e10d8c15ffd6fcb21f6b950b39a582a432491"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/Poland mObywatel-EUDI Wallet Case Study(2026)__c7d616d5.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/Poland mObywatel-EUDI Wallet Case Study(2026)__c7d616d5.txt",
+    "action": "move",
+    "sha256": "f5736e1e80350a6dc981b42221f4fa2a0cac132f23ae88c6a4c43f2e7b62cfc3"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/Report of Pilot Project on Digital Identity (PDF _ 254 kb)__5024ffa3.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/Report of Pilot Project on Digital Identity (PDF _ 254 kb)__5024ffa3.txt",
+    "action": "move",
+    "sha256": "aa0c5fe2e368baa3b1b9181174a42f763adefd4b77afcfc0042d6dbac4ef3311"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/Research Paper on Interoperability of Educational Credential__4ab6415c.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/Research Paper on Interoperability of Educational Credential__4ab6415c.txt",
+    "action": "move",
+    "sha256": "01a20a1663970c658a19666f99f2c2d2005388a47211d30b99ef1608e2f779fc"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/Smartphone installation in function, My Number Card (PDF _ 1__2c8e9832.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/Smartphone installation in function, My Number Card (PDF _ 1__2c8e9832.txt",
+    "action": "move",
+    "sha256": "8562291ad80cc135f88cf0704b6b1f280babf8ca70325caa9c0ccfb48e1ea6a7"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/Use Cases of Electromagnetic Records as an Alternative to Ca__23e5faa0.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/Use Cases of Electromagnetic Records as an Alternative to Ca__23e5faa0.txt",
+    "action": "move",
+    "sha256": "900879ea62148e3c1a2451c31b5e343a4b49f2c4e89b9ebc0bdf327108bb04fe"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/개최_개요안__e9c1c7d4.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/개최_개요안__e9c1c7d4.txt",
+    "action": "move",
+    "sha256": "01a81f7866dd8e6ecccaec9c4850405e7faffd3ae2cf899439652e1d49d1c85b"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/뉴질랜드_규칙__2fa9b8d9.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/뉴질랜드_규칙__2fa9b8d9.txt",
+    "action": "move",
+    "sha256": "1511303ff8ba40be04035bd06e475e25c498b8d618c5c414968d6f49b427ea74"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑥ 해외사례/별지_3__39345e78.txt",
+    "current": "references/catalog/collection/본문추출/⑥ 해외사례/별지_3__39345e78.txt",
+    "action": "move",
+    "sha256": "c9cc6b599932feb216071d86af060636f67b7318568802bfb048ef492560a619"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/01A_EIF_2017_Brochure__64e99921.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/01A_EIF_2017_Brochure__64e99921.txt",
+    "action": "move",
+    "sha256": "0ca50646256c7e24bd99a1b7d0fb9fec5c6d9822efdc0cb97a7a951cc8bf606a"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/01_EIF__0bce73e7.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/01_EIF__0bce73e7.txt",
+    "action": "move",
+    "sha256": "c081adfe94441254ab87e7d2733f10951bb4cb6fccae1289e369373d6ec130be"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/06_Trust_Services_RP2026__a65748ee.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/06_Trust_Services_RP2026__a65748ee.txt",
+    "action": "move",
+    "sha256": "3f58578f7945e82291e9c8601aa16cd1951e4f8d81f8e6c5a2268644005d44ef"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/EDPS_TechDispatch_DigitalIdentityWallets__bdf0087f.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/EDPS_TechDispatch_DigitalIdentityWallets__bdf0087f.txt",
+    "action": "move",
+    "sha256": "be3cd8661ea0412390a6f8f7d47dae102534f2666f0f013ffd52f8edbcb9c31d"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/EIF_Next_Generation_Blueprint_Draft_0_2_20251115__deae2cd7.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/EIF_Next_Generation_Blueprint_Draft_0_2_20251115__deae2cd7.txt",
+    "action": "move",
+    "sha256": "56ef52ef563161cb26bd7fd3932df7add12110fa28705121a02e99db3210f4e8"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/ENISA secure move to cloud of eIDAS ecosystem__b3723f29.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/ENISA secure move to cloud of eIDAS ecosystem__b3723f29.txt",
+    "action": "move",
+    "sha256": "5dbb74f29097f787ad4056df2398615bf6e1d9913685699377240763260ee5f4"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/ENISA_Digital_Identity_Standard(2023)__1ef29ce7.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/ENISA_Digital_Identity_Standard(2023)__1ef29ce7.txt",
+    "action": "move",
+    "sha256": "5d94b45008697191a4178b00ef423a745109ce7926975c3f317d76ec53540a02"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/EU_2026_Rolling_Plan_ICT_Standardisation__a14d246d.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/EU_2026_Rolling_Plan_ICT_Standardisation__a14d246d.txt",
+    "action": "move",
+    "sha256": "f20e35f669b4b5e30d7d08a42d8d888f799f319d8bca44c183ad63fe0b89fbda"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/G20_2023_DPI_Framework__dac0e144.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/G20_2023_DPI_Framework__dac0e144.txt",
+    "action": "move",
+    "sha256": "b3c974e319008e50bfb05df66c5c176f3ac8fa20e45dbbb1ae281728a6d6784c"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/NIST_공식_발표__85231240.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/NIST_공식_발표__85231240.txt",
+    "action": "move",
+    "sha256": "a6739b8ce1cb940c4d066f82970ecd0c7ee3ba72900dd0fe59fcf719f68cdaed"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/OECD_2024_Digital_Public_Infrastructure__7ad5d825.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/OECD_2024_Digital_Public_Infrastructure__7ad5d825.txt",
+    "action": "move",
+    "sha256": "7e4c86c1df0f5beedd106a6fd43124dffef175609c5fd2993b24d70872cff938"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/OECD_DigitalGovernmentOutlook2026__b1156327.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/OECD_DigitalGovernmentOutlook2026__b1156327.txt",
+    "action": "move",
+    "sha256": "29133b27ef02f6c1187c644d951a302b00a6cc6dfaaf3160d12849cccbb8e847"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/OpenID EUDIW resource hub (2025)__189987be.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/OpenID EUDIW resource hub (2025)__189987be.txt",
+    "action": "move",
+    "sha256": "9af8334d0f39e94cbd8e7535c3983e9f1ebdf8b1a2f8e0a93520f55864390745"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework__ea8833cc.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework__ea8833cc.txt",
+    "action": "move",
+    "sha256": "c0104c4f768ba9f5d7c31f0fb042e8672b3c40a86f2af974c753de1d1d3150d5"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework_웹다운로드_20260927__da300ab9.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/UN_2024_DPI_Safeguards_Framework_웹다운로드_20260927__da300ab9.txt",
+    "action": "move",
+    "sha256": "4dc5031c3f5e600fdfe4110697cfaaccec3dcbffc3a76f2bc7785ae5be117e05"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/UN_실행_평가_자료__28dc8506.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/UN_실행_평가_자료__28dc8506.txt",
+    "action": "move",
+    "sha256": "8dbffe4636f004117f7699b9493f2162518595ef9fe978d744f8be06c287e650"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/VCI_최종_승인__4992767b.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/VCI_최종_승인__4992767b.txt",
+    "action": "move",
+    "sha256": "b373ff00d6995546e9f2c68ad3beae2065ccfd8254c2755c9aae4e61f69cbe11"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/VP_최종_승인__8d922c67.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/VP_최종_승인__8d922c67.txt",
+    "action": "move",
+    "sha256": "2b33b548b329667b0a7a0bbfaad7455c18dd4fba34ad8a912e06991a7f3f7db8"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/WB_2026_ID4D_Digital_Wallets_Policy_Note__add051e0.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/WB_2026_ID4D_Digital_Wallets_Policy_Note__add051e0.txt",
+    "action": "move",
+    "sha256": "3446f09313db6455239ba06ba77c6c644fbe556dffda03ea8bbd65c7ad707716"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/공식_발표__03beba74.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/공식_발표__03beba74.txt",
+    "action": "move",
+    "sha256": "1c7a7f511e6c3f09b7753a4166889a2df47b50a80c77227ea4fa965c06d53608"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/디지털서비스 개방 참여기업 공모 공고문.pdf________ [________776.5 KB________]__172a1463.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/디지털서비스 개방 참여기업 공모 공고문.pdf________ [________776.5 KB________]__172a1463.txt",
+    "action": "move",
+    "sha256": "3c5a4877f1d9a5157340fa3b0108a1095ddab481a85b0cb568426b4d1aa0b2d6"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/시험체계__959d9c39.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/시험체계__959d9c39.txt",
+    "action": "move",
+    "sha256": "3f07bdac93905fae60472910c2d66c7293bfa6319d37dbfee68f89550208ec89"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/원문__c5c61ce1.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/원문__c5c61ce1.txt",
+    "action": "move",
+    "sha256": "057f46e5c44f38bdde51297bae024c01a8e50610e22e4e4a1fe9d8da211738b7"
+  },
+  {
+    "original": "참조문서/04_수집기록/본문추출/⑦ 정책·산업자료/행안부_2026 디지털서비스 개방 참여기업 공모__b817cfa3.txt",
+    "current": "references/catalog/collection/본문추출/⑦ 정책·산업자료/행안부_2026 디지털서비스 개방 참여기업 공모__b817cfa3.txt",
+    "action": "move",
+    "sha256": "c50e90716c94cea2b6757041f543a921b20e801adc30255518a33ef0d92befc2"
+  },
+  {
+    "original": "참조문서/04_수집기록/원문제외/005_Electronic Markets_Self-sovereign identity A conceptual framework and research agenda (2025)/목록_링크_c05ec161.html",
+    "current": null,
+    "action": "backup",
+    "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea"
+  },
+  {
+    "original": "참조문서/04_수집기록/원문제외/009_한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)/첨부_필드명 설명 자료 다운로드_ee524e80.pdf",
+    "current": null,
+    "action": "backup",
+    "sha256": "fb2cdfc313c482f565226344e824899d4d03beabff794efa2eda6c830e2a8dc4"
+  },
+  {
+    "original": "참조문서/04_수집기록/원문제외/078_Singpass_Digital IC/목록_링크_0803967f.html",
+    "current": null,
+    "action": "backup",
+    "sha256": "dc9199f243df14978ad8b91225b0e001914ed19d1235eb4d4480da98cc7a72f7"
+  },
+  {
+    "original": "참조문서/04_수집기록/원문제외_기록.json",
+    "current": "references/catalog/collection/원문제외_기록.json",
+    "action": "move",
+    "sha256": "ae7fd5e40f9d6ae2e7f902de55ed70499d8677231d3af8fa00fe2f5e3cde98e5"
+  },
+  {
+    "original": "참조문서/04_수집기록/통합검증.json",
+    "current": "references/catalog/collection/통합검증.json",
+    "action": "move",
+    "sha256": "2d10bfb3300e7b1b902bb27c5f8bb41edeefc5e2d89f98fc90a399af205fff62"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/EIF_차세대_상호운용성/02_최종문서/EIF_한국어_번역본.pdf",
+    "current": "deliverables/reports/interoperability/prior-analysis/EIF_차세대_상호운용성/02_최종문서/EIF_한국어_번역본.pdf",
+    "action": "move",
+    "sha256": "14e9306f62dfbe4da87b2a4277d09e4b114e8626c74d98cfe27d7c3c4945294c"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/EIF_차세대_상호운용성/02_최종문서/국내_상호연동_시사점_보고서.pdf",
+    "current": "deliverables/reports/interoperability/prior-analysis/EIF_차세대_상호운용성/02_최종문서/국내_상호연동_시사점_보고서.pdf",
+    "action": "move",
+    "sha256": "0f37a645bd56288b4f0d1c3d8e3742ba8f65521f988a86d5ce92e5baae40c843"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/EIF_차세대_상호운용성/04_통합문서/EIF_차세대_상호운용성_분석_국제동향포함.pdf",
+    "current": "deliverables/reports/interoperability/prior-analysis/EIF_차세대_상호운용성/04_통합문서/EIF_차세대_상호운용성_분석_국제동향포함.pdf",
+    "action": "move",
+    "sha256": "589a9fa9cb2a09a840fef18f9462d070bc19a59aac4594a5eb69ab1d3d596f79"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/EIF_차세대_상호운용성/04_통합문서/그림/EIF_그림_1.png",
+    "current": "deliverables/reports/interoperability/prior-analysis/EIF_차세대_상호운용성/04_통합문서/그림/EIF_그림_1.png",
+    "action": "move",
+    "sha256": "3278915381850e3c9645444c4ad5e240e7642a2eb704ca70c2d74e4f125f457d"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/EIF_차세대_상호운용성/04_통합문서/그림/EIF_그림_2.png",
+    "current": "deliverables/reports/interoperability/prior-analysis/EIF_차세대_상호운용성/04_통합문서/그림/EIF_그림_2.png",
+    "action": "move",
+    "sha256": "7f55cc166489cbbe7be1a2839129809cf84c138857d8f4af643cf6ef62128d73"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/EIF_차세대_상호운용성/04_통합문서/그림/EIF_그림_3.png",
+    "current": "deliverables/reports/interoperability/prior-analysis/EIF_차세대_상호운용성/04_통합문서/그림/EIF_그림_3.png",
+    "action": "move",
+    "sha256": "c568fe2caf2fbf7c4ce0d79870455cf1a229e11ad472805e0dd3482b9cfdde12"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/EIF_차세대_상호운용성/04_통합문서/그림/EIF_그림_4.png",
+    "current": "deliverables/reports/interoperability/prior-analysis/EIF_차세대_상호운용성/04_통합문서/그림/EIF_그림_4.png",
+    "action": "move",
+    "sha256": "46b971ed2d7ce2429777dfb816686f49801d77621b4b04a8c45165e068d3380e"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/EIF_차세대_상호운용성/05_EIF_NextEIF_시사점/EIF에서_NextEIF로_변화와_시사점.html",
+    "current": "deliverables/reports/interoperability/prior-analysis/EIF_차세대_상호운용성/05_EIF_NextEIF_시사점/EIF에서_NextEIF로_변화와_시사점.html",
+    "action": "move",
+    "sha256": "657a3c91a84ea4225d3a0ca8fcc3daca07d89da0e88e3249ab3b66373c87ab25"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_내용요약보고서.html",
+    "current": null,
+    "action": "backup",
+    "sha256": "8055abd058010dae0a2cbf6556789630fd175b1e06a17a740b1d83a6468baa56"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/01A_EIF_2017_Brochure.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "0e33ff9f8b07f162107299196565691410745ba56bacd712bf7a00848e5b5315"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/01_EIF.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "cd6b41436ef9378b0b07259b5f873f08b77bba8c14d8f8f694cee94d3d3dd9ba"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/01_EIF.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "f53cb9d3bae5292f749b0e3a647f52abaae98d204c3098b208658d0dab89328f"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/02A_Assessment_Guidelines_202412.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "e72075bb3835f7b6299cacbe0ec0a00d4638d3589db096f4ef1c56015505bf74"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/02_Assessment_Guidelines.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "f1efa54872b9ee86113388ae862e585e6c194b3b370be0c124fd21d58a96a713"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/02_Assessment_Guidelines.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "15b4a194dfc816bb08b664ff17e3de68efb1241e55162d75fe0ff944cbf60b98"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/03_Assessment_Toolbox.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "7b01b251b7f8c79b87c54542fdb37165e981456820a636722cbfc545af5b35a2"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/03_Assessment_Toolbox.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "e3fcf7c9bd0ada06ea89221efac7efc86ece912e3fe7861d15d3b3e90d7e204a"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/04_IOPA_1.0.0.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "75575d78afa5b54ea1441866275675f7660f5dff5aaf7722f4dc7f7420cf76c1"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/04_IOPA_1.0.0.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "8505af51d32a987be6fbf5f532aa6e1813187e5405b275d1e12ec0a309645df3"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/05A_eIDAS_Assessment_Batch6.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "e82b152f87685cb27c35519f6bb435eb7a1a583a4c5def2085fe29ed6eb4b885"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/05A_eIDAS_Assessment_Batch6.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "133c5f2020d1ad3dafb09c1e782ac98c4cb999292b1340f029e8cf58151a7a22"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/05_Assessment_Repository.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "dfd780c89f285ce8dcb77fbfc5933148c8fc3437338094c294e62c4ceb201e9b"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/05_Assessment_Repository.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "8aea6d10e623b09bb088c0437b4202265646233f03451bbb24a33a2d4c563511"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/06_Trust_Services_RP2026.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "98b36eead69a8cd674e8691103e18a9c0b4ed5da2daf2c25ca2641af7ee48467"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/06_Trust_Services_RP2026.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "5e33f2f1aaa3289ff274b032a8e58a0ccb830ec553ac0a31cf98cf5a1c3901dc"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/07_SEMIC_Specifications.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "038e40e94440fddafca81f2e1444875ec651cd23c5ac8763ac5eca9a20f51adf"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/07_SEMIC_Specifications.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "3cdeed8ec59594e7ca0cce453f8bdf4abc6e859d8ee91f490a7609568a497b92"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/08_CCCEV_2.2.0.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "080b883bfd58d8bf5259c1ad2e53258ba3ff13738ebfb8f28ae95f2d07dc48ca"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/08_CCCEV_2.2.0.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "207a0f605acda4d7600c06c30ca3845706fd6f9518c6bb53c7e471ded8c19ac0"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/09_EIRA.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "81210d8e5c67b8ff2d7638b46de8f7ec84e735b548aa072d8416824fa24bba70"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/09_EIRA.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "baef436548c52ee25aae2b15a8846829b22d8031115365e65d95ce9490a28223"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/09_EIRA_Release700.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "c73f6a7cd56570e434cf0d3eefeea0bd95d9f8ff7dfcb34d95843f91128fde49"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/09_EIRA_Release700.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "e5df6fff004f6533452ff8f4ca771b73310603ad558cd5703134f7299cc57abd"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/09_EIRA_Value_Proposition.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "58be981a48b185524d974caa4630414fb52eab8d6692c5383f1414e7b6e53cac"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/10_ELIS.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "bcd32a90a5598459f9f513040d43a33967878ac89329b5a4a0a969f42ecd98db"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/10_ELIS.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "fa6ca7f0e3371e8e847002a65a2614f001261654f9d9ad0edbaeefda07d35c41"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/10_ELIS_Release700.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "c6d20298b18ff404331746d85c6138502e738487461c74d681391924952b0e6b"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/10_ELIS_Release700.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "722b1dc0d1100faa67a6718b19f7f2c83195dc1cd90a09ed3c7c80eabe119cb6"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/11_ITB_FAQ.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "d170f33f5ebf4df5e5ab9e57151556d937fbab17860f5d201c0a10f245532381"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/11_ITB_FAQ.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "d1c0ec34e78d9a120757e5d24952dbb85f7e3838dba0363760667eeb12dec08c"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_GITB_TDL.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "eb123f4762abb942c7c0100bab3f8e09845ec489a8f43f560b5b4a5cbc3f8a5d"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_GITB_TDL.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "7a7825856b718ccefa0375b4f3e2991323e506e0c7516d920f47ae9dc57fd1b4"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_example_test_suites.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "978e338c1233f66759995fecd44852663527093821a1032bf5c1897df92d8c58"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_example_test_suites.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "2dc0a904b0cabe44ee420251ed754252d17a8108f1434fa3f3b9ea8447760c23"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_expressions.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "e9b6cc87acbb818e1bc988bcf09bb248a0750fee328b9a9c27ea5ff755dc0639"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_expressions.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "57ca43654ffd3abd40632c0f8012af53eaa4256e2b4c1bc04d9f4fec22893a7f"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_hello_world.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "a25f2e2b5004678b17a5ea2f78da7147a392684005d257a87981e067c731cdad"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_hello_world.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "0f801e9f2921f7117918ad461d9a89bb1120dd2ba8974c81c5bcc60d8ac505be"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_introduction.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "45dd106fbd6731ce4a7901e4cde17c362e08cd0a46895c3637d84fc0541e9153"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_introduction.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "183a6256191055a69eba75cfcadbf68b8491806337b0ef9311f212982575f997"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_release_history.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "54680095e987967d188771b30dc69afe6d337ac0171d5a66ad6a911a985effc2"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_release_history.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "0b0b5359efe22c252592a448d79967e120f45968139e042079db23caf3ae3861"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_scriptlets.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "f97c3182d440f8d8f0b28c82dac25b79bfc8c962734513c83705ae1541cbfc35"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_scriptlets.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "5670f17f839be0999b4d226d682f57ffee935ce0439c0c4458635b2035041249"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_test_cases.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "0c722a11b72a6b38a839d23672328303f962657774de3184fdde5b8b2876270b"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_test_cases.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "98fc6908601d5b35aa8f06dc2586bb6e49d3b3300ca3efb85c33733239f4140d"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_test_step_handlers.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "f61a2a45d603630f434afec5a2c54ac9ada622a3f40c26ddaff56b328721a64a"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_test_step_handlers.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "d053243bb4990957852774f7b6c60189d1c0e0d635afeb8fb99c8efd5acdfad2"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_test_steps.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "bd007d4c5bf22fc3e204d7852b8cca6fd83d81b961050efb467f0fdd6a80c632"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_test_steps.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "0020c0b8c2eb5ae65a200e175c5645968499476b150d870dccea05829a7e7c34"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_test_suites.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "e6125d9f6dbbf4f5e072039a38fa84eb5a6c6337cbc4caf074aeec6caaaaec06"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_test_suites.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "42c6d38a1ad33cc3a16d17e380d35f37e0d8b19b5c5c04cad34d44494d2333fb"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_types.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "ebbdf226fee242d4cb4c6da8b61d420e79eac944f6a5384dfc085fed885c7ccc"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/우선자료12_원문/12_types.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "6437dacac45f2bc0a8f615de49efc58c18b42d4b93dc5ff3f2ed1a2a59aeb33f"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/자료목록_및_연계도.html",
+    "current": null,
+    "action": "backup",
+    "sha256": "9572f77f7569e35e7f821419a51c7a05b6d9668ced124f9fb5a926fedd107789"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/005_Electronic Markets_Self-sovereign identity A conceptual framework and research agenda (2025)/목록_링크_c05ec161.html",
+    "current": null,
+    "action": "backup",
+    "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/005_Electronic Markets_Self-sovereign identity A conceptual framework and research agenda (2025)/목록_링크_c05ec161.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "c84ee0d95c2e633e06c187bcaf078a1ea447a2b5422822c05ee36b71225d16a8"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/006_arXiv_SoK_Trusting_SSI (2024)/논문_전문_4ff0d6fb.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "7768332ed4750f7471349636e35d983adee8877617d1e3d1fa4a5e4733ef7c61"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/006_arXiv_SoK_Trusting_SSI (2024)/목록_링크_3364ac38.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "86c1e3285d96b24a272e46d3a6dca49ecbc365f0bb9f53b7935e7d023186d11c"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/006_arXiv_SoK_Trusting_SSI (2024)/목록_링크_3364ac38.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "1ce36aa2de6c25da3badfeb1ab5f66f2cd1b598d208eddd8daaa635dd029a796"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/007_arXiv_Towards_Trustful_Digital_World (2021)/논문_전문_79fd1449.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "9a0632adeb0ff7335fc32b8e16c274ef641b6152bd82eb71dd4f8ea016518e01"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/007_arXiv_Towards_Trustful_Digital_World (2021)/목록_링크_5bf30d91.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "21b74e0fbe059fa08970a024d37fe2e7c32d6c85eb018b6a3db1dd1db0d5f88e"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/007_arXiv_Towards_Trustful_Digital_World (2021)/목록_링크_5bf30d91.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "38b343d59795be8688a0065d0e27068c4014ad8b1f907c869387a7dce9cc5c0f"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/008_한국IT정책경영학회_분산신원 기반의 자기주권신원모델모바일 운전면허증에 관한 연구(2023)/목록_링크_b2d763b7.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "f220ca257f50c171b7f35c3c37a9e81f06cc72a83cf1a1fe298a34caa801ebfd"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/008_한국IT정책경영학회_분산신원 기반의 자기주권신원모델모바일 운전면허증에 관한 연구(2023)/목록_링크_b2d763b7.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "237b8b13fed69f9ac2c389e7587d31beac7ff504d7dcd00114467a886a40e2df"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/009_한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)/목록_링크_ae9b908a.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "1bf0873ecf12fd0cebd085852d4d90e7d124f4475526520695417410114e3c54"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/009_한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)/목록_링크_ae9b908a.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "5424e9250cf1ecf3c988683cf5f47b9e699f70001d96c5cf7674374e9653f297"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/009_한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)/첨부_필드명 설명 자료 다운로드_ee524e80.pdf",
+    "current": null,
+    "action": "backup",
+    "sha256": "fb2cdfc313c482f565226344e824899d4d03beabff794efa2eda6c830e2a8dc4"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/009_한국융합기술연구학회_분산신원증명(DID) 기반 국방 다중인증체계 구축방안 연구(2022)/첨부_필드명 설명 자료 다운로드_ee524e80.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "29e5815a0598c651dd9a18c6a6215d2886389108a4bd1255a038f98473c08dda"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/010_한국신용카드학회_전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구(2019)/목록_링크_4404237a.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "c0cc2c518aa87f64f565e5e6a9864f3c82b99e084bf7d41d87bb96e52b4e3c2b"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/010_한국신용카드학회_전자문서지갑과 전자증명서를 이용한 비대면 주택담보대출 도입에 관한 연구(2019)/목록_링크_4404237a.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "11acb33fa793b29036b162f348488c3a6436693ce104529031ac344613e836fe"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/011_KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서/KISA_최종보고서_897202c2.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "60ec7f7da03a4e3e66323456cdfd825e5d1b31b9de98d6c66ad1b58c348a13f6"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/011_KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서/목록_링크_249eb210.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "36962ea9ccb17edeefbe27195103336753569377884c5d300cd1b4f6c5eaae00"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/011_KISA_202402_블록체인_신뢰_프레임워크K_BTF_중장기계획_수립_최종보고서/목록_링크_249eb210.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "806ae1141390768ce13f08cbfe1e93aae6928f066857ae7faf1b2248d795c4a5"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/012_KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서/KISA_최종보고서_583e3e3a.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "8ef6e87128a90cffc2e37dca6d7e94a420ac6bfc8acaab452e0a7c506d5fffc2"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/012_KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서/목록_링크_6b1ed037.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "ce378944587f3d5578641da3851a68ee169a389db6aa1804f6fa9b377d27e368"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/012_KISA_202404_Trusted Web 구축을 위한 기술 및 보안연구_최종보고서/목록_링크_6b1ed037.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "8da533a11b9327cd519b21b4a1c1efbb59e9635dfc3aca9a88c1d830beac1045"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/013_KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서/KISA_최종보고서_43149076.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "a39e0e10df0a9b3b544dbf44d88cecdcbaac309ba91305aeea9ed82e6bedf4ea"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/013_KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서/목록_링크_0c8b0987.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "d89ee4ac898460740e62ccf5cd267b3a14d9e3091275e0f53709cdec786d5e63"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/013_KISA_202507_분산ID(DID)_직접_해석방안_연구_최종보고서/목록_링크_0c8b0987.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "39eb13b1bac0d456509efced018f31ec6e4f5749e06bb370804d4d69ebdebdfa"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/018_모바일 신분증 등 모방 앱의 문제점과 대처 방안 (2024)/목록_링크_1aa25552.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "c5a21ce3635116e1d4dda69e1c9adaa5a15deab2ea8fb9b0480b2011f071a537"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/018_모바일 신분증 등 모방 앱의 문제점과 대처 방안 (2024)/목록_링크_1aa25552.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "6af8caf66502e00e3ad52530ba10cc0d629bfa301496f492210779bcecddf9ca"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/019_모바일 기기에서 공개 API를 통한 신원 증명 서비스의 문제점 분석(2021)/목록_링크_020e81b4.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "bc0e763f8284e2b864175c06ede71bb5528763be88a5d9f450cef5d4e818c1d4"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/019_모바일 기기에서 공개 API를 통한 신원 증명 서비스의 문제점 분석(2021)/목록_링크_020e81b4.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "844066dc10e08082ee83245f9d4cb88138c925f73f877e7ce21aea0141822a84"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/020_DID 기술에 기반 한 분산 신원 인증 시스템 (2023)/목록_링크_579e8a38.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "62d31a247467233148510fc7a84a28d42183c8b64a3df911e1a8e75c12d5358b"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/020_DID 기술에 기반 한 분산 신원 인증 시스템 (2023)/목록_링크_579e8a38.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "fbaf5b655b6fdd2a1dd0624cead1aace22cc5128309343de759682eac8183417"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/021_EU_202401183_Regulation (EU) 2024_1183/목록_링크_32701d1f.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "a6edbabf83108c3d69f7b55e69ff4112c9e1e5782268cd36319f07fecfe59e6a"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/021_EU_202401183_Regulation (EU) 2024_1183/목록_링크_32701d1f.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "964eae16d07b7a91fe7d7230090b8cbf61fb35da9b93a8a7790962aa0054cb05"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/022_EU_2024903_Regulation_Interoperable Europe Act/목록_링크_de528ba3.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "99d34f3bbf270988ef87db29c0890207cbc16566c93a1370226f42983862bb7b"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/022_EU_2024903_Regulation_Interoperable Europe Act/목록_링크_de528ba3.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "d2f17fc54f394caddcfbd2cbc1ad58bf6d084815fcd42429ea47b76d87ad4e3f"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/023_EU_202412_EUDI Wallet Implementing Regulations/목록_링크_d5a684ec.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "59ac013f47edcf8afbd10bdab2bac8dbbb92f65ea3b6a54959e3ec60b37937df"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/023_EU_202412_EUDI Wallet Implementing Regulations/목록_링크_d5a684ec.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "4d8908b473bed180b06ebc7ad5acad4e98baca3fdc72e35bc9a9c28153a2b5f3"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/026_UK DVS Trust Framework collection/목록_링크_4c918156.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "836dc46493f01330aee9acd1f91b5362176d6e75286ea2b742cf6eec3dbfeaed"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/026_UK DVS Trust Framework collection/목록_링크_4c918156.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "88a8fa9644007ff5639a331576714580d1506b5098bb5a20f3b653f3964f94be"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/027_Using GOV.UK Wallet in digital identity sector/목록_링크_8c181327.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "381cbdca2d1649a5921e94de1f16440af97a50c560b0f815073e28a75cf0e9e7"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/027_Using GOV.UK Wallet in digital identity sector/목록_링크_8c181327.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "6db3c9622ff8dc4c8af5dae359f73b6a65d65c37c91eb5a5a7dc9d608d245bac"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/028_UK Digital Identity and Attributes Trust Framework beta 0.3 (2023)/목록_링크_ed286e81.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "0ce0b804324bb0508123cdd49e22e4059702e6445ab480e85f68dd9024f71350"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/028_UK Digital Identity and Attributes Trust Framework beta 0.3 (2023)/목록_링크_ed286e81.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "8d9f67a2ba0f218653948433689e42fffb89622ea065cf339512cdeec785fe5e"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/030_Japan Digital Agency Trust/목록_링크_0f3f5352.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "8885fddf2b8a2236375627e1526992825f73a0b06cd146e008eb68f80e53523e"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/030_Japan Digital Agency Trust/목록_링크_0f3f5352.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "51e26bdfbb9d87ec9b9fcd3e87298925c84950bfa8e38d712b8f8d7bb81fd4aa"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/030_Japan Digital Agency Trust/첨부_2024 DIW Advisory Board Report (PDF _ 8,301 kb)_c820a409.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "fa0a8e732b029803d66d4f9b1d8d2cf8371933f59a99c293850068ce259132ba"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/030_Japan Digital Agency Trust/첨부_Digital Identity Mapping Exercise (PDF _ 1,751 kb)_0bedc677.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "414b6e395780c81a76da73c74f71272cf79a8bff91d33608111b402b24ad2ad7"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/030_Japan Digital Agency Trust/첨부_FY 2025 Demonstrative Research on Interoperability of Educat_72f36976.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "dc8c250b5696f179de781ae13b32bc1432c2992e35f2f8f61b44569e9a49295a"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/030_Japan Digital Agency Trust/첨부_Report of Pilot Project on Digital Identity (PDF _ 254 kb)_cb2d6a72.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "aa0c5fe2e368baa3b1b9181174a42f763adefd4b77afcfc0042d6dbac4ef3311"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/030_Japan Digital Agency Trust/첨부_Research Paper on Interoperability of Educational Credential_2dbf5276.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "01a20a1663970c658a19666f99f2c2d2005388a47211d30b99ef1608e2f779fc"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/031_Japan Digital qualification certificates/목록_링크_0af945f9.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "a7c863aa10dd375ede7c08c009593678cc96daeee6c9b88ab732172ccf1deed7"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/031_Japan Digital qualification certificates/목록_링크_0af945f9.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "4801a80ad5d923097dd0c88d641b18f311f102ac9d5ee2aef0861942a8562c27"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/031_Japan Digital qualification certificates/첨부_デジタル資格者証の活用方法（PDF／1,455KB）_7ff50f50.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "066298dd1fe5c7552fedfae64db208f616c127ca1df72eb80c77e33c5f7322e3"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/031_Japan Digital qualification certificates/첨부_国家資格オンライン化サービス紹介（PDF／1,687KB）_1cb1e904.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "ee842a7ea7def9433dd0d0a3aa466d34e0aafdf99637965709b42b32af66454a"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/031_Japan Digital qualification certificates/첨부_国家資格等のオンライン・デジタル化令和8年度以降の対応スケジュール（PDF／722KB）_38a2cf68.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "32cca870ff70d1696e39a4dcadcb50b004e587cdd829be1a8981188cfab3860e"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/031_Japan Digital qualification certificates/첨부_国家資格等オンライン・デジタル化の開始について（PDF／2,745KB）_75b1b3e6.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "04487a09ebc85e49c16f1d7cf6474ce59337229bbe31714c9c7c6fed9d198531"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/033_모바일 신분증 공식 안내/목록_링크_a2855855.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "70854ff8027f7ace68013f4096e9314d8e734e7224a746bbe17725d6f71a10c7"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/033_모바일 신분증 공식 안내/목록_링크_a2855855.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "39db4cacdb49618db3ea6c787c597509f29971fe5bc9f815a903b26e9992a505"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/034_전자증명서 발급업무 처리지침/목록_링크_76e0ca23.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "0988e2b96dcc1de82e1d8e31d4fa5c905b177815db11bbe55a6596d29fcd5010"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/034_전자증명서 발급업무 처리지침/목록_링크_76e0ca23.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "970f851a1a70b6313611bbb73668d4c772cd8059763df3d21532114bc0174c49"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/035_전자서명법/목록_링크_7d40270f.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "8411d35904322e31a0b7ed18f6d285604372b3610ef1777847a44016822ea9db"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/035_전자서명법/목록_링크_7d40270f.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "51fef84b80919809c32a6eab9fd1a51889a0d74d8413c4a5b73017977322662a"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/036_전자문서 및 전자거래 기본법/목록_링크_744c974b.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "9b3c64b0cb623c76bcc08f3f90c541614c05c3e27659b57f9daddf0b92ad3180"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/036_전자문서 및 전자거래 기본법/목록_링크_744c974b.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "51b6a4c02b7d8380c7265fe4660da1b03e2df9eeb34c223d967efd57bb7fc934"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/037_모바일 신분증 법적 인정 관련 조문/목록_링크_d38225e3.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "8ec50e433884405a80671df3a0ed8dd66fcea8e7f37dc6eabc72352d6c7a4dfa"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/037_모바일 신분증 법적 인정 관련 조문/목록_링크_d38225e3.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "2a576a4f805ca9b532140947f15f53b67a4df75a393e6b1af8f870d218963bc6"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/039_GOV.UK Wallet technical documentation/목록_링크_bb89dd2b.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "6f2153a7fc13f04dacca5cf0a9d2037f332ef5ef3bd1ea6e51197d45e91b57cf"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/039_GOV.UK Wallet technical documentation/목록_링크_bb89dd2b.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "cc54bb814c85baf7dc4dfa12b7e5bdd893b5a8204c4aed81fb02c8931a230816"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/046_OpenID SIOPv2 (2023)/목록_링크_0b89fcdb.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "578dde6d31844a20d4bed9d5efd2302a2f088886831507bf42c4ffa80914e42e"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/046_OpenID SIOPv2 (2023)/목록_링크_0b89fcdb.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "17389ecc8499abf6c066c36132472e6987a4801b43fbce8478f0e956a4364ad1"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/054_OpenID Federation 1.0 (2026)/목록_링크_c8f71af3.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "92c40ae4b3e6a3602c6f02f4fc8b938276f53fc184130f7dbb6dd24786f6d96d"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/054_OpenID Federation 1.0 (2026)/목록_링크_c8f71af3.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "149a315b778c636d17e3fadeb883a45a0953f9a9ba6df9859002b56b5fbd9225"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/057_TTAK_블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터 (2022)/목록_링크_955528cb.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "895f6d121b13186c8183da8744da4b56f69544e7389b8589fe1124290d0d5188"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/057_TTAK_블록체인 기반의 선원자격증명 서비스 검증 가능한 자격증명(VC) 데이터 (2022)/목록_링크_955528cb.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "2bdbffb5e409c1f1a11fa72e34f25a6ec30edfffaff3ca0a524b202c23a23450"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/058_GOV.UK Wallet/목록_링크_c05d21cd.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "93dbaeafefa799051d36d6c74567f8cd1c7cb0c744058ee7d66b4728b2a77339"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/058_GOV.UK Wallet/목록_링크_c05d21cd.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "69f2cd1fb776f632187bd3f27cc6d689dada55c959895a05da5677012ae2ec21"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/059_행안부_전자증명서·전자문서지갑 구축 청사진 (2019)/목록_링크_4eabdcdc.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "1b6ae65dfe152af308cd5a5c609dd5e6b8ba075e73232dfdc6b318683c40b4f2"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/059_행안부_전자증명서·전자문서지갑 구축 청사진 (2019)/목록_링크_4eabdcdc.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "e0bf1ae62302a4661b81a362efe2a6a86a0ab4c916c685806937fb7e71e9b090"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/059_행안부_전자증명서·전자문서지갑 구축 청사진 (2019)/첨부_190122 (행정정보공유과) 연말부터 등초본 등 각종증명서 담는 전자지갑 만든다(외부).pdf________e0b8d930.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "433c8e2a1bca94deb3bd4ec12bf71cc54971ca170d395e9be22bcd1b6ca161ee"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/060_Q-Net 인정 신분증·모바일 국가기술자격증 (2024)/목록_링크_10089b21.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "4319acea20574e8a071eafd6e8d5380bf6b5e67c59fed833832e3290d4af0d1d"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/060_Q-Net 인정 신분증·모바일 국가기술자격증 (2024)/목록_링크_10089b21.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "aff9a376fad39adf59df5d69d42442b7b452dda137e43c67a8bcac91f062abe6"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/064_네이버 자격증 모바일 국가자격증 연계/목록_링크_ac968555.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "5c6f7b7004dbc174124797c7503613e0aa749534487ffe324f47cdb5232d7b63"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/064_네이버 자격증 모바일 국가자격증 연계/목록_링크_ac968555.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "ad746ba6fd44c5e48af1d25da030ed1f3adb2a8d2a1fe08d501320c673457931"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/067_OECD_G20_Digital_Identity_Practices(2021)/목록_링크_d7482a48.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "d3c0ed8c6c3117a88e194887213e10d8c15ffd6fcb21f6b950b39a582a432491"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/068_Japan_DIW_Advisory_Board_Report (2025)/목록_링크_0f3f5352.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "8885fddf2b8a2236375627e1526992825f73a0b06cd146e008eb68f80e53523e"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/068_Japan_DIW_Advisory_Board_Report (2025)/목록_링크_0f3f5352.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "51e26bdfbb9d87ec9b9fcd3e87298925c84950bfa8e38d712b8f8d7bb81fd4aa"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/068_Japan_DIW_Advisory_Board_Report (2025)/첨부_2024 DIW Advisory Board Report (PDF _ 8,301 kb)_c820a409.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "fa0a8e732b029803d66d4f9b1d8d2cf8371933f59a99c293850068ce259132ba"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/068_Japan_DIW_Advisory_Board_Report (2025)/첨부_Digital Identity Mapping Exercise (PDF _ 1,751 kb)_0bedc677.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "414b6e395780c81a76da73c74f71272cf79a8bff91d33608111b402b24ad2ad7"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/068_Japan_DIW_Advisory_Board_Report (2025)/첨부_FY 2025 Demonstrative Research on Interoperability of Educat_72f36976.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "dc8c250b5696f179de781ae13b32bc1432c2992e35f2f8f61b44569e9a49295a"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/068_Japan_DIW_Advisory_Board_Report (2025)/첨부_Report of Pilot Project on Digital Identity (PDF _ 254 kb)_cb2d6a72.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "aa0c5fe2e368baa3b1b9181174a42f763adefd4b77afcfc0042d6dbac4ef3311"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/068_Japan_DIW_Advisory_Board_Report (2025)/첨부_Research Paper on Interoperability of Educational Credential_2dbf5276.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "01a20a1663970c658a19666f99f2c2d2005388a47211d30b99ef1608e2f779fc"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/069_Japan_EU_Japan_Digital_Identity_Pilot (2026)/목록_링크_0f3f5352.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "8885fddf2b8a2236375627e1526992825f73a0b06cd146e008eb68f80e53523e"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/069_Japan_EU_Japan_Digital_Identity_Pilot (2026)/목록_링크_0f3f5352.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "51e26bdfbb9d87ec9b9fcd3e87298925c84950bfa8e38d712b8f8d7bb81fd4aa"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/069_Japan_EU_Japan_Digital_Identity_Pilot (2026)/첨부_2024 DIW Advisory Board Report (PDF _ 8,301 kb)_c820a409.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "fa0a8e732b029803d66d4f9b1d8d2cf8371933f59a99c293850068ce259132ba"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/069_Japan_EU_Japan_Digital_Identity_Pilot (2026)/첨부_Digital Identity Mapping Exercise (PDF _ 1,751 kb)_0bedc677.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "414b6e395780c81a76da73c74f71272cf79a8bff91d33608111b402b24ad2ad7"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/069_Japan_EU_Japan_Digital_Identity_Pilot (2026)/첨부_FY 2025 Demonstrative Research on Interoperability of Educat_72f36976.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "dc8c250b5696f179de781ae13b32bc1432c2992e35f2f8f61b44569e9a49295a"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/069_Japan_EU_Japan_Digital_Identity_Pilot (2026)/첨부_Report of Pilot Project on Digital Identity (PDF _ 254 kb)_cb2d6a72.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "aa0c5fe2e368baa3b1b9181174a42f763adefd4b77afcfc0042d6dbac4ef3311"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/069_Japan_EU_Japan_Digital_Identity_Pilot (2026)/첨부_Research Paper on Interoperability of Educational Credential_2dbf5276.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "01a20a1663970c658a19666f99f2c2d2005388a47211d30b99ef1608e2f779fc"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/071_EUDI Wallet_LSP/목록_링크_141088f1.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "237844f7fe3266aae75dc097bfb2c4147ace742854e1cb1a09f33864a64c55d6"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/071_EUDI Wallet_LSP/목록_링크_141088f1.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "7bf6e8860a35871000749481a96b0539be5b32bffede0d11d9a214d6dcb784ad"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/072_Poland mObywatel-EUDI Wallet Case Study(2026)/목록_링크_370a42d0.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "9de9b46157e030d9e647db258e165d62b05ef5c7774ed45478714e92e54aaf01"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/072_Poland mObywatel-EUDI Wallet Case Study(2026)/목록_링크_370a42d0.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "f5736e1e80350a6dc981b42221f4fa2a0cac132f23ae88c6a4c43f2e7b62cfc3"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/072_Poland mObywatel-EUDI Wallet Case Study(2026)/첨부_Case Study - EUDI Wallet_7c66754e.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "e50c1c27358996528cf833ef07d983486e0c47e02d57ef0320d61f436218f964"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/073_NZ Digital Identity Services Trust Framework Rules 2024 v2/목록_링크_02e60931.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "a89195819d19e4512ac1302078a223cea90aa7cdc286515bc898d52cadfffdb6"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/073_NZ Digital Identity Services Trust Framework Rules 2024 v2/목록_링크_02e60931.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "e068aeb84bd78dc31dd9223a7c25544baf48918a59783fda38e89a273d8c2752"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/073_NZ Digital Identity Services Trust Framework Rules 2024 v2/첨부_Digital Identity Services Trust Framework Rules 2024_8fe55b3c.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "d61fafd2b673227ed07c2ba802e955f37f220035c3ff9eb83d34927f8ac4db12"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/073_NZ Digital Identity Services Trust Framework Rules 2024 v2/첨부_Digital Identity Services Trust Framework Rules 2024_8fe55b3c.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "09c13870d349bc1110067bcdff3a1f20cc6ae0dc712a0338071477f30b68f8cd"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/074_Japan My Number smartphone_card substitute/목록_링크_f124e116.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "7656d4fe5935b7510b6bd398400f6084c1b6cdbf00ec8cabc6cd275f97c31830"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/074_Japan My Number smartphone_card substitute/목록_링크_f124e116.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "48dcff67402896b4c6de73364574f954fcbf0449b0988c7c87e7785172463e57"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/074_Japan My Number smartphone_card substitute/첨부_Smartphone installation in function, My Number Card (PDF _ 1_127d0584.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "8562291ad80cc135f88cf0704b6b1f280babf8ca70325caa9c0ccfb48e1ea6a7"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/074_Japan My Number smartphone_card substitute/첨부_Use Cases of Electromagnetic Records as an Alternative to Ca_59d3f65c.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "900879ea62148e3c1a2451c31b5e343a4b49f2c4e89b9ebc0bdf327108bb04fe"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/076_DIACC PCTF Digital Wallet (2023)/목록_링크_2afdbd6c.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "51bf0f167d5e07b942b0bd157f468295a54758b1991e000e2d377bba7f01d138"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/077_DIACC PCTF Trust Registries (2023)/목록_링크_0c954a35.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "46b2edc97fc066c26b2721b63ea7b5b61591f13d5238284bf9197327cdee788f"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/078_Singpass_Digital IC/목록_링크_0803967f.html",
+    "current": null,
+    "action": "backup",
+    "sha256": "dc9199f243df14978ad8b91225b0e001914ed19d1235eb4d4480da98cc7a72f7"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/078_Singpass_Digital IC/목록_링크_0803967f.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "375ca8bd293b595185dedd01de6b57f6ab7ad1b3b65d5ec175c92d46ef53386a"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/078_Singpass_Digital IC/목록_링크_0803967f.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "609c1bdb4c57e73908d8b9ef40cfe2252933200fcd95b3e08517f017bfa8a698"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/082_ENISA_Digital_Identity_Standard(2023)/목록_링크_45728d9b.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "551e480fa43a69725a29a19d0df8e680304d4b00b4229356ea9d9d4f353156a9"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/082_ENISA_Digital_Identity_Standard(2023)/목록_링크_45728d9b.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "5d94b45008697191a4178b00ef423a745109ce7926975c3f317d76ec53540a02"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/082_ENISA_Digital_Identity_Standard(2023)/첨부_원문_ac652969.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "057f46e5c44f38bdde51297bae024c01a8e50610e22e4e4a1fe9d8da211738b7"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/083_ENISA secure move to cloud of eIDAS ecosystem/목록_링크_f2de88e4.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "db251af6aab4914201cac367148a3f753abd637ede2b22c074860b087e76b12d"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/083_ENISA secure move to cloud of eIDAS ecosystem/목록_링크_f2de88e4.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "5dbb74f29097f787ad4056df2398615bf6e1d9913685699377240763260ee5f4"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/084_OpenID EUDIW resource hub (2025)/목록_링크_db97002f.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "edb48e3eb5534873c1cbd953bc76b09dad0416f326d9e2d9314d81aaf1215ad3"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/084_OpenID EUDIW resource hub (2025)/목록_링크_db97002f.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "9af8334d0f39e94cbd8e7535c3983e9f1ebdf8b1a2f8e0a93520f55864390745"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/088_행안부_2026 디지털서비스 개방 참여기업 공모/목록_링크_adc2c4d8.links.json",
+    "current": null,
+    "action": "backup",
+    "sha256": "7cd17d43ac50625549e1f41a04934c01fa240250a9768fd8ce18b1ff29f3ae6e"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/088_행안부_2026 디지털서비스 개방 참여기업 공모/목록_링크_adc2c4d8.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "c50e90716c94cea2b6757041f543a921b20e801adc30255518a33ef0d92befc2"
+  },
+  {
+    "original": "참조문서/05_기존산출물_보존/Interoperable_Europe_영문자료조사_20260927/추가확보_20260929/088_행안부_2026 디지털서비스 개방 참여기업 공모/첨부_디지털서비스 개방 참여기업 공모 공고문.pdf________ [________776.5 KB________]_72378c8f.txt",
+    "current": null,
+    "action": "backup",
+    "sha256": "3c5a4877f1d9a5157340fa3b0108a1095ddab481a85b0cb568426b4d1aa0b2d6"
+  },
+  {
+    "original": "참조문서/06_기술문서_작성계획/기술문서_작성목록.md",
+    "current": "docs/development/common/interoperability/기술문서_작성목록.md",
+    "action": "move",
+    "sha256": "6086825c02e39fa42eaa67968b698c78e42c67461f1bca41a8b331067a1c23ec"
+  },
+  {
+    "original": "참조문서/README.md",
+    "current": "references/README.md",
+    "action": "move",
+    "sha256": "dace59a191c54b788ec3a9fe9241680992a8b7ac06ac929e876fd5f3256665c1"
+  }
+]

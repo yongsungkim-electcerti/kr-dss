@@ -24,4 +24,5 @@ gradlew text eol=lf
 *.pdf   filter=lfs diff=lfs merge=lfs -text
 
 # 다운로드 원문은 기록된 SHA-256을 유지하도록 줄바꿈을 변환하지 않는다.
-참조문서/01_원문/** -text
+references/technical/** -text
+references/standards/** -text

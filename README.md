@@ -10,6 +10,19 @@
 
 ---
 
+
+## 현재 작업: TL 관리 PoC
+
+- [PoC 설계](docs/design/poc/tl-management/README.md)
+- [개발 절차·현황](docs/development/poc/tl-management/README.md)
+- [관리시스템 소스](src/poc/poc-kisa-tl)
+- [실행 안내](scripts/README.md)
+- [폴더 정리·백업 기록](docs/development/workspace-layout/README.md)
+
+현재 PoC 담당 범위는 TL 관리시스템이다. 아래 사업 전체 설명과 기존 다른 PoC를 이번 개발 범위와 구분한다.
+설계·소스는 common/poc로 나누고 참조 원문은 references, 보고·발표 자료는 deliverables에 둔다.
+runtime(키·실행 데이터), results(시험·패키지 결과), logs와 main 체크아웃의 _backup은 Git으로 관리하지 않는다.
+
 ## 1. 배경 · 왜 지금인가
 
 전자서명법 전부개정(2020) 이후 6년, 간편인증 등 **인증 수단은 다양해졌으나** 그 활용은 대부분 로그인·본인확인 등 **인증형**에 머물러 있다. 전자문서 자체에 서명이 결합되어 진위확인·부인방지를 보장하고 문서 단독으로 독립 검증되는 **전자문서 전자서명**은 여전히 표준화 공백 상태다.
@@ -84,14 +97,14 @@
 스택: **Java 21 · Gradle 8.10.2 · EU DSS 6.1 · BouncyCastle 1.78.1 · Spring Boot 3**, base 패키지 `com.electcerti.krdss.*`.
 
 ```
-kr-ades/      [과업1] core + 6종 포맷 어댑터(xades·cades·pades·jades·hades·mades)
-kr-tl/        [과업2] model · builder · client
-kr-dss-sdk/   [과업3] api · crypto · core · report
+src/common/kr-ades/      [과업1] core + 6종 포맷 어댑터(xades·cades·pades·jades·hades·mades)
+src/common/kr-tl/        [과업2] model · builder · client
+src/common/kr-dss-sdk/   [과업3] api · crypto · core · report
               [특허-B] kr-dss-pki   — 인증서 발급 인프라 + RFC 6960 OCSP 응답부
               [특허-C] kr-dss-trust — 통합 신뢰목록 + HSM Attestation
               [원격]   kr-dss-remote — CSC v2 / EN 419 241
-poc/          가상 인정사업자(CA/RA/OCSP) · KISA-TL · 이용사 · RSSP · SAM · HSM
-tools/        krdss-cli
+src/poc/          가상 인정사업자(CA/RA/OCSP) · KISA-TL · 이용사 · RSSP · SAM · HSM
+src/tools/        krdss-cli
 ```
 
 - **의존 원칙**: 항상 상위(오케스트레이션·PoC) → 하위(api/core). 역방향 의존 금지.
@@ -113,7 +126,7 @@ tools/        krdss-cli
 ```
 
 > 📄 **모듈별 책임·주요 클래스·의존 그래프(mermaid)·규약 전체**는
-> **[프로젝트 구조 명세서](docs/design/프로젝트-구조-명세서.md)** 참조.
+> **[프로젝트 구조 명세서](docs/design/common/architecture.md)** 참조.
 > 작업 지침(동시 작업·브랜치·커밋 규칙)은 [AGENTS.md](AGENTS.md).
 
 ---
@@ -154,11 +167,11 @@ tools/        krdss-cli
 
 ## 참고 국제표준
 
-EIF와 디지털 신뢰체계의 원문·목록·요약은 [참조문서 통합 안내](참조문서/README.md)에서 확인할 수 있다. 기존 세 자료 폴더는 통합 후 삭제했다.
+EIF와 디지털 신뢰체계의 원문·목록·요약은 [참조문서 통합 안내](references/README.md)에서 확인할 수 있다. 기존 세 자료 폴더는 통합 후 삭제했다.
 
-- [참조문서 통합 목록](참조문서/02_목록/통합목록.md): 일곱 분류별 원문, 출처·판·확보 범위.
-- [통합 원문요약](참조문서/03_원문요약/통합_원문요약.md): 기존 상세 요약과 추가 확보 자료 설명.
-- [상호운용성 산출물 초안 v0.1](상호운용성_산출물초안_v0.1/README.md): 서비스 검토서, 기관 간 협약, 용어·코드, 구성요소 설계, 공동 시험세트와 Google Docs 링크.
+- [참조문서 통합 목록](references/catalog/통합목록.md): 일곱 분류별 원문, 출처·판·확보 범위.
+- [통합 원문요약](docs/research/reference-summaries/통합_원문요약.md): 기존 상세 요약과 추가 확보 자료 설명.
+- [상호운용성 산출물 초안 v0.1](deliverables/reports/interoperability/draft-v0.1/README.md): 서비스 검토서, 기관 간 협약, 용어·코드, 구성요소 설계, 공동 시험세트와 Google Docs 링크.
 
 | 표준 | 내용 |
 | --- | --- |

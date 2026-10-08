@@ -1,0 +1,49 @@
+plugins {
+    id("krdss.java-conventions")
+    id("org.springframework.boot") version "3.3.2"
+    id("io.spring.dependency-management") version "1.1.6"
+}
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    // 코어: 원격서명 오케스트레이션·KR-AdES 서명객체 패키징 + 검증 라우터(특허-A).
+    implementation(project(":kr-dss-sdk:kr-dss-core"))
+    // 원격서명 클라이언트(CSC v2)·SAD 모델 — SIC 가 RSSP 호출에 사용.
+    implementation(project(":kr-dss-sdk:kr-dss-remote"))
+    // 특허-A Mode 1: 서명 결속부·결속 컨테이너(kr-ades-cades) + CA 발급용 PKIX.
+    implementation(project(":kr-ades:kr-ades-cades"))
+    // 특허-B: 인증서 발급 인프라(Registration Binding / Multi-RA / Lifecycle / HSM).
+    implementation(project(":kr-dss-sdk:kr-dss-pki"))
+    // 특허-C: 통합 신뢰목록(A/B/C 연계 — 검증 라우터에 신뢰목록 평가 주입).
+    implementation(project(":kr-dss-sdk:kr-dss-trust"))
+    // Whale PoC(PDF Baseline): /local-sign.html 의 PAdES-BASELINE-B 서명·검증.
+    //   kr-ades-pades 는 프로파일 어댑터(지원 조합 판정)를, dss-pades-pdfbox 는 실제 PDF 서명 구현을,
+    //   dss-validation 은 서명 검증기·리포트를 제공한다. 어댑터의 implementation 의존성은
+    //   소비 모듈로 전이되지 않으므로 DSS 를 직접 선언한다.
+    implementation(project(":kr-ades:kr-ades-pades"))
+    implementation(project(":kr-tl:kr-tl-model"))
+    // KR-TL 생성·전자서명(JWS) 및 배포본 서명 검증.
+    implementation(project(":kr-tl:kr-tl-builder"))
+    implementation(libs.dss.pades)
+    // KR-TL XML(TS 119 612) 에 XAdES enveloped 서명을 붙이고 같은 DSS 경로로 검증한다.
+    implementation(project(":kr-ades:kr-ades-xades"))
+    implementation(libs.dss.xades)
+    implementation(libs.dss.validation)
+    implementation(libs.bc.prov)
+    implementation(libs.bc.pkix)
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+}
+
+// demo 프로파일의 TLS 키스토어(runtime/pki/demo-tls)를 저장소 루트 기준으로 해석시킨다.
+// JavaExec 기본 workingDir은 모듈 디렉터리이므로 저장소 루트로 고정한다.
+tasks.named<org.springframework.boot.gradle.tasks.run.BootRun>("bootRun") {
+    workingDir = rootProject.projectDir
+}
+
+// 사업자 설명회 HTML 자료를 PoC 화면의 /presentation 경로에서 바로 제공한다.
+tasks.processResources {
+    from(rootProject.file("deliverables/presentations/provider-briefing")) {
+        include("*.html")
+        into("static/presentation")
+    }
+}

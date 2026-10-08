@@ -16,7 +16,7 @@
 덱(21장 HTML)은 **이용사 PoC 의 정적 리소스로 이관**되어, 실증 데모와 같은 서버에서 서빙된다.
 사본을 만들지 말고 아래 한 곳만 수정한다.
 
-- 소스: `poc/poc-relying-party/src/main/resources/static/kickoff/index.html`
+- 소스: `src/poc/poc-relying-party/src/main/resources/static/kickoff/index.html`
 - 열람: `./gradlew :poc:poc-relying-party:bootRun` → <http://localhost:8080/kickoff/>
 - 조작: `←/→` 이동 · `Home/End` 처음·끝 · `+/-/0` 배율 · `T` 목차 · `P` PDF 저장 · `#s11` 형태 슬라이드 딥링크
 - 과업 3·4 등 일부 슬라이드에서 라이브 PoC 데모(`/?tab=sign` 등)로 바로 이동한다 (인쇄 시에는 숨김)

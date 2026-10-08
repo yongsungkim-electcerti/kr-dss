@@ -26,11 +26,11 @@
 
 ### 모듈 지도 (작업 분담 단위)
 ```
-kr-ades/    [과업1] core + 6종 포맷 어댑터(xades/cades/pades/jades/hades/mades)
-kr-tl/      [과업2] model / builder / client
-kr-dss-sdk/ [과업3] api / crypto / core / report
-poc/        가상 인정사업자 / KISA-TL / 이용사 서비스 (Spring Boot)
-tools/      krdss-cli
+src/common/kr-ades/    [과업1] core + 6종 포맷 어댑터(xades/cades/pades/jades/hades/mades)
+src/common/kr-tl/      [과업2] model / builder / client
+src/common/kr-dss-sdk/ [과업3] api / crypto / core / report
+src/poc/        가상 인정사업자 / KISA-TL / 이용사 서비스 (Spring Boot)
+src/tools/      krdss-cli
 build-logic/ 공통 빌드 컨벤션 플러그인
 gradle/libs.versions.toml  의존성 버전 단일 관리
 ```
@@ -121,3 +121,14 @@ git worktree remove ../kr-dss-codex
 
 확신이 없거나, 광범위한 리팩터링·삭제·외부 영향이 있는 작업은 **진행 전 사용자에게 확인**한다.
 다른 에이전트의 변경과 겹칠 가능성이 보이면 멈추고 상태를 보고한다.
+
+
+## 작업 공간 분류 (2026-10-08)
+
+- 설계: docs/design/common 및 docs/design/poc/tl-management.
+- 개발 현황·인계: docs/development/poc/tl-management. 범위는 TL 관리시스템.
+- 소스: src/common 및 src/poc. Gradle 논리 모듈 이름은 기존 이름을 유지한다.
+- 실행 스크립트: scripts/common 및 scripts/poc. 결과는 results, 실행 데이터·키는 runtime.
+- 중복·불필요 자료는 main 체크아웃 F:/kr-dss-works/kr-dss/_backup/<정리일>/에 원래 경로·사유·해시와 함께 보존한다. 백업은 Git 비관리이며 작업 worktree에만 남겨 두지 않는다.
+- 이동 전 백업의 해시를 확인하고 기존 키·원문·기능 코드를 임의 폐기하지 않는다.
+- 현재 기준 문서와 과거 설계·원격 보고 보관본을 구분한다. 문서의 순번이나 파일명만으로 최신성을 판단하지 않는다.
