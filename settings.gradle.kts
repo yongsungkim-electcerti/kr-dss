@@ -63,3 +63,17 @@ include("poc:poc-hsm")
 
 // Tools
 include("tools:krdss-cli")
+
+// 물리 폴더는 공통/PoC로 분리하되 기존 Gradle 모듈 경로는 유지한다.
+fun relocateProject(descriptor: ProjectDescriptor) {
+    val logical = descriptor.path.removePrefix(":").replace(':', '/')
+    val top = logical.substringBefore('/')
+    val physical = when (top) {
+        "kr-ades", "kr-tl", "kr-dss-sdk" -> "src/common/$logical"
+        "poc", "tools" -> "src/$logical"
+        else -> logical
+    }
+    descriptor.projectDir = file(physical)
+    descriptor.children.forEach { relocateProject(it) }
+}
+rootProject.children.forEach { relocateProject(it) }
