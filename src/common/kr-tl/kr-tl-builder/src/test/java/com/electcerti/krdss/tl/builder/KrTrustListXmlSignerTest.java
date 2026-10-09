@@ -67,6 +67,20 @@ class KrTrustListXmlSignerTest {
     }
 
     @Test
+    void signatureFollowsTs119612AnnexB() throws Exception {
+        byte[] signed = KrTrustListXmlSigner.sign(unsigned(), signerKeys.getPrivate(), List.of(signer), NOW);
+        String xml = new String(signed, StandardCharsets.UTF_8);
+        assertThat(xml).contains("URI=\"#kr-tl\"")
+                .contains("http://www.w3.org/2000/09/xmldsig#enveloped-signature")
+                .doesNotContain("xmldsig-filter2");
+        int reference = xml.indexOf("URI=\"#kr-tl\"");
+        String tlReference = xml.substring(reference, xml.indexOf("</ds:Reference>", reference));
+        assertThat(tlReference.split("<ds:Transform ", -1)).hasSize(3);
+        assertThat(tlReference.indexOf("enveloped-signature")).isLessThan(tlReference.indexOf("xml-exc-c14n"));
+        assertThat(xml).contains("<ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"");
+    }
+
+    @Test
     void tamperedXmlFailsCheck() throws Exception {
         byte[] signed = KrTrustListXmlSigner.sign(unsigned(), signerKeys.getPrivate(), List.of(signer), NOW);
         var text = new String(signed, StandardCharsets.UTF_8).replace("가상사업자", "변조사업자");

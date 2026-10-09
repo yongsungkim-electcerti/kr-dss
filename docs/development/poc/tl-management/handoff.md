@@ -8,7 +8,8 @@
 - PoC 키 체계 생성 완료(2026-10-09): `runtime/tl-management/pki` 세트 krtl-poc-pki-v1, 22개 노드, UN 미등재 대조군 포함. 설계 27 상단 참조. Git 비관리. `scripts/poc/tl-management/gen-tl-pki.ps1`이 생성(없을 때만)과 main 체크아웃 자동 복사·해시 대조를 수행한다(설계 27 상단). main 체크아웃에는 복사 완료(파일 130개 해시 일치).
 - XML 서명·발행본 보관 완료(2026-10-09): [34](reviews/34-XML서명-발행본보관-구현결과.md). state.json v2, issued/<issuanceId>, BASELINE/TRIAL, requestId 중복 처리.
 - 제공본 선택·IF-07 완료(2026-10-09): [35](reviews/35-제공본선택-IF07-구현결과.md). 공개 주소 `http://localhost:8081/tl/kr-tl.xml`, `/tl/kr-tl.sha2`.
-- 다음 작업 후보: 상태 시작 시각 오류 TL 시험 조작, 이용기관·뷰어의 IF-07 소비·TL 검증 연동, 단계 7 기술 검증·인계(정상·오류 발행 재제공, 실패 주입).
+- TL 수신 검증 샘플 완료(2026-10-09): [36](reviews/36-수신검증샘플-구현결과.md), `src/poc/tl-viewer-sample`. 발행 서명을 TS 119 612 Annex B.1.0(URI=#kr-tl, enveloped→exc-c14n)로 수정했다.
+- 다음 작업 후보: 상태 시작 시각 오류 TL 시험 조작, KR-DSS SDK(Java) 수신 모듈 이식, 단계 7 기술 검증·인계.
 
 ---
 

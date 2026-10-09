@@ -10,6 +10,9 @@ import eu.europa.esig.dss.model.SignatureValue;
 import eu.europa.esig.dss.model.x509.CertificateToken;
 import eu.europa.esig.dss.spi.validation.CommonCertificateVerifier;
 import eu.europa.esig.dss.xades.XAdESSignatureParameters;
+import eu.europa.esig.dss.xades.reference.CanonicalizationTransform;
+import eu.europa.esig.dss.xades.reference.DSSReference;
+import eu.europa.esig.dss.xades.reference.EnvelopedSignatureTransform;
 import eu.europa.esig.dss.xades.signature.XAdESService;
 import java.io.ByteArrayInputStream;
 import java.security.PrivateKey;
@@ -31,11 +34,16 @@ import org.w3c.dom.NodeList;
 /**
  * TL XML의 enveloped XAdES-BASELINE-B 서명과 서명 자체 확인.
  *
+ * <p>ETSI TS 119 612 Annex B.1.0을 따른다: TL 루트(Id)를 가리키는 Reference 하나에 Transform은
+ * enveloped-signature, exc-c14n 두 개만, SignedInfo 정규화는 exc-c14n.</p>
+ *
  * <p>서명 결과 바이트가 발행본의 원문이다. 이후 재직렬화하지 않는다. {@link #check}는 암호 서명과
  * 참조 다이제스트만 확인하며 서명 인증서의 체인·신뢰·TL 내용의 유효성은 판정하지 않는다.</p>
  */
 public final class KrTrustListXmlSigner {
     private static final String XADES_NS = "http://uri.etsi.org/01903/v1.3.2#";
+    static final String ENVELOPED = "http://www.w3.org/2000/09/xmldsig#enveloped-signature";
+    static final String EXC_C14N = "http://www.w3.org/2001/10/xml-exc-c14n#";
 
     private KrTrustListXmlSigner() {
     }
@@ -55,9 +63,20 @@ public final class KrTrustListXmlSigner {
             parameters.setSigningCertificate(new CertificateToken(chain.get(0)));
             parameters.setCertificateChain(chain.stream().map(CertificateToken::new).toList());
             parameters.bLevel().setSigningDate(Date.from(signingTime));
+            parameters.setSignedInfoCanonicalizationMethod(EXC_C14N);
+            parameters.setSignedPropertiesCanonicalizationMethod(EXC_C14N);
+
+            var document = new InMemoryDocument(unsignedXml);
+            String rootId = rootId(unsignedXml);
+            var reference = new DSSReference();
+            reference.setId("r-tl");
+            reference.setUri("#" + rootId);
+            reference.setContents(document);
+            reference.setDigestMethodAlgorithm(DigestAlgorithm.SHA256);
+            reference.setTransforms(List.of(new EnvelopedSignatureTransform(), new CanonicalizationTransform(EXC_C14N)));
+            parameters.setReferences(List.of(reference));
 
             var service = new XAdESService(new CommonCertificateVerifier());
-            var document = new InMemoryDocument(unsignedXml);
             var toBeSigned = service.getDataToSign(document, parameters);
             var encryption = EncryptionAlgorithm.forKey(chain.get(0).getPublicKey());
             var algorithm = SignatureAlgorithm.getAlgorithm(encryption, DigestAlgorithm.SHA256);
@@ -69,6 +88,40 @@ public final class KrTrustListXmlSigner {
         } catch (Exception e) {
             throw new IllegalStateException("TL XML 서명에 실패했습니다: " + e.getMessage(), e);
         }
+    }
+
+    private static String rootId(byte[] xml) throws Exception {
+        var factory = DocumentBuilderFactory.newInstance();
+        factory.setNamespaceAware(true);
+        factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+        factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+        String id = factory.newDocumentBuilder().parse(new ByteArrayInputStream(xml)).getDocumentElement().getAttribute("Id");
+        if (id.isEmpty()) throw new IllegalArgumentException("TL 루트에 Id 속성이 필요합니다.");
+        return id;
+    }
+
+    /** TS 119 612 Annex B.1.0 구조 검사. 위반이면 사유, 적합하면 null. */
+    private static String annexB(Element root, Element signature) {
+        var signedInfo = (Element) signature.getElementsByTagNameNS(XMLSignature.XMLNS, "SignedInfo").item(0);
+        if (signedInfo == null) return "SignedInfo가 없습니다.";
+        var c14n = (Element) signedInfo.getElementsByTagNameNS(XMLSignature.XMLNS, "CanonicalizationMethod").item(0);
+        if (c14n == null || !EXC_C14N.equals(c14n.getAttribute("Algorithm"))) {
+            return "CanonicalizationMethod가 exc-c14n이 아닙니다.";
+        }
+        String target = "#" + root.getAttribute("Id");
+        NodeList references = signedInfo.getElementsByTagNameNS(XMLSignature.XMLNS, "Reference");
+        for (int i = 0; i < references.getLength(); i++) {
+            var reference = (Element) references.item(i);
+            if (!target.equals(reference.getAttribute("URI")) || root.getAttribute("Id").isEmpty()) continue;
+            NodeList transforms = reference.getElementsByTagNameNS(XMLSignature.XMLNS, "Transform");
+            if (transforms.getLength() == 2
+                    && ENVELOPED.equals(((Element) transforms.item(0)).getAttribute("Algorithm"))
+                    && EXC_C14N.equals(((Element) transforms.item(1)).getAttribute("Algorithm"))) {
+                return null;
+            }
+            return "TL Reference의 Transform이 enveloped-signature, exc-c14n 두 개가 아닙니다.";
+        }
+        return "TL 루트(" + target + ")를 가리키는 Reference가 없습니다.";
     }
 
     /** 서명 자체 확인 결과. signer는 KeyInfo의 첫 인증서다. */
@@ -97,6 +150,9 @@ public final class KrTrustListXmlSigner {
             var signer = (X509Certificate) CertificateFactory.getInstance("X.509").generateCertificate(
                     new ByteArrayInputStream(java.util.Base64.getMimeDecoder()
                             .decode(certificates.item(0).getTextContent())));
+            String profileError = annexB(document.getDocumentElement(), signatureElement);
+            if (profileError != null) return new SignatureCheck(false, signer, profileError);
+            document.getDocumentElement().setIdAttribute("Id", true);
             NodeList signedProperties = document.getElementsByTagNameNS(XADES_NS, "SignedProperties");
             for (int i = 0; i < signedProperties.getLength(); i++) {
                 ((Element) signedProperties.item(i)).setIdAttribute("Id", true);
