@@ -3,3 +3,7 @@ server:
 spring:
   application:
     name: poc-kisa-tl
+krtl:
+  admin:
+    # 초안 revision·state.json 저장 루트(Git 비관리). bootRun은 저장소 루트에서 실행된다.
+    storage-root: runtime/tl-management

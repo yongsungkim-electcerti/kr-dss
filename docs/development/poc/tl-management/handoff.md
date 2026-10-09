@@ -1,5 +1,14 @@
 # 현재 인계
 
+## Claude 관리 화면·초안 저장 (2026-10-09)
+
+- 브랜치 `feat/claude-tl-admin` (main ← PR #29 병합 후 분기). 결과: [33](reviews/33-관리화면-초안저장-구현결과.md).
+- 사용자 결정: REST 계약 문서·외부 사업자/서비스 관리 인터페이스는 만들지 않는다. 관리자가 PoC 관리 화면에서 사업자를 직접 등록하고 인증서를 입력한다. 관리 서비스 개발에 집중한다.
+- 실행: `gradlew.bat :poc:poc-kisa-tl:bootRun` → http://localhost:8081 . 저장 루트 `runtime/tl-management` (Git 비관리).
+- 다음 작업: XML 생성·키 파일 서명(새 TL 키·체인 생성 포함) → issuanceId 불변 보관·BASELINE/TRIAL → 제공본 선택 → IF-07 → 화면 발행 메뉴 연결.
+
+---
+
 ## Codex → Claude 개발 인계
 
 인계일: 2026-10-09. 사용자가 Claude로 개발을 이관하며 Codex는 문서 정리와 커밋 후 작업을 종료한다. Claude 세션 실행은 사용자가 진행한다.
@@ -13,7 +22,7 @@
 - Codex 종료 후 같은 체크아웃을 이어받는 경우: `git switch -c feat/claude-tl-registry feat/codex-tl-model-xml`. 별도 Orca worktree를 사용할 경우에도 동일한 인계 브랜치/커밋을 기준으로 만든다.
 - 기존 Codex 브랜치에 직접 후속 커밋하지 말고 Claude 작업 브랜치를 사용한다. 루트 AGENTS.md와 CLAUDE.md의 프로젝트 지침을 먼저 읽는다.
 
-### 다음 작업: 관리 API·초안 영속 저장
+### (완료·대체됨) 다음 작업: 관리 API·초안 영속 저장 — 위 Claude 항목 참조
 
 1. [확정 범위](../../../design/poc/tl-management/scope.md), [PoC 적용 기준](../../../design/poc/tl-management/concept-v02-application.md), [프로파일](../../../design/poc/tl-management/profile-poc-v1.md), [발행·복구 계약](../../../design/poc/tl-management/issuance-recovery.md)을 읽는다.
 2. `src/poc/poc-kisa-tl`에서 사업자·서비스 입력/수정/조회와 초안 저장을 구현한다. 현재 KrTlAdminController의 고정 숫자·발행 성공 문구는 실제 구현 증거가 아니다.
