@@ -2,9 +2,18 @@
 
 작성일: 2026-10-07. 경로 정리: 2026-10-08. 미등재 대조군 UN 추가: 2026-10-09. 새 PoC 생성 루트는 `runtime/tl-management/pki/`이며 실제 생성은 후속 개발이다.
 
-**2026-10-09 생성 완료.** 세트 `krtl-poc-pki-v1`(EC P-256, 22개 노드)을 `krdss-cli cert tree`와 프로파일 `scripts/poc/tl-management/pki-profile.json`으로 생성했다. 노드별 키쌍 일치·발급자 서명·Root까지 PKIX 경로·역할별 KU/EKU 검사를 통과했고 openssl로 22개 체인을 별도 확인했다. 가입자 인증서는 생성하지 않았다. 생성물은 Git 비관리이며 생성한 체크아웃의 `runtime/`에만 있다. 기존 `runtime/pki/legacy`는 그대로 두었다.
+**2026-10-09 생성 완료.** 세트 `krtl-poc-pki-v1`(EC P-256, 22개 노드)을 `krdss-cli cert tree`와 프로파일 `scripts/poc/tl-management/pki-profile.json`으로 생성했다. 노드별 키쌍 일치·발급자 서명·Root까지 PKIX 경로·역할별 KU/EKU 검사를 통과했고 openssl로 22개 체인을 별도 확인했다. 가입자 인증서는 생성하지 않았다. 생성물은 Git 비관리다. 기존 `runtime/pki/legacy`는 그대로 두었다.
 
-생성 명령(저장소 루트, 출력 폴더가 있으면 거부): `gradlew.bat :tools:krdss-cli:run --args="cert tree -f scripts/poc/tl-management/pki-profile.json -o runtime/tl-management/pki"`
+**배포 방식: 수동 복사.** 키 세트는 한 번만 생성하고, 다른 체크아웃(main `F:/kr-dss-works/kr-dss` 등)에는 `runtime/tl-management/pki/` 폴더 전체를 수동으로 복사한다. 다른 체크아웃에서 다시 생성하지 않는다. 다시 생성하면 지문이 다른 별개 세트가 되어 TL 등재 인증서·이용기관 신뢰앵커와 맞지 않는다.
+
+1. 원본: 생성한 체크아웃의 `runtime/tl-management/pki/` (세트 ID·지문은 `manifest.json`)
+2. 대상 체크아웃에 `runtime/tl-management/pki/`가 없는지 확인한다. 있으면 덮어쓰지 말고 `manifest.json`의 setId·generatedAt을 비교해 보고한다.
+3. 폴더 전체를 복사한다(부분 복사 금지).
+4. 원본·대상의 전체 파일 SHA-256 목록이 같은지 확인한다.
+
+2026-10-09 기록: worktree `kr-tl`에서 생성(generatedAt 2026-10-09T07:57:35Z)한 세트를 main 체크아웃에 복사했다. 파일 130개 해시 일치, manifest.json SHA-256 `d3e609f606e70c3bd6261d53286a7adc8cce68631c08fdbafb530ed0b5643e0b`.
+
+최초 생성 명령(저장소 루트, 출력 폴더가 있으면 거부, 새 세트가 필요할 때만): `gradlew.bat :tools:krdss-cli:run --args="cert tree -f scripts/poc/tl-management/pki-profile.json -o runtime/tl-management/pki"`
 
 ## 1. 인증체계 구성
 
