@@ -86,6 +86,7 @@
         h3 { font-size: 14px; margin: 0; }
         .muted { color: var(--muted); }
         .mono { font-family: var(--mono); }
+        .table-wrap { overflow-x: auto; }
         table { width: 100%; border-collapse: collapse; }
         th { color: var(--muted); font-size: 11px; text-align: left; font-weight: 600; padding: 0 10px 10px; }
         td { border-top: 1px solid var(--line); padding: 12px 10px; font-size: 13px; vertical-align: top; }
@@ -204,7 +205,7 @@
                     <div class="card-head"><h2>발행 · 제공 상태</h2><span class="badge plain">저장 상태에서만 표시</span></div>
                     <dl>
                         <dt>정상 기준 발행</dt><dd id="baselineState">—</dd>
-                        <dt>현재 제공본</dt><dd>미선택 — 제공본 선택·IF-07은 다음 단계에서 연결합니다.</dd>
+                        <dt>현재 제공본</dt><dd id="servedState">—</dd>
                         <dt>외부 검증 결과</dt><dd>미확인</dd>
                         <dt>저장 위치</dt><dd class="mono" id="storageRoot">—</dd>
                     </dl>
@@ -317,10 +318,21 @@
                 </article>
             </div>
             <article class="card" style="margin-top:16px">
+                <div class="card-head"><h2>현재 제공본 (IF-07)</h2><span class="badge plain" id="pubRevision">—</span></div>
+                <dl>
+                    <dt>제공 발행본</dt><dd class="mono" id="pubServed">—</dd>
+                    <dt>공개 주소</dt><dd><a class="mono" style="color:var(--blue)" href="/tl/kr-tl.xml" target="_blank" rel="noopener">/tl/kr-tl.xml</a>
+                        · <a class="mono" style="color:var(--blue)" href="/tl/kr-tl.sha2" target="_blank" rel="noopener">/tl/kr-tl.sha2</a></dd>
+                </dl>
+                <p class="muted" style="font-size:12px;line-height:1.7;margin:12px 0 0">
+                    관리자가 고른 확정 발행본만 그대로 제공합니다. 최대 순번을 자동 선택하지 않으며, 시험 발행본·과거 순번도 제공할 수 있습니다.
+                    제공본 선택은 정상 기준·권장 순번을 바꾸지 않습니다.</p>
+            </article>
+            <article class="card" style="margin-top:16px">
                 <div class="card-head"><h2>발행본</h2><span class="muted" style="font-size:12px">issuanceId별 불변 보관 · 최신순</span></div>
                 <div class="table-wrap">
                     <table>
-                        <thead><tr><th>발행 ID</th><th>목적</th><th>순번</th><th>발행 시각 · NextUpdate (KST)</th><th>XML SHA-256</th><th>서명·무결성</th><th></th></tr></thead>
+                        <thead><tr><th>발행 ID</th><th>목적</th><th>순번</th><th>발행 시각 · NextUpdate (KST)</th><th>XML SHA-256</th><th>서명·무결성</th><th>제공</th><th></th></tr></thead>
                         <tbody id="issuanceRows"></tbody>
                     </table>
                 </div>
@@ -554,6 +566,7 @@
         if (currentView() === "revisions") loadRevisions();
         if (currentView() === "preview") loadXml();
         if (currentView() === "publish") loadPublish(!$("issueForm").sequenceNumber.value);
+        else loadPublication();
     }
 
     function renderOverview(o, d) {
@@ -1011,7 +1024,7 @@
         const m = r.manifest || {};
         if (r.state === "ORPHAN") {
             return `<tr><td class="mono" style="font-size:12px">${esc(m.issuanceId || "?")}</td>
-                <td colspan="5"><span class="badge warn">미확정 잔여</span> <span class="muted">${esc(r.integrityDetail)}</span></td><td></td></tr>`;
+                <td colspan="6"><span class="badge warn">미확정 잔여</span> <span class="muted">${esc(r.integrityDetail)}</span></td><td></td></tr>`;
         }
         const purpose = m.purpose === "BASELINE" ? `<span class="badge">정상</span>` : `<span class="badge warn">시험</span>`;
         const requested = m.requestedPurpose !== m.purpose
@@ -1027,18 +1040,37 @@
             <td>${kst(m.issuedAt)}<br><span class="muted">${kst(m.nextUpdate)}</span></td>
             <td class="mono" title="${esc(m.xmlSha256)}">${esc(short(m.xmlSha256, 12))}</td>
             <td>${signature}<br>${integrity}</td>
+            <td>${r.served ? `<span class="badge info">제공 중</span>`
+                : r.intact ? `<button class="ghost small" data-write data-serve="${esc(m.issuanceId)}">제공본으로</button>` : "—"}</td>
             <td><a class="ghost small" style="text-decoration:none" href="${API}/issuance/issuances/${encodeURIComponent(m.issuanceId)}/signed.xml">XML</a></td>
         </tr>`;
     }
 
+    let publication = null;
+
+    async function loadPublication() {
+        try {
+            publication = await api("GET", "/issuance/publication");
+            const m = publication.manifest;
+            const text = m ? `${m.issuanceId} · ${PURPOSE_LABEL[m.purpose]} · 순번 ${m.sequenceNumber}` : "미선택 (IF-07 404)";
+            $("pubServed").textContent = text;
+            $("servedState").textContent = text;
+            $("pubRevision").textContent = "선택 revision " + publication.publicationRevision;
+        } catch (e) {
+            $("pubServed").textContent = e.message;
+            $("servedState").textContent = e.message;
+        }
+    }
+
     async function loadIssuances() {
+        loadPublication();
         try {
             const rows = await api("GET", "/issuance/issuances");
             $("navIssuances").textContent = rows.filter((r) => r.state === "COMMITTED").length;
             $("issuanceRows").innerHTML = rows.length ? rows.map(issuanceRow).join("")
-                : `<tr><td colspan="7"><div class="empty">발행본이 없습니다.</div></td></tr>`;
+                : `<tr><td colspan="8"><div class="empty">발행본이 없습니다.</div></td></tr>`;
         } catch (e) {
-            $("issuanceRows").innerHTML = `<tr><td colspan="7"><div class="empty">${esc(e.message)}</div></td></tr>`;
+            $("issuanceRows").innerHTML = `<tr><td colspan="8"><div class="empty">${esc(e.message)}</div></td></tr>`;
         }
     }
 
@@ -1090,6 +1122,20 @@
         sendIssue({requestId: crypto.randomUUID(), expectedDraftRevision: rev(), ...issueInputs()});
     });
     $("btnResend").addEventListener("click", () => pendingIssue && sendIssue(pendingIssue));
+
+    $("issuanceRows").addEventListener("click", async (event) => {
+        const button = event.target.closest("[data-serve]");
+        if (!button || button.disabled) return;
+        if (!publication) await loadPublication();
+        const id = button.dataset.serve;
+        try {
+            await api("POST", "/issuance/publication", {expectedPublicationRevision: publication.publicationRevision, issuanceId: id});
+            toast("제공본을 바꿨습니다: " + id);
+        } catch (e) {
+            toast(e.message, "error");
+        }
+        loadIssuances();
+    });
 
     // ------------------------------------------------------------ 알림
     let toastTimer = null;

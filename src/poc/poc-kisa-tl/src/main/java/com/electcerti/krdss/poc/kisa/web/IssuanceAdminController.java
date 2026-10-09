@@ -2,6 +2,7 @@ package com.electcerti.krdss.poc.kisa.web;
 
 import com.electcerti.krdss.poc.kisa.issuance.Issuance;
 import com.electcerti.krdss.poc.kisa.issuance.IssuanceService;
+import com.electcerti.krdss.poc.kisa.registry.RegistryException;
 import java.time.Instant;
 import java.util.List;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -52,6 +53,25 @@ public class IssuanceAdminController {
     @GetMapping("/issuances/{issuanceId}")
     public Issuance.Manifest manifest(@PathVariable String issuanceId) {
         return service.manifest(issuanceId);
+    }
+
+    public record SelectRequest(Long expectedPublicationRevision, String issuanceId) {
+    }
+
+    /** 현재 제공본(IF-07 /tl/kr-tl.xml). */
+    @GetMapping("/publication")
+    public IssuanceService.Publication publication() {
+        return service.publication();
+    }
+
+    /** 제공본 선택. 최대 순번을 자동 선택하지 않으며 관리자가 고른 확정 발행본만 제공한다. */
+    @PostMapping("/publication")
+    public IssuanceService.Publication select(@RequestBody SelectRequest request) {
+        if (request.expectedPublicationRevision() == null || request.issuanceId() == null) {
+            throw new RegistryException(RegistryException.Code.INVALID_INPUT,
+                    "기대 제공 revision과 발행 ID가 필요합니다.");
+        }
+        return service.select(request.expectedPublicationRevision(), request.issuanceId());
     }
 
     /** 저장된 서명 XML 원문 그대로. 재직렬화·재서명하지 않는다. */

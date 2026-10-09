@@ -275,9 +275,9 @@ public class IssuanceService {
                 var manifest = readManifest(c.issuanceId());
                 String detail = integrity(c.issuanceId(), c.xmlSha256());
                 entries.add(new Entry(manifest, "COMMITTED", c.issuanceId().equals(state.baselineIssuanceId()),
-                        detail == null, detail));
+                        c.issuanceId().equals(state.servedIssuanceId()), detail == null, detail));
             } catch (RuntimeException e) {
-                entries.add(new Entry(null, "COMMITTED", false, false, c.issuanceId() + ": " + e.getMessage()));
+                entries.add(new Entry(null, "COMMITTED", false, false, false, c.issuanceId() + ": " + e.getMessage()));
             }
         }
         try (var dirs = Files.list(issued)) {
@@ -290,7 +290,7 @@ public class IssuanceService {
                 } catch (RuntimeException ignored) {
                     // 미확정 잔여물의 manifest가 없을 수 있다.
                 }
-                entries.add(new Entry(manifest, "ORPHAN", false, false,
+                entries.add(new Entry(manifest, "ORPHAN", false, false, false,
                         "state.json에 확정되지 않은 발행 폴더입니다(자동 제공·기준 승격 금지)."));
             }
         } catch (IOException e) {
@@ -311,6 +311,56 @@ public class IssuanceService {
             return bytes;
         } catch (IOException e) {
             throw new RegistryException(Code.STATE_UNAVAILABLE, "발행본 파일을 읽지 못했습니다: " + issuanceId, e);
+        }
+    }
+
+    // ---------------------------------------------------------------- 제공본
+
+    /** 현재 제공 선택. 선택이 없으면 servedIssuanceId·manifest가 null이다. */
+    public record Publication(long publicationRevision, String servedIssuanceId, Manifest manifest) {
+    }
+
+    /** IF-07이 한 요청에서 쓰는 고정된 제공본: 확정 해시와 일치함을 확인한 바이트. */
+    public record Served(String issuanceId, byte[] xml, String sha256) {
+    }
+
+    public Publication publication() {
+        var state = store.state();
+        var served = state.servedIssuanceId();
+        return new Publication(state.publicationRevision(), served, served == null ? null : readManifest(served));
+    }
+
+    /**
+     * 확정 발행본을 제공본으로 선택한다. 의미 오류·과거 순번은 거부 사유가 아니다. 파일이 손상되었으면 거부한다.
+     * 재서명·새 발행이 아니다.
+     */
+    public Publication select(long expectedPublicationRevision, String issuanceId) {
+        return store.locked(() -> {
+            signedXml(issuanceId);
+            store.selectServed(expectedPublicationRevision, issuanceId);
+            return publication();
+        });
+    }
+
+    /**
+     * 공개 조회용. 상태 스냅숏 하나에서 제공 ID를 고정하고 그 바이트의 해시를 확정값과 대조한다.
+     * 선택이 없으면 null. 저장소·파일 손상은 STATE_UNAVAILABLE이며 다른 발행본으로 대체하지 않는다.
+     */
+    public Served served() {
+        var state = store.state();
+        var id = state.servedIssuanceId();
+        if (id == null) return null;
+        var committed = state.byIssuance(id)
+                .orElseThrow(() -> new RegistryException(Code.STATE_UNAVAILABLE, "제공 포인터가 확정 목록에 없습니다."));
+        try {
+            byte[] bytes = Files.readAllBytes(issued.resolve(id).resolve("signed.xml"));
+            String sha = sha256(bytes);
+            if (!sha.equals(committed.xmlSha256())) {
+                throw new RegistryException(Code.STATE_UNAVAILABLE, "제공본 파일이 손상되었습니다: " + id);
+            }
+            return new Served(id, bytes, sha);
+        } catch (IOException e) {
+            throw new RegistryException(Code.STATE_UNAVAILABLE, "제공본 파일을 읽지 못했습니다: " + id, e);
         }
     }
 

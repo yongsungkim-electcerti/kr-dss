@@ -24,7 +24,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.security.KeyPair;
-import java.security.KeyPairGenerator;
 import java.security.PrivateKey;
 import java.security.cert.X509Certificate;
 import java.time.Clock;
@@ -33,23 +32,15 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.util.Base64;
-import java.util.Date;
 import java.util.List;
 import java.util.UUID;
-import javax.security.auth.x500.X500Principal;
-import org.bouncycastle.asn1.x509.BasicConstraints;
-import org.bouncycastle.asn1.x509.Extension;
-import org.bouncycastle.cert.jcajce.JcaX509CertificateConverter;
-import org.bouncycastle.cert.jcajce.JcaX509ExtensionUtils;
-import org.bouncycastle.cert.jcajce.JcaX509v3CertificateBuilder;
-import org.bouncycastle.operator.jcajce.JcaContentSignerBuilder;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
 class IssuanceServiceTest {
-    private static final Instant T0 = Instant.parse("2026-10-09T00:00:00Z");
+    private static final Instant T0 = TestPki.T0;
 
     /** 시험 중 시각을 앞으로 옮길 수 있는 시계. */
     static final class MovableClock extends Clock {
@@ -245,45 +236,16 @@ class IssuanceServiceTest {
         assertThat(issuance.list().get(0).intact()).isFalse();
     }
 
-    // ---------------------------------------------------------------- 시험 키
-
     private void writeSigner() throws Exception {
-        var rootKeys = keyPair();
-        var caKeys = keyPair();
-        var signerKeys = keyPair();
-        var rootCert = certificate(rootKeys, "CN=Test TL RootCA, C=KR", rootKeys.getPrivate(), null, true);
-        var caCert = certificate(caKeys, "CN=Test TL CA, C=KR", rootKeys.getPrivate(), rootCert, true);
-        signerCert = certificate(signerKeys, "CN=Test TL Signer, C=KR", caKeys.getPrivate(), caCert, false);
-        Files.writeString(signerDir.resolve("key.pem"), "-----BEGIN PRIVATE KEY-----\n"
-                + Base64.getMimeEncoder().encodeToString(signerKeys.getPrivate().getEncoded())
-                + "\n-----END PRIVATE KEY-----\n");
-        var chain = new StringBuilder();
-        for (var cert : List.of(signerCert, caCert, rootCert)) {
-            chain.append("-----BEGIN CERTIFICATE-----\n")
-                    .append(Base64.getMimeEncoder().encodeToString(cert.getEncoded()))
-                    .append("\n-----END CERTIFICATE-----\n");
-        }
-        Files.writeString(signerDir.resolve("chain.pem"), chain);
+        signerCert = TestPki.writeSigner(signerDir);
     }
 
     private static KeyPair keyPair() throws Exception {
-        var generator = KeyPairGenerator.getInstance("EC");
-        generator.initialize(256);
-        return generator.generateKeyPair();
+        return TestPki.keyPair();
     }
-
-    private static long serial = 1;
 
     private static X509Certificate certificate(KeyPair keys, String subject, PrivateKey issuerKey,
             X509Certificate issuer, boolean ca) throws Exception {
-        var name = new X500Principal(subject);
-        var builder = new JcaX509v3CertificateBuilder(issuer == null ? name : issuer.getSubjectX500Principal(),
-                BigInteger.valueOf(serial++), Date.from(T0.minus(Duration.ofDays(2))),
-                Date.from(T0.plus(Duration.ofDays(365))), name, keys.getPublic());
-        builder.addExtension(Extension.basicConstraints, true, new BasicConstraints(ca));
-        builder.addExtension(Extension.subjectKeyIdentifier, false,
-                new JcaX509ExtensionUtils().createSubjectKeyIdentifier(keys.getPublic()));
-        return new JcaX509CertificateConverter().getCertificate(
-                builder.build(new JcaContentSignerBuilder("SHA256withECDSA").build(issuerKey)));
+        return TestPki.certificate(keys, subject, issuerKey, issuer, ca);
     }
 }

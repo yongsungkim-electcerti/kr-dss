@@ -46,6 +46,7 @@ public final class Issuance {
     }
 
     /** 발행본 목록 한 줄. */
-    public record Entry(Manifest manifest, String state, boolean baseline, boolean intact, String integrityDetail) {
+    public record Entry(Manifest manifest, String state, boolean baseline, boolean served, boolean intact,
+            String integrityDetail) {
     }
 }

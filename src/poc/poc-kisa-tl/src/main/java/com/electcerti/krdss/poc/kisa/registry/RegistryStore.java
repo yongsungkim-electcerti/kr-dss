@@ -53,11 +53,35 @@ public final class RegistryStore implements AutoCloseable {
      * @param baselineIssuanceId 마지막 정상 기준(BASELINE) 발행본
      * @param normalSequence     마지막 BASELINE 순번(십진 문자열). 권장 순번은 이 값+1
      * @param committed          확정된 발행본 목록. issued 폴더 존재만으로는 확정이 아니다
+     * @param publicationRevision 제공본 선택 변경 횟수(동시 선택 충돌 검사용). 없으면 0
+     * @param servedIssuanceId   IF-07이 제공하는 확정 발행본. 없으면 제공하지 않음(404)
      */
     public record State(int stateVersion, long activeDraftRevision, String activeDraftSha256, Instant updatedAt,
-            String baselineIssuanceId, String normalSequence, List<CommittedIssuance> committed) {
+            String baselineIssuanceId, String normalSequence, List<CommittedIssuance> committed,
+            Long publicationRevision, String servedIssuanceId) {
         public State {
             committed = committed == null ? List.of() : List.copyOf(committed);
+            publicationRevision = publicationRevision == null ? 0L : publicationRevision;
+        }
+
+        static State empty() {
+            return new State(STATE_VERSION, 0, null, null, null, null, List.of(), 0L, null);
+        }
+
+        State withDraft(long revision, String sha256, Instant at) {
+            return new State(STATE_VERSION, revision, sha256, at, baselineIssuanceId, normalSequence, committed,
+                    publicationRevision, servedIssuanceId);
+        }
+
+        State withIssuance(List<CommittedIssuance> nextCommitted, String nextBaseline, String nextNormalSequence,
+                Instant at) {
+            return new State(STATE_VERSION, activeDraftRevision, activeDraftSha256, at, nextBaseline,
+                    nextNormalSequence, nextCommitted, publicationRevision, servedIssuanceId);
+        }
+
+        State withServed(String issuanceId, Instant at) {
+            return new State(STATE_VERSION, activeDraftRevision, activeDraftSha256, at, baselineIssuanceId,
+                    normalSequence, committed, publicationRevision + 1, issuanceId);
         }
 
         public Optional<CommittedIssuance> byRequest(String requestId) {
@@ -147,7 +171,7 @@ public final class RegistryStore implements AutoCloseable {
                     return;
                 }
                 var initial = RegistryDraft.initial(clock.instant());
-                commitFiles(initial, new State(STATE_VERSION, 0, null, null, null, null, List.of()));
+                commitFiles(initial, State.empty());
                 health = new Health(true, null, root.toString());
                 return;
             }
@@ -174,6 +198,10 @@ public final class RegistryStore implements AutoCloseable {
             }
             if (!Objects.equals(draft.baselineIssuanceId(), state.baselineIssuanceId())) {
                 unavailable("활성 초안의 기준 발행본이 state.json과 다릅니다.");
+                return;
+            }
+            if (state.servedIssuanceId() != null && state.byIssuance(state.servedIssuanceId()).isEmpty()) {
+                unavailable("제공 포인터가 확정되지 않은 발행본을 가리킵니다.");
                 return;
             }
             current = draft;
@@ -237,9 +265,8 @@ public final class RegistryStore implements AutoCloseable {
             var committed = new ArrayList<>(currentState.committed());
             committed.add(entry);
             if (!baseline) {
-                var next = new State(STATE_VERSION, currentState.activeDraftRevision(),
-                        currentState.activeDraftSha256(), clock.instant(), currentState.baselineIssuanceId(),
-                        currentState.normalSequence(), committed);
+                var next = currentState.withIssuance(committed, currentState.baselineIssuanceId(),
+                        currentState.normalSequence(), clock.instant());
                 writeState(next);
                 state = next;
                 return base;
@@ -248,9 +275,33 @@ public final class RegistryStore implements AutoCloseable {
             var draft = new RegistryDraft(RegistryDraft.SCHEMA_VERSION, nextRevision, base.revision(),
                     clock.instant(), "정상 기준 발행: 순번 " + entry.sequenceNumber() + " (" + entry.issuanceId() + ")",
                     entry.issuanceId(), base.scheme(), base.providers());
-            commitFiles(draft, new State(STATE_VERSION, 0, null, null, entry.issuanceId(),
-                    entry.sequenceNumber(), committed));
+            commitFiles(draft, currentState.withIssuance(committed, entry.issuanceId(), entry.sequenceNumber(),
+                    clock.instant()));
             return draft;
+        } finally {
+            writeLock.unlock();
+        }
+    }
+
+    /**
+     * 제공본 선택. 확정 발행본만 가리킬 수 있고 기대 publicationRevision이 다르면 거부한다.
+     * 파일 무결성 확인은 호출자 책임이다. 서명 XML은 손대지 않는다.
+     */
+    public State selectServed(long expectedPublicationRevision, String issuanceId) {
+        writeLock.lock();
+        try {
+            var currentState = state();
+            if (currentState.publicationRevision() != expectedPublicationRevision) {
+                throw new RegistryException(Code.REVISION_CONFLICT, "다른 선택이 먼저 저장되었습니다(현재 제공 revision "
+                        + currentState.publicationRevision() + "). 다시 불러오십시오.");
+            }
+            if (currentState.byIssuance(issuanceId).isEmpty()) {
+                throw new RegistryException(Code.NOT_FOUND, "확정된 발행본이 아닙니다: " + issuanceId);
+            }
+            var next = currentState.withServed(issuanceId, clock.instant());
+            writeState(next);
+            state = next;
+            return next;
         } finally {
             writeLock.unlock();
         }
@@ -286,9 +337,7 @@ public final class RegistryStore implements AutoCloseable {
             long next = Math.max(base.revision(), maxRevisionOnDisk()) + 1;
             var draft = new RegistryDraft(RegistryDraft.SCHEMA_VERSION, next, base.revision(), clock.instant(),
                     change, edited.baselineIssuanceId(), edited.scheme(), edited.providers());
-            var currentState = state();
-            commitFiles(draft, new State(STATE_VERSION, 0, null, null, currentState.baselineIssuanceId(),
-                    currentState.normalSequence(), currentState.committed()));
+            commitFiles(draft, state());
             return draft;
         } finally {
             writeLock.unlock();
@@ -305,8 +354,7 @@ public final class RegistryStore implements AutoCloseable {
             }
             writeDurably(revisions.resolve(target.getFileName() + ".tmp"), bytes, target);
             beforeStateSwap.run();
-            var next = new State(STATE_VERSION, draft.revision(), CertificateInspector.sha256Hex(bytes),
-                    clock.instant(), template.baselineIssuanceId(), template.normalSequence(), template.committed());
+            var next = template.withDraft(draft.revision(), CertificateInspector.sha256Hex(bytes), clock.instant());
             writeState(next);
             current = draft;
             state = next;
