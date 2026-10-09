@@ -23,7 +23,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 import java.util.regex.Pattern;
 
@@ -42,10 +44,34 @@ import java.util.regex.Pattern;
 public final class RegistryStore implements AutoCloseable {
 
     private static final Pattern REVISION_FILE = Pattern.compile("r-(\\d{8,})\\.json");
-    static final int STATE_VERSION = 1;
+    static final int STATE_VERSION = 2;
 
-    /** state.json 내용. 발행 단계에서 필드가 추가되면 stateVersion을 올린다. */
-    public record State(int stateVersion, long activeDraftRevision, String activeDraftSha256, Instant updatedAt) {
+    /**
+     * state.json 내용. 교체가 초안 저장·발행 확정의 권위 지점이다.
+     * v1(초안 포인터만)은 발행 필드가 비어 있는 것으로 읽는다.
+     *
+     * @param baselineIssuanceId 마지막 정상 기준(BASELINE) 발행본
+     * @param normalSequence     마지막 BASELINE 순번(십진 문자열). 권장 순번은 이 값+1
+     * @param committed          확정된 발행본 목록. issued 폴더 존재만으로는 확정이 아니다
+     */
+    public record State(int stateVersion, long activeDraftRevision, String activeDraftSha256, Instant updatedAt,
+            String baselineIssuanceId, String normalSequence, List<CommittedIssuance> committed) {
+        public State {
+            committed = committed == null ? List.of() : List.copyOf(committed);
+        }
+
+        public Optional<CommittedIssuance> byRequest(String requestId) {
+            return committed.stream().filter(c -> c.requestId().equals(requestId)).findFirst();
+        }
+
+        public Optional<CommittedIssuance> byIssuance(String issuanceId) {
+            return committed.stream().filter(c -> c.issuanceId().equals(issuanceId)).findFirst();
+        }
+    }
+
+    /** 확정 발행본 한 건. 상세 메타데이터는 issued/&lt;issuanceId&gt;/manifest.json. */
+    public record CommittedIssuance(String issuanceId, String requestId, String purpose, String sequenceNumber,
+            String xmlSha256, Instant committedAt) {
     }
 
     /** 저장소 가용 상태. available=false이면 관리 쓰기를 받지 않는다. */
@@ -67,6 +93,7 @@ public final class RegistryStore implements AutoCloseable {
     private final FileLock processLock;
 
     private volatile RegistryDraft current;
+    private volatile State state;
     private volatile Health health;
 
     /** 시험용 장애 주입: revision 기록 후 state 교체 직전에 실행된다. */
@@ -120,12 +147,12 @@ public final class RegistryStore implements AutoCloseable {
                     return;
                 }
                 var initial = RegistryDraft.initial(clock.instant());
-                commitFiles(initial);
+                commitFiles(initial, new State(STATE_VERSION, 0, null, null, null, null, List.of()));
                 health = new Health(true, null, root.toString());
                 return;
             }
             State state = mapper.readValue(stateFile.toFile(), State.class);
-            if (state.stateVersion() != STATE_VERSION) {
+            if (state.stateVersion() != 1 && state.stateVersion() != STATE_VERSION) {
                 unavailable("지원하지 않는 state 버전: " + state.stateVersion());
                 return;
             }
@@ -145,7 +172,12 @@ public final class RegistryStore implements AutoCloseable {
                 unavailable("활성 revision 내용이 state.json과 맞지 않습니다.");
                 return;
             }
+            if (!Objects.equals(draft.baselineIssuanceId(), state.baselineIssuanceId())) {
+                unavailable("활성 초안의 기준 발행본이 state.json과 다릅니다.");
+                return;
+            }
             current = draft;
+            this.state = state;
             health = new Health(true, null, root.toString());
         } catch (AtomicMoveNotSupportedException e) {
             unavailable("저장 위치가 원자적 파일 교체를 지원하지 않습니다.");
@@ -156,6 +188,7 @@ public final class RegistryStore implements AutoCloseable {
 
     private void unavailable(String reason) {
         current = null;
+        state = null;
         health = new Health(false, reason, root.toString());
     }
 
@@ -165,6 +198,62 @@ public final class RegistryStore implements AutoCloseable {
 
     public Path root() {
         return root;
+    }
+
+    /** 검증된 상태 파일 스냅숏. */
+    public State state() {
+        var value = state;
+        if (value == null) throw new RegistryException(Code.STATE_UNAVAILABLE, health.reason());
+        return value;
+    }
+
+    /** 저장·발행을 하나의 작성 잠금으로 직렬화한다(재진입 가능). */
+    public <T> T locked(Supplier<T> action) {
+        writeLock.lock();
+        try {
+            return action.get();
+        } finally {
+            writeLock.unlock();
+        }
+    }
+
+    /**
+     * 발행 확정. 발행본 파일은 호출자가 issued/에 먼저 옮겨 둔다. state 교체가 확정 지점이다.
+     * BASELINE이면 기준 발행본을 가리키는 새 초안 revision을 먼저 쓰고 정상 순번을 전진시킨다.
+     * TRIAL은 초안·기준·정상 순번을 바꾸지 않는다.
+     */
+    public RegistryDraft commitIssuance(long expectedDraftRevision, CommittedIssuance entry, boolean baseline) {
+        writeLock.lock();
+        try {
+            var base = current();
+            var currentState = state();
+            if (base.revision() != expectedDraftRevision) {
+                throw new RegistryException(Code.REVISION_CONFLICT, "발행 중 초안이 바뀌었습니다.");
+            }
+            if (currentState.byRequest(entry.requestId()).isPresent()
+                    || currentState.byIssuance(entry.issuanceId()).isPresent()) {
+                throw new RegistryException(Code.STORAGE_FAILED, "이미 확정된 요청·발행 ID입니다.");
+            }
+            var committed = new ArrayList<>(currentState.committed());
+            committed.add(entry);
+            if (!baseline) {
+                var next = new State(STATE_VERSION, currentState.activeDraftRevision(),
+                        currentState.activeDraftSha256(), clock.instant(), currentState.baselineIssuanceId(),
+                        currentState.normalSequence(), committed);
+                writeState(next);
+                state = next;
+                return base;
+            }
+            long nextRevision = Math.max(base.revision(), maxRevisionOnDisk()) + 1;
+            var draft = new RegistryDraft(RegistryDraft.SCHEMA_VERSION, nextRevision, base.revision(),
+                    clock.instant(), "정상 기준 발행: 순번 " + entry.sequenceNumber() + " (" + entry.issuanceId() + ")",
+                    entry.issuanceId(), base.scheme(), base.providers());
+            commitFiles(draft, new State(STATE_VERSION, 0, null, null, entry.issuanceId(),
+                    entry.sequenceNumber(), committed));
+            return draft;
+        } finally {
+            writeLock.unlock();
+        }
     }
 
     /** 검증된 활성 초안. 읽기는 잠금 없이 불변 스냅숏을 본다. */
@@ -197,14 +286,17 @@ public final class RegistryStore implements AutoCloseable {
             long next = Math.max(base.revision(), maxRevisionOnDisk()) + 1;
             var draft = new RegistryDraft(RegistryDraft.SCHEMA_VERSION, next, base.revision(), clock.instant(),
                     change, edited.baselineIssuanceId(), edited.scheme(), edited.providers());
-            commitFiles(draft);
+            var currentState = state();
+            commitFiles(draft, new State(STATE_VERSION, 0, null, null, currentState.baselineIssuanceId(),
+                    currentState.normalSequence(), currentState.committed()));
             return draft;
         } finally {
             writeLock.unlock();
         }
     }
 
-    private void commitFiles(RegistryDraft draft) {
+    /** 새 revision 파일을 쓰고 그 포인터를 담은 state로 교체한다. template의 발행 필드를 유지한다. */
+    private void commitFiles(RegistryDraft draft, State template) {
         try {
             byte[] bytes = mapper.writeValueAsBytes(draft);
             Path target = revisionFile(draft.revision());
@@ -213,14 +305,23 @@ public final class RegistryStore implements AutoCloseable {
             }
             writeDurably(revisions.resolve(target.getFileName() + ".tmp"), bytes, target);
             beforeStateSwap.run();
-            var state = new State(STATE_VERSION, draft.revision(), CertificateInspector.sha256Hex(bytes),
-                    clock.instant());
-            writeDurably(stateFile.resolveSibling("state.json.tmp"), mapper.writeValueAsBytes(state), stateFile);
+            var next = new State(STATE_VERSION, draft.revision(), CertificateInspector.sha256Hex(bytes),
+                    clock.instant(), template.baselineIssuanceId(), template.normalSequence(), template.committed());
+            writeState(next);
             current = draft;
+            state = next;
         } catch (RegistryException e) {
             throw e;
         } catch (Exception e) {
             throw new RegistryException(Code.STORAGE_FAILED, "초안을 저장하지 못했습니다. 기존 초안을 유지합니다.", e);
+        }
+    }
+
+    private void writeState(State next) {
+        try {
+            writeDurably(stateFile.resolveSibling("state.json.tmp"), mapper.writeValueAsBytes(next), stateFile);
+        } catch (IOException e) {
+            throw new RegistryException(Code.STORAGE_FAILED, "상태 파일을 교체하지 못했습니다. 기존 상태를 유지합니다.", e);
         }
     }
 

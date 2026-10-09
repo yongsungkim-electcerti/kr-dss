@@ -170,8 +170,8 @@
             <a href="#preview">초안 XML</a>
             <a href="#revisions">저장 이력<span class="count" id="navRevision">—</span></a>
             <a href="#settings">목록 운영자</a>
-            <div class="group">후속 · 범위 외</div>
-            <a href="#publish">TL 발행<span class="tag">개발 예정</span></a>
+            <a href="#publish">TL 발행<span class="count" id="navIssuances">—</span></a>
+            <div class="group">범위 외</div>
             <a href="#intake">접수·심사<span class="tag">범위 제외</span></a>
         </nav>
     </aside>
@@ -204,7 +204,7 @@
                     <div class="card-head"><h2>발행 · 제공 상태</h2><span class="badge plain">저장 상태에서만 표시</span></div>
                     <dl>
                         <dt>정상 기준 발행</dt><dd id="baselineState">—</dd>
-                        <dt>현재 제공본</dt><dd>없음 — 발행·제공 기능은 다음 단계에서 연결합니다.</dd>
+                        <dt>현재 제공본</dt><dd>미선택 — 제공본 선택·IF-07은 다음 단계에서 연결합니다.</dd>
                         <dt>외부 검증 결과</dt><dd>미확인</dd>
                         <dt>저장 위치</dt><dd class="mono" id="storageRoot">—</dd>
                     </dl>
@@ -283,13 +283,47 @@
 
         <!-- 후속 · 범위 외 -->
         <section id="publish" class="view">
-            <article class="card">
-                <h2>TL 발행 — 다음 단계</h2>
-                <p class="muted" style="font-size:13px;line-height:1.7">
-                    XML 생성·키 파일 서명, 불변 발행본 보관(issuanceId), 정상(BASELINE)·시험(TRIAL) 구분,
-                    현재 제공본 선택, IF-07 공개 조회를 이 순서로 연결합니다. 지금은 발행된 TL이 없으며,
-                    이 화면의 어떤 표시도 발행·배포 완료를 뜻하지 않습니다.
-                </p>
+            <div class="grid two" style="margin-top:0">
+                <article class="card">
+                    <div class="card-head"><h2>발행 입력</h2><span class="badge plain" id="planDraft">—</span></div>
+                    <form id="issueForm" class="form">
+                        <div class="field"><label>목적 <span class="req">*</span></label>
+                            <select name="purpose"><option value="BASELINE">정상 (BASELINE)</option><option value="TRIAL">시험 (TRIAL)</option></select>
+                            <small>정상 규칙 경고가 있으면 정상 요청도 시험으로 저장됩니다.</small></div>
+                        <div class="field"><label>순번 <span class="req">*</span></label><input type="text" name="sequenceNumber" inputmode="numeric">
+                            <small id="recommendedHint">권장 —</small></div>
+                        <div class="field"><label>발행 시각 (KST)</label><input type="datetime-local" name="issuedAt" step="1"></div>
+                        <div class="field"><label>NextUpdate (KST)</label><input type="datetime-local" name="nextUpdate" step="1">
+                            <small>PoC 기본값: 발행 시각 + 7일</small></div>
+                        <div class="field full" id="planResult"></div>
+                        <div class="field full form-foot" style="margin-top:0">
+                            <button type="button" class="ghost" id="btnPlan">사전 검사</button>
+                            <button type="button" class="ghost" id="btnResend" hidden>같은 요청 재전송</button>
+                            <button type="submit" class="primary" data-write id="btnIssue">서명·발행</button>
+                        </div>
+                    </form>
+                </article>
+                <article class="card">
+                    <div class="card-head"><h2>기준 · 서명 키</h2></div>
+                    <dl>
+                        <dt>정상 기준 발행본</dt><dd class="mono" id="planBaseline">—</dd>
+                        <dt>정상 순번</dt><dd id="planNormal">—</dd>
+                        <dt>권장 순번</dt><dd id="planRecommended">—</dd>
+                        <dt>서명 키</dt><dd id="planSigner">—</dd>
+                    </dl>
+                    <p class="muted" style="font-size:12px;line-height:1.7;margin:16px 0 0">
+                        생성 성공은 서명·저장·확정 완료를 뜻합니다. 자체 서명 확인은 서명값·참조 다이제스트만 검사하며,
+                        이용기관의 체인·신뢰 판정(외부 검증 결과)은 미확인입니다.</p>
+                </article>
+            </div>
+            <article class="card" style="margin-top:16px">
+                <div class="card-head"><h2>발행본</h2><span class="muted" style="font-size:12px">issuanceId별 불변 보관 · 최신순</span></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>발행 ID</th><th>목적</th><th>순번</th><th>발행 시각 · NextUpdate (KST)</th><th>XML SHA-256</th><th>서명·무결성</th><th></th></tr></thead>
+                        <tbody id="issuanceRows"></tbody>
+                    </table>
+                </div>
             </article>
         </section>
         <section id="intake" class="view">
@@ -360,8 +394,8 @@
                 <select name="domain"><option value="JOINT">공동인증</option><option value="SIMPLE">간편인증</option></select></div>
             <div class="field"><label>신뢰점 레벨 (CA만)</label>
                 <select name="level"><option value="CA">1 · 개별 CA</option><option value="ROOT">0 · RootCA</option></select></div>
-            <div class="field full"><label>현재 상태 시작 시각 정정 (KST)</label><input type="datetime-local" name="start" step="1">
-                <small>정상 기준 발행 전에만 정정할 수 있습니다.</small></div>
+            <div class="field full"><label id="startLabel">현재 상태 시작 시각 정정 (KST)</label><input type="datetime-local" name="start" step="1">
+                <small>정상 기준 발행 전에는 정정, 발행 후에는 변경 효력 시각(현재 시작 이후)입니다.</small></div>
         </div>
         <div class="form-error" data-error></div>
         <div class="form-foot"><button type="button" class="ghost" data-close>취소</button><button type="submit" class="primary">저장</button></div>
@@ -426,7 +460,7 @@
         preview: ["Draft", "초안 XML", "현재 초안을 TL XML로 변환한 결과입니다."],
         revisions: ["Draft", "저장 이력", "저장마다 만들어진 불변 초안 파일입니다."],
         settings: ["Scheme", "목록 운영자", "TL의 SchemeInformation에 들어가는 운영자 정보입니다."],
-        publish: ["Publication", "TL 발행", ""],
+        publish: ["Publication", "TL 발행", "현재 초안을 T-02 키로 서명해 발행본을 만듭니다. 발행본은 덮어쓰지 않습니다."],
         intake: ["Out of scope", "접수 · 심사", ""],
     };
 
@@ -519,6 +553,7 @@
         renderSettings(d);
         if (currentView() === "revisions") loadRevisions();
         if (currentView() === "preview") loadXml();
+        if (currentView() === "publish") loadPublish(!$("issueForm").sequenceNumber.value);
     }
 
     function renderOverview(o, d) {
@@ -683,6 +718,7 @@
         $("viewSubtitle").textContent = subtitle;
         if (id === "revisions" && state && state.draft) loadRevisions();
         if (id === "preview" && state && state.draft) loadXml();
+        if (id === "publish" && state && state.draft) loadPublish(true);
     }
 
     // ------------------------------------------------------------ 대화상자
@@ -818,13 +854,13 @@
         form.level.disabled = s.type !== "CA";
         if (s.level) form.level.value = s.level;
         form.start.value = kstInput(s.statusStartingTime);
-        form.start.disabled = !!state.draft.baselineIssuanceId;
+        $("startLabel").textContent = state.draft.baselineIssuanceId ? "변경 효력 시각 (KST)" : "현재 상태 시작 시각 정정 (KST)";
         openDialog($("serviceInfoDialog"));
     }
     $("serviceInfoForm").addEventListener("submit", async (event) => {
         event.preventDefault();
         const form = event.target;
-        const start = form.start.disabled ? null : fromKstInput(form.start.value);
+        const start = fromKstInput(form.start.value);
         const body = {
             name: form.name.value, englishName: form.englishName.value, domain: form.domain.value,
             level: form.level.disabled ? null : form.level.value,
@@ -920,6 +956,140 @@
         }
     });
     $("btnReloadXml").addEventListener("click", loadXml);
+
+    // ------------------------------------------------------------ TL 발행
+    const PURPOSE_LABEL = {BASELINE: "정상", TRIAL: "시험"};
+    let pendingIssue = null;   // 응답을 받지 못한 요청(같은 requestId로 재전송)
+
+    function issueInputs() {
+        const form = $("issueForm");
+        return {
+            purpose: form.purpose.value,
+            sequenceNumber: form.sequenceNumber.value.trim() || null,
+            issuedAt: fromKstInput(form.issuedAt.value),
+            nextUpdate: fromKstInput(form.nextUpdate.value),
+        };
+    }
+
+    function renderPlan(plan, showDiagnostics) {
+        $("planDraft").textContent = "초안 r" + plan.draftRevision;
+        $("planBaseline").textContent = plan.baselineIssuanceId || "없음 (최초 발행)";
+        $("planNormal").textContent = plan.normalSequence || "—";
+        $("planRecommended").textContent = plan.recommendedSequence;
+        $("recommendedHint").textContent = "권장 " + plan.recommendedSequence + " (마지막 정상 순번 + 1)";
+        $("planSigner").innerHTML = plan.signerReady
+            ? `<span class="badge">준비됨</span> <span class="muted" style="font-size:12px">${esc(plan.signerDetail)}</span>`
+            : `<span class="badge bad">사용 불가</span> <span class="muted" style="font-size:12px">${esc(plan.signerDetail)}</span>`;
+        if (!showDiagnostics) return;
+        const diag = plan.diagnostics.length
+            ? plan.diagnostics.map((d) => `<div class="warn-line">⚠ ${esc(d.code)} · ${esc(d.message)}</div>`).join("")
+            : `<div class="muted">정상 규칙 경고 없음</div>`;
+        $("planResult").innerHTML = `<div class="inspect-item">
+            <div><strong>저장될 목적: ${PURPOSE_LABEL[plan.purpose]}</strong>${plan.purpose !== plan.requestedPurpose ? " (경고로 시험 발행)" : ""}</div>
+            <div class="muted">순번 ${esc(plan.sequenceNumber)} · 발행 ${kst(plan.issuedAt)} · NextUpdate ${kst(plan.nextUpdate)}</div>
+            ${diag}</div>`;
+    }
+
+    async function loadPublish(resetForm) {
+        try {
+            const plan = await api("GET", "/issuance/plan");
+            if (resetForm) {
+                const form = $("issueForm");
+                form.sequenceNumber.value = plan.recommendedSequence;
+                form.issuedAt.value = kstInput(plan.issuedAt);
+                form.nextUpdate.value = kstInput(plan.nextUpdate);
+                $("planResult").innerHTML = "";
+            }
+            renderPlan(plan, false);
+        } catch (e) {
+            $("planSigner").textContent = e.message;
+        }
+        loadIssuances();
+    }
+
+    function issuanceRow(r) {
+        const m = r.manifest || {};
+        if (r.state === "ORPHAN") {
+            return `<tr><td class="mono" style="font-size:12px">${esc(m.issuanceId || "?")}</td>
+                <td colspan="5"><span class="badge warn">미확정 잔여</span> <span class="muted">${esc(r.integrityDetail)}</span></td><td></td></tr>`;
+        }
+        const purpose = m.purpose === "BASELINE" ? `<span class="badge">정상</span>` : `<span class="badge warn">시험</span>`;
+        const requested = m.requestedPurpose !== m.purpose
+            ? `<div class="muted" style="font-size:11px">요청: ${PURPOSE_LABEL[m.requestedPurpose]}</div>` : "";
+        const diag = (m.diagnostics || []).map((d) => d.code).join(", ");
+        const signature = m.signatureValid ? `<span class="badge">자체 서명 확인</span>` : `<span class="badge bad">서명 실패</span>`;
+        const integrity = r.intact ? `<span class="badge plain">파일 무결</span>`
+            : `<span class="badge bad" title="${esc(r.integrityDetail)}">손상</span>`;
+        return `<tr>
+            <td class="mono" style="font-size:12px">${esc(m.issuanceId)}${r.baseline ? `<br><span class="badge info">현재 정상 기준</span>` : ""}</td>
+            <td>${purpose}${requested}${diag ? `<div class="muted" style="font-size:11px">${esc(diag)}</div>` : ""}</td>
+            <td class="mono">${esc(m.sequenceNumber)}</td>
+            <td>${kst(m.issuedAt)}<br><span class="muted">${kst(m.nextUpdate)}</span></td>
+            <td class="mono" title="${esc(m.xmlSha256)}">${esc(short(m.xmlSha256, 12))}</td>
+            <td>${signature}<br>${integrity}</td>
+            <td><a class="ghost small" style="text-decoration:none" href="${API}/issuance/issuances/${encodeURIComponent(m.issuanceId)}/signed.xml">XML</a></td>
+        </tr>`;
+    }
+
+    async function loadIssuances() {
+        try {
+            const rows = await api("GET", "/issuance/issuances");
+            $("navIssuances").textContent = rows.filter((r) => r.state === "COMMITTED").length;
+            $("issuanceRows").innerHTML = rows.length ? rows.map(issuanceRow).join("")
+                : `<tr><td colspan="7"><div class="empty">발행본이 없습니다.</div></td></tr>`;
+        } catch (e) {
+            $("issuanceRows").innerHTML = `<tr><td colspan="7"><div class="empty">${esc(e.message)}</div></td></tr>`;
+        }
+    }
+
+    $("btnPlan").addEventListener("click", async () => {
+        const query = new URLSearchParams(Object.entries(issueInputs()).filter(([, v]) => v));
+        try {
+            renderPlan(await api("GET", "/issuance/plan?" + query), true);
+        } catch (e) {
+            $("planResult").innerHTML = `<div class="inspect-item error">${esc(e.message)}</div>`;
+        }
+    });
+
+    async function sendIssue(body) {
+        const button = $("btnIssue");
+        button.disabled = true;
+        try {
+            let result;
+            try {
+                result = await api("POST", "/issuance/issuances", body);
+            } catch (e) {
+                if (e instanceof TypeError) {   // 응답 자체를 받지 못함: 같은 requestId로 재전송
+                    pendingIssue = body;
+                    $("btnResend").hidden = false;
+                    toast("응답을 받지 못했습니다. ‘같은 요청 재전송’으로 결과를 확인하십시오.", "warn");
+                    return;
+                }
+                pendingIssue = null;
+                $("btnResend").hidden = true;
+                if (e.code === "REVISION_CONFLICT") await load();
+                toast(e.message, "error");
+                return;
+            }
+            pendingIssue = null;
+            $("btnResend").hidden = true;
+            const m = result.manifest;
+            await load();
+            loadPublish(true);
+            const lines = [`${result.replay ? "기존 결과" : "발행 완료"}: ${m.issuanceId}`,
+                `${PURPOSE_LABEL[m.purpose]} · 순번 ${m.sequenceNumber}`];
+            if (m.diagnostics.length) lines.push("경고: " + m.diagnostics.map((d) => d.code).join(", "));
+            toast(lines.join("\n"), m.diagnostics.length ? "warn" : "ok");
+        } finally {
+            button.disabled = !(state.health && state.health.available);
+        }
+    }
+
+    $("issueForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        sendIssue({requestId: crypto.randomUUID(), expectedDraftRevision: rev(), ...issueInputs()});
+    });
+    $("btnResend").addEventListener("click", () => pendingIssue && sendIssue(pendingIssue));
 
     // ------------------------------------------------------------ 알림
     let toastTimer = null;

@@ -15,7 +15,19 @@ public class RegistryException extends RuntimeException {
         /** 상태 파일·revision 해석 또는 무결성 확인 실패. 관리 쓰기 중단 */
         STATE_UNAVAILABLE,
         /** 파일 기록·원자 교체 실패. 기존 상태 유지 */
-        STORAGE_FAILED
+        STORAGE_FAILED,
+        /** 같은 requestId에 다른 입력 */
+        REQUEST_CONFLICT,
+        /** 같은 requestId가 처리 중 */
+        REQUEST_IN_PROGRESS,
+        /** 이전 시도가 중단되어 종결됨. 새 requestId로 재시도 */
+        INTERRUPTED,
+        /** 서명 키·인증서 파일을 읽지 못함 */
+        KEY_READ_FAILED,
+        /** 서명 생성 실패 */
+        SIGNING_FAILED,
+        /** 생성한 서명의 자체 확인 실패 */
+        SIGNATURE_CHECK_FAILED
     }
 
     private final Code code;

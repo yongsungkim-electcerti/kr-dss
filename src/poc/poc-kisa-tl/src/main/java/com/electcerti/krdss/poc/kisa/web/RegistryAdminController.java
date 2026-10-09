@@ -13,14 +13,8 @@ import com.electcerti.krdss.tl.model.PocTrustListProfile.ServiceType;
 import com.electcerti.krdss.tl.model.PocTrustListProfile.TrustPointLevel;
 import java.util.Base64;
 import java.util.List;
-import java.util.Map;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -154,26 +148,5 @@ public class RegistryAdminController {
                 .map(c -> Base64.getDecoder().decode(c.derBase64()))
                 .orElseThrow(() -> new RegistryException(RegistryException.Code.NOT_FOUND,
                         "인증서를 찾을 수 없습니다: " + sha256));
-    }
-
-    @ExceptionHandler(RegistryException.class)
-    public ResponseEntity<Map<String, String>> registryError(RegistryException e) {
-        var status = switch (e.code()) {
-            case INVALID_INPUT -> HttpStatus.UNPROCESSABLE_ENTITY;
-            case NOT_FOUND -> HttpStatus.NOT_FOUND;
-            case REVISION_CONFLICT, IDENTITY_CONFLICT -> HttpStatus.CONFLICT;
-            case STATE_UNAVAILABLE -> HttpStatus.SERVICE_UNAVAILABLE;
-            case STORAGE_FAILED -> HttpStatus.INTERNAL_SERVER_ERROR;
-        };
-        return ResponseEntity.status(status)
-                .contentType(MediaType.APPLICATION_JSON)
-                .body(Map.of("code", e.code().name(), "message", String.valueOf(e.getMessage())));
-    }
-
-    @ExceptionHandler({HttpMessageNotReadableException.class, MissingServletRequestParameterException.class})
-    public ResponseEntity<Map<String, String>> badRequest(Exception e) {
-        return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY)
-                .contentType(MediaType.APPLICATION_JSON)
-                .body(Map.of("code", "INVALID_INPUT", "message", "요청 형식이 올바르지 않습니다(값·날짜·선택 항목 확인)."));
     }
 }

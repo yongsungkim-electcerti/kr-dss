@@ -61,7 +61,7 @@ public class RegistryService {
             TrustPointLevel level, Instant statusStartingTime, List<String> certificates) {
     }
 
-    /** statusStartingTime은 정상 기준 발행 전에만 정정할 수 있다. null이면 유지한다. */
+    /** statusStartingTime: 기준 발행 전에는 정정, 후에는 새 정보 구간의 효력 시각(이후만). null이면 유지한다. */
     public record ServiceInfoInput(String name, String englishName, TrustDomain domain, TrustPointLevel level,
             Instant statusStartingTime) {
     }
@@ -141,35 +141,42 @@ public class RegistryService {
         return KrTrustListXml.toXml(toTrustList(store.current(), BigInteger.ONE, issued, issued.plus(Duration.ofDays(7))));
     }
 
-    static KrTrustList toTrustList(RegistryDraft draft, BigInteger sequence, Instant issued, Instant nextUpdate) {
+    /** 초안을 이력 없는 TL 모델로 변환한다(미리보기). 발행 후보의 이력 편성은 발행 기능이 한다. */
+    public static KrTrustList toTrustList(RegistryDraft draft, BigInteger sequence, Instant issued, Instant nextUpdate) {
         var providers = new ArrayList<KrTrustList.TrustServiceProvider>();
         for (var provider : draft.providers()) {
             var services = new ArrayList<KrTrustList.TrustService>();
             for (var service : provider.services()) {
-                var names = new ArrayList<KrTrustList.LocalizedName>();
-                names.add(new KrTrustList.LocalizedName("ko", service.name()));
-                if (service.englishName() != null) {
-                    names.add(new KrTrustList.LocalizedName("en", service.englishName()));
-                }
-                var certificates = new ArrayList<KrTrustList.BinaryValue>();
-                var skis = new LinkedHashSet<KrTrustList.BinaryValue>();
-                for (var cert : service.certificates()) {
-                    certificates.add(new KrTrustList.BinaryValue(Base64.getDecoder().decode(cert.derBase64())));
-                    skis.add(new KrTrustList.BinaryValue(HexFormat.of().parseHex(cert.subjectKeyIdentifier())));
-                }
-                var identity = new KrTrustList.CurrentDigitalIdentity(certificates, List.copyOf(skis),
-                        service.certificates().get(0).subject());
-                var info = new KrTrustList.ServiceInformation(PocTrustListProfile.serviceTypeUri(service.type()),
-                        names, identity, PocTrustListProfile.statusUri(service.status()),
-                        service.statusStartingTime(),
-                        PocTrustListProfile.extensions(service.type(), service.domain(), service.level()));
-                services.add(new KrTrustList.TrustService(service.serviceId(), info, List.of()));
+                services.add(new KrTrustList.TrustService(service.serviceId(), serviceInformation(service), List.of()));
             }
             providers.add(new KrTrustList.TrustServiceProvider(provider.providerId(), provider.name(), services));
         }
-        var scheme = new KrTrustList.SchemeInformation(6, sequence, draft.scheme().operatorName(), issued,
-                nextUpdate, 65535);
-        return new KrTrustList(scheme, providers);
+        return new KrTrustList(scheme(draft, sequence, issued, nextUpdate), providers);
+    }
+
+    public static KrTrustList.SchemeInformation scheme(RegistryDraft draft, BigInteger sequence, Instant issued,
+            Instant nextUpdate) {
+        return new KrTrustList.SchemeInformation(6, sequence, draft.scheme().operatorName(), issued, nextUpdate, 65535);
+    }
+
+    /** 서비스의 현재 정보(프로파일 v1 URI·확장, 인증서 전체, SKI 중복 제거). */
+    public static KrTrustList.ServiceInformation serviceInformation(ServiceRecord service) {
+        var names = new ArrayList<KrTrustList.LocalizedName>();
+        names.add(new KrTrustList.LocalizedName("ko", service.name()));
+        if (service.englishName() != null) {
+            names.add(new KrTrustList.LocalizedName("en", service.englishName()));
+        }
+        var certificates = new ArrayList<KrTrustList.BinaryValue>();
+        var skis = new LinkedHashSet<KrTrustList.BinaryValue>();
+        for (var cert : service.certificates()) {
+            certificates.add(new KrTrustList.BinaryValue(Base64.getDecoder().decode(cert.derBase64())));
+            skis.add(new KrTrustList.BinaryValue(HexFormat.of().parseHex(cert.subjectKeyIdentifier())));
+        }
+        var identity = new KrTrustList.CurrentDigitalIdentity(certificates, List.copyOf(skis),
+                service.certificates().get(0).subject());
+        return new KrTrustList.ServiceInformation(PocTrustListProfile.serviceTypeUri(service.type()),
+                names, identity, PocTrustListProfile.statusUri(service.status()), service.statusStartingTime(),
+                PocTrustListProfile.extensions(service.type(), service.domain(), service.level()));
     }
 
     // ---------------------------------------------------------------- 목록 운영자
@@ -259,7 +266,10 @@ public class RegistryService {
             checkLevel(service.type(), input.level());
             var start = service.statusStartingTime();
             if (input.statusStartingTime() != null && !input.statusStartingTime().equals(start)) {
-                requireUnpublished(d);
+                // 기준 발행 후에는 정정이 아니라 새 정보 구간의 효력 시각이다. 앞으로만 옮길 수 있다.
+                if (d.baselineIssuanceId() != null && !input.statusStartingTime().isAfter(start)) {
+                    throw invalid("정상 기준 발행 후에는 효력 시각을 현재 상태 시작 이후로만 지정할 수 있습니다.");
+                }
                 start = input.statusStartingTime();
             }
             var updated = new ServiceRecord(service.serviceId(), service.type(), name,

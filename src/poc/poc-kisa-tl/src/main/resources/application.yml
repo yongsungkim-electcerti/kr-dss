@@ -7,3 +7,5 @@ krtl:
   admin:
     # 초안 revision·state.json 저장 루트(Git 비관리). bootRun은 저장소 루트에서 실행된다.
     storage-root: runtime/tl-management
+    # TL 서명 키(설계 27 T-02 노드: key.pem·chain.pem)
+    signer-dir: ${krtl.admin.storage-root}/pki/tl-signer/T-02-signer

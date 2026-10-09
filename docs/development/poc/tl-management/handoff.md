@@ -6,7 +6,8 @@
 - 사용자 결정: REST 계약 문서·외부 사업자/서비스 관리 인터페이스는 만들지 않는다. 관리자가 PoC 관리 화면에서 사업자를 직접 등록하고 인증서를 입력한다. 관리 서비스 개발에 집중한다.
 - 실행: `gradlew.bat :poc:poc-kisa-tl:bootRun` → http://localhost:8081 . 저장 루트 `runtime/tl-management` (Git 비관리).
 - PoC 키 체계 생성 완료(2026-10-09): `runtime/tl-management/pki` 세트 krtl-poc-pki-v1, 22개 노드, UN 미등재 대조군 포함. 설계 27 상단 참조. Git 비관리. `scripts/poc/tl-management/gen-tl-pki.ps1`이 생성(없을 때만)과 main 체크아웃 자동 복사·해시 대조를 수행한다(설계 27 상단). main 체크아웃에는 복사 완료(파일 130개 해시 일치).
-- 다음 작업: XML 생성·T-02 키 파일 서명 → issuanceId 불변 보관·BASELINE/TRIAL → 제공본 선택 → IF-07 → 화면 발행 메뉴 연결.
+- XML 서명·발행본 보관 완료(2026-10-09): [34](reviews/34-XML서명-발행본보관-구현결과.md). state.json v2, issued/<issuanceId>, BASELINE/TRIAL, requestId 중복 처리.
+- 다음 작업: 제공본 선택(publicationRevision) → IF-07 `/tl/kr-tl.xml`·`/tl/kr-tl.sha2`·ETag/304 → 화면 연결.
 
 ---
 
