@@ -1,0 +1,72 @@
+[
+  {
+    "path": "html/KRTL_v02.html",
+    "bytes": 568679,
+    "sha256": "c869b52c98531520cf813c8584a83cb41e9b0d42245b334d6a07b870bf24cd20"
+  },
+  {
+    "path": "html/images/image1.png",
+    "bytes": 254273,
+    "sha256": "3dd8d3aa03f16f58e297fa34f9a415ea2ec2bc81850f052246275cdf2da403ff"
+  },
+  {
+    "path": "html/images/image2.png",
+    "bytes": 1729449,
+    "sha256": "efdd6b9fdca638d6d49ecf3d8d8504a7031b9f9b2c494f81a732354950a8ef17"
+  },
+  {
+    "path": "html/images/image3.png",
+    "bytes": 227021,
+    "sha256": "a84df42374260638c3d96fcedc35d5305a7d73e2e6f0bc6f882a762ab9f79d40"
+  },
+  {
+    "path": "html/images/image4.png",
+    "bytes": 1510941,
+    "sha256": "55ae780e3ed63e3e0c037372bdb4ffc223e98f2dc42b8986f32660c6e1be51ae"
+  },
+  {
+    "path": "html/images/image5.png",
+    "bytes": 226924,
+    "sha256": "dd39de603f36296590dd357b00f7ca2d6824d8f43b3bcbf42b4bd8c31df5c762"
+  },
+  {
+    "path": "html/images/image6.png",
+    "bytes": 331853,
+    "sha256": "641b149bb6d447185a859b67db0f20798aa443786fe5291fec15a60ac5320b11"
+  },
+  {
+    "path": "html/images/image7.png",
+    "bytes": 98954,
+    "sha256": "f450a3fe894b05d878300c50ba21852200b5a4413a5cc20e24a056051a368f5f"
+  },
+  {
+    "path": "html/images/image8.png",
+    "bytes": 130835,
+    "sha256": "b304413ea0ce107b6108de0957c75b0ed25b74f5aaa07a33f3040203370f9422"
+  },
+  {
+    "path": "html/images/image9.png",
+    "bytes": 127973,
+    "sha256": "7156dd858c73974786bcf8147c58a5313bd32972c80fb73fcdfd59f30ae02b36"
+  },
+  {
+    "path": "html/images/image10.png",
+    "bytes": 221720,
+    "sha256": "422371bd429a0a0c7c67de862223de9c5a038416bb0fc323fabb0b2902ef4c08"
+  },
+  {
+    "path": "html/images/image11.png",
+    "bytes": 153829,
+    "sha256": "aadf513b44d57e4459f577bc34171aa537e6a87d7f9d5c402dd2b3acce510d17"
+  },
+  {
+    "path": "html/images/image12.png",
+    "bytes": 86691,
+    "sha256": "60d09b513f2599cbba1453a82335e229338b814b53be231a8efe084dda88762c"
+  },
+  {
+    "path": "html/images/image13.png",
+    "bytes": 161313,
+    "sha256": "eb3e7147ca02a8f4626e1e60026c71e3ece7550c835dff87d16b6b60e66059e5"
+  }
+]

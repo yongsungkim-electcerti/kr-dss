@@ -4,6 +4,9 @@
 
 ## 작업 진입점
 
+- [수정 개념 설계 v02 로컬 보관본](sources/2026-10-08-concept-v02/README.md) — 2026-10-08 원문, 2026-10-09 검토
+- [개정 설계의 PoC 영향 검토](../../../development/poc/tl-management/reviews/30-수정-개념설계-v02-영향검토.md)
+
 - [확정 범위](scope.md)
 - [시스템 구성과 책임](architecture.md)
 - [초안·스냅숏·발행본 저장](data-storage.md)
