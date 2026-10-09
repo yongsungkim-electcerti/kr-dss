@@ -270,7 +270,7 @@ public class PdfBaselineVerifier {
         return new TrustListEvaluation(
                 new PdfVerifyReport.TrustListInfo(true, signature,
                         scheme != null ? scheme.operatorName() : null,
-                        scheme != null ? scheme.version() : null,
+                        scheme != null ? scheme.sequenceNumber().toString() : null,
                         scheme != null ? scheme.issueDate() : null,
                         scheme != null ? scheme.nextUpdate() : null,
                         services.size(),

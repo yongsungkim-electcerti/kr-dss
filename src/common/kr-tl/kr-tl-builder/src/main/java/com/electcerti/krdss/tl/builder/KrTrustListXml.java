@@ -1,334 +1,326 @@
 package com.electcerti.krdss.tl.builder;
 
 import com.electcerti.krdss.tl.model.KrTrustList;
+import com.electcerti.krdss.tl.model.KrTrustList.*;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.time.Instant;
-import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 import javax.xml.XMLConstants;
-import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import org.w3c.dom.*;
 
 /**
- * KR-TL ↔ XML 변환 — ETSI TS 119 612 {@code TrustServiceStatusList} 구조를 따른다.
- *
- * <p>EU TL 과 같은 XML 골격을 쓰므로 기존 TL 도구·검증기가 읽을 수 있고, 서명도 EU TL 과
- * 동일하게 XAdES enveloped 로 붙일 수 있다. 다만 본 PoC 는 스키마 전체가 아니라 KR-TL
- * 도메인 모델이 담는 항목만 직렬화한다.</p>
- *
- * <p>서명은 이 클래스가 하지 않는다. 생성된 XML 에 XAdES enveloped 서명을 붙이는 일은
- * EU DSS 를 쓰는 상위 계층의 몫이다.</p>
+ * 모델이 지원하는 TL 정보의 XML 변환. 전체 ETSI XSD 검증이나 서명 검증을 대신하지 않는다.
+ * 서명 원문은 재직렬화하지 않고 별도로 보관·검증해야 한다.
  */
 public final class KrTrustListXml {
-
-    /** ETSI TS 119 612 신뢰목록 네임스페이스. */
     public static final String NS = "http://uri.etsi.org/02231/v2#";
+    private KrTrustListXml() { }
 
-    private static final String STATUS_BASE = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/";
-    private static final String STATUS_GRANTED = STATUS_BASE + "granted";
-    private static final String STATUS_WITHDRAWN = STATUS_BASE + "withdrawn";
-    /**
-     * TS 119 612 에는 "정지" 상태 URI 가 없다. 국내 인정제도의 효력정지를 표현해야 하므로
-     * KR 확장 URI 를 쓴다. 표준 URI 와 섞이지 않도록 네임스페이스를 분리했다.
-     */
-    private static final String STATUS_SUSPENDED = "urn:kr:krdss:TrustedList:Svcstatus:suspended";
-
-    private KrTrustListXml() {
-    }
-
-    /** 바이트가 XML 문서로 보이는지 — 앞쪽 공백·BOM 을 건너뛰고 여는 꺾쇠(&lt;)인지만 본다. */
     public static boolean looksLikeXml(byte[] document) {
-        if (document == null) {
-            return false;
-        }
-        int index = 0;
-        // UTF-8 BOM
-        if (document.length >= 3 && (document[0] & 0xFF) == 0xEF
-                && (document[1] & 0xFF) == 0xBB && (document[2] & 0xFF) == 0xBF) {
-            index = 3;
-        }
-        while (index < document.length && Character.isWhitespace(document[index])) {
-            index++;
-        }
-        return index < document.length && document[index] == '<';
+        if (document == null) return false;
+        int i = document.length >= 3 && (document[0] & 255) == 239
+                && (document[1] & 255) == 187 && (document[2] & 255) == 191 ? 3 : 0;
+        while (i < document.length && Character.isWhitespace(document[i])) i++;
+        return i < document.length && document[i] == '<';
     }
 
-    /** KR-TL 을 TS 119 612 XML 로 직렬화한다. */
-    public static byte[] toXml(KrTrustList trustList) {
-        Document document = newDocument();
-        Element root = document.createElementNS(NS, "TrustServiceStatusList");
+    public static byte[] toXml(KrTrustList list) {
+        Document doc = newDocument();
+        Element root = doc.createElementNS(NS, "TrustServiceStatusList");
         root.setAttribute("Id", "kr-tl");
         root.setAttribute("TSLTag", "http://uri.etsi.org/19612/TSLTag");
-        document.appendChild(root);
-
-        KrTrustList.SchemeInformation scheme = trustList.schemeInformation();
-        Element schemeInformation = child(document, root, "SchemeInformation");
-        if (scheme != null) {
-            text(document, schemeInformation, "TSLVersionIdentifier", String.valueOf(scheme.version()));
-            text(document, schemeInformation, "TSLSequenceNumber", String.valueOf(scheme.version()));
-            Element operatorName = child(document, schemeInformation, "SchemeOperatorName");
-            name(document, operatorName, scheme.operatorName());
-            text(document, schemeInformation, "ListIssueDateTime", format(scheme.issueDate()));
-            Element nextUpdate = child(document, schemeInformation, "NextUpdate");
-            text(document, nextUpdate, "dateTime", format(scheme.nextUpdate()));
-        }
-
-        Element providerList = child(document, root, "TrustServiceProviderList");
-        if (trustList.trustServiceProviders() != null) {
-            for (KrTrustList.TrustServiceProvider provider : trustList.trustServiceProviders()) {
-                Element providerElement = child(document, providerList, "TrustServiceProvider");
-                Element tspInformation = child(document, providerElement, "TSPInformation");
-                Element tspName = child(document, tspInformation, "TSPName");
-                name(document, tspName, provider.name());
-
-                Element services = child(document, providerElement, "TSPServices");
-                if (provider.services() == null) {
-                    continue;
-                }
-                for (KrTrustList.TrustService service : provider.services()) {
-                    Element serviceElement = child(document, services, "TSPService");
-                    Element info = child(document, serviceElement, "ServiceInformation");
-                    text(document, info, "ServiceTypeIdentifier", service.serviceTypeIdentifier());
-                    Element serviceName = child(document, info, "ServiceName");
-                    name(document, serviceName, service.serviceName());
-
-                    Element identity = child(document, info, "ServiceDigitalIdentity");
-                    Element digitalId = child(document, identity, "DigitalId");
-                    if (service.digitalIdentity() != null) {
-                        text(document, digitalId, "X509Certificate",
-                                Base64.getEncoder().encodeToString(service.digitalIdentity()));
+        doc.appendChild(root);
+        var scheme = list.schemeInformation();
+        Element si = child(doc, root, "SchemeInformation");
+        text(doc, si, "TSLVersionIdentifier", Integer.toString(scheme.formatVersion()));
+        text(doc, si, "TSLSequenceNumber", scheme.sequenceNumber().toString());
+        names(doc, si, "SchemeOperatorName", List.of(new LocalizedName("ko", scheme.operatorName())));
+        text(doc, si, "HistoricalInformationPeriod", Integer.toString(scheme.historicalInformationPeriod()));
+        text(doc, si, "ListIssueDateTime", scheme.issueDate().toString());
+        text(doc, child(doc, si, "NextUpdate"), "dateTime", scheme.nextUpdate().toString());
+        Element providers = child(doc, root, "TrustServiceProviderList");
+        for (var provider : list.trustServiceProviders()) {
+            Element pe = child(doc, providers, "TrustServiceProvider");
+            names(doc, child(doc, pe, "TSPInformation"), "TSPName",
+                    List.of(new LocalizedName("ko", provider.name())));
+            Element services = child(doc, pe, "TSPServices");
+            for (var service : provider.services()) {
+                Element se = child(doc, services, "TSPService");
+                var current = service.current();
+                Element info = child(doc, se, "ServiceInformation");
+                prefix(doc, info, current.serviceTypeUri(), current.names());
+                var id = current.digitalIdentity();
+                if (id.certificates().isEmpty()) throw invalid("Current identity requires a certificate");
+                identity(doc, info, id.certificates(), id.subjectKeyIdentifiers(), id.subjectName());
+                suffix(doc, info, current.statusUri(), current.statusStartingTime(), current.extensions());
+                if (!service.history().isEmpty()) {
+                    Element history = child(doc, se, "ServiceHistory");
+                    for (var previous : service.history()) {
+                        Element entry = child(doc, history, "ServiceHistoryInstance");
+                        prefix(doc, entry, previous.serviceTypeUri(), previous.names());
+                        var hid = previous.digitalIdentity();
+                        if (hid.subjectKeyIdentifiers().isEmpty()) throw invalid("History requires X509SKI");
+                        identity(doc, entry, List.of(), hid.subjectKeyIdentifiers(), hid.subjectName());
+                        suffix(doc, entry, previous.statusUri(), previous.statusStartingTime(), previous.extensions());
                     }
-                    text(document, info, "ServiceStatus", statusUri(service.status()));
-                    text(document, info, "StatusStartingTime", format(service.statusStartingTime()));
                 }
             }
         }
-        return serialize(document);
+        return serialize(doc, false);
     }
 
-    /**
-     * TS 119 612 XML 을 KR-TL 모델로 되돌린다.
-     *
-     * <p>{@code ds:Signature} 는 무시한다 — 서명 검증은 XML 원문 위에서 별도로 수행한다.</p>
-     */
     public static KrTrustList fromXml(byte[] xml) {
-        Document document = parse(xml);
-        Element root = document.getDocumentElement();
-        if (root == null || !"TrustServiceStatusList".equals(root.getLocalName())) {
-            throw new IllegalArgumentException(
-                    "TS 119 612 신뢰목록 XML 이 아닙니다(루트 요소가 TrustServiceStatusList 가 아님).");
+        return read(xml, false);
+    }
+
+    /** 이전 시연 XML의 이력 보존 기간 누락만 허용한다. 버전과 순번은 여전히 각각 읽는다. */
+    public static KrTrustList fromLegacyXml(byte[] xml) {
+        return read(xml, true);
+    }
+
+    private static KrTrustList read(byte[] xml, boolean legacy) {
+        Element root = parse(xml).getDocumentElement();
+        if (!NS.equals(root.getNamespaceURI()) || !"TrustServiceStatusList".equals(root.getLocalName())) {
+            throw invalid("Expected a TL root in the TL namespace");
         }
-
-        Element schemeElement = first(root, "SchemeInformation");
-        KrTrustList.SchemeInformation scheme = null;
-        if (schemeElement != null) {
-            Element nextUpdate = first(schemeElement, "NextUpdate");
-            scheme = new KrTrustList.SchemeInformation(
-                    intOf(textOf(first(schemeElement, "TSLVersionIdentifier"))),
-                    nameOf(first(schemeElement, "SchemeOperatorName")),
-                    instantOf(textOf(first(schemeElement, "ListIssueDateTime"))),
-                    instantOf(nextUpdate != null ? textOf(first(nextUpdate, "dateTime")) : null));
-        }
-
-        List<KrTrustList.TrustServiceProvider> providers = new ArrayList<>();
-        Element providerList = first(root, "TrustServiceProviderList");
-        if (providerList != null) {
-            for (Element providerElement : all(providerList, "TrustServiceProvider")) {
-                Element tspInformation = first(providerElement, "TSPInformation");
-                String providerName = tspInformation != null ? nameOf(first(tspInformation, "TSPName")) : null;
-
-                List<KrTrustList.TrustService> services = new ArrayList<>();
-                Element servicesElement = first(providerElement, "TSPServices");
-                if (servicesElement != null) {
-                    for (Element serviceElement : all(servicesElement, "TSPService")) {
-                        Element info = first(serviceElement, "ServiceInformation");
-                        if (info == null) {
-                            continue;
-                        }
-                        Element identity = first(info, "ServiceDigitalIdentity");
-                        Element digitalId = identity != null ? first(identity, "DigitalId") : null;
-                        String certificate = digitalId != null ? textOf(first(digitalId, "X509Certificate")) : null;
-
-                        services.add(new KrTrustList.TrustService(
-                                textOf(first(info, "ServiceTypeIdentifier")),
-                                nameOf(first(info, "ServiceName")),
-                                statusOf(textOf(first(info, "ServiceStatus"))),
-                                instantOf(textOf(first(info, "StatusStartingTime"))),
-                                certificate != null ? Base64.getDecoder().decode(certificate.trim()) : null));
-                    }
+        Element si = required(root, "SchemeInformation");
+        String period = optional(si, "HistoricalInformationPeriod");
+        if (period == null && !legacy) throw invalid("Missing HistoricalInformationPeriod");
+        var scheme = new SchemeInformation(integer(si, "TSLVersionIdentifier"),
+                new BigInteger(value(si, "TSLSequenceNumber")), value(required(si, "SchemeOperatorName"), "Name"),
+                time(si, "ListIssueDateTime"), time(required(si, "NextUpdate"), "dateTime"),
+                period == null ? 65535 : Integer.parseInt(period));
+        List<TrustServiceProvider> providers = new ArrayList<>();
+        for (Element pe : children(required(root, "TrustServiceProviderList"), "TrustServiceProvider")) {
+            String name = value(required(required(pe, "TSPInformation"), "TSPName"), "Name");
+            List<TrustService> services = new ArrayList<>();
+            for (Element se : children(required(pe, "TSPServices"), "TSPService")) {
+                Element ci = required(se, "ServiceInformation");
+                var cid = readIdentity(required(ci, "ServiceDigitalIdentity"), false);
+                var current = new ServiceInformation(value(ci, "ServiceTypeIdentifier"), readNames(ci),
+                        new CurrentDigitalIdentity(cid.certificates(), cid.skis(), cid.subject()),
+                        value(ci, "ServiceStatus"), time(ci, "StatusStartingTime"), readExtensions(ci));
+                List<ServiceHistoryInstance> history = new ArrayList<>();
+                Element he = one(se, "ServiceHistory");
+                if (he != null) for (Element hi : children(he, "ServiceHistoryInstance")) {
+                    var hid = readIdentity(required(hi, "ServiceDigitalIdentity"), true);
+                    history.add(new ServiceHistoryInstance(value(hi, "ServiceTypeIdentifier"), readNames(hi),
+                            new HistoricalDigitalIdentity(hid.skis(), hid.subject()),
+                            value(hi, "ServiceStatus"), time(hi, "StatusStartingTime"), readExtensions(hi)));
                 }
-                providers.add(new KrTrustList.TrustServiceProvider(providerName, List.copyOf(services)));
+                // 관리 ID는 XML에 추가하지 않는다. 가져온 서비스의 연결은 관리 저장소 책임이다.
+                services.add(new TrustService(null, current, history));
+            }
+            providers.add(new TrustServiceProvider(null, name, services));
+        }
+        return new KrTrustList(scheme, providers);
+    }
+
+    private record Identity(List<BinaryValue> certificates, List<BinaryValue> skis, String subject) { }
+
+    private static Identity readIdentity(Element parent, boolean historical) {
+        List<BinaryValue> certs = new ArrayList<>(), skis = new ArrayList<>();
+        String subject = null;
+        for (Element id : children(parent, "DigitalId")) {
+            for (Element element : elements(id)) {
+                if (!NS.equals(element.getNamespaceURI())) throw invalid("Foreign DigitalId element");
+                String v = element.getTextContent().trim();
+                switch (element.getLocalName()) {
+                    case "X509Certificate" -> {
+                        if (historical) throw invalid("Certificate in historical identity");
+                        certs.add(binary(v));
+                    }
+                    case "X509SKI" -> skis.add(binary(v));
+                    case "X509SubjectName" -> {
+                        if (subject != null) throw invalid("Duplicate subject name");
+                        subject = v;
+                    }
+                    default -> throw invalid("Unsupported DigitalId: " + element.getLocalName());
+                }
             }
         }
-        return new KrTrustList(scheme, List.copyOf(providers));
+        if (historical ? skis.isEmpty() : certs.isEmpty()) throw invalid("Incomplete digital identity");
+        return new Identity(certs, skis, subject);
     }
 
-    // --- 상태 매핑 ---------------------------------------------------------
-
-    private static String statusUri(KrTrustList.ServiceStatus status) {
-        if (status == null) {
-            return STATUS_WITHDRAWN;
-        }
-        return switch (status) {
-            case GRANTED -> STATUS_GRANTED;
-            case WITHDRAWN -> STATUS_WITHDRAWN;
-            case SUSPENDED -> STATUS_SUSPENDED;
-        };
+    private static BinaryValue binary(String value) {
+        // XML base64Binary permits whitespace, but arbitrary non-alphabet bytes must not be ignored.
+        return new BinaryValue(Base64.getDecoder().decode(value.replaceAll("[\\t\\n\\r ]", "")));
     }
 
-    private static KrTrustList.ServiceStatus statusOf(String uri) {
-        if (uri == null) {
-            return KrTrustList.ServiceStatus.WITHDRAWN;
-        }
-        String value = uri.trim();
-        if (STATUS_GRANTED.equals(value)) {
-            return KrTrustList.ServiceStatus.GRANTED;
-        }
-        if (STATUS_SUSPENDED.equals(value)) {
-            return KrTrustList.ServiceStatus.SUSPENDED;
-        }
-        return KrTrustList.ServiceStatus.WITHDRAWN;
+    private static void prefix(Document doc, Element info, String type, List<LocalizedName> names) {
+        text(doc, info, "ServiceTypeIdentifier", type);
+        names(doc, info, "ServiceName", names);
     }
 
-    // --- DOM 도우미 --------------------------------------------------------
-
-    private static Element child(Document document, Element parent, String name) {
-        Element element = document.createElementNS(NS, name);
-        parent.appendChild(element);
-        return element;
-    }
-
-    private static void text(Document document, Element parent, String name, String value) {
-        Element element = child(document, parent, name);
-        element.setTextContent(value != null ? value : "");
-    }
-
-    /** TS 119 612 의 다국어 이름 구조: {@code <Name xml:lang="ko">…</Name>}. */
-    private static void name(Document document, Element parent, String value) {
-        Element element = child(document, parent, "Name");
-        element.setAttributeNS(XMLConstants.XML_NS_URI, "xml:lang", "ko");
-        element.setTextContent(value != null ? value : "");
-    }
-
-    private static String nameOf(Element parent) {
-        Element name = parent != null ? first(parent, "Name") : null;
-        return textOf(name);
-    }
-
-    private static Element first(Element parent, String localName) {
-        NodeList nodes = parent.getElementsByTagNameNS(NS, localName);
-        for (int i = 0; i < nodes.getLength(); i++) {
-            Node node = nodes.item(i);
-            // getElementsByTagNameNS 는 후손 전체를 훑으므로 직계 자식만 고른다.
-            if (node.getParentNode() == parent) {
-                return (Element) node;
+    private static void suffix(Document doc, Element info, String status, Instant start,
+            List<ServiceExtension> extensions) {
+        text(doc, info, "ServiceStatus", status);
+        text(doc, info, "StatusStartingTime", start.toString());
+        if (!extensions.isEmpty()) {
+            Element container = child(doc, info, "ServiceInformationExtensions");
+            for (var extension : extensions) {
+                Element e = child(doc, container, "Extension");
+                e.setAttribute("Critical", Boolean.toString(extension.critical()));
+                for (String payload : extension.payloadXml()) {
+                    Element parsed = parse(payload.getBytes(StandardCharsets.UTF_8)).getDocumentElement();
+                    e.appendChild(doc.importNode(parsed, true));
+                }
             }
         }
-        return null;
     }
 
-    private static List<Element> all(Element parent, String localName) {
-        List<Element> elements = new ArrayList<>();
-        NodeList nodes = parent.getElementsByTagNameNS(NS, localName);
-        for (int i = 0; i < nodes.getLength(); i++) {
-            Node node = nodes.item(i);
-            if (node.getParentNode() == parent) {
-                elements.add((Element) node);
+    private static List<ServiceExtension> readExtensions(Element info) {
+        Element container = one(info, "ServiceInformationExtensions");
+        if (container == null) return List.of();
+        List<ServiceExtension> result = new ArrayList<>();
+        for (Element extension : children(container, "Extension")) {
+            String critical = extension.getAttribute("Critical");
+            if (!List.of("true", "false", "1", "0").contains(critical)) throw invalid("Invalid Critical");
+            List<String> payloads = new ArrayList<>();
+            for (Element payload : elements(extension)) payloads.add(fragment(payload));
+            result.add(new ServiceExtension(critical.equals("true") || critical.equals("1"), payloads));
+        }
+        return List.copyOf(result);
+    }
+
+    /** 상위 namespace 선언을 보존하여 미지원 QName 속성의 접두사를 잃지 않는다. */
+    private static String fragment(Element element) {
+        Document doc = newDocument();
+        Element clone = (Element) doc.importNode(element, true);
+        for (Node node = element; node instanceof Element; node = node.getParentNode()) {
+            var attributes = node.getAttributes();
+            for (int i = 0; i < attributes.getLength(); i++) {
+                var attr = attributes.item(i);
+                if (XMLConstants.XMLNS_ATTRIBUTE_NS_URI.equals(attr.getNamespaceURI())
+                        && !clone.hasAttribute(attr.getNodeName())) {
+                    clone.setAttributeNS(XMLConstants.XMLNS_ATTRIBUTE_NS_URI, attr.getNodeName(), attr.getNodeValue());
+                }
             }
         }
-        return elements;
+        doc.appendChild(clone);
+        return new String(serialize(doc, true), StandardCharsets.UTF_8);
     }
 
-    private static String textOf(Element element) {
-        return element != null ? element.getTextContent() : null;
+    private static void identity(Document doc, Element info, List<BinaryValue> certs,
+            List<BinaryValue> skis, String subject) {
+        Element parent = child(doc, info, "ServiceDigitalIdentity");
+        for (var cert : certs) text(doc, child(doc, parent, "DigitalId"), "X509Certificate",
+                Base64.getEncoder().encodeToString(cert.bytes()));
+        if (subject != null) text(doc, child(doc, parent, "DigitalId"), "X509SubjectName", subject);
+        for (var ski : skis) text(doc, child(doc, parent, "DigitalId"), "X509SKI",
+                Base64.getEncoder().encodeToString(ski.bytes()));
     }
 
-    private static int intOf(String value) {
+    private static void names(Document doc, Element parent, String tag, List<LocalizedName> names) {
+        if (names.isEmpty()) throw invalid("Empty names");
+        Element container = child(doc, parent, tag);
+        for (var name : names) {
+            Element e = child(doc, container, "Name");
+            e.setAttributeNS(XMLConstants.XML_NS_URI, "xml:lang", name.language());
+            e.setTextContent(name.value());
+        }
+    }
+
+    private static List<LocalizedName> readNames(Element info) {
+        List<LocalizedName> result = new ArrayList<>();
+        for (Element n : children(required(info, "ServiceName"), "Name")) {
+            result.add(new LocalizedName(n.getAttributeNS(XMLConstants.XML_NS_URI, "lang"), n.getTextContent()));
+        }
+        if (result.isEmpty()) throw invalid("Missing ServiceName/Name");
+        return List.copyOf(result);
+    }
+
+    private static Element child(Document d, Element parent, String name) {
+        Element e = d.createElementNS(NS, name);
+        parent.appendChild(e);
+        return e;
+    }
+    private static void text(Document d, Element p, String name, String value) {
+        child(d, p, name).setTextContent(value);
+    }
+    private static List<Element> elements(Element parent) {
+        List<Element> result = new ArrayList<>();
+        for (Node n = parent.getFirstChild(); n != null; n = n.getNextSibling()) {
+            if (n instanceof Element e) result.add(e);
+        }
+        return result;
+    }
+    private static List<Element> children(Element parent, String name) {
+        return elements(parent).stream().filter(e -> NS.equals(e.getNamespaceURI()) && name.equals(e.getLocalName())).toList();
+    }
+    private static Element one(Element parent, String name) {
+        var found = children(parent, name);
+        if (found.size() > 1) throw invalid("Duplicate " + name);
+        return found.isEmpty() ? null : found.get(0);
+    }
+    private static Element required(Element parent, String name) {
+        Element e = one(parent, name);
+        if (e == null) throw invalid("Missing " + name);
+        return e;
+    }
+    private static String value(Element parent, String name) {
+        String value = required(parent, name).getTextContent().trim();
+        if (value.isEmpty()) throw invalid("Empty " + name);
+        return value;
+    }
+    private static String optional(Element parent, String name) {
+        Element e = one(parent, name);
+        return e == null ? null : e.getTextContent().trim();
+    }
+    private static int integer(Element parent, String name) { return Integer.parseInt(value(parent, name)); }
+    private static Instant time(Element parent, String name) {
+        try { return Instant.parse(value(parent, name)); }
+        catch (java.time.DateTimeException e) { throw new IllegalArgumentException("Invalid " + name, e); }
+    }
+    private static IllegalArgumentException invalid(String message) { return new IllegalArgumentException(message); }
+
+    private static DocumentBuilderFactory factory() {
+        var f = DocumentBuilderFactory.newInstance();
+        f.setNamespaceAware(true);
         try {
-            return value != null ? Integer.parseInt(value.trim()) : 0;
-        } catch (NumberFormatException e) {
-            return 0;
-        }
+            f.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+            f.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+            f.setFeature("http://xml.org/sax/features/external-general-entities", false);
+            f.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+            f.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+            f.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
+            f.setXIncludeAware(false);
+            f.setExpandEntityReferences(false);
+            return f;
+        } catch (Exception e) { throw new IllegalStateException("Secure XML parser unavailable", e); }
     }
-
-    private static String format(Instant instant) {
-        return instant != null ? instant.toString() : null;
-    }
-
-    private static Instant instantOf(String value) {
-        if (value == null || value.isBlank()) {
-            return null;
-        }
-        try {
-            return Instant.parse(value.trim());
-        } catch (DateTimeParseException e) {
-            return null;
-        }
-    }
-
-    // --- 안전한 파서·직렬화기 ---------------------------------------------
-
-    private static DocumentBuilderFactory secureFactory() {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setNamespaceAware(true);
-        try {
-            // 외부 엔티티·DTD 를 막는다. 신뢰목록은 외부에서 받아오는 문서다.
-            factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
-            factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
-            factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
-            factory.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
-            factory.setXIncludeAware(false);
-            factory.setExpandEntityReferences(false);
-        } catch (Exception e) {
-            throw new IllegalStateException("XML 파서를 안전 모드로 설정하지 못했습니다: " + e.getMessage(), e);
-        }
-        return factory;
-    }
-
     private static Document newDocument() {
-        try {
-            DocumentBuilder builder = secureFactory().newDocumentBuilder();
-            return builder.newDocument();
-        } catch (Exception e) {
-            throw new IllegalStateException("XML 문서를 만들지 못했습니다: " + e.getMessage(), e);
-        }
+        try { return factory().newDocumentBuilder().newDocument(); }
+        catch (Exception e) { throw new IllegalStateException(e); }
     }
-
-    private static Document parse(byte[] xml) {
-        try {
-            DocumentBuilder builder = secureFactory().newDocumentBuilder();
-            return builder.parse(new ByteArrayInputStream(xml));
-        } catch (Exception e) {
-            throw new IllegalArgumentException("KR-TL XML 파싱 실패: " + e.getMessage(), e);
-        }
+    private static Document parse(byte[] bytes) {
+        try { return factory().newDocumentBuilder().parse(new ByteArrayInputStream(bytes)); }
+        catch (Exception e) { throw new IllegalArgumentException("Invalid TL XML", e); }
     }
-
-    private static byte[] serialize(Document document) {
+    private static byte[] serialize(Document doc, boolean fragment) {
         try {
-            TransformerFactory factory = TransformerFactory.newInstance();
-            factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
-            Transformer transformer = factory.newTransformer();
-            transformer.setOutputProperty(OutputKeys.ENCODING, StandardCharsets.UTF_8.name());
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-            ByteArrayOutputStream out = new ByteArrayOutputStream();
-            transformer.transform(new DOMSource(document), new StreamResult(out));
-            return out.toByteArray();
-        } catch (Exception e) {
-            throw new IllegalStateException("KR-TL XML 직렬화 실패: " + e.getMessage(), e);
-        }
+            var f = TransformerFactory.newInstance();
+            f.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+            f.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+            f.setAttribute(XMLConstants.ACCESS_EXTERNAL_STYLESHEET, "");
+            var t = f.newTransformer();
+            t.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+            t.setOutputProperty(OutputKeys.INDENT, "no");
+            t.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, fragment ? "yes" : "no");
+            var output = new ByteArrayOutputStream();
+            t.transform(new DOMSource(doc), new StreamResult(output));
+            return output.toByteArray();
+        } catch (Exception e) { throw new IllegalStateException("Cannot serialize TL XML", e); }
     }
 }
