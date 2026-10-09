@@ -5,7 +5,7 @@
 - 브랜치 `feat/claude-tl-admin` (main ← PR #29 병합 후 분기). 결과: [33](reviews/33-관리화면-초안저장-구현결과.md).
 - 사용자 결정: REST 계약 문서·외부 사업자/서비스 관리 인터페이스는 만들지 않는다. 관리자가 PoC 관리 화면에서 사업자를 직접 등록하고 인증서를 입력한다. 관리 서비스 개발에 집중한다.
 - 실행: `gradlew.bat :poc:poc-kisa-tl:bootRun` → http://localhost:8081 . 저장 루트 `runtime/tl-management` (Git 비관리).
-- PoC 키 체계 생성 완료(2026-10-09): `runtime/tl-management/pki` 세트 krtl-poc-pki-v1, 22개 노드, UN 미등재 대조군 포함. 설계 27 상단 참조. Git 비관리. 다른 체크아웃에는 재생성하지 않고 폴더 전체를 수동 복사한 뒤 해시를 대조한다(설계 27 상단). main 체크아웃에는 복사 완료(파일 130개 해시 일치).
+- PoC 키 체계 생성 완료(2026-10-09): `runtime/tl-management/pki` 세트 krtl-poc-pki-v1, 22개 노드, UN 미등재 대조군 포함. 설계 27 상단 참조. Git 비관리. `scripts/poc/tl-management/gen-tl-pki.ps1`이 생성(없을 때만)과 main 체크아웃 자동 복사·해시 대조를 수행한다(설계 27 상단). main 체크아웃에는 복사 완료(파일 130개 해시 일치).
 - 다음 작업: XML 생성·T-02 키 파일 서명 → issuanceId 불변 보관·BASELINE/TRIAL → 제공본 선택 → IF-07 → 화면 발행 메뉴 연결.
 
 ---
