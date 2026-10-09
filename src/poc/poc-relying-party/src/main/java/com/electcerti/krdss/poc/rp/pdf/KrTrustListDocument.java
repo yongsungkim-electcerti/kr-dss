@@ -46,7 +46,8 @@ public record KrTrustListDocument(Format format, KrTrustList trustList, byte[] r
      */
     public static KrTrustListDocument parse(byte[] document) {
         if (KrTrustListXml.looksLikeXml(document)) {
-            return new KrTrustListDocument(Format.XML, KrTrustListXml.fromXml(document), document, null);
+            // 기존 시연 파일은 이력 보존 기간 필드가 없어 명시적 호환 파서로 읽는다.
+            return new KrTrustListDocument(Format.XML, KrTrustListXml.fromLegacyXml(document), document, null);
         }
         SignedKrTrustList jws = SignedKrTrustList.parse(document);
         return new KrTrustListDocument(

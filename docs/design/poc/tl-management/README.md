@@ -4,6 +4,13 @@
 
 ## 작업 진입점
 
+- [개정안 PoC 적용 기준](concept-v02-application.md) — 운영 정책과 시험 예외, 화면 표시
+- [PoC 프로파일 v1](profile-poc-v1.md) — 임시 URI·분야·신뢰점 레벨·XML 연결
+- [발행·저장 트랜잭션과 복구](issuance-recovery.md) — 중복 요청·상태 확정·실패 복구
+
+- [수정 개념 설계 v02 로컬 보관본](sources/2026-10-08-concept-v02/README.md) — 2026-10-08 원문, 2026-10-09 검토
+- [개정 설계의 PoC 영향 검토](../../../development/poc/tl-management/reviews/30-수정-개념설계-v02-영향검토.md)
+
 - [확정 범위](scope.md)
 - [시스템 구성과 책임](architecture.md)
 - [초안·스냅숏·발행본 저장](data-storage.md)

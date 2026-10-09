@@ -24,6 +24,8 @@ EU 모드는 검증된 LOTL에서 국가 TL 주소와 서명 정보를 얻는 �
 
 ## 2. 책임과 URL
 
+2026-10-09 보완: [개정안 PoC 적용 기준](../concept-v02-application.md)에 따라 목표 운영 시스템의 게시 거부와 이 PoC의 오류 제공을 구별한다. 정상·시험 발행본 모두 제공 가능하다. 저장 상태 확정·제공 포인터 전환·복구는 [발행·복구 상세](../issuance-recovery.md)를 따른다. HTTP 경로·매체 유형·ETag 계약은 변경하지 않는다.
+
 | 항목 | 계약 |
 |---|---|
 | 제공자 | Spring Boot WAS의 TL 제공 기능 |
@@ -128,6 +130,8 @@ XML과 해시는 같은 불변 발행본에서 계산해 함께 게시 대상으
 | 405 | 지원하지 않는 변경 메서드 | 요청 방식 확인 |
 | 503 | 선택한 파일 읽기 실패·일시 제공 불가 | Retry-After가 있으면 따르고 제한된 재시도 |
 | 500 | 예상하지 못한 제공 오류 | 기존 유효본 유지, 무한 재시도 금지 |
+
+관리 state 손상이나 선택된 확정 파일의 해시 불일치도 503/TL_UNAVAILABLE로 처리한다. 이는 의도적으로 만든 순번·시각 의미 오류와 다르다. 손상 상태에서 최대 순번 파일이나 이전 정상본으로 자동 교체하지 않는다.
 
 오류 응답은 `Cache-Control: no-store`, `Content-Type: text/plain; charset=utf-8`로 제공한다. 본문은 `TL_NOT_PUBLISHED`, `TL_UNAVAILABLE`, `NOT_ACCEPTABLE`, `METHOD_NOT_ALLOWED`, `INTERNAL_ERROR`처럼 짧은 진단 문자열을 사용한다. 클라이언트는 HTTP 상태를 우선 처리하고 오류 본문을 TL XML로 파싱하지 않는다. 503의 Retry-After 값은 서버 설정이며 특정 대기시간을 시나리오로 고정하지 않는다.
 

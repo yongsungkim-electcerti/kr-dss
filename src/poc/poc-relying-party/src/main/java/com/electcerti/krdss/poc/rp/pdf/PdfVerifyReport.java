@@ -43,7 +43,7 @@ public record PdfVerifyReport(
      * @param provided     KR-TL 이 제출되었는지
      * @param signature    KR-TL 자체의 전자서명 검증 결과
      * @param operator     신뢰목록 운영기관
-     * @param version      신뢰목록 버전
+     * @param version      발행 순번의 십진 문자열(큰 정수의 JSON 정밀도 손실 방지)
      * @param issueDate    발행일
      * @param nextUpdate   다음 갱신 예정일
      * @param serviceCount 수록된 신뢰 서비스 수
@@ -55,7 +55,7 @@ public record PdfVerifyReport(
             boolean provided,
             TrustListSignature signature,
             String operator,
-            Integer version,
+            String version,
             Instant issueDate,
             Instant nextUpdate,
             int serviceCount,

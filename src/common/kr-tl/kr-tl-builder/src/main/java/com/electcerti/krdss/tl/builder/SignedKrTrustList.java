@@ -115,7 +115,7 @@ public record SignedKrTrustList(
 
     private static KrTrustList readTrustList(byte[] json) {
         try {
-            return KrTrustListBuilder.mapper().readValue(json, KrTrustList.class);
+            return LegacyKrTrustListJson.read(KrTrustListBuilder.mapper().readTree(json));
         } catch (Exception e) {
             throw new IllegalArgumentException("KR-TL 본문 파싱 실패: " + e.getMessage(), e);
         }
