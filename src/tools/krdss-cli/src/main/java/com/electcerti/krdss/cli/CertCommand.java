@@ -59,12 +59,14 @@ import picocli.CommandLine.Option;
  *   <li>{@code cert gen}   — 단일 인증서 한 장 발급</li>
  *   <li>{@code cert chain} — 템플릿(JSON) 하나로 ROOT→SUB→EE 전체 체인을 일괄 발급</li>
  *   <li>{@code cert p12}   — 인증서+개인키(+체인)를 PKCS#12 키스토어로 묶기</li>
+ *   <li>{@code cert tree}  — 프로파일(JSON)로 PoC 인증체계 전체 생성·검증 ({@link PkiTreeCommand})</li>
  * </ul>
  */
 @Command(
         name = "cert",
         description = "테스트 인증서(CA/EE)를 발급한다.",
-        subcommands = {CertCommand.GenCommand.class, CertCommand.ChainCommand.class, CertCommand.P12Command.class})
+        subcommands = {CertCommand.GenCommand.class, CertCommand.ChainCommand.class, CertCommand.P12Command.class,
+                PkiTreeCommand.class})
 public class CertCommand implements Callable<Integer> {
 
     @Override

@@ -2,7 +2,9 @@
 
 작성일: 2026-10-07. 경로 정리: 2026-10-08. 미등재 대조군 UN 추가: 2026-10-09. 새 PoC 생성 루트는 `runtime/tl-management/pki/`이며 실제 생성은 후속 개발이다.
 
-**현재는 설계만 반영한다.** 아래 디렉터리, 키·인증서, 메타데이터, 디렉터리별 README는 향후 개발 때 생성한다. 실제 키 생성이나 기존 인증서 교체는 이번 작업에 포함하지 않는다.
+**2026-10-09 생성 완료.** 세트 `krtl-poc-pki-v1`(EC P-256, 22개 노드)을 `krdss-cli cert tree`와 프로파일 `scripts/poc/tl-management/pki-profile.json`으로 생성했다. 노드별 키쌍 일치·발급자 서명·Root까지 PKIX 경로·역할별 KU/EKU 검사를 통과했고 openssl로 22개 체인을 별도 확인했다. 가입자 인증서는 생성하지 않았다. 생성물은 Git 비관리이며 생성한 체크아웃의 `runtime/`에만 있다. 기존 `runtime/pki/legacy`는 그대로 두었다.
+
+생성 명령(저장소 루트, 출력 폴더가 있으면 거부): `gradlew.bat :tools:krdss-cli:run --args="cert tree -f scripts/poc/tl-management/pki-profile.json -o runtime/tl-management/pki"`
 
 ## 1. 인증체계 구성
 
