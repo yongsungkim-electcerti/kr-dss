@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KR-TL 수신 검증 샘플</title>
+    <style>
+        :root {
+            --bg: #f5f7fa; --panel: #ffffff; --line: #dfe4ea; --text: #1d2733; --muted: #66758a;
+            --ok: #0f8a5f; --ok-bg: #e6f6ef; --bad: #c0392b; --bad-bg: #fbeaea; --warn: #a86400; --warn-bg: #fff3df;
+            --info: #2d63c8; --info-bg: #e8effd; --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f141b; --panel: #171e27; --line: #2a3441; --text: #e6edf5; --muted: #93a2b5;
+                --ok: #4fd1a1; --ok-bg: #12352a; --bad: #ff8a80; --bad-bg: #3a1c1c; --warn: #ffc06b; --warn-bg: #3a2c14;
+                --info: #8db4ff; --info-bg: #1b2a45;
+            }
+        }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Pretendard, "Noto Sans KR", system-ui, sans-serif; color: var(--text); background: var(--bg); }
+        main { max-width: 1120px; margin: 0 auto; padding: 28px 16px 60px; }
+        h1 { font-size: 24px; margin: 0 0 6px; }
+        h2 { font-size: 15px; margin: 0 0 14px; }
+        p.lead { margin: 0 0 20px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+        .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-bottom: 16px; }
+        .grid { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+        @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+        label { display: block; font-size: 12px; color: var(--muted); margin: 10px 0 5px; }
+        input[type=text], input[type=number], input[type=datetime-local], textarea {
+            width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; font-size: 13px;
+            background: var(--bg); color: var(--text);
+        }
+        textarea { min-height: 70px; font: 11px var(--mono); resize: vertical; }
+        button { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 8px; padding: 8px 14px; font-weight: 600; cursor: pointer; }
+        button.primary { background: var(--info); border-color: var(--info); color: #fff; }
+        button:disabled { opacity: .5; cursor: wait; }
+        .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+        .mono { font-family: var(--mono); font-size: 12px; overflow-wrap: anywhere; }
+        .muted { color: var(--muted); }
+        table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        th { text-align: left; font-size: 11px; color: var(--muted); font-weight: 600; padding: 0 8px 8px; }
+        td { border-top: 1px solid var(--line); padding: 9px 8px; vertical-align: top; }
+        .table-wrap { overflow-x: auto; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+        .pass { color: var(--ok); background: var(--ok-bg); }
+        .fail { color: var(--bad); background: var(--bad-bg); }
+        .warn { color: var(--warn); background: var(--warn-bg); }
+        .info, .skip { color: var(--info); background: var(--info-bg); }
+        .banner { padding: 14px 16px; border-radius: 10px; font-weight: 700; margin-bottom: 16px; }
+        .banner small { display: block; font-weight: 400; margin-top: 4px; }
+        dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 0; font-size: 13px; }
+        dt { color: var(--muted); }
+        dd { margin: 0; overflow-wrap: anywhere; }
+        .codes { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+    </style>
+</head>
+<body>
+<main>
+    <h1>KR-TL 수신 검증 샘플</h1>
+    <p class="lead">
+        PDF 뷰어·이용기관 검증 모듈이 IF-07(<span class="mono">GET /tl/kr-tl.xml</span>)로 TL을 받아 수행하는 <strong>TL 관련 검증 단계만</strong> 보여줍니다.
+        PDF 서명 무결성·가입자 인증서 경로·OCSP 검증은 하지 않습니다. 신뢰앵커는 서버에서 받지 않고 사전 설정한 KISA TL RootCA(T-00)를 사용합니다.
+    </p>
+
+    <div class="grid">
+        <section class="card">
+            <h2>설정</h2>
+            <label for="url">TL 주소 (IF-07)</label>
+            <input type="text" id="url" value="http://localhost:8081/tl/kr-tl.xml">
+            <label for="anchorFile">신뢰앵커 — KISA TL RootCA (T-00) cert.pem</label>
+            <input type="file" id="anchorFile" accept=".pem,.crt,.cer">
+            <textarea id="anchorPem" placeholder="-----BEGIN CERTIFICATE----- … (runtime/tl-management/pki/tl-signer/T-00-root/cert.pem)"></textarea>
+            <div class="mono muted" id="anchorInfo">신뢰앵커 미설정</div>
+            <div class="grid" style="gap:10px">
+                <div><label for="at">검증 기준 시각 (비우면 현재)</label><input type="datetime-local" id="at" step="1"></div>
+                <div><label for="tolerance">미래 발행 허용 오차 (분)</label><input type="number" id="tolerance" value="5" min="0"></div>
+            </div>
+            <div class="row">
+                <button class="primary" id="btnFetch">지금 조회 (IF-07)</button>
+                <button id="btnForget">보유본 지우기</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>HTTP 조회</h2>
+            <dl id="http"><dt>상태</dt><dd class="muted">아직 조회하지 않음</dd></dl>
+        </section>
+    </div>
+
+    <div id="decision"></div>
+
+    <section class="card">
+        <h2>TL 검증 단계</h2>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th style="width:28%">단계</th><th style="width:10%">결과</th><th>내용</th></tr></thead>
+                <tbody id="steps"><tr><td colspan="3" class="muted">조회하면 단계별 결과가 표시됩니다.</td></tr></tbody>
+            </table>
+        </div>
+        <div class="codes" id="reasons"></div>
+    </section>
+
+    <section class="card">
+        <h2>보유(수용) TL</h2>
+        <div id="accepted" class="muted">수용한 TL이 없습니다.</div>
+    </section>
+
+    <section class="card">
+        <h2>TL 서비스 조회 (PDF 검증 중 TL 단계)</h2>
+        <p class="lead" style="margin-bottom:8px">인증서를 넣으면 수용 TL에서 해당 서비스(자기 자신 또는 AKI로 직접 발급 CA)를 찾아 지정 시각의 상태를 보여줍니다. 체인 서명·폐기 확인은 하지 않습니다.</p>
+        <div class="grid" style="gap:10px">
+            <div><label for="lookupFile">인증서 (PEM/DER)</label><input type="file" id="lookupFile" accept=".pem,.crt,.cer,.der"></div>
+            <div><label for="lookupAt">조회 시각 (예: PDF 서명 시각, 비우면 현재)</label><input type="datetime-local" id="lookupAt" step="1"></div>
+        </div>
+        <div class="row"><button id="btnLookup">서비스 조회</button></div>
+        <div id="lookup" style="margin-top:12px"></div>
+    </section>
+</main>
+
+<script type="module">
+import {
+    verifyTrustList, fetchTrustList, fetchHash, pemToDerList, parseCertificate, base64ToBytes, bytesToBase64,
+    sha256, toHex, resolveStatus, lookupService, parseTrustList, POC_PROFILE,
+} from "./krtl-verifier.js";
+
+const $ = (id) => document.getElementById(id);
+const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+const KEY_ACCEPTED = "krtl.sample.accepted";
+const KEY_SETTINGS = "krtl.sample.settings";
+const STATUS_LABEL = {ACCREDITED: "인정", SUSPENDED: "정지", WITHDRAWN: "철회",
+    NOT_LISTED: "TL 미등재", NOT_ACCREDITED_AT_TIME: "해당 시각 미인정", INVALID_HISTORY: "이력 오류"};
+const RESULT_LABEL = {pass: "통과", fail: "실패", warn: "주의", info: "참고", skip: "생략"};
+const kst = (d) => d ? new Intl.DateTimeFormat("sv-SE", {timeZone: "Asia/Seoul", dateStyle: "short", timeStyle: "medium"}).format(new Date(d)) + " KST" : "—";
+
+// ---------------------------------------------------------------- 저장 (이 브라우저의 수용본·설정)
+const store = {
+    get(key) { try { return JSON.parse(localStorage.getItem(key)); } catch { return null; } },
+    set(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* 저장 불가 환경 */ } },
+    remove(key) { try { localStorage.removeItem(key); } catch { /* 저장 불가 환경 */ } },
+};
+
+function loadSettings() {
+    const s = store.get(KEY_SETTINGS);
+    if (!s) return;
+    if (s.url) $("url").value = s.url;
+    if (s.anchorPem) $("anchorPem").value = s.anchorPem;
+    if (s.tolerance != null) $("tolerance").value = s.tolerance;
+}
+
+function saveSettings() {
+    store.set(KEY_SETTINGS, {url: $("url").value.trim(), anchorPem: $("anchorPem").value, tolerance: $("tolerance").value});
+}
+
+async function anchors() {
+    const ders = pemToDerList($("anchorPem").value);
+    if (!ders.length) { $("anchorInfo").textContent = "신뢰앵커 미설정"; return []; }
+    const info = await Promise.all(ders.map(async (d) => `${parseCertificate(d).subject} · SHA-256 ${toHex(await sha256(d)).slice(0, 16)}…`));
+    $("anchorInfo").textContent = info.join("\n");
+    return ders;
+}
+
+const validationTime = () => $("at").value ? new Date($("at").value + "+09:00") : new Date();
+
+// ---------------------------------------------------------------- 조회 흐름
+async function run() {
+    const button = $("btnFetch");
+    button.disabled = true;
+    saveSettings();
+    try {
+        const url = $("url").value.trim();
+        const anchorDers = await anchors();
+        const at = validationTime();
+        const toleranceMs = Number($("tolerance").value || 0) * 60000;
+        let accepted = store.get(KEY_ACCEPTED);
+        if (accepted && accepted.url !== url) accepted = null;
+
+        // 1) 조건부 GET: 보유(수용)본의 ETag로만 보낸다. 거부본 ETag는 쓰지 않는다.
+        let http;
+        try {
+            http = await fetchTrustList(url, accepted ? accepted.etag : null);
+        } catch (e) {
+            renderHttp({status: "네트워크 오류", error: e.message}, accepted);
+            return decide("error", "TL을 받지 못했습니다(네트워크·CORS). 기존 수용본을 유지합니다.", accepted, at);
+        }
+        let sentEtag = accepted ? accepted.etag : null;
+
+        // 2) 304: 서버 파일 불변. 보유본의 서명·만료를 현재 시각으로 다시 확인한다.
+        if (http.status === 304 && accepted) {
+            const again = await verifyTrustList(base64ToBytes(accepted.bytes), {anchors: anchorDers, at, toleranceMs, accepted});
+            renderHttp(http, accepted, sentEtag);
+            renderSteps(again);
+            if (again.accepted) return decide("same", "변경 없음(304). 보유본을 다시 확인했고 계속 유효합니다.", accepted, at);
+            // 만료 등으로 보유본이 무효 → 조건 없는 GET 한 번
+            http = await fetchTrustList(url, null);
+            sentEtag = null;
+            if (http.status !== 200) {
+                renderHttp(http, accepted, sentEtag);
+                return decide("none", "보유본이 더 이상 유효하지 않고 새 TL도 받지 못했습니다. 유효 TL 없음.", null, at);
+            }
+        }
+        renderHttp(http, accepted, sentEtag);
+        if (http.status !== 200) {
+            const reason = http.status === 404 ? "제공 TL 없음(TL_NOT_PUBLISHED)" : `서버 응답 ${http.status} ${http.error || ""}`;
+            return decide("error", `${reason}. 기존 수용본을 유지합니다.`, accepted, at);
+        }
+
+        // 3) 200: 받은 바이트를 전부 검증
+        const report = await verifyTrustList(http.bytes, {anchors: anchorDers, at, toleranceMs, accepted});
+        renderSteps(report);
+        checkHash(url, report.sha256);
+        if (report.accepted) {
+            const tl = report.trustList;
+            const next = {
+                url, etag: http.etag, sha256: report.sha256, bytes: bytesToBase64(http.bytes),
+                xml: new TextDecoder().decode(http.bytes), sequence: tl.sequence.toString(),
+                issuedAt: tl.issuedAt.toISOString(), nextUpdate: tl.nextUpdate.toISOString(), acceptedAt: new Date().toISOString(),
+            };
+            store.set(KEY_ACCEPTED, next);
+            return decide("accepted", `수용: 순번 ${tl.sequence} TL을 보유본으로 교체했습니다.`, next, at);
+        }
+        return decide("rejected", `거부: ${report.reasons.join(", ")}. 기존 수용본을 유지합니다.`, accepted, at);
+    } finally {
+        button.disabled = false;
+    }
+}
+
+async function checkHash(url, sha) {
+    try {
+        const h = await fetchHash(url.replace(/\.xml(\?.*)?$/, ".sha2"));
+        const row = h.status === 200
+            ? (h.hash === sha ? `<span class="badge pass">일치</span>` : `<span class="badge warn">불일치 — 조회 사이 제공본 전환 가능, 재조회 권장</span>`)
+            : `<span class="badge info">조회 실패 ${h.status} — XML 직접 검증으로 충분</span>`;
+        $("http").insertAdjacentHTML("beforeend", `<dt>.sha2 대조</dt><dd>${row}</dd>`);
+    } catch (e) {
+        $("http").insertAdjacentHTML("beforeend", `<dt>.sha2 대조</dt><dd class="muted">${esc(e.message)}</dd>`);
+    }
+}
+
+// ---------------------------------------------------------------- 표시
+function renderHttp(http, accepted, sentEtag) {
+    $("http").innerHTML = `
+        <dt>상태</dt><dd><strong>${esc(http.status)}</strong> ${http.error ? `<span class="mono">${esc(http.error)}</span>` : ""}</dd>
+        <dt>보낸 If-None-Match</dt><dd class="mono">${esc(sentEtag || "없음")}</dd>
+        <dt>받은 ETag</dt><dd class="mono">${esc(http.etag || "—")}</dd>
+        <dt>본문</dt><dd>${http.bytes ? http.bytes.length + " 바이트" : "없음"}</dd>`;
+}
+
+function renderSteps(report) {
+    $("steps").innerHTML = report.steps.map((s) => `
+        <tr><td>${esc(s.title)}</td><td><span class="badge ${s.status}">${RESULT_LABEL[s.status]}</span></td><td>${esc(s.detail)}</td></tr>`).join("");
+    $("reasons").innerHTML = report.reasons.map((r) => `<span class="badge fail mono">${esc(r)}</span>`).join("")
+        + `<span class="muted mono" style="font-size:11px">SHA-256 ${esc(report.sha256)}</span>`;
+}
+
+function decide(kind, message, accepted, at) {
+    const style = {accepted: "pass", same: "pass", rejected: "fail", error: "warn", none: "fail"}[kind];
+    const stillValid = accepted && new Date(accepted.nextUpdate) > at;
+    const sub = accepted
+        ? (stillValid ? `현재 사용 TL: 순번 ${accepted.sequence} (NextUpdate ${kst(accepted.nextUpdate)})` : "보유본도 만료되어 유효 TL 없음")
+        : "보유(수용) TL 없음";
+    $("decision").innerHTML = `<div class="banner ${style}">${esc(message)}<small>${esc(sub)}</small></div>`;
+    renderAccepted(accepted, at);
+}
+
+function renderAccepted(accepted, at) {
+    if (!accepted) { $("accepted").innerHTML = `<span class="muted">수용한 TL이 없습니다.</span>`; return; }
+    const doc = new DOMParser().parseFromString(accepted.xml, "application/xml");
+    let rows = "";
+    {
+        const tl = parseTrustList(doc);
+        for (const p of tl.providers) {
+            for (const s of p.services) {
+                const r = resolveStatus(s, at);
+                const type = POC_PROFILE.serviceTypes[s.current.type] || s.current.type;
+                const nowStatus = r.reason === "FOUND" ? (STATUS_LABEL[POC_PROFILE.statuses[r.entry.status]] || r.entry.status) : r.reason;
+                const level = s.current.extensions.find((e) => e.name === "TrustPointLevel");
+                rows += `<tr><td>${esc(p.name)}</td><td>${esc(s.current.name)}</td><td>${esc(type)}${level ? ` · 레벨 ${esc(level.value)}` : ""}</td>
+                    <td>${esc(STATUS_LABEL[POC_PROFILE.statuses[s.current.status]] || s.current.status)} (${kst(s.current.start)}부터)</td>
+                    <td><span class="badge ${r.reason === "FOUND" && POC_PROFILE.statuses[r.entry.status] === "ACCREDITED" ? "pass" : "warn"}">${esc(nowStatus)}</span></td>
+                    <td>${s.history.length}</td></tr>`;
+            }
+        }
+        $("accepted").innerHTML = `
+            <dl>
+                <dt>순번</dt><dd>${esc(accepted.sequence)}</dd>
+                <dt>발행 · NextUpdate</dt><dd>${kst(accepted.issuedAt)} · ${kst(accepted.nextUpdate)}</dd>
+                <dt>운영자</dt><dd>${esc(tl.operator)}</dd>
+                <dt>SHA-256 · ETag</dt><dd class="mono">${esc(accepted.sha256)} · ${esc(accepted.etag)}</dd>
+                <dt>수용 시각</dt><dd>${kst(accepted.acceptedAt)}</dd>
+            </dl>
+            <div class="table-wrap" style="margin-top:12px"><table>
+                <thead><tr><th>사업자</th><th>서비스</th><th>유형</th><th>현재 정보</th><th>검증 시각 상태</th><th>이력</th></tr></thead>
+                <tbody>${rows || `<tr><td colspan="6" class="muted">등재 서비스 없음</td></tr>`}</tbody>
+            </table></div>`;
+    }
+}
+
+// ---------------------------------------------------------------- 서비스 조회
+async function lookup() {
+    const accepted = store.get(KEY_ACCEPTED);
+    const file = $("lookupFile").files[0];
+    if (!accepted) { $("lookup").innerHTML = `<span class="badge warn">수용 TL이 없습니다. 먼저 조회하십시오.</span>`; return; }
+    if (!file) { $("lookup").innerHTML = `<span class="badge warn">인증서를 선택하십시오.</span>`; return; }
+    const raw = new Uint8Array(await file.arrayBuffer());
+    const text = new TextDecoder().decode(raw);
+    const der = text.includes("-----BEGIN CERTIFICATE-----") ? pemToDerList(text)[0] : raw;
+    const at = $("lookupAt").value ? new Date($("lookupAt").value + "+09:00") : new Date();
+    const tl = parseTrustList(new DOMParser().parseFromString(accepted.xml, "application/xml"));
+    const result = await lookupService(tl, der, at);
+    const r = result.resolution;
+    const state = r.reason === "FOUND" ? POC_PROFILE.statuses[r.entry.status] : r.reason;
+    const good = state === "ACCREDITED";
+    $("lookup").innerHTML = `<dl>
+        <dt>입력 인증서</dt><dd class="mono">${esc(result.cert.subject)}</dd>
+        <dt>대응 서비스</dt><dd>${result.service ? `${esc(result.provider)} / ${esc(result.service.current.name)} (${result.match === "SELF" ? "인증서 자체가 등재 서비스" : "AKI로 찾은 직접 발급 CA"})` : "TL에 없음"}</dd>
+        <dt>조회 시각</dt><dd>${kst(at)}</dd>
+        <dt>TL 판정</dt><dd><span class="badge ${good ? "pass" : "fail"}">${esc(STATUS_LABEL[state] || state)}</span>
+            ${r.reason === "FOUND" ? ` ${kst(r.entry.start)}부터${r.until ? ` ${kst(r.until)}까지` : ""}` : ""}</dd>
+    </dl>`;
+}
+
+// ---------------------------------------------------------------- 연결
+$("btnFetch").addEventListener("click", run);
+$("btnForget").addEventListener("click", () => { store.remove(KEY_ACCEPTED); decide("none", "보유본을 지웠습니다. 다음 조회는 최초 수신으로 처리합니다.", null, new Date()); });
+$("btnLookup").addEventListener("click", lookup);
+$("anchorFile").addEventListener("change", async () => {
+    const file = $("anchorFile").files[0];
+    if (file) { $("anchorPem").value = await file.text(); saveSettings(); anchors(); }
+});
+$("anchorPem").addEventListener("change", () => { saveSettings(); anchors(); });
+loadSettings();
+anchors();
+const existing = store.get(KEY_ACCEPTED);
+if (existing) decide("same", "이전에 수용한 TL이 있습니다. ‘지금 조회’로 갱신을 확인하십시오.", existing, new Date());
+</script>
+</body>
+</html>

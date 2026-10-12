@@ -1,5 +1,19 @@
 # 현재 인계
 
+## Claude 관리 화면·초안 저장 (2026-10-09)
+
+- 브랜치 `feat/claude-tl-admin` (main ← PR #29 병합 후 분기). 결과: [33](reviews/33-관리화면-초안저장-구현결과.md).
+- 사용자 결정: REST 계약 문서·외부 사업자/서비스 관리 인터페이스는 만들지 않는다. 관리자가 PoC 관리 화면에서 사업자를 직접 등록하고 인증서를 입력한다. 관리 서비스 개발에 집중한다.
+- 실행: `gradlew.bat :poc:poc-kisa-tl:bootRun` → http://localhost:8081 . 저장 루트 `runtime/tl-management` (Git 비관리).
+- 전용 스크립트(2026-10-12): `scripts/poc/tl-management/tl-admin-up.ps1`(백그라운드 기동·포트 대기, `-Foreground`·`-Open`, 서명 키 없으면 경고, 로그 `logs/kisa-tl.log`)과 `tl-admin-down.ps1`(8081만 종료, Gradle 데몬은 `-StopGradleDaemon` 지정 시에만 정지).
+- PoC 키 체계 생성 완료(2026-10-09): `runtime/tl-management/pki` 세트 krtl-poc-pki-v1, 22개 노드, UN 미등재 대조군 포함. 설계 27 상단 참조. Git 비관리. `scripts/poc/tl-management/gen-tl-pki.ps1`이 생성(없을 때만)과 main 체크아웃 자동 복사·해시 대조를 수행한다(설계 27 상단). main 체크아웃에는 복사 완료(파일 130개 해시 일치).
+- XML 서명·발행본 보관 완료(2026-10-09): [34](reviews/34-XML서명-발행본보관-구현결과.md). state.json v2, issued/<issuanceId>, BASELINE/TRIAL, requestId 중복 처리.
+- 제공본 선택·IF-07 완료(2026-10-09): [35](reviews/35-제공본선택-IF07-구현결과.md). 공개 주소 `http://localhost:8081/tl/kr-tl.xml`, `/tl/kr-tl.sha2`.
+- TL 수신 검증 샘플 완료(2026-10-09): [36](reviews/36-수신검증샘플-구현결과.md), `src/poc/tl-viewer-sample`. 발행 서명을 TS 119 612 Annex B.1.0(URI=#kr-tl, enveloped→exc-c14n)로 수정했다.
+- 다음 작업 후보: 상태 시작 시각 오류 TL 시험 조작, KR-DSS SDK(Java) 수신 모듈 이식, 단계 7 기술 검증·인계.
+
+---
+
 ## Codex → Claude 개발 인계
 
 인계일: 2026-10-09. 사용자가 Claude로 개발을 이관하며 Codex는 문서 정리와 커밋 후 작업을 종료한다. Claude 세션 실행은 사용자가 진행한다.
@@ -13,7 +27,7 @@
 - Codex 종료 후 같은 체크아웃을 이어받는 경우: `git switch -c feat/claude-tl-registry feat/codex-tl-model-xml`. 별도 Orca worktree를 사용할 경우에도 동일한 인계 브랜치/커밋을 기준으로 만든다.
 - 기존 Codex 브랜치에 직접 후속 커밋하지 말고 Claude 작업 브랜치를 사용한다. 루트 AGENTS.md와 CLAUDE.md의 프로젝트 지침을 먼저 읽는다.
 
-### 다음 작업: 관리 API·초안 영속 저장
+### (완료·대체됨) 다음 작업: 관리 API·초안 영속 저장 — 위 Claude 항목 참조
 
 1. [확정 범위](../../../design/poc/tl-management/scope.md), [PoC 적용 기준](../../../design/poc/tl-management/concept-v02-application.md), [프로파일](../../../design/poc/tl-management/profile-poc-v1.md), [발행·복구 계약](../../../design/poc/tl-management/issuance-recovery.md)을 읽는다.
 2. `src/poc/poc-kisa-tl`에서 사업자·서비스 입력/수정/조회와 초안 저장을 구현한다. 현재 KrTlAdminController의 고정 숫자·발행 성공 문구는 실제 구현 증거가 아니다.

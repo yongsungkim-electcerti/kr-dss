@@ -15,3 +15,8 @@ dependencies {
 application {
     mainClass = "com.electcerti.krdss.cli.KrDssCli"
 }
+
+// cert tree 등 상대경로 인자(scripts/…, runtime/…)를 저장소 루트 기준으로 해석시킨다.
+tasks.named<JavaExec>("run") {
+    workingDir = rootProject.projectDir
+}
