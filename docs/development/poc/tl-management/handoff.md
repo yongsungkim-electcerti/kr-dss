@@ -5,6 +5,7 @@
 - 브랜치 `feat/claude-tl-admin` (main ← PR #29 병합 후 분기). 결과: [33](reviews/33-관리화면-초안저장-구현결과.md).
 - 사용자 결정: REST 계약 문서·외부 사업자/서비스 관리 인터페이스는 만들지 않는다. 관리자가 PoC 관리 화면에서 사업자를 직접 등록하고 인증서를 입력한다. 관리 서비스 개발에 집중한다.
 - 실행: `gradlew.bat :poc:poc-kisa-tl:bootRun` → http://localhost:8081 . 저장 루트 `runtime/tl-management` (Git 비관리).
+- 전용 스크립트(2026-10-12): `scripts/poc/tl-management/tl-admin-up.ps1`(백그라운드 기동·포트 대기, `-Foreground`·`-Open`, 서명 키 없으면 경고, 로그 `logs/kisa-tl.log`)과 `tl-admin-down.ps1`(8081만 종료, Gradle 데몬은 `-StopGradleDaemon` 지정 시에만 정지).
 - PoC 키 체계 생성 완료(2026-10-09): `runtime/tl-management/pki` 세트 krtl-poc-pki-v1, 22개 노드, UN 미등재 대조군 포함. 설계 27 상단 참조. Git 비관리. `scripts/poc/tl-management/gen-tl-pki.ps1`이 생성(없을 때만)과 main 체크아웃 자동 복사·해시 대조를 수행한다(설계 27 상단). main 체크아웃에는 복사 완료(파일 130개 해시 일치).
 - XML 서명·발행본 보관 완료(2026-10-09): [34](reviews/34-XML서명-발행본보관-구현결과.md). state.json v2, issued/<issuanceId>, BASELINE/TRIAL, requestId 중복 처리.
 - 제공본 선택·IF-07 완료(2026-10-09): [35](reviews/35-제공본선택-IF07-구현결과.md). 공개 주소 `http://localhost:8081/tl/kr-tl.xml`, `/tl/kr-tl.sha2`.
