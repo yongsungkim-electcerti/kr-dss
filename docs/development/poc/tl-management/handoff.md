@@ -10,6 +10,7 @@
 - XML 서명·발행본 보관 완료(2026-10-09): [34](reviews/34-XML서명-발행본보관-구현결과.md). state.json v2, issued/<issuanceId>, BASELINE/TRIAL, requestId 중복 처리.
 - 제공본 선택·IF-07 완료(2026-10-09): [35](reviews/35-제공본선택-IF07-구현결과.md). 공개 주소 `http://localhost:8081/tl/kr-tl.xml`, `/tl/kr-tl.sha2`.
 - TL 수신 검증 샘플 완료(2026-10-09): [36](reviews/36-수신검증샘플-구현결과.md), `src/poc/tl-viewer-sample`. 발행 서명을 TS 119 612 Annex B.1.0(URI=#kr-tl, enveloped→exc-c14n)로 수정했다.
+- 관리 기능 목록·시연 데이터(2026-10-12): [37](reviews/37-관리기능-목록-구현상태.md). `scripts/poc/tl-management/seed-demo-data.ps1`이 PoC 키 세트의 TL 등재 노드(사업자 4, 서비스 10)를 관리 API로 입력한다(재실행 시 건너뜀, `-Publish`는 정상 발행·제공본 선택까지).
 - 다음 작업 후보: 상태 시작 시각 오류 TL 시험 조작, KR-DSS SDK(Java) 수신 모듈 이식, 단계 7 기술 검증·인계.
 
 ---
