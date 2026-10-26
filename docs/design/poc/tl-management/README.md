@@ -26,6 +26,6 @@
 3. [이력·버전 모델 26](../../common/kr-tl/26-EU-기준-이력-버전-모델.md), [키 구성 27](pki/27-PoC-키파일-디렉터리-설계.md), [IF-07 계약 28](interfaces/28-IF07-TL-조회-API.md).
 4. 이전 화면·시나리오·인프라 자료는 위 기준과 충돌하지 않는 범위에서 참조한다. HSM·별도 WEB·심사 업무·R1~R6을 자동으로 필수 개발에 포함하지 않는다.
 
-`background/`는 목표 시스템의 기존 설계다. `screens/`, `scenarios/`, `data/`의 번호 문서도 작성 당시의 상세안이며 현재 PoC 범위와 구별한다. 기존 번호는 문서 간 추적을 위해 유지했다.
+이전 `background/` 설계는 [main 로컬 백업](../../../development/workspace-layout/tl-management-2026-10-26.md)에 보관했다. `screens/`, `scenarios/`, `data/`의 번호 문서도 작성 당시의 상세안이며 현재 PoC 범위와 구별한다. 기존 번호는 문서 간 추적을 위해 유지했다.
 
 통합 보고서와 장별 보관본은 [보고 산출물](../../../../deliverables/reports/trust-framework/README.md)에 있다. 로컬 보관본과 원격 Google Docs의 최신 편집 상태는 같다고 가정하지 않는다.

@@ -20,7 +20,7 @@
 1. [최신 인계](../handoff.md)의 PoC 구현 비교 지시
 2. [최신 1장](../../../../../deliverables/reports/trust-framework/1장-시스템구성-본문.md)과 [통합 설계서](../../../../../deliverables/reports/trust-framework/KR-TL-시스템-및-신뢰체계-설계서.md): 관리 절차, 구성요소, IF-01~08
 3. [판정표 18](../../../../design/common/kr-tl/18-신뢰경로-판정표.md), [발행·수신 흐름 19](../../../../design/poc/tl-management/publication/19-변경-발행-수신-흐름.md), [시험 설계 20](../../../../design/poc/tl-management/scenarios/20-시험데이터-비교화면.md): 판정·시간·버전의 구체적 기대 동작
-4. [작업계획 22](../planning/22-구현-작업-계획.md), [베이스라인 24](../../../../design/poc/tl-management/background/24-설계-베이스라인.md): 기존 작업 분해 및 범위 결정 이력
+4. [작업계획 22 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-30), [베이스라인 24 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-3): 기존 작업 분해 및 범위 결정 이력
 
 이번 PoC의 구현 범위는 다음 절의 사용자 결정(2026-10-07)을 우선 적용한다. 전체 시스템 설계는 목표 구조로 보존하며, 이전 문서의 시험 데이터·R1~R6은 시나리오 논의 자료로만 사용한다.
 
