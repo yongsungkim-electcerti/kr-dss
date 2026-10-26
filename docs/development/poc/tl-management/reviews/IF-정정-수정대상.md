@@ -98,11 +98,11 @@ TL 서명(IF-05)은 신뢰목록을 발행할 때 수행하는 서명이다. 각
 
 | 자료 | 확인한 영향 위치 |
 |---|---|
-| [시스템 구성도](../../../../design/poc/tl-management/background/01-시스템-구성도.md), [IF 명세서](../../../../design/poc/tl-management/interfaces/background/06-IF-명세서.md) | IF-06의 발행 서버 → WAS, IF-08·09 정의와 연결, 관리·배포 단일 채널 설명 |
-| [이용 시나리오](../../../../design/poc/tl-management/scenarios/03-이용-시나리오.md), [PoC 구성](../../../../design/poc/tl-management/background/04-PoC-구성.md), [신뢰 흐름](../../../../design/common/trust-framework/08-신뢰-흐름-설계.md) | IF-08 결과 제공·IF-09 검증 요청과 이를 사용한 시나리오·그림 |
+| [시스템 구성도 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-1), [IF 명세서 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-9) | IF-06의 발행 서버 → WAS, IF-08·09 정의와 연결, 관리·배포 단일 채널 설명 |
+| [이용 시나리오](../../../../design/poc/tl-management/scenarios/03-이용-시나리오.md), [PoC 구성 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-2), [신뢰 흐름](../../../../design/common/trust-framework/08-신뢰-흐름-설계.md) | IF-08 결과 제공·IF-09 검증 요청과 이를 사용한 시나리오·그림 |
 | [데이터 변환](../../../../design/common/kr-tl/13-데이터-변환-설계.md), [논리 데이터 모델](../../../../design/poc/tl-management/data/15-논리데이터모델-코드범위.md), [변경·발행·수신 흐름](../../../../design/poc/tl-management/publication/19-변경-발행-수신-흐름.md) | IF-06을 반출·게시로 묶은 단계와 모듈 책임 |
-| [시연 운영 절차](../../../../guides/poc/tl-management/21-시연-운영-절차.md), [구현 작업 계획](../planning/22-구현-작업-계획.md) | IF-06 수신 서버·포트·허용 경로 및 구현 작업 연결. 새 구성도만으로 포트나 모듈을 바꾸지 않는다. |
-| [진행 계획](../planning/00-설계-진행계획.md), [설계 검토](05-설계-검토.md), [보완사항](16-설계-보완사항-조치목록.md), [요구사항 추적](../../../../design/poc/tl-management/requirements/23-요구사항-추적-용어집.md) | 이전 IF를 참조하는 작업·완료 표기·추적 관계. 과거 기록을 현재 명세로 읽지 않도록 구분한다. |
+| [시연 운영 절차](../../../../guides/poc/tl-management/21-시연-운영-절차.md), [구현 작업 계획 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-30) | IF-06 수신 서버·포트·허용 경로 및 구현 작업 연결. 새 구성도만으로 포트나 모듈을 바꾸지 않는다. |
+| [진행 계획 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-29), [설계 검토](05-설계-검토.md), [보완사항](16-설계-보완사항-조치목록.md), [요구사항 추적](../../../../design/poc/tl-management/requirements/23-요구사항-추적-용어집.md) | 이전 IF를 참조하는 작업·완료 표기·추적 관계. 과거 기록을 현재 명세로 읽지 않도록 구분한다. |
 | [README](../../../../design/poc/tl-management/README.md), 인프라 부록 A~C | IF-01~09 범위, ‘IF-06 패키지 반출’, CH-2=IF-02·CH-4=IF-06의 과거 대응 관계 |
 
 ## 유지할 내용과 확인할 사항

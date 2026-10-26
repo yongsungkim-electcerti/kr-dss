@@ -26,7 +26,10 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $root = (Resolve-Path (Join-Path $PSScriptRoot '..\..\..')).Path
-if (-not $PkiDir) { $PkiDir = Join-Path $root 'runtime\tl-management\pki' }
+if (-not $PkiDir) {
+    . (Join-Path $PSScriptRoot 'local-data.ps1')
+    $PkiDir = Join-Path $tlStorageRoot 'pki'
+}
 $utf8 = New-Object System.Text.UTF8Encoding($false)
 $api = "$BaseUrl/api/admin"
 

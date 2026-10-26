@@ -35,3 +35,7 @@ Gradle 논리 모듈 경로는 그대로다. `settings.gradle.kts`의 projectDir
 실행 패키지는 `results/packages/whale/`, 로그는 `logs/`, 향후 TL 관리 데이터는 `runtime/tl-management/`에 둔다. `runtime/`, `results/`, `_backup/`는 Git 비관리다.
 
 참조 원문의 바이트와 원래 출처 메타데이터는 유지한다. 과거 목록의 원래 경로는 provenance이며 현재 위치는 file-map.csv와 references/catalog/current-paths.json으로 연결한다.
+
+## 2026-10-26 후속 정리
+
+[TL 관리 자료 정리](tl-management-2026-10-26.md) 및 [main 실행 자료 경로 설정](../../guides/poc/tl-management/local-data.md)을 참조한다.

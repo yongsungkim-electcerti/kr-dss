@@ -26,4 +26,4 @@
 - [폴더 정리 기록](../../workspace-layout/README.md)
 - [소스](../../../../src/poc/poc-kisa-tl)
 
-`planning/`은 이전 작업 분해 이력이다. 최신 scope가 우선하며, 기존 W-01~12 전체를 이번 개발 목록으로 사용하지 않는다. 이번 폴더 정리로 TL 관리 기능이 추가된 것은 아니다.
+이전 `planning/` 작업 분해 이력은 [main 로컬 백업](../../workspace-layout/tl-management-2026-10-26.md)으로 옮겼다. 최신 scope가 우선하며, 기존 W-01~12 전체를 이번 개발 목록으로 사용하지 않는다. 이번 폴더 정리로 TL 관리 기능이 추가된 것은 아니다.
