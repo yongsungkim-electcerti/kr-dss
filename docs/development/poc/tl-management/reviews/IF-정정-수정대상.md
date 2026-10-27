@@ -2,7 +2,7 @@
 
 검토일: 2026-10-06
 
-검토 대상은 [로컬 통합 설계서](../../../../../deliverables/reports/trust-framework/KR-TL-시스템-및-신뢰체계-설계서.md)다. [IF 정정 명세](../../../../design/poc/tl-management/interfaces/IF-정정-명세.md)와 [시스템 구성도](../../../../design/poc/tl-management/diagrams/krtl-system.drawio)의 **‘KR-TL 시스템 구성도 수정’ 페이지**를 기준으로 본문 9개 장과 부록을 대조했다. 페이지 ID는 `9SgXNMT8XWq2FVYm6fX4`다. 같은 파일의 첫 번째 페이지는 이전 구성도다.
+검토 대상은 [로컬 통합 설계서](../../../../../deliverables/reports/trust-framework/KR-TL-시스템-및-신뢰체계-설계서.md)다. [IF 정정 명세 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-61)와 [시스템 구성도 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-45)의 **‘KR-TL 시스템 구성도 수정’ 페이지**를 기준으로 본문 9개 장과 부록을 대조했다. 페이지 ID는 `9SgXNMT8XWq2FVYm6fX4`다. 같은 파일의 첫 번째 페이지는 이전 구성도다.
 
 향후 수정 대상은 [구글독스 설계서](https://docs.google.com/document/d/1jaEztftE4CA5eIsZQ2oRdYtELsUSMYhI8Wmsf-SIv0U/edit)다. 이번 검토에서는 원격 문서를 조회하거나 수정하지 않았다. 아래 위치와 인용문은 로컬 보관본 기준이며, 실제 구글독스에 반영할 때는 사람이 수정한 최신 본문과 다시 대조한다. 통합 설계서 본문과 그림도 이번에는 변경하지 않았다.
 
@@ -82,12 +82,12 @@ TL 서명(IF-05)은 신뢰목록을 발행할 때 수행하는 서명이다. 각
 
 | 그림·파일 | 확인 내용 | 후속 처리 |
 |---|---|---|
-| 그림 1 · [시스템 구성도](../../../../design/poc/tl-management/diagrams/krtl-system.drawio) | 수정 페이지에는 IF-01~08이 있고 IF-08은 ‘서명 검증’이다. 이전 페이지에는 IF-09가 남아 있다. | 사용자 수정 페이지를 기준으로 보존한다. 파일 첫 페이지를 자동으로 내보내지 않도록 페이지를 지정한다. 본문의 전체·부분 확대 참조를 맞춘다. |
-| 그림 2 · [망 구성도](../../../../design/poc/tl-management/diagrams/krtl-network.drawio) | IF-06이 신뢰정보 관리·TL 발행 → 배포 WAS에 붙어 있다. 하단에 ‘관리자 접근(IF-02)’이 남아 있다. | 최신 시스템 구성도와 맞춰야 하는 구간으로 기록한다. 망 경계와 연결 시작 정책은 추가 확인한다. |
-| 그림 8 · [신뢰 흐름](../../../../design/poc/tl-management/diagrams/krtl-flow.drawio) | IF-06이 ‘서명된 TL → 배포 시스템’에 붙어 있다. | 발행본 전달과 WAS → WEB 배포를 구분할 설명이 필요하다. |
-| 그림 9 · [데이터 변환](../../../../design/poc/tl-management/diagrams/krtl-dataflow.drawio) | IF-06이 ‘발행본(D-07) → 게시된 TL(배포 WAS)’에 붙어 있다. ‘IF-04 시점 고정’도 남아 있다. | 발행 요청과 스냅숏 생성의 관계, TL 배포의 연결 구간을 맞춘다. 데이터 변환 자체를 삭제하지 않는다. |
-| 그림 10 · [버전 흐름](../../../../design/poc/tl-management/diagrams/krtl-version-flow.drawio) | ‘IF-06 반출’이 관리 시스템 발행 → 배포 WAS 게시에 붙어 있다. | IF 대응을 수정할 대상으로 기록한다. 발행·게시·수신·적용 버전의 구분은 유지한다. |
-| 그림 11 · [TL 활용](../../../../design/poc/tl-management/diagrams/krtl-rp-tl-usage.drawio) | ‘IF-07 TL 수신 (풀)’로 표기되어 있다. | 정정 명칭인 TL 조회와 맞추고, 두 검증 경로가 이 공통 구조를 어떻게 사용하는지 본문에서 설명한다. |
+| 그림 1 · [시스템 구성도 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-45) | 수정 페이지에는 IF-01~08이 있고 IF-08은 ‘서명 검증’이다. 이전 페이지에는 IF-09가 남아 있다. | 사용자 수정 페이지를 기준으로 보존한다. 파일 첫 페이지를 자동으로 내보내지 않도록 페이지를 지정한다. 본문의 전체·부분 확대 참조를 맞춘다. |
+| 그림 2 · [망 구성도 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-37) | IF-06이 신뢰정보 관리·TL 발행 → 배포 WAS에 붙어 있다. 하단에 ‘관리자 접근(IF-02)’이 남아 있다. | 최신 시스템 구성도와 맞춰야 하는 구간으로 기록한다. 망 경계와 연결 시작 정책은 추가 확인한다. |
+| 그림 8 · [신뢰 흐름 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-33) | IF-06이 ‘서명된 TL → 배포 시스템’에 붙어 있다. | 발행본 전달과 WAS → WEB 배포를 구분할 설명이 필요하다. |
+| 그림 9 · [데이터 변환 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-30) | IF-06이 ‘발행본(D-07) → 게시된 TL(배포 WAS)’에 붙어 있다. ‘IF-04 시점 고정’도 남아 있다. | 발행 요청과 스냅숏 생성의 관계, TL 배포의 연결 구간을 맞춘다. 데이터 변환 자체를 삭제하지 않는다. |
+| 그림 10 · [버전 흐름 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-55) | ‘IF-06 반출’이 관리 시스템 발행 → 배포 WAS 게시에 붙어 있다. | IF 대응을 수정할 대상으로 기록한다. 발행·게시·수신·적용 버전의 구분은 유지한다. |
+| 그림 11 · [TL 활용 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-41) | ‘IF-07 TL 수신 (풀)’로 표기되어 있다. | 정정 명칭인 TL 조회와 맞추고, 두 검증 경로가 이 공통 구조를 어떻게 사용하는지 본문에서 설명한다. |
 | 그림 3~7·12 | 인증체계·신뢰점·TL 구조·상태 이력·판정 사례를 설명한다. | 이번 IF 정정만으로 구조를 바꿀 근거는 없다. 가입자 예시와 일반 서명자 설명을 구분하는 주석·캡션 보완 여부를 검토한다. |
 
 다른 도식의 보완이 필요해도 사용자가 수정한 시스템 구성도는 변경하지 않는다. 향후 이미지가 필요하면 draw.io에서 직접 내보내며 PDF 변환은 하지 않는다.
@@ -99,11 +99,11 @@ TL 서명(IF-05)은 신뢰목록을 발행할 때 수행하는 서명이다. 각
 | 자료 | 확인한 영향 위치 |
 |---|---|
 | [시스템 구성도 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-1), [IF 명세서 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-9) | IF-06의 발행 서버 → WAS, IF-08·09 정의와 연결, 관리·배포 단일 채널 설명 |
-| [이용 시나리오](../../../../design/poc/tl-management/scenarios/03-이용-시나리오.md), [PoC 구성 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-2), [신뢰 흐름](../../../../design/common/trust-framework/08-신뢰-흐름-설계.md) | IF-08 결과 제공·IF-09 검증 요청과 이를 사용한 시나리오·그림 |
-| [데이터 변환](../../../../design/common/kr-tl/13-데이터-변환-설계.md), [논리 데이터 모델](../../../../design/poc/tl-management/data/15-논리데이터모델-코드범위.md), [변경·발행·수신 흐름](../../../../design/poc/tl-management/publication/19-변경-발행-수신-흐름.md) | IF-06을 반출·게시로 묶은 단계와 모듈 책임 |
+| [이용 시나리오 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-68), [PoC 구성 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-2), [신뢰 흐름 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-8) | IF-08 결과 제공·IF-09 검증 요청과 이를 사용한 시나리오·그림 |
+| [데이터 변환 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-3), [논리 데이터 모델 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-14), [변경·발행·수신 흐름 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-66) | IF-06을 반출·게시로 묶은 단계와 모듈 책임 |
 | [시연 운영 절차](../../../../guides/poc/tl-management/21-시연-운영-절차.md), [구현 작업 계획 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-30) | IF-06 수신 서버·포트·허용 경로 및 구현 작업 연결. 새 구성도만으로 포트나 모듈을 바꾸지 않는다. |
-| [진행 계획 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-29), [설계 검토](05-설계-검토.md), [보완사항](16-설계-보완사항-조치목록.md), [요구사항 추적](../../../../design/poc/tl-management/requirements/23-요구사항-추적-용어집.md) | 이전 IF를 참조하는 작업·완료 표기·추적 관계. 과거 기록을 현재 명세로 읽지 않도록 구분한다. |
-| [README](../../../../design/poc/tl-management/README.md), 인프라 부록 A~C | IF-01~09 범위, ‘IF-06 패키지 반출’, CH-2=IF-02·CH-4=IF-06의 과거 대응 관계 |
+| [진행 계획 (로컬 보관)](../../../workspace-layout/tl-management-2026-10-26.md#archive-29), [설계 검토](05-설계-검토.md), [보완사항](16-설계-보완사항-조치목록.md), [요구사항 추적 — 기존 설계 보관](../../../../design/poc/tl-management/archive.md#archive-67) | 이전 IF를 참조하는 작업·완료 표기·추적 관계. 과거 기록을 현재 명세로 읽지 않도록 구분한다. |
+| [신뢰체계 요구사항](../../../../design/poc/tl-management/README.md), 인프라 부록 A~C | IF-01~09 범위, ‘IF-06 패키지 반출’, CH-2=IF-02·CH-4=IF-06의 과거 대응 관계 |
 
 ## 유지할 내용과 확인할 사항
 
