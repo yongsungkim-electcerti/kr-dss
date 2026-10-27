@@ -31,6 +31,8 @@ dependencies {
     implementation(libs.dss.validation)
     implementation(libs.bc.prov)
     implementation(libs.bc.pkix)
+    // 실증 경로에서 PDF ByteRange/CMS 무결성을 TL 신뢰 판단과 분리한다. 기존 고정 버전 사용.
+    implementation(libs.pdfbox)
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

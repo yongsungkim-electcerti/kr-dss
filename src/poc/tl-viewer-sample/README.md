@@ -1,6 +1,6 @@
 # KR-TL 수신 검증 샘플 (PDF 뷰어·이용기관용)
 
-PDF 뷰어·이용기관 검증 모듈이 IF-07([설계 28](../../../docs/design/poc/tl-management/interfaces/28-IF07-TL-조회-API.md))로
+PDF 뷰어·이용기관 검증 모듈이 IF-07([설계 28 — 기존 설계 보관](../../../docs/design/poc/tl-management/archive.md#archive-60))로
 TL을 받아 수행하는 **TL 관련 검증 단계만** 보여주는 정적 샘플이다. PDF 서명 무결성·가입자 인증서 경로·OCSP 검증은 하지 않는다.
 빌드가 없고 외부 라이브러리를 쓰지 않는다(브라우저 DOMParser·WebCrypto만 사용, 폐쇄망 가능).
 
@@ -48,7 +48,7 @@ TL을 받아 수행하는 **TL 관련 검증 단계만** 보여주는 정적 샘
 | 보유본 대비 | 순번 역행, 같은 순번 다른 내용, 발행 시각 역행. 최초 수신이면 ‘비교 불가’ | SEQUENCE_ROLLBACK, SEQUENCE_CONFLICT, ISSUE_TIME_REGRESSION |
 | 서비스 정보 | 상태 URI(프로파일 v1)·critical 확장 지원, 이력 순서, 보유본 대비 소급 변경·이력 삭제 | UNSUPPORTED_STATUS, UNSUPPORTED_CRITICAL_EXTENSION, INVALID_HISTORY, RETROACTIVE_STATUS_CHANGE |
 
-사유 코드는 [설계 26](../../../docs/design/common/kr-tl/26-EU-기준-이력-버전-모델.md)의 제안 코드를 따르고, 서명·지원 범위 코드를 추가했다.
+사유 코드는 [설계 26 — 기존 설계 보관](../../../docs/design/poc/tl-management/archive.md#archive-5)의 제안 코드를 따르고, 서명·지원 범위 코드를 추가했다.
 
 ‘TL 서비스 조회’는 PDF 서명자 판정 중 TL 단계만 시연한다. 입력 인증서가 등재 서비스 자체(공개키·SKI 일치)이거나,
 AKI로 찾은 직접 발급 CA가 등재된 경우 지정 시각의 상태(현재·이력 반열린 구간)를 보여준다.

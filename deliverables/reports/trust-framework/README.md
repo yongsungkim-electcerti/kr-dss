@@ -7,6 +7,6 @@
 - [2장 보관본](2장-신뢰체계-본문.md)
 - [5장 보관본](5장-신뢰정보-본문.md)
 - [이용 시나리오 별지](KR-TL-이용-시나리오-별지.md)
-- [현재 PoC 설계](../../../docs/design/poc/tl-management/README.md)
+- [신뢰체계 요구사항](../../../docs/design/poc/tl-management/README.md)
 
 Google Docs의 최신 상태는 별도 조회가 필요하다. 이번 폴더 정리는 원격 문서를 변경하지 않는다.
