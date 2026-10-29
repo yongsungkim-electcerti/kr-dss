@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-28T00:57:13.664556+00:00",
+  "pptxValidation": "PASSED",
+  "powerPointRenderSlides": 29,
+  "apiChecks": 15,
+  "managementChecks": 9,
+  "exampleScript": "HTTP 200 / raw32 / hash match / 304 verified",
+  "humanize": "QUICK_RULES_REVIEWED; see 윤문_검수기록.md",
+  "testEvidence": "Existing 2026-10-28 runtime checks retained; documentation-only revision",
+  "whaleNative": "NOT_VERIFIED",
+  "files": [
+    {
+      "name": "Whale_API_연동_가이드_v1.0.pptx",
+      "bytes": 346141,
+      "sha256": "7ac08e9dd662476623b2ba0b774b7659e3dadf95985944aedf50281b49bd5f42"
+    },
+    {
+      "name": "Whale_관리시스템_TL작업대_사용매뉴얼_v1.0.pptx",
+      "bytes": 867021,
+      "sha256": "69399c587321db48de54f71f453b80da75e83be70f8be4f9e047342bd5db17ba"
+    },
+    {
+      "name": "Test-TlPublicApi.ps1",
+      "bytes": 1940,
+      "sha256": "23f21561cad6a3c30a0bcacb22bd3bfd4733a217fc6616064a6484553f7bb6a2"
+    }
+  ],
+  "distributionZip": {
+    "name": "TrustList-PoC-Windows-20261028.zip",
+    "sha256": "ae87bfe8d80833abedcae9dd6f70a54dc89ff3d093588ca32750b21fc457d924",
+    "originalPayloadPreserved": true,
+    "portableJavaConfig": true
+  }
+}

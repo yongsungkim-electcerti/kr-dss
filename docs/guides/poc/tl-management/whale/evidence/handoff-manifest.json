@@ -1,0 +1,16 @@
+{
+  "zip": "Whale_TrustList_PoC_20261028.zip",
+  "bytes": 85568812,
+  "files": 27,
+  "sha256": "13f324fedb8d53a3238de24fa6ad3bb11d831daf38b2aa251335ca1de392c82f",
+  "checks": {
+    "zipCRC": "PASSED",
+    "allFileHashes": "PASSED",
+    "jarIntegrity": "PASSED",
+    "portableJavaConfig": "PASSED",
+    "twoPptx": "PASSED",
+    "runtimePayloadUnchanged": "PASSED",
+    "noRuntimeLogs": "PASSED"
+  },
+  "runtimeTest": "Prior evidence retained; no runtime restart for packaging"
+}

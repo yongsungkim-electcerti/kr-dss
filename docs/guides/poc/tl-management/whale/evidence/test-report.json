@@ -1,0 +1,324 @@
+{
+  "date": "2026-10-27T23:25:00.761Z",
+  "management": "http://127.0.0.1:19081",
+  "verification": "http://127.0.0.1:19082",
+  "checks": [
+    {
+      "name": "seed4providers10services",
+      "ok": true,
+      "details": {
+        "draftRevision": 1,
+        "savedAt": "2026-10-12T02:16:00.569171800Z",
+        "baselineIssuanceId": null,
+        "providers": 4,
+        "services": 10,
+        "byStatus": {
+          "ACCREDITED": 10
+        },
+        "byType": {
+          "CA": 4,
+          "OCSP": 3,
+          "TSA": 3
+        },
+        "expiryAlerts": []
+      }
+    },
+    {
+      "name": "initial404",
+      "ok": true,
+      "details": {
+        "status": 404,
+        "body": "TL_NOT_PUBLISHED"
+      }
+    },
+    {
+      "name": "issueReplay",
+      "ok": true,
+      "details": true
+    },
+    {
+      "name": "public200",
+      "ok": true,
+      "details": 200
+    },
+    {
+      "name": "sha2Raw32",
+      "ok": true,
+      "details": {
+        "bytes": 32
+      }
+    },
+    {
+      "name": "conditional304",
+      "ok": true,
+      "details": 304
+    },
+    {
+      "name": "head200",
+      "ok": true,
+      "details": 200
+    },
+    {
+      "name": "accept406",
+      "ok": true,
+      "details": 406
+    },
+    {
+      "name": "method405",
+      "ok": true,
+      "details": 405
+    },
+    {
+      "name": "cors",
+      "ok": true,
+      "details": {
+        "origin": "*",
+        "expose": "ETag"
+      }
+    },
+    {
+      "name": "tl1trust",
+      "ok": true,
+      "details": {
+        "integrity": "PASSED",
+        "chain": "VALID",
+        "trust": "TRUST_CONDITIONS_MET",
+        "service": "시험 CA",
+        "serviceStatus": "ACCREDITED",
+        "path": [
+          "CN=DEMO ONLY PDF Subscriber · 9d5306a690dbf60cd3d804d1fd84358ad0b434f300da5eb9d53b240991648d33",
+          "CN=DEMO ONLY Service CA · 5fa4e689a5c3725bbe97e0eda6cf38bf53d3df317ee487a521faaebed5aa2690"
+        ],
+        "unchecked": [
+          "폐지정보(CRL/OCSP)",
+          "신뢰 시각 증거",
+          "PDF 다중 서명·증분 개정"
+        ]
+      }
+    },
+    {
+      "name": "tl2trust",
+      "ok": true,
+      "details": {
+        "integrity": "PASSED",
+        "chain": "VALID",
+        "trust": "TRUST_CONDITIONS_NOT_MET",
+        "service": "시험 CA",
+        "serviceStatus": "SUSPENDED",
+        "path": [
+          "CN=DEMO ONLY PDF Subscriber · 9d5306a690dbf60cd3d804d1fd84358ad0b434f300da5eb9d53b240991648d33",
+          "CN=DEMO ONLY Service CA · 5fa4e689a5c3725bbe97e0eda6cf38bf53d3df317ee487a521faaebed5aa2690"
+        ],
+        "unchecked": [
+          "폐지정보(CRL/OCSP)",
+          "신뢰 시각 증거",
+          "PDF 다중 서명·증분 개정"
+        ]
+      }
+    },
+    {
+      "name": "sameConditions",
+      "ok": true,
+      "details": [
+        "TL 신뢰 판단",
+        "서비스 상태"
+      ]
+    },
+    {
+      "name": "rollbackRejected",
+      "ok": true,
+      "details": {
+        "ready": false,
+        "reason": "TL_ROLLBACK"
+      }
+    },
+    {
+      "name": "activePreserved",
+      "ok": true,
+      "details": null
+    }
+  ],
+  "plan": {
+    "draftRevision": 1,
+    "baselineIssuanceId": null,
+    "normalSequence": null,
+    "recommendedSequence": "1",
+    "sequenceNumber": "1",
+    "issuedAt": "2026-10-27T23:25:04Z",
+    "nextUpdate": "2026-11-03T23:25:04Z",
+    "requestedPurpose": "BASELINE",
+    "purpose": "BASELINE",
+    "diagnostics": [],
+    "signerReady": true,
+    "signerDetail": "CN=DEMO ONLY TL Signer · 만료 2027-10-27T00:00:00Z"
+  },
+  "issued": {
+    "manifest": {
+      "manifestVersion": 1,
+      "issuanceId": "iss-20261027T232504Z-d5389c32",
+      "requestId": "793eb66f-6b85-4aec-a74a-273cff119d1e",
+      "inputDigest": "6c36e8c01acce334d6e96e9a23c9e6d970d30120d1d2cb85971bd0da7bf5ba5a",
+      "requestedPurpose": "BASELINE",
+      "purpose": "BASELINE",
+      "listId": "kr-tl",
+      "sequenceNumber": "1",
+      "issuedAt": "2026-10-27T23:25:04Z",
+      "nextUpdate": "2026-11-03T23:25:04Z",
+      "draftRevision": 1,
+      "previousBaselineIssuanceId": null,
+      "xmlSha256": "f244310db8ab7a92cac9634b7bf7bc63447c7a477b5623c4e964499c6c6c0daf",
+      "xmlSize": 21828,
+      "profileSha256": "2ae9e39a53ba613ddb96952b0ef3dedea4d5a3b7c29c448c0e3eee779d5fd21c",
+      "signerCertificateSha256": "f62d70b1dc78bb2f9b51d91480e16bbc361eee08ab45d95a50f207d0516de940",
+      "signerSubject": "CN=DEMO ONLY TL Signer",
+      "signatureValid": true,
+      "signatureDetail": "서명값과 참조 다이제스트가 일치합니다.",
+      "diagnostics": [],
+      "signedAt": "2026-10-27T23:25:04.952199600Z"
+    },
+    "replay": false
+  },
+  "publicHeaders": {
+    "cache-control": "no-cache, no-transform",
+    "connection": "keep-alive",
+    "content-length": "21828",
+    "content-type": "application/vnd.etsi.tsl+xml",
+    "date": "Tue, 27 Oct 2026 23:25:05 GMT",
+    "etag": "\"sha256-f244310db8ab7a92cac9634b7bf7bc63447c7a477b5623c4e964499c6c6c0daf\"",
+    "keep-alive": "timeout=60",
+    "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
+  },
+  "run1": {
+    "id": "5614757a-3c92-4a17-b549-81c9f2165efb",
+    "executedAt": "2026-10-27T23:25:08.357699100Z",
+    "inputHash": "3236f3f760e096f8e328bc36cf38ef148f7f6620ae0521a675cbb57be44d90c7",
+    "certificatesHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "policy": "tl-poc-single-pdf-v1",
+    "engine": "poc-v1-dd3fff2f318cf0924018f8529c197ad04203dc6b85cc7fd5c01c3c872c993a84",
+    "evaluationTime": "2026-10-27T00:00:00Z",
+    "timeSource": "TEST_SPECIFIED",
+    "tlSequence": "1",
+    "tlHash": "033208a4fcd4108c131b7e0abbe6b5b7daaba68b4ea6d647e7b21b67988b86a0",
+    "tlAcceptedAt": "2026-10-27T23:25:07.047450600Z",
+    "execution": "COMPLETED",
+    "result": {
+      "integrity": "PASSED",
+      "chain": "VALID",
+      "trust": "TRUST_CONDITIONS_MET",
+      "service": "시험 CA",
+      "serviceStatus": "ACCREDITED",
+      "path": [
+        "CN=DEMO ONLY PDF Subscriber · 9d5306a690dbf60cd3d804d1fd84358ad0b434f300da5eb9d53b240991648d33",
+        "CN=DEMO ONLY Service CA · 5fa4e689a5c3725bbe97e0eda6cf38bf53d3df317ee487a521faaebed5aa2690"
+      ],
+      "unchecked": [
+        "폐지정보(CRL/OCSP)",
+        "신뢰 시각 증거",
+        "PDF 다중 서명·증분 개정"
+      ]
+    },
+    "error": null
+  },
+  "run2": {
+    "id": "7df06166-8991-48f2-b5d9-e80f209494ae",
+    "executedAt": "2026-10-27T23:25:11.494502500Z",
+    "inputHash": "3236f3f760e096f8e328bc36cf38ef148f7f6620ae0521a675cbb57be44d90c7",
+    "certificatesHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "policy": "tl-poc-single-pdf-v1",
+    "engine": "poc-v1-dd3fff2f318cf0924018f8529c197ad04203dc6b85cc7fd5c01c3c872c993a84",
+    "evaluationTime": "2026-10-27T00:00:00Z",
+    "timeSource": "TEST_SPECIFIED",
+    "tlSequence": "2",
+    "tlHash": "37734fbcf5796a21d54d74ca1ec69b405441c74cbfac0bad8606784d2d6148a9",
+    "tlAcceptedAt": "2026-10-27T23:25:11.020410200Z",
+    "execution": "COMPLETED",
+    "result": {
+      "integrity": "PASSED",
+      "chain": "VALID",
+      "trust": "TRUST_CONDITIONS_NOT_MET",
+      "service": "시험 CA",
+      "serviceStatus": "SUSPENDED",
+      "path": [
+        "CN=DEMO ONLY PDF Subscriber · 9d5306a690dbf60cd3d804d1fd84358ad0b434f300da5eb9d53b240991648d33",
+        "CN=DEMO ONLY Service CA · 5fa4e689a5c3725bbe97e0eda6cf38bf53d3df317ee487a521faaebed5aa2690"
+      ],
+      "unchecked": [
+        "폐지정보(CRL/OCSP)",
+        "신뢰 시각 증거",
+        "PDF 다중 서명·증분 개정"
+      ]
+    },
+    "error": null
+  },
+  "comparison": {
+    "comparable": true,
+    "mismatches": [],
+    "baseline": {
+      "id": "5614757a-3c92-4a17-b549-81c9f2165efb",
+      "executedAt": "2026-10-27T23:25:08.357699100Z",
+      "inputHash": "3236f3f760e096f8e328bc36cf38ef148f7f6620ae0521a675cbb57be44d90c7",
+      "certificatesHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "policy": "tl-poc-single-pdf-v1",
+      "engine": "poc-v1-dd3fff2f318cf0924018f8529c197ad04203dc6b85cc7fd5c01c3c872c993a84",
+      "evaluationTime": "2026-10-27T00:00:00Z",
+      "timeSource": "TEST_SPECIFIED",
+      "tlSequence": "1",
+      "tlHash": "033208a4fcd4108c131b7e0abbe6b5b7daaba68b4ea6d647e7b21b67988b86a0",
+      "tlAcceptedAt": "2026-10-27T23:25:07.047450600Z",
+      "execution": "COMPLETED",
+      "result": {
+        "integrity": "PASSED",
+        "chain": "VALID",
+        "trust": "TRUST_CONDITIONS_MET",
+        "service": "시험 CA",
+        "serviceStatus": "ACCREDITED",
+        "path": [
+          "CN=DEMO ONLY PDF Subscriber · 9d5306a690dbf60cd3d804d1fd84358ad0b434f300da5eb9d53b240991648d33",
+          "CN=DEMO ONLY Service CA · 5fa4e689a5c3725bbe97e0eda6cf38bf53d3df317ee487a521faaebed5aa2690"
+        ],
+        "unchecked": [
+          "폐지정보(CRL/OCSP)",
+          "신뢰 시각 증거",
+          "PDF 다중 서명·증분 개정"
+        ]
+      },
+      "error": null
+    },
+    "comparison": {
+      "id": "7df06166-8991-48f2-b5d9-e80f209494ae",
+      "executedAt": "2026-10-27T23:25:11.494502500Z",
+      "inputHash": "3236f3f760e096f8e328bc36cf38ef148f7f6620ae0521a675cbb57be44d90c7",
+      "certificatesHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "policy": "tl-poc-single-pdf-v1",
+      "engine": "poc-v1-dd3fff2f318cf0924018f8529c197ad04203dc6b85cc7fd5c01c3c872c993a84",
+      "evaluationTime": "2026-10-27T00:00:00Z",
+      "timeSource": "TEST_SPECIFIED",
+      "tlSequence": "2",
+      "tlHash": "37734fbcf5796a21d54d74ca1ec69b405441c74cbfac0bad8606784d2d6148a9",
+      "tlAcceptedAt": "2026-10-27T23:25:11.020410200Z",
+      "execution": "COMPLETED",
+      "result": {
+        "integrity": "PASSED",
+        "chain": "VALID",
+        "trust": "TRUST_CONDITIONS_NOT_MET",
+        "service": "시험 CA",
+        "serviceStatus": "SUSPENDED",
+        "path": [
+          "CN=DEMO ONLY PDF Subscriber · 9d5306a690dbf60cd3d804d1fd84358ad0b434f300da5eb9d53b240991648d33",
+          "CN=DEMO ONLY Service CA · 5fa4e689a5c3725bbe97e0eda6cf38bf53d3df317ee487a521faaebed5aa2690"
+        ],
+        "unchecked": [
+          "폐지정보(CRL/OCSP)",
+          "신뢰 시각 증거",
+          "PDF 다중 서명·증분 개정"
+        ]
+      },
+      "error": null
+    },
+    "tlChanged": true,
+    "differences": [
+      "TL 신뢰 판단",
+      "서비스 상태"
+    ]
+  }
+}

@@ -1,0 +1,178 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="krtl-state-history" name="심사와 서비스 상태 이력">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1920" pageHeight="950" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NMUwGKCxZFkKV-ZSAo9k-5" edge="1" parent="1" source="apply" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="review">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="apply" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;" value="사업자&lt;br&gt;인정 신청" vertex="1">
+          <mxGeometry height="80" width="190" x="310" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="review" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;" value="인정심사" vertex="1">
+          <mxGeometry height="80" width="190" x="310" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="NMUwGKCxZFkKV-ZSAo9k-2" edge="1" parent="1" source="approve" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="suspend-decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NMUwGKCxZFkKV-ZSAo9k-3" edge="1" parent="1" source="approve" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="restore-decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NMUwGKCxZFkKV-ZSAo9k-4" edge="1" parent="1" source="approve" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="withdraw-decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="approve" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;" value="인정 승인" vertex="1">
+          <mxGeometry height="80" width="180" x="570" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="supplement" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;" value="사업자 보완" vertex="1">
+          <mxGeometry height="70" width="190" x="310" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="NMUwGKCxZFkKV-ZSAo9k-1" edge="1" parent="1" source="reject" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="supplement">
+          <mxGeometry relative="1" x="-0.0606" as="geometry">
+            <Array as="points">
+              <mxPoint x="185" y="430" />
+              <mxPoint x="405" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="reject" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;" value="반려" vertex="1">
+          <mxGeometry height="70" width="190" x="100" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="review-approve" edge="1" parent="1" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="approve" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="review-reject" edge="1" parent="1" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=0;exitY=0.75;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="reject" value="">
+          <mxGeometry relative="1" x="-0.0244" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="request-supplement" edge="1" parent="1" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=0.85;exitY=1;entryX=0.85;entryY=0;" target="supplement" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="resubmit" edge="1" parent="1" source="supplement" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=0.15;exitY=0;entryX=0.15;entryY=1;" target="review" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="suspend-decision" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;" value="정지 결정" vertex="1">
+          <mxGeometry height="70" width="180" x="870" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="restore-decision" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;" value="복원 결정" vertex="1">
+          <mxGeometry height="70" width="180" x="1170" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="withdraw-decision" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;" value="철회 결정" vertex="1">
+          <mxGeometry height="70" width="180" x="1470" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="time-label" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;text;strokeColor=none;fillColor=none;fontSize=23;" value="시간" vertex="1">
+          <mxGeometry height="50" width="100" x="1770" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="time-axis" edge="1" parent="1" style="html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="475" as="sourcePoint" />
+            <mxPoint x="1860" y="475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tick-label-first" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;text;strokeColor=none;fillColor=none;fontSize=21;" value="인정 효력" vertex="1">
+          <mxGeometry height="50" width="180" x="470" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="tick-first" edge="1" parent="1" style="html=1;strokeColor=#64748b;strokeWidth=2;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="660" y="460" as="sourcePoint" />
+            <mxPoint x="660" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tick-label-suspend" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;text;strokeColor=none;fillColor=none;fontSize=21;" value="정지 효력" vertex="1">
+          <mxGeometry height="50" width="180" x="770" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="tick-suspend" edge="1" parent="1" style="html=1;strokeColor=#64748b;strokeWidth=2;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="960" y="460" as="sourcePoint" />
+            <mxPoint x="960" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tick-label-restore" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;text;strokeColor=none;fillColor=none;fontSize=21;" value="복원 효력" vertex="1">
+          <mxGeometry height="50" width="180" x="1070" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="tick-restore" edge="1" parent="1" style="html=1;strokeColor=#64748b;strokeWidth=2;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1260" y="460" as="sourcePoint" />
+            <mxPoint x="1260" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tick-label-withdraw" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;text;strokeColor=none;fillColor=none;fontSize=21;" value="철회 효력" vertex="1">
+          <mxGeometry height="50" width="180" x="1370" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="tick-withdraw" edge="1" parent="1" style="html=1;strokeColor=#64748b;strokeWidth=2;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1560" y="460" as="sourcePoint" />
+            <mxPoint x="1560" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="state-label" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;text;strokeColor=none;fillColor=none;fontSize=25;align=center;" value="서비스&lt;br&gt;등재 상태" vertex="1">
+          <mxGeometry height="80" width="190" x="130" y="545" as="geometry" />
+        </mxCell>
+        <mxCell id="judgement-label" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;text;strokeColor=none;fillColor=none;fontSize=23;align=center;" value="이용자 판정&lt;br&gt;(서비스 상태 기준)" vertex="1">
+          <mxGeometry height="90" width="250" x="100" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="unlisted" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;rounded=0;fillColor=#f1f5f9;" value="미등재" vertex="1">
+          <mxGeometry height="90" width="300" x="360" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="unlisted-result" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;fillColor=#f8fafc;" value="판단 보류" vertex="1">
+          <mxGeometry height="90" width="260" x="380" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="unlisted-judge" edge="1" parent="1" source="unlisted" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="unlisted-result" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="recognised" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;rounded=0;fillColor=#eaf2fb;" value="인정" vertex="1">
+          <mxGeometry height="90" width="300" x="660" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="recognised-result" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;fillColor=#f8fafc;" value="조건 충족 시&lt;br&gt;통과" vertex="1">
+          <mxGeometry height="90" width="260" x="680" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="recognised-judge" edge="1" parent="1" source="recognised" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="recognised-result" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="suspended" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;rounded=0;fillColor=#f1f5f9;" value="정지" vertex="1">
+          <mxGeometry height="90" width="300" x="960" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="suspended-result" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;fillColor=#f8fafc;" value="실패" vertex="1">
+          <mxGeometry height="90" width="260" x="980" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="suspended-judge" edge="1" parent="1" source="suspended" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="suspended-result" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="restored" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;rounded=0;fillColor=#eaf2fb;" value="인정" vertex="1">
+          <mxGeometry height="90" width="300" x="1260" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="restored-result" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;fillColor=#f8fafc;" value="조건 충족 시&lt;br&gt;통과" vertex="1">
+          <mxGeometry height="90" width="260" x="1280" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="restored-judge" edge="1" parent="1" source="restored" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="restored-result" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="withdrawn" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;rounded=0;fillColor=#f1f5f9;" value="철회" vertex="1">
+          <mxGeometry height="90" width="300" x="1560" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="withdrawn-result" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fontFamily=Malgun Gothic;fontSize=23;fontColor=#20262e;spacing=10;fillColor=#ffffff;strokeColor=#64748b;strokeWidth=2;fillColor=#f8fafc;" value="실패" vertex="1">
+          <mxGeometry height="90" width="260" x="1580" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="withdrawn-judge" edge="1" parent="1" source="withdrawn" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="withdrawn-result" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="effective-approve" edge="1" parent="1" source="approve" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=0.5;exitY=1;entryX=0;entryY=0;dashed=1;" target="recognised" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="effective-suspend-decision" edge="1" parent="1" source="suspend-decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=0.5;exitY=1;entryX=0;entryY=0;dashed=1;" target="suspended" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="effective-restore-decision" edge="1" parent="1" source="restore-decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=0.5;exitY=1;entryX=0;entryY=0;dashed=1;" target="restored" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="effective-withdraw-decision" edge="1" parent="1" source="withdraw-decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Malgun Gothic;fontSize=20;labelBackgroundColor=#ffffff;strokeColor=#475569;strokeWidth=2;endArrow=block;endSize=9;exitX=0.5;exitY=1;entryX=0;entryY=0;dashed=1;" target="withdrawn" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

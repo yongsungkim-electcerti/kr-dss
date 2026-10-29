@@ -1,0 +1,206 @@
+{
+  "checks": [
+    {
+      "name": "registeredSampleCA",
+      "ok": true,
+      "detail": {
+        "providers": 4,
+        "services": 11
+      }
+    },
+    {
+      "name": "baselineIssue",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "managementTLaccepted",
+      "ok": true,
+      "detail": "CHECK_PASSED"
+    },
+    {
+      "name": "managementAccredited",
+      "ok": true,
+      "detail": {
+        "integrity": "PASSED",
+        "chain": "VALID",
+        "trust": "TRUST_CONDITIONS_MET",
+        "service": "Whale PDF 시험 CA",
+        "serviceStatus": "ACCREDITED",
+        "path": [
+          "CN=DEMO ONLY PDF Subscriber · 9d5306a690dbf60cd3d804d1fd84358ad0b434f300da5eb9d53b240991648d33",
+          "CN=DEMO ONLY Service CA · 5fa4e689a5c3725bbe97e0eda6cf38bf53d3df317ee487a521faaebed5aa2690"
+        ],
+        "unchecked": [
+          "폐지정보(CRL/OCSP)",
+          "신뢰 시각 증거",
+          "PDF 다중 서명·증분 개정"
+        ]
+      }
+    },
+    {
+      "name": "baselineIssue",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "managementTLaccepted",
+      "ok": true,
+      "detail": "CHECK_PASSED"
+    },
+    {
+      "name": "managementSuspended",
+      "ok": true,
+      "detail": {
+        "integrity": "PASSED",
+        "chain": "VALID",
+        "trust": "TRUST_CONDITIONS_NOT_MET",
+        "service": "Whale PDF 시험 CA",
+        "serviceStatus": "SUSPENDED",
+        "path": [
+          "CN=DEMO ONLY PDF Subscriber · 9d5306a690dbf60cd3d804d1fd84358ad0b434f300da5eb9d53b240991648d33",
+          "CN=DEMO ONLY Service CA · 5fa4e689a5c3725bbe97e0eda6cf38bf53d3df317ee487a521faaebed5aa2690"
+        ],
+        "unchecked": [
+          "폐지정보(CRL/OCSP)",
+          "신뢰 시각 증거",
+          "PDF 다중 서명·증분 개정"
+        ]
+      }
+    },
+    {
+      "name": "managementComparable",
+      "ok": true,
+      "detail": [
+        "TL 신뢰 판단",
+        "서비스 상태"
+      ]
+    },
+    {
+      "name": "EdgeCrossOriginFetch",
+      "ok": true,
+      "detail": {
+        "first": 200,
+        "etag": "\"sha256-971866090b19219942ace13f452d4bdeb77776970337e7ba33c5e47edb1d9240\"",
+        "second": 304
+      }
+    }
+  ],
+  "whaleLimitation": "Installed Whale exited during headless automation launch; Whale native integration remains unverified.",
+  "browserName": "Edge",
+  "browser": "156.0.4314.42",
+  "firstIssue": {
+    "manifest": {
+      "manifestVersion": 1,
+      "issuanceId": "iss-20261028T002821Z-949ecc8f",
+      "requestId": "db66e4b5-646a-4971-b029-a07016a7410d",
+      "inputDigest": "487c072d4b101ab5f5f34b7baf235003f4b024a3fcaac2fa1712d2a4ce7f6731",
+      "requestedPurpose": "BASELINE",
+      "purpose": "BASELINE",
+      "listId": "kr-tl",
+      "sequenceNumber": "1",
+      "issuedAt": "2026-10-26T12:00:00Z",
+      "nextUpdate": "2026-11-04T00:28:21Z",
+      "draftRevision": 2,
+      "previousBaselineIssuanceId": null,
+      "xmlSha256": "196e7e87b52b6e2576130bc4e87c138b04430e9f05aad7e0036bf4712e1203de",
+      "xmlSize": 23736,
+      "profileSha256": "2ae9e39a53ba613ddb96952b0ef3dedea4d5a3b7c29c448c0e3eee779d5fd21c",
+      "signerCertificateSha256": "f62d70b1dc78bb2f9b51d91480e16bbc361eee08ab45d95a50f207d0516de940",
+      "signerSubject": "CN=DEMO ONLY TL Signer",
+      "signatureValid": true,
+      "signatureDetail": "서명값과 참조 다이제스트가 일치합니다.",
+      "diagnostics": [],
+      "signedAt": "2026-10-28T00:28:22.082499400Z"
+    },
+    "replay": false
+  },
+  "firstRun": {
+    "id": "a8df5052-032a-496c-b83f-532070a85336",
+    "executedAt": "2026-10-28T00:28:22.616479800Z",
+    "inputHash": "3236f3f760e096f8e328bc36cf38ef148f7f6620ae0521a675cbb57be44d90c7",
+    "certificatesHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "policy": "tl-poc-single-pdf-v1",
+    "engine": "poc-v1-dd3fff2f318cf0924018f8529c197ad04203dc6b85cc7fd5c01c3c872c993a84",
+    "evaluationTime": "2026-10-27T00:00:00Z",
+    "timeSource": "TEST_SPECIFIED",
+    "tlSequence": "1",
+    "tlHash": "196e7e87b52b6e2576130bc4e87c138b04430e9f05aad7e0036bf4712e1203de",
+    "tlAcceptedAt": "2026-10-28T00:28:22.574226500Z",
+    "execution": "COMPLETED",
+    "result": {
+      "integrity": "PASSED",
+      "chain": "VALID",
+      "trust": "TRUST_CONDITIONS_MET",
+      "service": "Whale PDF 시험 CA",
+      "serviceStatus": "ACCREDITED",
+      "path": [
+        "CN=DEMO ONLY PDF Subscriber · 9d5306a690dbf60cd3d804d1fd84358ad0b434f300da5eb9d53b240991648d33",
+        "CN=DEMO ONLY Service CA · 5fa4e689a5c3725bbe97e0eda6cf38bf53d3df317ee487a521faaebed5aa2690"
+      ],
+      "unchecked": [
+        "폐지정보(CRL/OCSP)",
+        "신뢰 시각 증거",
+        "PDF 다중 서명·증분 개정"
+      ]
+    },
+    "error": null
+  },
+  "secondIssue": {
+    "manifest": {
+      "manifestVersion": 1,
+      "issuanceId": "iss-20261028T002825Z-56792c8b",
+      "requestId": "ef890d68-283f-4475-84ca-d4caa9bcc8a6",
+      "inputDigest": "43d2c33146f69520077b8f467547297bd6c3ad41e7e241cbe44f5a80938b27ea",
+      "requestedPurpose": "BASELINE",
+      "purpose": "BASELINE",
+      "listId": "kr-tl",
+      "sequenceNumber": "2",
+      "issuedAt": "2026-10-27T12:00:00Z",
+      "nextUpdate": "2026-11-04T00:28:25Z",
+      "draftRevision": 4,
+      "previousBaselineIssuanceId": "iss-20261028T002821Z-949ecc8f",
+      "xmlSha256": "971866090b19219942ace13f452d4bdeb77776970337e7ba33c5e47edb1d9240",
+      "xmlSize": 24625,
+      "profileSha256": "2ae9e39a53ba613ddb96952b0ef3dedea4d5a3b7c29c448c0e3eee779d5fd21c",
+      "signerCertificateSha256": "f62d70b1dc78bb2f9b51d91480e16bbc361eee08ab45d95a50f207d0516de940",
+      "signerSubject": "CN=DEMO ONLY TL Signer",
+      "signatureValid": true,
+      "signatureDetail": "서명값과 참조 다이제스트가 일치합니다.",
+      "diagnostics": [],
+      "signedAt": "2026-10-28T00:28:25.141241500Z"
+    },
+    "replay": false
+  },
+  "secondRun": {
+    "id": "f2e33478-6f3c-46ca-bf7a-e3807de26962",
+    "executedAt": "2026-10-28T00:28:25.452889900Z",
+    "inputHash": "3236f3f760e096f8e328bc36cf38ef148f7f6620ae0521a675cbb57be44d90c7",
+    "certificatesHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "policy": "tl-poc-single-pdf-v1",
+    "engine": "poc-v1-dd3fff2f318cf0924018f8529c197ad04203dc6b85cc7fd5c01c3c872c993a84",
+    "evaluationTime": "2026-10-27T00:00:00Z",
+    "timeSource": "TEST_SPECIFIED",
+    "tlSequence": "2",
+    "tlHash": "971866090b19219942ace13f452d4bdeb77776970337e7ba33c5e47edb1d9240",
+    "tlAcceptedAt": "2026-10-28T00:28:25.420363400Z",
+    "execution": "COMPLETED",
+    "result": {
+      "integrity": "PASSED",
+      "chain": "VALID",
+      "trust": "TRUST_CONDITIONS_NOT_MET",
+      "service": "Whale PDF 시험 CA",
+      "serviceStatus": "SUSPENDED",
+      "path": [
+        "CN=DEMO ONLY PDF Subscriber · 9d5306a690dbf60cd3d804d1fd84358ad0b434f300da5eb9d53b240991648d33",
+        "CN=DEMO ONLY Service CA · 5fa4e689a5c3725bbe97e0eda6cf38bf53d3df317ee487a521faaebed5aa2690"
+      ],
+      "unchecked": [
+        "폐지정보(CRL/OCSP)",
+        "신뢰 시각 증거",
+        "PDF 다중 서명·증분 개정"
+      ]
+    },
+    "error": null
+  }
+}
