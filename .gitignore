@@ -58,3 +58,6 @@ local.properties
 /_backup/
 # 재배치 전 패키지 경로의 잔여 로컬 산출물도 추적하지 않는다.
 /output/
+
+# 배포 실행 JAR·시연 키·압축 패키지. 설계 산출물은 docs에서 추적한다.
+/outputs/

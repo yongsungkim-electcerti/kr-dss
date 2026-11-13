@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "parentRevision": null,
+  "savedAt": "2026-10-12T02:16:00.569171800Z",
+  "change": "배포 초기 시연 자료: main 초안 r15의 사업자 4개·서비스 10개",
+  "baselineIssuanceId": null,
+  "scheme": {
+    "operatorName": "한국인터넷진흥원",
+    "territory": "KR"
+  },
+  "providers": [
+    {
+      "providerId": "tsp-1ef312b7",
+      "name": "가상공동인증A",
+      "englishName": null,
+      "tradeName": null,
+      "informationUri": null,
+      "registeredAt": "2026-10-12T02:16:00.009379800Z",
+      "services": [
+        {
+          "serviceId": "svc-52fbdd8e",
+          "type": "CA",
+          "name": "가상공동인증A CA",
+          "englishName": null,
+          "domain": "JOINT",
+          "level": "CA",
+          "status": "ACCREDITED",
+          "statusStartingTime": "2026-10-12T02:15:59Z",
+          "changeReason": null,
+          "certificates": [
+            {
+              "derBase64": "MIICQDCCAeegAwIBAgIMH5gnZpGO4LqBEfIEMAoGCCqGSM49BAMCMD8xCzAJBgNVBAYTAktSMQ0wCwYDVQQKEwRLSVNBMSEwHwYDVQQDDBhLSVNBIOqzteuPmeyduOymnSBSb290Q0EwHhcNMjYxMDA5MDc1MjM1WhcNMzYxMDA2MDc1NzM1WjBMMQswCQYDVQQGEwJLUjEcMBoGA1UECgwT6rCA7IOB6rO164+Z7J247KadQTEfMB0GA1UEAwwW6rCA7IOB6rO164+Z7J247KadQSBDQTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJYOTszMGiEF7A35GKTarYzBogUHU8pqBbrpIwLTl24ti8RT85ua2twJBFlORbXFwOX/aJOjX9sqUqiu2M7uAsSjgbswgbgwHQYDVR0OBBYEFLiQsYvNwYuLG0idCcYj5zIbjfDfMHMGA1UdIwRsMGqAFF/5x37tPnfoPaua9mwzkI819KfdoUOkQTA/MQswCQYDVQQGEwJLUjENMAsGA1UEChMES0lTQTEhMB8GA1UEAwwYS0lTQSDqs7Xrj5nsnbjspp0gUm9vdENBgg0Astz/XniRqpDaDmkDMBIGA1UdEwEB/wQIMAYBAf8CAQAwDgYDVR0PAQH/BAQDAgEGMAoGCCqGSM49BAMCA0cAMEQCICW8mhhTRVxdjT/VhBI5d2Sd3xwyaMB5LE8PGHRLj0wVAiBw8I729r/DDBFwsQ1YIj23H7d0euOEiVZPwRzb1lOIYg==",
+              "sha256": "6493979af4325179bbcf466ddc8f68595ca81379e65832d22fbb541c2085f462",
+              "subject": "CN=가상공동인증A CA,O=가상공동인증A,C=KR",
+              "issuer": "CN=KISA 공동인증 RootCA,O=KISA,C=KR",
+              "serialNumber": "1f982766918ee0ba8111f204",
+              "notBefore": "2026-10-09T07:52:35Z",
+              "notAfter": "2036-10-06T07:57:35Z",
+              "publicKeyAlgorithm": "EC",
+              "publicKeySha256": "65bd9fd7b82e1738cbcd8666f125d124f3c89240dd8ebc6888a4bd395495be5b",
+              "subjectKeyIdentifier": "b890b18bcdc18b8b1b489d09c623e7321b8df0df",
+              "skiFromExtension": true,
+              "addedAt": "2026-10-12T02:16:00.090135300Z"
+            }
+          ]
+        },
+        {
+          "serviceId": "svc-8242ccb4",
+          "type": "OCSP",
+          "name": "가상공동인증A OCSP",
+          "englishName": null,
+          "domain": "JOINT",
+          "level": null,
+          "status": "ACCREDITED",
+          "statusStartingTime": "2026-10-12T02:15:59Z",
+          "changeReason": null,
+          "certificates": [
+            {
+              "derBase64": "MIICbzCCAhagAwIBAgINAPZLSJ0p5vFJrJM8nDAKBggqhkjOPQQDAjBMMQswCQYDVQQGEwJLUjEcMBoGA1UECgwT6rCA7IOB6rO164+Z7J247KadQTEfMB0GA1UEAwwW6rCA7IOB6rO164+Z7J247KadQSBDQTAeFw0yNjEwMDkwNzUyMzVaFw0yOTEwMDgwNzU3MzVaME4xCzAJBgNVBAYTAktSMRwwGgYDVQQKDBPqsIDsg4Hqs7Xrj5nsnbjspp1BMSEwHwYDVQQDDBjqsIDsg4Hqs7Xrj5nsnbjspp1BIE9DU1AwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATefKWDKxMBCjJI1Avg66asI4VRwkN9CRyNWwyG8uRP+l05nID4azr+5CnDCmdAOtEfLKpPvDe6Fz950xkk9FNHo4HaMIHXMB0GA1UdDgQWBBSGa7AuRHossVuUe2x5EV/iWt60aDByBgNVHSMEazBpgBS4kLGLzcGLixtInQnGI+cyG43w36FDpEEwPzELMAkGA1UEBhMCS1IxDTALBgNVBAoTBEtJU0ExITAfBgNVBAMMGEtJU0Eg6rO164+Z7J247KadIFJvb3RDQYIMH5gnZpGO4LqBEfIEMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQMMAoGCCsGAQUFBwMJMA8GCSsGAQUFBzABBQQCBQAwCgYIKoZIzj0EAwIDRwAwRAIgMxlplX0noC8kjEepTVPIHo1c7mBLUY7HDyVaZElXpL0CIBQ0cJwaJgSGhFbEfq8dK1hWx1FweW2f86T1TasZrVKE",
+              "sha256": "0f045f7e41595f3a0a2adb4f6d2b754dce6f378f0643897f2ae2a44017418d7f",
+              "subject": "CN=가상공동인증A OCSP,O=가상공동인증A,C=KR",
+              "issuer": "CN=가상공동인증A CA,O=가상공동인증A,C=KR",
+              "serialNumber": "f64b489d29e6f149ac933c9c",
+              "notBefore": "2026-10-09T07:52:35Z",
+              "notAfter": "2029-10-08T07:57:35Z",
+              "publicKeyAlgorithm": "EC",
+              "publicKeySha256": "a1b9f3f20fdb94719652d4c49700984eec31345b9ef7ef7849d7c0723a57263d",
+              "subjectKeyIdentifier": "866bb02e447a2cb15b947b6c79115fe25adeb468",
+              "skiFromExtension": true,
+              "addedAt": "2026-10-12T02:16:00.238876100Z"
+            }
+          ]
+        },
+        {
+          "serviceId": "svc-8d3f7729",
+          "type": "TSA",
+          "name": "가상공동인증A TSA",
+          "englishName": null,
+          "domain": "JOINT",
+          "level": null,
+          "status": "ACCREDITED",
+          "statusStartingTime": "2026-10-12T02:15:59Z",
+          "changeReason": null,
+          "certificates": [
+            {
+              "derBase64": "MIICYDCCAgagAwIBAgIMdJw6AMSPitP2xMRqMAoGCCqGSM49BAMCMEwxCzAJBgNVBAYTAktSMRwwGgYDVQQKDBPqsIDsg4Hqs7Xrj5nsnbjspp1BMR8wHQYDVQQDDBbqsIDsg4Hqs7Xrj5nsnbjspp1BIENBMB4XDTI2MTAwOTA3NTIzNVoXDTI5MTAwODA3NTczNVowTTELMAkGA1UEBhMCS1IxHDAaBgNVBAoME+qwgOyDgeqzteuPmeyduOymnUExIDAeBgNVBAMMF+qwgOyDgeqzteuPmeyduOymnUEgVFNBMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE3LCtZ/2RJ7EQv1raeW2MuFUVsNEXa/5PK2U+jANQAQmTqwSF45qzZoJ3ehkClUzSzA0MEVlWnPn65g+BkaBkq6OBzDCByTAdBgNVHQ4EFgQUuLHgh0JHvKmS0daENFjUabLe9z4wcgYDVR0jBGswaYAUuJCxi83Bi4sbSJ0JxiPnMhuN8N+hQ6RBMD8xCzAJBgNVBAYTAktSMQ0wCwYDVQQKEwRLSVNBMSEwHwYDVQQDDBhLSVNBIOqzteuPmeyduOymnSBSb290Q0GCDB+YJ2aRjuC6gRHyBDAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDAWBgNVHSUBAf8EDDAKBggrBgEFBQcDCDAKBggqhkjOPQQDAgNIADBFAiEA2apQpRQbhfju5106ZbkSLqoAXJoQ3J/ekXaMwcU5sQECIAOtoS47n3WmdITF0ad8gQghj5Ac13BSyXLehGxpKYVO",
+              "sha256": "36263b62def3d2f5d6dc9ec8c12699485e4b7da25ef79782f020d2adcc03f72e",
+              "subject": "CN=가상공동인증A TSA,O=가상공동인증A,C=KR",
+              "issuer": "CN=가상공동인증A CA,O=가상공동인증A,C=KR",
+              "serialNumber": "749c3a00c48f8ad3f6c4c46a",
+              "notBefore": "2026-10-09T07:52:35Z",
+              "notAfter": "2029-10-08T07:57:35Z",
+              "publicKeyAlgorithm": "EC",
+              "publicKeySha256": "dea05101be4f2aedd7d952f7a01a5446e99244bf0ec9c34115fc22f8a061fad1",
+              "subjectKeyIdentifier": "b8b1e0874247bca992d1d6843458d469b2def73e",
+              "skiFromExtension": true,
+              "addedAt": "2026-10-12T02:16:00.265437800Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "tsp-a746eedb",
+      "name": "가상공동인증B",
+      "englishName": null,
+      "tradeName": null,
+      "informationUri": null,
+      "registeredAt": "2026-10-12T02:16:00.290782400Z",
+      "services": [
+        {
+          "serviceId": "svc-39df78e3",
+          "type": "CA",
+          "name": "가상공동인증B CA",
+          "englishName": null,
+          "domain": "JOINT",
+          "level": "CA",
+          "status": "ACCREDITED",
+          "statusStartingTime": "2026-10-12T02:15:59Z",
+          "changeReason": null,
+          "certificates": [
+            {
+              "derBase64": "MIICQzCCAeigAwIBAgINAJJr6Ply5N/a8k/CgjAKBggqhkjOPQQDAjA/MQswCQYDVQQGEwJLUjENMAsGA1UEChMES0lTQTEhMB8GA1UEAwwYS0lTQSDqs7Xrj5nsnbjspp0gUm9vdENBMB4XDTI2MTAwOTA3NTIzNVoXDTM2MTAwNjA3NTczNVowTDELMAkGA1UEBhMCS1IxHDAaBgNVBAoME+qwgOyDgeqzteuPmeyduOymnUIxHzAdBgNVBAMMFuqwgOyDgeqzteuPmeyduOymnUIgQ0EwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASWzyOaZ18bKI2z0s9S14Q4Wd8DPYToEDJs6W8zCCx56MYaRIGgzxVjfb5d+7kxZKFvD1DUQl6Pvh0t7PgQrvaNo4G7MIG4MB0GA1UdDgQWBBTfv7zTBWJHf8FDxN+EywmzGBaoyTBzBgNVHSMEbDBqgBRf+cd+7T536D2rmvZsM5CPNfSn3aFDpEEwPzELMAkGA1UEBhMCS1IxDTALBgNVBAoTBEtJU0ExITAfBgNVBAMMGEtJU0Eg6rO164+Z7J247KadIFJvb3RDQYINALLc/154kaqQ2g5pAzASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjAKBggqhkjOPQQDAgNJADBGAiEAyLh6EWaAcweMfUcAUBampHi0dMH+RlYdvcwz7+aQOv0CIQCL/g0TeUIemt+4/iMfDVyUlzig7LRIunj+YNIv8ZJiZA==",
+              "sha256": "9cfe1cddcbecbd3998e1c3dfd7669ba6d9a6877acfb5abd63f6583d3b53b2b10",
+              "subject": "CN=가상공동인증B CA,O=가상공동인증B,C=KR",
+              "issuer": "CN=KISA 공동인증 RootCA,O=KISA,C=KR",
+              "serialNumber": "926be8f972e4dfdaf24fc282",
+              "notBefore": "2026-10-09T07:52:35Z",
+              "notAfter": "2036-10-06T07:57:35Z",
+              "publicKeyAlgorithm": "EC",
+              "publicKeySha256": "2029e44c29ee8d3020730b3c1c7efce30ce57eb4d172504121c592188c159cb6",
+              "subjectKeyIdentifier": "dfbfbcd30562477fc143c4df84cb09b31816a8c9",
+              "skiFromExtension": true,
+              "addedAt": "2026-10-12T02:16:00.313971300Z"
+            }
+          ]
+        },
+        {
+          "serviceId": "svc-8331e71f",
+          "type": "OCSP",
+          "name": "가상공동인증B OCSP",
+          "englishName": null,
+          "domain": "JOINT",
+          "level": null,
+          "status": "ACCREDITED",
+          "statusStartingTime": "2026-10-12T02:15:59Z",
+          "changeReason": null,
+          "certificates": [
+            {
+              "derBase64": "MIICbzCCAhagAwIBAgIMAPhV9aLUn+M4xUVRMAoGCCqGSM49BAMCMEwxCzAJBgNVBAYTAktSMRwwGgYDVQQKDBPqsIDsg4Hqs7Xrj5nsnbjspp1CMR8wHQYDVQQDDBbqsIDsg4Hqs7Xrj5nsnbjspp1CIENBMB4XDTI2MTAwOTA3NTIzNVoXDTI5MTAwODA3NTczNVowTjELMAkGA1UEBhMCS1IxHDAaBgNVBAoME+qwgOyDgeqzteuPmeyduOymnUIxITAfBgNVBAMMGOqwgOyDgeqzteuPmeyduOymnUIgT0NTUDBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABDWXnti6bWCKzFGhnf5IuW6vGFw//f2GhWK2zRovzZpMpXPbytamEbnsWOZzW6lpwdjb2Dvvkea7ZKW33qiVMwajgdswgdgwHQYDVR0OBBYEFAWTbMB4Y1z6RsNMkAzuGyBETEFiMHMGA1UdIwRsMGqAFN+/vNMFYkd/wUPE34TLCbMYFqjJoUOkQTA/MQswCQYDVQQGEwJLUjENMAsGA1UEChMES0lTQTEhMB8GA1UEAwwYS0lTQSDqs7Xrj5nsnbjspp0gUm9vdENBgg0Akmvo+XLk39ryT8KCMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQMMAoGCCsGAQUFBwMJMA8GCSsGAQUFBzABBQQCBQAwCgYIKoZIzj0EAwIDRwAwRAIgVz84cziti1myaqZ+JFShh10gh9tCdodQyTkfB4UbA0ECIFgkOBk/8cY6YGQ4IW9mfK0lvW4uTvD2aszruT3hO35U",
+              "sha256": "0db9eda3dea52fbacb422a038dabe7426d982e9139a60f478311513205ab4918",
+              "subject": "CN=가상공동인증B OCSP,O=가상공동인증B,C=KR",
+              "issuer": "CN=가상공동인증B CA,O=가상공동인증B,C=KR",
+              "serialNumber": "f855f5a2d49fe338c54551",
+              "notBefore": "2026-10-09T07:52:35Z",
+              "notAfter": "2029-10-08T07:57:35Z",
+              "publicKeyAlgorithm": "EC",
+              "publicKeySha256": "b7c9e21f9bbb6f935d46afd6581514f81364e0b28d6a2be6e867fafeb965091c",
+              "subjectKeyIdentifier": "05936cc078635cfa46c34c900cee1b20444c4162",
+              "skiFromExtension": true,
+              "addedAt": "2026-10-12T02:16:00.337185800Z"
+            }
+          ]
+        },
+        {
+          "serviceId": "svc-605ccafe",
+          "type": "TSA",
+          "name": "가상공동인증B TSA",
+          "englishName": null,
+          "domain": "JOINT",
+          "level": null,
+          "status": "ACCREDITED",
+          "statusStartingTime": "2026-10-12T02:15:59Z",
+          "changeReason": null,
+          "certificates": [
+            {
+              "derBase64": "MIICYjCCAgigAwIBAgINAJPTXotY8lt6oaDn2DAKBggqhkjOPQQDAjBMMQswCQYDVQQGEwJLUjEcMBoGA1UECgwT6rCA7IOB6rO164+Z7J247KadQjEfMB0GA1UEAwwW6rCA7IOB6rO164+Z7J247KadQiBDQTAeFw0yNjEwMDkwNzUyMzVaFw0yOTEwMDgwNzU3MzVaME0xCzAJBgNVBAYTAktSMRwwGgYDVQQKDBPqsIDsg4Hqs7Xrj5nsnbjspp1CMSAwHgYDVQQDDBfqsIDsg4Hqs7Xrj5nsnbjspp1CIFRTQTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABKGMBgoPgJ7M5+JK8+nCIxKBCJDgXh+ipOfAhPKSEBHYSv8OEcnY5XyP1b/6QDSah8ojcJ2qmCv9faLLGZx5RK2jgc0wgcowHQYDVR0OBBYEFK0hSoBJm9/j8xf3Gd/Fq9tiMAxcMHMGA1UdIwRsMGqAFN+/vNMFYkd/wUPE34TLCbMYFqjJoUOkQTA/MQswCQYDVQQGEwJLUjENMAsGA1UEChMES0lTQTEhMB8GA1UEAwwYS0lTQSDqs7Xrj5nsnbjspp0gUm9vdENBgg0Akmvo+XLk39ryT8KCMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgeAMBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMIMAoGCCqGSM49BAMCA0gAMEUCIECmZ4fj4X8WbPjOw5V+yqWDe1gGdiX0AWjJTUKfAh2cAiEAu71nR3racQpGmApl80YNk8B7OGvok0Ff14YbP81k8eE=",
+              "sha256": "c62899639eb20cec4dd07f24c7e77f6bbf5d584ebb3fec4b936c25b2537492b5",
+              "subject": "CN=가상공동인증B TSA,O=가상공동인증B,C=KR",
+              "issuer": "CN=가상공동인증B CA,O=가상공동인증B,C=KR",
+              "serialNumber": "93d35e8b58f25b7aa1a0e7d8",
+              "notBefore": "2026-10-09T07:52:35Z",
+              "notAfter": "2029-10-08T07:57:35Z",
+              "publicKeyAlgorithm": "EC",
+              "publicKeySha256": "6f291c50a520746a9a40eeebed6e459418acf986512db83ec38a604ddfa40805",
+              "subjectKeyIdentifier": "ad214a80499bdfe3f317f719dfc5abdb62300c5c",
+              "skiFromExtension": true,
+              "addedAt": "2026-10-12T02:16:00.369513200Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "tsp-4a45f196",
+      "name": "가상간편인증A",
+      "englishName": null,
+      "tradeName": null,
+      "informationUri": null,
+      "registeredAt": "2026-10-12T02:16:00.401914900Z",
+      "services": [
+        {
+          "serviceId": "svc-d8df0b88",
+          "type": "CA",
+          "name": "가상간편인증A RootCA",
+          "englishName": null,
+          "domain": "SIMPLE",
+          "level": "ROOT",
+          "status": "ACCREDITED",
+          "statusStartingTime": "2026-10-12T02:15:59Z",
+          "changeReason": null,
+          "certificates": [
+            {
+              "derBase64": "MIIB3TCCAYOgAwIBAgINAIqbDS7dIMeYGLpJQjAKBggqhkjOPQQDAjBQMQswCQYDVQQGEwJLUjEcMBoGA1UECgwT6rCA7IOB6rCE7Y647J247KadQTEjMCEGA1UEAwwa6rCA7IOB6rCE7Y647J247KadQSBSb290Q0EwHhcNMjYxMDA5MDc1MjM1WhcNNDYxMDA0MDc1NzM1WjBQMQswCQYDVQQGEwJLUjEcMBoGA1UECgwT6rCA7IOB6rCE7Y647J247KadQTEjMCEGA1UEAwwa6rCA7IOB6rCE7Y647J247KadQSBSb290Q0EwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARJn0LYiy3KkPQkabOhQAy7JGe1EM3Vf3nrJuEqpvWytboRUUlh/Dzigk0ISHdxLHHwoQphkqnAEbzKqcQbuEUKo0IwQDAdBgNVHQ4EFgQU1uiriefiMz2HHsDmPCHJASoE27gwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYwCgYIKoZIzj0EAwIDSAAwRQIgYymfxbr3g1r7sqg/R69cNglWe7wNvwwD3+DOiphFTuoCIQD3DKA8UBK/omLVukmOmK+zoBQyLxDV1BsCMhPoFWzlBg==",
+              "sha256": "0b9e75e3af16dac4b12043e979caa996bec4e4a8666f7b98b6e8092c920ef048",
+              "subject": "CN=가상간편인증A RootCA,O=가상간편인증A,C=KR",
+              "issuer": "CN=가상간편인증A RootCA,O=가상간편인증A,C=KR",
+              "serialNumber": "8a9b0d2edd20c79818ba4942",
+              "notBefore": "2026-10-09T07:52:35Z",
+              "notAfter": "2046-10-04T07:57:35Z",
+              "publicKeyAlgorithm": "EC",
+              "publicKeySha256": "a0020b940947bbda36875b328b159631819171c516e13ee3b07b79f86c0561d4",
+              "subjectKeyIdentifier": "d6e8ab89e7e2333d871ec0e63c21c9012a04dbb8",
+              "skiFromExtension": true,
+              "addedAt": "2026-10-12T02:16:00.440904100Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "providerId": "tsp-96ccc9c3",
+      "name": "가상간편인증B",
+      "englishName": null,
+      "tradeName": null,
+      "informationUri": null,
+      "registeredAt": "2026-10-12T02:16:00.472823100Z",
+      "services": [
+        {
+          "serviceId": "svc-d5485dce",
+          "type": "CA",
+          "name": "가상간편인증B CA",
+          "englishName": null,
+          "domain": "SIMPLE",
+          "level": "CA",
+          "status": "ACCREDITED",
+          "statusStartingTime": "2026-10-12T02:15:59Z",
+          "changeReason": null,
+          "certificates": [
+            {
+              "derBase64": "MIICZDCCAgqgAwIBAgINALzwzpjKGfN9IJi1zDAKBggqhkjOPQQDAjBQMQswCQYDVQQGEwJLUjEcMBoGA1UECgwT6rCA7IOB6rCE7Y647J247KadQjEjMCEGA1UEAwwa6rCA7IOB6rCE7Y647J247KadQiBSb290Q0EwHhcNMjYxMDA5MDc1MjM1WhcNMzYxMDA2MDc1NzM1WjBMMQswCQYDVQQGEwJLUjEcMBoGA1UECgwT6rCA7IOB6rCE7Y647J247KadQjEfMB0GA1UEAwwW6rCA7IOB6rCE7Y647J247KadQiBDQTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJe8DHR2eOOCqP6xm4h+lQV/o1AhMixCjZfF08CRE9mqKykc07j3g08oFixduY6lD6Uwou+BoTKEbK5IXp4DseOjgcwwgckwHQYDVR0OBBYEFKygqzfSMEzzKNEE9GeHPV5pc30nMIGDBgNVHSMEfDB6gBQBKbPcJPV28AQh4BgaQ96uoQ4Aw6FUpFIwUDELMAkGA1UEBhMCS1IxHDAaBgNVBAoME+qwgOyDgeqwhO2OuOyduOymnUIxIzAhBgNVBAMMGuqwgOyDgeqwhO2OuOyduOymnUIgUm9vdENBggwRZK3hf2ZTqVgssXcwEgYDVR0TAQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8EBAMCAQYwCgYIKoZIzj0EAwIDSAAwRQIgaoglQk6ehW2D2EzH6j1ml4XfHbvLjd0eC8YM+3lUhIYCIQCoKaMpiUT24MKQ88Sf/ABTsz/BWaHM5uog+TCZAuHSpA==",
+              "sha256": "8222645ef66d580bafceeb8ec8305f800c4deed35f6b94d39994cb69fe338b82",
+              "subject": "CN=가상간편인증B CA,O=가상간편인증B,C=KR",
+              "issuer": "CN=가상간편인증B RootCA,O=가상간편인증B,C=KR",
+              "serialNumber": "bcf0ce98ca19f37d2098b5cc",
+              "notBefore": "2026-10-09T07:52:35Z",
+              "notAfter": "2036-10-06T07:57:35Z",
+              "publicKeyAlgorithm": "EC",
+              "publicKeySha256": "4f18aa6cefe8b2ac608c3a0450d8f308434e6e2030f4fac713355447cf9eed35",
+              "subjectKeyIdentifier": "aca0ab37d2304cf328d104f467873d5e69737d27",
+              "skiFromExtension": true,
+              "addedAt": "2026-10-12T02:16:00.504606700Z"
+            }
+          ]
+        },
+        {
+          "serviceId": "svc-73f963e7",
+          "type": "OCSP",
+          "name": "가상간편인증B OCSP",
+          "englishName": null,
+          "domain": "SIMPLE",
+          "level": null,
+          "status": "ACCREDITED",
+          "statusStartingTime": "2026-10-12T02:15:59Z",
+          "changeReason": null,
+          "certificates": [
+            {
+              "derBase64": "MIICgjCCAiigAwIBAgIMWlCm7R/CIQ0Q7pUNMAoGCCqGSM49BAMCMEwxCzAJBgNVBAYTAktSMRwwGgYDVQQKDBPqsIDsg4HqsITtjrjsnbjspp1CMR8wHQYDVQQDDBbqsIDsg4HqsITtjrjsnbjspp1CIENBMB4XDTI2MTAwOTA3NTIzNVoXDTI5MTAwODA3NTczNVowTjELMAkGA1UEBhMCS1IxHDAaBgNVBAoME+qwgOyDgeqwhO2OuOyduOymnUIxITAfBgNVBAMMGOqwgOyDgeqwhO2OuOyduOymnUIgT0NTUDBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABEBCj/McR81dYCqQGtteYUl2a6cbuJhuqTBasLBVXzHVpLp3vuH2P2iqGVHOVxwvr7v2EpvJlAnFOxH/A5JdMYGjge0wgeowHQYDVR0OBBYEFMxYXbq6R1dUy0c5CYCz+7ZTS97/MIGEBgNVHSMEfTB7gBSsoKs30jBM8yjRBPRnhz1eaXN9J6FUpFIwUDELMAkGA1UEBhMCS1IxHDAaBgNVBAoME+qwgOyDgeqwhO2OuOyduOymnUIxIzAhBgNVBAMMGuqwgOyDgeqwhO2OuOyduOymnUIgUm9vdENBgg0AvPDOmMoZ830gmLXMMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQMMAoGCCsGAQUFBwMJMA8GCSsGAQUFBzABBQQCBQAwCgYIKoZIzj0EAwIDSAAwRQIgNJeDevJy4a7uWxfMJihfpQdQjz9hkLgCI5h1lteEHxECIQCi4rMgaXXEh/xp2fBjIhOeG+UuBAZjPhOmMrS4ZHjoyA==",
+              "sha256": "20fb5ec8cf8215260c847af999f574b97b69ccdc1728aede4061385484be671b",
+              "subject": "CN=가상간편인증B OCSP,O=가상간편인증B,C=KR",
+              "issuer": "CN=가상간편인증B CA,O=가상간편인증B,C=KR",
+              "serialNumber": "5a50a6ed1fc2210d10ee950d",
+              "notBefore": "2026-10-09T07:52:35Z",
+              "notAfter": "2029-10-08T07:57:35Z",
+              "publicKeyAlgorithm": "EC",
+              "publicKeySha256": "bc94b75f0bf86b58eb1f2847b56cd34c909e503ec9b0276d3ee131affbadc64d",
+              "subjectKeyIdentifier": "cc585dbaba475754cb47390980b3fbb6534bdeff",
+              "skiFromExtension": true,
+              "addedAt": "2026-10-12T02:16:00.534809200Z"
+            }
+          ]
+        },
+        {
+          "serviceId": "svc-94ac2b6c",
+          "type": "TSA",
+          "name": "가상간편인증B TSA",
+          "englishName": null,
+          "domain": "SIMPLE",
+          "level": null,
+          "status": "ACCREDITED",
+          "statusStartingTime": "2026-10-12T02:15:59Z",
+          "changeReason": null,
+          "certificates": [
+            {
+              "derBase64": "MIICdTCCAhqgAwIBAgINAKFyiuWpHXRy7bXRkzAKBggqhkjOPQQDAjBMMQswCQYDVQQGEwJLUjEcMBoGA1UECgwT6rCA7IOB6rCE7Y647J247KadQjEfMB0GA1UEAwwW6rCA7IOB6rCE7Y647J247KadQiBDQTAeFw0yNjEwMDkwNzUyMzVaFw0yOTEwMDgwNzU3MzVaME0xCzAJBgNVBAYTAktSMRwwGgYDVQQKDBPqsIDsg4HqsITtjrjsnbjspp1CMSAwHgYDVQQDDBfqsIDsg4HqsITtjrjsnbjspp1CIFRTQTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABDyFMLoDk+FaT3R/owf5/GjpXew4lqSAvcDyFOzMStEKkYMXDSkbwcJJF98v/V5i4a++8fs0Yi8PkGvm/OhW7+ijgd8wgdwwHQYDVR0OBBYEFFDN4/k+0FF5rR39qA9foGsmWj2CMIGEBgNVHSMEfTB7gBSsoKs30jBM8yjRBPRnhz1eaXN9J6FUpFIwUDELMAkGA1UEBhMCS1IxHDAaBgNVBAoME+qwgOyDgeqwhO2OuOyduOymnUIxIzAhBgNVBAMMGuqwgOyDgeqwhO2OuOyduOymnUIgUm9vdENBgg0AvPDOmMoZ830gmLXMMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgeAMBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMIMAoGCCqGSM49BAMCA0kAMEYCIQC6hHAO0JPqemEEoNtFP/6gzQAQGeQKi35FuwawWHk/oAIhAPC9wM+/GKQ2F5qtINlD+FCclfkrCVPhZQEHeW1Y+ewl",
+              "sha256": "755745a6e93e2a123004abd419727d46196b288d9b06246e7fcaad93d1d34b22",
+              "subject": "CN=가상간편인증B TSA,O=가상간편인증B,C=KR",
+              "issuer": "CN=가상간편인증B CA,O=가상간편인증B,C=KR",
+              "serialNumber": "a1728ae5a91d7472edb5d193",
+              "notBefore": "2026-10-09T07:52:35Z",
+              "notAfter": "2029-10-08T07:57:35Z",
+              "publicKeyAlgorithm": "EC",
+              "publicKeySha256": "cf9dae75c47be131b3f6d7b887b82d369e3c248144166033734e7ff7c668d1fc",
+              "subjectKeyIdentifier": "50cde3f93ed05179ad1dfda80f5fa06b265a3d82",
+              "skiFromExtension": true,
+              "addedAt": "2026-10-12T02:16:00.568183500Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # TL 관리 PoC 개발
 
+- [Windows 로컬 배포 패키지 준비](distribution-package.md): outputs 실행 패키지 구성과 사용자 실행 대기 범위.
+
 설계·엑셀·화면 시안은 [통합 산출물 목록](../../../design/poc/tl-management/artifacts/README.md)에서 함께 관리한다. 요구사항·기능 변경은 관련 산출물과 개발 상태를 같은 변경으로 갱신한다.
 
 2026-10-27 추가: [TL 적용 → 실제 PDF 검증 → 결과 비교의 1·2·3차 개발 상태표](implementation-stages.md). 기능별 구현 위치·시험·화면 확인 상태와 실행 안내를 제공한다.
@@ -20,6 +22,7 @@
 - [수정 개념 설계 v02 영향 검토](reviews/30-수정-개념설계-v02-영향검토.md) — 운영 게시 정책과 PoC 오류 제공 예외, 구현 우선순위
 - [기존 구현 차이 25](reviews/25-PoC-구현-차이-검토.md)
 - [현재 인계](handoff.md)
+- [네이버 웨일 API 연동·관리 시스템 사용 매뉴얼](../../../guides/poc/tl-management/whale/README.md) — PPTX 2종, PDF, 호출 예시, 배포본 실측 검수 기록 (2026-10-28)
 - [관리 기능 목록과 구현 상태](reviews/37-관리기능-목록-구현상태.md) — 기능별 화면·API·구현 여부, 시연 데이터 입력
 - [TL 수신 검증 샘플(PDF 뷰어) 구현 결과](reviews/36-수신검증샘플-구현결과.md) — `src/poc/tl-viewer-sample`
 - [제공본 선택·IF-07 구현 결과](reviews/35-제공본선택-IF07-구현결과.md)
